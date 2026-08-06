@@ -5,3 +5,6 @@ data/incoming/
 data/rejected/
 data/state.json
 log.md
+
+# 로컬 하네스/세션 상태 (공개 금지)
+.claude/
