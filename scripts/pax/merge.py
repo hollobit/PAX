@@ -57,8 +57,24 @@ def main() -> int:
         print("사용법: python3 -m pax.merge <incoming.json>", file=sys.stderr)
         return 2
     incoming_path = Path(sys.argv[1])
-    candidates = json.loads(incoming_path.read_text(encoding="utf-8"))
-    existing_doc = json.loads(CASES_PATH.read_text(encoding="utf-8"))
+
+    try:
+        candidates = json.loads(incoming_path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        print(f"오류: 후보 파일을 찾을 수 없습니다: {incoming_path}", file=sys.stderr)
+        return 1
+    except json.JSONDecodeError as e:
+        print(f"오류: 후보 파일 JSON 파싱 실패: {e.msg} (줄 {e.lineno}, 열 {e.colno})", file=sys.stderr)
+        return 1
+
+    try:
+        existing_doc = json.loads(CASES_PATH.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        print(f"오류: {CASES_PATH}가 없습니다. 먼저 초기화해주세요", file=sys.stderr)
+        return 1
+    except json.JSONDecodeError as e:
+        print(f"오류: {CASES_PATH} JSON 파싱 실패: {e.msg} (줄 {e.lineno}, 열 {e.colno})", file=sys.stderr)
+        return 1
 
     now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
     new_doc, rejected = merge_cases(existing_doc, candidates, now.isoformat(timespec="seconds"))

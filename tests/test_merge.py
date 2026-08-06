@@ -99,3 +99,55 @@ def test_cli_merges_incoming_file(tmp_path):
     assert result.returncode == 0, result.stderr
     saved = json.loads((root / "data" / "cases.json").read_text(encoding="utf-8"))
     assert len(saved["cases"]) == 1
+
+
+def test_cli_error_incoming_file_not_found(tmp_path):
+    root = tmp_path
+    (root / "data").mkdir()
+    (root / "data" / "cases.json").write_text(
+        json.dumps({"updated_at": None, "cases": []}), encoding="utf-8")
+    incoming = root / "nonexistent.json"
+    scripts_dir = Path(__file__).resolve().parent.parent / "scripts"
+    result = subprocess.run(
+        [sys.executable, "-m", "pax.merge", str(incoming)],
+        cwd=root, capture_output=True, text=True,
+        env={"PYTHONPATH": str(scripts_dir), "PATH": "/usr/bin:/bin"},
+    )
+    assert result.returncode != 0
+    assert "Traceback" not in result.stderr
+    assert "파일" in result.stderr or "찾을 수 없" in result.stderr
+
+
+def test_cli_error_incoming_file_invalid_json(tmp_path):
+    root = tmp_path
+    (root / "data").mkdir()
+    (root / "data" / "cases.json").write_text(
+        json.dumps({"updated_at": None, "cases": []}), encoding="utf-8")
+    incoming = root / "invalid.json"
+    incoming.write_text("not valid json {", encoding="utf-8")
+    scripts_dir = Path(__file__).resolve().parent.parent / "scripts"
+    result = subprocess.run(
+        [sys.executable, "-m", "pax.merge", str(incoming)],
+        cwd=root, capture_output=True, text=True,
+        env={"PYTHONPATH": str(scripts_dir), "PATH": "/usr/bin:/bin"},
+    )
+    assert result.returncode != 0
+    assert "Traceback" not in result.stderr
+    assert "JSON" in result.stderr or "파싱" in result.stderr or "형식" in result.stderr
+
+
+def test_cli_error_cases_json_not_found(tmp_path):
+    root = tmp_path
+    # data/cases.json를 생성하지 않음
+    incoming = root / "incoming.json"
+    incoming.write_text(json.dumps([make_candidate()], ensure_ascii=False),
+                        encoding="utf-8")
+    scripts_dir = Path(__file__).resolve().parent.parent / "scripts"
+    result = subprocess.run(
+        [sys.executable, "-m", "pax.merge", str(incoming)],
+        cwd=root, capture_output=True, text=True,
+        env={"PYTHONPATH": str(scripts_dir), "PATH": "/usr/bin:/bin"},
+    )
+    assert result.returncode != 0
+    assert "Traceback" not in result.stderr
+    assert "cases.json" in result.stderr or "초기화" in result.stderr
