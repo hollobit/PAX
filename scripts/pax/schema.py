@@ -23,8 +23,12 @@ def validate_case(case: dict) -> list[str]:
     if case["source"] not in SOURCES:
         errors.append(f"알 수 없는 source: {case['source']}")
     elif case["source"] == "kakao":
-        if case["link"] is not None:
-            errors.append("kakao 사례는 link가 null이어야 합니다")
+        # 채팅 원문 링크는 존재하지 않으므로, link는 메시지에서 공유된
+        # 공개 서비스/저장소 URL(https)만 허용한다.
+        link = case["link"]
+        if link is not None and (
+                not isinstance(link, str) or not link.startswith("https://")):
+            errors.append("kakao 사례의 link는 null 또는 https:// URL이어야 합니다")
     else:  # threads
         if not isinstance(case["link"], str) or not _THREADS_LINK_RE.match(case["link"]):
             errors.append("threads 사례의 link는 threads.com/net URL이어야 합니다")

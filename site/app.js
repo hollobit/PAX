@@ -210,18 +210,29 @@ function createCaseCard(c) {
 
 function createSourceElement(c) {
   if (c.source === 'threads' && c.link) {
-    const link = document.createElement('a');
-    link.className = 'case-card__source-link';
-    link.href = c.link;
-    link.target = '_blank';
-    link.rel = 'noopener';
-    link.textContent = '원문 보기 ↗';
-    return link;
+    return createSourceLink(c.link, '원문 보기 ↗');
   }
   const badge = document.createElement('span');
   badge.className = 'case-card__source-badge';
   badge.textContent = c.source === 'threads' ? '출처: Threads' : '출처: 오픈채팅';
+  if (c.source === 'kakao' && c.link) {
+    // 오픈채팅 원문은 비공개지만, 메시지에서 공유된 공개 서비스/저장소 링크는 제공한다.
+    const frag = document.createDocumentFragment();
+    frag.appendChild(badge);
+    frag.appendChild(createSourceLink(c.link, '공유 링크 ↗'));
+    return frag;
+  }
   return badge;
+}
+
+function createSourceLink(href, label) {
+  const link = document.createElement('a');
+  link.className = 'case-card__source-link';
+  link.href = href;
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.textContent = label;
+  return link;
 }
 
 // 검색/필터 컨트롤은 정적 상수(ORG_TYPES, SOURCES)에만 의존하므로 fetch 성공 여부와

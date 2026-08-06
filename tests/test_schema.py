@@ -18,8 +18,18 @@ def test_unknown_source_rejected():
     assert any("source" in e for e in errors)
 
 
-def test_kakao_case_must_not_have_link():
-    errors = validate_case(make_case(source="kakao", link="https://example.com"))
+def test_kakao_case_with_shared_https_link_passes():
+    case = make_case(source="kakao", link="https://icaretok.nemc.or.kr/pec/")
+    assert validate_case(case) == []
+
+
+def test_kakao_case_with_non_https_link_rejected():
+    errors = validate_case(make_case(source="kakao", link="http://data.go.kr/"))
+    assert any("link" in e for e in errors)
+
+
+def test_kakao_case_with_javascript_link_rejected():
+    errors = validate_case(make_case(source="kakao", link="javascript:alert(1)"))
     assert any("link" in e for e in errors)
 
 
