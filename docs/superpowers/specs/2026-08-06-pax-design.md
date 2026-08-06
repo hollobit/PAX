@@ -32,7 +32,8 @@ Threads의 공공AX 태그 게시물과 카카오톡 오픈채팅방 "공공AX �
                      기관/분야/기술/요약으로 구조화 + 익명화 → 후보 JSON 생성
   ④ 병합 (스크립트) — scripts/merge_cases.py가 스키마 검증, 중복 제거 후
                      data/cases.json에 append-only 병합
-  ⑤ 배포 (스크립트) — 사이트 데이터 갱신 → git commit/push → GitHub Pages
+  ⑤ 배포 (스크립트) — data/cases.json을 site/data/cases.json으로 복사
+                     → git commit/push → GitHub Pages
 ```
 
 ### 역할 분담 원칙
@@ -93,7 +94,8 @@ Threads의 공공AX 태그 게시물과 카카오톡 오픈채팅방 "공공AX �
 
 ## 5. 사이트 (site/)
 
-- 순수 HTML/CSS/JS 단일 페이지, 빌드 도구 없음. `fetch('data/cases.json')`로 렌더링
+- 순수 HTML/CSS/JS 단일 페이지, 빌드 도구 없음. `fetch('./data/cases.json')`로 렌더링
+  (배포 단계에서 `data/cases.json` → `site/data/cases.json` 복사, Pages는 `/site`를 서빙)
 - 기능:
   - 카드형 목록, 최신순 정렬
   - 키워드 검색(제목·요약·기관·태그 대상)
