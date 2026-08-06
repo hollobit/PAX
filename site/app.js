@@ -39,7 +39,6 @@ async function load() {
     state.cases = [...doc.cases].sort((a, b) =>
       (b.date + b.collected_at).localeCompare(a.date + a.collected_at));
     renderStats(doc.updated_at, state.cases.length);
-    buildFilterOptions();
     render();
   } catch (err) {
     console.error('cases.json 로드 실패:', err);
@@ -215,4 +214,7 @@ function createSourceElement(c) {
   return badge;
 }
 
+// 검색/필터 컨트롤은 정적 상수(ORG_TYPES, SOURCES)에만 의존하므로 fetch 성공 여부와
+// 무관하게 항상 초기화한다 — fetch가 실패해도 컨트롤 바가 죽은 채로 남지 않도록.
+buildFilterOptions();
 load();
