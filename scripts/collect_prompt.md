@@ -13,6 +13,8 @@
 ## 1. Threads 수집 (claude-in-chrome 스킬)
 - claude-in-chrome 스킬을 로드하고 새 탭에서
   https://www.threads.com/search?q=%EA%B3%B5%EA%B3%B5AX&serp_type=tags 를 연다.
+  이 URL은 config/rooms.json의 threads[].query("공공AX")에 대한 검색 URL이다 —
+  쿼리를 바꾸면 이 URL도 함께 갱신한다.
 - 로그인 화면이 나오면 이 소스는 건너뛰고 log에 "threads: 로그인 필요"를 기록한다.
 - 페이지를 2~3회 스크롤하며 게시물별로 (원문 텍스트, 게시물 링크, 작성일)을 읽는다.
 - state의 seen_ids에 있는 링크는 무시한다. 새 게시물만 raw 목록에 담는다.
@@ -28,9 +30,13 @@
 - 수집 0건이면 4~6단계를 건너뛰고 7단계로 간다.
 
 ## 4. 사례 선별·구조화 (AI 판단)
-raw 항목마다 판단한다 — **실제 공공AX 사례인가?**
-- 포함: 특정 공공기관(중앙부처/지자체/공공기관/교육기관)이 AI를 도입·시범운영·계획한
-  구체적 내용이 있는 글
+raw 항목마다 판단한다 — **실제 공공AX 사례인가?** 아래 두 카테고리 중 하나에
+해당하면 포함한다.
+- (a) 특정 공공기관(중앙부처/지자체/공공기관/교육기관)이 AI를 도입·시범운영·계획한
+  구체적 내용이 있는 글 → org에 기관명을 적는다.
+- (b) 공직 실무자·커뮤니티가 공공업무를 위해 직접 개발·활용한 AI 도구/자동화
+  사례 → 명시된 기관이 없으면 org에 "공직 커뮤니티" 또는 "공직 현장(개인 개발)"을
+  적고 org_type은 "기타"로 한다.
 - 제외: 일반 뉴스 링크만 있는 글, 세미나/강의 홍보, 잡담, 의견/질문, 민간기업 사례
 사례로 판단한 항목을 아래 형식의 dict로 만들어 data/incoming/TODAY.json에
 JSON 리스트로 저장한다:
@@ -46,8 +52,8 @@ JSON 리스트로 저장한다:
 
 ## 5. 병합·배포 데이터 갱신
 ```bash
-python3 -m pax.merge data/incoming/TODAY.json
-python3 -m pax.publish
+PYTHONPATH=scripts python3 -m pax.merge data/incoming/TODAY.json
+PYTHONPATH=scripts python3 -m pax.publish
 ```
 - merge가 거부 건을 출력하면 data/rejected/TODAY.json을 열어 원인(주로 익명화)을
   수정한 새 incoming 파일로 1회 재시도한다.
