@@ -18,7 +18,11 @@ const ORG_TYPE_BADGE_CLASS = {
   기타: 'badge--org-type-기타',
 };
 
-const state = { cases: [], filter: { q: '', orgType: '전체', source: '전체', tag: null } };
+const state = {
+  cases: [],
+  filter: { q: '', orgType: '전체', source: '전체', tag: null },
+  status: 'loading', // 'loading' | 'loaded' | 'error'
+};
 
 const els = {
   stats: document.getElementById('stats'),
@@ -38,10 +42,12 @@ async function load() {
     const doc = await res.json();
     state.cases = [...doc.cases].sort((a, b) =>
       (b.date + b.collected_at).localeCompare(a.date + a.collected_at));
+    state.status = 'loaded';
     renderStats(doc.updated_at, state.cases.length);
     render();
   } catch (err) {
     console.error('cases.json 로드 실패:', err);
+    state.status = 'error';
     els.errorState.hidden = false;
   }
 }
@@ -97,6 +103,10 @@ function setTag(tag) {
 }
 
 function render() {
+  // fetch가 실패한 뒤에는 필터 변경 이벤트가 와도 렌더링을 건너뛴다 — 그렇지
+  // 않으면 빈 결과(cases=[])가 empty-state를 열어 error-state와 동시에 표시된다.
+  if (state.status !== 'loaded') return;
+
   const results = state.cases.filter((c) => matches(c, state.filter));
 
   renderActiveTag();
