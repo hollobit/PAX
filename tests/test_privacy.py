@@ -26,6 +26,11 @@ def test_kakao_export_line_flagged():
     assert any("닉네임" in i for i in find_privacy_issues(case))
 
 
+def test_kakao_export_line_mid_text_flagged():
+    case = make_case(summary="사례 공유가 있었다.\n[홍길동] [오후 2:31] 우리 기관 도입 사례입니다.")
+    assert any("닉네임" in i for i in find_privacy_issues(case))
+
+
 def test_direct_quote_flagged():
     case = make_case(summary='담당자는 “예산이 부족하다”라고 말했다.')
     assert any("인용" in i for i in find_privacy_issues(case))
