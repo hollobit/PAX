@@ -37,6 +37,17 @@ def test_prepare_candidate_fills_id_and_strips_raw_text():
     assert "raw_text" in cand  # 입력 불변
 
 
+def test_prepare_candidate_drops_unknown_fields():
+    cand = make_candidate(author_nickname="홍길동", raw_message="[홍길동] 원문 전체")
+    prepared = prepare_candidate(cand)
+    assert "author_nickname" not in prepared
+    assert "raw_message" not in prepared
+    assert set(prepared.keys()) == {
+        "id", "date", "collected_at", "source", "link",
+        "org", "org_type", "title", "summary", "tags",
+    }
+
+
 def test_merge_appends_valid_candidate():
     doc = {"updated_at": None, "cases": []}
     new_doc, rejected = merge_cases(doc, [make_candidate()], "2026-08-06T09:00:00+09:00")

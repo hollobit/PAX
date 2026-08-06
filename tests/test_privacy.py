@@ -39,3 +39,23 @@ def test_direct_quote_flagged():
 def test_overlong_summary_flagged():
     case = make_case(summary="가" * 301)
     assert any("길이" in i for i in find_privacy_issues(case))
+
+
+def test_phone_number_in_org_flagged():
+    case = make_case(org="문의 010-1234-5678")
+    assert any("전화번호" in i for i in find_privacy_issues(case))
+
+
+def test_nickname_pattern_in_tags_flagged():
+    case = make_case(tags=["민원", "홍길동님:"])
+    assert any("닉네임" in i for i in find_privacy_issues(case))
+
+
+def test_straight_double_quote_in_summary_flagged():
+    case = make_case(summary='담당자는 "예산이 부족하다"라고 말했다.')
+    assert any("인용" in i for i in find_privacy_issues(case))
+
+
+def test_straight_single_quote_in_summary_allowed():
+    case = make_case(title="서울시 '스마트 민원' 챗봇 도입")
+    assert find_privacy_issues(case) == []

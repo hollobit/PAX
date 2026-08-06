@@ -7,12 +7,18 @@ _PHONE_RE = re.compile(r"01[016789][-\s.]?\d{3,4}[-\s.]?\d{4}")
 _EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+\.[\w.]+")
 _NICKNAME_RE = re.compile(r"\S{2,10}님\s*:")          # "홍길동님:" 채팅 붙여넣기
 _KAKAO_EXPORT_RE = re.compile(r"^\[[^\]]{1,20}\]\s*\[", re.MULTILINE)  # "[닉네임] [오후 2:31]"
-_QUOTE_CHARS = ("“", "”", "「", "」")
+# 직선 홑따옴표(')는 한국어 제목에 흔히 쓰여 허용한다. 곡선/일본식 인용부호와
+# ASCII 쌍따옴표(")는 원문 직접 인용 흔적으로 보고 계속 차단한다.
+_QUOTE_CHARS = ("“", "”", "「", "」", '"')
 
 
 def find_privacy_issues(case: dict) -> list[str]:
     issues = []
-    text = f"{case.get('title', '')}\n{case.get('summary', '')}"
+    tags_text = " ".join(case.get("tags", []) or [])
+    text = "\n".join([
+        case.get("title", ""), case.get("summary", ""),
+        case.get("org", ""), tags_text,
+    ])
 
     if _PHONE_RE.search(text):
         issues.append("전화번호 패턴이 포함되어 있습니다")

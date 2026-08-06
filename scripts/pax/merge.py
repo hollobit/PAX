@@ -12,10 +12,11 @@ import unicodedata
 from pathlib import Path
 
 from pax.privacy import find_privacy_issues
-from pax.schema import validate_case
+from pax.schema import REQUIRED_FIELDS, validate_case
 
 CASES_PATH = Path("data/cases.json")
 REJECTED_DIR = Path("data/rejected")
+_CANDIDATE_FIELDS = REQUIRED_FIELDS - {"id"}
 
 
 def normalize_text(text: str) -> str:
@@ -28,7 +29,9 @@ def make_id(source: str, raw_text: str) -> str:
 
 
 def prepare_candidate(cand: dict) -> dict:
-    prepared = {k: v for k, v in cand.items() if k != "raw_text"}
+    """스키마 화이트리스트에 있는 필드만 통과시킨다 — 그 외 필드(예: 닉네임, 원문 조각)는
+    공개 저장소로 절대 전달되지 않는다."""
+    prepared = {k: cand[k] for k in _CANDIDATE_FIELDS if k in cand}
     prepared["id"] = make_id(cand.get("source", ""), cand.get("raw_text", ""))
     return prepared
 
