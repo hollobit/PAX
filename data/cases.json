@@ -1,4 +1,157 @@
 {
-  "updated_at": null,
-  "cases": []
+  "updated_at": "2026-08-07T02:47:35+09:00",
+  "cases": [
+    {
+      "date": "2026-08-03",
+      "collected_at": "2026-08-07",
+      "source": "threads",
+      "link": "https://www.threads.com/@dev_orijin/post/Dbk1dtEnT3k",
+      "org": "과학기술정보통신부·NIA",
+      "org_type": "중앙부처",
+      "title": "정부 AI 교육 통합 포털 '모두의 AI 성장사다리' 출범",
+      "summary": "과기정통부와 NIA가 흩어져 있던 정부 AI 교육 플랫폼을 하나의 포털로 통합했다. 비용과 기술 장벽 없이 AI 서비스를 만들어 보는 온라인 실험실이 함께 열렸고, 모델 토큰과 클라우드, 공공·민간 데이터 약 9.9만 건과 API 1.3만 건이 연계된다.",
+      "tags": [
+        "교육",
+        "플랫폼",
+        "공공데이터"
+      ],
+      "id": "a2eaaf9f454da37f"
+    },
+    {
+      "date": "2026-07-14",
+      "collected_at": "2026-08-07",
+      "source": "threads",
+      "link": "https://www.threads.com/@gov_ai.builder/post/Dawsl0VEZSD",
+      "org": "서울특별시",
+      "org_type": "지자체",
+      "title": "서울시, 기관 공용 AI 엔진 기반 AI 에이전트 구축 착수",
+      "summary": "서울시가 문서 요약과 회의실 예약 자동화를 시작으로 AI 에이전트 구축에 착수했다. 기능 단위 정보화 사업 대신 기관 공용 AI 엔진을 만들고 MCP 방식으로 필요한 기능을 붙여가는 구조를 지향한다는 현장 개발 사례가 공유됐다.",
+      "tags": [
+        "AI에이전트",
+        "MCP",
+        "업무자동화"
+      ],
+      "id": "02656bf9d2589964"
+    },
+    {
+      "date": "2026-04-26",
+      "collected_at": "2026-08-07",
+      "source": "threads",
+      "link": "https://www.threads.com/@orthodox_tauros/post/DXmJA6IDykL",
+      "org": "공직 현장(개인 개발)",
+      "org_type": "기타",
+      "title": "바이브 코딩으로 서무 업무 자동화 프로그램 제작",
+      "summary": "한 공무원이 생성형 AI 바이브 코딩으로 특근매식비 정산과 사무용품 구매요청서 작성 프로그램을 직접 만들었다. 서무 업무에 드는 시간을 줄여 본업인 물품관리 업무에 집중하려는 시도다.",
+      "tags": [
+        "업무자동화",
+        "바이브코딩"
+      ],
+      "id": "59ff218c60039cc9"
+    },
+    {
+      "date": "2026-08-03",
+      "collected_at": "2026-08-07",
+      "source": "threads",
+      "link": "https://www.threads.com/@chobu62/post/DblOFkKD8U_",
+      "org": "공직 커뮤니티",
+      "org_type": "기타",
+      "title": "화면 기록형 매크로 도구 공개 — 공공 AX 로컬 시리즈 4",
+      "summary": "반복 업무를 화면 녹화와 함께 마우스·키보드 입력을 시간순으로 기록했다가, 사람이 확인한 뒤 그대로 재실행하는 로컬 자동화 도구가 공개됐다. 공공 업무 환경을 겨냥한 로컬 도구 시리즈의 네 번째 결과물이다.",
+      "tags": [
+        "업무자동화",
+        "로컬도구"
+      ],
+      "id": "6f376e827405e328"
+    },
+    {
+      "date": "2026-07-26",
+      "collected_at": "2026-08-07",
+      "source": "threads",
+      "link": "https://www.threads.com/@chobu62/post/DbQJBY5D3hI",
+      "org": "공직 커뮤니티",
+      "org_type": "기타",
+      "title": "로컬 문서 검수 도구 공개 — 맞춤법·공공언어 검사",
+      "summary": "HWP·HWPX·DOCX·TXT 문서를 PC 밖으로 보내지 않고 맞춤법, 띄어쓰기, 문장부호, 공공언어 오류를 검사하는 로컬 도구가 공개됐다. 외부 업로드나 API 호출 없이 Windows 실행파일 하나로 구동된다.",
+      "tags": [
+        "문서자동화",
+        "로컬도구"
+      ],
+      "id": "719692c2c31da09f"
+    },
+    {
+      "date": "2026-07-26",
+      "collected_at": "2026-08-07",
+      "source": "threads",
+      "link": "https://www.threads.com/@chobu62/post/DbQOCCaD0vM",
+      "org": "공직 커뮤니티",
+      "org_type": "기타",
+      "title": "로컬 인수인계 도구 MVP 공개 — 공공 AX 로컬 시리즈 3",
+      "summary": "인수인계 없이 전임자의 작업 폴더만 남은 상황을 돕는 로컬 인수인계 도구의 MVP가 공개됐다. 공공 업무 환경용 로컬 도구 시리즈의 세 번째 결과물이다.",
+      "tags": [
+        "인수인계",
+        "로컬도구"
+      ],
+      "id": "2c14f2adaa83a00e"
+    },
+    {
+      "date": "2026-05-17",
+      "collected_at": "2026-08-07",
+      "source": "threads",
+      "link": "https://www.threads.com/@publicai_79/post/DYbE18jj6kV",
+      "org": "공직 커뮤니티",
+      "org_type": "기타",
+      "title": "AI 기반 업무 인수인계 관리 사례",
+      "summary": "한글 파일로 주고받던 업무 인수인계를 AI 메모 관리로 대체한 사례가 공유됐다. 등록한 메모를 AI가 정리해 질문에 답하며, 데이터는 PC에만 저장되어 외부로 나가지 않는다.",
+      "tags": [
+        "인수인계",
+        "로컬AI"
+      ],
+      "id": "075fd5baf003c3b0"
+    },
+    {
+      "date": "2026-06-22",
+      "collected_at": "2026-08-07",
+      "source": "threads",
+      "link": "https://www.threads.com/@chris_gomdori/post/DZ49_V9DfJ_",
+      "org": "공직 커뮤니티",
+      "org_type": "기타",
+      "title": "PC 문서를 AI로 검색하는 로컬 도구 시연",
+      "summary": "PC 곳곳에 흩어진 문서를 AI가 읽고 질문에 답을 찾아주는 로컬 문서 검색 도구의 시연이 공유됐다. 한글 문서를 열지 않고 내용을 미리 보는 기능도 제공한다.",
+      "tags": [
+        "문서검색",
+        "로컬AI"
+      ],
+      "id": "de4b2dab339d69b7"
+    },
+    {
+      "date": "2026-04-01",
+      "collected_at": "2026-08-07",
+      "source": "threads",
+      "link": "https://www.threads.com/@chris_gomdori/post/DWlzH2MicNK",
+      "org": "공직 커뮤니티",
+      "org_type": "기타",
+      "title": "국가법령정보 MCP 활용 사례 공유",
+      "summary": "국가법령정보를 AI에서 활용하는 MCP 도구의 실제 사용 예시가 공유됐다. 법령 정보를 AI 도구 호출로 조회하는 방법을 단계별로 소개한다.",
+      "tags": [
+        "법령",
+        "MCP"
+      ],
+      "id": "d40cc4a9cf6e29b6"
+    },
+    {
+      "date": "2026-07-11",
+      "collected_at": "2026-08-07",
+      "source": "threads",
+      "link": "https://www.threads.com/@gongpenclaw/post/DaoePfGgXdv",
+      "org": "공직 커뮤니티",
+      "org_type": "기타",
+      "title": "AI로 그린 국가 제도 100개 업무구조도 프로젝트",
+      "summary": "AI를 활용해 대한민국 대표 제도 100개를 한 장짜리 업무구조도로 정리한 프로젝트가 공개됐다. 각 제도의 법적 근거, 관련 기관, 절차 단계, 자금과 문서 흐름, 병목 지점까지 담았다.",
+      "tags": [
+        "제도분석",
+        "시각화"
+      ],
+      "id": "5451653f4cddb6f2"
+    }
+  ]
 }
