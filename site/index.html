@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>공공AX 사례 아카이브</title>
+  <meta name="description" content="Threads와 오픈채팅에서 수집한 공공기관 AI 전환(AX) 사례 모음">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">PUBLIC SECTOR AX RECORD · 공공부문 AI전환 기록</p>
+    <h1>공공AX 사례 아카이브</h1>
+    <p class="tagline">Threads · 오픈채팅에서 매일 수집한 공공기관 AI 전환 사례</p>
+    <p class="stats" id="stats" aria-live="polite"></p>
+  </header>
+  <main>
+    <section class="controls" aria-label="검색 및 필터">
+      <label class="control control--search">
+        <span class="control-label">검색</span>
+        <input type="search" id="search" placeholder="제목·요약·기관·태그 검색">
+      </label>
+      <label class="control">
+        <span class="control-label">기관유형</span>
+        <select id="org-type-filter"></select>
+      </label>
+      <label class="control">
+        <span class="control-label">출처</span>
+        <select id="source-filter"></select>
+      </label>
+    </section>
+    <section id="active-tag" class="active-tag" hidden></section>
+    <section id="case-list" class="case-list" aria-label="사례 목록"></section>
+    <p id="empty-state" class="empty-state" hidden>조건에 맞는 사례가 없습니다</p>
+    <p id="error-state" class="empty-state" hidden>데이터를 불러오지 못했습니다</p>
+  </main>
+  <footer class="site-footer">
+    <p>요약은 AI가 재작성한 것으로 원문과 다를 수 있습니다. 오픈채팅 사례는 작성자 보호를 위해 원문을 공개하지 않습니다.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
