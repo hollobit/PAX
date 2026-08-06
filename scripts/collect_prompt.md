@@ -19,11 +19,18 @@
 - 페이지를 2~3회 스크롤하며 게시물별로 (원문 텍스트, 게시물 링크, 작성일)을 읽는다.
 - state의 seen_ids에 있는 링크는 무시한다. 새 게시물만 raw 목록에 담는다.
 
-## 2. 카카오톡 수집 (kakaotalk-mac 스킬)
-- kakaotalk-mac 스킬을 로드하고 rooms.json의 각 방(예: "공공AX 네트워크")을 연다.
-- 카카오톡이 실행 불가/미로그인이면 이 소스는 건너뛰고 log에 기록한다.
-- last_read 이후의 메시지를 읽는다 (첫 실행이면 최근 3일 분량만).
-- 메시지의 (텍스트, 표시된 날짜/시각)을 raw 목록에 담는다. 닉네임은 raw에만 저장한다.
+## 2. 카카오톡 수집 (kakaocli)
+- `kakaocli`로 로컬 DB를 직접 읽는다 (2026-08-07 검증된 경로):
+  ```bash
+  kakaocli messages --chat-id <state.json의 kakao.chat_id> --since 1d --limit 500 --json
+  ```
+  chat_id가 state.json에 없으면 `kakaocli search "공공AX" --json`으로 히트가 가장 많은
+  chat_id를 찾는다 (방 이름은 DB에서 "(unknown)"으로 나오므로 이름 매칭은 불가).
+- `kakaocli` 미설치/실패 시(빌드에 전체 Xcode 필요) kakaotalk-mac 스킬로 폴백하고,
+  둘 다 안 되면 이 소스는 건너뛰고 log에 기록한다.
+- last_read 이후의 메시지만 사용한다 (첫 실행이면 최근 3일 분량만).
+- 봇 메시지(예: "Cronjob Response" 시작)와 120자 미만 잡담은 후보에서 제외해도 된다.
+- 메시지의 (텍스트, timestamp)를 raw 목록에 담는다. sender_id·닉네임은 raw에만 저장한다.
 
 ## 3. 원본 저장
 - 수집한 raw 목록을 data/raw/TODAY.json에 저장한다 (커밋 금지 경로).
