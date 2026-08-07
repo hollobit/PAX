@@ -39,11 +39,38 @@ function siteHostname(c) {
 
 const state = {
   cases: [],
-  filter: { q: '', orgType: '전체', source: '전체', tag: null },
+  filter: { q: '', orgType: '전체', source: '전체', tag: null, bookmarkedOnly: false },
   view: loadSavedView(), // 'cards' | 'list'
   sort: { key: 'date', dir: 'desc' },
+  bookmarks: loadBookmarks(), // Set<caseId> — localStorage에 보존
   status: 'loading', // 'loading' | 'loaded' | 'error'
 };
+
+function loadBookmarks() {
+  try {
+    const saved = JSON.parse(localStorage.getItem('pax-bookmarks') || '[]');
+    return new Set(Array.isArray(saved) ? saved.filter((v) => typeof v === 'string') : []);
+  } catch {
+    return new Set();
+  }
+}
+
+function toggleBookmark(id) {
+  const next = new Set(state.bookmarks);
+  if (next.has(id)) {
+    next.delete(id);
+  } else {
+    next.add(id);
+  }
+  state.bookmarks = next;
+  try {
+    localStorage.setItem('pax-bookmarks', JSON.stringify([...next]));
+  } catch {
+    // 저장 실패(사생활 보호 모드 등)는 무시 — 세션 내에서는 동작한다
+  }
+  syncBookmarkFilterButton();
+  render();
+}
 
 function loadSavedView() {
   try {
@@ -54,15 +81,60 @@ function loadSavedView() {
   }
 }
 
+/* ── URL ↔ 상태 동기화 ─────────────────────────────────────
+ * 모든 설정을 URL 쿼리로 표현한다: q, type, src, tag, view, sort, bm
+ * URL에 있는 값이 localStorage 기본값보다 우선한다 (공유 링크 복원용).
+ */
+function applyUrlToState() {
+  const p = new URLSearchParams(location.search);
+  const orgType = p.get('type');
+  const source = p.get('src');
+  const view = p.get('view');
+  const sortParam = p.get('sort'); // "key.dir"
+  let sort = state.sort;
+  if (sortParam) {
+    const [key, dir] = sortParam.split('.');
+    if (SORT_ACCESSORS[key] && (dir === 'asc' || dir === 'desc')) sort = { key, dir };
+  }
+  state.filter = {
+    ...state.filter,
+    q: p.get('q') || '',
+    orgType: ORG_TYPES.includes(orgType) ? orgType : '전체',
+    source: SOURCES.includes(source) ? source : '전체',
+    tag: p.get('tag') || null,
+    bookmarkedOnly: p.get('bm') === '1',
+  };
+  if (VIEWS.includes(view)) state.view = view;
+  state.sort = sort;
+}
+
+function syncUrl() {
+  const p = new URLSearchParams();
+  const f = state.filter;
+  if (f.q.trim()) p.set('q', f.q.trim());
+  if (f.orgType !== '전체') p.set('type', f.orgType);
+  if (f.source !== '전체') p.set('src', f.source);
+  if (f.tag) p.set('tag', f.tag);
+  if (f.bookmarkedOnly) p.set('bm', '1');
+  if (state.view !== 'cards') p.set('view', state.view);
+  if (state.sort.key !== 'date' || state.sort.dir !== 'desc') {
+    p.set('sort', `${state.sort.key}.${state.sort.dir}`);
+  }
+  const qs = p.toString();
+  history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+}
+
 const els = {
   stats: document.getElementById('stats'),
   search: document.getElementById('search'),
   orgTypeFilter: document.getElementById('org-type-filter'),
   sourceFilter: document.getElementById('source-filter'),
+  tagFilter: document.getElementById('tag-filter'),
   activeTag: document.getElementById('active-tag'),
   caseList: document.getElementById('case-list'),
   viewCards: document.getElementById('view-cards'),
   viewList: document.getElementById('view-list'),
+  bookmarkFilter: document.getElementById('bookmark-filter'),
   emptyState: document.getElementById('empty-state'),
   errorState: document.getElementById('error-state'),
 };
@@ -76,6 +148,7 @@ async function load() {
       (b.date + b.collected_at).localeCompare(a.date + a.collected_at));
     state.status = 'loaded';
     renderStats(doc.updated_at, state.cases.length);
+    buildTagOptions();
     render();
   } catch (err) {
     console.error('cases.json 로드 실패:', err);
@@ -107,10 +180,28 @@ function buildFilterOptions() {
     state.filter = { ...state.filter, q: els.search.value };
     render();
   });
+  els.tagFilter.addEventListener('change', () => {
+    const value = els.tagFilter.value;
+    state.filter = { ...state.filter, tag: value === '전체' ? null : value };
+    render();
+  });
 
   els.viewCards.addEventListener('click', () => setView('cards'));
   els.viewList.addEventListener('click', () => setView('list'));
   syncViewButtons();
+
+  els.bookmarkFilter.addEventListener('click', () => {
+    state.filter = { ...state.filter, bookmarkedOnly: !state.filter.bookmarkedOnly };
+    syncBookmarkFilterButton();
+    render();
+  });
+  syncBookmarkFilterButton();
+}
+
+function syncBookmarkFilterButton() {
+  const count = state.bookmarks.size;
+  els.bookmarkFilter.setAttribute('aria-pressed', String(state.filter.bookmarkedOnly));
+  els.bookmarkFilter.textContent = count > 0 ? `★ 북마크만 보기 (${count})` : '★ 북마크만 보기';
 }
 
 function setView(view) {
@@ -145,6 +236,30 @@ function sortForList(results) {
   return [...results].sort((a, b) => sign * accessor(a).localeCompare(accessor(b), 'ko'));
 }
 
+// 태그 셀렉트: 데이터에서 전체 태그를 모아 빈도순(동률이면 가나다순)으로 채운다.
+// 칩 클릭 필터(setTag)와 같은 state.filter.tag를 공유한다.
+function buildTagOptions() {
+  const counts = new Map();
+  for (const c of state.cases) {
+    for (const tag of c.tags) counts.set(tag, (counts.get(tag) || 0) + 1);
+  }
+  const sorted = [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ko'));
+
+  els.tagFilter.replaceChildren();
+  const all = document.createElement('option');
+  all.value = '전체';
+  all.textContent = '전체';
+  els.tagFilter.appendChild(all);
+  for (const [tag, count] of sorted) {
+    const option = document.createElement('option');
+    option.value = tag;
+    option.textContent = `${tag} (${count})`;
+    els.tagFilter.appendChild(option);
+  }
+  els.tagFilter.value = state.filter.tag || '전체';
+}
+
 function fillSelect(select, values) {
   select.replaceChildren();
   for (const value of values) {
@@ -156,6 +271,7 @@ function fillSelect(select, values) {
 }
 
 function matches(c, f) {
+  if (f.bookmarkedOnly && !state.bookmarks.has(c.id)) return false;
   if (f.orgType !== '전체' && c.org_type !== f.orgType) return false;
   if (f.source !== '전체' && c.source !== (f.source === 'Threads' ? 'threads' : 'kakao')) return false;
   if (f.tag && !c.tags.includes(f.tag)) return false;
@@ -167,10 +283,12 @@ function matches(c, f) {
 function setTag(tag) {
   const nextTag = state.filter.tag === tag ? null : tag;
   state.filter = { ...state.filter, tag: nextTag };
+  els.tagFilter.value = nextTag || '전체';
   render();
 }
 
 function render() {
+  syncUrl();
   // fetch가 실패한 뒤에는 필터 변경 이벤트가 와도 렌더링을 건너뛴다 — 그렇지
   // 않으면 빈 결과(cases=[])가 empty-state를 열어 error-state와 동시에 표시된다.
   if (state.status !== 'loaded') return;
@@ -197,7 +315,21 @@ function render() {
   });
 }
 
+function createBookmarkButton(c) {
+  const bookmarked = state.bookmarks.has(c.id);
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'bookmark-btn';
+  btn.textContent = bookmarked ? '★' : '☆';
+  btn.setAttribute('aria-pressed', String(bookmarked));
+  btn.setAttribute('aria-label', bookmarked ? '북마크 해제' : '북마크 추가');
+  btn.title = bookmarked ? '북마크 해제' : '북마크 추가';
+  btn.addEventListener('click', () => toggleBookmark(c.id));
+  return btn;
+}
+
 const LIST_COLUMNS = [
+  { key: 'bookmark', label: '★', sortable: false },
   { key: 'title', label: '제목', sortable: true },
   { key: 'org', label: '기관', sortable: true },
   { key: 'org_type', label: '유형', sortable: true },
@@ -249,6 +381,10 @@ function createCaseTable(results) {
 
 function createCaseRow(c) {
   const tr = document.createElement('tr');
+
+  const bookmarkTd = document.createElement('td');
+  bookmarkTd.className = 'case-table__bookmark';
+  bookmarkTd.appendChild(createBookmarkButton(c));
 
   const titleTd = document.createElement('td');
   titleTd.className = 'case-table__title';
@@ -318,7 +454,7 @@ function createCaseRow(c) {
   dateTd.className = 'case-table__date';
   dateTd.textContent = c.date;
 
-  tr.append(titleTd, orgTd, typeTd, tagsTd, siteTd, sourceTd, dateTd);
+  tr.append(bookmarkTd, titleTd, orgTd, typeTd, tagsTd, siteTd, sourceTd, dateTd);
   return tr;
 }
 
@@ -369,6 +505,7 @@ function createCaseCard(c) {
 
   meta.appendChild(badge);
   meta.appendChild(org);
+  meta.appendChild(createBookmarkButton(c));
 
   const title = document.createElement('h3');
   title.className = 'case-card__title';
@@ -489,5 +626,12 @@ function createSourceLink(href, label) {
 
 // 검색/필터 컨트롤은 정적 상수(ORG_TYPES, SOURCES)에만 의존하므로 fetch 성공 여부와
 // 무관하게 항상 초기화한다 — fetch가 실패해도 컨트롤 바가 죽은 채로 남지 않도록.
+applyUrlToState();
 buildFilterOptions();
+// URL에서 복원한 설정을 컨트롤에 반영
+els.search.value = state.filter.q;
+els.orgTypeFilter.value = state.filter.orgType;
+els.sourceFilter.value = state.filter.source;
+syncViewButtons();
+syncBookmarkFilterButton();
 load();

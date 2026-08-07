@@ -737,3 +737,84 @@ main {
   text-decoration: underline;
   color: var(--accent-2-strong);
 }
+
+/* ── 북마크 ─────────────────────────────────────────────── */
+
+.bookmark-btn {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  padding: 0 0.2rem;
+  font-size: 1.15rem;
+  line-height: 1;
+  color: var(--accent-gold);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.bookmark-btn:hover {
+  transform: scale(1.2);
+}
+
+.bookmark-btn[aria-pressed="false"] {
+  color: var(--ink-faint);
+}
+
+.bookmark-btn[aria-pressed="false"]:hover {
+  color: var(--accent-gold);
+}
+
+.bookmark-filter {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--rule-strong);
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.bookmark-filter[aria-pressed="true"] {
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: #fff;
+}
+
+.case-table__bookmark {
+  width: 2rem;
+  text-align: center;
+}
+
+/* ── 수집 출처 ───────────────────────────────────────────── */
+
+.site-footer__sources {
+  max-width: 640px;
+  margin: 0 auto 1.4rem;
+  padding: 1rem 1.2rem;
+  text-align: left;
+  border: 1px solid var(--rule);
+  background: var(--bg-elevated);
+}
+
+.site-footer__sources h2 {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.site-footer__sources li {
+  margin-bottom: 0.55rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.site-footer__sources a,
+.site-footer__source-name {
+  font-weight: 600;
+  color: var(--accent-2);
+}

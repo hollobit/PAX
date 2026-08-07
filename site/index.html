@@ -28,12 +28,20 @@
         <span class="control-label">출처</span>
         <select id="source-filter"></select>
       </label>
+      <label class="control">
+        <span class="control-label">태그</span>
+        <select id="tag-filter"></select>
+      </label>
       <div class="control control--view" role="group" aria-label="보기 유형">
         <span class="control-label">보기</span>
         <div class="view-toggle">
           <button type="button" id="view-cards" aria-pressed="true">카드</button>
           <button type="button" id="view-list" aria-pressed="false">목록</button>
         </div>
+      </div>
+      <div class="control control--bookmark">
+        <span class="control-label">북마크</span>
+        <button type="button" id="bookmark-filter" class="bookmark-filter" aria-pressed="false">★ 북마크만 보기</button>
       </div>
     </section>
     <section id="active-tag" class="active-tag" hidden></section>
@@ -42,6 +50,23 @@
     <p id="error-state" class="empty-state" hidden>데이터를 불러오지 못했습니다</p>
   </main>
   <footer class="site-footer">
+    <section class="site-footer__sources" aria-label="수집 출처">
+      <h2>수집 출처</h2>
+      <ul>
+        <li>
+          <a href="https://www.threads.com/search?q=%EA%B3%B5%EA%B3%B5AX&serp_type=tags" target="_blank" rel="noopener">Threads 공공AX 태그</a>
+          — 공공부문 AI 전환을 주제로 한 공개 게시물. 태그 검색 결과를 매일 수집하며, 사례 카드에서 원문 링크를 제공합니다.
+        </li>
+        <li>
+          <span class="site-footer__source-name">카카오톡 오픈채팅 공공AX 네트워크</span>
+          — 공무원·공공기관 실무자들이 AI 활용 사례와 도구를 공유하는 커뮤니티. 작성자 보호를 위해 대화 원문은 공개하지 않고, AI가 재작성한 요약과 공유된 공개 서비스 링크만 게시합니다.
+        </li>
+        <li>
+          <a href="https://github.com/hollobit/PAX" target="_blank" rel="noopener">GitHub hollobit/PAX</a>
+          — 이 아카이브의 수집 파이프라인과 데이터 저장소. 매일 1회 자동 수집·선별·검증을 거쳐 갱신됩니다.
+        </li>
+      </ul>
+    </section>
     <p>요약은 AI가 재작성한 것으로 원문과 다를 수 있습니다. 오픈채팅 사례는 작성자 보호를 위해 원문을 공개하지 않습니다.</p>
     <p class="site-footer__curator">Curated by Jonghong Jeon, <a href="mailto:hollobit@etri.re.kr">hollobit@etri.re.kr</a></p>
   </footer>
