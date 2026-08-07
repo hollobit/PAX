@@ -651,7 +651,7 @@ main {
 
 .case-table {
   width: 100%;
-  min-width: 760px;
+  min-width: 880px;
   border-collapse: collapse;
   font-size: 0.9rem;
 }
@@ -718,4 +718,22 @@ main {
 
 .site-footer__curator a {
   color: inherit;
+}
+
+.case-table__site {
+  white-space: nowrap;
+  max-width: 14rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.case-table__site a {
+  color: var(--accent-2);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.case-table__site a:hover {
+  text-decoration: underline;
+  color: var(--accent-2-strong);
 }

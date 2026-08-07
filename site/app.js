@@ -26,8 +26,16 @@ const SORT_ACCESSORS = {
   org: (c) => c.org,
   org_type: (c) => c.org_type,
   source: (c) => (c.source === 'threads' ? 'Threads' : '오픈채팅'),
+  site: (c) => siteHostname(c) || '￿', // 사이트 없는 행은 항상 뒤로
   date: (c) => c.date + c.collected_at,
 };
+
+// 사례 대상 URL의 호스트명 (유니코드 도메인 보존을 위해 문자열로 추출)
+function siteHostname(c) {
+  const url = caseTargetUrl(c);
+  if (!url) return null;
+  return url.replace(/^https:\/\//, '').split('/')[0].replace(/^www\./, '');
+}
 
 const state = {
   cases: [],
@@ -194,6 +202,7 @@ const LIST_COLUMNS = [
   { key: 'org', label: '기관', sortable: true },
   { key: 'org_type', label: '유형', sortable: true },
   { key: 'tags', label: '태그', sortable: false },
+  { key: 'site', label: '사이트', sortable: true },
   { key: 'source', label: '출처', sortable: true },
   { key: 'date', label: '날짜', sortable: true },
 ];
@@ -280,6 +289,21 @@ function createCaseRow(c) {
     tagsTd.appendChild(btn);
   }
 
+  const siteTd = document.createElement('td');
+  siteTd.className = 'case-table__site';
+  const host = siteHostname(c);
+  if (host && targetUrl) {
+    const siteLink = document.createElement('a');
+    siteLink.href = targetUrl;
+    siteLink.target = '_blank';
+    siteLink.rel = 'noopener';
+    siteLink.title = targetUrl;
+    siteLink.textContent = `${host} ↗`;
+    siteTd.appendChild(siteLink);
+  } else {
+    siteTd.textContent = '—';
+  }
+
   const sourceTd = document.createElement('td');
   sourceTd.className = 'case-table__source';
   const sourceLabel = document.createElement('span');
@@ -294,7 +318,7 @@ function createCaseRow(c) {
   dateTd.className = 'case-table__date';
   dateTd.textContent = c.date;
 
-  tr.append(titleTd, orgTd, typeTd, tagsTd, sourceTd, dateTd);
+  tr.append(titleTd, orgTd, typeTd, tagsTd, siteTd, sourceTd, dateTd);
   return tr;
 }
 
