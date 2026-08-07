@@ -18,6 +18,51 @@ FIELDS = [
 ]
 
 
+def derive_tool_type(case: dict) -> str:
+    """공개 정보 기반 도구유형 자동 분류 (표시용)."""
+    title = case["title"]
+    url = str(case.get("service_url") or "")
+    if "MCP" in title or (case.get("m") or "").startswith("M"):
+        return "MCP 서버·도구"
+    if any(k in title for k in ("대시보드", "분석 플랫폼", "현황", "비교", "구조도", "온톨로지", "레이더", "인파", "트랙레코드")):
+        return "대시보드·분석"
+    if any(k in title for k in ("포털", "플랫폼", "배움터", "허브", "모음", "아카이브", "보드")):
+        return "플랫폼·포털"
+    if any(k in title for k in ("Chrome", "확장")):
+        return "브라우저 확장"
+    if any(k in title for k in ("스킬", "플러그인", "에이전트")):
+        return "AI 스킬·에이전트"
+    if any(k in title for k in ("트레이", "Windows", "데스크톱", "프로그램", "HWP", "엑셀")):
+        return "데스크톱 도구"
+    if any(k in title for k in ("도입", "발령", "보고", "출범", "개시", "구축")):
+        return "도입·정책"
+    if url.startswith("https://github.com"):
+        return "오픈소스 도구"
+    if url:
+        return "웹 서비스"
+    return "도구·기타"
+
+
+def derive_audience(case: dict) -> str:
+    """사용자 관계(G2x) 자동 분류 (표시용)."""
+    scope = case.get("scope") or ""
+    title = case["title"]
+    if any(k in title for k in ("대국민", "시민", "민원", "인파", "관광", "국회의원")):
+        return "G2C 대국민"
+    if any(k in title for k in ("기업", "지원사업", "조달")):
+        return "G2B 기업"
+    if scope == "Internal":
+        return "G2E 공직 내부"
+    if scope == "External":
+        # 외부 공개지만 공직 실무자·개발자가 주 사용자인 도구가 다수
+        if str(case.get("service_url") or "").startswith("https://github.com"):
+            return "G2E 공직 실무자"
+        return "G2C 공개"
+    if scope == "Hybrid":
+        return "G2E·G2C 혼합"
+    return "미상"
+
+
 def main() -> int:
     if len(sys.argv) != 2:
         print("사용법: python3 scripts/build_eval_data.py <xlsx>", file=sys.stderr)
@@ -35,6 +80,8 @@ def main() -> int:
         if not row[0]:
             continue
         case = dict(zip(FIELDS, [v if v is not None else "" for v in row]))
+        case["tool_type"] = derive_tool_type(case)
+        case["audience"] = derive_audience(case)
         cases.append(case)
 
     doc = {"evaluated_at": "2026-08-08", "total": len(cases), "cases": cases}

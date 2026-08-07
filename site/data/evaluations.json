@@ -28,7 +28,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "https://www.threads.com/@dev_orijin/post/Dbk1dtEnT3k",
-   "service_url": "https://www.ailearn4all.kr/"
+   "service_url": "https://www.ailearn4all.kr/",
+   "tool_type": "플랫폼·포털",
+   "audience": "G2C 공개"
   },
   {
    "no": 2,
@@ -56,7 +58,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "https://www.threads.com/@gov_ai.builder/post/Dawsl0VEZSD",
-   "service_url": "https://www.etnews.com/20260710000114"
+   "service_url": "https://www.etnews.com/20260710000114",
+   "tool_type": "MCP 서버·도구",
+   "audience": "G2E·G2C 혼합"
   },
   {
    "no": 3,
@@ -84,7 +88,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "https://www.threads.com/@orthodox_tauros/post/DXmJA6IDykL",
-   "service_url": ""
+   "service_url": "",
+   "tool_type": "데스크톱 도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 4,
@@ -112,7 +118,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "https://www.threads.com/@chobu62/post/DblOFkKD8U_",
-   "service_url": ""
+   "service_url": "",
+   "tool_type": "도구·기타",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 5,
@@ -140,7 +148,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "https://www.threads.com/@chobu62/post/DbQJBY5D3hI",
-   "service_url": "https://github.com/obundh/gonggong-ax-local"
+   "service_url": "https://github.com/obundh/gonggong-ax-local",
+   "tool_type": "오픈소스 도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 6,
@@ -168,7 +178,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "https://www.threads.com/@chobu62/post/DbQOCCaD0vM",
-   "service_url": "https://github.com/obundh/gonggong-ax-local-3"
+   "service_url": "https://github.com/obundh/gonggong-ax-local-3",
+   "tool_type": "오픈소스 도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 7,
@@ -196,7 +208,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "https://www.threads.com/@publicai_79/post/DYbE18jj6kV",
-   "service_url": ""
+   "service_url": "",
+   "tool_type": "도구·기타",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 8,
@@ -224,7 +238,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "https://www.threads.com/@chris_gomdori/post/DZ49_V9DfJ_",
-   "service_url": "https://github.com/chrisryugj/Docufinder"
+   "service_url": "https://github.com/chrisryugj/Docufinder",
+   "tool_type": "오픈소스 도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 9,
@@ -252,7 +268,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "https://www.threads.com/@chris_gomdori/post/DWlzH2MicNK",
-   "service_url": ""
+   "service_url": "",
+   "tool_type": "MCP 서버·도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 10,
@@ -280,7 +298,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "https://www.threads.com/@gongpenclaw/post/DaoePfGgXdv",
-   "service_url": "https://hosungseo.github.io/korea100/"
+   "service_url": "https://hosungseo.github.io/korea100/",
+   "tool_type": "대시보드·분석",
+   "audience": "G2C 공개"
   },
   {
    "no": 11,
@@ -308,7 +328,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": ""
+   "service_url": "",
+   "tool_type": "도입·정책",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 12,
@@ -336,7 +358,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://icaretok.nemc.or.kr/pec/"
+   "service_url": "https://icaretok.nemc.or.kr/pec/",
+   "tool_type": "웹 서비스",
+   "audience": "G2E·G2C 혼합"
   },
   {
    "no": 13,
@@ -364,7 +388,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://privacy-law-reader.vercel.app/"
+   "service_url": "https://privacy-law-reader.vercel.app/",
+   "tool_type": "MCP 서버·도구",
+   "audience": "G2C 공개"
   },
   {
    "no": 14,
@@ -392,7 +418,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://gyohaeng.pages.dev/workflow-map"
+   "service_url": "https://gyohaeng.pages.dev/workflow-map",
+   "tool_type": "웹 서비스",
+   "audience": "G2C 공개"
   },
   {
    "no": 15,
@@ -420,7 +448,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://github.com/boam79/public-data-api-finder"
+   "service_url": "https://github.com/boam79/public-data-api-finder",
+   "tool_type": "오픈소스 도구",
+   "audience": "G2E 공직 실무자"
   },
   {
    "no": 16,
@@ -448,7 +478,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://github.com/Kminer2053/demo-video-skill"
+   "service_url": "https://github.com/Kminer2053/demo-video-skill",
+   "tool_type": "AI 스킬·에이전트",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 17,
@@ -476,7 +508,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://lexdiff.gomdori.app"
+   "service_url": "https://lexdiff.gomdori.app",
+   "tool_type": "대시보드·분석",
+   "audience": "G2C 공개"
   },
   {
    "no": 18,
@@ -504,7 +538,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://gongmun.com"
+   "service_url": "https://gongmun.com",
+   "tool_type": "웹 서비스",
+   "audience": "G2C 공개"
   },
   {
    "no": 19,
@@ -532,7 +568,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://gyohaeng.pages.dev"
+   "service_url": "https://gyohaeng.pages.dev",
+   "tool_type": "플랫폼·포털",
+   "audience": "G2C 공개"
   },
   {
    "no": 20,
@@ -560,7 +598,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "",
-   "service_url": "https://github.com/Milkbuttercheese2/What-I-have-to-do"
+   "service_url": "https://github.com/Milkbuttercheese2/What-I-have-to-do",
+   "tool_type": "오픈소스 도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 21,
@@ -588,7 +628,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://brojun.kr/sdhg"
+   "service_url": "https://brojun.kr/sdhg",
+   "tool_type": "데스크톱 도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 22,
@@ -616,7 +658,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "",
-   "service_url": "https://github.com/galvaomica396/Nothing"
+   "service_url": "https://github.com/galvaomica396/Nothing",
+   "tool_type": "오픈소스 도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 23,
@@ -644,7 +688,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://researchfellow.vercel.app"
+   "service_url": "https://researchfellow.vercel.app",
+   "tool_type": "AI 스킬·에이전트",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 24,
@@ -672,7 +718,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://seomu-work-hub.tgtg4840.chatgpt.site/"
+   "service_url": "https://seomu-work-hub.tgtg4840.chatgpt.site/",
+   "tool_type": "플랫폼·포털",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 25,
@@ -700,7 +748,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://github.com/pon00050/minwon-draft"
+   "service_url": "https://github.com/pon00050/minwon-draft",
+   "tool_type": "AI 스킬·에이전트",
+   "audience": "G2C 대국민"
   },
   {
    "no": 26,
@@ -728,7 +778,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://github.com/koul777/Public-Regulation-MCP-Builder"
+   "service_url": "https://github.com/koul777/Public-Regulation-MCP-Builder",
+   "tool_type": "MCP 서버·도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 27,
@@ -756,7 +808,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://tgtg4840-byte.github.io/seomuland/"
+   "service_url": "https://tgtg4840-byte.github.io/seomuland/",
+   "tool_type": "플랫폼·포털",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 28,
@@ -784,7 +838,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "",
-   "service_url": "https://github.com/koul777/VHLookup"
+   "service_url": "https://github.com/koul777/VHLookup",
+   "tool_type": "데스크톱 도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 29,
@@ -812,7 +868,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://github.com/koul777/clickguide-local-private"
+   "service_url": "https://github.com/koul777/clickguide-local-private",
+   "tool_type": "오픈소스 도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 30,
@@ -840,7 +898,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://dexa.art/mice-safety/"
+   "service_url": "https://dexa.art/mice-safety/",
+   "tool_type": "MCP 서버·도구",
+   "audience": "G2C 공개"
   },
   {
    "no": 31,
@@ -868,7 +928,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://원클릭업무포털.com"
+   "service_url": "https://원클릭업무포털.com",
+   "tool_type": "플랫폼·포털",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 32,
@@ -896,7 +958,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://github.com/koul777/NCScope"
+   "service_url": "https://github.com/koul777/NCScope",
+   "tool_type": "오픈소스 도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 33,
@@ -924,7 +988,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://klocal.solvonluchs.com/"
+   "service_url": "https://klocal.solvonluchs.com/",
+   "tool_type": "플랫폼·포털",
+   "audience": "G2C 공개"
   },
   {
    "no": 34,
@@ -952,7 +1018,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://alio-compare.vercel.app"
+   "service_url": "https://alio-compare.vercel.app",
+   "tool_type": "대시보드·분석",
+   "audience": "G2C 공개"
   },
   {
    "no": 35,
@@ -980,7 +1048,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "",
-   "service_url": "https://excel.choshg.com/"
+   "service_url": "https://excel.choshg.com/",
+   "tool_type": "데스크톱 도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 36,
@@ -1008,7 +1078,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://amnotyoung.github.io/overseas-procurement-100/"
+   "service_url": "https://amnotyoung.github.io/overseas-procurement-100/",
+   "tool_type": "웹 서비스",
+   "audience": "G2B 기업"
   },
   {
    "no": 37,
@@ -1036,7 +1108,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://9k1.fun"
+   "service_url": "https://9k1.fun",
+   "tool_type": "대시보드·분석",
+   "audience": "G2C 대국민"
   },
   {
    "no": 38,
@@ -1064,7 +1138,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "",
-   "service_url": "https://choshg.com"
+   "service_url": "https://choshg.com",
+   "tool_type": "웹 서비스",
+   "audience": "G2C 공개"
   },
   {
    "no": 39,
@@ -1092,7 +1168,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "https://www.threads.com/@gongpenclaw/post/DY7f9jPAend",
-   "service_url": "https://mobile.newsis.com/view/NISX20260515_0003631882"
+   "service_url": "https://mobile.newsis.com/view/NISX20260515_0003631882",
+   "tool_type": "도입·정책",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 40,
@@ -1120,7 +1198,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "https://www.threads.com/@chris_gomdori/post/DaS4hW2CW6n",
-   "service_url": "https://mcp.gomdori.app"
+   "service_url": "https://mcp.gomdori.app",
+   "tool_type": "MCP 서버·도구",
+   "audience": "G2C 공개"
   },
   {
    "no": 41,
@@ -1148,7 +1228,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "https://www.threads.com/@publicai_79/post/DY4s0B9jLVm",
-   "service_url": ""
+   "service_url": "",
+   "tool_type": "도입·정책",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 42,
@@ -1176,7 +1258,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "https://www.threads.com/@koyou_ax/post/DacnKc9D_5i",
-   "service_url": "https://github.com/Kminer2053/gongmuwon"
+   "service_url": "https://github.com/Kminer2053/gongmuwon",
+   "tool_type": "AI 스킬·에이전트",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 43,
@@ -1204,7 +1288,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "https://www.threads.com/@chris_gomdori/post/DbW8LhniROp",
-   "service_url": "https://chris.gomdori.app/newbgj"
+   "service_url": "https://chris.gomdori.app/newbgj",
+   "tool_type": "웹 서비스",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 44,
@@ -1232,7 +1318,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "https://www.threads.com/@koyou_ax/post/DaLJpOljpV6",
-   "service_url": ""
+   "service_url": "",
+   "tool_type": "플랫폼·포털",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 45,
@@ -1260,7 +1348,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "https://www.threads.com/@chris_gomdori/post/DbaDIR3DZWE",
-   "service_url": "https://github.com/chrisryugj/edoc-summarizer"
+   "service_url": "https://github.com/chrisryugj/edoc-summarizer",
+   "tool_type": "오픈소스 도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 46,
@@ -1288,7 +1378,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "https://www.threads.com/@gongpenclaw/post/DbiLzQ5gfjC",
-   "service_url": "https://www.data.go.kr/"
+   "service_url": "https://www.data.go.kr/",
+   "tool_type": "플랫폼·포털",
+   "audience": "G2E·G2C 혼합"
   },
   {
    "no": 47,
@@ -1316,7 +1408,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://github.com/djfksjd/ir-search"
+   "service_url": "https://github.com/djfksjd/ir-search",
+   "tool_type": "AI 스킬·에이전트",
+   "audience": "G2B 기업"
   },
   {
    "no": 48,
@@ -1344,7 +1438,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://now-paju.pajulab.workers.dev/"
+   "service_url": "https://now-paju.pajulab.workers.dev/",
+   "tool_type": "대시보드·분석",
+   "audience": "G2C 대국민"
   },
   {
    "no": 49,
@@ -1372,7 +1468,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://jocohunt.com/p/7uubvp1t"
+   "service_url": "https://jocohunt.com/p/7uubvp1t",
+   "tool_type": "대시보드·분석",
+   "audience": "G2C 대국민"
   },
   {
    "no": 50,
@@ -1400,7 +1498,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://somodus.com/a/29ee7eab2c28c1d1dc2eef35425ccfc3"
+   "service_url": "https://somodus.com/a/29ee7eab2c28c1d1dc2eef35425ccfc3",
+   "tool_type": "대시보드·분석",
+   "audience": "G2C 대국민"
   },
   {
    "no": 51,
@@ -1428,7 +1528,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://somodus.com/a/266ae6e5a62ab845b736920033636b02"
+   "service_url": "https://somodus.com/a/266ae6e5a62ab845b736920033636b02",
+   "tool_type": "웹 서비스",
+   "audience": "G2C 공개"
   },
   {
    "no": 52,
@@ -1456,7 +1558,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://github.com/hike-lab/public-data-lens"
+   "service_url": "https://github.com/hike-lab/public-data-lens",
+   "tool_type": "오픈소스 도구",
+   "audience": "G2E 공직 실무자"
   },
   {
    "no": 53,
@@ -1484,7 +1588,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://hollobit.github.io/K-AI2026/"
+   "service_url": "https://hollobit.github.io/K-AI2026/",
+   "tool_type": "대시보드·분석",
+   "audience": "G2C 공개"
   },
   {
    "no": 54,
@@ -1512,7 +1618,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://hollobit.github.io/KAIB2026/"
+   "service_url": "https://hollobit.github.io/KAIB2026/",
+   "tool_type": "대시보드·분석",
+   "audience": "G2C 공개"
   },
   {
    "no": 55,
@@ -1540,7 +1648,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://hollobit.github.io/K-GAPI/"
+   "service_url": "https://hollobit.github.io/K-GAPI/",
+   "tool_type": "대시보드·분석",
+   "audience": "G2C 공개"
   },
   {
    "no": 56,
@@ -1568,7 +1678,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://hollobit.github.io/GAPI2/"
+   "service_url": "https://hollobit.github.io/GAPI2/",
+   "tool_type": "대시보드·분석",
+   "audience": "G2C 공개"
   },
   {
    "no": 57,
@@ -1596,7 +1708,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://chris.gomdori.app/korea100"
+   "service_url": "https://chris.gomdori.app/korea100",
+   "tool_type": "대시보드·분석",
+   "audience": "G2C 공개"
   },
   {
    "no": 58,
@@ -1624,7 +1738,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "",
-   "service_url": "https://github.com/obundh/gonggong-ax-local-6"
+   "service_url": "https://github.com/obundh/gonggong-ax-local-6",
+   "tool_type": "오픈소스 도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 59,
@@ -1652,7 +1768,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "",
-   "service_url": "https://github.com/chrisryugj/ollama-mcp-host"
+   "service_url": "https://github.com/chrisryugj/ollama-mcp-host",
+   "tool_type": "MCP 서버·도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 60,
@@ -1680,7 +1798,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://github.com/chrisryugj/gjdong"
+   "service_url": "https://github.com/chrisryugj/gjdong",
+   "tool_type": "오픈소스 도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 61,
@@ -1708,7 +1828,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "",
-   "service_url": "https://github.com/obundh/gonggong-ax-local-7"
+   "service_url": "https://github.com/obundh/gonggong-ax-local-7",
+   "tool_type": "데스크톱 도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 62,
@@ -1736,7 +1858,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://ax360.kr/"
+   "service_url": "https://ax360.kr/",
+   "tool_type": "플랫폼·포털",
+   "audience": "G2C 공개"
   },
   {
    "no": 63,
@@ -1764,7 +1888,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://openapi.hrdkorea.or.kr/mcp.html"
+   "service_url": "https://openapi.hrdkorea.or.kr/mcp.html",
+   "tool_type": "MCP 서버·도구",
+   "audience": "G2E·G2C 혼합"
   },
   {
    "no": 64,
@@ -1792,7 +1918,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "부분 확인—로컬·내부망 실행으로 외부 API 의존 완화; 장애복구·대체모델·비용변동 대응은 미확인",
    "post_url": "https://www.threads.com/@chobu62/post/DbdWP6hj0TU",
-   "service_url": "https://github.com/obundh/gonggong-ax-local-5"
+   "service_url": "https://github.com/obundh/gonggong-ax-local-5",
+   "tool_type": "오픈소스 도구",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 65,
@@ -1820,7 +1948,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "https://www.threads.com/@chris_gomdori/post/DarG1dOE70_",
-   "service_url": "https://github.com/chrisryugj/kordoc"
+   "service_url": "https://github.com/chrisryugj/kordoc",
+   "tool_type": "브라우저 확장",
+   "audience": "G2E 공직 내부"
   },
   {
    "no": 66,
@@ -1848,7 +1978,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "https://www.threads.com/@spatiumliberum/post/DXBGL0bGfPe",
-   "service_url": "https://msitsti2025.github.io/stlaws/"
+   "service_url": "https://msitsti2025.github.io/stlaws/",
+   "tool_type": "MCP 서버·도구",
+   "audience": "G2E·G2C 혼합"
   },
   {
    "no": 67,
@@ -1876,7 +2008,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://jachiai.kr"
+   "service_url": "https://jachiai.kr",
+   "tool_type": "AI 스킬·에이전트",
+   "audience": "G2C 공개"
   },
   {
    "no": 68,
@@ -1904,7 +2038,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://axboard.aigov.go.kr/"
+   "service_url": "https://axboard.aigov.go.kr/",
+   "tool_type": "대시보드·분석",
+   "audience": "G2C 공개"
   },
   {
    "no": 69,
@@ -1932,7 +2068,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://www.govinfo.gov/features/mcp-public-preview"
+   "service_url": "https://www.govinfo.gov/features/mcp-public-preview",
+   "tool_type": "MCP 서버·도구",
+   "audience": "G2C 공개"
   },
   {
    "no": 70,
@@ -1960,7 +2098,9 @@
    "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
    "resilience": "미확인—공급자 장애·가격변동·품질저하에 대한 대체모델, 폴백, 수동운영 절차 증거 없음",
    "post_url": "",
-   "service_url": "https://www.singstat.gov.sg/data-tools-services/singstat-mcp"
+   "service_url": "https://www.singstat.gov.sg/data-tools-services/singstat-mcp",
+   "tool_type": "MCP 서버·도구",
+   "audience": "G2C 공개"
   }
  ]
 }

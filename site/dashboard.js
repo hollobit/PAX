@@ -22,7 +22,21 @@ const AX_LADDER_DESC = {
 // 순차(단일 색상 명도) 스케일 — 히트맵·막대용
 const SEQ_STEPS = ['var(--seq-1)', 'var(--seq-2)', 'var(--seq-3)', 'var(--seq-4)', 'var(--seq-5)'];
 
-const state = { cases: [], filter: '전체' };
+const state = { cases: [], filter: '전체', sort: { key: 'no', dir: 'asc' } };
+
+// 평가 표 컬럼 정의: [key, 라벨, 정렬값 추출 함수]
+const CONF_ORDER = { 높음: 3, 중간: 2, 낮음: 1 };
+const EVAL_COLUMNS = [
+  ['no', 'No', (c) => c.no],
+  ['title', '사례', (c) => c.title],
+  ['org', '기관', (c) => c.org],
+  ['ax', 'AX 단계', (c) => AX_LEVEL[c.ax] ?? -1],
+  ['scm', 'S/C/M', (c) => `${c.s}${c.c}${/^M[1-5]$/.test(c.m) ? c.m : 'M0'}`],
+  ['tool', '도구유형', (c) => c.tool_type || ''],
+  ['audience', '사용자·범위', (c) => c.audience || ''],
+  ['evidence', '증거', (c) => c.evidence || ''],
+  ['confidence', '신뢰도', (c) => CONF_ORDER[c.confidence] || 0],
+];
 
 async function load() {
   try {
@@ -374,9 +388,21 @@ function createAxLevelIcon(ax) {
     rect.setAttribute('height', String(h));
     rect.setAttribute('rx', '1.2');
     rect.setAttribute('fill', i < level ? color : 'var(--rule)');
-    if (i >= level) rect.setAttribute('opacity', '0.55');
+    if (i >= level) rect.setAttribute('opacity', level === 0 ? '0.3' : '0.55');
     svg.appendChild(rect);
   });
+  if (level === 0) {
+    // AX 단계 외: 사선을 그어 '판정 대상 아님'을 명확히 표시
+    const slash = document.createElementNS(NS, 'line');
+    slash.setAttribute('x1', '1');
+    slash.setAttribute('y1', '15');
+    slash.setAttribute('x2', '21');
+    slash.setAttribute('y2', '1');
+    slash.setAttribute('stroke', 'var(--accent)');
+    slash.setAttribute('stroke-width', '2');
+    slash.setAttribute('stroke-linecap', 'round');
+    svg.appendChild(slash);
+  }
   return svg;
 }
 
@@ -392,21 +418,48 @@ function axBadge(ax) {
   return wrap;
 }
 
+function setEvalSort(key) {
+  const { sort } = state;
+  state.sort = sort.key === key
+    ? { key, dir: sort.dir === 'asc' ? 'desc' : 'asc' }
+    : { key, dir: 'asc' };
+  renderTable();
+}
+
+function sortEvalRows(rows) {
+  const col = EVAL_COLUMNS.find(([key]) => key === state.sort.key) || EVAL_COLUMNS[0];
+  const accessor = col[2];
+  const sign = state.sort.dir === 'asc' ? 1 : -1;
+  return [...rows].sort((a, b) => {
+    const va = accessor(a);
+    const vb = accessor(b);
+    if (typeof va === 'number' && typeof vb === 'number') return sign * (va - vb);
+    return sign * String(va).localeCompare(String(vb), 'ko');
+  });
+}
+
 function renderTable() {
   const table = document.getElementById('eval-table');
   table.replaceChildren();
   const thead = document.createElement('thead');
   const hr = document.createElement('tr');
-  for (const label of ['No', '사례', '기관', 'AX 단계', 'S/C/M', '도입상태', '증거', '신뢰도']) {
+  for (const [key, label] of EVAL_COLUMNS) {
     const th = document.createElement('th');
-    th.textContent = label;
+    const active = state.sort.key === key;
+    th.setAttribute('aria-sort', active ? (state.sort.dir === 'asc' ? 'ascending' : 'descending') : 'none');
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'sort-btn';
+    btn.textContent = label + (active ? (state.sort.dir === 'asc' ? ' ▲' : ' ▼') : '');
+    btn.addEventListener('click', () => setEvalSort(key));
+    th.appendChild(btn);
     hr.appendChild(th);
   }
   thead.appendChild(hr);
   table.appendChild(thead);
 
   const tbody = document.createElement('tbody');
-  const rows = state.cases.filter((c) => state.filter === '전체' || c.ax === state.filter);
+  const rows = sortEvalRows(state.cases.filter((c) => state.filter === '전체' || c.ax === state.filter));
   for (const c of rows) {
     const tr = document.createElement('tr');
     tr.className = 'eval-row';
@@ -443,8 +496,12 @@ function renderTable() {
     scm.className = 'case-table__source';
     scm.textContent = [c.s, c.c, /^M[1-5]$/.test(c.m) ? c.m : null].filter(Boolean).join(' / ');
 
-    const status = document.createElement('td');
-    status.textContent = c.status;
+    const tool = document.createElement('td');
+    tool.textContent = c.tool_type || '';
+
+    const audience = document.createElement('td');
+    const scopeLabel = { Internal: '내부용', External: '외부용', Hybrid: '혼합' }[c.scope] || c.scope;
+    audience.textContent = c.audience ? `${c.audience} · ${scopeLabel}` : scopeLabel;
 
     const ev = document.createElement('td');
     ev.className = 'case-table__source';
@@ -454,7 +511,7 @@ function renderTable() {
     const conf = document.createElement('td');
     conf.textContent = c.confidence;
 
-    tr.append(no, title, org, ax, scm, status, ev, conf);
+    tr.append(no, title, org, ax, scm, tool, audience, ev, conf);
     tbody.appendChild(tr);
 
     // 상세(판정 근거) 행 — 클릭 시 토글
@@ -462,9 +519,10 @@ function renderTable() {
     detail.className = 'eval-detail';
     detail.hidden = true;
     const td = document.createElement('td');
-    td.colSpan = 8;
+    td.colSpan = 9;
     const dl = document.createElement('dl');
     for (const [label, value] of [
+      ['도입 상태', c.status],
       ['판정 근거', c.rationale],
       ['관문 판정', c.gate],
       ['피드백·학습', c.feedback],
