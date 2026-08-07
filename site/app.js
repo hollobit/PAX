@@ -190,10 +190,11 @@ async function load() {
 }
 
 function renderStats(updatedAt, count) {
-  const dateLabel = typeof updatedAt === 'string' && updatedAt.length >= 10
-    ? updatedAt.slice(0, 10)
+  // updated_at 예: "2026-08-07T09:13:43+09:00" → "2026-08-07 09:13"
+  const label = typeof updatedAt === 'string' && updatedAt.length >= 16
+    ? `${updatedAt.slice(0, 10)} ${updatedAt.slice(11, 16)}`
     : '알 수 없음';
-  els.stats.textContent = `전체 ${count}건 · 최근 갱신 ${dateLabel}`;
+  els.stats.textContent = `전체 ${count}건 · 최근 갱신 ${label}`;
 }
 
 function buildFilterOptions() {
