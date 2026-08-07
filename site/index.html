@@ -28,15 +28,12 @@
         <span class="control-label">출처</span>
         <select id="source-filter"></select>
       </label>
-      <div class="control control--tags">
-        <span class="control-label">태그</span>
-        <div id="tag-buttons" class="tag-buttons" role="group" aria-label="태그 필터"></div>
-      </div>
       <div class="control control--view" role="group" aria-label="보기 유형">
         <span class="control-label">보기</span>
         <div class="view-toggle">
           <button type="button" id="view-cards" aria-pressed="true">카드</button>
           <button type="button" id="view-list" aria-pressed="false">목록</button>
+          <button type="button" id="view-tags" aria-pressed="false">태그</button>
         </div>
       </div>
       <div class="control control--bookmark">
@@ -50,6 +47,7 @@
     <p id="error-state" class="empty-state" hidden>데이터를 불러오지 못했습니다</p>
   </main>
   <footer class="site-footer">
+    <p class="site-footer__contribute">새로운 공공AX 사례를 추가하시려면, 해당 내용을 아래 링크의 threads 또는 오픈채팅에 올려주세요.</p>
     <section class="site-footer__sources" aria-label="수집 출처">
       <h2>수집 출처</h2>
       <ul>

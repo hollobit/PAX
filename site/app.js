@@ -18,7 +18,7 @@ const ORG_TYPE_BADGE_CLASS = {
   기타: 'badge--org-type-기타',
 };
 
-const VIEWS = ['cards', 'list'];
+const VIEWS = ['cards', 'list', 'tags'];
 
 // 목록형 정렬 가능 컬럼: key → (사례 → 정렬용 문자열)
 const SORT_ACCESSORS = {
@@ -129,7 +129,7 @@ const els = {
   search: document.getElementById('search'),
   orgTypeFilter: document.getElementById('org-type-filter'),
   sourceFilter: document.getElementById('source-filter'),
-  tagButtons: document.getElementById('tag-buttons'),
+  viewTags: document.getElementById('view-tags'),
   activeTag: document.getElementById('active-tag'),
   caseList: document.getElementById('case-list'),
   viewCards: document.getElementById('view-cards'),
@@ -148,7 +148,6 @@ async function load() {
       (b.date + b.collected_at).localeCompare(a.date + a.collected_at));
     state.status = 'loaded';
     renderStats(doc.updated_at, state.cases.length);
-    buildTagOptions();
     render();
   } catch (err) {
     console.error('cases.json 로드 실패:', err);
@@ -182,6 +181,7 @@ function buildFilterOptions() {
   });
   els.viewCards.addEventListener('click', () => setView('cards'));
   els.viewList.addEventListener('click', () => setView('list'));
+  els.viewTags.addEventListener('click', () => setView('tags'));
   syncViewButtons();
 
   els.bookmarkFilter.addEventListener('click', () => {
@@ -212,6 +212,7 @@ function setView(view) {
 function syncViewButtons() {
   els.viewCards.setAttribute('aria-pressed', String(state.view === 'cards'));
   els.viewList.setAttribute('aria-pressed', String(state.view === 'list'));
+  els.viewTags.setAttribute('aria-pressed', String(state.view === 'tags'));
 }
 
 function setSort(key) {
@@ -230,46 +231,43 @@ function sortForList(results) {
   return [...results].sort((a, b) => sign * accessor(a).localeCompare(accessor(b), 'ko'));
 }
 
-// 태그 버튼 패널: 데이터의 전체 태그를 빈도순(동률이면 가나다순) 버튼으로 나열한다.
-// 버튼 클릭 = 해당 태그 필터, 재클릭 = 해제. 카드/목록의 칩 클릭(setTag)과 상태 공유.
-function buildTagOptions() {
+// 전체 태그를 빈도순(동률이면 가나다순)으로 집계한다 — "태그" 보기의 데이터.
+function tagCounts() {
   const counts = new Map();
   for (const c of state.cases) {
     for (const tag of c.tags) counts.set(tag, (counts.get(tag) || 0) + 1);
   }
-  const sorted = [...counts.entries()]
+  return [...counts.entries()]
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ko'));
+}
 
-  els.tagButtons.replaceChildren();
+// "태그" 보기의 태그 패널: 전체 태그 버튼 + 선택 시 아래에 해당 사례 카드 표시.
+function createTagPanel() {
+  const panel = document.createElement('div');
+  panel.className = 'tag-view-panel';
+  panel.setAttribute('role', 'group');
+  panel.setAttribute('aria-label', '태그 필터');
 
   const all = document.createElement('button');
   all.type = 'button';
   all.className = 'tag-chip tag-chip--all';
-  all.dataset.tag = '';
+  all.setAttribute('aria-pressed', String(!state.filter.tag));
   all.textContent = '전체';
   all.addEventListener('click', () => {
     if (state.filter.tag) setTag(state.filter.tag); // 현재 태그 해제
   });
-  els.tagButtons.appendChild(all);
+  panel.appendChild(all);
 
-  for (const [tag, count] of sorted) {
+  for (const [tag, count] of tagCounts()) {
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'tag-chip';
-    btn.dataset.tag = tag;
+    btn.setAttribute('aria-pressed', String(state.filter.tag === tag));
     btn.textContent = `#${tag} (${count})`;
     btn.addEventListener('click', () => setTag(tag));
-    els.tagButtons.appendChild(btn);
+    panel.appendChild(btn);
   }
-  syncTagButtons();
-}
-
-// 패널 버튼들의 활성 상태만 갱신 (재구성 없이 — 포커스 유지)
-function syncTagButtons() {
-  for (const btn of els.tagButtons.querySelectorAll('button')) {
-    const active = btn.dataset.tag === '' ? !state.filter.tag : state.filter.tag === btn.dataset.tag;
-    btn.setAttribute('aria-pressed', String(active));
-  }
+  return panel;
 }
 
 function fillSelect(select, values) {
@@ -295,7 +293,6 @@ function matches(c, f) {
 function setTag(tag) {
   const nextTag = state.filter.tag === tag ? null : tag;
   state.filter = { ...state.filter, tag: nextTag };
-  syncTagButtons();
   render();
 }
 
@@ -311,11 +308,34 @@ function render() {
 
   els.caseList.replaceChildren();
   els.emptyState.hidden = results.length !== 0;
-  els.caseList.classList.toggle('case-list--table', state.view === 'list');
+  els.caseList.classList.toggle('case-list--table', state.view !== 'cards');
 
   if (state.view === 'list') {
     if (results.length > 0) {
       els.caseList.appendChild(createCaseTable(sortForList(results)));
+    }
+    return;
+  }
+
+  if (state.view === 'tags') {
+    // 태그 보기: 전체 태그 패널 + 선택된 태그의 사례 카드
+    els.caseList.appendChild(createTagPanel());
+    els.emptyState.hidden = true;
+    if (state.filter.tag) {
+      const grid = document.createElement('div');
+      grid.className = 'case-list tag-view-results';
+      results.forEach((c, i) => {
+        const card = createCaseCard(c);
+        card.style.setProperty('--i', String(i));
+        grid.appendChild(card);
+      });
+      els.caseList.appendChild(grid);
+      els.emptyState.hidden = results.length !== 0;
+    } else {
+      const hint = document.createElement('p');
+      hint.className = 'tag-view-hint';
+      hint.textContent = '태그를 선택하면 해당 사례가 아래에 표시됩니다.';
+      els.caseList.appendChild(hint);
     }
     return;
   }

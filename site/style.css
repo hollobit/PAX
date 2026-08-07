@@ -189,7 +189,7 @@ a {
 /* ---- Header --------------------------------------------------------------*/
 .site-header {
   position: relative;
-  max-width: 960px;
+  max-width: 80vw;
   margin: 0 auto;
   padding: 3rem 1.5rem 2rem;
   text-align: center;
@@ -254,7 +254,7 @@ a {
 
 /* ---- Main / Controls ------------------------------------------------------*/
 main {
-  max-width: 960px;
+  max-width: 80vw;
   margin: 0 auto;
   padding: 0 1.5rem 4rem;
 }
@@ -559,7 +559,7 @@ main {
 
 /* ---- Footer -------------------------------------------------------------- */
 .site-footer {
-  max-width: 960px;
+  max-width: 80vw;
   margin: 2rem auto 0;
   padding: 1.5rem 1.5rem 3rem;
   border-top: 1px solid var(--rule);
@@ -841,4 +841,49 @@ main {
 
 .tag-chip--all {
   font-weight: 700;
+}
+
+/* ── 상대 폭: 데스크톱은 뷰포트의 80%, 좁은 화면은 전체 폭 ── */
+@media (max-width: 768px) {
+  .site-header,
+  main,
+  .site-footer {
+    max-width: 100%;
+  }
+}
+
+/* ── 태그 보기 ───────────────────────────────────────────── */
+
+.tag-view-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 1.1rem;
+  margin-bottom: 1.5rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
+}
+
+.tag-view-panel .tag-chip {
+  font-size: 0.88rem;
+  padding: 0.35rem 0.7rem;
+}
+
+.tag-view-hint {
+  margin: 0;
+  color: var(--ink-faint);
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.tag-view-results {
+  margin-top: 0.5rem;
+}
+
+.site-footer__contribute {
+  max-width: 640px;
+  margin: 0 auto 0.8rem;
+  font-weight: 600;
+  color: var(--ink);
 }
