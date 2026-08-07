@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T07:39:02+09:00",
+  "updated_at": "2026-08-07T09:13:43+09:00",
   "cases": [
     {
       "date": "2026-08-03",
@@ -146,10 +146,10 @@
       "collected_at": "2026-08-07",
       "source": "threads",
       "link": "https://www.threads.com/@gongpenclaw/post/DaoePfGgXdv",
-      "org": "공직 커뮤니티",
+      "org": "공직 현장(행안부)",
       "org_type": "기타",
-      "title": "AI로 그린 국가 제도 100개 업무구조도 프로젝트",
-      "summary": "AI를 활용해 대한민국 대표 제도 100개를 한 장짜리 업무구조도로 정리한 프로젝트가 공개됐다. 각 제도의 법적 근거, 관련 기관, 절차 단계, 자금과 문서 흐름, 병목 지점까지 담았다.",
+      "title": "제도100 — 국가 제도 505개 업무구조도 웹서비스",
+      "summary": "대한민국 주요 제도를 법령, 조직, 절차, 문서, 기한으로 분해해 제도마다 한 장의 요약 캔버스와 업무구조도(스윔레인)로 읽을 수 있게 만든 공개 웹서비스다. 100개로 시작해 현재 505개까지 늘어났다.",
       "tags": [
         "제도분석",
         "시각화"
@@ -187,22 +187,6 @@
       "org": "국립중앙의료원(중앙응급의료센터)",
       "date": "2026-08-06",
       "id": "422f3e4e0e9a23eb"
-    },
-    {
-      "tags": [
-        "정책",
-        "거버넌스",
-        "챔피언"
-      ],
-      "source": "kakao",
-      "org_type": "공공기관",
-      "collected_at": "2026-08-07",
-      "title": "공공AX 챔피언 현장 의견, 국무총리에 보고",
-      "summary": "공공AX 챔피언 모임에서 나온 현장 의견을 국가인공지능전략위 공공AX분과가 정리해 대통령·국무총리·장관들에게 보고했고, 국무총리가 적극 검토와 지원 방안 마련을 약속했다. 챔피언 네트워크 운영, 우수사례 확산, 구독료 사비 부담 해소, 관리자 AI 교육, 조직체계 개선 등이 담겼다.",
-      "link": null,
-      "org": "국가인공지능전략위원회 공공AX분과",
-      "date": "2026-08-06",
-      "id": "ed5a39662753b3fd"
     },
     {
       "tags": [
@@ -279,6 +263,313 @@
       "summary": "법령·조례·판례·해석례를 통합해 비교·검색하는 AI 법률 검색 웹서비스가 공유됐다. MCP 도구보다 일반 사용자가 접근하기 쉬운 웹 형태로, 법령 MCP 도구가 이 서비스에서 파생됐다는 제작 배경도 소개됐다.",
       "source": "kakao",
       "id": "38dc6d3806bf2e8f"
+    },
+    {
+      "source": "kakao",
+      "link": "https://gongmun.com",
+      "org_type": "기타",
+      "summary": "간단히 던진 문장을 격식을 갖춘 공문 형식으로 바꿔주는 웹 도구가 공유됐다. 현재 V2 개선 작업이 진행 중이어서 일부 기능은 불안정할 수 있다.",
+      "org": "공직 커뮤니티",
+      "tags": [
+        "문서자동화",
+        "생성형AI"
+      ],
+      "title": "자연어 입력을 공문서로 바꿔주는 공문 생성기",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "651bfec5c1ede6d1"
+    },
+    {
+      "source": "kakao",
+      "link": "https://gyohaeng.pages.dev",
+      "org_type": "기타",
+      "summary": "교육행정직 실무자를 위한 업무 자동화 도구와 다양한 업무 자료를 모은 사이트가 공유됐다. 업무 흐름지도 등 하위 자료로 연결되는 허브 역할을 한다.",
+      "org": "공직 현장(교육행정)",
+      "tags": [
+        "교육행정",
+        "도구모음"
+      ],
+      "title": "교육행정 업무 자동화 도구·자료 모음 사이트",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "a021bc5b58ed72cd"
+    },
+    {
+      "source": "kakao",
+      "link": "https://github.com/Milkbuttercheese2/What-I-have-to-do",
+      "org_type": "기타",
+      "summary": "빠르게 메모하고 체계적으로 구조화하는 내부망용 메모 앱의 저장소가 공유됐다. 외부망 접속이 제한된 공공 업무 환경을 겨냥해 만들어졌다.",
+      "org": "공직 커뮤니티",
+      "tags": [
+        "메모",
+        "내부망"
+      ],
+      "title": "내부망용 빠른 메모·구조화 앱",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "d08bc7e9a69190af"
+    },
+    {
+      "source": "kakao",
+      "link": "https://brojun.kr/sdhg",
+      "org_type": "기타",
+      "summary": "교육청 실무자가 만든 한글(HWP) 문서 작업 효율화 프로그램이 공유됐다. 반복적인 한글 편집 작업을 줄여주는 기능을 제공한다.",
+      "org": "공직 현장(교육청)",
+      "tags": [
+        "한글HWP",
+        "업무자동화"
+      ],
+      "title": "한글(HWP) 작업 효율화 프로그램 쉽다한글",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "e93a0e5c75f51a7b"
+    },
+    {
+      "source": "kakao",
+      "link": "https://github.com/galvaomica396/Nothing",
+      "org_type": "기타",
+      "summary": "PDF 속 개인정보를 문서 열기, 가리기, 확인, 저장까지 전 과정 PC 안에서 처리하는 도구가 공유됐다. 원문이 어떤 외부 서비스로도 전송되지 않는 100% 로컬 방식이다.",
+      "org": "공직 현장(개인 개발)",
+      "tags": [
+        "개인정보",
+        "문서자동화",
+        "로컬도구"
+      ],
+      "title": "PDF 개인정보 완전 로컬 마스킹 도구 Nothing",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "1c77044568e730de"
+    },
+    {
+      "source": "kakao",
+      "link": "https://researchfellow.vercel.app",
+      "org_type": "기타",
+      "summary": "후향적 연구 방법론과 논문 작성 가이드라인 규격에 맞춰 논문 초안을 생성해 주는 Claude Code 플러그인이 공유됐다. 의학 연구자의 연구 동료 역할을 지향한다.",
+      "org": "공직 현장(의료 연구)",
+      "tags": [
+        "연구지원",
+        "AI에이전트"
+      ],
+      "title": "의학 연구 동료 AI 플러그인 ResearchFellow",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "cbe008b504b9dd18"
+    },
+    {
+      "source": "kakao",
+      "link": "https://seomu-work-hub.tgtg4840.chatgpt.site/",
+      "org_type": "기타",
+      "summary": "통일부 실무자가 만든 서무 업무 도구 모음이 공유됐다. 공무직 급여, 계좌 관리, 물품 관리, 수합 명단, 여비, 특근비 등 서무 실무 전반을 다룬다.",
+      "org": "공직 현장(통일부)",
+      "tags": [
+        "서무",
+        "업무자동화"
+      ],
+      "title": "서무 업무 도구 모음 허브",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "a93c7283cafb3b9b"
+    },
+    {
+      "source": "kakao",
+      "link": "https://github.com/pon00050/minwon-draft",
+      "org_type": "기타",
+      "summary": "사실관계만 입력하면 제출 가능한 국민신문고 민원·안전신문고 신고서 초안을 만들어 주는 Claude Code 스킬이 공유됐다. 인용 법령을 law.go.kr에서 실시간 확인하고 제출 전에 초안을 스스로 점검한다.",
+      "org": "공직 커뮤니티",
+      "tags": [
+        "민원",
+        "법령",
+        "AI에이전트"
+      ],
+      "title": "국민신문고 민원 초안 생성 스킬 minwon-draft",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "32d199fa9ad4f674"
+    },
+    {
+      "source": "kakao",
+      "link": "https://github.com/koul777/Public-Regulation-MCP-Builder",
+      "org_type": "기타",
+      "summary": "PDF, HWP, HWPX, DOCX 형식의 공공기관 규정을 기관, 규정, 개정 버전, 장·절·조문 구조로 정리하는 Windows용 빌더가 공유됐다. 사람이 승인한 내용만 검색 색인과 MCP 응답에 포함한다.",
+      "org": "공직 현장(공공기관)",
+      "tags": [
+        "MCP",
+        "규정",
+        "문서자동화"
+      ],
+      "title": "공공기관 규정 MCP 생성기",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "ea2bce110972762e"
+    },
+    {
+      "source": "kakao",
+      "link": "https://tgtg4840-byte.github.io/seomuland/",
+      "org_type": "기타",
+      "summary": "서무 업무에 쓰는 도구들을 한곳에 모아 둔 웹 페이지가 공유됐다. 서무 업무 도구 허브와 함께 운영되는 모음집이다.",
+      "org": "공직 현장(통일부)",
+      "tags": [
+        "서무",
+        "도구모음"
+      ],
+      "title": "서무랜드 — 서무 툴 모음 페이지",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "9d2b45d14879241e"
+    },
+    {
+      "source": "kakao",
+      "link": "https://github.com/koul777/VHLookup",
+      "org_type": "기타",
+      "summary": "개인정보 마스킹, 분류별 시트 나누기, 엑셀·CSV 합치기, 전후 파일 비교, 피벗 요약표, 사용자 지정 정렬을 지원하는 엑셀 자동화 도구가 공유됐다. 인터넷 없이 로컬에서 실행된다.",
+      "org": "공직 현장(공공기관)",
+      "tags": [
+        "엑셀",
+        "업무자동화",
+        "로컬도구"
+      ],
+      "title": "엑셀 업무 자동화 도구 VHLookup",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "f5abed24ff6bdd4a"
+    },
+    {
+      "source": "kakao",
+      "link": "https://github.com/koul777/clickguide-local-private",
+      "org_type": "기타",
+      "summary": "웹사이트에서 클릭한 과정을 자동 기록하고 스크린샷이 들어간 단계별 PDF 가이드를 만들어 주는 Chrome 확장 프로그램이 공유됐다. 업무 매뉴얼 제작 부담을 줄여준다.",
+      "org": "공직 현장(공공기관)",
+      "tags": [
+        "매뉴얼",
+        "업무자동화"
+      ],
+      "title": "클릭 과정을 PDF 가이드로 만드는 ClickGuide Local",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "48e33f2318bdffae"
+    },
+    {
+      "source": "kakao",
+      "link": "https://github.com/DECK6/korea-mice-safety-agent",
+      "org_type": "기타",
+      "summary": "베뉴를 포함한 MICE 안전관리 관련 문서를 조회하고 작성을 돕는 MCP 도구와, 이를 웹에서 시험해 볼 수 있는 시뮬레이터가 공유됐다.",
+      "org": "공직 커뮤니티",
+      "tags": [
+        "MCP",
+        "안전관리"
+      ],
+      "case_url": "https://dexa.art/mice-safety/",
+      "title": "MICE 안전관리 문서 MCP와 웹 시뮬레이터",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "0a2535cadf2d621a"
+    },
+    {
+      "source": "kakao",
+      "link": "https://원클릭업무포털.com",
+      "org_type": "기타",
+      "summary": "업무포털의 복무, 출장, 기안, 품의 화면까지 클릭 한 번으로 이동하는 Windows 프로그램이 공유됐다. 나이스와 K-에듀파인 세션 자동 연장을 지원하며 17개 시도교육청에서 모두 쓸 수 있다.",
+      "org": "공직 현장(교육행정)",
+      "tags": [
+        "업무자동화",
+        "교육행정"
+      ],
+      "title": "업무포털 원클릭 이동 프로그램",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "0d668fa0c977b439"
+    },
+    {
+      "source": "kakao",
+      "link": "https://github.com/koul777/NCScope",
+      "org_type": "기타",
+      "summary": "공공기관 공고문과 직무기술서를 넣으면 NCS 세분류 기준의 지식·스킬·태도(KSA)를 호출하고, 이를 바탕으로 구조화된 면접 질문을 생성해 주는 도구가 공유됐다.",
+      "org": "공직 현장(공공기관)",
+      "tags": [
+        "채용",
+        "생성형AI"
+      ],
+      "title": "NCS 기반 구조화 면접 질문 생성기 NCScope",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "92d5147e02f7ae36"
+    },
+    {
+      "source": "kakao",
+      "link": "https://klocal.solvonluchs.com/",
+      "org_type": "기타",
+      "summary": "전국 지방자치단체의 주요 업무계획과 예산서를 검색·열람하고, 법령, 유권해석, 행정심판 재결례, 선거법, 정보공개 등 실무 자료를 모은 공유 노트북을 제공하는 지방직 공무원용 참고 사이트가 공유됐다.",
+      "org": "공직 커뮤니티",
+      "tags": [
+        "지방행정",
+        "자료모음"
+      ],
+      "title": "지방행정 실무 자료 포털 K-Local",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "856b4951cb5274d1"
+    },
+    {
+      "source": "kakao",
+      "link": "https://alio-compare.vercel.app",
+      "org_type": "기타",
+      "summary": "알리오에 공시된 335개 공공기관의 1인당 평균보수, 신입사원 초임, 육아휴직 등 50개 공시항목을 직관적으로 시각 비교할 수 있는 사이트가 공유됐다.",
+      "org": "공직 커뮤니티",
+      "tags": [
+        "공공데이터",
+        "시각화"
+      ],
+      "title": "공공기관 공시항목 비교 사이트",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "e0be95cc501650ae"
+    },
+    {
+      "source": "kakao",
+      "link": "https://excel.choshg.com/",
+      "org_type": "기타",
+      "summary": "개인정보 마스킹과 여러 파일 취합 등을 서버 전송 없이 내 PC 안에서 간단히 처리해 주는 프로그램이 공유됐다.",
+      "org": "공직 커뮤니티",
+      "tags": [
+        "엑셀",
+        "개인정보",
+        "로컬도구"
+      ],
+      "title": "로컬 엑셀 처리 도구 — 마스킹·파일 취합",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "918bddd1b60d8a74"
+    },
+    {
+      "source": "kakao",
+      "link": "https://github.com/amnotyoung/overseas-procurement-100",
+      "org_type": "기타",
+      "summary": "KOICA 2026 국가별 개발협력사업 참여전략 자료집을 바탕으로 45개국 발주자에 걸친 135개 제도를 입찰제도, 조달 거버넌스, ODA 사업 발굴·형성의 세 축으로 정리한 공개 사이트가 공유됐다.",
+      "org": "공직 커뮤니티",
+      "tags": [
+        "공공조달",
+        "ODA"
+      ],
+      "case_url": "https://amnotyoung.github.io/overseas-procurement-100/",
+      "title": "ODA 수원국 공공조달 제도 정리 사이트",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "aa58f3a62af622b6"
+    },
+    {
+      "source": "kakao",
+      "link": "https://9k1.fun",
+      "org_type": "기타",
+      "summary": "국회의원의 의정 활동 기록을 모아 볼 수 있는 트랙레코드 사이트가 공유됐다.",
+      "org": "공직 커뮤니티",
+      "tags": [
+        "공공데이터",
+        "시각화"
+      ],
+      "title": "국회의원 트랙레코드 사이트",
+      "date": "2026-08-07",
+      "collected_at": "2026-08-07",
+      "id": "5835971d479dbf81"
     }
   ]
 }
