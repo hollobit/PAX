@@ -18,6 +18,9 @@
 - 로그인 화면이 나오면 이 소스는 건너뛰고 log에 "threads: 로그인 필요"를 기록한다.
 - 페이지를 2~3회 스크롤하며 게시물별로 (원문 텍스트, 게시물 링크, 작성일)을 읽는다.
 - state의 seen_ids에 있는 링크는 무시한다. 새 게시물만 raw 목록에 담는다.
+- 사례로 선별할 게시물은 게시물 페이지를 열어 **본문 속 외부 링크**를 확인한다:
+  `a[href^="https://l.threads.com/"]`의 `u` 파라미터를 디코딩하면 원본 URL이 나온다.
+  이 URL(서비스/저장소 등)을 case_url 후보로 기록한다.
 
 ## 2. 카카오톡 수집 (kakaocli)
 - `kakaocli`로 로컬 DB를 직접 읽는다 (2026-08-07 검증된 경로):
@@ -61,6 +64,8 @@ JSON 리스트로 저장한다:
 - title: 한 줄 제목 (직접 작성)
 - summary: 2~3문장, 300자 이내 요약 (닉네임·인용부호·연락처 금지, 재작성)
 - tags: 분야·기술 태그 2~4개 (예: 민원, 문서자동화, LLM, RAG, 챗봇, 데이터분석)
+- case_url (선택): 게시물/메시지에서 확인한 사례 대상 URL(https). 있으면 사이트가
+  설명문 대신 이 URL의 썸네일을 보여주고 클릭 시 연결한다.
 
 ## 5. 병합·배포 데이터 갱신
 ```bash
@@ -69,10 +74,12 @@ PYTHONPATH=scripts python3 -m pax.publish
 ```
 - merge가 거부 건을 출력하면 data/rejected/TODAY.json을 열어 원인(주로 익명화)을
   수정한 새 incoming 파일로 1회 재시도한다.
+- 썸네일 생성: `bash scripts/make_thumbs.sh` (case_url/kakao link 대상, 기존 것은
+  건너뜀). 실패한 URL은 무시해도 된다 — 사이트가 설명문으로 폴백한다.
 
 ## 6. 커밋·푸시
 ```bash
-git add data/cases.json site/data/cases.json
+git add data/cases.json site/data/cases.json site/thumbs
 git commit -m "chore: 사례 데이터 갱신 (TODAY)"
 git push
 ```

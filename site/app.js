@@ -173,9 +173,17 @@ function createCaseCard(c) {
   title.className = 'case-card__title';
   title.textContent = c.title;
 
-  const summary = document.createElement('p');
-  summary.className = 'case-card__summary';
-  summary.textContent = c.summary;
+  // 사례 대상 URL이 있으면 설명문 대신 클릭 가능한 썸네일을 보여준다.
+  // 썸네일 이미지(site/thumbs/<id>.png)가 없으면 onerror로 설명문에 폴백.
+  const targetUrl = caseTargetUrl(c);
+  let summary;
+  if (targetUrl) {
+    summary = createThumbElement(c, targetUrl);
+  } else {
+    summary = document.createElement('p');
+    summary.className = 'case-card__summary';
+    summary.textContent = c.summary;
+  }
 
   const tags = document.createElement('div');
   tags.className = 'case-card__tags';
@@ -206,6 +214,49 @@ function createCaseCard(c) {
   article.appendChild(footer);
 
   return article;
+}
+
+function caseTargetUrl(c) {
+  if (typeof c.case_url === 'string' && c.case_url.startsWith('https://')) {
+    return c.case_url;
+  }
+  if (c.source === 'kakao' && typeof c.link === 'string' && c.link.startsWith('https://')) {
+    return c.link;
+  }
+  return null;
+}
+
+function createThumbElement(c, targetUrl) {
+  const anchor = document.createElement('a');
+  anchor.className = 'case-card__thumb';
+  anchor.href = targetUrl;
+  anchor.target = '_blank';
+  anchor.rel = 'noopener';
+  anchor.title = c.summary;
+
+  const img = document.createElement('img');
+  img.src = `thumbs/${encodeURIComponent(c.id)}.png`;
+  img.alt = `사례 미리보기: ${c.title}`;
+  img.loading = 'lazy';
+  img.addEventListener('error', () => {
+    // 썸네일이 없으면 설명문으로 폴백 (링크는 유지)
+    const fallback = document.createElement('p');
+    fallback.className = 'case-card__summary';
+    fallback.textContent = c.summary;
+    anchor.replaceWith(fallback);
+  });
+
+  const host = document.createElement('span');
+  host.className = 'case-card__thumb-host';
+  try {
+    host.textContent = `${new URL(targetUrl).hostname} ↗`;
+  } catch {
+    host.textContent = '바로가기 ↗';
+  }
+
+  anchor.appendChild(img);
+  anchor.appendChild(host);
+  return anchor;
 }
 
 function createSourceElement(c) {

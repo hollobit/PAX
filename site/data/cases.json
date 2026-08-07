@@ -31,7 +31,8 @@
         "MCP",
         "업무자동화"
       ],
-      "id": "02656bf9d2589964"
+      "id": "02656bf9d2589964",
+      "case_url": "https://www.etnews.com/20260710000114"
     },
     {
       "date": "2026-04-26",
@@ -76,7 +77,8 @@
         "문서자동화",
         "로컬도구"
       ],
-      "id": "719692c2c31da09f"
+      "id": "719692c2c31da09f",
+      "case_url": "https://github.com/obundh/gonggong-ax-local"
     },
     {
       "date": "2026-07-26",
@@ -91,7 +93,8 @@
         "인수인계",
         "로컬도구"
       ],
-      "id": "2c14f2adaa83a00e"
+      "id": "2c14f2adaa83a00e",
+      "case_url": "https://github.com/obundh/gonggong-ax-local-3"
     },
     {
       "date": "2026-05-17",
@@ -151,7 +154,8 @@
         "제도분석",
         "시각화"
       ],
-      "id": "5451653f4cddb6f2"
+      "id": "5451653f4cddb6f2",
+      "case_url": "https://hosungseo.github.io/korea100/"
     },
     {
       "tags": [

@@ -12,11 +12,11 @@ import unicodedata
 from pathlib import Path
 
 from pax.privacy import find_privacy_issues
-from pax.schema import REQUIRED_FIELDS, validate_case
+from pax.schema import OPTIONAL_FIELDS, REQUIRED_FIELDS, validate_case
 
 CASES_PATH = Path("data/cases.json")
 REJECTED_DIR = Path("data/rejected")
-_CANDIDATE_FIELDS = REQUIRED_FIELDS - {"id"}
+_CANDIDATE_FIELDS = (REQUIRED_FIELDS - {"id"}) | OPTIONAL_FIELDS
 
 
 def normalize_text(text: str) -> str:

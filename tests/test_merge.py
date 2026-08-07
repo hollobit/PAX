@@ -162,3 +162,14 @@ def test_cli_error_cases_json_not_found(tmp_path):
     assert result.returncode != 0
     assert "Traceback" not in result.stderr
     assert "cases.json" in result.stderr or "초기화" in result.stderr
+
+
+def test_prepare_candidate_keeps_case_url():
+    cand = make_candidate(case_url="https://example.org/tool")
+    prepared = prepare_candidate(cand)
+    assert prepared["case_url"] == "https://example.org/tool"
+
+
+def test_prepare_candidate_omits_absent_case_url():
+    prepared = prepare_candidate(make_candidate())
+    assert "case_url" not in prepared

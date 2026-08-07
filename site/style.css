@@ -440,6 +440,39 @@ main {
   line-height: 1.6;
 }
 
+.case-card__thumb {
+  display: block;
+  position: relative;
+  border: 1px solid var(--rule);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.case-card__thumb img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.25s ease;
+}
+
+.case-card__thumb:hover img,
+.case-card__thumb:focus-visible img {
+  transform: scale(1.03);
+}
+
+.case-card__thumb-host {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0.2rem 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--paper, #fff);
+  background: color-mix(in srgb, var(--ink) 82%, transparent);
+}
+
 .case-card__tags {
   display: flex;
   flex-wrap: wrap;

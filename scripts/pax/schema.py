@@ -5,6 +5,8 @@ REQUIRED_FIELDS = frozenset(
     ["id", "date", "collected_at", "source", "link", "org",
      "org_type", "title", "summary", "tags"]
 )
+# 선택 필드: case_url — 게시물/메시지에서 확인한 사례 대상 URL (썸네일·연결용)
+OPTIONAL_FIELDS = frozenset(["case_url"])
 SOURCES = frozenset(["threads", "kakao"])
 ORG_TYPES = frozenset(["중앙부처", "지자체", "공공기관", "교육", "기타"])
 
@@ -51,5 +53,10 @@ def validate_case(case: dict) -> list[str]:
 
     if not isinstance(case["id"], str) or not re.match(r"^[0-9a-f]{16}$", case["id"]):
         errors.append("id는 16자리 소문자 16진수여야 합니다")
+
+    case_url = case.get("case_url")
+    if case_url is not None and (
+            not isinstance(case_url, str) or not case_url.startswith("https://")):
+        errors.append("case_url은 null 또는 https:// URL이어야 합니다")
 
     return errors

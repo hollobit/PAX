@@ -60,3 +60,15 @@ def test_empty_tags_rejected():
 def test_empty_summary_rejected():
     errors = validate_case(make_case(summary="  "))
     assert any("summary" in e for e in errors)
+
+def test_case_url_https_passes():
+    assert validate_case(make_case(case_url="https://hosungseo.github.io/korea100/")) == []
+
+
+def test_case_url_absent_passes():
+    assert validate_case(make_case()) == []
+
+
+def test_case_url_non_https_rejected():
+    errors = validate_case(make_case(case_url="http://example.com/"))
+    assert any("case_url" in e for e in errors)
