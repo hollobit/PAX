@@ -944,3 +944,92 @@ main {
   color: var(--ink-soft);
   line-height: 1.6;
 }
+
+/* ── 내보내기 툴바 & 인쇄(PDF) ───────────────────────────── */
+
+.export-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.export-toolbar__label {
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.export-btn {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--rule-strong);
+  background: var(--bg-elevated);
+  color: var(--ink);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.export-btn:hover {
+  background: var(--accent-2);
+  border-color: var(--accent-2);
+  color: #fff;
+}
+
+#print-area {
+  display: none;
+}
+
+@media print {
+  body.printing-list > *:not(#print-area) {
+    display: none !important;
+  }
+
+  body.printing-list {
+    background: #fff;
+    color: #000;
+  }
+
+  body.printing-list #print-area {
+    display: block;
+    font-family: var(--font-body);
+  }
+
+  #print-area h1 {
+    font-size: 18pt;
+    margin: 0 0 4pt;
+  }
+
+  #print-area p {
+    margin: 0 0 12pt;
+    font-size: 9pt;
+    color: #555;
+  }
+
+  #print-area table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.5pt;
+  }
+
+  #print-area th,
+  #print-area td {
+    border: 0.5pt solid #999;
+    padding: 3pt 5pt;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  #print-area thead th {
+    background: #eee;
+  }
+
+  #print-area .print-summary td {
+    border-top: none;
+    color: #444;
+    font-size: 8pt;
+  }
+
+  #print-area tbody tr {
+    break-inside: avoid;
+  }
+}

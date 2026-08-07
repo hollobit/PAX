@@ -325,7 +325,9 @@ function render() {
 
   if (state.view === 'list') {
     if (results.length > 0) {
-      els.caseList.appendChild(createCaseTable(sortForList(results)));
+      const sorted = sortForList(results);
+      els.caseList.appendChild(createExportToolbar(sorted));
+      els.caseList.appendChild(createCaseTable(sorted));
     }
     return;
   }
@@ -462,6 +464,117 @@ function exportPdf(results) {
       tr.appendChild(td);
     }
     tbody.appendChild(tr);
+    const summaryTr = document.createElement('tr');
+    summaryTr.className = 'print-summary';
+    const td = document.createElement('td');
+    td.colSpan = 6;
+    const url = caseTargetUrl(c);
+    td.textContent = c.summary + (url ? ` (${url})` : '');
+    summaryTr.appendChild(td);
+    tbody.appendChild(summaryTr);
+  }
+  table.appendChild(tbody);
+  area.appendChild(table);
+  document.body.appendChild(area);
+
+  document.body.classList.add('printing-list');
+  const cleanup = () => {
+    document.body.classList.remove('printing-list');
+    area.remove();
+    window.removeEventListener('afterprint', cleanup);
+  };
+  window.addEventListener('afterprint', cleanup);
+  window.print();
+}
+
+/* ── 목록 내보내기 (CSV / PDF) ───────────────────────────── */
+
+function createExportToolbar(results) {
+  const bar = document.createElement('div');
+  bar.className = 'export-toolbar';
+
+  const label = document.createElement('span');
+  label.className = 'export-toolbar__label';
+  label.textContent = `${results.length}건 내보내기`;
+
+  const csvBtn = document.createElement('button');
+  csvBtn.type = 'button';
+  csvBtn.className = 'export-btn';
+  csvBtn.textContent = 'CSV 다운로드';
+  csvBtn.addEventListener('click', () => exportCsv(results));
+
+  const pdfBtn = document.createElement('button');
+  pdfBtn.type = 'button';
+  pdfBtn.className = 'export-btn';
+  pdfBtn.textContent = 'PDF 저장';
+  pdfBtn.title = '인쇄 대화상자에서 PDF로 저장을 선택하세요';
+  pdfBtn.addEventListener('click', () => exportPdf(results));
+
+  bar.append(label, csvBtn, pdfBtn);
+  return bar;
+}
+
+function csvEscape(value) {
+  const s = String(value == null ? '' : value);
+  return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+}
+
+function exportCsv(results) {
+  const header = ['제목', '기관', '기관유형', '태그', '요약', '사례URL', '출처', '원문/공유링크', '게시일', '수집일'];
+  const rows = results.map((c) => [
+    c.title, c.org, c.org_type, c.tags.join(' '), c.summary,
+    caseTargetUrl(c) || '', c.source === 'threads' ? 'Threads' : '오픈채팅',
+    c.link || '', c.date, c.collected_at,
+  ].map(csvEscape).join(','));
+  const csv = '﻿' + [header.join(','), ...rows].join('\r\n'); // BOM: Excel 한글 호환
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `공공AX-사례목록-${new Date().toISOString().slice(0, 10)}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(a.href);
+}
+
+function exportPdf(results) {
+  // 인쇄 전용 영역을 만들어 브라우저 인쇄(PDF로 저장)를 연다 — 외부 라이브러리 없이
+  // 한글 PDF를 만들 수 있는 자체 완결 방식.
+  const old = document.getElementById('print-area');
+  if (old) old.remove();
+
+  const area = document.createElement('div');
+  area.id = 'print-area';
+
+  const h1 = document.createElement('h1');
+  h1.textContent = '공공AX 사례 아카이브';
+  const meta = document.createElement('p');
+  meta.textContent = `${new Date().toISOString().slice(0, 10)} 기준 · ${results.length}건 · hollobit.github.io/PAX`;
+  area.append(h1, meta);
+
+  const table = document.createElement('table');
+  const thead = document.createElement('thead');
+  const hr = document.createElement('tr');
+  for (const label of ['제목', '기관', '유형', '태그', '출처', '날짜']) {
+    const th = document.createElement('th');
+    th.textContent = label;
+    hr.appendChild(th);
+  }
+  thead.appendChild(hr);
+  table.appendChild(thead);
+
+  const tbody = document.createElement('tbody');
+  for (const c of results) {
+    const tr = document.createElement('tr');
+    const cells = [c.title, c.org, c.org_type, c.tags.map((t) => `#${t}`).join(' '),
+      c.source === 'threads' ? 'Threads' : '오픈채팅', c.date];
+    for (const value of cells) {
+      const td = document.createElement('td');
+      td.textContent = value;
+      tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+
     const summaryTr = document.createElement('tr');
     summaryTr.className = 'print-summary';
     const td = document.createElement('td');
