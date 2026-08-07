@@ -20,6 +20,48 @@ const ORG_TYPE_BADGE_CLASS = {
 
 const VIEWS = ['cards', 'list', 'tags'];
 
+/* ── 누적 북마크 카운터 (Supabase) ─────────────────────────
+ * anon 키는 클라이언트 공개용으로 설계된 키다. 쓰기는 서버의
+ * bookmark_toggle RPC(+1/-1만 허용, RLS로 직접 쓰기 차단)로만 가능.
+ */
+const COUNTER_URL = 'https://pdkpqrxcqiznsetxcvaq.supabase.co';
+const COUNTER_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBka3BxcnhjcWl6bnNldHhjdmFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxMTA2MTAsImV4cCI6MjEwMTY4NjYxMH0.Rj7cnt9dHcQ7O-CuGeGwAyVxVdWFwQYuiCetOUbEHzI';
+const COUNTER_HEADERS = {
+  apikey: COUNTER_KEY,
+  Authorization: `Bearer ${COUNTER_KEY}`,
+  'Content-Type': 'application/json',
+};
+// 이 횟수 이상 북마크되면 SNS 반응 없이도 인기 배지가 붙는다
+const POPULAR_BOOKMARK_MIN = 2;
+
+async function loadBookmarkCounts() {
+  try {
+    const res = await fetch(`${COUNTER_URL}/rest/v1/bookmark_counts?select=case_id,count`, {
+      headers: COUNTER_HEADERS,
+      cache: 'no-cache',
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const rows = await res.json();
+    return new Map(rows.map((r) => [r.case_id, r.count]));
+  } catch (err) {
+    console.error('북마크 카운터 로드 실패 (SNS 지표로 대체):', err);
+    return new Map();
+  }
+}
+
+function sendBookmarkDelta(caseId, delta) {
+  // 실패해도 UI 동작에는 영향 없음 (fire-and-forget)
+  fetch(`${COUNTER_URL}/rest/v1/rpc/bookmark_toggle`, {
+    method: 'POST',
+    headers: COUNTER_HEADERS,
+    body: JSON.stringify({ p_case_id: caseId, p_delta: delta }),
+  }).catch((err) => console.error('북마크 카운터 전송 실패:', err));
+}
+
+function bookmarkCount(c) {
+  return state.bookmarkCounts.get(c.id) || 0;
+}
+
 // 목록형 정렬 가능 컬럼: key → (사례 → 정렬용 문자열)
 const SORT_ACCESSORS = {
   title: (c) => c.title,
@@ -39,13 +81,21 @@ function isNewCase(c) {
   return ageDays >= 0 && ageDays <= NEW_WINDOW_DAYS;
 }
 
-// 기본 정렬: 인기(popularity 내림차순) → 신규(최근 수집) → 최신 게시일순
+// 기본 정렬: 누적 북마크 수 → SNS 반응(popularity) → 신규 → 최신 게시일순
+// 북마크 집계가 쌓일수록 인기 순위가 실사용 기준으로 동적으로 재배열된다.
 function comparePopularFirst(a, b) {
+  const bmDiff = bookmarkCount(b) - bookmarkCount(a);
+  if (bmDiff !== 0) return bmDiff;
   const diff = (b.popularity || 0) - (a.popularity || 0);
   if (diff !== 0) return diff;
   const newDiff = Number(isNewCase(b)) - Number(isNewCase(a));
   if (newDiff !== 0) return newDiff;
   return (b.date + b.collected_at).localeCompare(a.date + a.collected_at);
+}
+
+// 인기 여부: 누적 북마크가 기준 이상이거나 SNS 반응 지표가 있는 사례
+function isPopularCase(c) {
+  return bookmarkCount(c) >= POPULAR_BOOKMARK_MIN || Boolean(c.popularity);
 }
 
 // 사례 대상 URL의 호스트명 (유니코드 도메인 보존을 위해 문자열로 추출)
@@ -61,6 +111,7 @@ const state = {
   view: loadSavedView(), // 'cards' | 'list'
   sort: { key: 'popularity', dir: 'desc' }, // 기본: 인기 우선, 이후 최신순
   bookmarks: loadBookmarks(), // Set<caseId> — localStorage에 보존
+  bookmarkCounts: new Map(), // 전체 사용자 누적 북마크 수 (Supabase)
   status: 'loading', // 'loading' | 'loaded' | 'error'
 };
 
@@ -86,6 +137,12 @@ function toggleBookmark(id) {
   } catch {
     // 저장 실패(사생활 보호 모드 등)는 무시 — 세션 내에서는 동작한다
   }
+  // 전체 사용자 누적 카운터에 반영 (낙관적 로컬 갱신 + 서버 전송)
+  const delta = next.has(id) ? 1 : -1;
+  const counts = new Map(state.bookmarkCounts);
+  counts.set(id, Math.max((counts.get(id) || 0) + delta, 0));
+  state.bookmarkCounts = counts;
+  sendBookmarkDelta(id, delta);
   syncBookmarkFilterButton();
   // '북마크만 보기' 중에는 목록 자체가 달라지므로 전체 렌더링이 필요하지만,
   // 평소에는 화면 깜빡임 없이 해당 사례의 별표 버튼만 제자리에서 갱신한다.
@@ -175,9 +232,13 @@ const els = {
 async function load() {
   try {
     // no-cache: 항상 서버와 재검증(ETag) — 새 사례·태그가 배포 즉시 반영되도록
-    const res = await fetch('./data/cases.json', { cache: 'no-cache' });
+    const [res, counts] = await Promise.all([
+      fetch('./data/cases.json', { cache: 'no-cache' }),
+      loadBookmarkCounts(),
+    ]);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const doc = await res.json();
+    state.bookmarkCounts = counts;
     state.cases = [...doc.cases].sort(comparePopularFirst);
     state.status = 'loaded';
     renderStats(doc.updated_at, state.cases.length);
@@ -391,7 +452,11 @@ function createPopularBadge(c) {
   const badge = document.createElement('span');
   badge.className = 'popular-badge';
   badge.textContent = '🔥 인기';
-  badge.title = `커뮤니티 반응 ${c.popularity}`;
+  const parts = [];
+  const bm = bookmarkCount(c);
+  if (bm > 0) parts.push(`북마크 ${bm}회`);
+  if (c.popularity) parts.push(`커뮤니티 반응 ${c.popularity}`);
+  badge.title = parts.join(' · ') || '인기 사례';
   return badge;
 }
 
@@ -590,7 +655,7 @@ function createCaseRow(c) {
 
   const titleTd = document.createElement('td');
   titleTd.className = 'case-table__title';
-  if (c.popularity) {
+  if (isPopularCase(c)) {
     titleTd.appendChild(createPopularBadge(c));
     titleTd.append(' ');
   } else if (isNewCase(c)) {
@@ -714,7 +779,7 @@ function createCaseCard(c) {
 
   meta.appendChild(badge);
   meta.appendChild(org);
-  if (c.popularity) {
+  if (isPopularCase(c)) {
     meta.appendChild(createPopularBadge(c));
   } else if (isNewCase(c)) {
     meta.appendChild(createNewBadge());
