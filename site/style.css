@@ -1047,3 +1047,85 @@ main {
   border-radius: var(--radius-sm);
   white-space: nowrap;
 }
+
+/* ── 안내서·가이드라인 페이지 ────────────────────────────── */
+
+.guide__section {
+  margin-bottom: 2.2rem;
+}
+
+.guide__section h2 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  border-bottom: 2px double var(--rule-strong);
+  padding-bottom: 0.4rem;
+}
+
+.guide__section h3 {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  margin: 1.2rem 0 0.5rem;
+}
+
+.guide-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.guide-table th,
+.guide-table td {
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+.guide-table thead th {
+  border-bottom: 2px solid var(--rule-strong);
+  white-space: nowrap;
+}
+
+.guide-table a,
+.guide__list a,
+.guide__section p a {
+  color: var(--accent-2);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.guide-table a:hover,
+.guide__list a:hover,
+.guide__section p a:hover {
+  text-decoration: underline;
+}
+
+.guide__note {
+  padding: 0.7rem 1rem;
+  background: var(--bg-inset);
+  border-left: 3px solid var(--accent-gold);
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.guide__list {
+  margin: 0.4rem 0 1rem;
+  padding-left: 1.4rem;
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+
+.guide__list li {
+  list-style: inherit;
+  margin-bottom: 0.3rem;
+}
+
+.guide__updated {
+  margin-top: 2rem;
+  color: var(--ink-faint);
+  font-size: 0.82rem;
+  text-align: center;
+}
