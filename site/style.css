@@ -818,3 +818,27 @@ main {
   font-weight: 600;
   color: var(--accent-2);
 }
+
+/* ── 태그 버튼 패널 ──────────────────────────────────────── */
+
+.control--tags {
+  grid-column: 1 / -1;
+}
+
+.tag-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.tag-buttons .tag-chip[aria-pressed="true"],
+.case-card__tags .tag-chip[aria-pressed="true"],
+.case-table__tags .tag-chip[aria-pressed="true"] {
+  background: var(--accent-2);
+  border-color: var(--accent-2);
+  color: #fff;
+}
+
+.tag-chip--all {
+  font-weight: 700;
+}

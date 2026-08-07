@@ -129,7 +129,7 @@ const els = {
   search: document.getElementById('search'),
   orgTypeFilter: document.getElementById('org-type-filter'),
   sourceFilter: document.getElementById('source-filter'),
-  tagFilter: document.getElementById('tag-filter'),
+  tagButtons: document.getElementById('tag-buttons'),
   activeTag: document.getElementById('active-tag'),
   caseList: document.getElementById('case-list'),
   viewCards: document.getElementById('view-cards'),
@@ -180,12 +180,6 @@ function buildFilterOptions() {
     state.filter = { ...state.filter, q: els.search.value };
     render();
   });
-  els.tagFilter.addEventListener('change', () => {
-    const value = els.tagFilter.value;
-    state.filter = { ...state.filter, tag: value === '전체' ? null : value };
-    render();
-  });
-
   els.viewCards.addEventListener('click', () => setView('cards'));
   els.viewList.addEventListener('click', () => setView('list'));
   syncViewButtons();
@@ -236,8 +230,8 @@ function sortForList(results) {
   return [...results].sort((a, b) => sign * accessor(a).localeCompare(accessor(b), 'ko'));
 }
 
-// 태그 셀렉트: 데이터에서 전체 태그를 모아 빈도순(동률이면 가나다순)으로 채운다.
-// 칩 클릭 필터(setTag)와 같은 state.filter.tag를 공유한다.
+// 태그 버튼 패널: 데이터의 전체 태그를 빈도순(동률이면 가나다순) 버튼으로 나열한다.
+// 버튼 클릭 = 해당 태그 필터, 재클릭 = 해제. 카드/목록의 칩 클릭(setTag)과 상태 공유.
 function buildTagOptions() {
   const counts = new Map();
   for (const c of state.cases) {
@@ -246,18 +240,36 @@ function buildTagOptions() {
   const sorted = [...counts.entries()]
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ko'));
 
-  els.tagFilter.replaceChildren();
-  const all = document.createElement('option');
-  all.value = '전체';
+  els.tagButtons.replaceChildren();
+
+  const all = document.createElement('button');
+  all.type = 'button';
+  all.className = 'tag-chip tag-chip--all';
+  all.dataset.tag = '';
   all.textContent = '전체';
-  els.tagFilter.appendChild(all);
+  all.addEventListener('click', () => {
+    if (state.filter.tag) setTag(state.filter.tag); // 현재 태그 해제
+  });
+  els.tagButtons.appendChild(all);
+
   for (const [tag, count] of sorted) {
-    const option = document.createElement('option');
-    option.value = tag;
-    option.textContent = `${tag} (${count})`;
-    els.tagFilter.appendChild(option);
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'tag-chip';
+    btn.dataset.tag = tag;
+    btn.textContent = `#${tag} (${count})`;
+    btn.addEventListener('click', () => setTag(tag));
+    els.tagButtons.appendChild(btn);
   }
-  els.tagFilter.value = state.filter.tag || '전체';
+  syncTagButtons();
+}
+
+// 패널 버튼들의 활성 상태만 갱신 (재구성 없이 — 포커스 유지)
+function syncTagButtons() {
+  for (const btn of els.tagButtons.querySelectorAll('button')) {
+    const active = btn.dataset.tag === '' ? !state.filter.tag : state.filter.tag === btn.dataset.tag;
+    btn.setAttribute('aria-pressed', String(active));
+  }
 }
 
 function fillSelect(select, values) {
@@ -283,7 +295,7 @@ function matches(c, f) {
 function setTag(tag) {
   const nextTag = state.filter.tag === tag ? null : tag;
   state.filter = { ...state.filter, tag: nextTag };
-  els.tagFilter.value = nextTag || '전체';
+  syncTagButtons();
   render();
 }
 
