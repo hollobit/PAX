@@ -1020,23 +1020,6 @@
     },
     {
       "source": "threads",
-      "org": "광진구",
-      "popularity": 365,
-      "org_type": "지자체",
-      "title": "실무자의 AI 개발 딴짓, 정식 업무로 발령",
-      "summary": "퇴근 후 딴짓으로 법령 MCP와 문서 도구를 만들어 온 지자체 실무자가 7월 1일자로 AI 개발을 본업으로 하는 보직 발령을 받았다는 소식이 공유됐다. 실무자 주도의 AX 활동을 조직이 공식 업무로 제도화한 사례다.",
-      "tags": [
-        "조직문화",
-        "제도화",
-        "확산사례"
-      ],
-      "link": "https://www.threads.com/@chris_gomdori/post/DZ-ArFKia7k",
-      "date": "2026-06-24",
-      "collected_at": "2026-08-07",
-      "id": "b729cbf74027dd9f"
-    },
-    {
-      "source": "threads",
       "org": "공직 현장(개인 개발)",
       "popularity": 147,
       "case_url": "https://github.com/chrisryugj/kordoc",
