@@ -72,3 +72,21 @@ def test_case_url_absent_passes():
 def test_case_url_non_https_rejected():
     errors = validate_case(make_case(case_url="http://example.com/"))
     assert any("case_url" in e for e in errors)
+
+
+def test_popularity_positive_int_passes():
+    assert validate_case(make_case(popularity=754)) == []
+
+
+def test_popularity_absent_passes():
+    assert validate_case(make_case()) == []
+
+
+def test_popularity_non_positive_rejected():
+    errors = validate_case(make_case(popularity=0))
+    assert any("popularity" in e for e in errors)
+
+
+def test_popularity_non_int_rejected():
+    errors = validate_case(make_case(popularity="많음"))
+    assert any("popularity" in e for e in errors)

@@ -1033,3 +1033,16 @@ main {
     break-inside: avoid;
   }
 }
+
+/* ── 인기 배지 ───────────────────────────────────────────── */
+
+.popular-badge {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}

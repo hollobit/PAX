@@ -5,8 +5,9 @@ REQUIRED_FIELDS = frozenset(
     ["id", "date", "collected_at", "source", "link", "org",
      "org_type", "title", "summary", "tags"]
 )
-# 선택 필드: case_url — 게시물/메시지에서 확인한 사례 대상 URL (썸네일·연결용)
-OPTIONAL_FIELDS = frozenset(["case_url"])
+# 선택 필드: case_url — 사례 대상 URL (썸네일·연결용),
+#           popularity — 커뮤니티 반응 기반 인기 지표 (좋아요 수 등, 양의 정수)
+OPTIONAL_FIELDS = frozenset(["case_url", "popularity"])
 SOURCES = frozenset(["threads", "kakao"])
 ORG_TYPES = frozenset(["중앙부처", "지자체", "공공기관", "교육", "기타"])
 
@@ -58,5 +59,11 @@ def validate_case(case: dict) -> list[str]:
     if case_url is not None and (
             not isinstance(case_url, str) or not case_url.startswith("https://")):
         errors.append("case_url은 null 또는 https:// URL이어야 합니다")
+
+    popularity = case.get("popularity")
+    if popularity is not None and (
+            not isinstance(popularity, int) or isinstance(popularity, bool)
+            or popularity < 1):
+        errors.append("popularity는 양의 정수여야 합니다")
 
     return errors

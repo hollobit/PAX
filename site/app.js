@@ -30,6 +30,13 @@ const SORT_ACCESSORS = {
   date: (c) => c.date + c.collected_at,
 };
 
+// 기본 정렬: 인기(popularity 내림차순) 우선, 동률·미지정은 최신순
+function comparePopularFirst(a, b) {
+  const diff = (b.popularity || 0) - (a.popularity || 0);
+  if (diff !== 0) return diff;
+  return (b.date + b.collected_at).localeCompare(a.date + a.collected_at);
+}
+
 // 사례 대상 URL의 호스트명 (유니코드 도메인 보존을 위해 문자열로 추출)
 function siteHostname(c) {
   const url = caseTargetUrl(c);
@@ -41,7 +48,7 @@ const state = {
   cases: [],
   filter: { q: '', orgType: '전체', source: '전체', tag: null, bookmarkedOnly: false },
   view: loadSavedView(), // 'cards' | 'list'
-  sort: { key: 'date', dir: 'desc' },
+  sort: { key: 'popularity', dir: 'desc' }, // 기본: 인기 우선, 이후 최신순
   bookmarks: loadBookmarks(), // Set<caseId> — localStorage에 보존
   status: 'loading', // 'loading' | 'loaded' | 'error'
 };
@@ -107,7 +114,9 @@ function applyUrlToState() {
   let sort = state.sort;
   if (sortParam) {
     const [key, dir] = sortParam.split('.');
-    if (SORT_ACCESSORS[key] && (dir === 'asc' || dir === 'desc')) sort = { key, dir };
+    if ((SORT_ACCESSORS[key] || key === 'popularity') && (dir === 'asc' || dir === 'desc')) {
+      sort = { key, dir };
+    }
   }
   state.filter = {
     ...state.filter,
@@ -130,7 +139,7 @@ function syncUrl() {
   if (f.tag) p.set('tag', f.tag);
   if (f.bookmarkedOnly) p.set('bm', '1');
   if (state.view !== 'cards') p.set('view', state.view);
-  if (state.sort.key !== 'date' || state.sort.dir !== 'desc') {
+  if (state.sort.key !== 'popularity' || state.sort.dir !== 'desc') {
     p.set('sort', `${state.sort.key}.${state.sort.dir}`);
   }
   const qs = p.toString();
@@ -157,8 +166,7 @@ async function load() {
     const res = await fetch('./data/cases.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const doc = await res.json();
-    state.cases = [...doc.cases].sort((a, b) =>
-      (b.date + b.collected_at).localeCompare(a.date + a.collected_at));
+    state.cases = [...doc.cases].sort(comparePopularFirst);
     state.status = 'loaded';
     renderStats(doc.updated_at, state.cases.length);
     render();
@@ -239,6 +247,10 @@ function setSort(key) {
 }
 
 function sortForList(results) {
+  if (state.sort.key === 'popularity') {
+    const sign = state.sort.dir === 'desc' ? 1 : -1;
+    return [...results].sort((a, b) => sign * comparePopularFirst(a, b));
+  }
   const accessor = SORT_ACCESSORS[state.sort.key] || SORT_ACCESSORS.date;
   const sign = state.sort.dir === 'asc' ? 1 : -1;
   return [...results].sort((a, b) => sign * accessor(a).localeCompare(accessor(b), 'ko'));
@@ -360,6 +372,14 @@ function render() {
     card.style.setProperty('--i', String(i));
     els.caseList.appendChild(card);
   });
+}
+
+function createPopularBadge(c) {
+  const badge = document.createElement('span');
+  badge.className = 'popular-badge';
+  badge.textContent = '🔥 인기';
+  badge.title = `커뮤니티 반응 ${c.popularity}`;
+  return badge;
 }
 
 function createBookmarkButton(c) {
@@ -549,6 +569,10 @@ function createCaseRow(c) {
 
   const titleTd = document.createElement('td');
   titleTd.className = 'case-table__title';
+  if (c.popularity) {
+    titleTd.appendChild(createPopularBadge(c));
+    titleTd.append(' ');
+  }
   const targetUrl = caseTargetUrl(c);
   if (targetUrl) {
     const a = document.createElement('a');
@@ -666,6 +690,9 @@ function createCaseCard(c) {
 
   meta.appendChild(badge);
   meta.appendChild(org);
+  if (c.popularity) {
+    meta.appendChild(createPopularBadge(c));
+  }
   meta.appendChild(createBookmarkButton(c));
 
   const title = document.createElement('h3');

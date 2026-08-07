@@ -16,7 +16,8 @@
         "공공데이터"
       ],
       "id": "a2eaaf9f454da37f",
-      "case_url": "https://www.ailearn4all.kr/"
+      "case_url": "https://www.ailearn4all.kr/",
+      "popularity": 118
     },
     {
       "date": "2026-07-14",
@@ -126,7 +127,8 @@
         "로컬AI"
       ],
       "id": "de4b2dab339d69b7",
-      "case_url": "https://github.com/chrisryugj/Docufinder"
+      "case_url": "https://github.com/chrisryugj/Docufinder",
+      "popularity": 134
     },
     {
       "date": "2026-04-01",
@@ -141,7 +143,8 @@
         "법령",
         "MCP"
       ],
-      "id": "d40cc4a9cf6e29b6"
+      "id": "d40cc4a9cf6e29b6",
+      "popularity": 754
     },
     {
       "date": "2026-07-11",
@@ -157,7 +160,8 @@
         "시각화"
       ],
       "id": "5451653f4cddb6f2",
-      "case_url": "https://hosungseo.github.io/korea100/"
+      "case_url": "https://hosungseo.github.io/korea100/",
+      "popularity": 359
     },
     {
       "tags": [
@@ -264,7 +268,8 @@
       "link": "https://lexdiff.gomdori.app",
       "summary": "법령·조례·판례·해석례를 통합해 비교·검색하는 AI 법률 검색 웹서비스가 공유됐다. MCP 도구보다 일반 사용자가 접근하기 쉬운 웹 형태로, 법령 MCP 도구가 이 서비스에서 파생됐다는 제작 배경도 소개됐다.",
       "source": "kakao",
-      "id": "38dc6d3806bf2e8f"
+      "id": "38dc6d3806bf2e8f",
+      "popularity": 210
     },
     {
       "source": "kakao",
@@ -479,7 +484,8 @@
       "title": "업무포털 원클릭 이동 프로그램",
       "date": "2026-08-07",
       "collected_at": "2026-08-07",
-      "id": "0d668fa0c977b439"
+      "id": "0d668fa0c977b439",
+      "popularity": 216
     },
     {
       "source": "kakao",
@@ -603,7 +609,8 @@
         "내부망"
       ],
       "title": "행안부, 엑사원·Gemma4를 행정 내부망에 도입",
-      "id": "58420e002644542c"
+      "id": "58420e002644542c",
+      "popularity": 139
     },
     {
       "link": "https://www.threads.com/@chris_gomdori/post/DaS4hW2CW6n",
@@ -619,7 +626,8 @@
         "공공데이터"
       ],
       "title": "공공데이터 MCP 5종 통합 서버 운영",
-      "id": "9d56d423296a3238"
+      "id": "9d56d423296a3238",
+      "popularity": 226
     },
     {
       "link": "https://www.threads.com/@publicai_79/post/DY4s0B9jLVm",
@@ -669,7 +677,8 @@
         "도구공개"
       ],
       "title": "화성특례시 신규자 지식창고, 광진구 버전으로 포팅",
-      "id": "56cdd4fc23166800"
+      "id": "56cdd4fc23166800",
+      "popularity": 107
     },
     {
       "link": "https://www.threads.com/@koyou_ax/post/DaLJpOljpV6",
@@ -702,7 +711,8 @@
         "도구공개"
       ],
       "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구",
-      "id": "1502d338e8e99382"
+      "id": "1502d338e8e99382",
+      "popularity": 103
     },
     {
       "link": "https://www.threads.com/@gongpenclaw/post/DbiLzQ5gfjC",
