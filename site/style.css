@@ -882,7 +882,8 @@ main {
   margin-top: 0.5rem;
 }
 
-.site-footer__contribute {
+/* .site-footer p { margin: 0 } 보다 특이도를 높여 가운데 정렬(margin auto)을 보장 */
+.site-footer p.site-footer__contribute {
   max-width: 640px;
   margin: 0 auto 0.8rem;
   font-weight: 600;
