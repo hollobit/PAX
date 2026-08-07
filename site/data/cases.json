@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T09:27:40+09:00",
+  "updated_at": "2026-08-07T10:41:42+09:00",
   "cases": [
     {
       "date": "2026-08-03",
@@ -586,6 +586,138 @@
       "title": "초실행관 — 공무원 AI 활용·실무 도구 사이트",
       "source": "kakao",
       "id": "c78372217646db56"
+    },
+    {
+      "link": "https://www.threads.com/@gongpenclaw/post/DY7f9jPAend",
+      "org_type": "중앙부처",
+      "case_url": "https://mobile.newsis.com/view/NISX20260515_0003631882",
+      "org": "행정안전부",
+      "date": "2026-05-30",
+      "summary": "행정안전부가 국산 LLM 엑사원과 구글 Gemma4를 행정 내부망에서 사용하기 시작했다는 소식이 공유됐다. AI가 보고서를 쓰고 공무원이 검토하는 시대의 변곡점이라는 담당 부서 인터뷰 기사도 함께 소개됐다.",
+      "source": "threads",
+      "collected_at": "2026-08-07",
+      "tags": [
+        "도입사례",
+        "LLM",
+        "내부망"
+      ],
+      "title": "행안부, 엑사원·Gemma4를 행정 내부망에 도입",
+      "id": "58420e002644542c"
+    },
+    {
+      "link": "https://www.threads.com/@chris_gomdori/post/DaS4hW2CW6n",
+      "org_type": "기타",
+      "case_url": "https://mcp.gomdori.app",
+      "org": "공직 현장(개인 개발)",
+      "date": "2026-07-03",
+      "summary": "법령, 통계, 특허, 건축, 학교알리미 등 공공데이터 MCP 5종을 한 서버로 통합해 경로 라우팅으로 제공하는 사례가 공유됐다. 월 서버비 16달러 규모로 전국 사용자들이 24시간 이용할 만큼 수요가 검증됐다.",
+      "source": "threads",
+      "collected_at": "2026-08-07",
+      "tags": [
+        "MCP",
+        "공공데이터"
+      ],
+      "title": "공공데이터 MCP 5종 통합 서버 운영",
+      "id": "9d56d423296a3238"
+    },
+    {
+      "link": "https://www.threads.com/@publicai_79/post/DY4s0B9jLVm",
+      "org_type": "기타",
+      "org": "공직 현장(개인 개발)",
+      "date": "2026-05-28",
+      "summary": "비공개 내부 문서를 로컬 AI로 임베딩해 부서별, 분기별 추진사항을 AI가 보고하도록 만드는 내부망 RAG 초안 구축기가 공유됐다. 값비싼 시스템 없이도 공공기관 AX 전환이 가능하다는 점을 보여주려는 시도다.",
+      "source": "threads",
+      "collected_at": "2026-08-07",
+      "tags": [
+        "RAG",
+        "내부망",
+        "로컬AI"
+      ],
+      "title": "내부망 문서용 로컬 RAG 구축기",
+      "id": "a25534e407326d76"
+    },
+    {
+      "link": "https://www.threads.com/@koyou_ax/post/DacnKc9D_5i",
+      "org_type": "기타",
+      "org": "공직 현장(개인 개발)",
+      "date": "2026-07-06",
+      "summary": "일정, 파일, 지식, 문서 작성, 실행 기록까지 PC 안에서 연결하는 공무원용 로컬 AI 에이전트 워크플레이스 개발기가 공유됐다. 일반 업무용 PC에서 구동되도록 Gemma4 E2B로 최적화했고 원클릭 설치 패키지를 만들고 있다.",
+      "source": "threads",
+      "collected_at": "2026-08-07",
+      "tags": [
+        "AI에이전트",
+        "로컬AI",
+        "업무자동화"
+      ],
+      "title": "공무원용 로컬 AI 에이전트 워크플레이스 개발",
+      "id": "9d115930495a1e65"
+    },
+    {
+      "link": "https://www.threads.com/@chris_gomdori/post/DbW8LhniROp",
+      "org_type": "지자체",
+      "case_url": "https://chris.gomdori.app/newbgj",
+      "org": "화성특례시·광진구",
+      "date": "2026-07-29",
+      "summary": "화성특례시 AI스마트전략실이 개발해 정부 AI 실험실 GitLab에 공개한 신규자 지식창고 웹앱을 광진구 실무자가 자기 기관 버전으로 포팅한 사례가 공유됐다. 조례 개정 자동 감시, 동의어·초성 검색, 첫 30일 체크리스트를 더해 기관 간 확산의 선순환을 보여준다.",
+      "source": "threads",
+      "collected_at": "2026-08-07",
+      "tags": [
+        "지식관리",
+        "확산사례",
+        "도구공개"
+      ],
+      "title": "화성특례시 신규자 지식창고, 광진구 버전으로 포팅",
+      "id": "56cdd4fc23166800"
+    },
+    {
+      "link": "https://www.threads.com/@koyou_ax/post/DaLJpOljpV6",
+      "org_type": "기타",
+      "org": "기관 미상(공공)",
+      "date": "2026-06-30",
+      "summary": "내부망 LLM으로 보안 걱정 없이 사내 데이터를 활용하는 놀이공원 콘셉트의 AI 체험 플랫폼을 팀 단위 바이브 코딩으로 구축한 사례가 공유됐다. AI 리터러시 퀴즈, 그래프 RAG 사내지식 검색, 민원 데이터 AI 답변, 비전 인식 안전 분석, AI 광고 도안 심의 등을 담았다.",
+      "source": "threads",
+      "collected_at": "2026-08-07",
+      "tags": [
+        "내부망",
+        "RAG",
+        "바이브코딩"
+      ],
+      "title": "내부망 LLM 기반 사내 AI 체험 플랫폼 AX플레이그라운드 구축",
+      "id": "bfcd190155ae69f7"
+    },
+    {
+      "link": "https://www.threads.com/@chris_gomdori/post/DbaDIR3DZWE",
+      "org_type": "기타",
+      "case_url": "https://github.com/chrisryugj/edoc-summarizer",
+      "org": "공직 현장(개인 개발)",
+      "date": "2026-07-30",
+      "summary": "전자문서 화면에서 버튼 하나로 무엇을 언제까지 어떻게 해야 하는지를 카드 한 장으로 정리하고, 기한을 D-day로 표시하며 결재 전 AI 검토까지 해주는 도구가 공개됐다. 한컴 웹한글 공식 API 기반이며 로컬 LLM을 붙이면 문서가 PC 밖으로 나가지 않는다.",
+      "source": "threads",
+      "collected_at": "2026-08-07",
+      "tags": [
+        "문서자동화",
+        "로컬AI",
+        "도구공개"
+      ],
+      "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구",
+      "id": "1502d338e8e99382"
+    },
+    {
+      "link": "https://www.threads.com/@gongpenclaw/post/DbiLzQ5gfjC",
+      "org_type": "공공기관",
+      "case_url": "https://www.data.go.kr/",
+      "org": "공공데이터포털(NIA)",
+      "date": "2026-08-02",
+      "summary": "공공데이터포털에 자연어 문장으로 물어보면 데이터를 찾아주는 AI 대화형 검색이 도입됐다는 소식이 공유됐다. 정확한 검색어를 몰라 입구에서 포기하던 사용자들의 진입 장벽을 낮추는 변화로, 공무원의 AI 실험 데이터 창고로서의 가치도 조명됐다.",
+      "source": "threads",
+      "collected_at": "2026-08-07",
+      "tags": [
+        "공공데이터",
+        "AI검색",
+        "도입사례"
+      ],
+      "title": "공공데이터포털에 AI 대화형 검색 도입",
+      "id": "fbde74aa0071ea45"
     }
   ]
 }
