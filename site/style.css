@@ -887,6 +887,7 @@ main {
   margin: 0 auto 0.8rem;
   font-weight: 600;
   color: var(--ink);
+  text-align: center;
 }
 
 /* ── 메뉴 & 변경 기록 ────────────────────────────────────── */
