@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AX 수준 평가 대시보드 — 공공AX 사례 아카이브</title>
+  <meta name="description" content="공공AX 사례 70건의 AX 단계 × 업무범위 × 완결성 × MCP 파급력 4축 평가 결과와 방법론">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">PUBLIC SECTOR AX RECORD · AX 수준 평가</p>
+    <h1>AX 수준 평가 대시보드</h1>
+    <p class="tagline">아카이브 사례 전체를 <strong>AX 단계 × 업무 범위(S) × 업무 완결성(C) × MCP 파급력(M)</strong> 4축으로 평가한 결과와 방법론</p>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="./">사례 아카이브</a>
+      <a href="dashboard.html" aria-current="page">AX 평가</a>
+      <a href="guidelines.html">안내서·가이드라인</a>
+      <a href="https://hollobit.github.io/GAPI2/ecosystem.html" target="_blank" rel="noopener">MCP·AI 도구 ↗</a>
+      <a href="https://ax360.kr/national-ax-project/card" target="_blank" rel="noopener">AX 사업 찾기 ↗</a>
+      <a href="https://ax360.kr/national-ai-resource/model" target="_blank" rel="noopener">AX 자원 찾기 ↗</a>
+      <a href="https://ax360.kr/private-ai-company/heatmap" target="_blank" rel="noopener">AI 기업 찾기 ↗</a>
+      <a href="https://axboard.aigov.go.kr/" target="_blank" rel="noopener">AI 정부실험실 ↗</a>
+      <a href="changelog.html">변경 기록</a>
+    </nav>
+    <p class="stats" id="stats" aria-live="polite"></p>
+  </header>
+  <main class="dash">
+
+    <!-- KPI 타일 -->
+    <section id="kpi" class="kpi-grid" aria-label="핵심 지표"></section>
+
+    <!-- AX 성숙도 사다리: 현재 위치 -->
+    <section class="guide__section" id="ladder-section">
+      <h2>AX 성숙도 사다리 — 우리는 지금 어디에 있나</h2>
+      <p>AX 등급은 <strong>준비(Ready) → 활용(Enabled) → 재설계(First) → 내재화(Native)</strong>로
+      올라가는 성숙도 사다리입니다. 위로 갈수록 "AI 기능이 있다"가 아니라
+      <strong>"업무가 실제로 어떻게 완결되는가"</strong>의 증거를 요구합니다.</p>
+      <div id="ladder" class="ax-ladder" aria-label="AX 성숙도 단계별 사례 분포"></div>
+      <div id="diagnosis" class="dash-diagnosis"></div>
+    </section>
+
+    <!-- 방법론 -->
+    <section class="guide__section" id="methodology">
+      <h2>평가·분석 방법론</h2>
+      <p>모든 사례는 등급 하나가 아니라 <strong>AX 단계 × S × C × M</strong> 네 축을 함께 기록합니다.
+      준비 자산의 잠재력을 과소평가하지 않으면서, 아직 실현되지 않은 자동화 효과를 현재 성과로
+      과대평가하는 문제를 막기 위한 구조입니다. 총점보다 <strong>관문(필수조건)</strong>을 우선하며,
+      공개 근거가 없으면 "아니오"가 아니라 "미확인"으로 두고 상위 단계 판정을 유보합니다.</p>
+
+      <div class="ax-stage-cards">
+        <article class="ax-stage-card" data-ax="AI-Ready">
+          <h3><span class="ax-badge ax-ready">AI-Ready</span></h3>
+          <p>데이터·권한·책임·기준선 중 하나 이상을 실제 AI 업무시험에 쓸 수 있는 상태로 만든 단계.
+          API·MCP·RAG·공통 플랫폼·교육·실험환경 제공을 포함합니다. AI로 코딩했다는 사실만으로는
+          부족하고, 결과물이 준비요소에 실질적으로 기여해야 합니다.</p>
+        </article>
+        <article class="ax-stage-card" data-ax="AI-Enabled">
+          <h3><span class="ax-badge ax-enabled">AI-Enabled</span></h3>
+          <p>기존 업무의 일부에서 AI가 검색·요약·분류·번역·초안·추천·분석 등
+          <strong>검증 가능한 결과</strong>를 만들고 사람이 확인하는 단계. 기능 탑재가 아니라
+          실제 업무 산출물이 관건입니다.</p>
+        </article>
+        <article class="ax-stage-card" data-ax="AI-First">
+          <h3><span class="ax-badge ax-first">AI-First</span></h3>
+          <p>AI를 전제로 업무 시작점·처리경로·역할을 재설계한 단계. 저위험 자동처리,
+          고위험 숙련자 이관, 예외처리(승인·거부·롤백), 운영결과의 평가 데이터화,
+          예외의 제도 반영까지 <strong>모든 관문의 운영 증거</strong>가 필요합니다.</p>
+        </article>
+        <article class="ax-stage-card" data-ax="AI-Native">
+          <h3><span class="ax-badge ax-native">AI-Native</span></h3>
+          <p>AI가 서비스의 핵심 가치를 생산하고, 사용결과가 평가·개선으로 환류되며,
+          장애·가격·품질 변동에도 핵심 서비스가 유지되는 단계.
+          <strong>핵심 가치 결합 + 학습구조(C5) + 복원력</strong>이 필수 관문입니다.</p>
+        </article>
+      </div>
+
+      <div class="axis-tables">
+        <div class="table-wrap">
+          <table class="guide-table">
+            <caption>업무 범위 S1~S5</caption>
+            <thead><tr><th>코드</th><th>명칭</th><th>판정 단위</th></tr></thead>
+            <tbody>
+              <tr><td>S1</td><td>Primitive tool</td><td>단일 조회·변환·생성·검사 기능</td></tr>
+              <tr><td>S2</td><td>Tool bundle</td><td>관련된 복수 도구·데이터·기능의 묶음</td></tr>
+              <tr><td>S3</td><td>Workflow</td><td>하나의 업무목표를 위한 순차·조건부 처리</td></tr>
+              <tr><td>S4</td><td>End-to-end service</td><td>접수·처리·승인·통지·종료 확인까지 연결</td></tr>
+              <tr><td>S5</td><td>Ecosystem</td><td>여러 기관·서비스·에이전트의 공동 목표 수행</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table class="guide-table">
+            <caption>업무 완결성 C0~C5</caption>
+            <thead><tr><th>코드</th><th>명칭</th><th>판정 기준</th></tr></thead>
+            <tbody>
+              <tr><td>C0</td><td>기능 제공</td><td>도구·서비스가 존재하고 호출·사용 가능</td></tr>
+              <tr><td>C1</td><td>결과 제공</td><td>결과를 제시하며 후속 업무는 사람이 수행</td></tr>
+              <tr><td>C2</td><td>연속 처리</td><td>여러 단계를 연결하지만 주요 판단·완료는 사람</td></tr>
+              <tr><td>C3</td><td>운영 폐쇄루프</td><td>입력→처리→검증→완료 및 종료상태 확인</td></tr>
+              <tr><td>C4</td><td>예외 포함 완결</td><td>오류·불확실성·승인·이의제기·이관·롤백 포함</td></tr>
+              <tr><td>C5</td><td>적응형 완결</td><td>평가·학습·재검증·대체경로·장애복원 포함</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-wrap">
+          <table class="guide-table">
+            <caption>MCP 파급력 M1~M5 (MCP 사례에만 적용)</caption>
+            <thead><tr><th>코드</th><th>명칭</th><th>판정 기준</th></tr></thead>
+            <tbody>
+              <tr><td>M1</td><td>제한적</td><td>개인·단일 도구·제한 사용자 중심</td></tr>
+              <tr><td>M2</td><td>재사용형</td><td>공개 MCP 또는 복수 사용자·모델이 재사용</td></tr>
+              <tr><td>M3</td><td>업무통합형</td><td>복수 MCP·API·업무시스템과 연결</td></tr>
+              <tr><td>M4</td><td>생태계형</td><td>공식 기관 제공, 다기관·다에이전트 공동 이용</td></tr>
+              <tr><td>M5</td><td>핵심인프라형</td><td>공식 실행계층, SLA·책임·감사·복원력 보유</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <details class="dash-details">
+        <summary>판정 절차 (9단계)와 보조 분류축</summary>
+        <ol class="guide__list">
+          <li>공개자료에서 AI의 실제 역할과 업무 산출물을 확인한다</li>
+          <li>AI 활용조건만 마련했는지, 검증 가능한 결과까지 만드는지 구분한다</li>
+          <li>지원 업무범위를 S1~S5로 판정한다</li>
+          <li>시작·처리·완료·예외·학습·복원 수준을 C0~C5로 판정한다</li>
+          <li>AX 단계의 필수관문을 적용한다 — 총점보다 관문 우선</li>
+          <li>MCP 사례라면 재사용·통합·공식성·운영책임을 M1~M5로 평가한다</li>
+          <li>Native라면 적용범위(Tool/Task/Workflow/Service/Organization/Ecosystem)를 함께 기록한다</li>
+          <li>공개 근거가 없으면 "미확인"으로 기록하고 상위단계 판정을 유보한다</li>
+          <li>신규 증거가 생기면 동일 사례를 새 버전으로 재평가한다</li>
+        </ol>
+        <p class="guide__note">보조 분류축: 도입상태(Prototype~Production), 사용자 관계(G2E/G2G/G2C/G2B/G2R),
+        서비스 범위(Internal/External/Hybrid), 업무 위치, 개발 주체·방식, MCP 역할·권한,
+        개방성·라이선스, 위험도와 인간 통제, 증거등급 E0~E5와 신뢰도, 피드백·학습 구조, 복원력.
+        AX 단계와 도입상태는 독립적입니다 — AI-Ready/Production과 AI-Enabled/Prototype이 모두 가능합니다.</p>
+      </details>
+
+      <blockquote class="dash-principle">
+        준비조건을 만들면 <strong>Ready</strong>, 검증 가능한 업무결과를 만들면 <strong>Enabled</strong>,
+        사람과 AI의 역할·흐름을 다시 짜면 <strong>First</strong>,
+        핵심 가치와 학습·복원 구조가 결합되면 <strong>Native</strong>로 판정한다.
+      </blockquote>
+    </section>
+
+    <!-- 분석 위젯 -->
+    <section class="guide__section">
+      <h2>평가 결과 분석</h2>
+      <p id="insight" class="dash-insight"></p>
+      <div class="widget-grid">
+        <figure class="widget" id="w-ax"></figure>
+        <figure class="widget" id="w-s"></figure>
+        <figure class="widget" id="w-c"></figure>
+        <figure class="widget widget--wide" id="w-sc"></figure>
+        <figure class="widget" id="w-m"></figure>
+        <figure class="widget" id="w-evidence"></figure>
+        <figure class="widget" id="w-status"></figure>
+        <figure class="widget" id="w-scope"></figure>
+      </div>
+    </section>
+
+    <!-- 개선 방향 -->
+    <section class="guide__section" id="roadmap">
+      <h2>향후 개선 방향 — 다음 단계로 가는 길</h2>
+      <div class="dash-roadmap">
+        <article class="roadmap-card">
+          <h3>① First 후보군을 집중 관리</h3>
+          <p>연속 처리(C2)까지 도달한 사례들이 가장 유력한 <strong>AI-First 후보</strong>입니다.
+          역할 분기, 숙련자 이관, 종료 확인, 평가 데이터 수집을 추가하면 First로 올라설 수 있습니다.</p>
+          <div id="first-candidates" class="candidate-list"></div>
+        </article>
+        <article class="roadmap-card">
+          <h3>② 성과 근거를 E4 이상으로</h3>
+          <p>현재 사례 대부분이 <strong>게시글 주장(E0)~공개 데모(E1)</strong> 수준의 증거에 머뭅니다.
+          처리시간, 오류율, 수정률, 이관률, 사용량, 비용을 기록해 성과 근거 등급을 높여야
+          상위 단계 판정이 가능해집니다.</p>
+        </article>
+        <article class="roadmap-card">
+          <h3>③ 예외 처리와 복원력을 필수 항목으로</h3>
+          <p>70건 전부 <strong>피드백·학습 구조와 복원력이 미확인</strong>입니다. 모델·MCP·API 중단 시
+          폴백, 수동 전환, 롤백 절차를 사례 설명의 필수 항목으로 만들어야 C3 이상으로 갈 수 있습니다.</p>
+        </article>
+        <article class="roadmap-card">
+          <h3>④ 도구 수보다 전환 경로를 추적</h3>
+          <p>MCP 서버가 몇 개인가보다 <strong>공개 → 실제 사용 → 업무결과 → 공식 편입 →
+          흐름 재설계 → 학습·복원</strong>의 진행 단계를 사례별로 버전 관리하는 것이 중요합니다.
+          엔드투엔드(S4)와 폐쇄루프(C3+)의 첫 사례가 나오는 것이 다음 이정표입니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 사례별 평가 테이블 -->
+    <section class="guide__section">
+      <h2>사례별 평가 결과</h2>
+      <p class="dash-help">행을 클릭하면 판정 근거·피드백·복원력 평가가 펼쳐집니다. 표기는
+      <code>AX 단계 / S 업무범위 / C 완결성 / M 파급력</code> 순입니다.</p>
+      <div id="eval-filter" class="tag-buttons" role="group" aria-label="AX 단계 필터"></div>
+      <div class="table-wrap">
+        <table class="case-table" id="eval-table"></table>
+      </div>
+    </section>
+
+    <p class="guide__updated">평가 기준일 2026-08-08 · 평가모형 및 근거:
+      <a href="https://github.com/hollobit/PAX/tree/main/docs/native" target="_blank" rel="noopener">docs/native (전체 보고서)</a>
+    </p>
+  </main>
+  <footer class="site-footer">
+    <p>본 평가는 공개 자료 기반이며, 새 증거가 확인되면 사례별로 재평가됩니다.</p>
+    <p class="site-footer__curator">Curated by Jonghong Jeon, <a href="mailto:hollobit@etri.re.kr">hollobit@etri.re.kr</a></p>
+  </footer>
+  <script src="dashboard.js"></script>
+</body>
+</html>

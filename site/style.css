@@ -1152,3 +1152,346 @@ main {
     max-width: 100%;
   }
 }
+
+/* ── AX 평가 대시보드 ────────────────────────────────────── */
+
+:root {
+  --seq-1: #e3edf6;
+  --seq-2: #b8d0e6;
+  --seq-3: #7ea6cf;
+  --seq-4: #4f7fae;
+  --seq-5: #234a72;
+  --ax-ready-bg: #e3edf6;   --ax-ready-fg: #234a72;
+  --ax-enabled-bg: #b8d0e6; --ax-enabled-fg: #17324f;
+  --ax-first-bg: #4f7fae;   --ax-first-fg: #ffffff;
+  --ax-native-bg: #17324f;  --ax-native-fg: #ffffff;
+  --ax-none-bg: #eae6de;    --ax-none-fg: #6b6153;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --seq-1: #26364a;
+    --seq-2: #335070;
+    --seq-3: #4f7fae;
+    --seq-4: #7ea6cf;
+    --seq-5: #b8d0e6;
+    --ax-ready-bg: #26364a;   --ax-ready-fg: #b8d0e6;
+    --ax-enabled-bg: #335070; --ax-enabled-fg: #d9e6f2;
+    --ax-first-bg: #7ea6cf;   --ax-first-fg: #101720;
+    --ax-native-bg: #b8d0e6;  --ax-native-fg: #101720;
+    --ax-none-bg: #2a2833;    --ax-none-fg: #b3ab9a;
+  }
+}
+
+.ax-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.ax-ready   { background: var(--ax-ready-bg);   color: var(--ax-ready-fg); }
+.ax-enabled { background: var(--ax-enabled-bg); color: var(--ax-enabled-fg); }
+.ax-first   { background: var(--ax-first-bg);   color: var(--ax-first-fg); }
+.ax-native  { background: var(--ax-native-bg);  color: var(--ax-native-fg); }
+.ax-none    { background: var(--ax-none-bg);    color: var(--ax-none-fg); }
+
+/* KPI */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.kpi-tile {
+  padding: 1rem 1.1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
+}
+
+.kpi-tile__value {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--accent-2);
+}
+
+.kpi-tile__label {
+  margin-top: 0.15rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.kpi-tile__sub {
+  color: var(--ink-faint);
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+}
+
+/* 성숙도 사다리 */
+.ax-ladder {
+  display: grid;
+  gap: 0.7rem;
+  margin: 1.2rem 0;
+}
+
+.ax-step {
+  padding: 0.9rem 1.1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--rule);
+  border-left: 5px solid var(--seq-3);
+  border-radius: var(--radius-md);
+}
+
+.ax-step--1 { border-left-color: var(--seq-2); margin-right: 18%; }
+.ax-step--2 { border-left-color: var(--seq-3); margin-right: 12%; margin-left: 6%; }
+.ax-step--3 { border-left-color: var(--seq-4); margin-right: 6%; margin-left: 12%; }
+.ax-step--4 { border-left-color: var(--seq-5); margin-left: 18%; }
+
+.ax-step--empty { border-style: dashed; opacity: 0.75; }
+
+.ax-step__head {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.ax-step__count {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.ax-step__bar {
+  height: 8px;
+  margin: 0.55rem 0 0.45rem;
+  background: var(--bg-inset);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ax-step__fill {
+  display: block;
+  height: 100%;
+  background: var(--accent-2);
+  border-radius: 4px;
+}
+
+.ax-step__desc {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+}
+
+.ax-ladder__outside {
+  margin: 0.2rem 0 0;
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+}
+
+.dash-diagnosis {
+  padding: 1rem 1.2rem;
+  background: var(--bg-inset);
+  border-left: 3px solid var(--accent);
+}
+
+.dash-diagnosis h3 { margin: 0 0 0.5rem; font-size: 1rem; }
+.dash-diagnosis p { margin: 0 0 0.6rem; font-size: 0.92rem; line-height: 1.65; color: var(--ink-soft); }
+
+/* 방법론 카드 */
+.ax-stage-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.8rem;
+  margin: 1.2rem 0;
+}
+
+.ax-stage-card {
+  padding: 1rem 1.1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
+}
+
+.ax-stage-card h3 { margin: 0 0 0.5rem; }
+.ax-stage-card p { margin: 0; font-size: 0.86rem; line-height: 1.6; color: var(--ink-soft); }
+
+.axis-tables { display: grid; gap: 1rem; margin: 1.2rem 0; }
+.axis-tables caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 700;
+  padding-bottom: 0.4rem;
+}
+
+.dash-details summary { cursor: pointer; font-weight: 600; margin: 0.6rem 0; }
+
+.dash-principle {
+  margin: 1.4rem 0 0;
+  padding: 1rem 1.3rem;
+  border-left: 4px solid var(--accent-gold);
+  background: var(--bg-elevated);
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+}
+
+/* 위젯 그리드 */
+.widget-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.widget {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
+}
+
+.widget--wide { grid-column: 1 / -1; }
+
+.widget figcaption {
+  font-weight: 700;
+  font-size: 0.92rem;
+  margin-bottom: 0.7rem;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr 2.2rem;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.45rem;
+}
+
+.bar-row__label {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bar-row__track {
+  display: block;
+  height: 12px;
+  background: var(--bg-inset);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-row__fill {
+  display: block;
+  height: 100%;
+  background: var(--accent-2);
+  border-radius: 0 4px 4px 0;
+}
+
+.bar-row__fill--zero { background: transparent; }
+
+.bar-row__value {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-align: right;
+  color: var(--ink);
+}
+
+.widget__note {
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+}
+
+/* 히트맵 */
+.heatmap {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.heatmap th {
+  padding: 0.4rem;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.heatmap td {
+  width: 15%;
+  height: 2.6rem;
+  text-align: center;
+  border: 2px solid var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+}
+
+.heatmap__cell--deep { color: #fff; }
+
+@media (prefers-color-scheme: dark) {
+  .heatmap__cell--deep { color: #101720; }
+}
+
+/* 개선 방향 */
+.dash-roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.9rem;
+}
+
+.roadmap-card {
+  padding: 1rem 1.1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--accent-gold);
+  border-radius: var(--radius-md);
+}
+
+.roadmap-card h3 { margin: 0 0 0.5rem; font-size: 0.98rem; }
+.roadmap-card p { margin: 0 0 0.6rem; font-size: 0.86rem; line-height: 1.6; color: var(--ink-soft); }
+
+.candidate-list { display: grid; gap: 0.35rem; }
+
+.candidate {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  background: var(--bg-inset);
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.candidate:hover { background: var(--seq-1); }
+
+.candidate__meta {
+  font-family: var(--font-mono);
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+/* 평가 표 */
+.dash-help { font-size: 0.86rem; color: var(--ink-soft); }
+.dash-insight { font-size: 0.92rem; }
+
+.eval-row { cursor: pointer; }
+.eval-row:hover td { background: var(--bg-inset); }
+
+.ax-prev { font-size: 0.75rem; color: var(--ink-faint); }
+
+.eval-detail td {
+  background: var(--bg-inset);
+  font-size: 0.84rem;
+}
+
+.eval-detail dl { margin: 0; display: grid; grid-template-columns: 9rem 1fr; gap: 0.3rem 0.8rem; }
+.eval-detail dt { font-weight: 700; color: var(--ink-soft); }
+.eval-detail dd { margin: 0; line-height: 1.55; }
