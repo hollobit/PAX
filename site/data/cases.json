@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T12:14:40+09:00",
+  "updated_at": "2026-08-07T12:28:50+09:00",
   "cases": [
     {
       "date": "2026-08-03",
@@ -650,7 +650,8 @@
         "업무자동화"
       ],
       "title": "공무원용 로컬 AI 에이전트 워크플레이스 개발",
-      "id": "9d115930495a1e65"
+      "id": "9d115930495a1e65",
+      "case_url": "https://github.com/Kminer2053/gongmuwon"
     },
     {
       "link": "https://www.threads.com/@chris_gomdori/post/DbW8LhniROp",
@@ -878,6 +879,85 @@
       "source": "kakao",
       "summary": "2026년 4월 기준선 대비 한국 공공 API가 얼마나 개선됐는지를 라이브 재측정과 증거 기반 방법론으로 비교하는 사이트가 공유됐다. AI 에이전트가 직접 호출하는 시대에 맞춘 공공 API 품질 추적 프로젝트다.",
       "id": "7868cf416d6fe407"
+    },
+    {
+      "summary": "국가 제도 구조도 프로젝트(제도100)를 온톨로지 형태로 탐색할 수 있게 만든 뷰어가 공유됐다. 제도 간 관계를 구조화된 지식 체계로 살펴볼 수 있어 제도 데이터의 기계 가독성을 높이는 시도다.",
+      "org": "공직 현장(개인 개발)",
+      "link": "https://chris.gomdori.app/korea100",
+      "collected_at": "2026-08-07",
+      "source": "kakao",
+      "date": "2026-08-07",
+      "tags": [
+        "제도분석",
+        "온톨로지",
+        "시각화"
+      ],
+      "org_type": "기타",
+      "title": "대한민국 제도 온톨로지 뷰어",
+      "id": "c7ccd2903fbe27a5"
+    },
+    {
+      "summary": "PDF 문서를 번역하고 사람이 검토하는 과정을 한 화면에서 처리하는 로컬 작업장 도구가 공개됐다. 문서를 외부로 보내지 않는 공공 업무용 로컬 도구 시리즈의 여섯 번째 결과물이다.",
+      "org": "공직 커뮤니티",
+      "link": "https://github.com/obundh/gonggong-ax-local-6",
+      "collected_at": "2026-08-07",
+      "source": "kakao",
+      "date": "2026-08-07",
+      "tags": [
+        "문서자동화",
+        "번역",
+        "로컬도구"
+      ],
+      "org_type": "기타",
+      "title": "PDF 번역·검토 작업장 — 공공 AX 로컬 시리즈 6",
+      "id": "ec17e6cd86e7aaa1"
+    },
+    {
+      "summary": "로컬 Ollama의 Gemma 등 모델로 법령 MCP, 문서 파싱 MCP 같은 여러 MCP 서버를 동시에 돌리는 호스트가 공개됐다. 클라우드 API 없이 내부망과 오프라인 환경에서 AI 도구 호출을 쓸 수 있게 해준다.",
+      "org": "공직 현장(개인 개발)",
+      "link": "https://github.com/chrisryugj/ollama-mcp-host",
+      "collected_at": "2026-08-07",
+      "source": "kakao",
+      "date": "2026-08-07",
+      "tags": [
+        "MCP",
+        "로컬AI",
+        "내부망"
+      ],
+      "org_type": "기타",
+      "title": "로컬 Ollama 기반 MCP 멀티 호스트",
+      "id": "fe3bb0d913e27677"
+    },
+    {
+      "summary": "표기가 제각각인 주소들을 도로명주소 표준으로 일괄 정리해 주는 도구가 공개됐다. 주소 데이터 정비에 반복 투입되는 행정 실무 시간을 줄여주는 자동화 사례다.",
+      "org": "공직 현장(개인 개발)",
+      "link": "https://github.com/chrisryugj/gjdong",
+      "collected_at": "2026-08-07",
+      "source": "kakao",
+      "date": "2026-08-07",
+      "tags": [
+        "데이터정비",
+        "업무자동화",
+        "도구공개"
+      ],
+      "org_type": "기타",
+      "title": "표준주소실록 — 주소 표준화 정리 도구",
+      "id": "cba450dfb5c8fadf"
+    },
+    {
+      "summary": "선택한 Windows 폴더의 새 저장본을 다른 물리 디스크에 자동 보관해 파일 유실을 막는 로컬 트레이 앱이 공개됐다. 문서 사고가 잦은 공공 업무 환경을 위한 로컬 도구 시리즈의 일곱 번째 결과물이다.",
+      "org": "공직 커뮤니티",
+      "link": "https://github.com/obundh/gonggong-ax-local-7",
+      "collected_at": "2026-08-07",
+      "source": "kakao",
+      "date": "2026-08-07",
+      "tags": [
+        "백업",
+        "로컬도구"
+      ],
+      "org_type": "기타",
+      "title": "로컬 폴더 이중 보관 트레이 앱 — 공공 AX 로컬 시리즈 7",
+      "id": "94639db9e5fd6c2c"
     }
   ]
 }
