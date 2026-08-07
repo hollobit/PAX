@@ -31,8 +31,8 @@ const COUNTER_HEADERS = {
   Authorization: `Bearer ${COUNTER_KEY}`,
   'Content-Type': 'application/json',
 };
-// 이 횟수 이상 북마크되면 SNS 반응 없이도 인기 배지가 붙는다
-const POPULAR_BOOKMARK_MIN = 2;
+// 인기 항목 수: 북마크 횟수 상위 N개
+const POPULAR_TOP_N = 20;
 
 async function loadBookmarkCounts() {
   try {
@@ -93,9 +93,18 @@ function comparePopularFirst(a, b) {
   return (b.date + b.collected_at).localeCompare(a.date + a.collected_at);
 }
 
-// 인기 여부: 누적 북마크가 기준 이상이거나 SNS 반응 지표가 있는 사례
+// 인기 집합: 누적 북마크 순 상위 20개. 북마크된 사례를 횟수순으로 먼저 채우고,
+// 20개가 안 되는 동안은 SNS 반응 지표 보유 사례로 나머지를 채운다.
+function computePopularSet() {
+  const ranked = [...state.cases]
+    .filter((c) => bookmarkCount(c) > 0 || c.popularity)
+    .sort(comparePopularFirst)
+    .slice(0, POPULAR_TOP_N);
+  return new Set(ranked.map((c) => c.id));
+}
+
 function isPopularCase(c) {
-  return bookmarkCount(c) >= POPULAR_BOOKMARK_MIN || Boolean(c.popularity);
+  return state.popularSet.has(c.id);
 }
 
 // 사례 대상 URL의 호스트명 (유니코드 도메인 보존을 위해 문자열로 추출)
@@ -112,6 +121,7 @@ const state = {
   sort: { key: 'popularity', dir: 'desc' }, // 기본: 인기 우선, 이후 최신순
   bookmarks: loadBookmarks(), // Set<caseId> — localStorage에 보존
   bookmarkCounts: new Map(), // 전체 사용자 누적 북마크 수 (Supabase)
+  popularSet: new Set(), // 인기 항목 id (북마크순 상위 N)
   status: 'loading', // 'loading' | 'loaded' | 'error'
 };
 
@@ -397,6 +407,7 @@ function setTag(tag) {
 
 function render() {
   syncUrl();
+  state.popularSet = computePopularSet();
   // fetch가 실패한 뒤에는 필터 변경 이벤트가 와도 렌더링을 건너뛴다 — 그렇지
   // 않으면 빈 결과(cases=[])가 empty-state를 열어 error-state와 동시에 표시된다.
   if (state.status !== 'loaded') return;
