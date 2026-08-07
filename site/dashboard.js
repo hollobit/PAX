@@ -346,11 +346,50 @@ function renderFilter() {
   }
 }
 
+// AX 단계별 레벨(1~4)과 아이콘 색 — 성숙할수록 칸이 차오른다
+const AX_LEVEL = { 'AI-Ready': 1, 'AI-Enabled': 2, 'AI-First': 3, 'AI-Native': 4 };
+const AX_LEVEL_COLOR = {
+  'AI-Ready': '#c99a2e',   // 골드: 준비
+  'AI-Enabled': '#4f7fae', // 블루: 활용
+  'AI-First': '#2c6b3a',   // 그린: 재설계
+  'AI-Native': '#6a3fa0',  // 퍼플: 내재화
+};
+
+// Wi-Fi 신호 스타일의 4칸 상승 막대 아이콘 (SVG)
+function createAxLevelIcon(ax) {
+  const level = AX_LEVEL[ax] || 0;
+  const color = AX_LEVEL_COLOR[ax] || 'transparent';
+  const NS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(NS, 'svg');
+  svg.setAttribute('viewBox', '0 0 22 16');
+  svg.setAttribute('class', 'ax-level');
+  svg.setAttribute('role', 'img');
+  svg.setAttribute('aria-label', level > 0 ? `AX 레벨 ${level}/4` : 'AX 단계 외');
+  const heights = [5, 8, 11, 14];
+  heights.forEach((h, i) => {
+    const rect = document.createElementNS(NS, 'rect');
+    rect.setAttribute('x', String(i * 5.5));
+    rect.setAttribute('y', String(16 - h));
+    rect.setAttribute('width', '4');
+    rect.setAttribute('height', String(h));
+    rect.setAttribute('rx', '1.2');
+    rect.setAttribute('fill', i < level ? color : 'var(--rule)');
+    if (i >= level) rect.setAttribute('opacity', '0.55');
+    svg.appendChild(rect);
+  });
+  return svg;
+}
+
 function axBadge(ax) {
+  const wrap = document.createElement('span');
+  wrap.className = 'ax-badge-wrap';
+  wrap.appendChild(createAxLevelIcon(ax));
   const badge = document.createElement('span');
   badge.className = `ax-badge ${AX_BADGE_CLASS[ax] || 'ax-none'}`;
   badge.textContent = ax;
-  return badge;
+  wrap.appendChild(badge);
+  wrap.title = AX_LEVEL[ax] ? `성숙도 ${AX_LEVEL[ax]}단계 / 4단계` : 'AX 단계 판정 대상 외';
+  return wrap;
 }
 
 function renderTable() {

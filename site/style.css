@@ -1495,3 +1495,18 @@ main {
 .eval-detail dl { margin: 0; display: grid; grid-template-columns: 9rem 1fr; gap: 0.3rem 0.8rem; }
 .eval-detail dt { font-weight: 700; color: var(--ink-soft); }
 .eval-detail dd { margin: 0; line-height: 1.55; }
+
+/* ── AX 레벨 아이콘 (Wi-Fi 스타일) ───────────────────────── */
+
+.ax-badge-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+
+.ax-level {
+  width: 22px;
+  height: 16px;
+  flex: none;
+}
