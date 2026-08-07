@@ -1129,3 +1129,17 @@ main {
   font-size: 0.82rem;
   text-align: center;
 }
+
+/* ── 신규 배지 ───────────────────────────────────────────── */
+
+.new-badge,
+.case-table__title .new-badge {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent-2);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}

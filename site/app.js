@@ -30,10 +30,21 @@ const SORT_ACCESSORS = {
   date: (c) => c.date + c.collected_at,
 };
 
-// 기본 정렬: 인기(popularity 내림차순) 우선, 동률·미지정은 최신순
+// 신규: 최근 3일 이내에 수집된 사례
+const NEW_WINDOW_DAYS = 3;
+
+function isNewCase(c) {
+  const collected = new Date(`${c.collected_at}T00:00:00`);
+  const ageDays = (Date.now() - collected.getTime()) / 86400000;
+  return ageDays >= 0 && ageDays <= NEW_WINDOW_DAYS;
+}
+
+// 기본 정렬: 인기(popularity 내림차순) → 신규(최근 수집) → 최신 게시일순
 function comparePopularFirst(a, b) {
   const diff = (b.popularity || 0) - (a.popularity || 0);
   if (diff !== 0) return diff;
+  const newDiff = Number(isNewCase(b)) - Number(isNewCase(a));
+  if (newDiff !== 0) return newDiff;
   return (b.date + b.collected_at).localeCompare(a.date + a.collected_at);
 }
 
@@ -382,6 +393,14 @@ function createPopularBadge(c) {
   return badge;
 }
 
+function createNewBadge() {
+  const badge = document.createElement('span');
+  badge.className = 'new-badge';
+  badge.textContent = '✨ 신규';
+  badge.title = `최근 ${NEW_WINDOW_DAYS}일 내 추가된 사례`;
+  return badge;
+}
+
 function createBookmarkButton(c) {
   const bookmarked = state.bookmarks.has(c.id);
   const btn = document.createElement('button');
@@ -572,6 +591,9 @@ function createCaseRow(c) {
   if (c.popularity) {
     titleTd.appendChild(createPopularBadge(c));
     titleTd.append(' ');
+  } else if (isNewCase(c)) {
+    titleTd.appendChild(createNewBadge());
+    titleTd.append(' ');
   }
   const targetUrl = caseTargetUrl(c);
   if (targetUrl) {
@@ -692,6 +714,8 @@ function createCaseCard(c) {
   meta.appendChild(org);
   if (c.popularity) {
     meta.appendChild(createPopularBadge(c));
+  } else if (isNewCase(c)) {
+    meta.appendChild(createNewBadge());
   }
   meta.appendChild(createBookmarkButton(c));
 
