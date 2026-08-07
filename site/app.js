@@ -785,9 +785,13 @@ function createThumbElement(c, targetUrl) {
   anchor.title = c.summary;
 
   const img = document.createElement('img');
-  img.src = `thumbs/${encodeURIComponent(c.id)}.png`;
+  img.src = `thumbs/${encodeURIComponent(c.id)}.jpg`;
   img.alt = `사례 미리보기: ${c.title}`;
   img.loading = 'lazy';
+  img.decoding = 'async';
+  // 표시 크기를 미리 알려 레이아웃 시프트(CLS)를 방지 (CSS aspect-ratio 16/10과 일치)
+  img.width = 640;
+  img.height = 400;
   img.addEventListener('error', () => {
     // 썸네일이 없으면 설명문으로 폴백 (링크는 유지)
     const fallback = document.createElement('p');

@@ -30,17 +30,23 @@ PY
 made=0; skipped=0; failed=0
 while IFS=$'\t' read -r cid url; do
   [ -z "$cid" ] && continue
-  out="$ROOT/site/thumbs/${cid}.png"
+  out="$ROOT/site/thumbs/${cid}.jpg"
+  tmp="$ROOT/site/thumbs/${cid}.tmp.png"
   if [ -s "$out" ]; then
     skipped=$((skipped+1)); continue
   fi
   echo "→ $cid  $url"
   if "$B" goto "$url" >/dev/null 2>&1; then
     sleep 2
-    if "$B" screenshot --viewport "$out" >/dev/null 2>&1 && [ -s "$out" ]; then
-      made=$((made+1)); continue
+    if "$B" screenshot --viewport "$tmp" >/dev/null 2>&1 && [ -s "$tmp" ]; then
+      # 표시 크기에 맞춰 640px JPEG로 축소 — 페이지 로딩 속도를 위해 원본 PNG는 버린다
+      if sips --resampleWidth 640 -s format jpeg -s formatOptions 75 "$tmp" --out "$out" >/dev/null 2>&1 && [ -s "$out" ]; then
+        rm -f "$tmp"
+        made=$((made+1)); continue
+      fi
     fi
   fi
+  rm -f "$tmp"
   echo "  실패: $url" >&2
   failed=$((failed+1))
 done <<< "$TARGETS"

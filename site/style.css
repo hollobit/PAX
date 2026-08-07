@@ -451,6 +451,7 @@ main {
 .case-card__thumb img {
   display: block;
   width: 100%;
+  height: auto; /* width/height 속성보다 CSS 비율이 우선하도록 */
   aspect-ratio: 16 / 10;
   object-fit: cover;
   object-position: top;
