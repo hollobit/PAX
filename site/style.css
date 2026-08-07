@@ -1036,7 +1036,8 @@ main {
 
 /* ── 인기 배지 ───────────────────────────────────────────── */
 
-.popular-badge {
+.popular-badge,
+.case-table__title .popular-badge {
   display: inline-block;
   padding: 0.1rem 0.5rem;
   font-size: 0.72rem;
