@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>변경 기록 — 공공AX 사례 아카이브</title>
+  <meta name="description" content="공공AX 사례 아카이브의 업데이트 기록">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">PUBLIC SECTOR AX RECORD · 변경 기록</p>
+    <h1>변경 기록</h1>
+    <p class="tagline">아카이브에 추가된 사례와 기능 업데이트를 날짜별로 기록합니다</p>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="./">사례 아카이브</a>
+      <a href="https://hollobit.github.io/GAPI2/ecosystem.html" target="_blank" rel="noopener">MCP·AI 도구 ↗</a>
+      <a href="changelog.html" aria-current="page">변경 기록</a>
+    </nav>
+  </header>
+  <main>
+    <section id="changelog" class="changelog" aria-label="변경 기록"></section>
+    <p id="error-state" class="empty-state" hidden>변경 기록을 불러오지 못했습니다</p>
+  </main>
+  <footer class="site-footer">
+    <p class="site-footer__curator">Curated by Jonghong Jeon, <a href="mailto:hollobit@etri.re.kr">hollobit@etri.re.kr</a></p>
+  </footer>
+  <script>
+    'use strict';
+    (async function () {
+      try {
+        const res = await fetch('./data/changelog.json');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const doc = await res.json();
+        const root = document.getElementById('changelog');
+        for (const entry of doc.entries) {
+          const article = document.createElement('article');
+          article.className = 'changelog__entry';
+
+          const heading = document.createElement('h2');
+          heading.className = 'changelog__date';
+          heading.textContent = entry.date;
+          article.appendChild(heading);
+
+          const list = document.createElement('ul');
+          list.className = 'changelog__items';
+          for (const item of entry.items) {
+            const li = document.createElement('li');
+            li.textContent = item;
+            list.appendChild(li);
+          }
+          article.appendChild(list);
+          root.appendChild(article);
+        }
+      } catch (err) {
+        console.error('changelog.json 로드 실패:', err);
+        document.getElementById('error-state').hidden = false;
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -76,10 +76,13 @@ PYTHONPATH=scripts python3 -m pax.publish
   수정한 새 incoming 파일로 1회 재시도한다.
 - 썸네일 생성: `bash scripts/make_thumbs.sh` (case_url/kakao link 대상, 기존 것은
   건너뜀). 실패한 URL은 무시해도 된다 — 사이트가 설명문으로 폴백한다.
+- 변경 기록: 신규 사례가 1건 이상 병합됐으면 site/data/changelog.json의 entries
+  맨 앞에 오늘 날짜 항목을 추가한다(같은 날짜가 이미 있으면 그 items에 덧붙임).
+  형식: "OO 사례 N건 추가 — 대표 사례 2~3개 제목 (총 M건)". 닉네임 금지.
 
 ## 6. 커밋·푸시
 ```bash
-git add data/cases.json site/data/cases.json site/thumbs
+git add data/cases.json site/data/cases.json site/thumbs site/data/changelog.json
 git commit -m "chore: 사례 데이터 갱신 (TODAY)"
 git push
 ```
