@@ -789,7 +789,7 @@ main {
 /* ── 수집 출처 ───────────────────────────────────────────── */
 
 .site-footer__sources {
-  max-width: 640px;
+  max-width: 70vw;
   margin: 0 auto 1.4rem;
   padding: 1rem 1.2rem;
   text-align: left;
@@ -1144,4 +1144,10 @@ main {
   background: var(--accent-2);
   border-radius: var(--radius-sm);
   white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .site-footer__sources {
+    max-width: 100%;
+  }
 }
