@@ -174,7 +174,8 @@ const els = {
 
 async function load() {
   try {
-    const res = await fetch('./data/cases.json');
+    // no-cache: 항상 서버와 재검증(ETag) — 새 사례·태그가 배포 즉시 반영되도록
+    const res = await fetch('./data/cases.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const doc = await res.json();
     state.cases = [...doc.cases].sort(comparePopularFirst);

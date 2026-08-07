@@ -34,7 +34,7 @@
     'use strict';
     (async function () {
       try {
-        const res = await fetch('./data/changelog.json');
+        const res = await fetch('./data/changelog.json', { cache: 'no-cache' });
         if (!res.ok) throw new Error('HTTP ' + res.status);
         const doc = await res.json();
         const root = document.getElementById('changelog');
