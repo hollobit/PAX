@@ -18,11 +18,33 @@ const ORG_TYPE_BADGE_CLASS = {
   기타: 'badge--org-type-기타',
 };
 
+const VIEWS = ['cards', 'list'];
+
+// 목록형 정렬 가능 컬럼: key → (사례 → 정렬용 문자열)
+const SORT_ACCESSORS = {
+  title: (c) => c.title,
+  org: (c) => c.org,
+  org_type: (c) => c.org_type,
+  source: (c) => (c.source === 'threads' ? 'Threads' : '오픈채팅'),
+  date: (c) => c.date + c.collected_at,
+};
+
 const state = {
   cases: [],
   filter: { q: '', orgType: '전체', source: '전체', tag: null },
+  view: loadSavedView(), // 'cards' | 'list'
+  sort: { key: 'date', dir: 'desc' },
   status: 'loading', // 'loading' | 'loaded' | 'error'
 };
+
+function loadSavedView() {
+  try {
+    const saved = localStorage.getItem('pax-view');
+    return VIEWS.includes(saved) ? saved : 'cards';
+  } catch {
+    return 'cards';
+  }
+}
 
 const els = {
   stats: document.getElementById('stats'),
@@ -31,6 +53,8 @@ const els = {
   sourceFilter: document.getElementById('source-filter'),
   activeTag: document.getElementById('active-tag'),
   caseList: document.getElementById('case-list'),
+  viewCards: document.getElementById('view-cards'),
+  viewList: document.getElementById('view-list'),
   emptyState: document.getElementById('empty-state'),
   errorState: document.getElementById('error-state'),
 };
@@ -75,6 +99,42 @@ function buildFilterOptions() {
     state.filter = { ...state.filter, q: els.search.value };
     render();
   });
+
+  els.viewCards.addEventListener('click', () => setView('cards'));
+  els.viewList.addEventListener('click', () => setView('list'));
+  syncViewButtons();
+}
+
+function setView(view) {
+  state.view = view;
+  try {
+    localStorage.setItem('pax-view', view);
+  } catch {
+    // 저장 실패(사생활 보호 모드 등)는 무시 — 세션 내 전환은 동작한다
+  }
+  syncViewButtons();
+  render();
+}
+
+function syncViewButtons() {
+  els.viewCards.setAttribute('aria-pressed', String(state.view === 'cards'));
+  els.viewList.setAttribute('aria-pressed', String(state.view === 'list'));
+}
+
+function setSort(key) {
+  const dir = state.sort.key === key && state.sort.dir === 'asc' ? 'desc' : 'asc';
+  // 날짜는 첫 클릭에 최신순(내림차순)이 자연스럽다
+  const firstDir = key === 'date' ? 'desc' : 'asc';
+  state.sort = state.sort.key === key
+    ? { key, dir }
+    : { key, dir: firstDir };
+  render();
+}
+
+function sortForList(results) {
+  const accessor = SORT_ACCESSORS[state.sort.key] || SORT_ACCESSORS.date;
+  const sign = state.sort.dir === 'asc' ? 1 : -1;
+  return [...results].sort((a, b) => sign * accessor(a).localeCompare(accessor(b), 'ko'));
 }
 
 function fillSelect(select, values) {
@@ -113,12 +173,129 @@ function render() {
 
   els.caseList.replaceChildren();
   els.emptyState.hidden = results.length !== 0;
+  els.caseList.classList.toggle('case-list--table', state.view === 'list');
+
+  if (state.view === 'list') {
+    if (results.length > 0) {
+      els.caseList.appendChild(createCaseTable(sortForList(results)));
+    }
+    return;
+  }
 
   results.forEach((c, i) => {
     const card = createCaseCard(c);
     card.style.setProperty('--i', String(i));
     els.caseList.appendChild(card);
   });
+}
+
+const LIST_COLUMNS = [
+  { key: 'title', label: '제목', sortable: true },
+  { key: 'org', label: '기관', sortable: true },
+  { key: 'org_type', label: '유형', sortable: true },
+  { key: 'tags', label: '태그', sortable: false },
+  { key: 'source', label: '출처', sortable: true },
+  { key: 'date', label: '날짜', sortable: true },
+];
+
+function createCaseTable(results) {
+  const wrap = document.createElement('div');
+  wrap.className = 'table-wrap';
+
+  const table = document.createElement('table');
+  table.className = 'case-table';
+
+  const thead = document.createElement('thead');
+  const headRow = document.createElement('tr');
+  for (const col of LIST_COLUMNS) {
+    const th = document.createElement('th');
+    th.scope = 'col';
+    if (!col.sortable) {
+      th.textContent = col.label;
+    } else {
+      const isActive = state.sort.key === col.key;
+      th.setAttribute('aria-sort',
+        isActive ? (state.sort.dir === 'asc' ? 'ascending' : 'descending') : 'none');
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'sort-btn';
+      btn.textContent = col.label + (isActive ? (state.sort.dir === 'asc' ? ' ▲' : ' ▼') : '');
+      btn.addEventListener('click', () => setSort(col.key));
+      th.appendChild(btn);
+    }
+    headRow.appendChild(th);
+  }
+  thead.appendChild(headRow);
+  table.appendChild(thead);
+
+  const tbody = document.createElement('tbody');
+  for (const c of results) {
+    tbody.appendChild(createCaseRow(c));
+  }
+  table.appendChild(tbody);
+
+  wrap.appendChild(table);
+  return wrap;
+}
+
+function createCaseRow(c) {
+  const tr = document.createElement('tr');
+
+  const titleTd = document.createElement('td');
+  titleTd.className = 'case-table__title';
+  const targetUrl = caseTargetUrl(c);
+  if (targetUrl) {
+    const a = document.createElement('a');
+    a.href = targetUrl;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.title = c.summary;
+    a.textContent = c.title;
+    titleTd.appendChild(a);
+  } else {
+    const span = document.createElement('span');
+    span.title = c.summary;
+    span.textContent = c.title;
+    titleTd.appendChild(span);
+  }
+
+  const orgTd = document.createElement('td');
+  orgTd.textContent = c.org;
+
+  const typeTd = document.createElement('td');
+  const badge = document.createElement('span');
+  badge.className = `badge ${ORG_TYPE_BADGE_CLASS[c.org_type] || 'badge--org-type-기타'}`;
+  badge.textContent = c.org_type;
+  typeTd.appendChild(badge);
+
+  const tagsTd = document.createElement('td');
+  tagsTd.className = 'case-table__tags';
+  for (const tag of c.tags) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'tag-chip tag-chip--small';
+    btn.textContent = `#${tag}`;
+    btn.setAttribute('aria-pressed', String(state.filter.tag === tag));
+    btn.addEventListener('click', () => setTag(tag));
+    tagsTd.appendChild(btn);
+  }
+
+  const sourceTd = document.createElement('td');
+  sourceTd.className = 'case-table__source';
+  const sourceLabel = document.createElement('span');
+  sourceLabel.textContent = c.source === 'threads' ? 'Threads' : '오픈채팅';
+  sourceTd.appendChild(sourceLabel);
+  if (c.link) {
+    sourceTd.append(' ');
+    sourceTd.appendChild(createSourceLink(c.link, '↗'));
+  }
+
+  const dateTd = document.createElement('td');
+  dateTd.className = 'case-table__date';
+  dateTd.textContent = c.date;
+
+  tr.append(titleTd, orgTd, typeTd, tagsTd, sourceTd, dateTd);
+  return tr;
 }
 
 function renderActiveTag() {

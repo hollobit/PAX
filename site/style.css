@@ -613,3 +613,109 @@ main {
     flex-wrap: wrap;
   }
 }
+
+/* ── 보기 전환 & 목록형 테이블 ─────────────────────────── */
+
+.view-toggle {
+  display: inline-flex;
+  border: 1px solid var(--rule-strong);
+}
+
+.view-toggle button {
+  padding: 0.45rem 1rem;
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.view-toggle button + button {
+  border-left: 1px solid var(--rule-strong);
+}
+
+.view-toggle button[aria-pressed="true"] {
+  background: var(--accent-2);
+  color: #fff;
+}
+
+.case-list--table {
+  display: block;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--rule);
+}
+
+.case-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.case-table th,
+.case-table td {
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+.case-table thead th {
+  border-bottom: 2px solid var(--rule-strong);
+  white-space: nowrap;
+}
+
+.sort-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.sort-btn:hover {
+  color: var(--accent-2);
+}
+
+.case-table__title a,
+.case-table__title span {
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.case-table__title a:hover {
+  color: var(--accent-2);
+  text-decoration: underline;
+}
+
+.case-table__tags {
+  max-width: 16rem;
+}
+
+.tag-chip--small {
+  font-size: 0.72rem;
+  padding: 0.1rem 0.4rem;
+  margin: 0 0.2rem 0.2rem 0;
+}
+
+.case-table__source,
+.case-table__date {
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.site-footer__curator {
+  margin-top: 0.4rem;
+}
+
+.site-footer__curator a {
+  color: inherit;
+}
