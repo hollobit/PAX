@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T22:29:54+09:00",
+  "updated_at": "2026-08-08T09:48:30+09:00",
   "cases": [
     {
       "date": "2026-08-03",
@@ -1115,6 +1115,41 @@
       "date": "2026-08-07",
       "collected_at": "2026-08-07",
       "id": "0c994fa292d1d15d"
+    },
+    {
+      "tags": [
+        "법령",
+        "내부망",
+        "바이브코딩",
+        "문서자동화"
+      ],
+      "summary": "공직 실무자가 내부망에서 쓸 수 있는 법령 리더 프로그램을 개발해 공유했다. 보고용 슬라이드로 정리하던 법령 내용을 카드뉴스 형태로 자동 변환해 보여주며, 부처별로 필요한 법령 데이터만 받아 재활용할 수 있는 구조를 제안했다.",
+      "title": "내부망용 법령 리더 프로그램 개발",
+      "collected_at": "2026-08-08",
+      "org_type": "기타",
+      "date": "2026-08-08",
+      "org": "공직 현장(개인 개발)",
+      "source": "threads",
+      "link": "https://www.threads.com/@milkbuttercheese/post/Dbvsk_8king",
+      "id": "e160d086c0ce2b1b"
+    },
+    {
+      "tags": [
+        "MCP",
+        "로컬모델",
+        "망분리",
+        "통계"
+      ],
+      "case_url": "https://spring-ai-community.github.io/spring-ai-playground/",
+      "summary": "모델까지 노트북에서 구동해 인터넷 없이 동작하는 오픈소스 로컬 AI 에이전트가 공유됐다. 도구별 위험도 평가와 실행 승인 절차, 감사 대시보드를 갖췄고, 국가통계포털(KOSIS) 공식 MCP에 연결해 통계 조회부터 차트 생성까지 시연했다. 맥·윈도우·리눅스용 무료 배포판을 제공한다.",
+      "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연",
+      "collected_at": "2026-08-08",
+      "org_type": "기타",
+      "date": "2026-08-07",
+      "org": "오픈소스 커뮤니티",
+      "source": "kakao",
+      "link": "https://github.com/spring-ai-community/spring-ai-playground",
+      "id": "edf9a8632ff74a99"
     }
   ]
 }
