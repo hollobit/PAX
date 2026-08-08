@@ -103,7 +103,13 @@ function renderKpi() {
     kpiTile(String(total), '평가 사례', '아카이브 전체'),
     kpiTile(`${ax.get('AI-Ready') || 0}건`, 'AI-Ready', pct(ax.get('AI-Ready'), total)),
     kpiTile(`${ax.get('AI-Enabled') || 0}건`, 'AI-Enabled', pct(ax.get('AI-Enabled'), total)),
-    kpiTile('0건', 'AI-First · Native', '운영 증거 입증 사례 아직 없음'),
+    kpiTile(
+      `${(ax.get('AI-First') || 0) + (ax.get('AI-Native') || 0)}건`,
+      'AI-First · Native',
+      (ax.get('AI-First') || 0) + (ax.get('AI-Native') || 0) === 0
+        ? '운영 증거 입증 사례 아직 없음'
+        : '운영 증거 입증 사례',
+    ),
     kpiTile(`${mcp}건`, 'MCP 사례', 'M 파급력 등급 부여'),
     kpiTile(`${c2}건`, 'First 후보군', '연속 처리(C2) 도달'),
   );
@@ -162,15 +168,32 @@ function renderLadder() {
 function renderDiagnosis() {
   const el = document.getElementById('diagnosis');
   el.replaceChildren();
+  const total = state.cases.length;
+  const ax = count((c) => c.ax);
+  const ready = ax.get('AI-Ready') || 0;
+  const enabled = ax.get('AI-Enabled') || 0;
+  const upper = (ax.get('AI-First') || 0) + (ax.get('AI-Native') || 0);
+  const s12 = state.cases.filter((c) => c.s === 'S1' || c.s === 'S2').length;
+  const s4up = state.cases.filter((c) => c.s === 'S4' || c.s === 'S5').length;
+  const c0 = state.cases.filter((c) => c.c === 'C0').length;
+  const c3up = state.cases.filter((c) => /^C[3-5]$/.test(c.c)).length;
+
   const h = document.createElement('h3');
   h.textContent = '종합 진단';
   const p1 = document.createElement('p');
   p1.textContent = '현재 아카이브는 준비 자산과 단위업무 보조 사례를 발굴·확산하는 초기 단계입니다. '
-    + '10건 중 6건이 AI를 쓸 준비(Ready)를 만드는 사례이고, 3건이 실제 업무 결과(Enabled)까지 도달했습니다. '
-    + '아직 역할과 흐름을 재설계해 운영 중임을 입증한 First, AI가 핵심 가치를 만드는 Native 사례는 없습니다.';
+    + `전체 ${total}건 중 ${ready}건(${pct(ready, total)})이 AI를 쓸 준비(Ready)를 만드는 사례이고, `
+    + `${enabled}건(${pct(enabled, total)})이 실제 업무 결과(Enabled)까지 도달했습니다. `
+    + (upper === 0
+      ? '아직 역할과 흐름을 재설계해 운영 중임을 입증한 First, AI가 핵심 가치를 만드는 Native 사례는 없습니다.'
+      : `역할과 흐름의 재설계·내재화(First·Native)까지 입증한 사례는 ${upper}건입니다.`);
   const p2 = document.createElement('p');
-  p2.textContent = '업무 범위는 단일 도구(S1)와 도구 묶음(S2)이 87%로 대부분이며 엔드투엔드 서비스(S4)는 아직 없습니다. '
-    + '완결성도 기능 제공(C0)이 73%로, 접수부터 종료 확인·예외처리·평가 환류까지 닫힌 폐쇄루프(C3 이상)는 확인되지 않았습니다. '
+  p2.textContent = `업무 범위는 단일 도구(S1)와 도구 묶음(S2)이 ${pct(s12, total)}로 대부분이며 `
+    + (s4up === 0 ? '엔드투엔드 서비스(S4)는 아직 없습니다. ' : `엔드투엔드 이상(S4+)은 ${s4up}건입니다. `)
+    + `완결성도 기능 제공(C0)이 ${pct(c0, total)}로, `
+    + (c3up === 0
+      ? '접수부터 종료 확인·예외처리·평가 환류까지 닫힌 폐쇄루프(C3 이상)는 확인되지 않았습니다. '
+      : `닫힌 폐쇄루프(C3 이상)에 도달한 사례는 ${c3up}건입니다. `)
     + '에이전트·MCP라는 이름은 많아졌지만, 이름표가 업무 폐쇄루프를 대신해 주지는 않습니다.';
   el.append(h, p1, p2);
 }

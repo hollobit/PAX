@@ -9,6 +9,8 @@ from pathlib import Path
 import openpyxl
 
 OUT = Path("site/data/evaluations.json")
+# 엑셀 이후 추가된 사례의 평가 — 엑셀 재발행 없이 신규 사례를 반영하는 보충 파일
+ADDITIONS = Path("docs/native/eval_additions.json")
 
 FIELDS = [
     "no", "id", "org", "title", "ax_prev", "ax", "s", "s_name", "c", "c_name",
@@ -83,6 +85,26 @@ def main() -> int:
         case["tool_type"] = derive_tool_type(case)
         case["audience"] = derive_audience(case)
         cases.append(case)
+
+    if ADDITIONS.exists():
+        try:
+            additions = json.loads(ADDITIONS.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            print(f"오류: 보충 평가 파일 파싱 실패 — {exc}", file=sys.stderr)
+            return 1
+        existing_ids = {c["id"] for c in cases}
+        for raw in additions:
+            missing = [f for f in FIELDS if f not in raw]
+            if missing:
+                print(f"오류: 보충 평가 {raw.get('id', '?')} 필드 누락 — {missing}", file=sys.stderr)
+                return 1
+            if raw["id"] in existing_ids:
+                print(f"경고: 보충 평가 {raw['id']}는 엑셀에 이미 존재 — 건너뜀", file=sys.stderr)
+                continue
+            case = {f: raw[f] for f in FIELDS}
+            case["tool_type"] = derive_tool_type(case)
+            case["audience"] = derive_audience(case)
+            cases.append(case)
 
     doc = {"evaluated_at": "2026-08-08", "total": len(cases), "cases": cases}
     OUT.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
