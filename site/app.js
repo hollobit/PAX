@@ -556,7 +556,7 @@ function exportPdf(results) {
   area.id = 'print-area';
 
   const h1 = document.createElement('h1');
-  h1.textContent = '공공AX 사례 아카이브';
+  h1.textContent = '모두의 공공AX 사례 아카이브';
   const meta = document.createElement('p');
   meta.textContent = `${new Date().toISOString().slice(0, 10)} 기준 · ${results.length}건 · hollobit.github.io/PAX`;
   area.append(h1, meta);
