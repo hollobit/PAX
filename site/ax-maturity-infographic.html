@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>네 개의 관문 — 공공 AI 서비스 성숙도 한 장 요약</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css');
+
+:root{
+  --paper:#E7E9E1;
+  --surface:#F5F6F1;
+  --surface-2:#EEF0E9;
+  --ink:#151A17;
+  --ink-2:#454E48;
+  --ink-3:#7B847C;
+  --rule:#C7CCC1;
+  --rule-soft:#D9DDD3;
+
+  --s-ready:#7E8C93;
+  --s-enabled:#2E6F63;
+  --s-first:#A9762A;
+  --s-native:#6D3462;
+  --warn:#A5382A;
+
+  --sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+
+  --pad:clamp(18px,3.2vw,44px);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:14px;
+  line-height:1.55;
+  font-feature-settings:"tnum";
+  background-image:
+    linear-gradient(var(--rule-soft) 1px,transparent 1px),
+    linear-gradient(90deg,var(--rule-soft) 1px,transparent 1px);
+  background-size:44px 44px;
+  background-position:-1px -1px;
+}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad) 80px}
+
+/* ---------- shared bits ---------- */
+.eyebrow{
+  font-family:var(--mono);
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink-3);
+}
+.code{font-family:var(--mono);font-size:11.5px;letter-spacing:.02em}
+.sect{margin-top:clamp(38px,5vw,64px)}
+.sect-head{
+  display:flex;align-items:baseline;gap:14px;
+  border-bottom:2px solid var(--ink);
+  padding-bottom:8px;margin-bottom:18px;flex-wrap:wrap;
+}
+.sect-num{font-family:var(--mono);font-size:12px;color:var(--ink-3);letter-spacing:.1em}
+.sect-title{font-size:clamp(19px,2.4vw,25px);font-weight:800;letter-spacing:-.02em}
+.sect-note{font-size:12.5px;color:var(--ink-3);margin-left:auto}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:4px}
+
+/* ---------- hero ---------- */
+header{padding-top:clamp(34px,5vw,60px)}
+.hero-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+h1{
+  font-size:clamp(40px,8.4vw,86px);
+  font-weight:850;letter-spacing:-.045em;line-height:.94;
+  margin:14px 0 0;
+}
+h1 .dim{color:var(--ink-3)}
+.thesis{
+  margin-top:20px;
+  display:grid;grid-template-columns:1fr auto 1fr;gap:clamp(10px,2vw,26px);
+  align-items:center;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:16px 0;
+}
+.thesis .from,.thesis .to{font-size:clamp(15px,2.2vw,22px);font-weight:700;letter-spacing:-.02em}
+.thesis .from{color:var(--ink-3);text-align:right}
+.thesis .to{color:var(--ink)}
+.thesis .arrow{font-family:var(--mono);color:var(--s-native);font-size:18px}
+.lede{margin-top:16px;max-width:70ch;font-size:15px;color:var(--ink-2)}
+
+/* ---------- rules banner ---------- */
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.rule-item{
+  background:var(--ink);color:var(--surface);border-radius:4px;
+  padding:14px 16px;
+}
+.rule-item b{display:block;font-size:14.5px;letter-spacing:-.01em;margin-bottom:4px}
+.rule-item span{font-size:12.5px;color:#B9C1B8;line-height:1.5}
+
+/* ---------- ladder ---------- */
+.ladder{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stage{
+  position:relative;background:var(--surface);border:1px solid var(--rule);
+  border-top:4px solid var(--sc);border-radius:4px;
+  padding:16px 15px 15px;display:flex;flex-direction:column;
+}
+.stage-idx{font-family:var(--mono);font-size:11px;color:var(--ink-3);letter-spacing:.14em}
+.stage-en{font-size:20px;font-weight:850;letter-spacing:-.03em;color:var(--sc);margin-top:2px;line-height:1.1}
+.stage-ko{font-size:12.5px;font-weight:700;color:var(--ink-2);letter-spacing:.02em}
+.stage-def{margin-top:10px;font-size:13px;line-height:1.5;color:var(--ink);min-height:3.9em}
+.gate-label{
+  margin-top:14px;display:flex;align-items:center;gap:7px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--ink-3);
+}
+.gate-chips{display:flex;gap:3px}
+.gate-chips i{width:9px;height:9px;background:var(--sc);border-radius:1px;display:block}
+.gates{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:5px}
+.gates li{
+  font-size:12.5px;line-height:1.4;padding-left:15px;position:relative;color:var(--ink);
+}
+.gates li::before{
+  content:"";position:absolute;left:0;top:.48em;
+  width:7px;height:7px;border:1.5px solid var(--sc);border-radius:1px;
+}
+.stage-block{margin-top:12px;border-top:1px dashed var(--rule);padding-top:9px}
+.stage-block .k{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ink-3);display:block;margin-bottom:3px}
+.stage-block .v{font-size:12.3px;line-height:1.45;color:var(--ink-2)}
+.stage-block .v.warn{color:var(--warn);font-weight:600}
+.coords{margin-top:auto;padding-top:12px;display:flex;gap:5px;flex-wrap:wrap}
+.coords span{
+  font-family:var(--mono);font-size:10.5px;padding:3px 6px;border-radius:2px;
+  background:var(--sc);color:#fff;letter-spacing:.03em;
+}
+.coords span.ghost{background:transparent;color:var(--ink-3);border:1px solid var(--rule)}
+
+/* completeness ruler */
+.ruler{margin-top:14px;background:var(--surface);border:1px solid var(--rule);border-radius:4px;padding:14px 16px 12px}
+.ruler-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;gap:10px;flex-wrap:wrap}
+.ruler-head b{font-size:13.5px;letter-spacing:-.01em}
+.ruler-head span{font-size:12px;color:var(--ink-3)}
+.track{position:relative;height:34px}
+.ticks{display:grid;grid-template-columns:repeat(6,1fr);position:absolute;inset:0}
+.ticks div{border-left:1px solid var(--rule);font-family:var(--mono);font-size:10px;color:var(--ink-3);padding-left:5px}
+.ticks div:last-child{border-right:1px solid var(--rule)}
+.bars{position:absolute;left:0;right:0;bottom:2px;height:16px}
+.bar{position:absolute;height:8px;border-radius:2px;top:0}
+.bar span{
+  position:absolute;top:10px;left:0;font-family:var(--mono);font-size:9.5px;
+  color:var(--ink-3);white-space:nowrap;
+}
+.ruler-legend{margin-top:26px;font-size:12px;color:var(--ink-2)}
+.ruler-legend b{color:var(--s-native)}
+
+/* ---------- axes ---------- */
+.axes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.axis{background:var(--surface);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+.axis-h{padding:12px 14px;background:var(--surface-2);border-bottom:1px solid var(--rule)}
+.axis-h b{font-size:14.5px;letter-spacing:-.01em}
+.axis-h p{font-size:12px;color:var(--ink-3);margin-top:2px}
+.axis-row{display:grid;grid-template-columns:34px 1fr;gap:10px;padding:8px 14px;border-bottom:1px solid var(--rule-soft);align-items:start}
+.axis-row:last-child{border-bottom:0}
+.axis-row .lv{font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--ink);padding-top:1px}
+.axis-row .tx b{display:block;font-size:12.8px;font-weight:700;letter-spacing:-.01em}
+.axis-row .tx span{display:block;font-size:12px;color:var(--ink-2);line-height:1.4}
+.axis-row.top{background:#EDF1EA}
+
+/* ---------- matrix ---------- */
+.tablewrap{overflow-x:auto;border:1px solid var(--rule);border-radius:4px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:620px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--rule-soft);font-size:12.7px;vertical-align:top}
+thead th{
+  background:var(--ink);color:var(--surface);font-size:11.5px;letter-spacing:.04em;
+  font-weight:700;position:sticky;top:0;
+}
+thead th.c{text-align:center;width:88px}
+tbody td.c{text-align:center;font-family:var(--mono);font-size:13px}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover{background:var(--surface-2)}
+td.grp{font-weight:700}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%}
+.dot.full{background:var(--ink)}
+.dot.opt{background:transparent;border:1.5px solid var(--ink-3)}
+.dash{color:var(--ink-3)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--ink-2);align-items:center}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+
+/* ---------- flow ---------- */
+.flow{display:flex;flex-direction:column;gap:0}
+.q{
+  display:grid;grid-template-columns:34px 1fr auto;gap:14px;align-items:center;
+  background:var(--surface);border:1px solid var(--rule);border-radius:4px;
+  padding:12px 15px;
+}
+.q .qn{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+.q .qt{font-size:14px;font-weight:650;letter-spacing:-.01em}
+.q .no{
+  font-size:12px;font-weight:700;padding:4px 9px;border-radius:3px;
+  background:var(--surface-2);border:1px solid var(--rule);white-space:nowrap;
+}
+.q .no em{font-style:normal;color:var(--ink-3);font-weight:500;margin-right:6px}
+.yes{
+  margin:0 0 0 17px;border-left:2px solid var(--ink);height:16px;
+  position:relative;
+}
+.yes::after{
+  content:"예";position:absolute;left:8px;top:-1px;font-size:10.5px;color:var(--ink-3);
+  font-family:var(--mono);letter-spacing:.1em;
+}
+.q.final{background:var(--s-native);border-color:var(--s-native);color:#fff}
+.q.final .qn,.q.final .qt{color:#fff}
+.q.final .qt{font-weight:800;font-size:15px}
+
+/* ---------- walkthrough ---------- */
+.walk{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.wcol{background:var(--surface);border:1px solid var(--rule);border-radius:4px;padding:14px;border-left:4px solid var(--sc)}
+.wcol h4{font-size:13px;font-weight:800;color:var(--sc);letter-spacing:-.01em}
+.wcol ul{list-style:none;margin-top:9px;display:flex;flex-direction:column;gap:7px}
+.wcol li{font-size:12.4px;line-height:1.45;padding-left:12px;position:relative;color:var(--ink-2)}
+.wcol li::before{content:"";position:absolute;left:0;top:.6em;width:5px;height:1px;background:var(--sc)}
+.wcol .outcome{margin-top:11px;padding-top:9px;border-top:1px dashed var(--rule);font-size:12px;font-weight:650;color:var(--ink)}
+
+/* ---------- aims ---------- */
+.aims{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.aim{background:var(--surface);border:1px solid var(--rule);border-radius:4px;padding:15px 16px}
+.aim .an{font-family:var(--mono);font-size:11px;color:var(--s-native);letter-spacing:.12em}
+.aim h4{font-size:15px;font-weight:800;letter-spacing:-.02em;margin-top:5px}
+.aim p{font-size:12.6px;color:var(--ink-2);margin-top:6px;line-height:1.5}
+.aim .test{
+  margin-top:9px;padding-top:8px;border-top:1px dashed var(--rule);
+  font-size:12px;color:var(--ink);
+}
+.aim .test em{font-style:normal;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ink-3);display:block;margin-bottom:2px}
+
+.anti{margin-top:12px;background:#F7EDEA;border:1px solid #E0C4BD;border-radius:4px;padding:14px 16px}
+.anti b{font-size:13.5px;color:var(--warn);letter-spacing:-.01em}
+.anti ul{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:6px 20px;margin-top:8px}
+.anti li{font-size:12.5px;color:var(--ink-2);padding-left:16px;position:relative}
+.anti li::before{content:"×";position:absolute;left:0;color:var(--warn);font-weight:700}
+
+/* ---------- resilience ---------- */
+.resil{background:var(--surface);border:1px solid var(--rule);border-radius:4px;padding:16px}
+.resil-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.rstep{border:1px solid var(--rule);border-radius:3px;padding:11px 12px;background:var(--surface-2)}
+.rstep .rn{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);letter-spacing:.1em}
+.rstep b{display:block;font-size:13px;margin-top:3px;letter-spacing:-.01em}
+.rstep span{display:block;font-size:12px;color:var(--ink-2);margin-top:3px;line-height:1.4}
+.rstep.fail{background:#F7EDEA;border-color:#E0C4BD}
+.rstep.fail b{color:var(--warn)}
+.resil-line{margin-top:12px;padding:10px 12px;background:var(--s-native);color:#fff;border-radius:3px;font-size:12.8px;font-weight:650}
+
+/* ---------- footer ---------- */
+footer{margin-top:56px;border-top:2px solid var(--ink);padding-top:16px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+footer p{font-size:12px;color:var(--ink-3);max-width:62ch;line-height:1.55}
+footer a{color:var(--ink-2)}
+
+/* ---------- motion ---------- */
+.stage,.wcol,.aim{animation:rise .5s cubic-bezier(.2,.7,.3,1) both}
+.stage:nth-child(1),.wcol:nth-child(1),.aim:nth-child(1){animation-delay:.02s}
+.stage:nth-child(2),.wcol:nth-child(2),.aim:nth-child(2){animation-delay:.08s}
+.stage:nth-child(3),.wcol:nth-child(3),.aim:nth-child(3){animation-delay:.14s}
+.stage:nth-child(4),.wcol:nth-child(4),.aim:nth-child(4){animation-delay:.2s}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .ladder,.walk{grid-template-columns:repeat(2,1fr)}
+  .axes,.aims,.rules{grid-template-columns:1fr}
+  .resil-steps{grid-template-columns:repeat(2,1fr)}
+  .stage-def{min-height:0}
+}
+@media (max-width:600px){
+  .ladder,.walk,.anti ul{grid-template-columns:1fr}
+  .thesis{grid-template-columns:1fr;text-align:left;gap:6px}
+  .thesis .from{text-align:left}
+  .thesis .arrow{display:none}
+  .q{grid-template-columns:26px 1fr;row-gap:8px}
+  .q .no{grid-column:2}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="hero-top">
+    <div class="eyebrow">공공부문 AI 서비스 성숙도 · 평가 기준일 2026-08-08</div>
+    <div class="eyebrow">사례 70건 평가 모형 요약</div>
+  </div>
+  <h1>네 개의 관문<span class="dim">.</span></h1>
+  <div class="thesis">
+    <div class="from">"AI 기능이 있다"</div>
+    <div class="arrow">──▶</div>
+    <div class="to">"업무가 실제로 완결된다"</div>
+  </div>
+  <p class="lede">등급은 AI를 얼마나 많이 쓰는지로 정해지지 않습니다. <b>일이 어디까지 스스로 끝나는가</b>로 정해집니다. 위 단계로 갈수록 요구되는 것은 더 좋은 모델보다 더 촘촘한 운영 설계입니다.</p>
+
+  <div class="rules">
+    <div class="rule-item">
+      <b>관문은 합산되지 않습니다</b>
+      <span>총점이 높아도 필수 항목 하나가 비면 그 단계는 성립하지 않습니다.</span>
+    </div>
+    <div class="rule-item">
+      <b>근거가 없으면 "미확인"입니다</b>
+      <span>없다고 단정하지 않고 상위 단계 판정을 보류합니다.</span>
+    </div>
+    <div class="rule-item">
+      <b>단계와 운영 여부는 별개입니다</b>
+      <span>운영 중인 Ready도, 시제품인 Enabled도 모두 가능합니다.</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 1. LADDER ============ -->
+<section class="sect">
+  <div class="sect-head">
+    <span class="sect-num">01</span>
+    <span class="sect-title">성숙도 사다리 — 각 단계의 통과 조건</span>
+    <span class="sect-note">■ 표시 개수 = 그 단계에서 반드시 통과해야 하는 관문 수</span>
+  </div>
+
+  <div class="ladder">
+
+    <article class="stage" style="--sc:var(--s-ready)">
+      <div class="stage-idx">STAGE 01</div>
+      <div class="stage-en">AI-Ready</div>
+      <div class="stage-ko">준비 · 쓸 수 있게 만든 상태</div>
+      <p class="stage-def">AI를 실제 업무에 붙여 시험해볼 수 있도록 데이터·권한·책임·기준선을 갖춘 단계입니다.</p>
+
+      <div class="gate-label">필수 관문 <span class="gate-chips"><i></i><i></i><i></i><i></i></span></div>
+      <ul class="gates">
+        <li>데이터·권한·책임·기준선 중 하나 이상 확보</li>
+        <li>지금 붙여서 돌려볼 수 있는 상태</li>
+        <li>API·MCP·RAG·플랫폼·교육·실험환경 형태로 제공</li>
+        <li>산출물이 준비 요소에 실질적으로 기여</li>
+      </ul>
+
+      <div class="stage-block">
+        <span class="k">미달 판정</span>
+        <span class="v warn">"AI로 코딩했다"는 사실만으로는 등급에 반영되지 않습니다.</span>
+      </div>
+      <div class="stage-block">
+        <span class="k">AI를 끄면</span>
+        <span class="v">달라지는 것이 없습니다.</span>
+      </div>
+      <div class="coords"><span>S1–S2</span><span>C0</span><span class="ghost">E0–E1</span></div>
+    </article>
+
+    <article class="stage" style="--sc:var(--s-enabled)">
+      <div class="stage-idx">STAGE 02</div>
+      <div class="stage-en">AI-Enabled</div>
+      <div class="stage-ko">활용 · 결과물이 나오는 상태</div>
+      <p class="stage-def">기존 업무 흐름은 그대로 두고, 한 구간에서 AI가 확인 가능한 결과물을 만들어 사람이 검토하는 단계입니다.</p>
+
+      <div class="gate-label">필수 관문 <span class="gate-chips"><i></i><i></i><i></i></span></div>
+      <ul class="gates">
+        <li>실제 업무 산출물이 존재 — 검색·요약·분류·번역·초안·추천·분석</li>
+        <li>맞고 틀림을 확인할 수 있는 결과</li>
+        <li>사람이 확인해야 다음으로 넘어가는 절차</li>
+      </ul>
+
+      <div class="stage-block">
+        <span class="k">미달 판정</span>
+        <span class="v warn">화면에 AI 기능이 붙어 있는 것만으로는 부족합니다.</span>
+      </div>
+      <div class="stage-block">
+        <span class="k">AI를 끄면</span>
+        <span class="v">손이 조금 더 갈 뿐 업무는 돌아갑니다.</span>
+      </div>
+      <div class="coords"><span>S2–S3</span><span>C1–C2</span><span class="ghost">E1–E2</span></div>
+    </article>
+
+    <article class="stage" style="--sc:var(--s-first)">
+      <div class="stage-idx">STAGE 03</div>
+      <div class="stage-en">AI-First</div>
+      <div class="stage-ko">재설계 · 흐름을 다시 짠 상태</div>
+      <p class="stage-def">AI를 전제로 업무의 시작점·처리경로·역할을 다시 설계하고, 그 설계가 실제로 돌아간 기록이 있는 단계입니다.</p>
+
+      <div class="gate-label">필수 관문 <span class="gate-chips"><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+      <ul class="gates">
+        <li>시작점·처리경로·역할의 재설계</li>
+        <li>저위험 건의 자동 처리</li>
+        <li>고위험 건의 숙련자 이관</li>
+        <li>예외 처리 — 승인·거부·롤백</li>
+        <li>운영 결과의 지표화</li>
+        <li>반복 예외의 제도·기준 반영</li>
+      </ul>
+
+      <div class="stage-block">
+        <span class="k">미달 판정</span>
+        <span class="v warn">설계 문서만으로는 통과하지 못합니다. 모든 관문에 운영 증거가 필요합니다.</span>
+      </div>
+      <div class="stage-block">
+        <span class="k">AI를 끄면</span>
+        <span class="v">처리량이 급감하고 적체가 시작됩니다.</span>
+      </div>
+      <div class="coords"><span>S3–S4</span><span>C3–C4</span><span class="ghost">E3+</span></div>
+    </article>
+
+    <article class="stage" style="--sc:var(--s-native)">
+      <div class="stage-idx">STAGE 04</div>
+      <div class="stage-en">AI-Native</div>
+      <div class="stage-ko">내재화 · 없으면 성립하지 않는 상태</div>
+      <p class="stage-def">AI가 서비스의 핵심 가치를 만들고, 사용 결과가 서비스를 고치며, 장애와 품질 변동에도 서비스가 유지되는 단계입니다.</p>
+
+      <div class="gate-label">필수 관문 <span class="gate-chips"><i></i><i></i><i></i><i></i></span></div>
+      <ul class="gates">
+        <li>핵심 가치 결합 — AI를 빼면 서비스가 성립하지 않음</li>
+        <li>학습 구조 — 사용 결과가 평가·개선으로 되돌아옴</li>
+        <li>복원력 — 장애·가격·품질 변동에도 핵심 기능 유지</li>
+        <li>적용 범위 기록 — 도구/업무/흐름/서비스/조직/생태계</li>
+      </ul>
+
+      <div class="stage-block">
+        <span class="k">가장 자주 걸리는 곳</span>
+        <span class="v warn">성능은 충분한데 환류 회로와 강등 경로가 없어 여기서 멈춥니다.</span>
+      </div>
+      <div class="stage-block">
+        <span class="k">AI를 끄면</span>
+        <span class="v">서비스가 성립하지 않습니다. 그래서 강등 경로가 필수입니다.</span>
+      </div>
+      <div class="coords"><span>S4–S5</span><span>C5</span><span>M4–M5</span><span class="ghost">E4+</span></div>
+    </article>
+
+  </div>
+
+  <div class="ruler">
+    <div class="ruler-head">
+      <b>완결성 눈금 — 어디까지 스스로 끝나는가</b>
+      <span>각 단계가 실제로 놓이는 구간</span>
+    </div>
+    <div class="track">
+      <div class="ticks">
+        <div>C0</div><div>C1</div><div>C2</div><div>C3</div><div>C4</div><div>C5</div>
+      </div>
+      <div class="bars">
+        <div class="bar" style="left:0.5%;width:15%;background:var(--s-ready)"><span>Ready</span></div>
+        <div class="bar" style="left:17.2%;width:31.6%;background:var(--s-enabled)"><span>Enabled</span></div>
+        <div class="bar" style="left:50.3%;width:31.6%;background:var(--s-first)"><span>First</span></div>
+        <div class="bar" style="left:83.5%;width:16%;background:var(--s-native)"><span>Native</span></div>
+      </div>
+    </div>
+    <p class="ruler-legend">눈금이 오른쪽으로 갈수록 사람이 손대야 하는 일이 줄어듭니다. <b>C5는 AI-Native의 필수 조건</b>이며, 평가·학습·재검증·대체경로·장애복원이 모두 들어가야 도달합니다.</p>
+  </div>
+</section>
+
+<!-- ============ 2. AXES ============ -->
+<section class="sect">
+  <div class="sect-head">
+    <span class="sect-num">02</span>
+    <span class="sect-title">세 개의 눈금자 — 등급 하나로 뭉뚱그리지 않기</span>
+    <span class="sect-note">한 사례는 언제나 단계 + S + C + M 으로 함께 기록</span>
+  </div>
+
+  <div class="axes">
+
+    <div class="axis">
+      <div class="axis-h">
+        <b>S — 업무 범위</b>
+        <p>얼마나 넓은 일을 감당하는가</p>
+      </div>
+      <div class="axis-row"><div class="lv">S1</div><div class="tx"><b>단일 기능</b><span>조회·변환·생성·검사 하나</span></div></div>
+      <div class="axis-row"><div class="lv">S2</div><div class="tx"><b>기능 묶음</b><span>관련 도구·데이터의 세트</span></div></div>
+      <div class="axis-row"><div class="lv">S3</div><div class="tx"><b>업무 흐름</b><span>목표 하나를 위한 순차·조건 처리</span></div></div>
+      <div class="axis-row top"><div class="lv">S4</div><div class="tx"><b>종단 서비스</b><span>접수·처리·승인·통지·종료 확인까지 연결</span></div></div>
+      <div class="axis-row top"><div class="lv">S5</div><div class="tx"><b>생태계</b><span>여러 기관·서비스·에이전트의 공동 수행</span></div></div>
+    </div>
+
+    <div class="axis">
+      <div class="axis-h">
+        <b>C — 업무 완결성</b>
+        <p>어디까지 스스로 끝내는가</p>
+      </div>
+      <div class="axis-row"><div class="lv">C0</div><div class="tx"><b>기능 제공</b><span>도구가 있고 호출됨</span></div></div>
+      <div class="axis-row"><div class="lv">C1</div><div class="tx"><b>결과 제공</b><span>답만 주고 후속은 사람이</span></div></div>
+      <div class="axis-row"><div class="lv">C2</div><div class="tx"><b>연속 처리</b><span>단계는 이어지나 판단·완료는 사람이</span></div></div>
+      <div class="axis-row"><div class="lv">C3</div><div class="tx"><b>운영 폐쇄루프</b><span>입력→처리→검증→완료, 종료 상태 확인</span></div></div>
+      <div class="axis-row top"><div class="lv">C4</div><div class="tx"><b>예외 포함 완결</b><span>오류·승인·이의제기·이관·롤백까지</span></div></div>
+      <div class="axis-row top"><div class="lv">C5</div><div class="tx"><b>적응형 완결</b><span>평가·학습·재검증·대체경로·장애복원까지</span></div></div>
+    </div>
+
+    <div class="axis">
+      <div class="axis-h">
+        <b>M — 실행계층 파급력</b>
+        <p>얼마나 공적으로 쓰이는가 · MCP 사례에 적용</p>
+      </div>
+      <div class="axis-row"><div class="lv">M1</div><div class="tx"><b>제한적</b><span>만든 사람과 소수만 사용</span></div></div>
+      <div class="axis-row"><div class="lv">M2</div><div class="tx"><b>재사용형</b><span>공개되어 다른 사용자·모델이 재사용</span></div></div>
+      <div class="axis-row"><div class="lv">M3</div><div class="tx"><b>업무통합형</b><span>실제 업무 시스템·API와 연결</span></div></div>
+      <div class="axis-row top"><div class="lv">M4</div><div class="tx"><b>생태계형</b><span>기관이 공식 제공, 다기관 공동 이용</span></div></div>
+      <div class="axis-row top"><div class="lv">M5</div><div class="tx"><b>핵심인프라형</b><span>공식 실행계층, SLA·책임·감사·복원력 보유</span></div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 3. MATRIX ============ -->
+<section class="sect">
+  <div class="sect-head">
+    <span class="sect-num">03</span>
+    <span class="sect-title">무엇이 언제부터 필수인가</span>
+    <span class="sect-note">위 단계는 아래 단계의 요건을 모두 포함</span>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th>설계 요소</th>
+          <th class="c">Ready</th>
+          <th class="c">Enabled</th>
+          <th class="c">First</th>
+          <th class="c">Native</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="grp">준비 자산 — 데이터·권한·책임·기준선</td><td class="c"><i class="dot full"></i></td><td class="c"><i class="dot full"></i></td><td class="c"><i class="dot full"></i></td><td class="c"><i class="dot full"></i></td></tr>
+        <tr><td class="grp">검증 가능한 업무 산출물</td><td class="c dash">—</td><td class="c"><i class="dot full"></i></td><td class="c"><i class="dot full"></i></td><td class="c"><i class="dot full"></i></td></tr>
+        <tr><td class="grp">사람의 확인 절차</td><td class="c dash">—</td><td class="c"><i class="dot full"></i></td><td class="c"><i class="dot full"></i></td><td class="c"><i class="dot full"></i></td></tr>
+        <tr><td class="grp">위험도에 따른 자동·이관 분기</td><td class="c dash">—</td><td class="c dash">—</td><td class="c"><i class="dot full"></i></td><td class="c"><i class="dot full"></i></td></tr>
+        <tr><td class="grp">종료 상태 확인</td><td class="c dash">—</td><td class="c"><i class="dot opt"></i></td><td class="c"><i class="dot full"></i></td><td class="c"><i class="dot full"></i></td></tr>
+        <tr><td class="grp">승인·거부·롤백 경로</td><td class="c dash">—</td><td class="c dash">—</td><td class="c"><i class="dot full"></i></td><td class="c"><i class="dot full"></i></td></tr>
+        <tr><td class="grp">처리 건별 지표 적재</td><td class="c dash">—</td><td class="c"><i class="dot opt"></i></td><td class="c"><i class="dot full"></i></td><td class="c"><i class="dot full"></i></td></tr>
+        <tr><td class="grp">반복 예외의 제도 반영</td><td class="c dash">—</td><td class="c dash">—</td><td class="c"><i class="dot full"></i></td><td class="c"><i class="dot full"></i></td></tr>
+        <tr><td class="grp">핵심 가치 결합</td><td class="c dash">—</td><td class="c dash">—</td><td class="c"><i class="dot opt"></i></td><td class="c"><i class="dot full"></i></td></tr>
+        <tr><td class="grp">평가 → 개선 환류 회로</td><td class="c dash">—</td><td class="c dash">—</td><td class="c dash">—</td><td class="c"><i class="dot full"></i></td></tr>
+        <tr><td class="grp">대체 경로·장애 복원</td><td class="c dash">—</td><td class="c dash">—</td><td class="c"><i class="dot opt"></i></td><td class="c"><i class="dot full"></i></td></tr>
+        <tr><td class="grp">적용 범위 명시 기록</td><td class="c dash">—</td><td class="c dash">—</td><td class="c dash">—</td><td class="c"><i class="dot full"></i></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="legend">
+    <span><i class="dot full"></i>필수 — 없으면 그 단계 판정 불가</span>
+    <span><i class="dot opt"></i>권장 — 다음 단계로 가는 발판</span>
+    <span><span class="dash">—</span> 해당 단계에서는 묻지 않음</span>
+  </div>
+</section>
+
+<!-- ============ 4. FLOW ============ -->
+<section class="sect">
+  <div class="sect-head">
+    <span class="sect-num">04</span>
+    <span class="sect-title">우리 서비스는 지금 어디인가</span>
+    <span class="sect-note">위에서부터 순서대로, 처음 "아니오"가 나온 곳이 현재 위치</span>
+  </div>
+
+  <div class="flow">
+    <div class="q">
+      <span class="qn">Q1</span>
+      <span class="qt">데이터·권한·책임·기준선 중 하나라도 실제로 붙여 쓸 수 있게 정리되어 있습니까?</span>
+      <span class="no"><em>아니오</em>미착수</span>
+    </div>
+    <div class="yes"></div>
+    <div class="q">
+      <span class="qn">Q2</span>
+      <span class="qt">AI가 만든 업무 산출물이 있고, 맞고 틀림을 확인할 수 있습니까?</span>
+      <span class="no"><em>아니오</em>AI-Ready</span>
+    </div>
+    <div class="yes"></div>
+    <div class="q">
+      <span class="qn">Q3</span>
+      <span class="qt">그 결과 때문에 일의 시작점과 담당 역할이 실제로 바뀌었습니까?</span>
+      <span class="no"><em>아니오</em>AI-Enabled</span>
+    </div>
+    <div class="yes"></div>
+    <div class="q">
+      <span class="qn">Q4</span>
+      <span class="qt">자동 처리·숙련자 이관·롤백이 실제로 작동한 운영 기록이 있습니까?</span>
+      <span class="no"><em>아니오</em>AI-Enabled · First 후보</span>
+    </div>
+    <div class="yes"></div>
+    <div class="q">
+      <span class="qn">Q5</span>
+      <span class="qt">쌓인 지표가 판정 기준이나 자동화 범위를 실제로 바꾸고 있습니까?</span>
+      <span class="no"><em>아니오</em>AI-First</span>
+    </div>
+    <div class="yes"></div>
+    <div class="q">
+      <span class="qn">Q6</span>
+      <span class="qt">모델이 멈추거나 품질이 떨어져도 핵심 기능이 유지됩니까?</span>
+      <span class="no"><em>아니오</em>AI-First</span>
+    </div>
+    <div class="yes"></div>
+    <div class="q final">
+      <span class="qn">→</span>
+      <span class="qt">AI-Native · 적용 범위를 함께 기록하십시오</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. WALKTHROUGH ============ -->
+<section class="sect">
+  <div class="sect-head">
+    <span class="sect-num">05</span>
+    <span class="sect-title">같은 업무, 네 가지 버전</span>
+    <span class="sect-note">예시 — 지자체 보조금 신청 접수부터 지급 종결까지</span>
+  </div>
+
+  <div class="walk">
+    <div class="wcol" style="--sc:var(--s-ready)">
+      <h4>AI-Ready</h4>
+      <ul>
+        <li>최근 3년 심사 결과를 항목별로 라벨링해 정리</li>
+        <li>지원 요건·감액 기준을 조문 단위로 쪼개 검색 인덱스 구축</li>
+        <li>담당 부서에 실험 환경과 조회 권한 부여</li>
+        <li>현재 평균 처리일수·반려율을 기준선으로 기록</li>
+      </ul>
+      <div class="outcome">산출물은 아직 없습니다.</div>
+    </div>
+
+    <div class="wcol" style="--sc:var(--s-enabled)">
+      <h4>AI-Enabled</h4>
+      <ul>
+        <li>신청서를 올리면 누락 서류와 요건 불일치 항목을 표시</li>
+        <li>과거 유사 심사 사례와 적용 조문을 근거로 제시</li>
+        <li>담당자가 화면에서 확인 후 승인·반려를 직접 결정</li>
+      </ul>
+      <div class="outcome">일하는 순서는 그대로입니다.</div>
+    </div>
+
+    <div class="wcol" style="--sc:var(--s-first)">
+      <h4>AI-First</h4>
+      <ul>
+        <li>요건 충족이 명확한 건은 심사 대기열을 건너뛰고 승인 초안으로 직행</li>
+        <li>감액 사유·신규 유형·확신도 미달 건은 숙련 담당자에게 자동 이관</li>
+        <li>이의신청 인용 시 지급 결정을 되돌리는 롤백 절차 상시 운영</li>
+        <li>건별 처리시간·수정률·이관률·이의 인용률을 적재</li>
+        <li>반복되는 이의 사유는 심사 기준 개정 안건으로 상신</li>
+      </ul>
+      <div class="outcome">접수부터 종결까지 닫힙니다.</div>
+    </div>
+
+    <div class="wcol" style="--sc:var(--s-native)">
+      <h4>AI-Native</h4>
+      <ul>
+        <li>자동 심사를 전제로 인력 배치와 접수 물량 자체가 재편</li>
+        <li>이의 인용률이 오른 유형은 자동 처리 기준이 스스로 엄격해짐</li>
+        <li>분기마다 심사 모델을 재검증하고 성능 저하 시 사람 검토 비중 확대</li>
+        <li>모델 장애 시 대체 모델 → 규칙 기반 → 수동 순으로 강등, 접수는 계속</li>
+        <li>심사 기능을 다른 기관이 호출 가능한 공식 실행계층으로 제공</li>
+      </ul>
+      <div class="outcome">멈추면 서비스가 성립하지 않습니다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. RESILIENCE ============ -->
+<section class="sect">
+  <div class="sect-head">
+    <span class="sect-num">06</span>
+    <span class="sect-title">Native를 가르는 한 장면 — 강등 경로</span>
+    <span class="sect-note">평가 사례 대부분이 여기서 미확인 처리됨</span>
+  </div>
+
+  <div class="resil">
+    <p style="font-size:13px;color:var(--ink-2)">모델이 멈추거나, 단가가 뛰거나, 품질이 떨어질 때 무엇이 일어나는지 미리 정해두었는가. 이것이 문서로만 존재하면 관문을 통과하지 못합니다.</p>
+    <div class="resil-steps">
+      <div class="rstep fail">
+        <div class="rn">EVENT</div>
+        <b>모델·API 중단</b>
+        <span>응답 지연, 오류율 급증, 단가 인상</span>
+      </div>
+      <div class="rstep">
+        <div class="rn">FALLBACK 1</div>
+        <b>대체 모델 전환</b>
+        <span>동급 성능의 다른 모델로 자동 절체</span>
+      </div>
+      <div class="rstep">
+        <div class="rn">FALLBACK 2</div>
+        <b>규칙 기반 강등</b>
+        <span>판정 범위를 좁히고 확정 규칙으로 처리</span>
+      </div>
+      <div class="rstep">
+        <div class="rn">FALLBACK 3</div>
+        <b>수동 전환</b>
+        <span>전건 사람 처리, 접수·통지는 그대로 유지</span>
+      </div>
+    </div>
+    <div class="resil-line">어느 경로에서도 접수·처리·통지는 끊기지 않고, 전환 이력은 감사 기록에 남습니다.</div>
+  </div>
+</section>
+
+<!-- ============ 7. AIMS ============ -->
+<section class="sect">
+  <div class="sect-head">
+    <span class="sect-num">07</span>
+    <span class="sect-title">그래서 무엇을 만들 것인가 — 설계 여섯 가지</span>
+    <span class="sect-note">각 항목은 하나의 관문에 직접 대응</span>
+  </div>
+
+  <div class="aims">
+    <div class="aim">
+      <div class="an">AIM 01</div>
+      <h4>결과가 아니라 종료를 설계하십시오</h4>
+      <p>무엇을 출력할지보다 무엇을 완료로 볼지를 먼저 정의합니다. 종료 상태가 정의되지 않으면 아무리 정확해도 완결성은 C2에 머뭅니다.</p>
+      <div class="test"><em>확인 질문</em>이 건이 끝났다는 것을 시스템이 어떻게 압니까?</div>
+    </div>
+
+    <div class="aim">
+      <div class="an">AIM 02</div>
+      <h4>예외 경로를 먼저 그리십시오</h4>
+      <p>되돌리는 방법이 없는 자동화는 자동화가 아닙니다. 승인·거부·롤백을 설계 초기에 넣어야 나중에 붙일 수 있습니다.</p>
+      <div class="test"><em>확인 질문</em>잘못 처리된 건을 누가 어떤 절차로 되돌립니까?</div>
+    </div>
+
+    <div class="aim">
+      <div class="an">AIM 03</div>
+      <h4>위험도로 분기하십시오</h4>
+      <p>전부 자동도, 전부 사람도 설계 실패입니다. 쉬운 건은 통과시키고 어려운 건은 숙련자에게 보내는 기준선이 핵심입니다.</p>
+      <div class="test"><em>확인 질문</em>자동으로 넘길 건과 사람에게 보낼 건의 경계는 무엇입니까?</div>
+    </div>
+
+    <div class="aim">
+      <div class="an">AIM 04</div>
+      <h4>처리마다 흔적을 남기십시오</h4>
+      <p>처리시간·오류율·수정률·이관률·사용량·비용이 건별로 쌓여야 다음 단계로 갈 연료가 생깁니다. 쌓이지 않으면 개선도 증명도 불가능합니다.</p>
+      <div class="test"><em>확인 질문</em>지난달 수정률을 지금 숫자로 말할 수 있습니까?</div>
+    </div>
+
+    <div class="aim">
+      <div class="an">AIM 05</div>
+      <h4>모델 하나에 묶지 마십시오</h4>
+      <p>특정 모델·특정 공급자에 하드코딩된 서비스는 아무리 잘 작동해도 Native가 되지 못합니다. 강등 경로가 곧 자격 요건입니다.</p>
+      <div class="test"><em>확인 질문</em>오늘 그 모델이 멈추면 무슨 일이 일어납니까?</div>
+    </div>
+
+    <div class="aim">
+      <div class="an">AIM 06</div>
+      <h4>결과가 기준을 고치게 하십시오</h4>
+      <p>지표가 쌓이기만 하고 자동화 범위나 판정 기준을 바꾸지 않으면 회로가 닫히지 않습니다. 환류가 Native의 마지막 관문입니다.</p>
+      <div class="test"><em>확인 질문</em>지난 분기 지표 때문에 바뀐 규칙이 하나라도 있습니까?</div>
+    </div>
+  </div>
+
+  <div class="anti">
+    <b>자주 나오는 미달 사례</b>
+    <ul>
+      <li>화면에 AI 버튼만 추가하고 흐름은 그대로 둔 경우</li>
+      <li>시연 영상은 있으나 운영 지표가 하나도 없는 경우</li>
+      <li>자동 처리는 되는데 되돌리는 절차가 없는 경우</li>
+      <li>도구 개수는 늘었으나 업무 결과로 이어지지 않은 경우</li>
+      <li>지표는 쌓이지만 아무 규칙도 바뀌지 않는 경우</li>
+      <li>모델 한 곳에 묶여 대체 경로가 없는 경우</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <p>
+    출처 — 공공AX 사례 아카이브 · AX 수준 평가 대시보드, 사례 70건 평가 결과.
+    평가 기준일 2026-08-08. Curated by Jonghong Jeon (ETRI).
+    <a href="https://hollobit.github.io/PAX/dashboard.html">hollobit.github.io/PAX/dashboard.html</a>
+  </p>
+  <p>
+    단계 정의·관문·S·C·M 눈금은 원문 평가 모형을 따릅니다.
+    C5는 AI-Native의 명시적 필수 조건이며, 그 밖의 단계별 S·C 구간은 각 단계 요건에서 도출한 전형값입니다.
+    보조금 예시는 설명을 위해 구성한 것입니다.
+  </p>
+</footer>
+
+</div>
+</body>
+</html>
