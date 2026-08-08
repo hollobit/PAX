@@ -35,7 +35,7 @@ const EVAL_COLUMNS = [
   ['tool', '도구유형', (c) => c.tool_type || ''],
   ['audience', '사용자·범위', (c) => c.audience || ''],
   ['evidence', '증거', (c) => c.evidence || ''],
-  ['confidence', '신뢰도', (c) => CONF_ORDER[c.confidence] || 0],
+  ['risk', '위험도', (c) => c.risk || ''],
 ];
 
 async function load() {
@@ -508,10 +508,11 @@ function renderTable() {
     ev.textContent = c.evidence.slice(0, 2);
     ev.title = c.evidence;
 
-    const conf = document.createElement('td');
-    conf.textContent = c.confidence;
+    const risk = document.createElement('td');
+    risk.textContent = c.risk || '';
+    risk.title = c.human && c.human !== '해당 없음' ? `인간 통제: ${c.human}` : '';
 
-    tr.append(no, title, org, ax, scm, tool, audience, ev, conf);
+    tr.append(no, title, org, ax, scm, tool, audience, ev, risk);
     tbody.appendChild(tr);
 
     // 상세(판정 근거) 행 — 클릭 시 토글
@@ -527,7 +528,7 @@ function renderTable() {
       ['관문 판정', c.gate],
       ['피드백·학습', c.feedback],
       ['복원력', c.resilience],
-      ['위험도 / 인간 통제', `${c.risk} / ${c.human}`],
+      ['신뢰도 / 인간 통제', `${c.confidence} / ${c.human}`],
     ]) {
       if (!value) continue;
       const dt = document.createElement('dt');
