@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08T11:15:00+09:00",
+  "updated_at": "2026-08-08T11:32:43+09:00",
   "cases": [
     {
       "date": "2026-08-03",
@@ -1204,6 +1204,23 @@
       "link": "https://www.threads.com/@stormleehj/post/DUWuyUykurq",
       "org_type": "기타",
       "id": "1f5e21b854f0aa3a"
+    },
+    {
+      "collected_at": "2026-08-08",
+      "summary": "공개된 금융규제 샌드박스(혁신금융서비스) 지정사례를 모아 새로 검토하는 서비스와 유사한 과거 사례·규제특례·부가조건을 찾아 비교하는 검색 서비스가 공개됐다. 공고문 PDF·HWP와 이미지 OCR로 텍스트를 추출하고 BM25 키워드 검색과 한국어 임베딩 모델의 의미 검색을 결합했으며, 인용 조문의 개정 이력까지 공식 법령 정보와 연계해 대조할 수 있다.",
+      "date": "2026-08-08",
+      "title": "금융규제 샌드박스 유사사례 검색 서비스 PoC",
+      "org_type": "교육",
+      "source": "kakao",
+      "org": "UNIST 금융공학연구실",
+      "link": "https://yongjaeleee-financial-sandbox-similar-case-poc.hf.space/",
+      "tags": [
+        "금융규제",
+        "샌드박스",
+        "RAG",
+        "법령"
+      ],
+      "id": "c46225d9c7efdb93"
     }
   ]
 }

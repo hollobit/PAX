@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-08-08",
- "total": 75,
+ "total": 76,
  "cases": [
   {
    "no": 1,
@@ -2251,6 +2251,36 @@
    "service_url": "https://github.com/Koomook/data-go-mcp-servers",
    "tool_type": "MCP 서버·도구",
    "audience": "G2E 공직 실무자"
+  },
+  {
+   "no": 76,
+   "id": "c46225d9c7efdb93",
+   "org": "UNIST 금융공학연구실",
+   "title": "금융규제 샌드박스 유사사례 검색 서비스 PoC",
+   "ax_prev": "AI-Enabled",
+   "ax": "AI-Enabled",
+   "s": "S2",
+   "s_name": "Tool bundle",
+   "c": "C1",
+   "c_name": "결과 제공",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "PoC",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R1 낮음",
+   "human": "H2 Human-in-the-loop",
+   "evidence": "E1 화면·서비스 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "BM25 키워드 검색과 한국어 임베딩 의미 검색을 결합해 유사 지정사례·규제특례·부가조건 비교라는 검증 가능한 검색 결과를 만들고, 원문·법령 개정 이력 연계로 사람이 근거를 확인하는 구조 — Enabled로 판정. 역할·흐름 재설계와 예외·평가 폐쇄루프 증거는 없어 First 관문은 미충족.",
+   "feedback": "미확인—검색 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
+   "resilience": "미확인—임베딩 모델·호스팅 의존, 장애 대응 증거 없음",
+   "post_url": "",
+   "service_url": "https://yongjaeleee-financial-sandbox-similar-case-poc.hf.space/",
+   "tool_type": "웹 서비스",
+   "audience": "G2C 공개"
   }
  ]
 }
