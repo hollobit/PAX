@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08T09:48:30+09:00",
+  "updated_at": "2026-08-08T11:15:00+09:00",
   "cases": [
     {
       "date": "2026-08-03",
@@ -1150,6 +1150,60 @@
       "source": "kakao",
       "link": "https://github.com/spring-ai-community/spring-ai-playground",
       "id": "edf9a8632ff74a99"
+    },
+    {
+      "title": "NIA, 발간 자료의 마크다운 병행 등록 의무화",
+      "summary": "한국지능정보사회진흥원이 7월 중순부터 발간하는 지식정보 자료를 AI가 읽기 쉬운 마크다운(MD) 파일로 병행 등록하도록 의무화했다. 공개된 변환 도구를 보안성 검토 후 내부망에 배포하고 기관장 내부품의를 거쳐 시행했으며, 관련 자료를 타 기관에도 공유할 수 있다고 밝혔다.",
+      "date": "2026-08-08",
+      "org": "한국지능정보사회진흥원(NIA)",
+      "collected_at": "2026-08-08",
+      "source": "kakao",
+      "tags": [
+        "AI친화데이터",
+        "문서자동화",
+        "내부망",
+        "확산"
+      ],
+      "link": null,
+      "org_type": "공공기관",
+      "id": "17329009668eb397"
+    },
+    {
+      "title": "KIPRIS 특허 검색 MCP 공개",
+      "summary": "특허청 KIPRIS 데이터베이스를 자연어로 검색할 수 있는 오픈소스 MCP 서버가 공개됐다. 특허·실용신안·상표·디자인을 아우르는 자유검색, 출원인·권리자 검색, 서지 상세 등 7개 도구를 제공하며 Claude Desktop 등 MCP 지원 도구에 바로 연결해 쓸 수 있다.",
+      "date": "2026-06-21",
+      "org": "공직 현장(개인 개발)",
+      "collected_at": "2026-08-08",
+      "case_url": "https://github.com/chrisryugj/korean-patent-mcp",
+      "source": "threads",
+      "tags": [
+        "MCP",
+        "특허",
+        "공공데이터",
+        "오픈소스"
+      ],
+      "link": "https://www.threads.com/@chris_gomdori/post/DZ10EToCbZ2",
+      "org_type": "기타",
+      "id": "f76a328f43c0766f"
+    },
+    {
+      "title": "공공데이터포털 API를 MCP 서버 모음으로 공개",
+      "summary": "공공데이터포털(data.go.kr)의 공공 API들을 MCP 서버 모음으로 감싼 오픈소스 프로젝트가 공유됐다. 바이브 코딩을 하는 직장인들이 공공데이터를 AI 도구에서 바로 활용할 수 있게 해주는 기반으로 소개되며 큰 반응을 얻었다.",
+      "date": "2026-02-05",
+      "org": "개발 커뮤니티",
+      "collected_at": "2026-08-08",
+      "popularity": 858,
+      "case_url": "https://github.com/Koomook/data-go-mcp-servers",
+      "source": "threads",
+      "tags": [
+        "MCP",
+        "공공데이터",
+        "오픈소스",
+        "바이브코딩"
+      ],
+      "link": "https://www.threads.com/@stormleehj/post/DUWuyUykurq",
+      "org_type": "기타",
+      "id": "1f5e21b854f0aa3a"
     }
   ]
 }
