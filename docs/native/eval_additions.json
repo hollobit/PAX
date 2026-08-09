@@ -194,5 +194,33 @@
   "resilience": "미확인—운영 장애·유지보수 체계 증거 없음",
   "post_url": "",
   "service_url": "https://gitlab.aigov.go.kr/anms0214/gongedu"
+ },
+ {
+  "no": 78,
+  "id": "63a81d23af115b66",
+  "org": "공직 현장(개인 개발)",
+  "title": "인구감소지역 부동산 상황판 공개",
+  "ax_prev": "AI-Ready",
+  "ax": "AI-Ready",
+  "s": "S2",
+  "s_name": "Tool bundle",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Published tool",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R0 최소",
+  "human": "해당 없음",
+  "evidence": "E1 화면·서비스 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "흩어진 지정 특례 고시와 실거래 자료를 구조화해 한 화면에 모은 공공데이터 가시화 준비자산. AI로 개발 비용을 낮춰 만든 산출물로 Ready에 해당하며, AI가 업무 결과를 생산하는 구조는 아니어서 Enabled 관문은 미충족.",
+  "feedback": "미확인—사용 결과가 평가 데이터와 반복 개선으로 환류된다는 공개 증거 없음",
+  "resilience": "미확인—데이터 갱신·유지보수 체계 증거 없음",
+  "post_url": "https://www.threads.com/@gongpenclaw/post/Dbn8PbNgca4",
+  "service_url": "https://hosungseo.github.io/gonpunclaw-population-decline-realestate/"
  }
 ]
