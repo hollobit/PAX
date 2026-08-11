@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-08-08",
- "total": 87,
+ "total": 88,
  "cases": [
   {
    "no": 1,
@@ -2611,6 +2611,36 @@
    "service_url": "https://banner.choshg.com/",
    "tool_type": "웹 서비스",
    "audience": "G2C 공개"
+  },
+  {
+   "no": 88,
+   "id": "9dc1a7081bc869b1",
+   "org": "광진구",
+   "title": "광진구, 공무원이 직접 개발한 AI 도구 6종 전 직원 업무 전면 투입",
+   "ax_prev": "AI-First",
+   "ax": "AI-First",
+   "s": "S3",
+   "s_name": "Workflow",
+   "c": "C3",
+   "c_name": "운영 폐쇄루프",
+   "m": "M3",
+   "m_name": "업무통합형",
+   "native_scope": "해당 없음",
+   "status": "Production",
+   "scope": "Internal",
+   "mcp_role": "Client/Host",
+   "risk": "R1 낮음",
+   "human": "H2 Human-in-the-loop",
+   "evidence": "E3 운영·공식 URL 확인",
+   "confidence": "중간",
+   "gate": "First 관문 잠정 충족 — 공표된 관리 원칙 기반",
+   "rationale": "개별 도구가 아니라 기관 운영모델을 등재 단위로 한 사례. 위험 기준(개인정보 입력 금지), 명시적 역할 분담(담당자·팀장 최종 판단 책임), 예외 처리(전용 문의 창구), 피드백 관리, 복수 시스템 연동(법령·통계·건축 도구의 기관 자체 AI 서비스 연동), 기관 차원 운영 책임(전 직원 투입·특강)이 공표된 4대 관리 원칙과 운영 사실로 확인돼 AI-First로 잠정 판정. 다만 저위험 자동처리의 정량 기준, 롤백·이의제기 절차, 운영 결과의 평가 데이터화 증거는 공개자료에 없어 잠정 판정이며, 해당 증거 확보 시 확정한다. 행안부 주관 제43회 지방정부 AI 우수사례 발표대회 서울시 대표 선정으로 독립 심사 절차 편입이 확인되나 개별 목록의 사후 검증이 불가해 증거 등급은 제안된 E5 대신 E3으로 조정(제안자 동의).",
+   "feedback": "부분 확인—전용 문의 창구를 통한 오류·피드백 관리 원칙 공표; 평가 데이터화·반복 개선의 운영 증거는 미확인",
+   "resilience": "미확인—공급자 장애·비용 변동 대응 체계 증거 없음",
+   "post_url": "",
+   "service_url": "https://www.gwangjin.go.kr/portal/bbs/B0000002/view.do?nttId=6617521&menuNo=200191",
+   "tool_type": "MCP 서버·도구",
+   "audience": "G2E 공직 내부"
   }
  ]
 }
