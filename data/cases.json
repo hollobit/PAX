@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-11T09:43:36+09:00",
+  "updated_at": "2026-08-11T18:17:28+09:00",
   "cases": [
     {
       "date": "2026-08-03",
@@ -1277,6 +1277,125 @@
       "title": "행안부, 정부 공공 깃랩 구축·전 기관 공문 안내",
       "link": "https://www.threads.com/@hakdol.senvip/post/DbrwUd7IPAN",
       "id": "54c2561cf3e1a268"
+    },
+    {
+      "date": "2026-08-11",
+      "org": "개발 커뮤니티",
+      "org_type": "기타",
+      "source": "kakao",
+      "title": "농식품분야 특허 AI 기술분석 서비스",
+      "collected_at": "2026-08-11",
+      "link": "https://atipsum.lovable.app/",
+      "tags": [
+        "특허",
+        "농식품",
+        "기술분석",
+        "AI분석"
+      ],
+      "summary": "농식품 분야 특허를 AI가 자동으로 분석해주는 기술분석 서비스가 공개됐다. 특허 문서를 바탕으로 농식품 기술 동향을 검토하려는 실무자가 분야 특화 분석 결과를 빠르게 받아볼 수 있도록 구성됐다.",
+      "id": "000bb96831380931"
+    },
+    {
+      "date": "2026-08-11",
+      "org": "카카오",
+      "org_type": "기타",
+      "source": "kakao",
+      "title": "카카오 PlayMCP — MCP 에이전트 플랫폼",
+      "collected_at": "2026-08-11",
+      "link": "https://playmcp.kakao.com/",
+      "tags": [
+        "MCP",
+        "플랫폼",
+        "에이전트",
+        "생태계"
+      ],
+      "summary": "카카오가 MCP 기반 AI 에이전트 생태계 플랫폼 PlayMCP를 공개했다. 다양한 MCP 서버를 등록·연결해 대화형 AI 경험을 만들 수 있는 플랫폼으로, 공공 분야에서도 MCP 생태계 확산의 참고 사례로 공유됐다.",
+      "id": "999efcd7e3a80a93"
+    },
+    {
+      "date": "2026-08-11",
+      "org": "개발 커뮤니티",
+      "org_type": "기타",
+      "source": "kakao",
+      "title": "디자인 구현 레퍼런스 보드 design-isms",
+      "collected_at": "2026-08-11",
+      "link": "https://lidge-jun.github.io/design-isms/",
+      "tags": [
+        "디자인",
+        "바이브코딩",
+        "레퍼런스",
+        "UI"
+      ],
+      "summary": "49개 디자인 사조(ism)의 시각적 레퍼런스를 효과·색상·타이포그래피·레이아웃·모션 주제별로 탐색하는 보드가 공개됐다. 바이브 코딩으로 화면을 만들 때 시각적 방향을 빠르게 정하도록 돕는 의사결정 보조와 AI 슬롭 진단 관점을 담았다.",
+      "id": "dfe9d069e330d1c8"
+    },
+    {
+      "date": "2026-08-11",
+      "org": "공직 현장(개인 개발)",
+      "org_type": "기타",
+      "source": "kakao",
+      "title": "공공조달 제도 88개 업무 흐름도 — 그 많던 조달은 어떻게 했을까",
+      "collected_at": "2026-08-11",
+      "link": "https://how-did-they-do-all-that-procurement.dali-n-narumi.workers.dev/",
+      "tags": [
+        "조달",
+        "법령",
+        "업무흐름도",
+        "행정"
+      ],
+      "summary": "입찰참가자격 등록부터 계약 체결, 대금 지급까지 국가계약법·시행령·계약예규에 흩어진 공공조달 제도 88개를 담당자·서류·기한이 보이는 업무 흐름도로 정리한 안내 사이트가 공개됐다. 모든 근거를 국가법령정보센터 현행 법령의 조문 단위로 연결해 검증했고 법령 기준일을 명시한다.",
+      "id": "a8fbf74431025f70"
+    },
+    {
+      "date": "2026-08-11",
+      "org": "공직 현장(개인 개발)",
+      "org_type": "기타",
+      "source": "kakao",
+      "title": "한 장으로 끝내는 조달제도 100",
+      "collected_at": "2026-08-11",
+      "link": "https://github.com/Milkbuttercheese2/procurement-system-100",
+      "tags": [
+        "조달",
+        "행정",
+        "오픈소스",
+        "업무구조도"
+      ],
+      "summary": "공공조달 제도 100개를 한 장씩의 구조도로 정리한 오픈소스 저장소가 공개됐다. 제도별 절차와 근거를 압축한 자료로, 조달 업무를 처음 맡은 실무자가 제도 전반을 빠르게 파악하도록 돕는다.",
+      "id": "798f4e6bef72fc13"
+    },
+    {
+      "date": "2026-08-11",
+      "org": "공직 현장(개인 개발)",
+      "org_type": "기타",
+      "source": "kakao",
+      "title": "공공데이터포털 인텔리전스 — 파일→API 전환 검토 큐",
+      "collected_at": "2026-08-11",
+      "link": "https://hosungseo.github.io/public-data-portal-intelligence/",
+      "tags": [
+        "공공데이터",
+        "API",
+        "데이터분석",
+        "우선순위"
+      ],
+      "summary": "공공데이터포털의 파일데이터 중 무엇을 먼저 API로 전환해야 하는지 검토 우선순위 큐로 보여주는 분석 도구가 공개됐다. 카탈로그 메타데이터와 연간 이용 이력을 결합해 수요 신호를 산출하고, 서로 다른 데이터 기준시점을 숨기지 않고 함께 표시하는 방법론을 담았다.",
+      "id": "6c5b15f4c8414f29"
+    },
+    {
+      "date": "2026-08-11",
+      "org": "공직 현장(개인 개발)",
+      "org_type": "기타",
+      "source": "kakao",
+      "title": "공공행정 리서치 스킬 — 공식 근거를 검토용 보고서로 정리",
+      "collected_at": "2026-08-11",
+      "link": "https://github.com/Kminer2053/public-sector-research-skill",
+      "tags": [
+        "리서치",
+        "보고서",
+        "AI스킬",
+        "행정"
+      ],
+      "summary": "공공업무에 필요한 공식 근거를 찾아 바로 검토할 수 있는 보고서 형태로 정리해주는 AI 리서치 스킬이 오픈소스로 공개됐다. 법령·지침 등 공식 자료 탐색과 보고서 초안 작성을 한 흐름으로 묶어 실무 검토 시간을 줄여준다.",
+      "id": "112bf7dc576ed8aa"
     }
   ]
 }
