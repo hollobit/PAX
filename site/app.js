@@ -81,15 +81,27 @@ function isNewCase(c) {
   return ageDays >= 0 && ageDays <= NEW_WINDOW_DAYS;
 }
 
-// 기본 정렬: 누적 북마크 수 → SNS 반응(popularity) → 신규 → 최신 게시일순
-// 북마크 집계가 쌓일수록 인기 순위가 실사용 기준으로 동적으로 재배열된다.
-function comparePopularFirst(a, b) {
+// 인기 지표 비교: 누적 북마크 수 → SNS 반응(popularity) → 최신 게시일순
+function comparePopularityMetrics(a, b) {
   const bmDiff = bookmarkCount(b) - bookmarkCount(a);
   if (bmDiff !== 0) return bmDiff;
   const diff = (b.popularity || 0) - (a.popularity || 0);
   if (diff !== 0) return diff;
+  return (b.date + b.collected_at).localeCompare(a.date + a.collected_at);
+}
+
+// 기본 정렬: 인기(상위 N) → 신규(최근 수집) → 나머지 최신 게시일순.
+// 인기 구간 안에서는 지표순, 신규 구간 안에서는 수집일·게시일 최신순.
+function comparePopularFirst(a, b) {
+  const popDiff = Number(isPopularCase(b)) - Number(isPopularCase(a));
+  if (popDiff !== 0) return popDiff;
+  if (isPopularCase(a)) return comparePopularityMetrics(a, b);
   const newDiff = Number(isNewCase(b)) - Number(isNewCase(a));
   if (newDiff !== 0) return newDiff;
+  if (isNewCase(a)) {
+    const collectedDiff = b.collected_at.localeCompare(a.collected_at);
+    if (collectedDiff !== 0) return collectedDiff;
+  }
   return (b.date + b.collected_at).localeCompare(a.date + a.collected_at);
 }
 
@@ -98,7 +110,7 @@ function comparePopularFirst(a, b) {
 function computePopularSet() {
   const ranked = [...state.cases]
     .filter((c) => bookmarkCount(c) > 0 || c.popularity)
-    .sort(comparePopularFirst)
+    .sort(comparePopularityMetrics)
     .slice(0, POPULAR_TOP_N);
   return new Set(ranked.map((c) => c.id));
 }
@@ -249,7 +261,10 @@ async function load() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const doc = await res.json();
     state.bookmarkCounts = counts;
-    state.cases = [...doc.cases].sort(comparePopularFirst);
+    state.cases = [...doc.cases];
+    // 인기 집합을 먼저 계산해야 기본 정렬(인기 → 신규 → 최신)이 올바르게 동작한다
+    state.popularSet = computePopularSet();
+    state.cases.sort(comparePopularFirst);
     state.status = 'loaded';
     renderStats(doc.updated_at, state.cases.length);
     render();
