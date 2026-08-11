@@ -222,5 +222,33 @@
   "resilience": "미확인—데이터 갱신·유지보수 체계 증거 없음",
   "post_url": "https://www.threads.com/@gongpenclaw/post/Dbn8PbNgca4",
   "service_url": "https://hosungseo.github.io/gonpunclaw-population-decline-realestate/"
+ },
+ {
+  "no": 79,
+  "id": "54c2561cf3e1a268",
+  "org": "행정안전부",
+  "title": "행안부, 정부 공공 깃랩 구축·전 기관 공문 안내",
+  "ax_prev": "AI-Ready",
+  "ax": "AI-Ready",
+  "s": "S2",
+  "s_name": "Tool bundle",
+  "c": "C0",
+  "c_name": "기능 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Production",
+  "scope": "Hybrid",
+  "mcp_role": "Unknown/None",
+  "risk": "R0 최소",
+  "human": "해당 없음",
+  "evidence": "E3 운영·공식 URL 확인",
+  "confidence": "높음",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "공직자가 개발한 AI 도구·코드를 기관 간 공유·재사용할 수 있는 공식 개발 인프라를 중앙부처가 구축하고 전 기관에 안내 — 교육·API·공통 플랫폼 제공에 해당하는 대표적 Ready 준비자산. 플랫폼 자체가 업무 결과를 생산하지는 않아 Enabled 관문은 해당 없음.",
+  "feedback": "미확인—등록 도구의 사용 결과가 평가·개선으로 환류된다는 공개 증거 없음",
+  "resilience": "부분 확인—공식 운영 인프라로 지속 운영 전제; 세부 운영책임·백업 체계는 미공개",
+  "post_url": "https://www.threads.com/@hakdol.senvip/post/DbrwUd7IPAN",
+  "service_url": "https://gitlab.aigov.go.kr/explore/projects/active"
  }
 ]
