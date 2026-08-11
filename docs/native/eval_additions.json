@@ -446,5 +446,33 @@
   "resilience": "미확인—모델·검색 의존성 정보 없음",
   "post_url": "",
   "service_url": "https://github.com/Kminer2053/public-sector-research-skill"
+ },
+ {
+  "no": 87,
+  "id": "026e1b69c1fe6678",
+  "org": "공직 현장(개인 개발)",
+  "title": "배너캅 — AI 불법현수막 단속·행정처분 관제 시스템",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S3",
+  "s_name": "Workflow",
+  "c": "C2",
+  "c_name": "연속 처리",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Prototype",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R2 보통",
+  "human": "H2 Human-in-the-loop",
+  "evidence": "E1 화면·서비스 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "현장 사진에서 OCR로 현수막 내용을, EXIF에서 위치를 자동 추출해 단속 기록을 만드는 검증 가능한 업무 결과를 생산하고, 촬영→자동입력→일괄업로드→최종확정의 여러 단계를 연결 — Enabled·연속 처리로 판정. 행정처분 연계라는 맥락상 위험도는 보통이며 최종확정은 사람이 수행. 과태료 부과 등 공식 시스템 연계·예외처리 증거는 없어 First 관문 미충족.",
+  "feedback": "미확인—단속 결과가 평가·개선으로 환류된다는 공개 증거 없음",
+  "resilience": "미확인—운영 체계 증거 없음",
+  "post_url": "",
+  "service_url": "https://banner.choshg.com/"
  }
 ]
