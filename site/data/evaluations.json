@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-08-08",
- "total": 88,
+ "total": 89,
  "cases": [
   {
    "no": 1,
@@ -2640,6 +2640,36 @@
    "post_url": "",
    "service_url": "https://www.gwangjin.go.kr/portal/bbs/B0000002/view.do?nttId=6617521&menuNo=200191",
    "tool_type": "MCP 서버·도구",
+   "audience": "G2E 공직 내부"
+  },
+  {
+   "no": 89,
+   "id": "e2f85975979aa487",
+   "org": "법제처",
+   "title": "공무원이 직접 만든 'AI 법령 비서' 시범 개시",
+   "ax_prev": "AI-Enabled",
+   "ax": "AI-Enabled",
+   "s": "S2",
+   "s_name": "Tool bundle",
+   "c": "C1",
+   "c_name": "결과 제공",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Pilot",
+   "scope": "Internal",
+   "mcp_role": "Unknown/None",
+   "risk": "R1 낮음",
+   "human": "H2 Human-in-the-loop",
+   "evidence": "E3 운영·공식 URL 확인",
+   "confidence": "높음",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "판례 6만·법령 24만·자치법규 5만여 건의 RAG 기반으로 법적 질문에 근거를 포함한 답변이라는 검증 가능한 업무 결과를 생산하고, 답변을 중간 검토 자료로 한정해 사람이 최종 판단 — Enabled로 판정. 범정부 공통기반(온 AI 실험실)에서 전 공무원이 쓰는 공식 시범 서비스로 증거 등급 높음. 역할·흐름 재설계와 예외·평가 폐쇄루프의 운영 증거는 없어 First 관문 미충족.",
+   "feedback": "미확인—사용 결과가 평가 데이터로 환류된다는 공개 증거 없음 (지식데이터 지속 확대 계획은 공표)",
+   "resilience": "부분 확인—독자 파운데이션 모델·국내 인프라 운영으로 외부 의존 완화",
+   "post_url": "",
+   "service_url": "https://www.moleg.go.kr/board.es?mid=a10501000000&bid=0048&act=view&list_no=152980",
+   "tool_type": "도입·정책",
    "audience": "G2E 공직 내부"
   }
  ]
