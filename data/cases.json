@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-12T23:55:35+09:00",
+  "updated_at": "2026-08-12T23:58:52+09:00",
   "cases": [
     {
       "date": "2026-08-03",
@@ -2196,6 +2196,91 @@
       ],
       "source": "kakao",
       "id": "2beb100ecc126fb2"
+    },
+    {
+      "link": "https://github.com/gong-yeongbin/mcp-seoul-rtd",
+      "org_type": "기타",
+      "source": "kakao",
+      "summary": "서울 주요 121개 장소의 실시간 혼잡도·교통·날씨를 조회하는 MCP 서버가 공개됐다. 서울시 실시간 도시데이터를 AI 도구에서 자연어로 확인할 수 있다.",
+      "date": "2026-08-13",
+      "tags": [
+        "MCP",
+        "서울시",
+        "실시간데이터",
+        "공공데이터"
+      ],
+      "title": "서울 실시간 도시데이터 MCP — 121개 장소 혼잡도·교통·날씨",
+      "org": "개발 커뮤니티",
+      "collected_at": "2026-08-13",
+      "id": "ca5651ea46caa07f"
+    },
+    {
+      "link": "https://github.com/hlucent/construction-alert-mcp",
+      "org_type": "기타",
+      "source": "kakao",
+      "summary": "서울시 건설알림이 데이터를 AI 도구에서 조회하는 MCP 서버가 공개됐다. 주변 공사 정보를 자연어로 탐색할 수 있게 한다.",
+      "date": "2026-08-13",
+      "tags": [
+        "MCP",
+        "서울시",
+        "건설",
+        "공공데이터"
+      ],
+      "title": "서울시 건설알림이 MCP",
+      "org": "개발 커뮤니티",
+      "collected_at": "2026-08-13",
+      "id": "bc609dfe7f04d6ed"
+    },
+    {
+      "link": "https://github.com/jinjukimink/seoul-parking-mcp",
+      "org_type": "기타",
+      "source": "kakao",
+      "summary": "서울시 공영주차장 정보를 제공하는 MCP 서버가 공개됐다. 주차장 위치·현황을 AI 도구에서 조회할 수 있다.",
+      "date": "2026-08-13",
+      "tags": [
+        "MCP",
+        "서울시",
+        "주차",
+        "공공데이터"
+      ],
+      "title": "서울시 공영주차장 MCP",
+      "org": "개발 커뮤니티",
+      "collected_at": "2026-08-13",
+      "id": "5c3cb7251749ab2e"
+    },
+    {
+      "link": "https://github.com/Seo-yul/geup-ddong-seoul-mcp",
+      "org_type": "기타",
+      "source": "kakao",
+      "summary": "서울시 공중화장실을 조회하는 MCP 서버가 공개됐다. 가까운 화장실과 지금 열려 있는 화장실을 찾아주며 Streamable HTTP 방식으로 바로 연결할 수 있다.",
+      "date": "2026-08-13",
+      "tags": [
+        "MCP",
+        "서울시",
+        "생활정보",
+        "공공데이터"
+      ],
+      "title": "서울시 공중화장실 조회 MCP — 급똥서울",
+      "org": "개발 커뮤니티",
+      "collected_at": "2026-08-13",
+      "id": "3ba829c8e42e7cc7"
+    },
+    {
+      "link": "https://github.com/hlucent/seoul-air-quality-mcp",
+      "org_type": "기타",
+      "source": "kakao",
+      "summary": "서울시 대기환경 공공데이터를 AI가 조회할 수 있게 만든 MCP 서버가 공개됐다. 미세먼지 등 대기질 정보를 자연어로 확인할 수 있다.",
+      "date": "2026-08-13",
+      "tags": [
+        "MCP",
+        "서울시",
+        "대기질",
+        "공공데이터"
+      ],
+      "title": "서울시 대기환경 MCP",
+      "org": "개발 커뮤니티",
+      "collected_at": "2026-08-13",
+      "id": "92bbbba967365291"
     }
   ]
 }
