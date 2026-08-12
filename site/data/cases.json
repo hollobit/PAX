@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-12T23:50:07+09:00",
+  "updated_at": "2026-08-12T23:55:35+09:00",
   "cases": [
     {
       "date": "2026-08-03",
@@ -2112,6 +2112,90 @@
       "org_type": "기타",
       "link": "https://github.com/ratelworks/agent-safety-oss",
       "id": "05c30a6088be7960"
+    },
+    {
+      "summary": "식품의약품안전처 공공 OpenAPI를 10개 MCP 도구로 노출하는 서버가 공개됐다. 의약품 정보, 병용금기(DUR), 알약 식별, 식품 정보를 AI 도구에서 조회할 수 있다.",
+      "date": "2026-08-13",
+      "collected_at": "2026-08-13",
+      "title": "식약처 의약품 OpenAPI MCP — 의약품·DUR·알약식별",
+      "org_type": "기타",
+      "org": "개발 커뮤니티",
+      "link": "https://github.com/zzjiho/kr-medicine-mcp",
+      "tags": [
+        "MCP",
+        "의료",
+        "식약처",
+        "공공데이터"
+      ],
+      "source": "kakao",
+      "id": "5bfadfc3b8e2292f"
+    },
+    {
+      "summary": "공공데이터포털의 심평원·식약처 의료 데이터를 다루는 MCP 서버가 공개됐다. 비급여 진료비, 병원 찾기, 의약품·DUR, 질병 통계를 AI 도구에서 조회할 수 있다.",
+      "date": "2026-08-13",
+      "collected_at": "2026-08-13",
+      "title": "공공 의료 데이터 MCP — 심평원·식약처 통합",
+      "org_type": "기타",
+      "org": "개발 커뮤니티",
+      "link": "https://github.com/NSLC7779/dk-korea-health-mcp",
+      "tags": [
+        "MCP",
+        "의료",
+        "공공데이터"
+      ],
+      "source": "kakao",
+      "id": "ec4f975c809401cb"
+    },
+    {
+      "summary": "대한민국 국회를 질문으로 탐색하고 공식 기록으로 검증하는 MCP 서버가 공개됐다. 법안·처리상태·위원회·회의록·검토보고서와 의원·정부 발언을 하나로 연결해 입법 논의 전체 맥락을 추적할 수 있다.",
+      "date": "2026-08-13",
+      "collected_at": "2026-08-13",
+      "title": "국회 법안·회의록 탐색 MCP — 공식 기록 검증",
+      "org_type": "기타",
+      "org": "개발 커뮤니티",
+      "link": "https://github.com/epoko77-ai/korean-bill-debate-mcp",
+      "tags": [
+        "MCP",
+        "국회",
+        "입법",
+        "공공데이터"
+      ],
+      "source": "kakao",
+      "id": "a7abbaedd53db684"
+    },
+    {
+      "summary": "국가연구개발(정부 R&D) 규정 검토용 MCP 서버가 공개됐다. 국가연구개발혁신법·시행령과 행정규칙 55종을 AI로 검색·검토할 수 있어 연구비·과제 규정 확인 업무를 줄여준다.",
+      "date": "2026-08-13",
+      "collected_at": "2026-08-13",
+      "title": "정부 R&D 규정 검토 MCP — 혁신법·행정규칙 55종",
+      "org_type": "기타",
+      "org": "개발 커뮤니티",
+      "link": "https://github.com/smilemin07/korean-rnd-regs-mcp",
+      "tags": [
+        "MCP",
+        "R&D",
+        "법령",
+        "연구행정"
+      ],
+      "source": "kakao",
+      "id": "ce2287d57e6bacaa"
+    },
+    {
+      "summary": "한국 우주·항공·국방우주 분야 정부 R&D 지원사업 공고 데이터셋과 이를 다루는 크롤러·분류기·MCP·REST API가 공개됐다. 분야 특화 공고 탐색을 AI 도구에서 수행할 수 있다.",
+      "date": "2026-08-13",
+      "collected_at": "2026-08-13",
+      "title": "우주·항공 정부 R&D 지원사업 공고 MCP",
+      "org_type": "기타",
+      "org": "개발 커뮤니티",
+      "link": "https://github.com/AgentBridge-Lab/korea-space-support-mcp",
+      "tags": [
+        "MCP",
+        "우주항공",
+        "지원사업",
+        "R&D"
+      ],
+      "source": "kakao",
+      "id": "2beb100ecc126fb2"
     }
   ]
 }
