@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-08-08",
- "total": 139,
+ "total": 140,
  "cases": [
   {
    "no": 1,
@@ -4169,6 +4169,36 @@
    "resilience": "미확인—서울시 API 정책 의존",
    "post_url": "",
    "service_url": "https://github.com/hlucent/seoul-air-quality-mcp",
+   "tool_type": "MCP 서버·도구",
+   "audience": "G2E 공직 실무자"
+  },
+  {
+   "no": 140,
+   "id": "c864500e8cf1d78d",
+   "org": "개발 커뮤니티",
+   "title": "개인정보보호법 쉬운 안내 MCP — 소상공인·개인용",
+   "ax_prev": "AI-Ready",
+   "ax": "AI-Ready",
+   "s": "S2",
+   "s_name": "Tool bundle",
+   "c": "C0",
+   "c_name": "기능 제공",
+   "m": "M2",
+   "m_name": "재사용형",
+   "native_scope": "해당 없음",
+   "status": "Published tool",
+   "scope": "External",
+   "mcp_role": "Server",
+   "risk": "R1 낮음",
+   "human": "해당 없음",
+   "evidence": "E1 코드·도구 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "개인정보 가이드·상담사례 2,202청크를 구조화해 37개 도구로 제공하는 MCP — 규정 지식의 준비자산화. 법률 안내 맥락이라 정확성 유의가 필요해 위험도 낮음으로 판정.",
+   "feedback": "미확인",
+   "resilience": "미확인—가이드 개정 시 갱신 필요",
+   "post_url": "",
+   "service_url": "https://github.com/scvcoder/korean-privacy-law-mcp",
    "tool_type": "MCP 서버·도구",
    "audience": "G2E 공직 실무자"
   }
