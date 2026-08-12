@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-12T21:36:49+09:00",
+  "updated_at": "2026-08-12T23:50:07+09:00",
   "cases": [
     {
       "date": "2026-08-03",
@@ -1535,6 +1535,583 @@
       "collected_at": "2026-08-12",
       "date": "2026-08-12",
       "id": "759835514b4b7ca4"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
+      "popularity": 2443,
+      "summary": "법제처 국가법령정보를 LLM에서 바로 조회하는 MCP 서버가 공개됐다. 법령·판례·조례 검색과 함께 AI 답변의 인용 조문을 검증하는 기능을 제공해 법령 관련 환각을 줄이며, 공직 실무 법령 MCP 생태계의 대표 저장소로 자리잡았다.",
+      "tags": [
+        "MCP",
+        "법령",
+        "오픈소스",
+        "인용검증"
+      ],
+      "date": "2026-08-12",
+      "org": "공직 현장(개인 개발)",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/chrisryugj/korean-law-mcp",
+      "id": "43dc7f4ab2500260"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "LexGuard MCP — 일반인용 법률 정보 조회",
+      "popularity": 127,
+      "summary": "일반인이 AI를 통해 법률 정보를 쉽게 조회할 수 있게 만든 MCP 서버가 공개됐다. 법령 검색, 조문 조회, 판례 검색 등 159개 API를 지원한다.",
+      "tags": [
+        "MCP",
+        "법령",
+        "판례",
+        "오픈소스"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/SeoNaRu/lexguard-mcp",
+      "id": "81c14797b7aaafa0"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "korean-law-mcp — 한국 법령 조회 MCP",
+      "summary": "한국 법령 정보를 AI 도구에서 조회할 수 있게 하는 MCP 서버가 공개됐다. 법령 검색과 조문 접근을 제공하는 파이썬 구현체다.",
+      "tags": [
+        "MCP",
+        "법령",
+        "오픈소스"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/SeoNaRu/korean-law-mcp",
+      "id": "10f6ec0f81090085"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "law-mcp — 국가법령정보 공동활용 API MCP",
+      "summary": "국가법령정보 공동활용(open.law.go.kr) API를 통해 법령 데이터에 접근하는 실험적 MCP 서버가 공개됐다. Claude Code 등 MCP 지원 도구에서 동작한다.",
+      "tags": [
+        "MCP",
+        "법령",
+        "오픈소스"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/finalchild/law-mcp",
+      "id": "22be065e9c257d93"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "한국 공공데이터 통합 MCP — 법령·DART·공공데이터포털",
+      "summary": "법제처 국가법령정보센터, DART 전자공시시스템, 공공데이터포털 API를 하나로 통합한 MCP 서버가 공개됐다. 법령·판례·기업공시·생활정보를 한 도구에서 검색·조회할 수 있다.",
+      "tags": [
+        "MCP",
+        "공공데이터",
+        "법령",
+        "공시"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/hjsh200219/korea-public-data-mcp",
+      "id": "ed42c0e326a6d068"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "법제처 OPEN API 통합 MCP — 130여 개 도구",
+      "summary": "법제처 OPEN API를 통합해 130개 이상의 도구를 제공하는 MCP 서버가 공개됐다. 법령·행정규칙·자치법규·판례·위원회 결정문·조약·별표서식·법령용어·특별행정심판·중앙부처 해석까지 법률 정보 전반에 접근할 수 있다.",
+      "tags": [
+        "MCP",
+        "법령",
+        "행정규칙",
+        "오픈소스"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/ChangooLee/mcp-kr-legislation",
+      "id": "daab018ffea87c77"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "법령 온톨로지 검색 MCP — 법제처 LOD SPARQL 기반",
+      "summary": "법제처의 LOD(연결 개방 데이터)를 SPARQL로 질의하는 법령 검색 MCP 서버가 공개됐다. 법령 간 관계를 온톨로지 구조로 탐색할 수 있게 한다.",
+      "tags": [
+        "MCP",
+        "법령",
+        "온톨로지",
+        "LOD"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/wintenboy/law-ontology-mcp",
+      "id": "05763974d3375178"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "나라장터 MCP 서버",
+      "summary": "나라장터의 공공조달 데이터를 AI 도구에서 조회할 수 있게 하는 MCP 서버가 공개됐다. 입찰·계약 정보 탐색을 자연어로 수행하는 기반을 제공한다.",
+      "tags": [
+        "MCP",
+        "조달",
+        "나라장터"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/Datajang/narajangteo_mcp_server",
+      "id": "b37636486ec1dee4"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "나라장터 데이터 수집·가공 MCP",
+      "summary": "나라장터 API의 데이터를 수집·가공해 MCP 형태로 제공하는 서버가 공개됐다. Go로 구현되어 조달 데이터를 AI 도구에서 활용할 수 있게 한다.",
+      "tags": [
+        "MCP",
+        "조달",
+        "나라장터",
+        "오픈소스"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/nine-hundred/naramarket-mcp",
+      "id": "146501d37df93aa2"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "나라장터(G2B) 조달 조회 MCP — 15개 도구",
+      "summary": "나라장터(G2B) 공공조달 데이터를 조회하는 15개 AI 도구를 담은 MCP 서버가 공개됐다. FastMCP 2.0 기반으로 Smithery 배포를 지원해 바로 연결해 쓸 수 있다.",
+      "tags": [
+        "MCP",
+        "조달",
+        "나라장터"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/alphago2580/naramarketmcp",
+      "id": "27c2fd1b292cfcbf"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "정부 공공데이터 5종 통합 MCP — 중기부·정부24·기업마당 등",
+      "summary": "중소벤처기업부·정부24·기업마당·나라장터·중소벤처24 등 정부 공공데이터 5종을 한 번에 호출하는 MCP 서버가 공개됐다. 지원사업·민원·조달 정보를 한 도구에서 조회할 수 있다.",
+      "tags": [
+        "MCP",
+        "공공데이터",
+        "지원사업"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/leokim90/gov-data-mcp",
+      "id": "952ab7cccb367db6"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "한국 주식 분석 MCP",
+      "popularity": 170,
+      "summary": "한국 주식 분석을 위한 MCP 서버가 공개됐다. 국내 증시 데이터를 AI 도구에서 조회·분석할 수 있게 한다.",
+      "tags": [
+        "MCP",
+        "금융",
+        "주식"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/jjlabsio/korea-stock-mcp",
+      "id": "e07be0004494e652"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "DART 전자공시 MCP",
+      "popularity": 127,
+      "summary": "금융감독원 DART 전자공시시스템 데이터를 AI 도구에서 조회하는 MCP 서버가 공개됐다. 기업 공시 탐색을 자연어로 수행할 수 있다.",
+      "tags": [
+        "MCP",
+        "공시",
+        "금융"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/2geonhyup/dart-mcp",
+      "id": "13342535139dd7a0"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "OpenDART 전자공시 MCP — 83개 API를 15개 도구로",
+      "summary": "OpenDART의 83개 공시 API를 15개 MCP 도구로 정리한 서버가 공개됐다. 공시·재무·지분·XBRL 조회에 애널리스트 분석 프레임(내부자 시그널, 회계 리스크, 퀄리티 체크리스트)과 HWP·PDF 첨부의 마크다운 변환까지 결합했다.",
+      "tags": [
+        "MCP",
+        "공시",
+        "금융",
+        "문서변환"
+      ],
+      "date": "2026-08-12",
+      "org": "공직 현장(개인 개발)",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/chrisryugj/korean-dart-mcp",
+      "id": "83bb0ac0ed9f576d"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "한국 금융 통합 MCP — ECOS·부동산·DART·KRX",
+      "summary": "한국은행 ECOS, 부동산, DART, KRX를 아우르는 15개 도구의 금융 MCP 서버가 공개됐다. 자본시장법을 준수하는 설계를 표방하며 한국 특화 연계 분석 도구 2종을 더했다.",
+      "tags": [
+        "MCP",
+        "금융",
+        "공공데이터"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/emceeKim/korea-finance-mcp",
+      "id": "4925d016e9377a50"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "한국 주식 분석 원격 MCP — DART·KRX 기반",
+      "summary": "DART 공시와 KRX 시세를 바탕으로 보수적 밸류에이션 범위를 제시하는 원격 MCP 서버가 공개됐다. Claude·Cursor 등 MCP 클라이언트에서 바로 연결해 쓸 수 있다.",
+      "tags": [
+        "MCP",
+        "금융",
+        "주식",
+        "공시"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/Mrbaeksang/korea-stock-analyzer-mcp",
+      "id": "9070c4f923623855"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "DART 전자공시 API MCP 서버",
+      "summary": "전자공시시스템(DART) API를 활용하는 MCP 서버가 공개됐다. 기업 공시 데이터를 AI 도구에서 조회할 수 있게 한다.",
+      "tags": [
+        "MCP",
+        "공시",
+        "금융"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/snaiws/DART-mcp-server",
+      "id": "b9da6eddda89513d"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "pykrx 기반 KRX 시세 MCP",
+      "summary": "국내 증시 데이터 라이브러리 pykrx를 MCP 서버로 감싼 도구가 공개됐다. KRX 시세·종목 데이터를 AI 도구에서 조회할 수 있다.",
+      "tags": [
+        "MCP",
+        "금융",
+        "주식"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/sharebook-kr/pykrx-mcp",
+      "id": "9aee6bbb0c29dddb"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "LS증권 OpenAPI MCP — 시세·차트·스크리너 자연어 조회",
+      "summary": "LS증권 OpenAPI를 자연어로 다루는 MCP 서버가 공개됐다. 국내외 시세·차트·스크리너·ETF·프로그램 매매·포트폴리오 데이터를 AI 도구에서 조회할 수 있다.",
+      "tags": [
+        "MCP",
+        "금융",
+        "증권"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/redoxnet/mcp-lsopenapi",
+      "id": "991e9f9e7b324692"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "아파트 실거래가 MCP — 국토교통부 공개 API 기반",
+      "popularity": 368,
+      "summary": "국토교통부 공개 API로 한국 아파트 실거래가를 조회하는 MCP 서버가 공개됐다. AI 도구에 아파트 가격을 자연어로 물어볼 수 있게 해 큰 호응을 얻었다.",
+      "tags": [
+        "MCP",
+        "부동산",
+        "공공데이터"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/tae0y/real-estate-mcp",
+      "id": "75b9815de6b6dcf5"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "공공데이터 카탈로그 조합 설계 MCP",
+      "summary": "대한민국 공공데이터 카탈로그의 정적 메타데이터를 조합해 서비스 아이디어를 설계하도록 돕는 MCP가 공개 베타로 나왔다. 어떤 데이터가 있는지부터 탐색해 조합 가능성을 검토하는 용도다.",
+      "tags": [
+        "MCP",
+        "공공데이터",
+        "기획"
+      ],
+      "date": "2026-08-12",
+      "org": "공직 현장(개인 개발)",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/obundh/korea-public-data-catalog-mcp",
+      "id": "d69be456031471a4"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "KOSIS 통계 자연어 조회 MCP",
+      "summary": "국가통계포털(KOSIS) 통계를 자연어로 조회하는 MCP 서버가 공개됐다. 통계표 탐색과 조회를 AI 도구에서 바로 수행할 수 있다.",
+      "tags": [
+        "MCP",
+        "통계",
+        "공공데이터"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/Dayoooun/korea-stats-mcp",
+      "id": "09f079e1424f6992"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "통계청 API MCP",
+      "summary": "통계청 API를 활용한 MCP 서버가 공개됐다. 국가 통계 데이터를 AI 도구에서 조회할 수 있게 한다.",
+      "tags": [
+        "MCP",
+        "통계",
+        "공공데이터"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/jaykim429/korea-statistic-MCP-cginside",
+      "id": "0011a7e888431aeb"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "공공데이터 5종 연결 MCP — 날씨·실거래가·대기질·경제통계·사업자조회",
+      "summary": "날씨, 부동산 실거래가, 대기질, 경제통계, 사업자 조회까지 한국 공공데이터 5종을 AI에 연결하는 MCP 서버가 공개됐다.",
+      "tags": [
+        "MCP",
+        "공공데이터",
+        "생활정보"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/SongT-50/korean-public-data-mcp",
+      "id": "b6f4cc079eb86f11"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
+      "popularity": 7142,
+      "summary": "'에이전트를 한국인으로'를 표방하는 한국 특화 AI 스킬 모음집이 공개됐다. 법령 조회 등 한국 실무에 필요한 스킬을 모아 커스텀 MCP가 막힌 환경에서도 스킬 설치만으로 한국형 기능을 쓸 수 있게 한다.",
+      "tags": [
+        "AI스킬",
+        "오픈소스",
+        "한국특화"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/NomaDamas/k-skill",
+      "id": "2f4ed1e68a6464c5"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "건축HUB MCP — 건축물대장·인허가·필지 종합카드",
+      "summary": "국토교통부 건축HUB를 MCP 서버로 감싼 도구가 공개됐다. 건축물대장·건축/주택 인허가·법정동코드에 한 필지 종합카드, 동 단위 통계, 노후건축물 분석을 더했고 공용키를 탑재한 원격 커넥터로 URL 등록만으로 연결된다.",
+      "tags": [
+        "MCP",
+        "건축",
+        "공공데이터"
+      ],
+      "date": "2026-08-12",
+      "org": "공직 현장(개인 개발)",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/chrisryugj/archhub-mcp",
+      "id": "76f07692203606ad"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "실거래가×건축물대장 역매칭 MCP",
+      "summary": "국토부 실거래가와 건축물대장을 역매칭해 서울 상업업무용 통건물의 실거래·시세를 조회하는 MCP 서버가 공개됐다. 두 공공데이터를 결합해 개별 건물 단위 분석을 가능하게 한다.",
+      "tags": [
+        "MCP",
+        "부동산",
+        "공공데이터"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/syleedlabs/deal-locator-mcp",
+      "id": "8f1e3c48b2baa6d2"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "기상청 날씨 MCP 서버",
+      "summary": "기상청 데이터를 활용하는 날씨 MCP 서버가 공개됐다. AI 도구에서 국내 날씨 정보를 자연어로 조회할 수 있다.",
+      "tags": [
+        "MCP",
+        "날씨",
+        "공공데이터"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/ohhan777/korea_weather",
+      "id": "56c2bb56426019ec"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "국회 API MCP — 국회·국민참여입법 API 통합",
+      "summary": "276개 국회 API와 8개 국민참여입법센터 API에 100% 접근하는 MCP 서버가 공개됐다. 6개 Lite·10개 Full 프로필 도구로 구성되어 의안·의원·회의록 등 입법 데이터를 AI 도구에서 조회할 수 있으며 107개 API 코드가 검증돼 있다.",
+      "tags": [
+        "MCP",
+        "국회",
+        "입법",
+        "공공데이터"
+      ],
+      "date": "2026-08-12",
+      "org": "공공기관 연구자(개인 개발)",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/hollobit/assembly-api-mcp",
+      "id": "f8c9ae69a673c52a"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "정부 지원사업 조회 MCP",
+      "summary": "정부 지원사업 정보를 AI 도구에서 조회할 수 있게 하는 MCP 서버가 공개됐다. 지원사업 탐색을 자연어로 수행하는 기반을 제공한다.",
+      "tags": [
+        "MCP",
+        "지원사업",
+        "공공데이터"
+      ],
+      "date": "2026-08-12",
+      "org": "공직 현장(개인 개발)",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/boam79/gov_support_mcp",
+      "id": "bef8ee3811d115e4"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "도서관 정보나루 MCP — 도서·도서관 검색 25개 도구",
+      "summary": "도서관 정보나루 API 기반의 MCP 서버가 공개됐다. 도서·도서관 검색, 인기 대출 트렌드, GPS 기반 주변 도서관 찾기 등 25개 이상의 도구를 제공한다.",
+      "tags": [
+        "MCP",
+        "도서관",
+        "공공데이터"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/isnow890/data4library-mcp",
+      "id": "0561ecd39ea94051"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "식약처 식품영양성분DB MCP",
+      "summary": "식품의약품안전처의 식품영양성분 데이터베이스를 MCP 도구로 감싼 서버가 공개됐다. 식품 영양 정보를 AI 도구에서 조회할 수 있다.",
+      "tags": [
+        "MCP",
+        "식품",
+        "공공데이터"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/slicequeue/k-mfds-fooddb-mcp-server",
+      "id": "966d6a2ae42587a4"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "KORAIL 공공데이터 MCP 서버 모음",
+      "summary": "한국철도공사(KORAIL) 공공데이터를 다루는 MCP 서버 모음이 공개됐다. 철도 관련 데이터를 AI 도구에서 조회할 수 있게 한다.",
+      "tags": [
+        "MCP",
+        "철도",
+        "공공데이터"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/lovelyquality/korail-mcp",
+      "id": "6a9c5da9f1d3210f"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커",
+      "popularity": 291,
+      "summary": "비개발자를 위한 한국 실무 AI 코워커 패밀리가 공개됐다. Claude Cowork·ChatGPT Work에서 명령 한 번으로 프로젝트를 시작할 수 있게 해 실무자의 AI 활용 진입장벽을 낮춘다.",
+      "tags": [
+        "AI스킬",
+        "실무도구",
+        "오픈소스"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/modu-ai/moai-cowork",
+      "id": "c5aa260668941b92"
+    },
+    {
+      "collected_at": "2026-08-12",
+      "title": "건설현장 법정 안전문서 작성·검토 오픈소스",
+      "summary": "산업안전보건법·기준규칙·중대재해처벌법·KOSHA Guide를 기반으로 건설현장의 법정 안전문서 작성과 검토를 돕는 오픈소스 도구가 공개됐다. 안전관리자와 현장소장의 반복 문서 업무를 더 빠르고 정확하게 만드는 것을 목표로 한다.",
+      "tags": [
+        "안전",
+        "건설",
+        "문서자동화",
+        "법령"
+      ],
+      "date": "2026-08-12",
+      "org": "개발 커뮤니티",
+      "source": "kakao",
+      "org_type": "기타",
+      "link": "https://github.com/ratelworks/agent-safety-oss",
+      "id": "05c30a6088be7960"
     }
   ]
 }
