@@ -1958,5 +1958,33 @@
   "resilience": "미확인—가이드 개정 시 갱신 필요",
   "post_url": "",
   "service_url": "https://github.com/scvcoder/korean-privacy-law-mcp"
+ },
+ {
+  "no": 141,
+  "id": "e52e2378641903f4",
+  "org": "공직 현장(개인 개발)",
+  "title": "인사·노무 뉴스 추천 자동발송 프로그램 개발",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S1",
+  "s_name": "Primitive tool",
+  "c": "C2",
+  "c_name": "연속 처리",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Prototype",
+  "scope": "Internal",
+  "mcp_role": "Unknown/None",
+  "risk": "R0 최소",
+  "human": "H1/H2 미확인",
+  "evidence": "E0 게시글 주장",
+  "confidence": "낮음",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "공개 기사 수집→텍스트 분석 점수화→기준 이상만 추천 발송의 연속 처리를 자동화하고, AI 분석이 선별 결과라는 검증 가능한 산출물을 생산 — Enabled로 판정. 점수 기준의 설명 가능성을 설계 원칙으로 명시한 점이 특징. 코드·화면 등 공개 증거는 없어 신뢰도 낮음.",
+  "feedback": "미확인",
+  "resilience": "미확인",
+  "post_url": "https://www.threads.com/@changil.k/post/DaSDwqfk93O",
+  "service_url": ""
  }
 ]
