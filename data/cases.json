@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13T21:35:20+09:00",
+  "updated_at": "2026-08-14T09:39:00+09:00",
   "cases": [
     {
       "date": "2026-08-03",
@@ -2315,6 +2315,24 @@
       "link": "https://www.threads.com/@changil.k/post/DaSDwqfk93O",
       "org": "공직 현장(개인 개발)",
       "id": "e52e2378641903f4"
+    },
+    {
+      "date": "2026-07-21",
+      "org": "공직 현장(개인 개발)",
+      "title": "업무구조도 생성기 korea100studio 오픈소스 공개",
+      "summary": "국가 제도 509개의 업무구조도를 세로 흐름도로 그려 온 제도100 프로젝트의 생성기 도구가 오픈소스로 공개됐다. 제도·절차를 담당·단계 중심의 구조도로 그리는 제작 도구를 누구나 가져다 쓸 수 있게 해, 기관·개인이 자기 업무의 구조도를 같은 문법으로 만들 수 있게 한다.",
+      "case_url": "https://github.com/hosungseo/korea100studio",
+      "collected_at": "2026-08-14",
+      "source": "threads",
+      "link": "https://www.threads.com/@gongpenclaw/post/DbB6Zmck3t1",
+      "org_type": "기타",
+      "tags": [
+        "업무구조도",
+        "오픈소스",
+        "행정",
+        "시각화"
+      ],
+      "id": "f0c21de2b0af63b3"
     }
   ]
 }

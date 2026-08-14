@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-08-08",
- "total": 141,
+ "total": 142,
  "cases": [
   {
    "no": 1,
@@ -4231,6 +4231,36 @@
    "service_url": "",
    "tool_type": "데스크톱 도구",
    "audience": "G2E 공직 내부"
+  },
+  {
+   "no": 142,
+   "id": "f0c21de2b0af63b3",
+   "org": "공직 현장(개인 개발)",
+   "title": "업무구조도 생성기 korea100studio 오픈소스 공개",
+   "ax_prev": "AI-Ready",
+   "ax": "AI-Ready",
+   "s": "S1",
+   "s_name": "Primitive tool",
+   "c": "C0",
+   "c_name": "기능 제공",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Published tool",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R0 최소",
+   "human": "해당 없음",
+   "evidence": "E1 코드·도구 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "509개 제도 구조도를 그려 온 제작 도구 자체를 오픈소스로 공개 — 업무 지식 구조화 방법을 재사용 가능하게 만든 Ready 준비자산.",
+   "feedback": "미확인",
+   "resilience": "해당 없음—정적 도구 저장소",
+   "post_url": "https://www.threads.com/@gongpenclaw/post/DbB6Zmck3t1",
+   "service_url": "https://github.com/hosungseo/korea100studio",
+   "tool_type": "대시보드·분석",
+   "audience": "G2E 공직 실무자"
   }
  ]
 }
