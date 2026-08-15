@@ -1,2594 +1,2817 @@
 {
-  "updated_at": "2026-08-15T22:00:57+09:00",
-  "cases": [
-    {
-      "date": "2026-08-03",
-      "collected_at": "2026-08-07",
-      "source": "threads",
-      "link": "https://www.threads.com/@dev_orijin/post/Dbk1dtEnT3k",
-      "org": "과학기술정보통신부·NIA",
-      "org_type": "중앙부처",
-      "title": "정부 AI 교육 통합 포털 '모두의 AI 성장사다리' 출범",
-      "summary": "과기정통부와 NIA가 흩어져 있던 정부 AI 교육 플랫폼을 통합 포털인 모두의 AI 배움터(ailearn4all.kr)로 묶었다. 대상별 추천 강좌와 온·오프라인 AI 교육, 행사·대회 정보를 한곳에서 제공하며, 비용·기술 장벽 없이 AI 서비스를 실험하는 온라인 실험실도 함께 열렸다.",
-      "tags": [
-        "교육",
-        "플랫폼",
-        "공공데이터"
-      ],
-      "id": "a2eaaf9f454da37f",
-      "case_url": "https://www.ailearn4all.kr/",
-      "popularity": 118
-    },
-    {
-      "date": "2026-07-14",
-      "collected_at": "2026-08-07",
-      "source": "threads",
-      "link": "https://www.threads.com/@gov_ai.builder/post/Dawsl0VEZSD",
-      "org": "서울특별시",
-      "org_type": "지자체",
-      "title": "서울시, 기관 공용 AI 엔진 기반 AI 에이전트 구축 착수",
-      "summary": "서울시가 문서 요약과 회의실 예약 자동화를 시작으로 AI 에이전트 구축에 착수했다. 기능 단위 정보화 사업 대신 기관 공용 AI 엔진을 만들고 MCP 방식으로 필요한 기능을 붙여가는 구조를 지향한다는 현장 개발 사례가 공유됐다.",
-      "tags": [
-        "AI에이전트",
-        "MCP",
-        "업무자동화"
-      ],
-      "id": "02656bf9d2589964",
-      "case_url": "https://www.etnews.com/20260710000114"
-    },
-    {
-      "date": "2026-04-26",
-      "collected_at": "2026-08-07",
-      "source": "threads",
-      "link": "https://www.threads.com/@orthodox_tauros/post/DXmJA6IDykL",
-      "org": "공직 현장(개인 개발)",
-      "org_type": "기타",
-      "title": "바이브 코딩으로 서무 업무 자동화 프로그램 제작",
-      "summary": "한 공무원이 생성형 AI 바이브 코딩으로 특근매식비 정산과 사무용품 구매요청서 작성 프로그램을 직접 만들었다. 서무 업무에 드는 시간을 줄여 본업인 물품관리 업무에 집중하려는 시도다.",
-      "tags": [
-        "업무자동화",
-        "바이브코딩"
-      ],
-      "id": "59ff218c60039cc9"
-    },
-    {
-      "date": "2026-08-03",
-      "collected_at": "2026-08-07",
-      "source": "threads",
-      "link": "https://www.threads.com/@chobu62/post/DblOFkKD8U_",
-      "org": "공직 커뮤니티",
-      "org_type": "기타",
-      "title": "화면 기록형 매크로 도구 공개 — 공공 AX 로컬 시리즈 4",
-      "summary": "반복 업무를 화면 녹화와 함께 마우스·키보드 입력을 시간순으로 기록했다가, 사람이 확인한 뒤 그대로 재실행하는 로컬 자동화 도구가 공개됐다. 공공 업무 환경을 겨냥한 로컬 도구 시리즈의 네 번째 결과물이다.",
-      "tags": [
-        "업무자동화",
-        "로컬도구"
-      ],
-      "id": "6f376e827405e328"
-    },
-    {
-      "date": "2026-07-26",
-      "collected_at": "2026-08-07",
-      "source": "threads",
-      "link": "https://www.threads.com/@chobu62/post/DbQJBY5D3hI",
-      "org": "공직 커뮤니티",
-      "org_type": "기타",
-      "title": "로컬 문서 검수 도구 공개 — 맞춤법·공공언어 검사",
-      "summary": "HWP·HWPX·DOCX·TXT 문서를 PC 밖으로 보내지 않고 맞춤법, 띄어쓰기, 문장부호, 공공언어 오류를 검사하는 로컬 도구가 공개됐다. 외부 업로드나 API 호출 없이 Windows 실행파일 하나로 구동된다.",
-      "tags": [
-        "문서자동화",
-        "로컬도구"
-      ],
-      "id": "719692c2c31da09f",
-      "case_url": "https://github.com/obundh/gonggong-ax-local"
-    },
-    {
-      "date": "2026-07-26",
-      "collected_at": "2026-08-07",
-      "source": "threads",
-      "link": "https://www.threads.com/@chobu62/post/DbQOCCaD0vM",
-      "org": "공직 커뮤니티",
-      "org_type": "기타",
-      "title": "로컬 인수인계 도구 MVP 공개 — 공공 AX 로컬 시리즈 3",
-      "summary": "인수인계 없이 전임자의 작업 폴더만 남은 상황을 돕는 로컬 인수인계 도구의 MVP가 공개됐다. 공공 업무 환경용 로컬 도구 시리즈의 세 번째 결과물이다.",
-      "tags": [
-        "인수인계",
-        "로컬도구"
-      ],
-      "id": "2c14f2adaa83a00e",
-      "case_url": "https://github.com/obundh/gonggong-ax-local-3"
-    },
-    {
-      "date": "2026-05-17",
-      "collected_at": "2026-08-07",
-      "source": "threads",
-      "link": "https://www.threads.com/@publicai_79/post/DYbE18jj6kV",
-      "org": "공직 커뮤니티",
-      "org_type": "기타",
-      "title": "AI 기반 업무 인수인계 관리 사례",
-      "summary": "한글 파일로 주고받던 업무 인수인계를 AI 메모 관리로 대체한 사례가 공유됐다. 등록한 메모를 AI가 정리해 질문에 답하며, 데이터는 PC에만 저장되어 외부로 나가지 않는다.",
-      "tags": [
-        "인수인계",
-        "로컬AI"
-      ],
-      "id": "075fd5baf003c3b0"
-    },
-    {
-      "date": "2026-06-22",
-      "collected_at": "2026-08-07",
-      "source": "threads",
-      "link": "https://www.threads.com/@chris_gomdori/post/DZ49_V9DfJ_",
-      "org": "공직 커뮤니티",
-      "org_type": "기타",
-      "title": "PC 문서를 AI로 검색하는 로컬 도구 시연",
-      "summary": "PC 곳곳에 흩어진 문서를 AI가 읽고 질문에 답을 찾아주는 로컬 문서 검색 도구의 시연이 공유됐다. 한글 문서를 열지 않고 내용을 미리 보는 기능도 제공한다.",
-      "tags": [
-        "문서검색",
-        "로컬AI"
-      ],
-      "id": "de4b2dab339d69b7",
-      "case_url": "https://github.com/chrisryugj/Docufinder",
-      "popularity": 134
-    },
-    {
-      "date": "2026-04-01",
-      "collected_at": "2026-08-07",
-      "source": "threads",
-      "link": "https://www.threads.com/@chris_gomdori/post/DWlzH2MicNK",
-      "org": "공직 커뮤니티",
-      "org_type": "기타",
-      "title": "국가법령정보 MCP 활용 사례 공유",
-      "summary": "국가법령정보를 AI에서 활용하는 MCP 도구의 실제 사용 예시가 공유됐다. 법령 정보를 AI 도구 호출로 조회하는 방법을 단계별로 소개한다.",
-      "tags": [
-        "법령",
-        "MCP"
-      ],
-      "id": "d40cc4a9cf6e29b6",
-      "popularity": 754
-    },
-    {
-      "date": "2026-07-11",
-      "collected_at": "2026-08-07",
-      "source": "threads",
-      "link": "https://www.threads.com/@gongpenclaw/post/DaoePfGgXdv",
-      "org": "공직 현장(행안부)",
-      "org_type": "기타",
-      "title": "제도100 — 국가 제도 505개 업무구조도 웹서비스",
-      "summary": "대한민국 주요 제도를 법령, 조직, 절차, 문서, 기한으로 분해해 제도마다 한 장의 요약 캔버스와 업무구조도(스윔레인)로 읽을 수 있게 만든 공개 웹서비스다. 100개로 시작해 현재 505개까지 늘어났다.",
-      "tags": [
-        "제도분석",
-        "시각화"
-      ],
-      "id": "5451653f4cddb6f2",
-      "case_url": "https://hosungseo.github.io/korea100/",
-      "popularity": 359
-    },
-    {
-      "tags": [
-        "도입사례",
-        "보안",
-        "생성형AI"
-      ],
-      "source": "kakao",
-      "org_type": "기타",
-      "collected_at": "2026-08-07",
-      "title": "부서 수요 기반 ChatGPT 팀계정 지원 후 보안형 AI SaaS 도입",
-      "summary": "한 기관이 부서 수요를 받아 ChatGPT 팀 계정 이용료를 지원하는 사업을 운영했고, 이후 전산부서가 공무원이 파일을 안전하게 업로드하며 쓸 수 있는 SaaS형 AI 서비스를 도입하면서 개별 이용료 지원은 단년도 사업으로 종료했다는 경험이 공유됐다.",
-      "link": null,
-      "org": "기관 미상(공공)",
-      "date": "2026-08-06",
-      "id": "6a2d1fa6e385ef2b"
-    },
-    {
-      "tags": [
-        "바이브코딩",
-        "프로토타입"
-      ],
-      "source": "kakao",
-      "org_type": "공공기관",
-      "collected_at": "2026-08-07",
-      "title": "바이브 코딩으로 억대 규모 서비스 버전업 프로토타입을 1개월 만에 개발",
-      "summary": "과거 1년 이상, 억대 예산을 들여 만들었던 서비스의 버전업을 실무자 혼자 바이브 코딩으로 1개월 만에 프로토타입으로 개발한 경험이 공유됐다. 프로토타입 검증 후 업체 발주를 거쳐 현재 실제 서비스로 운영 중이다.",
-      "link": "https://icaretok.nemc.or.kr/pec/",
-      "org": "국립중앙의료원(중앙응급의료센터)",
-      "date": "2026-08-06",
-      "id": "422f3e4e0e9a23eb"
-    },
-    {
-      "tags": [
-        "법령",
-        "개인정보",
-        "MCP"
-      ],
-      "source": "kakao",
-      "org_type": "기타",
-      "collected_at": "2026-08-07",
-      "title": "개인정보보호법 법령 리더기 PoC 공개",
-      "summary": "개인정보보호법 담당자를 위해 법률·시행령·고시를 한 화면에서 통합 조회하는 법령 리더기가 바이브 코딩 공개 PoC로 개발됐다. 법령정보센터 MCP 기반으로 최신 조문을 제공하며 조문 검색, 연결규정 확인, 모바일 최적화를 지원한다.",
-      "link": "https://privacy-law-reader.vercel.app/",
-      "org": "공직 현장(개인 개발)",
-      "date": "2026-08-06",
-      "id": "bf04cec910b4755d"
-    },
-    {
-      "date": "2026-08-06",
-      "org": "공직 현장(개인 개발)",
-      "org_type": "기타",
-      "collected_at": "2026-08-07",
-      "tags": [
-        "업무분석",
-        "시각화"
-      ],
-      "title": "교육행정 업무 워크플로 맵 제작기 공유",
-      "link": "https://gyohaeng.pages.dev/workflow-map",
-      "summary": "교육행정 업무 절차를 시각화한 워크플로 맵을 실무에 도움이 되는 방향으로 만들어 가는 제작기가 링크와 함께 공유됐다. 국가 제도 구조도 프로젝트에서 영감을 받아 실무 절차의 흐름을 한눈에 보여주는 것이 목표다.",
-      "source": "kakao",
-      "id": "d487843b67c6063e"
-    },
-    {
-      "date": "2026-08-06",
-      "org": "공직 커뮤니티",
-      "org_type": "기타",
-      "collected_at": "2026-08-07",
-      "tags": [
-        "공공데이터",
-        "도구공개"
-      ],
-      "title": "공공데이터 API 파인더 도구 공개",
-      "link": "https://github.com/boam79/public-data-api-finder",
-      "summary": "공공데이터포털에서 AI가 바로 호출해 쓸 수 있는 API를 찾아주는 도구의 GitHub 저장소가 공유됐다. 파일 데이터 중심의 공공데이터를 API 관점에서 탐색하려는 실무 수요에서 나온 개발물이다.",
-      "source": "kakao",
-      "id": "971a8738f6563214"
-    },
-    {
-      "date": "2026-08-06",
-      "org": "공직 커뮤니티",
-      "org_type": "기타",
-      "collected_at": "2026-08-07",
-      "tags": [
-        "도구공개",
-        "영상제작"
-      ],
-      "title": "시연 영상 제작 자동화 스킬 공유",
-      "link": "https://github.com/Kminer2053/demo-video-skill",
-      "summary": "프로그램 사용 매뉴얼을 영상으로 만들고 싶다는 질문에, 강조 부분 줌 인·아웃 효과가 들어간 시연 영상을 자동 제작하는 AI 스킬의 GitHub 저장소가 답으로 공유됐다. 공공 현장의 매뉴얼 영상 제작 부담을 줄이는 용도다.",
-      "source": "kakao",
-      "id": "7acf5f25369c1401"
-    },
-    {
-      "date": "2026-08-06",
-      "org": "공직 현장(개인 개발)",
-      "org_type": "기타",
-      "collected_at": "2026-08-07",
-      "tags": [
-        "법령",
-        "AI검색"
-      ],
-      "title": "법령 비교·AI 법률 검색 웹서비스 LexDiff 공유",
-      "link": "https://lexdiff.gomdori.app",
-      "summary": "법령·조례·판례·해석례를 통합해 비교·검색하는 AI 법률 검색 웹서비스가 공유됐다. MCP 도구보다 일반 사용자가 접근하기 쉬운 웹 형태로, 법령 MCP 도구가 이 서비스에서 파생됐다는 제작 배경도 소개됐다.",
-      "source": "kakao",
-      "id": "38dc6d3806bf2e8f",
-      "popularity": 210
-    },
-    {
-      "source": "kakao",
-      "link": "https://gongmun.com",
-      "org_type": "기타",
-      "summary": "간단히 던진 문장을 격식을 갖춘 공문 형식으로 바꿔주는 웹 도구가 공유됐다. 현재 V2 개선 작업이 진행 중이어서 일부 기능은 불안정할 수 있다.",
-      "org": "공직 커뮤니티",
-      "tags": [
-        "문서자동화",
-        "생성형AI"
-      ],
-      "title": "자연어 입력을 공문서로 바꿔주는 공문 생성기",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "651bfec5c1ede6d1"
-    },
-    {
-      "source": "kakao",
-      "link": "https://gyohaeng.pages.dev",
-      "org_type": "기타",
-      "summary": "교육행정직 실무자를 위한 업무 자동화 도구와 다양한 업무 자료를 모은 사이트가 공유됐다. 업무 흐름지도 등 하위 자료로 연결되는 허브 역할을 한다.",
-      "org": "공직 현장(교육행정)",
-      "tags": [
-        "교육행정",
-        "도구모음"
-      ],
-      "title": "교육행정 업무 자동화 도구·자료 모음 사이트",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "a021bc5b58ed72cd"
-    },
-    {
-      "source": "kakao",
-      "link": "https://github.com/Milkbuttercheese2/What-I-have-to-do",
-      "org_type": "기타",
-      "summary": "빠르게 메모하고 체계적으로 구조화하는 내부망용 메모 앱의 저장소가 공유됐다. 외부망 접속이 제한된 공공 업무 환경을 겨냥해 만들어졌다.",
-      "org": "공직 커뮤니티",
-      "tags": [
-        "메모",
-        "내부망"
-      ],
-      "title": "내부망용 빠른 메모·구조화 앱",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "d08bc7e9a69190af"
-    },
-    {
-      "source": "kakao",
-      "link": "https://brojun.kr/sdhg",
-      "org_type": "기타",
-      "summary": "교육청 실무자가 만든 한글(HWP) 문서 작업 효율화 프로그램이 공유됐다. 반복적인 한글 편집 작업을 줄여주는 기능을 제공한다.",
-      "org": "공직 현장(교육청)",
-      "tags": [
-        "한글HWP",
-        "업무자동화"
-      ],
-      "title": "한글(HWP) 작업 효율화 프로그램 쉽다한글",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "e93a0e5c75f51a7b"
-    },
-    {
-      "source": "kakao",
-      "link": "https://github.com/galvaomica396/Nothing",
-      "org_type": "기타",
-      "summary": "PDF 속 개인정보를 문서 열기, 가리기, 확인, 저장까지 전 과정 PC 안에서 처리하는 도구가 공유됐다. 원문이 어떤 외부 서비스로도 전송되지 않는 100% 로컬 방식이다.",
-      "org": "공직 현장(개인 개발)",
-      "tags": [
-        "개인정보",
-        "문서자동화",
-        "로컬도구"
-      ],
-      "title": "PDF 개인정보 완전 로컬 마스킹 도구 Nothing",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "1c77044568e730de"
-    },
-    {
-      "source": "kakao",
-      "link": "https://researchfellow.vercel.app",
-      "org_type": "기타",
-      "summary": "후향적 연구 방법론과 논문 작성 가이드라인 규격에 맞춰 논문 초안을 생성해 주는 Claude Code 플러그인이 공유됐다. 의학 연구자의 연구 동료 역할을 지향한다.",
-      "org": "공직 현장(의료 연구)",
-      "tags": [
-        "연구지원",
-        "AI에이전트"
-      ],
-      "title": "의학 연구 동료 AI 플러그인 ResearchFellow",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "cbe008b504b9dd18"
-    },
-    {
-      "source": "kakao",
-      "link": "https://seomu-work-hub.tgtg4840.chatgpt.site/",
-      "org_type": "기타",
-      "summary": "통일부 실무자가 만든 서무 업무 도구 모음이 공유됐다. 공무직 급여, 계좌 관리, 물품 관리, 수합 명단, 여비, 특근비 등 서무 실무 전반을 다룬다.",
-      "org": "공직 현장(통일부)",
-      "tags": [
-        "서무",
-        "업무자동화"
-      ],
-      "title": "서무 업무 도구 모음 허브",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "a93c7283cafb3b9b"
-    },
-    {
-      "source": "kakao",
-      "link": "https://github.com/pon00050/minwon-draft",
-      "org_type": "기타",
-      "summary": "사실관계만 입력하면 제출 가능한 국민신문고 민원·안전신문고 신고서 초안을 만들어 주는 Claude Code 스킬이 공유됐다. 인용 법령을 law.go.kr에서 실시간 확인하고 제출 전에 초안을 스스로 점검한다.",
-      "org": "공직 커뮤니티",
-      "tags": [
-        "민원",
-        "법령",
-        "AI에이전트"
-      ],
-      "title": "국민신문고 민원 초안 생성 스킬 minwon-draft",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "32d199fa9ad4f674"
-    },
-    {
-      "source": "kakao",
-      "link": "https://github.com/koul777/Public-Regulation-MCP-Builder",
-      "org_type": "기타",
-      "summary": "PDF, HWP, HWPX, DOCX 형식의 공공기관 규정을 기관, 규정, 개정 버전, 장·절·조문 구조로 정리하는 Windows용 빌더가 공유됐다. 사람이 승인한 내용만 검색 색인과 MCP 응답에 포함한다.",
-      "org": "공직 현장(공공기관)",
-      "tags": [
-        "MCP",
-        "규정",
-        "문서자동화"
-      ],
-      "title": "공공기관 규정 MCP 생성기",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "ea2bce110972762e"
-    },
-    {
-      "source": "kakao",
-      "link": "https://tgtg4840-byte.github.io/seomuland/",
-      "org_type": "기타",
-      "summary": "서무 업무에 쓰는 도구들을 한곳에 모아 둔 웹 페이지가 공유됐다. 서무 업무 도구 허브와 함께 운영되는 모음집이다.",
-      "org": "공직 현장(통일부)",
-      "tags": [
-        "서무",
-        "도구모음"
-      ],
-      "title": "서무랜드 — 서무 툴 모음 페이지",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "9d2b45d14879241e"
-    },
-    {
-      "source": "kakao",
-      "link": "https://github.com/koul777/VHLookup",
-      "org_type": "기타",
-      "summary": "개인정보 마스킹, 분류별 시트 나누기, 엑셀·CSV 합치기, 전후 파일 비교, 피벗 요약표, 사용자 지정 정렬을 지원하는 엑셀 자동화 도구가 공유됐다. 인터넷 없이 로컬에서 실행된다.",
-      "org": "공직 현장(공공기관)",
-      "tags": [
-        "엑셀",
-        "업무자동화",
-        "로컬도구"
-      ],
-      "title": "엑셀 업무 자동화 도구 VHLookup",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "f5abed24ff6bdd4a"
-    },
-    {
-      "source": "kakao",
-      "link": "https://github.com/koul777/clickguide-local-private",
-      "org_type": "기타",
-      "summary": "웹사이트에서 클릭한 과정을 자동 기록하고 스크린샷이 들어간 단계별 PDF 가이드를 만들어 주는 Chrome 확장 프로그램이 공유됐다. 업무 매뉴얼 제작 부담을 줄여준다.",
-      "org": "공직 현장(공공기관)",
-      "tags": [
-        "매뉴얼",
-        "업무자동화"
-      ],
-      "title": "클릭 과정을 PDF 가이드로 만드는 ClickGuide Local",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "48e33f2318bdffae"
-    },
-    {
-      "source": "kakao",
-      "link": "https://github.com/DECK6/korea-mice-safety-agent",
-      "org_type": "기타",
-      "summary": "베뉴를 포함한 MICE 안전관리 관련 문서를 조회하고 작성을 돕는 MCP 도구와, 이를 웹에서 시험해 볼 수 있는 시뮬레이터가 공유됐다.",
-      "org": "공직 커뮤니티",
-      "tags": [
-        "MCP",
-        "안전관리"
-      ],
-      "case_url": "https://dexa.art/mice-safety/",
-      "title": "MICE 안전관리 문서 MCP와 웹 시뮬레이터",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "0a2535cadf2d621a"
-    },
-    {
-      "source": "kakao",
-      "link": "https://원클릭업무포털.com",
-      "org_type": "기타",
-      "summary": "업무포털의 복무, 출장, 기안, 품의 화면까지 클릭 한 번으로 이동하는 Windows 프로그램이 공유됐다. 나이스와 K-에듀파인 세션 자동 연장을 지원하며 17개 시도교육청에서 모두 쓸 수 있다.",
-      "org": "공직 현장(교육행정)",
-      "tags": [
-        "업무자동화",
-        "교육행정"
-      ],
-      "title": "업무포털 원클릭 이동 프로그램",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "0d668fa0c977b439",
-      "popularity": 216
-    },
-    {
-      "source": "kakao",
-      "link": "https://github.com/koul777/NCScope",
-      "org_type": "기타",
-      "summary": "공공기관 공고문과 직무기술서를 넣으면 NCS 세분류 기준의 지식·스킬·태도(KSA)를 호출하고, 이를 바탕으로 구조화된 면접 질문을 생성해 주는 도구가 공유됐다.",
-      "org": "공직 현장(공공기관)",
-      "tags": [
-        "채용",
-        "생성형AI"
-      ],
-      "title": "NCS 기반 구조화 면접 질문 생성기 NCScope",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "92d5147e02f7ae36"
-    },
-    {
-      "source": "kakao",
-      "link": "https://klocal.solvonluchs.com/",
-      "org_type": "기타",
-      "summary": "전국 지방자치단체의 주요 업무계획과 예산서를 검색·열람하고, 법령, 유권해석, 행정심판 재결례, 선거법, 정보공개 등 실무 자료를 모은 공유 노트북을 제공하는 지방직 공무원용 참고 사이트가 공유됐다.",
-      "org": "공직 커뮤니티",
-      "tags": [
-        "지방행정",
-        "자료모음"
-      ],
-      "title": "지방행정 실무 자료 포털 K-Local",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "856b4951cb5274d1"
-    },
-    {
-      "source": "kakao",
-      "link": "https://alio-compare.vercel.app",
-      "org_type": "기타",
-      "summary": "알리오에 공시된 335개 공공기관의 1인당 평균보수, 신입사원 초임, 육아휴직 등 50개 공시항목을 직관적으로 시각 비교할 수 있는 사이트가 공유됐다.",
-      "org": "공직 커뮤니티",
-      "tags": [
-        "공공데이터",
-        "시각화"
-      ],
-      "title": "공공기관 공시항목 비교 사이트",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "e0be95cc501650ae"
-    },
-    {
-      "source": "kakao",
-      "link": "https://excel.choshg.com/",
-      "org_type": "기타",
-      "summary": "개인정보 마스킹과 여러 파일 취합 등을 서버 전송 없이 내 PC 안에서 간단히 처리해 주는 프로그램이 공유됐다.",
-      "org": "공직 커뮤니티",
-      "tags": [
-        "엑셀",
-        "개인정보",
-        "로컬도구"
-      ],
-      "title": "로컬 엑셀 처리 도구 — 마스킹·파일 취합",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "918bddd1b60d8a74"
-    },
-    {
-      "source": "kakao",
-      "link": "https://github.com/amnotyoung/overseas-procurement-100",
-      "org_type": "기타",
-      "summary": "KOICA 2026 국가별 개발협력사업 참여전략 자료집을 바탕으로 45개국 발주자에 걸친 135개 제도를 입찰제도, 조달 거버넌스, ODA 사업 발굴·형성의 세 축으로 정리한 공개 사이트가 공유됐다.",
-      "org": "공직 커뮤니티",
-      "tags": [
-        "공공조달",
-        "ODA"
-      ],
-      "case_url": "https://amnotyoung.github.io/overseas-procurement-100/",
-      "title": "ODA 수원국 공공조달 제도 정리 사이트",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "aa58f3a62af622b6"
-    },
-    {
-      "source": "kakao",
-      "link": "https://9k1.fun",
-      "org_type": "기타",
-      "summary": "국회의원의 의정 활동 기록을 모아 볼 수 있는 트랙레코드 사이트가 공유됐다.",
-      "org": "공직 커뮤니티",
-      "tags": [
-        "공공데이터",
-        "시각화"
-      ],
-      "title": "국회의원 트랙레코드 사이트",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "5835971d479dbf81"
-    },
-    {
-      "link": "https://choshg.com",
-      "org": "공직 커뮤니티",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "tags": [
-        "교육",
-        "도구모음"
-      ],
-      "org_type": "기타",
-      "summary": "어려운 AI를 공무원의 언어로 풀어 실제 업무와 연결한 활용법과 실무 업무 도구를 제공하는 사이트가 공유됐다. 공무원이 직접 이해하고 실행하도록 돕는 것을 지향하며, 로컬 엑셀 처리 도구 등과 같은 제작자의 결과물로 이어진다.",
-      "title": "초실행관 — 공무원 AI 활용·실무 도구 사이트",
-      "source": "kakao",
-      "id": "c78372217646db56"
-    },
-    {
-      "link": "https://www.threads.com/@gongpenclaw/post/DY7f9jPAend",
-      "org_type": "중앙부처",
-      "case_url": "https://mobile.newsis.com/view/NISX20260515_0003631882",
-      "org": "행정안전부",
-      "date": "2026-05-30",
-      "summary": "행정안전부가 국산 LLM 엑사원과 구글 Gemma4를 행정 내부망에서 사용하기 시작했다는 소식이 공유됐다. AI가 보고서를 쓰고 공무원이 검토하는 시대의 변곡점이라는 담당 부서 인터뷰 기사도 함께 소개됐다.",
-      "source": "threads",
-      "collected_at": "2026-08-07",
-      "tags": [
-        "도입사례",
-        "LLM",
-        "내부망"
-      ],
-      "title": "행안부, 엑사원·Gemma4를 행정 내부망에 도입",
-      "id": "58420e002644542c",
-      "popularity": 139
-    },
-    {
-      "link": "https://www.threads.com/@chris_gomdori/post/DaS4hW2CW6n",
-      "org_type": "기타",
-      "case_url": "https://mcp.gomdori.app",
-      "org": "공직 현장(개인 개발)",
-      "date": "2026-07-03",
-      "summary": "법령, 통계, 특허, 건축, 학교알리미 등 공공데이터 MCP 5종을 한 서버로 통합해 경로 라우팅으로 제공하는 사례가 공유됐다. 월 서버비 16달러 규모로 전국 사용자들이 24시간 이용할 만큼 수요가 검증됐다.",
-      "source": "threads",
-      "collected_at": "2026-08-07",
-      "tags": [
-        "MCP",
-        "공공데이터"
-      ],
-      "title": "공공데이터 MCP 5종 통합 서버 운영",
-      "id": "9d56d423296a3238",
-      "popularity": 226
-    },
-    {
-      "link": "https://www.threads.com/@publicai_79/post/DY4s0B9jLVm",
-      "org_type": "기타",
-      "org": "공직 현장(개인 개발)",
-      "date": "2026-05-28",
-      "summary": "비공개 내부 문서를 로컬 AI로 임베딩해 부서별, 분기별 추진사항을 AI가 보고하도록 만드는 내부망 RAG 초안 구축기가 공유됐다. 값비싼 시스템 없이도 공공기관 AX 전환이 가능하다는 점을 보여주려는 시도다.",
-      "source": "threads",
-      "collected_at": "2026-08-07",
-      "tags": [
-        "RAG",
-        "내부망",
-        "로컬AI"
-      ],
-      "title": "내부망 문서용 로컬 RAG 구축기",
-      "id": "a25534e407326d76"
-    },
-    {
-      "link": "https://www.threads.com/@koyou_ax/post/DacnKc9D_5i",
-      "org_type": "기타",
-      "org": "공직 현장(개인 개발)",
-      "date": "2026-07-06",
-      "summary": "일정, 파일, 지식, 문서 작성, 실행 기록까지 PC 안에서 연결하는 공무원용 로컬 AI 에이전트 워크플레이스 개발기가 공유됐다. 일반 업무용 PC에서 구동되도록 Gemma4 E2B로 최적화했고 원클릭 설치 패키지를 만들고 있다.",
-      "source": "threads",
-      "collected_at": "2026-08-07",
-      "tags": [
-        "AI에이전트",
-        "로컬AI",
-        "업무자동화"
-      ],
-      "title": "공무원용 로컬 AI 에이전트 워크플레이스 개발",
-      "id": "9d115930495a1e65",
-      "case_url": "https://github.com/Kminer2053/gongmuwon"
-    },
-    {
-      "link": "https://www.threads.com/@chris_gomdori/post/DbW8LhniROp",
-      "org_type": "지자체",
-      "case_url": "https://chris.gomdori.app/newbgj",
-      "org": "화성특례시·광진구",
-      "date": "2026-07-29",
-      "summary": "화성특례시 AI스마트전략실이 개발해 정부 AI 실험실 GitLab에 공개한 신규자 지식창고 웹앱을 광진구 실무자가 자기 기관 버전으로 포팅한 사례가 공유됐다. 조례 개정 자동 감시, 동의어·초성 검색, 첫 30일 체크리스트를 더해 기관 간 확산의 선순환을 보여준다.",
-      "source": "threads",
-      "collected_at": "2026-08-07",
-      "tags": [
-        "지식관리",
-        "확산사례",
-        "도구공개"
-      ],
-      "title": "화성특례시 신규자 지식창고, 광진구 버전으로 포팅",
-      "id": "56cdd4fc23166800",
-      "popularity": 107
-    },
-    {
-      "link": "https://www.threads.com/@koyou_ax/post/DaLJpOljpV6",
-      "org_type": "기타",
-      "org": "기관 미상(공공)",
-      "date": "2026-06-30",
-      "summary": "내부망 LLM으로 보안 걱정 없이 사내 데이터를 활용하는 놀이공원 콘셉트의 AI 체험 플랫폼을 팀 단위 바이브 코딩으로 구축한 사례가 공유됐다. AI 리터러시 퀴즈, 그래프 RAG 사내지식 검색, 민원 데이터 AI 답변, 비전 인식 안전 분석, AI 광고 도안 심의 등을 담았다.",
-      "source": "threads",
-      "collected_at": "2026-08-07",
-      "tags": [
-        "내부망",
-        "RAG",
-        "바이브코딩"
-      ],
-      "title": "내부망 LLM 기반 사내 AI 체험 플랫폼 AX플레이그라운드 구축",
-      "id": "bfcd190155ae69f7"
-    },
-    {
-      "link": "https://www.threads.com/@chris_gomdori/post/DbaDIR3DZWE",
-      "org_type": "기타",
-      "case_url": "https://github.com/chrisryugj/edoc-summarizer",
-      "org": "공직 현장(개인 개발)",
-      "date": "2026-07-30",
-      "summary": "전자문서 화면에서 버튼 하나로 무엇을 언제까지 어떻게 해야 하는지를 카드 한 장으로 정리하고, 기한을 D-day로 표시하며 결재 전 AI 검토까지 해주는 도구가 공개됐다. 한컴 웹한글 공식 API 기반이며 로컬 LLM을 붙이면 문서가 PC 밖으로 나가지 않는다.",
-      "source": "threads",
-      "collected_at": "2026-08-07",
-      "tags": [
-        "문서자동화",
-        "로컬AI",
-        "도구공개"
-      ],
-      "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구",
-      "id": "1502d338e8e99382",
-      "popularity": 103
-    },
-    {
-      "link": "https://www.threads.com/@gongpenclaw/post/DbiLzQ5gfjC",
-      "org_type": "공공기관",
-      "case_url": "https://www.data.go.kr/",
-      "org": "공공데이터포털(NIA)",
-      "date": "2026-08-02",
-      "summary": "공공데이터포털에 자연어 문장으로 물어보면 데이터를 찾아주는 AI 대화형 검색이 도입됐다는 소식이 공유됐다. 정확한 검색어를 몰라 입구에서 포기하던 사용자들의 진입 장벽을 낮추는 변화로, 공무원의 AI 실험 데이터 창고로서의 가치도 조명됐다.",
-      "source": "threads",
-      "collected_at": "2026-08-07",
-      "tags": [
-        "공공데이터",
-        "AI검색",
-        "도입사례"
-      ],
-      "title": "공공데이터포털에 AI 대화형 검색 도입",
-      "id": "fbde74aa0071ea45"
-    },
-    {
-      "org_type": "기타",
-      "summary": "K-Startup, 기업마당, NIPA, KOCCA, SMTECH를 크롤링해 한국 정부 지원사업을 전수조사하는 에이전트 스킬이 공유됐다. 지원 가능성을 즉시·로드맵·변형의 세 갈래로 분류하며, Claude Code 등 주요 AI 코딩 도구 6종에서 쓸 수 있다.",
-      "date": "2026-08-07",
-      "link": "https://github.com/djfksjd/ir-search",
-      "org": "공직 커뮤니티",
-      "collected_at": "2026-08-07",
-      "source": "kakao",
-      "tags": [
-        "지원사업",
-        "AI에이전트",
-        "공공데이터"
-      ],
-      "title": "정부 지원사업 전수조사 에이전트 스킬 ir-search",
-      "id": "54d599932088897f"
-    },
-    {
-      "org_type": "기타",
-      "summary": "파주 주요 명소와 상권의 실시간 혼잡도를 5분 단위로 갱신해 보여주는 인파 지도가 공유됐다. 여유·보통·혼잡 단계로 표시해 한적한 방문지를 고르거나 붐비는 곳을 피하는 데 쓸 수 있다.",
-      "date": "2026-08-07",
-      "link": "https://now-paju.pajulab.workers.dev/",
-      "org": "공직 커뮤니티",
-      "collected_at": "2026-08-07",
-      "source": "kakao",
-      "tags": [
-        "공공데이터",
-        "실시간",
-        "지역서비스"
-      ],
-      "title": "파주 실시간 인파 지도 — 지금 파주",
-      "id": "0826e58f026fe560"
-    },
-    {
-      "org_type": "기타",
-      "summary": "서울 주요 명소 121곳의 실시간 인구밀집 상황을 공공데이터 기반으로 보여주는 모바일 앱이 공개됐다. 인파가 많은 곳을 피하고 싶은 시민을 위한 상황판으로, 공공 실시간 도시데이터 활용 사례다.",
-      "date": "2026-08-07",
-      "link": "https://jocohunt.com/p/7uubvp1t",
-      "org": "공직 현장(개인 개발)",
-      "collected_at": "2026-08-07",
-      "source": "kakao",
-      "tags": [
-        "공공데이터",
-        "실시간",
-        "지역서비스"
-      ],
-      "title": "서울 인파레이더 — 명소 121곳 실시간 인구밀집 상황판",
-      "id": "62ed887a548dfb25"
-    },
-    {
-      "org_type": "기타",
-      "summary": "제주관광공사 빅데이터를 활용해 제주 명소 66곳의 실시간 인파를 지도로 보여주는 서비스가 공유됐다. 붐빔순, 한산순, 거리순 정렬과 주소 검색을 지원하며 서울, 부산, 강원, 인천공항으로도 확장되고 있다.",
-      "date": "2026-08-07",
-      "link": "https://somodus.com/a/29ee7eab2c28c1d1dc2eef35425ccfc3",
-      "org": "공직 커뮤니티",
-      "collected_at": "2026-08-07",
-      "source": "kakao",
-      "tags": [
-        "공공데이터",
-        "실시간",
-        "지역서비스"
-      ],
-      "title": "북적북적 제주 — 명소 66곳 실시간 인파 지도",
-      "id": "5b37a71c441b663b"
-    },
-    {
-      "org_type": "기타",
-      "title": "북적북적 인천공항 — 실시간 혼잡 지도",
-      "tags": [
-        "공공데이터",
-        "실시간",
-        "지역서비스"
-      ],
-      "link": "https://somodus.com/a/266ae6e5a62ab845b736920033636b02",
-      "org": "공직 커뮤니티",
-      "collected_at": "2026-08-07",
-      "date": "2026-08-07",
-      "source": "kakao",
-      "summary": "제주 실시간 인파 지도에서 확장된 북적북적 시리즈의 인천공항 편이 공유됐다. 공항 구역별 실시간 혼잡 상황을 지도로 보여줘 출국·마중 동선 계획에 활용할 수 있다.",
-      "id": "ef0fc393d25e4e97"
-    },
-    {
-      "org_type": "기타",
-      "title": "공공데이터 렌즈 — AI 공공데이터 탐색·판단 계층",
-      "tags": [
-        "공공데이터",
-        "AI검색",
-        "도구공개"
-      ],
-      "link": "https://github.com/hike-lab/public-data-lens",
-      "org": "공직 커뮤니티",
-      "collected_at": "2026-08-07",
-      "date": "2026-08-07",
-      "source": "kakao",
-      "summary": "하고 싶은 일을 자연어로 말하면 활용할 공공데이터를 찾아주고 왜 그 데이터를 골랐는지 선택 근거까지 제시하는 AI 탐색·판단 계층이 공개됐다. 공공데이터 활용의 진입 장벽인 데이터 발견 단계를 AI가 대신한다.",
-      "id": "13e5e75fbf179ebf"
-    },
-    {
-      "org_type": "기타",
-      "title": "대한민국 AI 행동계획 2026 대시보드",
-      "tags": [
-        "정책",
-        "시각화",
-        "공공데이터"
-      ],
-      "link": "https://hollobit.github.io/K-AI2026/",
-      "org": "공직 현장(개인 개발)",
-      "collected_at": "2026-08-07",
-      "date": "2026-08-07",
-      "source": "kakao",
-      "summary": "대통령직속 국가인공지능전략위원회의 실천과제 99개와 정책권고 326개를 한눈에 볼 수 있게 정리한 비공식 종합 현황 대시보드가 공유됐다. 국가 AI 정책의 구조와 진행 상황을 시민이 추적할 수 있게 한다.",
-      "id": "ceceadd796cc6ea1"
-    },
-    {
-      "org_type": "기타",
-      "title": "2026 AI 재정사업 분석 플랫폼",
-      "tags": [
-        "정책",
-        "예산",
-        "시각화"
-      ],
-      "link": "https://hollobit.github.io/KAIB2026/",
-      "org": "공직 현장(개인 개발)",
-      "collected_at": "2026-08-07",
-      "date": "2026-08-07",
-      "source": "kakao",
-      "summary": "2026년 정부 AI 관련 재정사업을 모아 구조적으로 분석할 수 있게 만든 플랫폼이 공유됐다. 예산 규모와 사업 구성을 들여다보며 국가 AI 투자 방향을 파악하는 용도다.",
-      "id": "807dd39dd613b7da"
-    },
-    {
-      "org_type": "기타",
-      "title": "대한민국 공공 Open API 현황 종합 분석 (K-GAPI)",
-      "tags": [
-        "공공데이터",
-        "API",
-        "시각화"
-      ],
-      "link": "https://hollobit.github.io/K-GAPI/",
-      "org": "공직 현장(개인 개발)",
-      "collected_at": "2026-08-07",
-      "date": "2026-08-07",
-      "source": "kakao",
-      "summary": "대한민국 공공 Open API의 전체 현황을 수집해 품질과 활용성 관점에서 종합 분석한 사이트가 공유됐다. AI 시대에 기계가 바로 호출해 쓸 수 있는 공공 API가 얼마나 되는지 가늠하는 기초 자료가 된다.",
-      "id": "73ca59dc1a41074f"
-    },
-    {
-      "org_type": "기타",
-      "title": "K-GAPI Δ — Agentic 시대 공공 API 개선 비교",
-      "tags": [
-        "공공데이터",
-        "API",
-        "AI적합성"
-      ],
-      "link": "https://hollobit.github.io/GAPI2/",
-      "org": "공직 현장(개인 개발)",
-      "collected_at": "2026-08-07",
-      "date": "2026-08-07",
-      "source": "kakao",
-      "summary": "2026년 4월 기준선 대비 한국 공공 API가 얼마나 개선됐는지를 라이브 재측정과 증거 기반 방법론으로 비교하는 사이트가 공유됐다. AI 에이전트가 직접 호출하는 시대에 맞춘 공공 API 품질 추적 프로젝트다.",
-      "id": "7868cf416d6fe407"
-    },
-    {
-      "summary": "국가 제도 구조도 프로젝트(제도100)를 온톨로지 형태로 탐색할 수 있게 만든 뷰어가 공유됐다. 제도 간 관계를 구조화된 지식 체계로 살펴볼 수 있어 제도 데이터의 기계 가독성을 높이는 시도다.",
-      "org": "공직 현장(개인 개발)",
-      "link": "https://chris.gomdori.app/korea100",
-      "collected_at": "2026-08-07",
-      "source": "kakao",
-      "date": "2026-08-07",
-      "tags": [
-        "제도분석",
-        "온톨로지",
-        "시각화"
-      ],
-      "org_type": "기타",
-      "title": "대한민국 제도 온톨로지 뷰어",
-      "id": "c7ccd2903fbe27a5"
-    },
-    {
-      "summary": "PDF 문서를 번역하고 사람이 검토하는 과정을 한 화면에서 처리하는 로컬 작업장 도구가 공개됐다. 문서를 외부로 보내지 않는 공공 업무용 로컬 도구 시리즈의 여섯 번째 결과물이다.",
-      "org": "공직 커뮤니티",
-      "link": "https://github.com/obundh/gonggong-ax-local-6",
-      "collected_at": "2026-08-07",
-      "source": "kakao",
-      "date": "2026-08-07",
-      "tags": [
-        "문서자동화",
-        "번역",
-        "로컬도구"
-      ],
-      "org_type": "기타",
-      "title": "PDF 번역·검토 작업장 — 공공 AX 로컬 시리즈 6",
-      "id": "ec17e6cd86e7aaa1"
-    },
-    {
-      "summary": "로컬 Ollama의 Gemma 등 모델로 법령 MCP, 문서 파싱 MCP 같은 여러 MCP 서버를 동시에 돌리는 호스트가 공개됐다. 클라우드 API 없이 내부망과 오프라인 환경에서 AI 도구 호출을 쓸 수 있게 해준다.",
-      "org": "공직 현장(개인 개발)",
-      "link": "https://github.com/chrisryugj/ollama-mcp-host",
-      "collected_at": "2026-08-07",
-      "source": "kakao",
-      "date": "2026-08-07",
-      "tags": [
-        "MCP",
-        "로컬AI",
-        "내부망"
-      ],
-      "org_type": "기타",
-      "title": "로컬 Ollama 기반 MCP 멀티 호스트",
-      "id": "fe3bb0d913e27677"
-    },
-    {
-      "summary": "표기가 제각각인 주소들을 도로명주소 표준으로 일괄 정리해 주는 도구가 공개됐다. 주소 데이터 정비에 반복 투입되는 행정 실무 시간을 줄여주는 자동화 사례다.",
-      "org": "공직 현장(개인 개발)",
-      "link": "https://github.com/chrisryugj/gjdong",
-      "collected_at": "2026-08-07",
-      "source": "kakao",
-      "date": "2026-08-07",
-      "tags": [
-        "데이터정비",
-        "업무자동화",
-        "도구공개"
-      ],
-      "org_type": "기타",
-      "title": "표준주소실록 — 주소 표준화 정리 도구",
-      "id": "cba450dfb5c8fadf"
-    },
-    {
-      "summary": "선택한 Windows 폴더의 새 저장본을 다른 물리 디스크에 자동 보관해 파일 유실을 막는 로컬 트레이 앱이 공개됐다. 문서 사고가 잦은 공공 업무 환경을 위한 로컬 도구 시리즈의 일곱 번째 결과물이다.",
-      "org": "공직 커뮤니티",
-      "link": "https://github.com/obundh/gonggong-ax-local-7",
-      "collected_at": "2026-08-07",
-      "source": "kakao",
-      "date": "2026-08-07",
-      "tags": [
-        "백업",
-        "로컬도구"
-      ],
-      "org_type": "기타",
-      "title": "로컬 폴더 이중 보관 트레이 앱 — 공공 AX 로컬 시리즈 7",
-      "id": "94639db9e5fd6c2c"
-    },
-    {
-      "org_type": "중앙부처",
-      "link": "https://ax360.kr/",
-      "tags": [
-        "지원사업",
-        "플랫폼",
-        "도입사례"
-      ],
-      "summary": "정부와 민간의 AX 추진 전 과정에 필요한 정보를 한곳에서 제공하는 AX360° 포털이 공유됐다. AX 사업 찾기 2,416건, AX 자원 찾기 410건, AI 기업 탐색 511건을 갖추고 시작부터 완성까지 원스톱 지원을 표방한다.",
-      "date": "2026-08-07",
-      "source": "kakao",
-      "org": "과학기술정보통신부·NIPA·KOSA",
-      "title": "AX360° — AX 전 과정 원스톱 지원 포털 개설",
-      "collected_at": "2026-08-07",
-      "id": "849b973bf966f4ff"
-    },
-    {
-      "link": "https://openapi.hrdkorea.or.kr/mcp.html",
-      "date": "2026-08-07",
-      "org_type": "공공기관",
-      "tags": [
-        "MCP",
-        "공공데이터",
-        "도입사례"
-      ],
-      "source": "kakao",
-      "title": "한국산업인력공단, 공식 HRDKorea MCP 서비스 개시",
-      "collected_at": "2026-08-07",
-      "summary": "한국산업인력공단이 공단 공공데이터 69종(개방 229개 중 선별)을 ChatGPT와 Claude에 연결해 실시간 조회하는 공식 MCP 서비스를 2026년 8월 18일 개시한다. 인증키, 회원가입, 설치 없이 서버 주소 등록만으로 도구 41개를 바로 쓸 수 있다.",
-      "org": "한국산업인력공단",
-      "id": "93482d8cbe86c9d9"
-    },
-    {
-      "source": "threads",
-      "org": "공직 커뮤니티",
-      "case_url": "https://github.com/obundh/gonggong-ax-local-5",
-      "org_type": "기타",
-      "title": "문서 리소스 추출기 — 공공 AX 로컬 시리즈 5",
-      "summary": "HWPX, DOCX, PPTX 등 ZIP 기반 문서 33종에서 이미지, 동영상, 음성, 첨부파일, 글꼴, 문서 구조를 자동 분류해 추출하는 로컬 도구가 공개됐다. 파일 외부 전송과 원본 변경 없이 동작하며 매크로는 실행하지 않고 분류만 한다.",
-      "tags": [
-        "문서자동화",
-        "로컬도구"
-      ],
-      "link": "https://www.threads.com/@chobu62/post/DbdWP6hj0TU",
-      "date": "2026-07-31",
-      "collected_at": "2026-08-07",
-      "id": "7c63339c2722da03"
-    },
-    {
-      "source": "threads",
-      "org": "공직 현장(개인 개발)",
-      "popularity": 212,
-      "case_url": "https://github.com/chrisryugj/kordoc",
-      "org_type": "기타",
-      "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
-      "summary": "HWP·PDF 등 한국 공문서를 파싱하는 오픈소스 Kordoc이 문서 생산과 역변환까지 확장됐다. 3.0 버전은 AI가 내용만 고치고 서식·결재란·도장은 유지한 채 HWP로 되돌리는 왕복 변환을 지원하며, 실측 공문서 324건에서 재현율 99.998%, 표 100%, 환각률 0.006%를 기록했다. 데스크톱 앱 버전도 제공된다.",
-      "tags": [
-        "문서자동화",
-        "오픈소스",
-        "도구공개"
-      ],
-      "link": "https://www.threads.com/@chris_gomdori/post/DarG1dOE70_",
-      "date": "2026-07-12",
-      "collected_at": "2026-08-07",
-      "id": "8ff758ac1d5e40eb"
-    },
-    {
-      "source": "threads",
-      "org": "과학기술혁신본부",
-      "org_type": "중앙부처",
-      "title": "법령 MCP로 과학기술 법령 체계 분석",
-      "summary": "커뮤니티에서 공개된 법령 MCP를 실제 업무에 활용해 과학기술 관련 법령을 정리하고 법령 간 근거, 위임, 연계, 충돌, 중복 관계를 분석한 활용 사례가 공유됐다. 공개 도구가 다른 실무자의 법제 업무로 확산된 사례다.",
-      "tags": [
-        "법령",
-        "MCP",
-        "확산사례"
-      ],
-      "link": "https://www.threads.com/@spatiumliberum/post/DXBGL0bGfPe",
-      "date": "2026-04-12",
-      "collected_at": "2026-08-07",
-      "id": "0af085f0e51a1a7e",
-      "case_url": "https://msitsti2025.github.io/stlaws/"
-    },
-    {
-      "source": "kakao",
-      "org": "지방자치혁신연구원",
-      "org_type": "기타",
-      "title": "지방의정 지원 AI 에이전트 자치아이 베타",
-      "summary": "지방의정 활동을 지원하는 AI 에이전트 자치아이가 베타 테스트 중이라는 소식이 공유됐다. 지방의회 의정 업무를 돕는 특화 에이전트로, 지방자치 분야 공공AX 프로젝트의 하나로 개발되고 있다.",
-      "tags": [
-        "지방행정",
-        "AI에이전트"
-      ],
-      "link": "https://jachiai.kr",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "586bab7a0b40cb95"
-    },
-    {
-      "source": "kakao",
-      "org": "AI 정부 실험실",
-      "org_type": "중앙부처",
-      "title": "AI 정부 실험실 프로젝트 현황 보드 공개",
-      "summary": "공공 개발 산출물 저장소(공공 GitLab)의 프로젝트 현황을 분야별로 모아 보여주는 AI 정부 실험실 보드가 공유됐다. 공공행정, 교육행정, 재난안전 등 분야별 프로젝트를 커밋, 이슈, Star 기준으로 정렬해 탐색할 수 있다.",
-      "tags": [
-        "플랫폼",
-        "공유협업",
-        "도입사례"
-      ],
-      "link": "https://axboard.aigov.go.kr/",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "4ab9bf954cb48eb9"
-    },
-    {
-      "source": "kakao",
-      "org": "미국 연방정부(GovInfo)",
-      "org_type": "기타",
-      "title": "미국 GovInfo, 정부 문서 MCP 공개 프리뷰",
-      "summary": "미국 연방정부 문서 포털 GovInfo가 MCP 서비스를 공개 프리뷰로 제공한다는 소식이 공유됐다. 법령과 정부 간행물을 AI가 직접 조회하게 하는 해외 정부의 MCP 도입 사례로, 국내 공공 MCP 논의의 참고가 된다.",
-      "tags": [
-        "해외",
-        "MCP",
-        "공공데이터"
-      ],
-      "link": "https://www.govinfo.gov/features/mcp-public-preview",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "235db3db0bff39d2"
-    },
-    {
-      "source": "kakao",
-      "org": "싱가포르 통계청",
-      "org_type": "기타",
-      "title": "싱가포르 통계청, SingStat MCP 서비스 제공",
-      "summary": "싱가포르 통계청이 국가 통계 데이터를 AI에서 직접 조회할 수 있는 SingStat MCP 서비스를 제공한다는 소식이 공유됐다. 통계 기관이 공식 MCP를 운영하는 해외 사례로 국내 공공데이터 MCP 확산 논의에 참고가 된다.",
-      "tags": [
-        "해외",
-        "MCP",
-        "공공데이터"
-      ],
-      "link": "https://www.singstat.gov.sg/data-tools-services/singstat-mcp",
-      "date": "2026-08-07",
-      "collected_at": "2026-08-07",
-      "id": "0c994fa292d1d15d"
-    },
-    {
-      "tags": [
-        "법령",
-        "내부망",
-        "바이브코딩",
-        "문서자동화",
-        "오픈소스"
-      ],
-      "summary": "공직 실무자가 내부망에서 쓸 수 있는 법령 리더 프로그램을 개발해 공유했다. 보고용 슬라이드로 정리하던 법령 내용을 카드뉴스 형태로 자동 변환해 보여주며, 이후 부처 고유 내용을 제거한 공개용 버전을 오픈소스로 공개해 각 기관이 자기 부처 법령·행정규칙을 담아 내부망에서 쓸 수 있게 했다.",
-      "title": "내부망용 법령 리더 프로그램 개발",
-      "collected_at": "2026-08-08",
-      "org_type": "기타",
-      "date": "2026-08-08",
-      "org": "공직 현장(개인 개발)",
-      "source": "threads",
-      "link": "https://www.threads.com/@milkbuttercheese/post/Dbvsk_8king",
-      "id": "e160d086c0ce2b1b",
-      "case_url": "https://github.com/Milkbuttercheese2/Which-article-was-it-public"
-    },
-    {
-      "tags": [
-        "MCP",
-        "로컬모델",
-        "망분리",
-        "통계"
-      ],
-      "case_url": "https://spring-ai-community.github.io/spring-ai-playground/",
-      "summary": "모델까지 노트북에서 구동해 인터넷 없이 동작하는 오픈소스 로컬 AI 에이전트가 공유됐다. 도구별 위험도 평가와 실행 승인 절차, 감사 대시보드를 갖췄고, 국가통계포털(KOSIS) 공식 MCP에 연결해 통계 조회부터 차트 생성까지 시연했다. 맥·윈도우·리눅스용 무료 배포판을 제공한다.",
-      "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연",
-      "collected_at": "2026-08-08",
-      "org_type": "기타",
-      "date": "2026-08-07",
-      "org": "오픈소스 커뮤니티",
-      "source": "kakao",
-      "link": "https://github.com/spring-ai-community/spring-ai-playground",
-      "id": "edf9a8632ff74a99"
-    },
-    {
-      "title": "NIA, 발간 자료의 마크다운 병행 등록 의무화",
-      "summary": "한국지능정보사회진흥원이 7월 중순부터 발간하는 지식정보 자료를 AI가 읽기 쉬운 마크다운(MD) 파일로 병행 등록하도록 의무화했다. 공개된 변환 도구를 보안성 검토 후 내부망에 배포하고 기관장 내부품의를 거쳐 시행했으며, 관련 자료를 타 기관에도 공유할 수 있다고 밝혔다.",
-      "date": "2026-08-08",
-      "org": "한국지능정보사회진흥원(NIA)",
-      "collected_at": "2026-08-08",
-      "source": "kakao",
-      "tags": [
-        "AI친화데이터",
-        "문서자동화",
-        "내부망",
-        "확산"
-      ],
-      "link": null,
-      "org_type": "공공기관",
-      "id": "17329009668eb397"
-    },
-    {
-      "title": "KIPRIS 특허 검색 MCP 공개",
-      "summary": "특허청 KIPRIS 데이터베이스를 자연어로 검색할 수 있는 오픈소스 MCP 서버가 공개됐다. 특허·실용신안·상표·디자인을 아우르는 자유검색, 출원인·권리자 검색, 서지 상세 등 7개 도구를 제공하며 Claude Desktop 등 MCP 지원 도구에 바로 연결해 쓸 수 있다.",
-      "date": "2026-06-21",
-      "org": "공직 현장(개인 개발)",
-      "collected_at": "2026-08-08",
-      "case_url": "https://github.com/chrisryugj/korean-patent-mcp",
-      "source": "threads",
-      "tags": [
-        "MCP",
-        "특허",
-        "공공데이터",
-        "오픈소스"
-      ],
-      "link": "https://www.threads.com/@chris_gomdori/post/DZ10EToCbZ2",
-      "org_type": "기타",
-      "id": "f76a328f43c0766f"
-    },
-    {
-      "title": "공공데이터포털 API를 MCP 서버 모음으로 공개",
-      "summary": "공공데이터포털(data.go.kr)의 공공 API들을 MCP 서버 모음으로 감싼 오픈소스 프로젝트가 공유됐다. 바이브 코딩을 하는 직장인들이 공공데이터를 AI 도구에서 바로 활용할 수 있게 해주는 기반으로 소개되며 큰 반응을 얻었다.",
-      "date": "2026-02-05",
-      "org": "개발 커뮤니티",
-      "collected_at": "2026-08-08",
-      "popularity": 858,
-      "case_url": "https://github.com/Koomook/data-go-mcp-servers",
-      "source": "threads",
-      "tags": [
-        "MCP",
-        "공공데이터",
-        "오픈소스",
-        "바이브코딩"
-      ],
-      "link": "https://www.threads.com/@stormleehj/post/DUWuyUykurq",
-      "org_type": "기타",
-      "id": "1f5e21b854f0aa3a"
-    },
-    {
-      "collected_at": "2026-08-08",
-      "summary": "공개된 금융규제 샌드박스(혁신금융서비스) 지정사례를 모아 새로 검토하는 서비스와 유사한 과거 사례·규제특례·부가조건을 찾아 비교하는 검색 서비스가 공개됐다. 공고문 PDF·HWP와 이미지 OCR로 텍스트를 추출하고 BM25 키워드 검색과 한국어 임베딩 모델의 의미 검색을 결합했으며, 인용 조문의 개정 이력까지 공식 법령 정보와 연계해 대조할 수 있다.",
-      "date": "2026-08-08",
-      "title": "금융규제 샌드박스 유사사례 검색 서비스 PoC",
-      "org_type": "교육",
-      "source": "kakao",
-      "org": "UNIST 금융공학연구실",
-      "link": "https://yongjaeleee-financial-sandbox-similar-case-poc.hf.space/",
-      "tags": [
-        "금융규제",
-        "샌드박스",
-        "RAG",
-        "법령"
-      ],
-      "id": "c46225d9c7efdb93"
-    },
-    {
-      "summary": "매년 수료증을 취합하는 반복 업무를 줄이기 위한 공무원 필수교육 이수 관리 시스템이 정부 AI 개발 플랫폼 깃랩에 공개됐다. 교육 일정 캘린더, 수료증 AI 자동검수, 일괄 다운로드 기능으로 수료증 취합·확인 업무를 크게 줄여준다.",
-      "org_type": "기타",
-      "link": "https://gitlab.aigov.go.kr/anms0214/gongedu",
-      "collected_at": "2026-08-08",
-      "source": "kakao",
-      "org": "공직 현장(개인 개발)",
-      "title": "공무원 필수교육 이수 관리 시스템 공개",
-      "date": "2026-08-08",
-      "tags": [
-        "교육관리",
-        "문서자동화",
-        "AI검수",
-        "행정효율"
-      ],
-      "id": "00411127055c4a07"
-    },
-    {
-      "org_type": "기타",
-      "collected_at": "2026-08-09",
-      "tags": [
-        "부동산",
-        "공공데이터",
-        "대시보드",
-        "지역정책"
-      ],
-      "link": "https://www.threads.com/@gongpenclaw/post/Dbn8PbNgca4",
-      "case_url": "https://hosungseo.github.io/gonpunclaw-population-decline-realestate/",
-      "source": "threads",
-      "org": "공직 현장(개인 개발)",
-      "title": "인구감소지역 부동산 상황판 공개",
-      "summary": "인구감소지역·관심지역 107곳의 지정 특례와 최근 24개월 아파트 실거래를 한 화면에 모은 상황판이 공개됐다. 흩어져 있던 특례 고시와 실거래 자료를 모아 지역별 정책 차이·표본 규모·기준일을 먼저 보여주는 구성으로, 관심이 적은 지역의 시장 정보를 가시화하는 실험으로 소개됐다.",
-      "date": "2026-08-05",
-      "id": "63a81d23af115b66"
-    },
-    {
-      "collected_at": "2026-08-11",
-      "tags": [
-        "개발인프라",
-        "코드공유",
-        "오픈소스",
-        "확산"
-      ],
-      "case_url": "https://gitlab.aigov.go.kr/explore/projects/active",
-      "source": "threads",
-      "date": "2026-08-07",
-      "summary": "행정안전부가 공직자들이 개발한 AI 도구와 코드를 공유하는 정부 공공 깃랩 저장소를 구축하고 각 기관에 공문으로 안내했다. 공무원 필수교육 관리 시스템 등 실무 도구들이 이미 등록되어 공개적으로 열람할 수 있으며, 기관 간 코드 재사용과 확산의 공식 기반이 마련됐다.",
-      "org_type": "중앙부처",
-      "org": "행정안전부",
-      "popularity": 134,
-      "title": "행안부, 정부 공공 깃랩 구축·전 기관 공문 안내",
-      "link": "https://www.threads.com/@hakdol.senvip/post/DbrwUd7IPAN",
-      "id": "54c2561cf3e1a268"
-    },
-    {
-      "date": "2026-08-11",
-      "org": "개발 커뮤니티",
-      "org_type": "기타",
-      "source": "kakao",
-      "title": "농식품분야 특허 AI 기술분석 서비스",
-      "collected_at": "2026-08-11",
-      "link": "https://atipsum.lovable.app/",
-      "tags": [
-        "특허",
-        "농식품",
-        "기술분석",
-        "AI분석"
-      ],
-      "summary": "농식품 분야 특허를 AI가 자동으로 분석해주는 기술분석 서비스가 공개됐다. 특허 문서를 바탕으로 농식품 기술 동향을 검토하려는 실무자가 분야 특화 분석 결과를 빠르게 받아볼 수 있도록 구성됐다.",
-      "id": "000bb96831380931"
-    },
-    {
-      "date": "2026-08-11",
-      "org": "카카오",
-      "org_type": "기타",
-      "source": "kakao",
-      "title": "카카오 PlayMCP — MCP 에이전트 플랫폼",
-      "collected_at": "2026-08-11",
-      "link": "https://playmcp.kakao.com/",
-      "tags": [
-        "MCP",
-        "플랫폼",
-        "에이전트",
-        "생태계"
-      ],
-      "summary": "카카오가 MCP 기반 AI 에이전트 생태계 플랫폼 PlayMCP를 공개했다. 다양한 MCP 서버를 등록·연결해 대화형 AI 경험을 만들 수 있는 플랫폼으로, 공공 분야에서도 MCP 생태계 확산의 참고 사례로 공유됐다.",
-      "id": "999efcd7e3a80a93"
-    },
-    {
-      "date": "2026-08-11",
-      "org": "개발 커뮤니티",
-      "org_type": "기타",
-      "source": "kakao",
-      "title": "디자인 구현 레퍼런스 보드 design-isms",
-      "collected_at": "2026-08-11",
-      "link": "https://lidge-jun.github.io/design-isms/",
-      "tags": [
-        "디자인",
-        "바이브코딩",
-        "레퍼런스",
-        "UI"
-      ],
-      "summary": "49개 디자인 사조(ism)의 시각적 레퍼런스를 효과·색상·타이포그래피·레이아웃·모션 주제별로 탐색하는 보드가 공개됐다. 바이브 코딩으로 화면을 만들 때 시각적 방향을 빠르게 정하도록 돕는 의사결정 보조와 AI 슬롭 진단 관점을 담았다.",
-      "id": "dfe9d069e330d1c8"
-    },
-    {
-      "date": "2026-08-11",
-      "org": "공직 현장(개인 개발)",
-      "org_type": "기타",
-      "source": "kakao",
-      "title": "공공조달 제도 88개 업무 흐름도 — 그 많던 조달은 어떻게 했을까",
-      "collected_at": "2026-08-11",
-      "link": "https://how-did-they-do-all-that-procurement.dali-n-narumi.workers.dev/",
-      "tags": [
-        "조달",
-        "법령",
-        "업무흐름도",
-        "행정"
-      ],
-      "summary": "입찰참가자격 등록부터 계약 체결, 대금 지급까지 국가계약법·시행령·계약예규에 흩어진 공공조달 제도 88개를 담당자·서류·기한이 보이는 업무 흐름도로 정리한 안내 사이트가 공개됐다. 모든 근거를 국가법령정보센터 현행 법령의 조문 단위로 연결해 검증했고 법령 기준일을 명시한다.",
-      "id": "a8fbf74431025f70"
-    },
-    {
-      "date": "2026-08-11",
-      "org": "공직 현장(개인 개발)",
-      "org_type": "기타",
-      "source": "kakao",
-      "title": "한 장으로 끝내는 조달제도 100",
-      "collected_at": "2026-08-11",
-      "link": "https://github.com/Milkbuttercheese2/procurement-system-100",
-      "tags": [
-        "조달",
-        "행정",
-        "오픈소스",
-        "업무구조도"
-      ],
-      "summary": "공공조달 제도 100개를 한 장씩의 구조도로 정리한 오픈소스 저장소가 공개됐다. 제도별 절차와 근거를 압축한 자료로, 조달 업무를 처음 맡은 실무자가 제도 전반을 빠르게 파악하도록 돕는다.",
-      "id": "798f4e6bef72fc13"
-    },
-    {
-      "date": "2026-08-11",
-      "org": "공직 현장(개인 개발)",
-      "org_type": "기타",
-      "source": "kakao",
-      "title": "공공데이터포털 인텔리전스 — 파일→API 전환 검토 큐",
-      "collected_at": "2026-08-11",
-      "link": "https://hosungseo.github.io/public-data-portal-intelligence/",
-      "tags": [
-        "공공데이터",
-        "API",
-        "데이터분석",
-        "우선순위"
-      ],
-      "summary": "공공데이터포털의 파일데이터 중 무엇을 먼저 API로 전환해야 하는지 검토 우선순위 큐로 보여주는 분석 도구가 공개됐다. 카탈로그 메타데이터와 연간 이용 이력을 결합해 수요 신호를 산출하고, 서로 다른 데이터 기준시점을 숨기지 않고 함께 표시하는 방법론을 담았다.",
-      "id": "6c5b15f4c8414f29"
-    },
-    {
-      "date": "2026-08-11",
-      "org": "공직 현장(개인 개발)",
-      "org_type": "기타",
-      "source": "kakao",
-      "title": "공공행정 리서치 스킬 — 공식 근거를 검토용 보고서로 정리",
-      "collected_at": "2026-08-11",
-      "link": "https://github.com/Kminer2053/public-sector-research-skill",
-      "tags": [
-        "리서치",
-        "보고서",
-        "AI스킬",
-        "행정"
-      ],
-      "summary": "공공업무에 필요한 공식 근거를 찾아 바로 검토할 수 있는 보고서 형태로 정리해주는 AI 리서치 스킬이 오픈소스로 공개됐다. 법령·지침 등 공식 자료 탐색과 보고서 초안 작성을 한 흐름으로 묶어 실무 검토 시간을 줄여준다.",
-      "id": "112bf7dc576ed8aa"
-    },
-    {
-      "source": "kakao",
-      "summary": "현장에서 사진만 찍으면 OCR로 현수막 내용을, 사진 메타데이터(EXIF)에서 위치정보를 자동 입력하는 불법현수막 단속 프로그램이 공개됐다. 즉시 입력과 일괄 업로드 두 방식을 지원하며, 단속 기록부터 행정처분 관제까지 이어지는 흐름으로 지자체 단속 업무의 반복 입력을 줄여준다.",
-      "org": "공직 현장(개인 개발)",
-      "collected_at": "2026-08-11",
-      "org_type": "기타",
-      "date": "2026-08-11",
-      "tags": [
-        "단속행정",
-        "OCR",
-        "현장업무",
-        "자동화"
-      ],
-      "title": "배너캅 — AI 불법현수막 단속·행정처분 관제 시스템",
-      "link": "https://banner.choshg.com/",
-      "id": "026e1b69c1fe6678"
-    },
-    {
-      "date": "2026-07-21",
-      "org": "광진구",
-      "case_url": "https://www.gwangjin.go.kr/portal/bbs/B0000002/view.do?nttId=6617521&menuNo=200191",
-      "source": "kakao",
-      "collected_at": "2026-08-11",
-      "title": "광진구, 공무원이 직접 개발한 AI 도구 6종 전 직원 업무 전면 투입",
-      "org_type": "지자체",
-      "link": "https://www.gwangjin.go.kr/portal/bbs/B0000002/view.do?nttId=6617521&menuNo=200191",
-      "tags": [
-        "도입사례",
-        "업무자동화",
-        "MCP",
-        "지방행정"
-      ],
-      "summary": "광진구가 소속 공무원이 직접 개발한 AI 도구 6종을 전 직원 업무에 투입했다. 문서 요약·재작성, 법령 근거 확인, 출처 포함 통계 조회, 건축물대장 조회, 비정형 주소 정리, 개인 PC 문서 검색을 담당하며 법령·통계·건축 도구는 기관 자체 AI 서비스와 연동해 원문과 출처를 함께 제시한다. 개인정보 입력 금지, 원문·출처 확인 의무, 담당자와 팀장의 최종 판단 책임, 전용 문의 창구 운영을 4대 관리 원칙으로 정했고, 행정안전부 주관 지방정부 AI 우수사례 발표대회에 서울시 대표로 선정됐다.",
-      "id": "9dc1a7081bc869b1"
-    },
-    {
-      "org": "법제처",
-      "case_url": "https://www.moleg.go.kr/board.es?mid=a10501000000&bid=0048&act=view&list_no=152980",
-      "title": "공무원이 직접 만든 'AI 법령 비서' 시범 개시",
-      "source": "kakao",
-      "date": "2026-07-13",
-      "link": "https://www.moleg.go.kr/board.es?mid=a10501000000&bid=0048&act=view&list_no=152980",
-      "summary": "공무원이 직접 개발한 'AI 법령 비서'가 범정부 시범 서비스를 시작했다. 독자 AI 파운데이션 모델과 RAG 기반으로 대법원 판례 6만 건, 법령·행정규칙 24만 건, 5개 시도 자치법규 5만여 건을 탑재해 정책 기획·입안·집행 과정의 법적 질문에 근거와 함께 응답한다. 중앙·지방 모든 공무원이 행정내부망의 '온 AI 실험실'에서 즉시 활용할 수 있으며, 답변은 최종 법적 판단이 아닌 중간 검토 자료로 쓰인다.",
-      "org_type": "중앙부처",
-      "collected_at": "2026-08-11",
-      "tags": [
-        "법령",
-        "RAG",
-        "독자AI모델",
-        "범정부"
-      ],
-      "id": "e2f85975979aa487"
-    },
-    {
-      "org_type": "기타",
-      "source": "kakao",
-      "title": "학교시설 업무 워크플로우 보드 — 26개 업무 전주기 정리",
-      "collected_at": "2026-08-12",
-      "org": "공직 현장(개인 개발)",
-      "tags": [
-        "학교시설",
-        "업무흐름도",
-        "행정",
-        "건축"
-      ],
-      "link": "https://seum8660.github.io/workflow/%ED%95%99%EA%B5%90%EC%8B%9C%EC%84%A4%20%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0%20%EC%9D%B8%ED%8A%B8%EB%A1%9C.dc.html",
-      "summary": "학교시설 사업의 기획부터 준공·사용승인까지 담당자가 실제로 밟는 절차를 정리한 워크플로우 보드가 공개됐다. 설계변경·공기연장·인허가·안전사고 등 26개 업무를 단계 게이트와 담당 주체 레인으로 나눠 같은 문법으로 읽을 수 있게 했고, 업무별 기한·법적 근거·병목 구간을 47장의 세부 절차 시트와 전자책 형태로 제공한다.",
-      "date": "2026-08-11",
-      "id": "def97ef350fe7cae"
-    },
-    {
-      "org_type": "기타",
-      "source": "kakao",
-      "title": "출장 여비 서류 자동화 오픈소스 — 신청서·명세서·복명서 일괄 생성",
-      "collected_at": "2026-08-12",
-      "org": "공직 현장(개인 개발)",
-      "tags": [
-        "출장정산",
-        "문서자동화",
-        "오픈소스",
-        "행정효율"
-      ],
-      "link": "https://github.com/kkhinlove-design/travel-expense-automation-kr",
-      "summary": "출장 승인 문서(PDF·HWPX)를 파싱해 여비를 계산하고 여비신청서·여비명세서·출장복명서를 세트로 만들어주는 자동화 도구가 오픈소스로 공개됐다. 복명서 본문은 로컬 LLM이 작성해 PDF로 출력하며, 기관별 서식을 넣어 맞춤 설정할 수 있어 반복적인 출장 정산 서류 작성을 줄여준다.",
-      "date": "2026-08-11",
-      "id": "e7949c7bc45ca8e6"
-    },
-    {
-      "source": "kakao",
-      "org": "공직 현장(개인 개발)",
-      "summary": "서울 열린데이터광장의 현행 카탈로그 8,251건을 자연어로 검색·추천해주는 메타검색 MCP 서버가 공개됐다. 실시간 도시데이터, 생활·체류인구, 지하철 승하차, 따릉이 등 서울시 공공데이터를 AI 도구에서 바로 탐색할 수 있게 해준다.",
-      "title": "서울 열린데이터광장 메타검색 MCP 공개",
-      "tags": [
-        "MCP",
-        "공공데이터",
-        "서울시",
-        "오픈소스"
-      ],
-      "link": "https://github.com/youjin8812-hub/seoul-opendata-mcp",
-      "org_type": "기타",
-      "collected_at": "2026-08-12",
-      "date": "2026-08-12",
-      "id": "ee30aa1cae172991"
-    },
-    {
-      "source": "kakao",
-      "org": "공직 현장(개인 개발)",
-      "summary": "해마다 공표되는 건설공사 표준품셈을 검색할 수 있는 MCP 서버가 공개됐다. PDF로만 제공되던 품셈 자료를 파싱해 AI 도구에서 바로 조회할 수 있게 한 것으로, 공사비 산출·원가계산 검토 등 건축·토목 직렬의 반복 업무를 줄이는 기반이 된다.",
-      "title": "건설공사 표준품셈 검색 MCP 공개",
-      "tags": [
-        "MCP",
-        "건설",
-        "표준품셈",
-        "공사행정"
-      ],
-      "link": "https://github.com/seum8660/pumsem",
-      "org_type": "기타",
-      "collected_at": "2026-08-12",
-      "date": "2026-08-12",
-      "id": "578e4da94db0682d"
-    },
-    {
-      "source": "threads",
-      "org": "공직 현장(개인 개발)",
-      "summary": "말이나 전화로 도움을 요청할 수 없는 위급 상황에서 CCTV 앞 정해진 팔 동작(7→9→7→9)을 반복하면 AI가 구조 가능성 후보를 관제요원에게 띄우는 PoC가 공개됐다. AI는 후보만 알리고 위험 확정과 신고는 사람이 판단하는 구조로, 폭염·낙상 등 사회재난 대응에서 음성 외의 구조요청 경로를 실험한다.",
-      "case_url": "https://github.com/obundh/gonggong-disaster-series-rescue79",
-      "title": "레스큐79 — CCTV 팔 동작 인식 구조요청 감지 PoC",
-      "tags": [
-        "사회재난",
-        "CCTV",
-        "영상인식",
-        "안전"
-      ],
-      "link": "https://www.threads.com/@chobu62/post/Db735IZj7vM",
-      "org_type": "기타",
-      "collected_at": "2026-08-12",
-      "date": "2026-08-12",
-      "id": "759835514b4b7ca4"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
-      "popularity": 2443,
-      "summary": "법제처 국가법령정보를 LLM에서 바로 조회하는 MCP 서버가 공개됐다. 헌법부터 판례까지 법령 17만 5천여 건을 64개 도구로 검색하고 AI 답변의 인용 조문을 검증해 법령 환각을 줄인다. 공개 50일 만에 기관 내부망 AI에 법령 에이전트로 공식 등록되는 등 공직 실무 법령 MCP 생태계의 대표 저장소로 자리잡았다.",
-      "tags": [
-        "MCP",
-        "법령",
-        "오픈소스",
-        "인용검증"
-      ],
-      "date": "2026-08-12",
-      "org": "공직 현장(개인 개발)",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/chrisryugj/korean-law-mcp",
-      "id": "43dc7f4ab2500260"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "LexGuard MCP — 일반인용 법률 정보 조회",
-      "popularity": 127,
-      "summary": "일반인이 AI를 통해 법률 정보를 쉽게 조회할 수 있게 만든 MCP 서버가 공개됐다. 법령 검색, 조문 조회, 판례 검색 등 159개 API를 지원한다.",
-      "tags": [
-        "MCP",
-        "법령",
-        "판례",
-        "오픈소스"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/SeoNaRu/lexguard-mcp",
-      "id": "81c14797b7aaafa0"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "korean-law-mcp — 한국 법령 조회 MCP",
-      "summary": "한국 법령 정보를 AI 도구에서 조회할 수 있게 하는 MCP 서버가 공개됐다. 법령 검색과 조문 접근을 제공하는 파이썬 구현체다.",
-      "tags": [
-        "MCP",
-        "법령",
-        "오픈소스"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/SeoNaRu/korean-law-mcp",
-      "id": "10f6ec0f81090085"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "law-mcp — 국가법령정보 공동활용 API MCP",
-      "summary": "국가법령정보 공동활용(open.law.go.kr) API를 통해 법령 데이터에 접근하는 실험적 MCP 서버가 공개됐다. Claude Code 등 MCP 지원 도구에서 동작한다.",
-      "tags": [
-        "MCP",
-        "법령",
-        "오픈소스"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/finalchild/law-mcp",
-      "id": "22be065e9c257d93"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "한국 공공데이터 통합 MCP — 법령·DART·공공데이터포털",
-      "summary": "법제처 국가법령정보센터, DART 전자공시시스템, 공공데이터포털 API를 하나로 통합한 MCP 서버가 공개됐다. 법령·판례·기업공시·생활정보를 한 도구에서 검색·조회할 수 있다.",
-      "tags": [
-        "MCP",
-        "공공데이터",
-        "법령",
-        "공시"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/hjsh200219/korea-public-data-mcp",
-      "id": "ed42c0e326a6d068"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "법제처 OPEN API 통합 MCP — 130여 개 도구",
-      "summary": "법제처 OPEN API를 통합해 130개 이상의 도구를 제공하는 MCP 서버가 공개됐다. 법령·행정규칙·자치법규·판례·위원회 결정문·조약·별표서식·법령용어·특별행정심판·중앙부처 해석까지 법률 정보 전반에 접근할 수 있다.",
-      "tags": [
-        "MCP",
-        "법령",
-        "행정규칙",
-        "오픈소스"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/ChangooLee/mcp-kr-legislation",
-      "id": "daab018ffea87c77"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "법령 온톨로지 검색 MCP — 법제처 LOD SPARQL 기반",
-      "summary": "법제처의 LOD(연결 개방 데이터)를 SPARQL로 질의하는 법령 검색 MCP 서버가 공개됐다. 법령 간 관계를 온톨로지 구조로 탐색할 수 있게 한다.",
-      "tags": [
-        "MCP",
-        "법령",
-        "온톨로지",
-        "LOD"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/wintenboy/law-ontology-mcp",
-      "id": "05763974d3375178"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "나라장터 MCP 서버",
-      "summary": "나라장터의 공공조달 데이터를 AI 도구에서 조회할 수 있게 하는 MCP 서버가 공개됐다. 입찰·계약 정보 탐색을 자연어로 수행하는 기반을 제공한다.",
-      "tags": [
-        "MCP",
-        "조달",
-        "나라장터"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/Datajang/narajangteo_mcp_server",
-      "id": "b37636486ec1dee4"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "나라장터 데이터 수집·가공 MCP",
-      "summary": "나라장터 API의 데이터를 수집·가공해 MCP 형태로 제공하는 서버가 공개됐다. Go로 구현되어 조달 데이터를 AI 도구에서 활용할 수 있게 한다.",
-      "tags": [
-        "MCP",
-        "조달",
-        "나라장터",
-        "오픈소스"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/nine-hundred/naramarket-mcp",
-      "id": "146501d37df93aa2"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "나라장터(G2B) 조달 조회 MCP — 15개 도구",
-      "summary": "나라장터(G2B) 공공조달 데이터를 조회하는 15개 AI 도구를 담은 MCP 서버가 공개됐다. FastMCP 2.0 기반으로 Smithery 배포를 지원해 바로 연결해 쓸 수 있다.",
-      "tags": [
-        "MCP",
-        "조달",
-        "나라장터"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/alphago2580/naramarketmcp",
-      "id": "27c2fd1b292cfcbf"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "정부 공공데이터 5종 통합 MCP — 중기부·정부24·기업마당 등",
-      "summary": "중소벤처기업부·정부24·기업마당·나라장터·중소벤처24 등 정부 공공데이터 5종을 한 번에 호출하는 MCP 서버가 공개됐다. 지원사업·민원·조달 정보를 한 도구에서 조회할 수 있다.",
-      "tags": [
-        "MCP",
-        "공공데이터",
-        "지원사업"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/leokim90/gov-data-mcp",
-      "id": "952ab7cccb367db6"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "한국 주식 분석 MCP",
-      "popularity": 170,
-      "summary": "한국 주식 분석을 위한 MCP 서버가 공개됐다. 국내 증시 데이터를 AI 도구에서 조회·분석할 수 있게 한다.",
-      "tags": [
-        "MCP",
-        "금융",
-        "주식"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/jjlabsio/korea-stock-mcp",
-      "id": "e07be0004494e652"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "DART 전자공시 MCP",
-      "popularity": 127,
-      "summary": "금융감독원 DART 전자공시시스템 데이터를 AI 도구에서 조회하는 MCP 서버가 공개됐다. 기업 공시 탐색을 자연어로 수행할 수 있다.",
-      "tags": [
-        "MCP",
-        "공시",
-        "금융"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/2geonhyup/dart-mcp",
-      "id": "13342535139dd7a0"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "OpenDART 전자공시 MCP — 83개 API를 15개 도구로",
-      "summary": "OpenDART의 83개 공시 API를 15개 MCP 도구로 정리한 서버가 공개됐다. 공시·재무·지분·XBRL 조회에 애널리스트 분석 프레임(내부자 시그널, 회계 리스크, 퀄리티 체크리스트)과 HWP·PDF 첨부의 마크다운 변환까지 결합했다.",
-      "tags": [
-        "MCP",
-        "공시",
-        "금융",
-        "문서변환"
-      ],
-      "date": "2026-08-12",
-      "org": "공직 현장(개인 개발)",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/chrisryugj/korean-dart-mcp",
-      "id": "83bb0ac0ed9f576d"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "한국 금융 통합 MCP — ECOS·부동산·DART·KRX",
-      "summary": "한국은행 ECOS, 부동산, DART, KRX를 아우르는 15개 도구의 금융 MCP 서버가 공개됐다. 자본시장법을 준수하는 설계를 표방하며 한국 특화 연계 분석 도구 2종을 더했다.",
-      "tags": [
-        "MCP",
-        "금융",
-        "공공데이터"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/emceeKim/korea-finance-mcp",
-      "id": "4925d016e9377a50"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "한국 주식 분석 원격 MCP — DART·KRX 기반",
-      "summary": "DART 공시와 KRX 시세를 바탕으로 보수적 밸류에이션 범위를 제시하는 원격 MCP 서버가 공개됐다. Claude·Cursor 등 MCP 클라이언트에서 바로 연결해 쓸 수 있다.",
-      "tags": [
-        "MCP",
-        "금융",
-        "주식",
-        "공시"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/Mrbaeksang/korea-stock-analyzer-mcp",
-      "id": "9070c4f923623855"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "DART 전자공시 API MCP 서버",
-      "summary": "전자공시시스템(DART) API를 활용하는 MCP 서버가 공개됐다. 기업 공시 데이터를 AI 도구에서 조회할 수 있게 한다.",
-      "tags": [
-        "MCP",
-        "공시",
-        "금융"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/snaiws/DART-mcp-server",
-      "id": "b9da6eddda89513d"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "pykrx 기반 KRX 시세 MCP",
-      "summary": "국내 증시 데이터 라이브러리 pykrx를 MCP 서버로 감싼 도구가 공개됐다. KRX 시세·종목 데이터를 AI 도구에서 조회할 수 있다.",
-      "tags": [
-        "MCP",
-        "금융",
-        "주식"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/sharebook-kr/pykrx-mcp",
-      "id": "9aee6bbb0c29dddb"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "LS증권 OpenAPI MCP — 시세·차트·스크리너 자연어 조회",
-      "summary": "LS증권 OpenAPI를 자연어로 다루는 MCP 서버가 공개됐다. 국내외 시세·차트·스크리너·ETF·프로그램 매매·포트폴리오 데이터를 AI 도구에서 조회할 수 있다.",
-      "tags": [
-        "MCP",
-        "금융",
-        "증권"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/redoxnet/mcp-lsopenapi",
-      "id": "991e9f9e7b324692"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "아파트 실거래가 MCP — 국토교통부 공개 API 기반",
-      "popularity": 368,
-      "summary": "국토교통부 공개 API로 한국 아파트 실거래가를 조회하는 MCP 서버가 공개됐다. AI 도구에 아파트 가격을 자연어로 물어볼 수 있게 해 큰 호응을 얻었다.",
-      "tags": [
-        "MCP",
-        "부동산",
-        "공공데이터"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/tae0y/real-estate-mcp",
-      "id": "75b9815de6b6dcf5"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "공공데이터 카탈로그 조합 설계 MCP",
-      "summary": "대한민국 공공데이터 카탈로그의 정적 메타데이터를 조합해 서비스 아이디어를 설계하도록 돕는 MCP가 공개 베타로 나왔다. 어떤 데이터가 있는지부터 탐색해 조합 가능성을 검토하는 용도다.",
-      "tags": [
-        "MCP",
-        "공공데이터",
-        "기획"
-      ],
-      "date": "2026-08-12",
-      "org": "공직 현장(개인 개발)",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/obundh/korea-public-data-catalog-mcp",
-      "id": "d69be456031471a4"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "KOSIS 통계 자연어 조회 MCP",
-      "summary": "국가통계포털(KOSIS) 통계를 자연어로 조회하는 MCP 서버가 공개됐다. 통계표 탐색과 조회를 AI 도구에서 바로 수행할 수 있다.",
-      "tags": [
-        "MCP",
-        "통계",
-        "공공데이터"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/Dayoooun/korea-stats-mcp",
-      "id": "09f079e1424f6992"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "통계청 API MCP",
-      "summary": "통계청 API를 활용한 MCP 서버가 공개됐다. 국가 통계 데이터를 AI 도구에서 조회할 수 있게 한다.",
-      "tags": [
-        "MCP",
-        "통계",
-        "공공데이터"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/jaykim429/korea-statistic-MCP-cginside",
-      "id": "0011a7e888431aeb"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "공공데이터 5종 연결 MCP — 날씨·실거래가·대기질·경제통계·사업자조회",
-      "summary": "날씨, 부동산 실거래가, 대기질, 경제통계, 사업자 조회까지 한국 공공데이터 5종을 AI에 연결하는 MCP 서버가 공개됐다.",
-      "tags": [
-        "MCP",
-        "공공데이터",
-        "생활정보"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/SongT-50/korean-public-data-mcp",
-      "id": "b6f4cc079eb86f11"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
-      "popularity": 7142,
-      "summary": "'에이전트를 한국인으로'를 표방하는 한국 특화 AI 스킬 모음집이 공개됐다. 법령 조회 등 한국 실무에 필요한 스킬을 모아 커스텀 MCP가 막힌 환경에서도 스킬 설치만으로 한국형 기능을 쓸 수 있게 한다.",
-      "tags": [
-        "AI스킬",
-        "오픈소스",
-        "한국특화"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/NomaDamas/k-skill",
-      "id": "2f4ed1e68a6464c5"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "건축HUB MCP — 건축물대장·인허가·필지 종합카드",
-      "summary": "국토교통부 건축HUB를 MCP 서버로 감싼 도구가 공개됐다. 건축물대장·건축/주택 인허가·법정동코드에 한 필지 종합카드, 동 단위 통계, 노후건축물 분석을 더했고 공용키를 탑재한 원격 커넥터로 URL 등록만으로 연결된다.",
-      "tags": [
-        "MCP",
-        "건축",
-        "공공데이터"
-      ],
-      "date": "2026-08-12",
-      "org": "공직 현장(개인 개발)",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/chrisryugj/archhub-mcp",
-      "id": "76f07692203606ad"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "실거래가×건축물대장 역매칭 MCP",
-      "summary": "국토부 실거래가와 건축물대장을 역매칭해 서울 상업업무용 통건물의 실거래·시세를 조회하는 MCP 서버가 공개됐다. 두 공공데이터를 결합해 개별 건물 단위 분석을 가능하게 한다.",
-      "tags": [
-        "MCP",
-        "부동산",
-        "공공데이터"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/syleedlabs/deal-locator-mcp",
-      "id": "8f1e3c48b2baa6d2"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "기상청 날씨 MCP 서버",
-      "summary": "기상청 데이터를 활용하는 날씨 MCP 서버가 공개됐다. AI 도구에서 국내 날씨 정보를 자연어로 조회할 수 있다.",
-      "tags": [
-        "MCP",
-        "날씨",
-        "공공데이터"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/ohhan777/korea_weather",
-      "id": "56c2bb56426019ec"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "국회 API MCP — 국회·국민참여입법 API 통합",
-      "summary": "276개 국회 API와 8개 국민참여입법센터 API에 100% 접근하는 MCP 서버가 공개됐다. 6개 Lite·10개 Full 프로필 도구로 구성되어 의안·의원·회의록 등 입법 데이터를 AI 도구에서 조회할 수 있으며 107개 API 코드가 검증돼 있다.",
-      "tags": [
-        "MCP",
-        "국회",
-        "입법",
-        "공공데이터"
-      ],
-      "date": "2026-08-12",
-      "org": "공공기관 연구자(개인 개발)",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/hollobit/assembly-api-mcp",
-      "id": "f8c9ae69a673c52a"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "정부 지원사업 조회 MCP",
-      "summary": "정부 지원사업 정보를 AI 도구에서 조회할 수 있게 하는 MCP 서버가 공개됐다. 지원사업 탐색을 자연어로 수행하는 기반을 제공한다.",
-      "tags": [
-        "MCP",
-        "지원사업",
-        "공공데이터"
-      ],
-      "date": "2026-08-12",
-      "org": "공직 현장(개인 개발)",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/boam79/gov_support_mcp",
-      "id": "bef8ee3811d115e4"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "도서관 정보나루 MCP — 도서·도서관 검색 25개 도구",
-      "summary": "도서관 정보나루 API 기반의 MCP 서버가 공개됐다. 도서·도서관 검색, 인기 대출 트렌드, GPS 기반 주변 도서관 찾기 등 25개 이상의 도구를 제공한다.",
-      "tags": [
-        "MCP",
-        "도서관",
-        "공공데이터"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/isnow890/data4library-mcp",
-      "id": "0561ecd39ea94051"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "식약처 식품영양성분DB MCP",
-      "summary": "식품의약품안전처의 식품영양성분 데이터베이스를 MCP 도구로 감싼 서버가 공개됐다. 식품 영양 정보를 AI 도구에서 조회할 수 있다.",
-      "tags": [
-        "MCP",
-        "식품",
-        "공공데이터"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/slicequeue/k-mfds-fooddb-mcp-server",
-      "id": "966d6a2ae42587a4"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "KORAIL 공공데이터 MCP 서버 모음",
-      "summary": "한국철도공사(KORAIL) 공공데이터를 다루는 MCP 서버 모음이 공개됐다. 철도 관련 데이터를 AI 도구에서 조회할 수 있게 한다.",
-      "tags": [
-        "MCP",
-        "철도",
-        "공공데이터"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/lovelyquality/korail-mcp",
-      "id": "6a9c5da9f1d3210f"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커",
-      "popularity": 291,
-      "summary": "비개발자를 위한 한국 실무 AI 코워커 패밀리가 공개됐다. Claude Cowork·ChatGPT Work에서 명령 한 번으로 프로젝트를 시작할 수 있게 해 실무자의 AI 활용 진입장벽을 낮춘다.",
-      "tags": [
-        "AI스킬",
-        "실무도구",
-        "오픈소스"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/modu-ai/moai-cowork",
-      "id": "c5aa260668941b92"
-    },
-    {
-      "collected_at": "2026-08-12",
-      "title": "건설현장 법정 안전문서 작성·검토 오픈소스",
-      "summary": "산업안전보건법·기준규칙·중대재해처벌법·KOSHA Guide를 기반으로 건설현장의 법정 안전문서 작성과 검토를 돕는 오픈소스 도구가 공개됐다. 안전관리자와 현장소장의 반복 문서 업무를 더 빠르고 정확하게 만드는 것을 목표로 한다.",
-      "tags": [
-        "안전",
-        "건설",
-        "문서자동화",
-        "법령"
-      ],
-      "date": "2026-08-12",
-      "org": "개발 커뮤니티",
-      "source": "kakao",
-      "org_type": "기타",
-      "link": "https://github.com/ratelworks/agent-safety-oss",
-      "id": "05c30a6088be7960"
-    },
-    {
-      "summary": "식품의약품안전처 공공 OpenAPI를 10개 MCP 도구로 노출하는 서버가 공개됐다. 의약품 정보, 병용금기(DUR), 알약 식별, 식품 정보를 AI 도구에서 조회할 수 있다.",
-      "date": "2026-08-13",
-      "collected_at": "2026-08-13",
-      "title": "식약처 의약품 OpenAPI MCP — 의약품·DUR·알약식별",
-      "org_type": "기타",
-      "org": "개발 커뮤니티",
-      "link": "https://github.com/zzjiho/kr-medicine-mcp",
-      "tags": [
-        "MCP",
-        "의료",
-        "식약처",
-        "공공데이터"
-      ],
-      "source": "kakao",
-      "id": "5bfadfc3b8e2292f"
-    },
-    {
-      "summary": "공공데이터포털의 심평원·식약처 의료 데이터를 다루는 MCP 서버가 공개됐다. 비급여 진료비, 병원 찾기, 의약품·DUR, 질병 통계를 AI 도구에서 조회할 수 있다.",
-      "date": "2026-08-13",
-      "collected_at": "2026-08-13",
-      "title": "공공 의료 데이터 MCP — 심평원·식약처 통합",
-      "org_type": "기타",
-      "org": "개발 커뮤니티",
-      "link": "https://github.com/NSLC7779/dk-korea-health-mcp",
-      "tags": [
-        "MCP",
-        "의료",
-        "공공데이터"
-      ],
-      "source": "kakao",
-      "id": "ec4f975c809401cb"
-    },
-    {
-      "summary": "대한민국 국회를 질문으로 탐색하고 공식 기록으로 검증하는 MCP 서버가 공개됐다. 법안·처리상태·위원회·회의록·검토보고서와 의원·정부 발언을 하나로 연결해 입법 논의 전체 맥락을 추적할 수 있다.",
-      "date": "2026-08-13",
-      "collected_at": "2026-08-13",
-      "title": "국회 법안·회의록 탐색 MCP — 공식 기록 검증",
-      "org_type": "기타",
-      "org": "개발 커뮤니티",
-      "link": "https://github.com/epoko77-ai/korean-bill-debate-mcp",
-      "tags": [
-        "MCP",
-        "국회",
-        "입법",
-        "공공데이터"
-      ],
-      "source": "kakao",
-      "id": "a7abbaedd53db684"
-    },
-    {
-      "summary": "국가연구개발(정부 R&D) 규정 검토용 MCP 서버가 공개됐다. 국가연구개발혁신법·시행령과 행정규칙 55종을 AI로 검색·검토할 수 있어 연구비·과제 규정 확인 업무를 줄여준다.",
-      "date": "2026-08-13",
-      "collected_at": "2026-08-13",
-      "title": "정부 R&D 규정 검토 MCP — 혁신법·행정규칙 55종",
-      "org_type": "기타",
-      "org": "개발 커뮤니티",
-      "link": "https://github.com/smilemin07/korean-rnd-regs-mcp",
-      "tags": [
-        "MCP",
-        "R&D",
-        "법령",
-        "연구행정"
-      ],
-      "source": "kakao",
-      "id": "ce2287d57e6bacaa"
-    },
-    {
-      "summary": "한국 우주·항공·국방우주 분야 정부 R&D 지원사업 공고 데이터셋과 이를 다루는 크롤러·분류기·MCP·REST API가 공개됐다. 분야 특화 공고 탐색을 AI 도구에서 수행할 수 있다.",
-      "date": "2026-08-13",
-      "collected_at": "2026-08-13",
-      "title": "우주·항공 정부 R&D 지원사업 공고 MCP",
-      "org_type": "기타",
-      "org": "개발 커뮤니티",
-      "link": "https://github.com/AgentBridge-Lab/korea-space-support-mcp",
-      "tags": [
-        "MCP",
-        "우주항공",
-        "지원사업",
-        "R&D"
-      ],
-      "source": "kakao",
-      "id": "2beb100ecc126fb2"
-    },
-    {
-      "link": "https://github.com/gong-yeongbin/mcp-seoul-rtd",
-      "org_type": "기타",
-      "source": "kakao",
-      "summary": "서울 주요 121개 장소의 실시간 혼잡도·교통·날씨를 조회하는 MCP 서버가 공개됐다. 서울시 실시간 도시데이터를 AI 도구에서 자연어로 확인할 수 있다.",
-      "date": "2026-08-13",
-      "tags": [
-        "MCP",
-        "서울시",
-        "실시간데이터",
-        "공공데이터"
-      ],
-      "title": "서울 실시간 도시데이터 MCP — 121개 장소 혼잡도·교통·날씨",
-      "org": "개발 커뮤니티",
-      "collected_at": "2026-08-13",
-      "id": "ca5651ea46caa07f"
-    },
-    {
-      "link": "https://github.com/hlucent/construction-alert-mcp",
-      "org_type": "기타",
-      "source": "kakao",
-      "summary": "서울시 건설알림이 데이터를 AI 도구에서 조회하는 MCP 서버가 공개됐다. 주변 공사 정보를 자연어로 탐색할 수 있게 한다.",
-      "date": "2026-08-13",
-      "tags": [
-        "MCP",
-        "서울시",
-        "건설",
-        "공공데이터"
-      ],
-      "title": "서울시 건설알림이 MCP",
-      "org": "개발 커뮤니티",
-      "collected_at": "2026-08-13",
-      "id": "bc609dfe7f04d6ed"
-    },
-    {
-      "link": "https://github.com/jinjukimink/seoul-parking-mcp",
-      "org_type": "기타",
-      "source": "kakao",
-      "summary": "서울시 공영주차장 정보를 제공하는 MCP 서버가 공개됐다. 주차장 위치·현황을 AI 도구에서 조회할 수 있다.",
-      "date": "2026-08-13",
-      "tags": [
-        "MCP",
-        "서울시",
-        "주차",
-        "공공데이터"
-      ],
-      "title": "서울시 공영주차장 MCP",
-      "org": "개발 커뮤니티",
-      "collected_at": "2026-08-13",
-      "id": "5c3cb7251749ab2e"
-    },
-    {
-      "link": "https://github.com/Seo-yul/geup-ddong-seoul-mcp",
-      "org_type": "기타",
-      "source": "kakao",
-      "summary": "서울시 공중화장실을 조회하는 MCP 서버가 공개됐다. 가까운 화장실과 지금 열려 있는 화장실을 찾아주며 Streamable HTTP 방식으로 바로 연결할 수 있다.",
-      "date": "2026-08-13",
-      "tags": [
-        "MCP",
-        "서울시",
-        "생활정보",
-        "공공데이터"
-      ],
-      "title": "서울시 공중화장실 조회 MCP — 급똥서울",
-      "org": "개발 커뮤니티",
-      "collected_at": "2026-08-13",
-      "id": "3ba829c8e42e7cc7"
-    },
-    {
-      "link": "https://github.com/hlucent/seoul-air-quality-mcp",
-      "org_type": "기타",
-      "source": "kakao",
-      "summary": "서울시 대기환경 공공데이터를 AI가 조회할 수 있게 만든 MCP 서버가 공개됐다. 미세먼지 등 대기질 정보를 자연어로 확인할 수 있다.",
-      "date": "2026-08-13",
-      "tags": [
-        "MCP",
-        "서울시",
-        "대기질",
-        "공공데이터"
-      ],
-      "title": "서울시 대기환경 MCP",
-      "org": "개발 커뮤니티",
-      "collected_at": "2026-08-13",
-      "id": "92bbbba967365291"
-    },
-    {
-      "date": "2026-08-13",
-      "source": "kakao",
-      "org": "개발 커뮤니티",
-      "org_type": "기타",
-      "tags": [
-        "MCP",
-        "개인정보",
-        "법령",
-        "소상공인"
-      ],
-      "collected_at": "2026-08-13",
-      "title": "개인정보보호법 쉬운 안내 MCP — 소상공인·개인용",
-      "link": "https://github.com/scvcoder/korean-privacy-law-mcp",
-      "summary": "중소기업, 소형 병원·약국·학원 등 소상공인과 개인을 위해 개인정보보호법을 쉽게 설명해주는 MCP 서버가 공개됐다. 37개 도구에 개인정보 가이드와 상담사례 2,202개 청크를 탑재해 어려운 개인정보 규정을 사례 기반으로 풀어서 알려준다.",
-      "id": "c864500e8cf1d78d"
-    },
-    {
-      "source": "threads",
-      "collected_at": "2026-08-13",
-      "title": "인사·노무 뉴스 추천 자동발송 프로그램 개발",
-      "tags": [
-        "인사노무",
-        "뉴스분석",
-        "자동화",
-        "텍스트분석"
-      ],
-      "org_type": "기타",
-      "date": "2026-07-02",
-      "summary": "공공기관 인사팀 내부용으로 공개 기사를 수집해 본문을 텍스트 분석하고, 인사·노무 업무 관련성·중요도·이슈성을 점수화해 기준 점수 이상의 뉴스만 추천 발송하는 프로그램이 개발됐다. 내부자료·개인정보 없이 공개 기사만 활용하며, 점수 기준을 설명 가능하게 설계한 것이 핵심으로 소개됐다.",
-      "link": "https://www.threads.com/@changil.k/post/DaSDwqfk93O",
-      "org": "공직 현장(개인 개발)",
-      "id": "e52e2378641903f4"
-    },
-    {
-      "date": "2026-07-21",
-      "org": "공직 현장(개인 개발)",
-      "title": "업무구조도 생성기 korea100studio 오픈소스 공개",
-      "summary": "국가 제도 509개의 업무구조도를 세로 흐름도로 그려 온 제도100 프로젝트의 생성기 도구가 오픈소스로 공개됐다. 제도·절차를 담당·단계 중심의 구조도로 그리는 제작 도구를 누구나 가져다 쓸 수 있게 해, 기관·개인이 자기 업무의 구조도를 같은 문법으로 만들 수 있게 한다.",
-      "case_url": "https://github.com/hosungseo/korea100studio",
-      "collected_at": "2026-08-14",
-      "source": "threads",
-      "link": "https://www.threads.com/@gongpenclaw/post/DbB6Zmck3t1",
-      "org_type": "기타",
-      "tags": [
-        "업무구조도",
-        "오픈소스",
-        "행정",
-        "시각화"
-      ],
-      "id": "f0c21de2b0af63b3"
-    },
-    {
-      "source": "kakao",
-      "title": "맥 전용 로컬 실시간 음성전사 도구 murmur 공유",
-      "link": "https://github.com/jkf87/murmur",
-      "date": "2026-08-14",
-      "summary": "애플 실리콘 맥에서 실시간 음성 전사와 번역을 로컬로 수행하는 오픈소스 도구가 공유됐다. 녹음 파일을 외부로 보낼 수 없는 보안 환경에서 상담·회의 전사를 개인 장비의 로컬 모델로 처리하는 대안으로 소개됐다.",
-      "org": "공직 커뮤니티",
-      "org_type": "기타",
-      "tags": [
-        "STT",
-        "로컬모델",
-        "오픈소스",
-        "회의록"
-      ],
-      "collected_at": "2026-08-14",
-      "id": "cbda9aefec586c48"
-    },
-    {
-      "source": "kakao",
-      "title": "경기도의회 법령·자치법규 나무 베타 공개",
-      "link": "https://ggc-lawtree.vercel.app/",
-      "date": "2026-08-14",
-      "summary": "경기도의회에서 임기제로 근무하는 법 전문가가 법령과 자치법규를 분야별 나무 구조로 탐색할 수 있는 대민 서비스를 베타로 공개했다. 흩어져 있는 법령·자치법규를 분야 체계로 정리해 의회·주민이 관련 규정을 쉽게 찾도록 돕는다.",
-      "org": "경기도의회",
-      "org_type": "지자체",
-      "tags": [
-        "법령",
-        "자치법규",
-        "의회",
-        "대민서비스"
-      ],
-      "collected_at": "2026-08-14",
-      "id": "5e76949a3f487274"
-    },
-    {
-      "source": "kakao",
-      "title": "하이패스 경비 정산 자동화 도구",
-      "link": "https://ggc-hipass.vercel.app/member/",
-      "date": "2026-08-14",
-      "summary": "의원별 하이패스 이용 내역을 API로 불러와 경비 정산을 자동화하는 도구가 경기도의회 실무자에 의해 개발·공유됐다. 개별 카드로 흩어진 통행료 내역 취합을 자동화한 사례로, 현재는 API 연동 기간이 끝나 재연동을 검토 중이다.",
-      "org": "경기도의회",
-      "org_type": "지자체",
-      "tags": [
-        "경비정산",
-        "API연동",
-        "의회",
-        "자동화"
-      ],
-      "collected_at": "2026-08-14",
-      "id": "31a47960ddebd977"
-    },
-    {
-      "source": "kakao",
-      "title": "범정부오피스 — 공무원이 만든 공문서 편집 자동화 프로그램",
-      "link": "https://youtu.be/e5ltUQbRDAo",
-      "date": "2026-08-14",
-      "summary": "간호직 공무원이 혼자 예산 없이 개발해 온 공문서 편집 자동화 프로그램 범정부오피스가 소개됐다. 혁신24 자료실을 통해 배포되어 여러 기관에서 쓰이고 있으며, 커뮤니티에서 공무원 자발 개발 도구의 선구 사례로 꼽힌다.",
-      "org": "공직 현장(개인 개발)",
-      "org_type": "기타",
-      "tags": [
-        "문서자동화",
-        "공문서",
-        "확산",
-        "행정효율"
-      ],
-      "collected_at": "2026-08-14",
-      "id": "145a534a79c6fc53"
-    },
-    {
-      "collected_at": "2026-08-14",
-      "source": "kakao",
-      "org": "경기도의회",
-      "summary": "경기도의회가 일상의 궁금증과 이웃 간 분쟁을 시·군 조례와 대한민국 법령 근거로 풀어주는 대민 AI 안내 서비스를 베타로 공개했다. 자연어로 법을 물어보면 지역 조례를 근거와 함께 안내하고, 조례 이야기·의원별 조례·건의함 코너로 주민 참여까지 연결한다.",
-      "date": "2026-08-14",
-      "tags": [
-        "법령",
-        "조례",
-        "대민서비스",
-        "AI상담"
-      ],
-      "org_type": "지자체",
-      "link": "https://thislaw.co.kr",
-      "title": "세상에 그런법이 어딨어요? — 경기도의회 AI 법·조례 안내 서비스",
-      "id": "791311495e38151c"
-    },
-    {
-      "collected_at": "2026-08-14",
-      "source": "kakao",
-      "org": "CODEF(민간)",
-      "summary": "공공기관·금융기관의 데이터를 표준화된 API로 연동해주는 민간 구독형 API 플랫폼이 공유됐다. 정부·공공 서비스의 데이터를 애플리케이션에서 바로 활용할 수 있게 하는 민간 인프라로, 공공 데이터 연동 개발의 참고 사례로 소개됐다.",
-      "date": "2026-08-14",
-      "tags": [
-        "API",
-        "데이터연동",
-        "민간인프라",
-        "핀테크"
-      ],
-      "org_type": "기타",
-      "link": "https://codef.io",
-      "title": "CODEF — 공공·금융 데이터 연동 구독형 API 플랫폼",
-      "id": "611503a5916453a3"
-    },
-    {
-      "collected_at": "2026-08-14",
-      "source": "kakao",
-      "org": "공직 커뮤니티",
-      "summary": "HTML 슬라이드 덱에 어울리는 밈을 계획·수집해 삽입해주는 Claude Code·Codex용 도구가 공개됐다. AI로 만드는 발표자료에 유머 요소를 더해 전달력을 높이는 실무 보조 도구로 공직 커뮤니티에서 공유됐다.",
-      "date": "2026-08-14",
-      "tags": [
-        "발표자료",
-        "바이브코딩",
-        "오픈소스",
-        "슬라이드"
-      ],
-      "org_type": "기타",
-      "link": "https://github.com/amnotyoung/slide-meme-inserter",
-      "title": "발표 슬라이드 밈 삽입 도구 slide-meme-inserter",
-      "id": "7ac3b301c1a8f79d"
-    },
-    {
-      "collected_at": "2026-08-14",
-      "source": "kakao",
-      "org": "개발 커뮤니티",
-      "summary": "정치인·정당·법안·법률·표결·선거 데이터를 국회·정부 공식 자료 기반으로 조회하는 공개 데이터베이스 폴리위키가 공유됐다. 최근 통과 법안과 본회의 표결, 법률 변화를 타임라인으로 보여주고 지금 참여할 수 있는 입법예고·국민동의청원까지 안내한다.",
-      "date": "2026-08-14",
-      "tags": [
-        "입법",
-        "국회",
-        "공공데이터",
-        "시민참여"
-      ],
-      "org_type": "기타",
-      "link": "https://poliwiki.kr",
-      "title": "폴리위키 — 공직·입법 공개 데이터베이스",
-      "id": "789c1267f63c3b01"
-    },
-    {
-      "collected_at": "2026-08-14",
-      "source": "kakao",
-      "org": "개발 커뮤니티",
-      "summary": "한글(HWP/HWPX) 문서를 브라우저와 터미널에서 열고 고치고 내보내는 자체 엔진 오토한글이 오픈소스로 공개됐다. 파싱부터 조판·렌더링·편집·PDF 출력까지 자체 구현했고 Rust·웹어셈블리 기반에 MCP와 CLI를 제공해 AI 도구에서 한글 문서를 직접 다룰 수 있게 한다.",
-      "date": "2026-08-14",
-      "tags": [
-        "HWP",
-        "문서자동화",
-        "MCP",
-        "오픈소스"
-      ],
-      "org_type": "기타",
-      "link": "https://github.com/kwakseongjae/auto-hwp",
-      "title": "오토한글 — 브라우저·터미널용 HWP 편집 엔진",
-      "id": "e18d5e018e0cd10d"
-    },
-    {
-      "collected_at": "2026-08-14",
-      "source": "kakao",
-      "org": "과학기술정보통신부·NIA",
-      "summary": "생활 속 AI 활용 노하우를 공유하고 'AI 달인'에 도전하는 전국민 AI 경진대회 AI 달인 100 챌린지가 시작됐다. 일상·학업·업무 생산성·취미 등 시즌별 주제로 11월까지 진행되며, 국민 누구나 AI 활용 사례를 제출해 겨루는 방식으로 AI 확산을 유도한다.",
-      "date": "2026-08-12",
-      "tags": [
-        "AI확산",
-        "경진대회",
-        "교육",
-        "전국민"
-      ],
-      "org_type": "중앙부처",
-      "link": "https://aichallenge4all.or.kr/competitions/master100",
-      "title": "전국민 AI 경진대회 — AI 달인 100 챌린지 개최",
-      "id": "3a12372c14bc0972"
-    },
-    {
-      "date": "2026-08-14",
-      "org_type": "교육",
-      "org": "전북특별자치도교육청",
-      "title": "전북교육청, 문서 취합·변환 도구 공식 배포",
-      "tags": [
-        "문서자동화",
-        "교육청",
-        "PDF",
-        "내부망"
-      ],
-      "collected_at": "2026-08-14",
-      "summary": "전북특별자치도교육청이 교육데이터 허브의 데이터 도구실을 통해 문서 처리 도구를 공식 배포하고 있다. PDF·한글 문서의 취합, 형식 변환(HWP→HWPX·PDF), 용량 압축, 페이지 정리·번호 추가 등 8개 기능을 담았고, 외부 전송 없이 로컬에서만 처리해 인터넷 차단 환경에서도 쓸 수 있다.",
-      "source": "kakao",
-      "link": "https://www.jbe.go.kr/board/view.jbe?boardId=BBS_0000649&menuCd=DOM_000000106011002001&dataSid=1141429",
-      "id": "8d17b8feee1af705"
-    },
-    {
-      "date": "2026-08-08",
-      "org_type": "기타",
-      "org": "공직 커뮤니티",
-      "title": "공공AX 링크 보관함 — 자동 수집 링크 갤러리",
-      "tags": [
-        "링크수집",
-        "아카이브",
-        "커뮤니티",
-        "자동화"
-      ],
-      "collected_at": "2026-08-14",
-      "summary": "커뮤니티에서 공유되는 공공AX 관련 링크를 자동으로 수집해 보관하는 링크 갤러리가 운영되고 있다. 492개 이상의 링크를 모아 날짜별로 업데이트하며, 흩어져 사라지기 쉬운 채팅방 공유 자료를 다시 찾아볼 수 있는 보관소 역할을 한다.",
-      "source": "kakao",
-      "link": "https://daamable-sknk.github.io/link-gallery/",
-      "id": "5de0d36c1b37fe58"
-    },
-    {
-      "link": "https://www.threads.com/@jerry_jy.kim/post/DcCk4ZCFK2E",
-      "org_type": "중앙부처",
-      "date": "2026-08-15",
-      "title": "병무청, 내부 업무지원 AI '워크메이트' 가동",
-      "source": "threads",
-      "collected_at": "2026-08-15",
-      "org": "병무청",
-      "tags": [
-        "도입사례",
-        "내부검색",
-        "범정부공통기반",
-        "에이전트"
-      ],
-      "summary": "병무청이 내부 자료 검색과 업무를 지원하는 AI 워크메이트를 가동했다. 지난 3월 정식 개통한 범정부 AI 공통기반 위에서 운영되며, 이 공통기반에는 기관·정보시스템별로 70개 이상의 개발환경이 마련되어 각 기관 실무자가 바이브 코딩과 에이전트 빌더로 업무 적용을 직접 실험하는 흐름이 확산되고 있다.",
-      "id": "83dd1411a30c6653"
-    },
-    {
-      "org": "공직 현장(개인 개발)",
-      "link": "https://www.threads.com/@gongpenclaw/post/DcDcbJzAUTL",
-      "summary": "국가법령정보센터 API로 직제와 직제 시행규칙을 함께 파싱해 조직도를 자동으로 그리고 HWPX로 출력하는 생성기가 개발됐다. 실·국 단위만 담긴 직제와 과 단위가 담긴 시행규칙을 결합해 조직담당자가 실제로 쓰는 형태의 조직도를 만들고, 시행일 기준 스냅샷으로 특정 날짜의 조직 상태와 개정 전후를 비교할 수 있다.",
-      "source": "threads",
-      "org_type": "기타",
-      "title": "직제 기반 조직도 자동생성기 개발",
-      "tags": [
-        "조직도",
-        "법령API",
-        "문서자동화",
-        "HWPX"
-      ],
-      "date": "2026-08-15",
-      "collected_at": "2026-08-15",
-      "id": "3d07b6da99f5e1ed"
-    },
-    {
-      "org": "공직 커뮤니티",
-      "link": "https://github.com/gongnyang/gongnyang-prompt-kit",
-      "summary": "막연한 이미지 요청을 완성된 이미지 생성 프롬프트로 컴파일해주는 Claude Code 스킬이 공개됐다. 네거티브 표현 금지, 결과 기반 서술 등 프롬프트 원칙과 검증 스크립트를 담아 홍보물·포스터 등 공공 실무의 이미지 제작 품질을 끌어올리는 도구로 커뮤니티에서 활용되고 있다.",
-      "source": "kakao",
-      "org_type": "기타",
-      "title": "이미지 생성 프롬프트 컴파일 스킬 — 공냥이 프롬프트 킷",
-      "tags": [
-        "AI스킬",
-        "이미지생성",
-        "프롬프트",
-        "오픈소스"
-      ],
-      "date": "2026-08-15",
-      "popularity": 313,
-      "collected_at": "2026-08-15",
-      "id": "1c54d608228e0845"
-    }
-  ]
+ "updated_at": "2026-08-15T22:16:37+09:00",
+ "cases": [
+  {
+   "date": "2026-08-03",
+   "collected_at": "2026-08-07",
+   "source": "threads",
+   "link": "https://www.threads.com/@dev_orijin/post/Dbk1dtEnT3k",
+   "org": "과학기술정보통신부·NIA",
+   "org_type": "중앙부처",
+   "title": "정부 AI 교육 통합 포털 '모두의 AI 성장사다리' 출범",
+   "summary": "과기정통부와 NIA가 흩어져 있던 정부 AI 교육 플랫폼을 통합 포털인 모두의 AI 배움터(ailearn4all.kr)로 묶었다. 대상별 추천 강좌와 온·오프라인 AI 교육, 행사·대회 정보를 한곳에서 제공하며, 비용·기술 장벽 없이 AI 서비스를 실험하는 온라인 실험실도 함께 열렸다.",
+   "tags": [
+    "교육",
+    "플랫폼",
+    "공공데이터"
+   ],
+   "id": "a2eaaf9f454da37f",
+   "case_url": "https://www.ailearn4all.kr/",
+   "popularity": 118
+  },
+  {
+   "date": "2026-07-14",
+   "collected_at": "2026-08-07",
+   "source": "threads",
+   "link": "https://www.threads.com/@gov_ai.builder/post/Dawsl0VEZSD",
+   "org": "서울특별시",
+   "org_type": "지자체",
+   "title": "서울시, 기관 공용 AI 엔진 기반 AI 에이전트 구축 착수",
+   "summary": "서울시가 문서 요약과 회의실 예약 자동화를 시작으로 AI 에이전트 구축에 착수했다. 기능 단위 정보화 사업 대신 기관 공용 AI 엔진을 만들고 MCP 방식으로 필요한 기능을 붙여가는 구조를 지향한다는 현장 개발 사례가 공유됐다.",
+   "tags": [
+    "AI에이전트",
+    "MCP",
+    "업무자동화"
+   ],
+   "id": "02656bf9d2589964",
+   "case_url": "https://www.etnews.com/20260710000114"
+  },
+  {
+   "date": "2026-04-26",
+   "collected_at": "2026-08-07",
+   "source": "threads",
+   "link": "https://www.threads.com/@orthodox_tauros/post/DXmJA6IDykL",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "기타",
+   "title": "바이브 코딩으로 서무 업무 자동화 프로그램 제작",
+   "summary": "한 공무원이 생성형 AI 바이브 코딩으로 특근매식비 정산과 사무용품 구매요청서 작성 프로그램을 직접 만들었다. 서무 업무에 드는 시간을 줄여 본업인 물품관리 업무에 집중하려는 시도다.",
+   "tags": [
+    "업무자동화",
+    "바이브코딩"
+   ],
+   "id": "59ff218c60039cc9"
+  },
+  {
+   "date": "2026-08-03",
+   "collected_at": "2026-08-07",
+   "source": "threads",
+   "link": "https://www.threads.com/@chobu62/post/DblOFkKD8U_",
+   "org": "공직 커뮤니티",
+   "org_type": "기타",
+   "title": "화면 기록형 매크로 도구 공개 — 공공 AX 로컬 시리즈 4",
+   "summary": "반복 업무를 화면 녹화와 함께 마우스·키보드 입력을 시간순으로 기록했다가, 사람이 확인한 뒤 그대로 재실행하는 로컬 자동화 도구가 공개됐다. 공공 업무 환경을 겨냥한 로컬 도구 시리즈의 네 번째 결과물이다.",
+   "tags": [
+    "업무자동화",
+    "로컬도구"
+   ],
+   "id": "6f376e827405e328"
+  },
+  {
+   "date": "2026-07-26",
+   "collected_at": "2026-08-07",
+   "source": "threads",
+   "link": "https://www.threads.com/@chobu62/post/DbQJBY5D3hI",
+   "org": "공직 커뮤니티",
+   "org_type": "기타",
+   "title": "로컬 문서 검수 도구 공개 — 맞춤법·공공언어 검사",
+   "summary": "HWP·HWPX·DOCX·TXT 문서를 PC 밖으로 보내지 않고 맞춤법, 띄어쓰기, 문장부호, 공공언어 오류를 검사하는 로컬 도구가 공개됐다. 외부 업로드나 API 호출 없이 Windows 실행파일 하나로 구동된다.",
+   "tags": [
+    "문서자동화",
+    "로컬도구"
+   ],
+   "id": "719692c2c31da09f",
+   "case_url": "https://github.com/obundh/gonggong-ax-local"
+  },
+  {
+   "date": "2026-07-26",
+   "collected_at": "2026-08-07",
+   "source": "threads",
+   "link": "https://www.threads.com/@chobu62/post/DbQOCCaD0vM",
+   "org": "공직 커뮤니티",
+   "org_type": "기타",
+   "title": "로컬 인수인계 도구 MVP 공개 — 공공 AX 로컬 시리즈 3",
+   "summary": "인수인계 없이 전임자의 작업 폴더만 남은 상황을 돕는 로컬 인수인계 도구의 MVP가 공개됐다. 공공 업무 환경용 로컬 도구 시리즈의 세 번째 결과물이다.",
+   "tags": [
+    "인수인계",
+    "로컬도구"
+   ],
+   "id": "2c14f2adaa83a00e",
+   "case_url": "https://github.com/obundh/gonggong-ax-local-3"
+  },
+  {
+   "date": "2026-05-17",
+   "collected_at": "2026-08-07",
+   "source": "threads",
+   "link": "https://www.threads.com/@publicai_79/post/DYbE18jj6kV",
+   "org": "공직 커뮤니티",
+   "org_type": "기타",
+   "title": "AI 기반 업무 인수인계 관리 사례",
+   "summary": "한글 파일로 주고받던 업무 인수인계를 AI 메모 관리로 대체한 사례가 공유됐다. 등록한 메모를 AI가 정리해 질문에 답하며, 데이터는 PC에만 저장되어 외부로 나가지 않는다.",
+   "tags": [
+    "인수인계",
+    "로컬AI"
+   ],
+   "id": "075fd5baf003c3b0"
+  },
+  {
+   "date": "2026-06-22",
+   "collected_at": "2026-08-07",
+   "source": "threads",
+   "link": "https://www.threads.com/@chris_gomdori/post/DZ49_V9DfJ_",
+   "org": "공직 커뮤니티",
+   "org_type": "기타",
+   "title": "PC 문서를 AI로 검색하는 로컬 도구 시연",
+   "summary": "PC 곳곳에 흩어진 문서를 AI가 읽고 질문에 답을 찾아주는 로컬 문서 검색 도구의 시연이 공유됐다. 한글 문서를 열지 않고 내용을 미리 보는 기능도 제공한다.",
+   "tags": [
+    "문서검색",
+    "로컬AI"
+   ],
+   "id": "de4b2dab339d69b7",
+   "case_url": "https://github.com/chrisryugj/Docufinder",
+   "popularity": 134
+  },
+  {
+   "date": "2026-04-01",
+   "collected_at": "2026-08-07",
+   "source": "threads",
+   "link": "https://www.threads.com/@chris_gomdori/post/DWlzH2MicNK",
+   "org": "공직 커뮤니티",
+   "org_type": "기타",
+   "title": "국가법령정보 MCP 활용 사례 공유",
+   "summary": "국가법령정보를 AI에서 활용하는 MCP 도구의 실제 사용 예시가 공유됐다. 법령 정보를 AI 도구 호출로 조회하는 방법을 단계별로 소개한다.",
+   "tags": [
+    "법령",
+    "MCP"
+   ],
+   "id": "d40cc4a9cf6e29b6",
+   "popularity": 754
+  },
+  {
+   "date": "2026-07-11",
+   "collected_at": "2026-08-07",
+   "source": "threads",
+   "link": "https://www.threads.com/@gongpenclaw/post/DaoePfGgXdv",
+   "org": "공직 현장(행안부)",
+   "org_type": "기타",
+   "title": "제도100 — 국가 제도 505개 업무구조도 웹서비스",
+   "summary": "대한민국 주요 제도를 법령, 조직, 절차, 문서, 기한으로 분해해 제도마다 한 장의 요약 캔버스와 업무구조도(스윔레인)로 읽을 수 있게 만든 공개 웹서비스다. 100개로 시작해 현재 505개까지 늘어났다.",
+   "tags": [
+    "제도분석",
+    "시각화"
+   ],
+   "id": "5451653f4cddb6f2",
+   "case_url": "https://hosungseo.github.io/korea100/",
+   "popularity": 359
+  },
+  {
+   "tags": [
+    "도입사례",
+    "보안",
+    "생성형AI"
+   ],
+   "source": "kakao",
+   "org_type": "기타",
+   "collected_at": "2026-08-07",
+   "title": "부서 수요 기반 ChatGPT 팀계정 지원 후 보안형 AI SaaS 도입",
+   "summary": "한 기관이 부서 수요를 받아 ChatGPT 팀 계정 이용료를 지원하는 사업을 운영했고, 이후 전산부서가 공무원이 파일을 안전하게 업로드하며 쓸 수 있는 SaaS형 AI 서비스를 도입하면서 개별 이용료 지원은 단년도 사업으로 종료했다는 경험이 공유됐다.",
+   "link": null,
+   "org": "기관 미상(공공)",
+   "date": "2026-08-06",
+   "id": "6a2d1fa6e385ef2b"
+  },
+  {
+   "tags": [
+    "바이브코딩",
+    "프로토타입"
+   ],
+   "source": "kakao",
+   "org_type": "공공기관",
+   "collected_at": "2026-08-07",
+   "title": "바이브 코딩으로 억대 규모 서비스 버전업 프로토타입을 1개월 만에 개발",
+   "summary": "과거 1년 이상, 억대 예산을 들여 만들었던 서비스의 버전업을 실무자 혼자 바이브 코딩으로 1개월 만에 프로토타입으로 개발한 경험이 공유됐다. 프로토타입 검증 후 업체 발주를 거쳐 현재 실제 서비스로 운영 중이다.",
+   "link": "https://icaretok.nemc.or.kr/pec/",
+   "org": "국립중앙의료원(중앙응급의료센터)",
+   "date": "2026-08-06",
+   "id": "422f3e4e0e9a23eb"
+  },
+  {
+   "tags": [
+    "법령",
+    "개인정보",
+    "MCP"
+   ],
+   "source": "kakao",
+   "org_type": "기타",
+   "collected_at": "2026-08-07",
+   "title": "개인정보보호법 법령 리더기 PoC 공개",
+   "summary": "개인정보보호법 담당자를 위해 법률·시행령·고시를 한 화면에서 통합 조회하는 법령 리더기가 바이브 코딩 공개 PoC로 개발됐다. 법령정보센터 MCP 기반으로 최신 조문을 제공하며 조문 검색, 연결규정 확인, 모바일 최적화를 지원한다.",
+   "link": "https://privacy-law-reader.vercel.app/",
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-08-06",
+   "id": "bf04cec910b4755d"
+  },
+  {
+   "date": "2026-08-06",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "기타",
+   "collected_at": "2026-08-07",
+   "tags": [
+    "업무분석",
+    "시각화"
+   ],
+   "title": "교육행정 업무 워크플로 맵 제작기 공유",
+   "link": "https://gyohaeng.pages.dev/workflow-map",
+   "summary": "교육행정 업무 절차를 시각화한 워크플로 맵을 실무에 도움이 되는 방향으로 만들어 가는 제작기가 링크와 함께 공유됐다. 국가 제도 구조도 프로젝트에서 영감을 받아 실무 절차의 흐름을 한눈에 보여주는 것이 목표다.",
+   "source": "kakao",
+   "id": "d487843b67c6063e"
+  },
+  {
+   "date": "2026-08-06",
+   "org": "공직 커뮤니티",
+   "org_type": "기타",
+   "collected_at": "2026-08-07",
+   "tags": [
+    "공공데이터",
+    "도구공개"
+   ],
+   "title": "공공데이터 API 파인더 도구 공개",
+   "link": "https://github.com/boam79/public-data-api-finder",
+   "summary": "공공데이터포털에서 AI가 바로 호출해 쓸 수 있는 API를 찾아주는 도구의 GitHub 저장소가 공유됐다. 파일 데이터 중심의 공공데이터를 API 관점에서 탐색하려는 실무 수요에서 나온 개발물이다.",
+   "source": "kakao",
+   "id": "971a8738f6563214"
+  },
+  {
+   "date": "2026-08-06",
+   "org": "공직 커뮤니티",
+   "org_type": "기타",
+   "collected_at": "2026-08-07",
+   "tags": [
+    "도구공개",
+    "영상제작"
+   ],
+   "title": "시연 영상 제작 자동화 스킬 공유",
+   "link": "https://github.com/Kminer2053/demo-video-skill",
+   "summary": "프로그램 사용 매뉴얼을 영상으로 만들고 싶다는 질문에, 강조 부분 줌 인·아웃 효과가 들어간 시연 영상을 자동 제작하는 AI 스킬의 GitHub 저장소가 답으로 공유됐다. 공공 현장의 매뉴얼 영상 제작 부담을 줄이는 용도다.",
+   "source": "kakao",
+   "id": "7acf5f25369c1401"
+  },
+  {
+   "date": "2026-08-06",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "기타",
+   "collected_at": "2026-08-07",
+   "tags": [
+    "법령",
+    "AI검색"
+   ],
+   "title": "법령 비교·AI 법률 검색 웹서비스 LexDiff 공유",
+   "link": "https://lexdiff.gomdori.app",
+   "summary": "법령·조례·판례·해석례를 통합해 비교·검색하는 AI 법률 검색 웹서비스가 공유됐다. MCP 도구보다 일반 사용자가 접근하기 쉬운 웹 형태로, 법령 MCP 도구가 이 서비스에서 파생됐다는 제작 배경도 소개됐다.",
+   "source": "kakao",
+   "id": "38dc6d3806bf2e8f",
+   "popularity": 210
+  },
+  {
+   "source": "kakao",
+   "link": "https://gongmun.com",
+   "org_type": "기타",
+   "summary": "간단히 던진 문장을 격식을 갖춘 공문 형식으로 바꿔주는 웹 도구가 공유됐다. 현재 V2 개선 작업이 진행 중이어서 일부 기능은 불안정할 수 있다.",
+   "org": "공직 커뮤니티",
+   "tags": [
+    "문서자동화",
+    "생성형AI"
+   ],
+   "title": "자연어 입력을 공문서로 바꿔주는 공문 생성기",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "651bfec5c1ede6d1"
+  },
+  {
+   "source": "kakao",
+   "link": "https://gyohaeng.pages.dev",
+   "org_type": "기타",
+   "summary": "교육행정직 실무자를 위한 업무 자동화 도구와 다양한 업무 자료를 모은 사이트가 공유됐다. 업무 흐름지도 등 하위 자료로 연결되는 허브 역할을 한다.",
+   "org": "공직 현장(교육행정)",
+   "tags": [
+    "교육행정",
+    "도구모음"
+   ],
+   "title": "교육행정 업무 자동화 도구·자료 모음 사이트",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "a021bc5b58ed72cd"
+  },
+  {
+   "source": "kakao",
+   "link": "https://github.com/Milkbuttercheese2/What-I-have-to-do",
+   "org_type": "기타",
+   "summary": "빠르게 메모하고 체계적으로 구조화하는 내부망용 메모 앱의 저장소가 공유됐다. 외부망 접속이 제한된 공공 업무 환경을 겨냥해 만들어졌다. 깃허브와 정부 공공 깃랩 양쪽에 저장소가 공개되어 있다.",
+   "org": "공직 커뮤니티",
+   "tags": [
+    "메모",
+    "내부망"
+   ],
+   "title": "내부망용 빠른 메모·구조화 앱",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "d08bc7e9a69190af",
+   "case_url": "https://gitlab.aigov.go.kr/rhamasel3/What-I-have-to-do"
+  },
+  {
+   "source": "kakao",
+   "link": "https://brojun.kr/sdhg",
+   "org_type": "기타",
+   "summary": "교육청 실무자가 만든 한글(HWP) 문서 작업 효율화 프로그램이 공유됐다. 반복적인 한글 편집 작업을 줄여주는 기능을 제공한다.",
+   "org": "공직 현장(교육청)",
+   "tags": [
+    "한글HWP",
+    "업무자동화"
+   ],
+   "title": "한글(HWP) 작업 효율화 프로그램 쉽다한글",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "e93a0e5c75f51a7b"
+  },
+  {
+   "source": "kakao",
+   "link": "https://github.com/galvaomica396/Nothing",
+   "org_type": "기타",
+   "summary": "PDF 속 개인정보를 문서 열기, 가리기, 확인, 저장까지 전 과정 PC 안에서 처리하는 도구가 공유됐다. 원문이 어떤 외부 서비스로도 전송되지 않는 100% 로컬 방식이다.",
+   "org": "공직 현장(개인 개발)",
+   "tags": [
+    "개인정보",
+    "문서자동화",
+    "로컬도구"
+   ],
+   "title": "PDF 개인정보 완전 로컬 마스킹 도구 Nothing",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "1c77044568e730de"
+  },
+  {
+   "source": "kakao",
+   "link": "https://researchfellow.vercel.app",
+   "org_type": "기타",
+   "summary": "후향적 연구 방법론과 논문 작성 가이드라인 규격에 맞춰 논문 초안을 생성해 주는 Claude Code 플러그인이 공유됐다. 의학 연구자의 연구 동료 역할을 지향한다.",
+   "org": "공직 현장(의료 연구)",
+   "tags": [
+    "연구지원",
+    "AI에이전트"
+   ],
+   "title": "의학 연구 동료 AI 플러그인 ResearchFellow",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "cbe008b504b9dd18"
+  },
+  {
+   "source": "kakao",
+   "link": "https://seomu-work-hub.tgtg4840.chatgpt.site/",
+   "org_type": "기타",
+   "summary": "통일부 실무자가 만든 서무 업무 도구 모음이 공유됐다. 공무직 급여, 계좌 관리, 물품 관리, 수합 명단, 여비, 특근비 등 서무 실무 전반을 다룬다.",
+   "org": "공직 현장(통일부)",
+   "tags": [
+    "서무",
+    "업무자동화"
+   ],
+   "title": "서무 업무 도구 모음 허브",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "a93c7283cafb3b9b"
+  },
+  {
+   "source": "kakao",
+   "link": "https://github.com/pon00050/minwon-draft",
+   "org_type": "기타",
+   "summary": "사실관계만 입력하면 제출 가능한 국민신문고 민원·안전신문고 신고서 초안을 만들어 주는 Claude Code 스킬이 공유됐다. 인용 법령을 law.go.kr에서 실시간 확인하고 제출 전에 초안을 스스로 점검한다.",
+   "org": "공직 커뮤니티",
+   "tags": [
+    "민원",
+    "법령",
+    "AI에이전트"
+   ],
+   "title": "국민신문고 민원 초안 생성 스킬 minwon-draft",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "32d199fa9ad4f674"
+  },
+  {
+   "source": "kakao",
+   "link": "https://github.com/koul777/Public-Regulation-MCP-Builder",
+   "org_type": "기타",
+   "summary": "PDF, HWP, HWPX, DOCX 형식의 공공기관 규정을 기관, 규정, 개정 버전, 장·절·조문 구조로 정리하는 Windows용 빌더가 공유됐다. 사람이 승인한 내용만 검색 색인과 MCP 응답에 포함한다.",
+   "org": "공직 현장(공공기관)",
+   "tags": [
+    "MCP",
+    "규정",
+    "문서자동화"
+   ],
+   "title": "공공기관 규정 MCP 생성기",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "ea2bce110972762e"
+  },
+  {
+   "source": "kakao",
+   "link": "https://tgtg4840-byte.github.io/seomuland/",
+   "org_type": "기타",
+   "summary": "서무 업무에 쓰는 도구들을 한곳에 모아 둔 웹 페이지가 공유됐다. 서무 업무 도구 허브와 함께 운영되는 모음집이다.",
+   "org": "공직 현장(통일부)",
+   "tags": [
+    "서무",
+    "도구모음"
+   ],
+   "title": "서무랜드 — 서무 툴 모음 페이지",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "9d2b45d14879241e"
+  },
+  {
+   "source": "kakao",
+   "link": "https://github.com/koul777/VHLookup",
+   "org_type": "기타",
+   "summary": "개인정보 마스킹, 분류별 시트 나누기, 엑셀·CSV 합치기, 전후 파일 비교, 피벗 요약표, 사용자 지정 정렬을 지원하는 엑셀 자동화 도구가 공유됐다. 인터넷 없이 로컬에서 실행된다.",
+   "org": "공직 현장(공공기관)",
+   "tags": [
+    "엑셀",
+    "업무자동화",
+    "로컬도구"
+   ],
+   "title": "엑셀 업무 자동화 도구 VHLookup",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "f5abed24ff6bdd4a"
+  },
+  {
+   "source": "kakao",
+   "link": "https://github.com/koul777/clickguide-local-private",
+   "org_type": "기타",
+   "summary": "웹사이트에서 클릭한 과정을 자동 기록하고 스크린샷이 들어간 단계별 PDF 가이드를 만들어 주는 Chrome 확장 프로그램이 공유됐다. 업무 매뉴얼 제작 부담을 줄여준다.",
+   "org": "공직 현장(공공기관)",
+   "tags": [
+    "매뉴얼",
+    "업무자동화"
+   ],
+   "title": "클릭 과정을 PDF 가이드로 만드는 ClickGuide Local",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "48e33f2318bdffae"
+  },
+  {
+   "source": "kakao",
+   "link": "https://github.com/DECK6/korea-mice-safety-agent",
+   "org_type": "기타",
+   "summary": "베뉴를 포함한 MICE 안전관리 관련 문서를 조회하고 작성을 돕는 MCP 도구와, 이를 웹에서 시험해 볼 수 있는 시뮬레이터가 공유됐다.",
+   "org": "공직 커뮤니티",
+   "tags": [
+    "MCP",
+    "안전관리"
+   ],
+   "case_url": "https://dexa.art/mice-safety/",
+   "title": "MICE 안전관리 문서 MCP와 웹 시뮬레이터",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "0a2535cadf2d621a"
+  },
+  {
+   "source": "kakao",
+   "link": "https://원클릭업무포털.com",
+   "org_type": "기타",
+   "summary": "업무포털의 복무, 출장, 기안, 품의 화면까지 클릭 한 번으로 이동하는 Windows 프로그램이 공유됐다. 나이스와 K-에듀파인 세션 자동 연장을 지원하며 17개 시도교육청에서 모두 쓸 수 있다.",
+   "org": "공직 현장(교육행정)",
+   "tags": [
+    "업무자동화",
+    "교육행정"
+   ],
+   "title": "업무포털 원클릭 이동 프로그램",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "0d668fa0c977b439",
+   "popularity": 216
+  },
+  {
+   "source": "kakao",
+   "link": "https://github.com/koul777/NCScope",
+   "org_type": "기타",
+   "summary": "공공기관 공고문과 직무기술서를 넣으면 NCS 세분류 기준의 지식·스킬·태도(KSA)를 호출하고, 이를 바탕으로 구조화된 면접 질문을 생성해 주는 도구가 공유됐다.",
+   "org": "공직 현장(공공기관)",
+   "tags": [
+    "채용",
+    "생성형AI"
+   ],
+   "title": "NCS 기반 구조화 면접 질문 생성기 NCScope",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "92d5147e02f7ae36"
+  },
+  {
+   "source": "kakao",
+   "link": "https://klocal.solvonluchs.com/",
+   "org_type": "기타",
+   "summary": "전국 지방자치단체의 주요 업무계획과 예산서를 검색·열람하고, 법령, 유권해석, 행정심판 재결례, 선거법, 정보공개 등 실무 자료를 모은 공유 노트북을 제공하는 지방직 공무원용 참고 사이트가 공유됐다.",
+   "org": "공직 커뮤니티",
+   "tags": [
+    "지방행정",
+    "자료모음"
+   ],
+   "title": "지방행정 실무 자료 포털 K-Local",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "856b4951cb5274d1"
+  },
+  {
+   "source": "kakao",
+   "link": "https://alio-compare.vercel.app",
+   "org_type": "기타",
+   "summary": "알리오에 공시된 335개 공공기관의 1인당 평균보수, 신입사원 초임, 육아휴직 등 50개 공시항목을 직관적으로 시각 비교할 수 있는 사이트가 공유됐다.",
+   "org": "공직 커뮤니티",
+   "tags": [
+    "공공데이터",
+    "시각화"
+   ],
+   "title": "공공기관 공시항목 비교 사이트",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "e0be95cc501650ae"
+  },
+  {
+   "source": "kakao",
+   "link": "https://excel.choshg.com/",
+   "org_type": "기타",
+   "summary": "개인정보 마스킹과 여러 파일 취합 등을 서버 전송 없이 내 PC 안에서 간단히 처리해 주는 프로그램이 공유됐다.",
+   "org": "공직 커뮤니티",
+   "tags": [
+    "엑셀",
+    "개인정보",
+    "로컬도구"
+   ],
+   "title": "로컬 엑셀 처리 도구 — 마스킹·파일 취합",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "918bddd1b60d8a74"
+  },
+  {
+   "source": "kakao",
+   "link": "https://github.com/amnotyoung/overseas-procurement-100",
+   "org_type": "기타",
+   "summary": "KOICA 2026 국가별 개발협력사업 참여전략 자료집을 바탕으로 45개국 발주자에 걸친 135개 제도를 입찰제도, 조달 거버넌스, ODA 사업 발굴·형성의 세 축으로 정리한 공개 사이트가 공유됐다.",
+   "org": "공직 커뮤니티",
+   "tags": [
+    "공공조달",
+    "ODA"
+   ],
+   "case_url": "https://amnotyoung.github.io/overseas-procurement-100/",
+   "title": "ODA 수원국 공공조달 제도 정리 사이트",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "aa58f3a62af622b6"
+  },
+  {
+   "source": "kakao",
+   "link": "https://9k1.fun",
+   "org_type": "기타",
+   "summary": "국회의원의 의정 활동 기록을 모아 볼 수 있는 트랙레코드 사이트가 공유됐다.",
+   "org": "공직 커뮤니티",
+   "tags": [
+    "공공데이터",
+    "시각화"
+   ],
+   "title": "국회의원 트랙레코드 사이트",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "5835971d479dbf81"
+  },
+  {
+   "link": "https://choshg.com",
+   "org": "공직 커뮤니티",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "tags": [
+    "교육",
+    "도구모음"
+   ],
+   "org_type": "기타",
+   "summary": "어려운 AI를 공무원의 언어로 풀어 실제 업무와 연결한 활용법과 실무 업무 도구를 제공하는 사이트가 공유됐다. 공무원이 직접 이해하고 실행하도록 돕는 것을 지향하며, 로컬 엑셀 처리 도구 등과 같은 제작자의 결과물로 이어진다.",
+   "title": "초실행관 — 공무원 AI 활용·실무 도구 사이트",
+   "source": "kakao",
+   "id": "c78372217646db56"
+  },
+  {
+   "link": "https://www.threads.com/@gongpenclaw/post/DY7f9jPAend",
+   "org_type": "중앙부처",
+   "case_url": "https://mobile.newsis.com/view/NISX20260515_0003631882",
+   "org": "행정안전부",
+   "date": "2026-05-30",
+   "summary": "행정안전부가 국산 LLM 엑사원과 구글 Gemma4를 행정 내부망에서 사용하기 시작했다는 소식이 공유됐다. AI가 보고서를 쓰고 공무원이 검토하는 시대의 변곡점이라는 담당 부서 인터뷰 기사도 함께 소개됐다.",
+   "source": "threads",
+   "collected_at": "2026-08-07",
+   "tags": [
+    "도입사례",
+    "LLM",
+    "내부망"
+   ],
+   "title": "행안부, 엑사원·Gemma4를 행정 내부망에 도입",
+   "id": "58420e002644542c",
+   "popularity": 139
+  },
+  {
+   "link": "https://www.threads.com/@chris_gomdori/post/DaS4hW2CW6n",
+   "org_type": "기타",
+   "case_url": "https://mcp.gomdori.app",
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-07-03",
+   "summary": "법령, 통계, 특허, 건축, 학교알리미 등 공공데이터 MCP 5종을 한 서버로 통합해 경로 라우팅으로 제공하는 사례가 공유됐다. 월 서버비 16달러 규모로 전국 사용자들이 24시간 이용할 만큼 수요가 검증됐다.",
+   "source": "threads",
+   "collected_at": "2026-08-07",
+   "tags": [
+    "MCP",
+    "공공데이터"
+   ],
+   "title": "공공데이터 MCP 5종 통합 서버 운영",
+   "id": "9d56d423296a3238",
+   "popularity": 226
+  },
+  {
+   "link": "https://www.threads.com/@publicai_79/post/DY4s0B9jLVm",
+   "org_type": "기타",
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-05-28",
+   "summary": "비공개 내부 문서를 로컬 AI로 임베딩해 부서별, 분기별 추진사항을 AI가 보고하도록 만드는 내부망 RAG 초안 구축기가 공유됐다. 값비싼 시스템 없이도 공공기관 AX 전환이 가능하다는 점을 보여주려는 시도다.",
+   "source": "threads",
+   "collected_at": "2026-08-07",
+   "tags": [
+    "RAG",
+    "내부망",
+    "로컬AI"
+   ],
+   "title": "내부망 문서용 로컬 RAG 구축기",
+   "id": "a25534e407326d76"
+  },
+  {
+   "link": "https://www.threads.com/@koyou_ax/post/DacnKc9D_5i",
+   "org_type": "기타",
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-07-06",
+   "summary": "일정, 파일, 지식, 문서 작성, 실행 기록까지 PC 안에서 연결하는 공무원용 로컬 AI 에이전트 워크플레이스 개발기가 공유됐다. 일반 업무용 PC에서 구동되도록 Gemma4 E2B로 최적화했고 원클릭 설치 패키지를 만들고 있다.",
+   "source": "threads",
+   "collected_at": "2026-08-07",
+   "tags": [
+    "AI에이전트",
+    "로컬AI",
+    "업무자동화"
+   ],
+   "title": "공무원용 로컬 AI 에이전트 워크플레이스 개발",
+   "id": "9d115930495a1e65",
+   "case_url": "https://github.com/Kminer2053/gongmuwon"
+  },
+  {
+   "link": "https://www.threads.com/@chris_gomdori/post/DbW8LhniROp",
+   "org_type": "지자체",
+   "case_url": "https://chris.gomdori.app/newbgj",
+   "org": "화성특례시·광진구",
+   "date": "2026-07-29",
+   "summary": "화성특례시 AI스마트전략실이 개발해 정부 AI 실험실 GitLab에 공개한 신규자 지식창고 웹앱을 광진구 실무자가 자기 기관 버전으로 포팅한 사례가 공유됐다. 조례 개정 자동 감시, 동의어·초성 검색, 첫 30일 체크리스트를 더해 기관 간 확산의 선순환을 보여준다.",
+   "source": "threads",
+   "collected_at": "2026-08-07",
+   "tags": [
+    "지식관리",
+    "확산사례",
+    "도구공개"
+   ],
+   "title": "화성특례시 신규자 지식창고, 광진구 버전으로 포팅",
+   "id": "56cdd4fc23166800",
+   "popularity": 107
+  },
+  {
+   "link": "https://www.threads.com/@koyou_ax/post/DaLJpOljpV6",
+   "org_type": "기타",
+   "org": "기관 미상(공공)",
+   "date": "2026-06-30",
+   "summary": "내부망 LLM으로 보안 걱정 없이 사내 데이터를 활용하는 놀이공원 콘셉트의 AI 체험 플랫폼을 팀 단위 바이브 코딩으로 구축한 사례가 공유됐다. AI 리터러시 퀴즈, 그래프 RAG 사내지식 검색, 민원 데이터 AI 답변, 비전 인식 안전 분석, AI 광고 도안 심의 등을 담았다.",
+   "source": "threads",
+   "collected_at": "2026-08-07",
+   "tags": [
+    "내부망",
+    "RAG",
+    "바이브코딩"
+   ],
+   "title": "내부망 LLM 기반 사내 AI 체험 플랫폼 AX플레이그라운드 구축",
+   "id": "bfcd190155ae69f7"
+  },
+  {
+   "link": "https://www.threads.com/@chris_gomdori/post/DbaDIR3DZWE",
+   "org_type": "기타",
+   "case_url": "https://github.com/chrisryugj/edoc-summarizer",
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-07-30",
+   "summary": "전자문서 화면에서 버튼 하나로 무엇을 언제까지 어떻게 해야 하는지를 카드 한 장으로 정리하고, 기한을 D-day로 표시하며 결재 전 AI 검토까지 해주는 도구가 공개됐다. 한컴 웹한글 공식 API 기반이며 로컬 LLM을 붙이면 문서가 PC 밖으로 나가지 않는다.",
+   "source": "threads",
+   "collected_at": "2026-08-07",
+   "tags": [
+    "문서자동화",
+    "로컬AI",
+    "도구공개"
+   ],
+   "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구",
+   "id": "1502d338e8e99382",
+   "popularity": 103
+  },
+  {
+   "link": "https://www.threads.com/@gongpenclaw/post/DbiLzQ5gfjC",
+   "org_type": "공공기관",
+   "case_url": "https://www.data.go.kr/",
+   "org": "공공데이터포털(NIA)",
+   "date": "2026-08-02",
+   "summary": "공공데이터포털에 자연어 문장으로 물어보면 데이터를 찾아주는 AI 대화형 검색이 도입됐다는 소식이 공유됐다. 정확한 검색어를 몰라 입구에서 포기하던 사용자들의 진입 장벽을 낮추는 변화로, 공무원의 AI 실험 데이터 창고로서의 가치도 조명됐다.",
+   "source": "threads",
+   "collected_at": "2026-08-07",
+   "tags": [
+    "공공데이터",
+    "AI검색",
+    "도입사례"
+   ],
+   "title": "공공데이터포털에 AI 대화형 검색 도입",
+   "id": "fbde74aa0071ea45"
+  },
+  {
+   "org_type": "기타",
+   "summary": "K-Startup, 기업마당, NIPA, KOCCA, SMTECH를 크롤링해 한국 정부 지원사업을 전수조사하는 에이전트 스킬이 공유됐다. 지원 가능성을 즉시·로드맵·변형의 세 갈래로 분류하며, Claude Code 등 주요 AI 코딩 도구 6종에서 쓸 수 있다.",
+   "date": "2026-08-07",
+   "link": "https://github.com/djfksjd/ir-search",
+   "org": "공직 커뮤니티",
+   "collected_at": "2026-08-07",
+   "source": "kakao",
+   "tags": [
+    "지원사업",
+    "AI에이전트",
+    "공공데이터"
+   ],
+   "title": "정부 지원사업 전수조사 에이전트 스킬 ir-search",
+   "id": "54d599932088897f"
+  },
+  {
+   "org_type": "기타",
+   "summary": "파주 주요 명소와 상권의 실시간 혼잡도를 5분 단위로 갱신해 보여주는 인파 지도가 공유됐다. 여유·보통·혼잡 단계로 표시해 한적한 방문지를 고르거나 붐비는 곳을 피하는 데 쓸 수 있다.",
+   "date": "2026-08-07",
+   "link": "https://now-paju.pajulab.workers.dev/",
+   "org": "공직 커뮤니티",
+   "collected_at": "2026-08-07",
+   "source": "kakao",
+   "tags": [
+    "공공데이터",
+    "실시간",
+    "지역서비스"
+   ],
+   "title": "파주 실시간 인파 지도 — 지금 파주",
+   "id": "0826e58f026fe560"
+  },
+  {
+   "org_type": "기타",
+   "summary": "서울 주요 명소 121곳의 실시간 인구밀집 상황을 공공데이터 기반으로 보여주는 모바일 앱이 공개됐다. 인파가 많은 곳을 피하고 싶은 시민을 위한 상황판으로, 공공 실시간 도시데이터 활용 사례다.",
+   "date": "2026-08-07",
+   "link": "https://jocohunt.com/p/7uubvp1t",
+   "org": "공직 현장(개인 개발)",
+   "collected_at": "2026-08-07",
+   "source": "kakao",
+   "tags": [
+    "공공데이터",
+    "실시간",
+    "지역서비스"
+   ],
+   "title": "서울 인파레이더 — 명소 121곳 실시간 인구밀집 상황판",
+   "id": "62ed887a548dfb25"
+  },
+  {
+   "org_type": "기타",
+   "summary": "제주관광공사 빅데이터를 활용해 제주 명소 66곳의 실시간 인파를 지도로 보여주는 서비스가 공유됐다. 붐빔순, 한산순, 거리순 정렬과 주소 검색을 지원하며 서울, 부산, 강원, 인천공항으로도 확장되고 있다.",
+   "date": "2026-08-07",
+   "link": "https://somodus.com/a/29ee7eab2c28c1d1dc2eef35425ccfc3",
+   "org": "공직 커뮤니티",
+   "collected_at": "2026-08-07",
+   "source": "kakao",
+   "tags": [
+    "공공데이터",
+    "실시간",
+    "지역서비스"
+   ],
+   "title": "북적북적 제주 — 명소 66곳 실시간 인파 지도",
+   "id": "5b37a71c441b663b"
+  },
+  {
+   "org_type": "기타",
+   "title": "북적북적 인천공항 — 실시간 혼잡 지도",
+   "tags": [
+    "공공데이터",
+    "실시간",
+    "지역서비스"
+   ],
+   "link": "https://somodus.com/a/266ae6e5a62ab845b736920033636b02",
+   "org": "공직 커뮤니티",
+   "collected_at": "2026-08-07",
+   "date": "2026-08-07",
+   "source": "kakao",
+   "summary": "제주 실시간 인파 지도에서 확장된 북적북적 시리즈의 인천공항 편이 공유됐다. 공항 구역별 실시간 혼잡 상황을 지도로 보여줘 출국·마중 동선 계획에 활용할 수 있다.",
+   "id": "ef0fc393d25e4e97"
+  },
+  {
+   "org_type": "기타",
+   "title": "공공데이터 렌즈 — AI 공공데이터 탐색·판단 계층",
+   "tags": [
+    "공공데이터",
+    "AI검색",
+    "도구공개"
+   ],
+   "link": "https://github.com/hike-lab/public-data-lens",
+   "org": "공직 커뮤니티",
+   "collected_at": "2026-08-07",
+   "date": "2026-08-07",
+   "source": "kakao",
+   "summary": "하고 싶은 일을 자연어로 말하면 활용할 공공데이터를 찾아주고 왜 그 데이터를 골랐는지 선택 근거까지 제시하는 AI 탐색·판단 계층이 공개됐다. 공공데이터 활용의 진입 장벽인 데이터 발견 단계를 AI가 대신한다.",
+   "id": "13e5e75fbf179ebf"
+  },
+  {
+   "org_type": "기타",
+   "title": "대한민국 AI 행동계획 2026 대시보드",
+   "tags": [
+    "정책",
+    "시각화",
+    "공공데이터"
+   ],
+   "link": "https://hollobit.github.io/K-AI2026/",
+   "org": "공직 현장(개인 개발)",
+   "collected_at": "2026-08-07",
+   "date": "2026-08-07",
+   "source": "kakao",
+   "summary": "대통령직속 국가인공지능전략위원회의 실천과제 99개와 정책권고 326개를 한눈에 볼 수 있게 정리한 비공식 종합 현황 대시보드가 공유됐다. 국가 AI 정책의 구조와 진행 상황을 시민이 추적할 수 있게 한다.",
+   "id": "ceceadd796cc6ea1"
+  },
+  {
+   "org_type": "기타",
+   "title": "2026 AI 재정사업 분석 플랫폼",
+   "tags": [
+    "정책",
+    "예산",
+    "시각화"
+   ],
+   "link": "https://hollobit.github.io/KAIB2026/",
+   "org": "공직 현장(개인 개발)",
+   "collected_at": "2026-08-07",
+   "date": "2026-08-07",
+   "source": "kakao",
+   "summary": "2026년 정부 AI 관련 재정사업을 모아 구조적으로 분석할 수 있게 만든 플랫폼이 공유됐다. 예산 규모와 사업 구성을 들여다보며 국가 AI 투자 방향을 파악하는 용도다.",
+   "id": "807dd39dd613b7da"
+  },
+  {
+   "org_type": "기타",
+   "title": "대한민국 공공 Open API 현황 종합 분석 (K-GAPI)",
+   "tags": [
+    "공공데이터",
+    "API",
+    "시각화"
+   ],
+   "link": "https://hollobit.github.io/K-GAPI/",
+   "org": "공직 현장(개인 개발)",
+   "collected_at": "2026-08-07",
+   "date": "2026-08-07",
+   "source": "kakao",
+   "summary": "대한민국 공공 Open API의 전체 현황을 수집해 품질과 활용성 관점에서 종합 분석한 사이트가 공유됐다. AI 시대에 기계가 바로 호출해 쓸 수 있는 공공 API가 얼마나 되는지 가늠하는 기초 자료가 된다.",
+   "id": "73ca59dc1a41074f"
+  },
+  {
+   "org_type": "기타",
+   "title": "K-GAPI Δ — Agentic 시대 공공 API 개선 비교",
+   "tags": [
+    "공공데이터",
+    "API",
+    "AI적합성"
+   ],
+   "link": "https://hollobit.github.io/GAPI2/",
+   "org": "공직 현장(개인 개발)",
+   "collected_at": "2026-08-07",
+   "date": "2026-08-07",
+   "source": "kakao",
+   "summary": "2026년 4월 기준선 대비 한국 공공 API가 얼마나 개선됐는지를 라이브 재측정과 증거 기반 방법론으로 비교하는 사이트가 공유됐다. AI 에이전트가 직접 호출하는 시대에 맞춘 공공 API 품질 추적 프로젝트다.",
+   "id": "7868cf416d6fe407"
+  },
+  {
+   "summary": "국가 제도 구조도 프로젝트(제도100)를 온톨로지 형태로 탐색할 수 있게 만든 뷰어가 공유됐다. 제도 간 관계를 구조화된 지식 체계로 살펴볼 수 있어 제도 데이터의 기계 가독성을 높이는 시도다.",
+   "org": "공직 현장(개인 개발)",
+   "link": "https://chris.gomdori.app/korea100",
+   "collected_at": "2026-08-07",
+   "source": "kakao",
+   "date": "2026-08-07",
+   "tags": [
+    "제도분석",
+    "온톨로지",
+    "시각화"
+   ],
+   "org_type": "기타",
+   "title": "대한민국 제도 온톨로지 뷰어",
+   "id": "c7ccd2903fbe27a5"
+  },
+  {
+   "summary": "PDF 문서를 번역하고 사람이 검토하는 과정을 한 화면에서 처리하는 로컬 작업장 도구가 공개됐다. 문서를 외부로 보내지 않는 공공 업무용 로컬 도구 시리즈의 여섯 번째 결과물이다.",
+   "org": "공직 커뮤니티",
+   "link": "https://github.com/obundh/gonggong-ax-local-6",
+   "collected_at": "2026-08-07",
+   "source": "kakao",
+   "date": "2026-08-07",
+   "tags": [
+    "문서자동화",
+    "번역",
+    "로컬도구"
+   ],
+   "org_type": "기타",
+   "title": "PDF 번역·검토 작업장 — 공공 AX 로컬 시리즈 6",
+   "id": "ec17e6cd86e7aaa1"
+  },
+  {
+   "summary": "로컬 Ollama의 Gemma 등 모델로 법령 MCP, 문서 파싱 MCP 같은 여러 MCP 서버를 동시에 돌리는 호스트가 공개됐다. 클라우드 API 없이 내부망과 오프라인 환경에서 AI 도구 호출을 쓸 수 있게 해준다.",
+   "org": "공직 현장(개인 개발)",
+   "link": "https://github.com/chrisryugj/ollama-mcp-host",
+   "collected_at": "2026-08-07",
+   "source": "kakao",
+   "date": "2026-08-07",
+   "tags": [
+    "MCP",
+    "로컬AI",
+    "내부망"
+   ],
+   "org_type": "기타",
+   "title": "로컬 Ollama 기반 MCP 멀티 호스트",
+   "id": "fe3bb0d913e27677"
+  },
+  {
+   "summary": "표기가 제각각인 주소들을 도로명주소 표준으로 일괄 정리해 주는 도구가 공개됐다. 주소 데이터 정비에 반복 투입되는 행정 실무 시간을 줄여주는 자동화 사례다.",
+   "org": "공직 현장(개인 개발)",
+   "link": "https://github.com/chrisryugj/gjdong",
+   "collected_at": "2026-08-07",
+   "source": "kakao",
+   "date": "2026-08-07",
+   "tags": [
+    "데이터정비",
+    "업무자동화",
+    "도구공개"
+   ],
+   "org_type": "기타",
+   "title": "표준주소실록 — 주소 표준화 정리 도구",
+   "id": "cba450dfb5c8fadf"
+  },
+  {
+   "summary": "선택한 Windows 폴더의 새 저장본을 다른 물리 디스크에 자동 보관해 파일 유실을 막는 로컬 트레이 앱이 공개됐다. 문서 사고가 잦은 공공 업무 환경을 위한 로컬 도구 시리즈의 일곱 번째 결과물이다.",
+   "org": "공직 커뮤니티",
+   "link": "https://github.com/obundh/gonggong-ax-local-7",
+   "collected_at": "2026-08-07",
+   "source": "kakao",
+   "date": "2026-08-07",
+   "tags": [
+    "백업",
+    "로컬도구"
+   ],
+   "org_type": "기타",
+   "title": "로컬 폴더 이중 보관 트레이 앱 — 공공 AX 로컬 시리즈 7",
+   "id": "94639db9e5fd6c2c"
+  },
+  {
+   "org_type": "중앙부처",
+   "link": "https://ax360.kr/",
+   "tags": [
+    "지원사업",
+    "플랫폼",
+    "도입사례"
+   ],
+   "summary": "정부와 민간의 AX 추진 전 과정에 필요한 정보를 한곳에서 제공하는 AX360° 포털이 공유됐다. AX 사업 찾기 2,416건, AX 자원 찾기 410건, AI 기업 탐색 511건을 갖추고 시작부터 완성까지 원스톱 지원을 표방한다.",
+   "date": "2026-08-07",
+   "source": "kakao",
+   "org": "과학기술정보통신부·NIPA·KOSA",
+   "title": "AX360° — AX 전 과정 원스톱 지원 포털 개설",
+   "collected_at": "2026-08-07",
+   "id": "849b973bf966f4ff"
+  },
+  {
+   "link": "https://openapi.hrdkorea.or.kr/mcp.html",
+   "date": "2026-08-07",
+   "org_type": "공공기관",
+   "tags": [
+    "MCP",
+    "공공데이터",
+    "도입사례"
+   ],
+   "source": "kakao",
+   "title": "한국산업인력공단, 공식 HRDKorea MCP 서비스 개시",
+   "collected_at": "2026-08-07",
+   "summary": "한국산업인력공단이 공단 공공데이터 69종(개방 229개 중 선별)을 ChatGPT와 Claude에 연결해 실시간 조회하는 공식 MCP 서비스를 2026년 8월 18일 개시한다. 인증키, 회원가입, 설치 없이 서버 주소 등록만으로 도구 41개를 바로 쓸 수 있다.",
+   "org": "한국산업인력공단",
+   "id": "93482d8cbe86c9d9"
+  },
+  {
+   "source": "threads",
+   "org": "공직 커뮤니티",
+   "case_url": "https://github.com/obundh/gonggong-ax-local-5",
+   "org_type": "기타",
+   "title": "문서 리소스 추출기 — 공공 AX 로컬 시리즈 5",
+   "summary": "HWPX, DOCX, PPTX 등 ZIP 기반 문서 33종에서 이미지, 동영상, 음성, 첨부파일, 글꼴, 문서 구조를 자동 분류해 추출하는 로컬 도구가 공개됐다. 파일 외부 전송과 원본 변경 없이 동작하며 매크로는 실행하지 않고 분류만 한다.",
+   "tags": [
+    "문서자동화",
+    "로컬도구"
+   ],
+   "link": "https://www.threads.com/@chobu62/post/DbdWP6hj0TU",
+   "date": "2026-07-31",
+   "collected_at": "2026-08-07",
+   "id": "7c63339c2722da03"
+  },
+  {
+   "source": "threads",
+   "org": "공직 현장(개인 개발)",
+   "popularity": 212,
+   "case_url": "https://github.com/chrisryugj/kordoc",
+   "org_type": "기타",
+   "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
+   "summary": "HWP·PDF 등 한국 공문서를 파싱하는 오픈소스 Kordoc이 문서 생산과 역변환까지 확장됐다. 3.0 버전은 AI가 내용만 고치고 서식·결재란·도장은 유지한 채 HWP로 되돌리는 왕복 변환을 지원하며, 실측 공문서 324건에서 재현율 99.998%, 표 100%, 환각률 0.006%를 기록했다. 데스크톱 앱 버전도 제공된다.",
+   "tags": [
+    "문서자동화",
+    "오픈소스",
+    "도구공개"
+   ],
+   "link": "https://www.threads.com/@chris_gomdori/post/DarG1dOE70_",
+   "date": "2026-07-12",
+   "collected_at": "2026-08-07",
+   "id": "8ff758ac1d5e40eb"
+  },
+  {
+   "source": "threads",
+   "org": "과학기술혁신본부",
+   "org_type": "중앙부처",
+   "title": "법령 MCP로 과학기술 법령 체계 분석",
+   "summary": "커뮤니티에서 공개된 법령 MCP를 실제 업무에 활용해 과학기술 관련 법령을 정리하고 법령 간 근거, 위임, 연계, 충돌, 중복 관계를 분석한 활용 사례가 공유됐다. 공개 도구가 다른 실무자의 법제 업무로 확산된 사례다.",
+   "tags": [
+    "법령",
+    "MCP",
+    "확산사례"
+   ],
+   "link": "https://www.threads.com/@spatiumliberum/post/DXBGL0bGfPe",
+   "date": "2026-04-12",
+   "collected_at": "2026-08-07",
+   "id": "0af085f0e51a1a7e",
+   "case_url": "https://msitsti2025.github.io/stlaws/"
+  },
+  {
+   "source": "kakao",
+   "org": "지방자치혁신연구원",
+   "org_type": "기타",
+   "title": "지방의정 지원 AI 에이전트 자치아이 베타",
+   "summary": "지방의정 활동을 지원하는 AI 에이전트 자치아이가 베타 테스트 중이라는 소식이 공유됐다. 지방의회 의정 업무를 돕는 특화 에이전트로, 지방자치 분야 공공AX 프로젝트의 하나로 개발되고 있다.",
+   "tags": [
+    "지방행정",
+    "AI에이전트"
+   ],
+   "link": "https://jachiai.kr",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "586bab7a0b40cb95"
+  },
+  {
+   "source": "kakao",
+   "org": "AI 정부 실험실",
+   "org_type": "중앙부처",
+   "title": "AI 정부 실험실 프로젝트 현황 보드 공개",
+   "summary": "공공 개발 산출물 저장소(공공 GitLab)의 프로젝트 현황을 분야별로 모아 보여주는 AI 정부 실험실 보드가 공유됐다. 공공행정, 교육행정, 재난안전 등 분야별 프로젝트를 커밋, 이슈, Star 기준으로 정렬해 탐색할 수 있으며, 보드 자체의 소스 코드도 공공 깃랩에 공개되어 누구나 조회·활용할 수 있다.",
+   "tags": [
+    "플랫폼",
+    "공유협업",
+    "도입사례"
+   ],
+   "link": "https://axboard.aigov.go.kr/",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "4ab9bf954cb48eb9",
+   "case_url": "https://gitlab.aigov.go.kr/AILab_Manager/ailabdashboard"
+  },
+  {
+   "source": "kakao",
+   "org": "미국 연방정부(GovInfo)",
+   "org_type": "기타",
+   "title": "미국 GovInfo, 정부 문서 MCP 공개 프리뷰",
+   "summary": "미국 연방정부 문서 포털 GovInfo가 MCP 서비스를 공개 프리뷰로 제공한다는 소식이 공유됐다. 법령과 정부 간행물을 AI가 직접 조회하게 하는 해외 정부의 MCP 도입 사례로, 국내 공공 MCP 논의의 참고가 된다.",
+   "tags": [
+    "해외",
+    "MCP",
+    "공공데이터"
+   ],
+   "link": "https://www.govinfo.gov/features/mcp-public-preview",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "235db3db0bff39d2"
+  },
+  {
+   "source": "kakao",
+   "org": "싱가포르 통계청",
+   "org_type": "기타",
+   "title": "싱가포르 통계청, SingStat MCP 서비스 제공",
+   "summary": "싱가포르 통계청이 국가 통계 데이터를 AI에서 직접 조회할 수 있는 SingStat MCP 서비스를 제공한다는 소식이 공유됐다. 통계 기관이 공식 MCP를 운영하는 해외 사례로 국내 공공데이터 MCP 확산 논의에 참고가 된다.",
+   "tags": [
+    "해외",
+    "MCP",
+    "공공데이터"
+   ],
+   "link": "https://www.singstat.gov.sg/data-tools-services/singstat-mcp",
+   "date": "2026-08-07",
+   "collected_at": "2026-08-07",
+   "id": "0c994fa292d1d15d"
+  },
+  {
+   "tags": [
+    "법령",
+    "내부망",
+    "바이브코딩",
+    "문서자동화",
+    "오픈소스"
+   ],
+   "summary": "공직 실무자가 내부망에서 쓸 수 있는 법령 리더 프로그램을 개발해 공유했다. 보고용 슬라이드로 정리하던 법령 내용을 카드뉴스 형태로 자동 변환해 보여주며, 이후 부처 고유 내용을 제거한 공개용 버전을 오픈소스로 공개해 각 기관이 자기 부처 법령·행정규칙을 담아 내부망에서 쓸 수 있게 했다.",
+   "title": "내부망용 법령 리더 프로그램 개발",
+   "collected_at": "2026-08-08",
+   "org_type": "기타",
+   "date": "2026-08-08",
+   "org": "공직 현장(개인 개발)",
+   "source": "threads",
+   "link": "https://www.threads.com/@milkbuttercheese/post/Dbvsk_8king",
+   "id": "e160d086c0ce2b1b",
+   "case_url": "https://github.com/Milkbuttercheese2/Which-article-was-it-public"
+  },
+  {
+   "tags": [
+    "MCP",
+    "로컬모델",
+    "망분리",
+    "통계"
+   ],
+   "case_url": "https://spring-ai-community.github.io/spring-ai-playground/",
+   "summary": "모델까지 노트북에서 구동해 인터넷 없이 동작하는 오픈소스 로컬 AI 에이전트가 공유됐다. 도구별 위험도 평가와 실행 승인 절차, 감사 대시보드를 갖췄고, 국가통계포털(KOSIS) 공식 MCP에 연결해 통계 조회부터 차트 생성까지 시연했다. 맥·윈도우·리눅스용 무료 배포판을 제공한다.",
+   "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연",
+   "collected_at": "2026-08-08",
+   "org_type": "기타",
+   "date": "2026-08-07",
+   "org": "오픈소스 커뮤니티",
+   "source": "kakao",
+   "link": "https://github.com/spring-ai-community/spring-ai-playground",
+   "id": "edf9a8632ff74a99"
+  },
+  {
+   "title": "NIA, 발간 자료의 마크다운 병행 등록 의무화",
+   "summary": "한국지능정보사회진흥원이 7월 중순부터 발간하는 지식정보 자료를 AI가 읽기 쉬운 마크다운(MD) 파일로 병행 등록하도록 의무화했다. 공개된 변환 도구를 보안성 검토 후 내부망에 배포하고 기관장 내부품의를 거쳐 시행했으며, 관련 자료를 타 기관에도 공유할 수 있다고 밝혔다.",
+   "date": "2026-08-08",
+   "org": "한국지능정보사회진흥원(NIA)",
+   "collected_at": "2026-08-08",
+   "source": "kakao",
+   "tags": [
+    "AI친화데이터",
+    "문서자동화",
+    "내부망",
+    "확산"
+   ],
+   "link": null,
+   "org_type": "공공기관",
+   "id": "17329009668eb397"
+  },
+  {
+   "title": "KIPRIS 특허 검색 MCP 공개",
+   "summary": "특허청 KIPRIS 데이터베이스를 자연어로 검색할 수 있는 오픈소스 MCP 서버가 공개됐다. 특허·실용신안·상표·디자인을 아우르는 자유검색, 출원인·권리자 검색, 서지 상세 등 7개 도구를 제공하며 Claude Desktop 등 MCP 지원 도구에 바로 연결해 쓸 수 있다.",
+   "date": "2026-06-21",
+   "org": "공직 현장(개인 개발)",
+   "collected_at": "2026-08-08",
+   "case_url": "https://github.com/chrisryugj/korean-patent-mcp",
+   "source": "threads",
+   "tags": [
+    "MCP",
+    "특허",
+    "공공데이터",
+    "오픈소스"
+   ],
+   "link": "https://www.threads.com/@chris_gomdori/post/DZ10EToCbZ2",
+   "org_type": "기타",
+   "id": "f76a328f43c0766f"
+  },
+  {
+   "title": "공공데이터포털 API를 MCP 서버 모음으로 공개",
+   "summary": "공공데이터포털(data.go.kr)의 공공 API들을 MCP 서버 모음으로 감싼 오픈소스 프로젝트가 공유됐다. 바이브 코딩을 하는 직장인들이 공공데이터를 AI 도구에서 바로 활용할 수 있게 해주는 기반으로 소개되며 큰 반응을 얻었다.",
+   "date": "2026-02-05",
+   "org": "개발 커뮤니티",
+   "collected_at": "2026-08-08",
+   "popularity": 858,
+   "case_url": "https://github.com/Koomook/data-go-mcp-servers",
+   "source": "threads",
+   "tags": [
+    "MCP",
+    "공공데이터",
+    "오픈소스",
+    "바이브코딩"
+   ],
+   "link": "https://www.threads.com/@stormleehj/post/DUWuyUykurq",
+   "org_type": "기타",
+   "id": "1f5e21b854f0aa3a"
+  },
+  {
+   "collected_at": "2026-08-08",
+   "summary": "공개된 금융규제 샌드박스(혁신금융서비스) 지정사례를 모아 새로 검토하는 서비스와 유사한 과거 사례·규제특례·부가조건을 찾아 비교하는 검색 서비스가 공개됐다. 공고문 PDF·HWP와 이미지 OCR로 텍스트를 추출하고 BM25 키워드 검색과 한국어 임베딩 모델의 의미 검색을 결합했으며, 인용 조문의 개정 이력까지 공식 법령 정보와 연계해 대조할 수 있다.",
+   "date": "2026-08-08",
+   "title": "금융규제 샌드박스 유사사례 검색 서비스 PoC",
+   "org_type": "교육",
+   "source": "kakao",
+   "org": "UNIST 금융공학연구실",
+   "link": "https://yongjaeleee-financial-sandbox-similar-case-poc.hf.space/",
+   "tags": [
+    "금융규제",
+    "샌드박스",
+    "RAG",
+    "법령"
+   ],
+   "id": "c46225d9c7efdb93"
+  },
+  {
+   "summary": "매년 수료증을 취합하는 반복 업무를 줄이기 위한 공무원 필수교육 이수 관리 시스템이 정부 AI 개발 플랫폼 깃랩에 공개됐다. 교육 일정 캘린더, 수료증 AI 자동검수, 일괄 다운로드 기능으로 수료증 취합·확인 업무를 크게 줄여준다.",
+   "org_type": "기타",
+   "link": "https://gitlab.aigov.go.kr/anms0214/gongedu",
+   "collected_at": "2026-08-08",
+   "source": "kakao",
+   "org": "공직 현장(개인 개발)",
+   "title": "공무원 필수교육 이수 관리 시스템 공개",
+   "date": "2026-08-08",
+   "tags": [
+    "교육관리",
+    "문서자동화",
+    "AI검수",
+    "행정효율"
+   ],
+   "id": "00411127055c4a07"
+  },
+  {
+   "org_type": "기타",
+   "collected_at": "2026-08-09",
+   "tags": [
+    "부동산",
+    "공공데이터",
+    "대시보드",
+    "지역정책"
+   ],
+   "link": "https://www.threads.com/@gongpenclaw/post/Dbn8PbNgca4",
+   "case_url": "https://hosungseo.github.io/gonpunclaw-population-decline-realestate/",
+   "source": "threads",
+   "org": "공직 현장(개인 개발)",
+   "title": "인구감소지역 부동산 상황판 공개",
+   "summary": "인구감소지역·관심지역 107곳의 지정 특례와 최근 24개월 아파트 실거래를 한 화면에 모은 상황판이 공개됐다. 흩어져 있던 특례 고시와 실거래 자료를 모아 지역별 정책 차이·표본 규모·기준일을 먼저 보여주는 구성으로, 관심이 적은 지역의 시장 정보를 가시화하는 실험으로 소개됐다.",
+   "date": "2026-08-05",
+   "id": "63a81d23af115b66"
+  },
+  {
+   "collected_at": "2026-08-11",
+   "tags": [
+    "개발인프라",
+    "코드공유",
+    "오픈소스",
+    "확산"
+   ],
+   "case_url": "https://gitlab.aigov.go.kr/explore/projects/active",
+   "source": "threads",
+   "date": "2026-08-07",
+   "summary": "행정안전부가 공직자들이 개발한 AI 도구와 코드를 공유하는 정부 공공 깃랩 저장소를 구축하고 각 기관에 공문으로 안내했다. 공무원 필수교육 관리 시스템 등 실무 도구들이 이미 등록되어 공개적으로 열람할 수 있으며, 기관 간 코드 재사용과 확산의 공식 기반이 마련됐다.",
+   "org_type": "중앙부처",
+   "org": "행정안전부",
+   "popularity": 134,
+   "title": "행안부, 정부 공공 깃랩 구축·전 기관 공문 안내",
+   "link": "https://www.threads.com/@hakdol.senvip/post/DbrwUd7IPAN",
+   "id": "54c2561cf3e1a268"
+  },
+  {
+   "date": "2026-08-11",
+   "org": "개발 커뮤니티",
+   "org_type": "기타",
+   "source": "kakao",
+   "title": "농식품분야 특허 AI 기술분석 서비스",
+   "collected_at": "2026-08-11",
+   "link": "https://atipsum.lovable.app/",
+   "tags": [
+    "특허",
+    "농식품",
+    "기술분석",
+    "AI분석"
+   ],
+   "summary": "농식품 분야 특허를 AI가 자동으로 분석해주는 기술분석 서비스가 공개됐다. 특허 문서를 바탕으로 농식품 기술 동향을 검토하려는 실무자가 분야 특화 분석 결과를 빠르게 받아볼 수 있도록 구성됐다.",
+   "id": "000bb96831380931"
+  },
+  {
+   "date": "2026-08-11",
+   "org": "카카오",
+   "org_type": "기타",
+   "source": "kakao",
+   "title": "카카오 PlayMCP — MCP 에이전트 플랫폼",
+   "collected_at": "2026-08-11",
+   "link": "https://playmcp.kakao.com/",
+   "tags": [
+    "MCP",
+    "플랫폼",
+    "에이전트",
+    "생태계"
+   ],
+   "summary": "카카오가 MCP 기반 AI 에이전트 생태계 플랫폼 PlayMCP를 공개했다. 다양한 MCP 서버를 등록·연결해 대화형 AI 경험을 만들 수 있는 플랫폼으로, 공공 분야에서도 MCP 생태계 확산의 참고 사례로 공유됐다.",
+   "id": "999efcd7e3a80a93"
+  },
+  {
+   "date": "2026-08-11",
+   "org": "개발 커뮤니티",
+   "org_type": "기타",
+   "source": "kakao",
+   "title": "디자인 구현 레퍼런스 보드 design-isms",
+   "collected_at": "2026-08-11",
+   "link": "https://lidge-jun.github.io/design-isms/",
+   "tags": [
+    "디자인",
+    "바이브코딩",
+    "레퍼런스",
+    "UI"
+   ],
+   "summary": "49개 디자인 사조(ism)의 시각적 레퍼런스를 효과·색상·타이포그래피·레이아웃·모션 주제별로 탐색하는 보드가 공개됐다. 바이브 코딩으로 화면을 만들 때 시각적 방향을 빠르게 정하도록 돕는 의사결정 보조와 AI 슬롭 진단 관점을 담았다.",
+   "id": "dfe9d069e330d1c8"
+  },
+  {
+   "date": "2026-08-11",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "기타",
+   "source": "kakao",
+   "title": "공공조달 제도 88개 업무 흐름도 — 그 많던 조달은 어떻게 했을까",
+   "collected_at": "2026-08-11",
+   "link": "https://how-did-they-do-all-that-procurement.dali-n-narumi.workers.dev/",
+   "tags": [
+    "조달",
+    "법령",
+    "업무흐름도",
+    "행정"
+   ],
+   "summary": "입찰참가자격 등록부터 계약 체결, 대금 지급까지 국가계약법·시행령·계약예규에 흩어진 공공조달 제도 88개를 담당자·서류·기한이 보이는 업무 흐름도로 정리한 안내 사이트가 공개됐다. 모든 근거를 국가법령정보센터 현행 법령의 조문 단위로 연결해 검증했고 법령 기준일을 명시한다.",
+   "id": "a8fbf74431025f70"
+  },
+  {
+   "date": "2026-08-11",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "기타",
+   "source": "kakao",
+   "title": "한 장으로 끝내는 조달제도 100",
+   "collected_at": "2026-08-11",
+   "link": "https://github.com/Milkbuttercheese2/procurement-system-100",
+   "tags": [
+    "조달",
+    "행정",
+    "오픈소스",
+    "업무구조도"
+   ],
+   "summary": "공공조달 제도 100개를 한 장씩의 구조도로 정리한 오픈소스 저장소가 공개됐다. 제도별 절차와 근거를 압축한 자료로, 조달 업무를 처음 맡은 실무자가 제도 전반을 빠르게 파악하도록 돕는다.",
+   "id": "798f4e6bef72fc13"
+  },
+  {
+   "date": "2026-08-11",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "기타",
+   "source": "kakao",
+   "title": "공공데이터포털 인텔리전스 — 파일→API 전환 검토 큐",
+   "collected_at": "2026-08-11",
+   "link": "https://hosungseo.github.io/public-data-portal-intelligence/",
+   "tags": [
+    "공공데이터",
+    "API",
+    "데이터분석",
+    "우선순위"
+   ],
+   "summary": "공공데이터포털의 파일데이터 중 무엇을 먼저 API로 전환해야 하는지 검토 우선순위 큐로 보여주는 분석 도구가 공개됐다. 카탈로그 메타데이터와 연간 이용 이력을 결합해 수요 신호를 산출하고, 서로 다른 데이터 기준시점을 숨기지 않고 함께 표시하는 방법론을 담았다.",
+   "id": "6c5b15f4c8414f29"
+  },
+  {
+   "date": "2026-08-11",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "기타",
+   "source": "kakao",
+   "title": "공공행정 리서치 스킬 — 공식 근거를 검토용 보고서로 정리",
+   "collected_at": "2026-08-11",
+   "link": "https://github.com/Kminer2053/public-sector-research-skill",
+   "tags": [
+    "리서치",
+    "보고서",
+    "AI스킬",
+    "행정"
+   ],
+   "summary": "공공업무에 필요한 공식 근거를 찾아 바로 검토할 수 있는 보고서 형태로 정리해주는 AI 리서치 스킬이 오픈소스로 공개됐다. 법령·지침 등 공식 자료 탐색과 보고서 초안 작성을 한 흐름으로 묶어 실무 검토 시간을 줄여준다.",
+   "id": "112bf7dc576ed8aa"
+  },
+  {
+   "source": "kakao",
+   "summary": "현장에서 사진만 찍으면 OCR로 현수막 내용을, 사진 메타데이터(EXIF)에서 위치정보를 자동 입력하는 불법현수막 단속 프로그램이 공개됐다. 즉시 입력과 일괄 업로드 두 방식을 지원하며, 단속 기록부터 행정처분 관제까지 이어지는 흐름으로 지자체 단속 업무의 반복 입력을 줄여준다.",
+   "org": "공직 현장(개인 개발)",
+   "collected_at": "2026-08-11",
+   "org_type": "기타",
+   "date": "2026-08-11",
+   "tags": [
+    "단속행정",
+    "OCR",
+    "현장업무",
+    "자동화"
+   ],
+   "title": "배너캅 — AI 불법현수막 단속·행정처분 관제 시스템",
+   "link": "https://banner.choshg.com/",
+   "id": "026e1b69c1fe6678"
+  },
+  {
+   "date": "2026-07-21",
+   "org": "광진구",
+   "case_url": "https://www.gwangjin.go.kr/portal/bbs/B0000002/view.do?nttId=6617521&menuNo=200191",
+   "source": "kakao",
+   "collected_at": "2026-08-11",
+   "title": "광진구, 공무원이 직접 개발한 AI 도구 6종 전 직원 업무 전면 투입",
+   "org_type": "지자체",
+   "link": "https://www.gwangjin.go.kr/portal/bbs/B0000002/view.do?nttId=6617521&menuNo=200191",
+   "tags": [
+    "도입사례",
+    "업무자동화",
+    "MCP",
+    "지방행정"
+   ],
+   "summary": "광진구가 소속 공무원이 직접 개발한 AI 도구 6종을 전 직원 업무에 투입했다. 문서 요약·재작성, 법령 근거 확인, 출처 포함 통계 조회, 건축물대장 조회, 비정형 주소 정리, 개인 PC 문서 검색을 담당하며 법령·통계·건축 도구는 기관 자체 AI 서비스와 연동해 원문과 출처를 함께 제시한다. 개인정보 입력 금지, 원문·출처 확인 의무, 담당자와 팀장의 최종 판단 책임, 전용 문의 창구 운영을 4대 관리 원칙으로 정했고, 행정안전부 주관 지방정부 AI 우수사례 발표대회에 서울시 대표로 선정됐다.",
+   "id": "9dc1a7081bc869b1"
+  },
+  {
+   "org": "법제처",
+   "case_url": "https://www.moleg.go.kr/board.es?mid=a10501000000&bid=0048&act=view&list_no=152980",
+   "title": "공무원이 직접 만든 'AI 법령 비서' 시범 개시",
+   "source": "kakao",
+   "date": "2026-07-13",
+   "link": "https://www.moleg.go.kr/board.es?mid=a10501000000&bid=0048&act=view&list_no=152980",
+   "summary": "공무원이 직접 개발한 'AI 법령 비서'가 범정부 시범 서비스를 시작했다. 독자 AI 파운데이션 모델과 RAG 기반으로 대법원 판례 6만 건, 법령·행정규칙 24만 건, 5개 시도 자치법규 5만여 건을 탑재해 정책 기획·입안·집행 과정의 법적 질문에 근거와 함께 응답한다. 중앙·지방 모든 공무원이 행정내부망의 '온 AI 실험실'에서 즉시 활용할 수 있으며, 답변은 최종 법적 판단이 아닌 중간 검토 자료로 쓰인다.",
+   "org_type": "중앙부처",
+   "collected_at": "2026-08-11",
+   "tags": [
+    "법령",
+    "RAG",
+    "독자AI모델",
+    "범정부"
+   ],
+   "id": "e2f85975979aa487"
+  },
+  {
+   "org_type": "기타",
+   "source": "kakao",
+   "title": "학교시설 업무 워크플로우 보드 — 26개 업무 전주기 정리",
+   "collected_at": "2026-08-12",
+   "org": "공직 현장(개인 개발)",
+   "tags": [
+    "학교시설",
+    "업무흐름도",
+    "행정",
+    "건축"
+   ],
+   "link": "https://seum8660.github.io/workflow/%ED%95%99%EA%B5%90%EC%8B%9C%EC%84%A4%20%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0%20%EC%9D%B8%ED%8A%B8%EB%A1%9C.dc.html",
+   "summary": "학교시설 사업의 기획부터 준공·사용승인까지 담당자가 실제로 밟는 절차를 정리한 워크플로우 보드가 공개됐다. 설계변경·공기연장·인허가·안전사고 등 26개 업무를 단계 게이트와 담당 주체 레인으로 나눠 같은 문법으로 읽을 수 있게 했고, 업무별 기한·법적 근거·병목 구간을 47장의 세부 절차 시트와 전자책 형태로 제공한다.",
+   "date": "2026-08-11",
+   "id": "def97ef350fe7cae"
+  },
+  {
+   "org_type": "기타",
+   "source": "kakao",
+   "title": "출장 여비 서류 자동화 오픈소스 — 신청서·명세서·복명서 일괄 생성",
+   "collected_at": "2026-08-12",
+   "org": "공직 현장(개인 개발)",
+   "tags": [
+    "출장정산",
+    "문서자동화",
+    "오픈소스",
+    "행정효율"
+   ],
+   "link": "https://github.com/kkhinlove-design/travel-expense-automation-kr",
+   "summary": "출장 승인 문서(PDF·HWPX)를 파싱해 여비를 계산하고 여비신청서·여비명세서·출장복명서를 세트로 만들어주는 자동화 도구가 오픈소스로 공개됐다. 복명서 본문은 로컬 LLM이 작성해 PDF로 출력하며, 기관별 서식을 넣어 맞춤 설정할 수 있어 반복적인 출장 정산 서류 작성을 줄여준다.",
+   "date": "2026-08-11",
+   "id": "e7949c7bc45ca8e6"
+  },
+  {
+   "source": "kakao",
+   "org": "공직 현장(개인 개발)",
+   "summary": "서울 열린데이터광장의 현행 카탈로그 8,251건을 자연어로 검색·추천해주는 메타검색 MCP 서버가 공개됐다. 실시간 도시데이터, 생활·체류인구, 지하철 승하차, 따릉이 등 서울시 공공데이터를 AI 도구에서 바로 탐색할 수 있게 해준다.",
+   "title": "서울 열린데이터광장 메타검색 MCP 공개",
+   "tags": [
+    "MCP",
+    "공공데이터",
+    "서울시",
+    "오픈소스"
+   ],
+   "link": "https://github.com/youjin8812-hub/seoul-opendata-mcp",
+   "org_type": "기타",
+   "collected_at": "2026-08-12",
+   "date": "2026-08-12",
+   "id": "ee30aa1cae172991"
+  },
+  {
+   "source": "kakao",
+   "org": "공직 현장(개인 개발)",
+   "summary": "해마다 공표되는 건설공사 표준품셈을 검색할 수 있는 MCP 서버가 공개됐다. PDF로만 제공되던 품셈 자료를 파싱해 AI 도구에서 바로 조회할 수 있게 한 것으로, 공사비 산출·원가계산 검토 등 건축·토목 직렬의 반복 업무를 줄이는 기반이 된다.",
+   "title": "건설공사 표준품셈 검색 MCP 공개",
+   "tags": [
+    "MCP",
+    "건설",
+    "표준품셈",
+    "공사행정"
+   ],
+   "link": "https://github.com/seum8660/pumsem",
+   "org_type": "기타",
+   "collected_at": "2026-08-12",
+   "date": "2026-08-12",
+   "id": "578e4da94db0682d"
+  },
+  {
+   "source": "threads",
+   "org": "공직 현장(개인 개발)",
+   "summary": "말이나 전화로 도움을 요청할 수 없는 위급 상황에서 CCTV 앞 정해진 팔 동작(7→9→7→9)을 반복하면 AI가 구조 가능성 후보를 관제요원에게 띄우는 PoC가 공개됐다. AI는 후보만 알리고 위험 확정과 신고는 사람이 판단하는 구조로, 폭염·낙상 등 사회재난 대응에서 음성 외의 구조요청 경로를 실험한다.",
+   "case_url": "https://github.com/obundh/gonggong-disaster-series-rescue79",
+   "title": "레스큐79 — CCTV 팔 동작 인식 구조요청 감지 PoC",
+   "tags": [
+    "사회재난",
+    "CCTV",
+    "영상인식",
+    "안전"
+   ],
+   "link": "https://www.threads.com/@chobu62/post/Db735IZj7vM",
+   "org_type": "기타",
+   "collected_at": "2026-08-12",
+   "date": "2026-08-12",
+   "id": "759835514b4b7ca4"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
+   "popularity": 2443,
+   "summary": "법제처 국가법령정보를 LLM에서 바로 조회하는 MCP 서버가 공개됐다. 헌법부터 판례까지 법령 17만 5천여 건을 64개 도구로 검색하고 AI 답변의 인용 조문을 검증해 법령 환각을 줄인다. 공개 50일 만에 기관 내부망 AI에 법령 에이전트로 공식 등록되는 등 공직 실무 법령 MCP 생태계의 대표 저장소로 자리잡았다.",
+   "tags": [
+    "MCP",
+    "법령",
+    "오픈소스",
+    "인용검증"
+   ],
+   "date": "2026-08-12",
+   "org": "공직 현장(개인 개발)",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/chrisryugj/korean-law-mcp",
+   "id": "43dc7f4ab2500260"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "LexGuard MCP — 일반인용 법률 정보 조회",
+   "popularity": 127,
+   "summary": "일반인이 AI를 통해 법률 정보를 쉽게 조회할 수 있게 만든 MCP 서버가 공개됐다. 법령 검색, 조문 조회, 판례 검색 등 159개 API를 지원한다.",
+   "tags": [
+    "MCP",
+    "법령",
+    "판례",
+    "오픈소스"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/SeoNaRu/lexguard-mcp",
+   "id": "81c14797b7aaafa0"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "korean-law-mcp — 한국 법령 조회 MCP",
+   "summary": "한국 법령 정보를 AI 도구에서 조회할 수 있게 하는 MCP 서버가 공개됐다. 법령 검색과 조문 접근을 제공하는 파이썬 구현체다.",
+   "tags": [
+    "MCP",
+    "법령",
+    "오픈소스"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/SeoNaRu/korean-law-mcp",
+   "id": "10f6ec0f81090085"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "law-mcp — 국가법령정보 공동활용 API MCP",
+   "summary": "국가법령정보 공동활용(open.law.go.kr) API를 통해 법령 데이터에 접근하는 실험적 MCP 서버가 공개됐다. Claude Code 등 MCP 지원 도구에서 동작한다.",
+   "tags": [
+    "MCP",
+    "법령",
+    "오픈소스"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/finalchild/law-mcp",
+   "id": "22be065e9c257d93"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "한국 공공데이터 통합 MCP — 법령·DART·공공데이터포털",
+   "summary": "법제처 국가법령정보센터, DART 전자공시시스템, 공공데이터포털 API를 하나로 통합한 MCP 서버가 공개됐다. 법령·판례·기업공시·생활정보를 한 도구에서 검색·조회할 수 있다.",
+   "tags": [
+    "MCP",
+    "공공데이터",
+    "법령",
+    "공시"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/hjsh200219/korea-public-data-mcp",
+   "id": "ed42c0e326a6d068"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "법제처 OPEN API 통합 MCP — 130여 개 도구",
+   "summary": "법제처 OPEN API를 통합해 130개 이상의 도구를 제공하는 MCP 서버가 공개됐다. 법령·행정규칙·자치법규·판례·위원회 결정문·조약·별표서식·법령용어·특별행정심판·중앙부처 해석까지 법률 정보 전반에 접근할 수 있다.",
+   "tags": [
+    "MCP",
+    "법령",
+    "행정규칙",
+    "오픈소스"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/ChangooLee/mcp-kr-legislation",
+   "id": "daab018ffea87c77"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "법령 온톨로지 검색 MCP — 법제처 LOD SPARQL 기반",
+   "summary": "법제처의 LOD(연결 개방 데이터)를 SPARQL로 질의하는 법령 검색 MCP 서버가 공개됐다. 법령 간 관계를 온톨로지 구조로 탐색할 수 있게 한다.",
+   "tags": [
+    "MCP",
+    "법령",
+    "온톨로지",
+    "LOD"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/wintenboy/law-ontology-mcp",
+   "id": "05763974d3375178"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "나라장터 MCP 서버",
+   "summary": "나라장터의 공공조달 데이터를 AI 도구에서 조회할 수 있게 하는 MCP 서버가 공개됐다. 입찰·계약 정보 탐색을 자연어로 수행하는 기반을 제공한다.",
+   "tags": [
+    "MCP",
+    "조달",
+    "나라장터"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/Datajang/narajangteo_mcp_server",
+   "id": "b37636486ec1dee4"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "나라장터 데이터 수집·가공 MCP",
+   "summary": "나라장터 API의 데이터를 수집·가공해 MCP 형태로 제공하는 서버가 공개됐다. Go로 구현되어 조달 데이터를 AI 도구에서 활용할 수 있게 한다.",
+   "tags": [
+    "MCP",
+    "조달",
+    "나라장터",
+    "오픈소스"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/nine-hundred/naramarket-mcp",
+   "id": "146501d37df93aa2"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "나라장터(G2B) 조달 조회 MCP — 15개 도구",
+   "summary": "나라장터(G2B) 공공조달 데이터를 조회하는 15개 AI 도구를 담은 MCP 서버가 공개됐다. FastMCP 2.0 기반으로 Smithery 배포를 지원해 바로 연결해 쓸 수 있다.",
+   "tags": [
+    "MCP",
+    "조달",
+    "나라장터"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/alphago2580/naramarketmcp",
+   "id": "27c2fd1b292cfcbf"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "정부 공공데이터 5종 통합 MCP — 중기부·정부24·기업마당 등",
+   "summary": "중소벤처기업부·정부24·기업마당·나라장터·중소벤처24 등 정부 공공데이터 5종을 한 번에 호출하는 MCP 서버가 공개됐다. 지원사업·민원·조달 정보를 한 도구에서 조회할 수 있다.",
+   "tags": [
+    "MCP",
+    "공공데이터",
+    "지원사업"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/leokim90/gov-data-mcp",
+   "id": "952ab7cccb367db6"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "한국 주식 분석 MCP",
+   "popularity": 170,
+   "summary": "한국 주식 분석을 위한 MCP 서버가 공개됐다. 국내 증시 데이터를 AI 도구에서 조회·분석할 수 있게 한다.",
+   "tags": [
+    "MCP",
+    "금융",
+    "주식"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/jjlabsio/korea-stock-mcp",
+   "id": "e07be0004494e652"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "DART 전자공시 MCP",
+   "popularity": 127,
+   "summary": "금융감독원 DART 전자공시시스템 데이터를 AI 도구에서 조회하는 MCP 서버가 공개됐다. 기업 공시 탐색을 자연어로 수행할 수 있다.",
+   "tags": [
+    "MCP",
+    "공시",
+    "금융"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/2geonhyup/dart-mcp",
+   "id": "13342535139dd7a0"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "OpenDART 전자공시 MCP — 83개 API를 15개 도구로",
+   "summary": "OpenDART의 83개 공시 API를 15개 MCP 도구로 정리한 서버가 공개됐다. 공시·재무·지분·XBRL 조회에 애널리스트 분석 프레임(내부자 시그널, 회계 리스크, 퀄리티 체크리스트)과 HWP·PDF 첨부의 마크다운 변환까지 결합했다.",
+   "tags": [
+    "MCP",
+    "공시",
+    "금융",
+    "문서변환"
+   ],
+   "date": "2026-08-12",
+   "org": "공직 현장(개인 개발)",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/chrisryugj/korean-dart-mcp",
+   "id": "83bb0ac0ed9f576d"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "한국 금융 통합 MCP — ECOS·부동산·DART·KRX",
+   "summary": "한국은행 ECOS, 부동산, DART, KRX를 아우르는 15개 도구의 금융 MCP 서버가 공개됐다. 자본시장법을 준수하는 설계를 표방하며 한국 특화 연계 분석 도구 2종을 더했다.",
+   "tags": [
+    "MCP",
+    "금융",
+    "공공데이터"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/emceeKim/korea-finance-mcp",
+   "id": "4925d016e9377a50"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "한국 주식 분석 원격 MCP — DART·KRX 기반",
+   "summary": "DART 공시와 KRX 시세를 바탕으로 보수적 밸류에이션 범위를 제시하는 원격 MCP 서버가 공개됐다. Claude·Cursor 등 MCP 클라이언트에서 바로 연결해 쓸 수 있다.",
+   "tags": [
+    "MCP",
+    "금융",
+    "주식",
+    "공시"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/Mrbaeksang/korea-stock-analyzer-mcp",
+   "id": "9070c4f923623855"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "DART 전자공시 API MCP 서버",
+   "summary": "전자공시시스템(DART) API를 활용하는 MCP 서버가 공개됐다. 기업 공시 데이터를 AI 도구에서 조회할 수 있게 한다.",
+   "tags": [
+    "MCP",
+    "공시",
+    "금융"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/snaiws/DART-mcp-server",
+   "id": "b9da6eddda89513d"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "pykrx 기반 KRX 시세 MCP",
+   "summary": "국내 증시 데이터 라이브러리 pykrx를 MCP 서버로 감싼 도구가 공개됐다. KRX 시세·종목 데이터를 AI 도구에서 조회할 수 있다.",
+   "tags": [
+    "MCP",
+    "금융",
+    "주식"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/sharebook-kr/pykrx-mcp",
+   "id": "9aee6bbb0c29dddb"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "LS증권 OpenAPI MCP — 시세·차트·스크리너 자연어 조회",
+   "summary": "LS증권 OpenAPI를 자연어로 다루는 MCP 서버가 공개됐다. 국내외 시세·차트·스크리너·ETF·프로그램 매매·포트폴리오 데이터를 AI 도구에서 조회할 수 있다.",
+   "tags": [
+    "MCP",
+    "금융",
+    "증권"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/redoxnet/mcp-lsopenapi",
+   "id": "991e9f9e7b324692"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "아파트 실거래가 MCP — 국토교통부 공개 API 기반",
+   "popularity": 368,
+   "summary": "국토교통부 공개 API로 한국 아파트 실거래가를 조회하는 MCP 서버가 공개됐다. AI 도구에 아파트 가격을 자연어로 물어볼 수 있게 해 큰 호응을 얻었다.",
+   "tags": [
+    "MCP",
+    "부동산",
+    "공공데이터"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/tae0y/real-estate-mcp",
+   "id": "75b9815de6b6dcf5"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "공공데이터 카탈로그 조합 설계 MCP",
+   "summary": "대한민국 공공데이터 카탈로그의 정적 메타데이터를 조합해 서비스 아이디어를 설계하도록 돕는 MCP가 공개 베타로 나왔다. 어떤 데이터가 있는지부터 탐색해 조합 가능성을 검토하는 용도다.",
+   "tags": [
+    "MCP",
+    "공공데이터",
+    "기획"
+   ],
+   "date": "2026-08-12",
+   "org": "공직 현장(개인 개발)",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/obundh/korea-public-data-catalog-mcp",
+   "id": "d69be456031471a4"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "KOSIS 통계 자연어 조회 MCP",
+   "summary": "국가통계포털(KOSIS) 통계를 자연어로 조회하는 MCP 서버가 공개됐다. 통계표 탐색과 조회를 AI 도구에서 바로 수행할 수 있다.",
+   "tags": [
+    "MCP",
+    "통계",
+    "공공데이터"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/Dayoooun/korea-stats-mcp",
+   "id": "09f079e1424f6992"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "통계청 API MCP",
+   "summary": "통계청 API를 활용한 MCP 서버가 공개됐다. 국가 통계 데이터를 AI 도구에서 조회할 수 있게 한다.",
+   "tags": [
+    "MCP",
+    "통계",
+    "공공데이터"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/jaykim429/korea-statistic-MCP-cginside",
+   "id": "0011a7e888431aeb"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "공공데이터 5종 연결 MCP — 날씨·실거래가·대기질·경제통계·사업자조회",
+   "summary": "날씨, 부동산 실거래가, 대기질, 경제통계, 사업자 조회까지 한국 공공데이터 5종을 AI에 연결하는 MCP 서버가 공개됐다.",
+   "tags": [
+    "MCP",
+    "공공데이터",
+    "생활정보"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/SongT-50/korean-public-data-mcp",
+   "id": "b6f4cc079eb86f11"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
+   "popularity": 7142,
+   "summary": "'에이전트를 한국인으로'를 표방하는 한국 특화 AI 스킬 모음집이 공개됐다. 법령 조회 등 한국 실무에 필요한 스킬을 모아 커스텀 MCP가 막힌 환경에서도 스킬 설치만으로 한국형 기능을 쓸 수 있게 한다.",
+   "tags": [
+    "AI스킬",
+    "오픈소스",
+    "한국특화"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/NomaDamas/k-skill",
+   "id": "2f4ed1e68a6464c5"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "건축HUB MCP — 건축물대장·인허가·필지 종합카드",
+   "summary": "국토교통부 건축HUB를 MCP 서버로 감싼 도구가 공개됐다. 건축물대장·건축/주택 인허가·법정동코드에 한 필지 종합카드, 동 단위 통계, 노후건축물 분석을 더했고 공용키를 탑재한 원격 커넥터로 URL 등록만으로 연결된다.",
+   "tags": [
+    "MCP",
+    "건축",
+    "공공데이터"
+   ],
+   "date": "2026-08-12",
+   "org": "공직 현장(개인 개발)",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/chrisryugj/archhub-mcp",
+   "id": "76f07692203606ad"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "실거래가×건축물대장 역매칭 MCP",
+   "summary": "국토부 실거래가와 건축물대장을 역매칭해 서울 상업업무용 통건물의 실거래·시세를 조회하는 MCP 서버가 공개됐다. 두 공공데이터를 결합해 개별 건물 단위 분석을 가능하게 한다.",
+   "tags": [
+    "MCP",
+    "부동산",
+    "공공데이터"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/syleedlabs/deal-locator-mcp",
+   "id": "8f1e3c48b2baa6d2"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "기상청 날씨 MCP 서버",
+   "summary": "기상청 데이터를 활용하는 날씨 MCP 서버가 공개됐다. AI 도구에서 국내 날씨 정보를 자연어로 조회할 수 있다.",
+   "tags": [
+    "MCP",
+    "날씨",
+    "공공데이터"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/ohhan777/korea_weather",
+   "id": "56c2bb56426019ec"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "국회 API MCP — 국회·국민참여입법 API 통합",
+   "summary": "276개 국회 API와 8개 국민참여입법센터 API에 100% 접근하는 MCP 서버가 공개됐다. 6개 Lite·10개 Full 프로필 도구로 구성되어 의안·의원·회의록 등 입법 데이터를 AI 도구에서 조회할 수 있으며 107개 API 코드가 검증돼 있다.",
+   "tags": [
+    "MCP",
+    "국회",
+    "입법",
+    "공공데이터"
+   ],
+   "date": "2026-08-12",
+   "org": "공공기관 연구자(개인 개발)",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/hollobit/assembly-api-mcp",
+   "id": "f8c9ae69a673c52a"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "정부 지원사업 조회 MCP",
+   "summary": "정부 지원사업 정보를 AI 도구에서 조회할 수 있게 하는 MCP 서버가 공개됐다. 지원사업 탐색을 자연어로 수행하는 기반을 제공한다.",
+   "tags": [
+    "MCP",
+    "지원사업",
+    "공공데이터"
+   ],
+   "date": "2026-08-12",
+   "org": "공직 현장(개인 개발)",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/boam79/gov_support_mcp",
+   "id": "bef8ee3811d115e4"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "도서관 정보나루 MCP — 도서·도서관 검색 25개 도구",
+   "summary": "도서관 정보나루 API 기반의 MCP 서버가 공개됐다. 도서·도서관 검색, 인기 대출 트렌드, GPS 기반 주변 도서관 찾기 등 25개 이상의 도구를 제공한다.",
+   "tags": [
+    "MCP",
+    "도서관",
+    "공공데이터"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/isnow890/data4library-mcp",
+   "id": "0561ecd39ea94051"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "식약처 식품영양성분DB MCP",
+   "summary": "식품의약품안전처의 식품영양성분 데이터베이스를 MCP 도구로 감싼 서버가 공개됐다. 식품 영양 정보를 AI 도구에서 조회할 수 있다.",
+   "tags": [
+    "MCP",
+    "식품",
+    "공공데이터"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/slicequeue/k-mfds-fooddb-mcp-server",
+   "id": "966d6a2ae42587a4"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "KORAIL 공공데이터 MCP 서버 모음",
+   "summary": "한국철도공사(KORAIL) 공공데이터를 다루는 MCP 서버 모음이 공개됐다. 철도 관련 데이터를 AI 도구에서 조회할 수 있게 한다.",
+   "tags": [
+    "MCP",
+    "철도",
+    "공공데이터"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/lovelyquality/korail-mcp",
+   "id": "6a9c5da9f1d3210f"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커",
+   "popularity": 291,
+   "summary": "비개발자를 위한 한국 실무 AI 코워커 패밀리가 공개됐다. Claude Cowork·ChatGPT Work에서 명령 한 번으로 프로젝트를 시작할 수 있게 해 실무자의 AI 활용 진입장벽을 낮춘다.",
+   "tags": [
+    "AI스킬",
+    "실무도구",
+    "오픈소스"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/modu-ai/moai-cowork",
+   "id": "c5aa260668941b92"
+  },
+  {
+   "collected_at": "2026-08-12",
+   "title": "건설현장 법정 안전문서 작성·검토 오픈소스",
+   "summary": "산업안전보건법·기준규칙·중대재해처벌법·KOSHA Guide를 기반으로 건설현장의 법정 안전문서 작성과 검토를 돕는 오픈소스 도구가 공개됐다. 안전관리자와 현장소장의 반복 문서 업무를 더 빠르고 정확하게 만드는 것을 목표로 한다.",
+   "tags": [
+    "안전",
+    "건설",
+    "문서자동화",
+    "법령"
+   ],
+   "date": "2026-08-12",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "org_type": "기타",
+   "link": "https://github.com/ratelworks/agent-safety-oss",
+   "id": "05c30a6088be7960"
+  },
+  {
+   "summary": "식품의약품안전처 공공 OpenAPI를 10개 MCP 도구로 노출하는 서버가 공개됐다. 의약품 정보, 병용금기(DUR), 알약 식별, 식품 정보를 AI 도구에서 조회할 수 있다.",
+   "date": "2026-08-13",
+   "collected_at": "2026-08-13",
+   "title": "식약처 의약품 OpenAPI MCP — 의약품·DUR·알약식별",
+   "org_type": "기타",
+   "org": "개발 커뮤니티",
+   "link": "https://github.com/zzjiho/kr-medicine-mcp",
+   "tags": [
+    "MCP",
+    "의료",
+    "식약처",
+    "공공데이터"
+   ],
+   "source": "kakao",
+   "id": "5bfadfc3b8e2292f"
+  },
+  {
+   "summary": "공공데이터포털의 심평원·식약처 의료 데이터를 다루는 MCP 서버가 공개됐다. 비급여 진료비, 병원 찾기, 의약품·DUR, 질병 통계를 AI 도구에서 조회할 수 있다.",
+   "date": "2026-08-13",
+   "collected_at": "2026-08-13",
+   "title": "공공 의료 데이터 MCP — 심평원·식약처 통합",
+   "org_type": "기타",
+   "org": "개발 커뮤니티",
+   "link": "https://github.com/NSLC7779/dk-korea-health-mcp",
+   "tags": [
+    "MCP",
+    "의료",
+    "공공데이터"
+   ],
+   "source": "kakao",
+   "id": "ec4f975c809401cb"
+  },
+  {
+   "summary": "대한민국 국회를 질문으로 탐색하고 공식 기록으로 검증하는 MCP 서버가 공개됐다. 법안·처리상태·위원회·회의록·검토보고서와 의원·정부 발언을 하나로 연결해 입법 논의 전체 맥락을 추적할 수 있다.",
+   "date": "2026-08-13",
+   "collected_at": "2026-08-13",
+   "title": "국회 법안·회의록 탐색 MCP — 공식 기록 검증",
+   "org_type": "기타",
+   "org": "개발 커뮤니티",
+   "link": "https://github.com/epoko77-ai/korean-bill-debate-mcp",
+   "tags": [
+    "MCP",
+    "국회",
+    "입법",
+    "공공데이터"
+   ],
+   "source": "kakao",
+   "id": "a7abbaedd53db684"
+  },
+  {
+   "summary": "국가연구개발(정부 R&D) 규정 검토용 MCP 서버가 공개됐다. 국가연구개발혁신법·시행령과 행정규칙 55종을 AI로 검색·검토할 수 있어 연구비·과제 규정 확인 업무를 줄여준다.",
+   "date": "2026-08-13",
+   "collected_at": "2026-08-13",
+   "title": "정부 R&D 규정 검토 MCP — 혁신법·행정규칙 55종",
+   "org_type": "기타",
+   "org": "개발 커뮤니티",
+   "link": "https://github.com/smilemin07/korean-rnd-regs-mcp",
+   "tags": [
+    "MCP",
+    "R&D",
+    "법령",
+    "연구행정"
+   ],
+   "source": "kakao",
+   "id": "ce2287d57e6bacaa"
+  },
+  {
+   "summary": "한국 우주·항공·국방우주 분야 정부 R&D 지원사업 공고 데이터셋과 이를 다루는 크롤러·분류기·MCP·REST API가 공개됐다. 분야 특화 공고 탐색을 AI 도구에서 수행할 수 있다.",
+   "date": "2026-08-13",
+   "collected_at": "2026-08-13",
+   "title": "우주·항공 정부 R&D 지원사업 공고 MCP",
+   "org_type": "기타",
+   "org": "개발 커뮤니티",
+   "link": "https://github.com/AgentBridge-Lab/korea-space-support-mcp",
+   "tags": [
+    "MCP",
+    "우주항공",
+    "지원사업",
+    "R&D"
+   ],
+   "source": "kakao",
+   "id": "2beb100ecc126fb2"
+  },
+  {
+   "link": "https://github.com/gong-yeongbin/mcp-seoul-rtd",
+   "org_type": "기타",
+   "source": "kakao",
+   "summary": "서울 주요 121개 장소의 실시간 혼잡도·교통·날씨를 조회하는 MCP 서버가 공개됐다. 서울시 실시간 도시데이터를 AI 도구에서 자연어로 확인할 수 있다.",
+   "date": "2026-08-13",
+   "tags": [
+    "MCP",
+    "서울시",
+    "실시간데이터",
+    "공공데이터"
+   ],
+   "title": "서울 실시간 도시데이터 MCP — 121개 장소 혼잡도·교통·날씨",
+   "org": "개발 커뮤니티",
+   "collected_at": "2026-08-13",
+   "id": "ca5651ea46caa07f"
+  },
+  {
+   "link": "https://github.com/hlucent/construction-alert-mcp",
+   "org_type": "기타",
+   "source": "kakao",
+   "summary": "서울시 건설알림이 데이터를 AI 도구에서 조회하는 MCP 서버가 공개됐다. 주변 공사 정보를 자연어로 탐색할 수 있게 한다.",
+   "date": "2026-08-13",
+   "tags": [
+    "MCP",
+    "서울시",
+    "건설",
+    "공공데이터"
+   ],
+   "title": "서울시 건설알림이 MCP",
+   "org": "개발 커뮤니티",
+   "collected_at": "2026-08-13",
+   "id": "bc609dfe7f04d6ed"
+  },
+  {
+   "link": "https://github.com/jinjukimink/seoul-parking-mcp",
+   "org_type": "기타",
+   "source": "kakao",
+   "summary": "서울시 공영주차장 정보를 제공하는 MCP 서버가 공개됐다. 주차장 위치·현황을 AI 도구에서 조회할 수 있다.",
+   "date": "2026-08-13",
+   "tags": [
+    "MCP",
+    "서울시",
+    "주차",
+    "공공데이터"
+   ],
+   "title": "서울시 공영주차장 MCP",
+   "org": "개발 커뮤니티",
+   "collected_at": "2026-08-13",
+   "id": "5c3cb7251749ab2e"
+  },
+  {
+   "link": "https://github.com/Seo-yul/geup-ddong-seoul-mcp",
+   "org_type": "기타",
+   "source": "kakao",
+   "summary": "서울시 공중화장실을 조회하는 MCP 서버가 공개됐다. 가까운 화장실과 지금 열려 있는 화장실을 찾아주며 Streamable HTTP 방식으로 바로 연결할 수 있다.",
+   "date": "2026-08-13",
+   "tags": [
+    "MCP",
+    "서울시",
+    "생활정보",
+    "공공데이터"
+   ],
+   "title": "서울시 공중화장실 조회 MCP — 급똥서울",
+   "org": "개발 커뮤니티",
+   "collected_at": "2026-08-13",
+   "id": "3ba829c8e42e7cc7"
+  },
+  {
+   "link": "https://github.com/hlucent/seoul-air-quality-mcp",
+   "org_type": "기타",
+   "source": "kakao",
+   "summary": "서울시 대기환경 공공데이터를 AI가 조회할 수 있게 만든 MCP 서버가 공개됐다. 미세먼지 등 대기질 정보를 자연어로 확인할 수 있다.",
+   "date": "2026-08-13",
+   "tags": [
+    "MCP",
+    "서울시",
+    "대기질",
+    "공공데이터"
+   ],
+   "title": "서울시 대기환경 MCP",
+   "org": "개발 커뮤니티",
+   "collected_at": "2026-08-13",
+   "id": "92bbbba967365291"
+  },
+  {
+   "date": "2026-08-13",
+   "source": "kakao",
+   "org": "개발 커뮤니티",
+   "org_type": "기타",
+   "tags": [
+    "MCP",
+    "개인정보",
+    "법령",
+    "소상공인"
+   ],
+   "collected_at": "2026-08-13",
+   "title": "개인정보보호법 쉬운 안내 MCP — 소상공인·개인용",
+   "link": "https://github.com/scvcoder/korean-privacy-law-mcp",
+   "summary": "중소기업, 소형 병원·약국·학원 등 소상공인과 개인을 위해 개인정보보호법을 쉽게 설명해주는 MCP 서버가 공개됐다. 37개 도구에 개인정보 가이드와 상담사례 2,202개 청크를 탑재해 어려운 개인정보 규정을 사례 기반으로 풀어서 알려준다.",
+   "id": "c864500e8cf1d78d"
+  },
+  {
+   "source": "threads",
+   "collected_at": "2026-08-13",
+   "title": "인사·노무 뉴스 추천 자동발송 프로그램 개발",
+   "tags": [
+    "인사노무",
+    "뉴스분석",
+    "자동화",
+    "텍스트분석"
+   ],
+   "org_type": "기타",
+   "date": "2026-07-02",
+   "summary": "공공기관 인사팀 내부용으로 공개 기사를 수집해 본문을 텍스트 분석하고, 인사·노무 업무 관련성·중요도·이슈성을 점수화해 기준 점수 이상의 뉴스만 추천 발송하는 프로그램이 개발됐다. 내부자료·개인정보 없이 공개 기사만 활용하며, 점수 기준을 설명 가능하게 설계한 것이 핵심으로 소개됐다.",
+   "link": "https://www.threads.com/@changil.k/post/DaSDwqfk93O",
+   "org": "공직 현장(개인 개발)",
+   "id": "e52e2378641903f4"
+  },
+  {
+   "date": "2026-07-21",
+   "org": "공직 현장(개인 개발)",
+   "title": "업무구조도 생성기 korea100studio 오픈소스 공개",
+   "summary": "국가 제도 509개의 업무구조도를 세로 흐름도로 그려 온 제도100 프로젝트의 생성기 도구가 오픈소스로 공개됐다. 제도·절차를 담당·단계 중심의 구조도로 그리는 제작 도구를 누구나 가져다 쓸 수 있게 해, 기관·개인이 자기 업무의 구조도를 같은 문법으로 만들 수 있게 한다.",
+   "case_url": "https://github.com/hosungseo/korea100studio",
+   "collected_at": "2026-08-14",
+   "source": "threads",
+   "link": "https://www.threads.com/@gongpenclaw/post/DbB6Zmck3t1",
+   "org_type": "기타",
+   "tags": [
+    "업무구조도",
+    "오픈소스",
+    "행정",
+    "시각화"
+   ],
+   "id": "f0c21de2b0af63b3"
+  },
+  {
+   "source": "kakao",
+   "title": "맥 전용 로컬 실시간 음성전사 도구 murmur 공유",
+   "link": "https://github.com/jkf87/murmur",
+   "date": "2026-08-14",
+   "summary": "애플 실리콘 맥에서 실시간 음성 전사와 번역을 로컬로 수행하는 오픈소스 도구가 공유됐다. 녹음 파일을 외부로 보낼 수 없는 보안 환경에서 상담·회의 전사를 개인 장비의 로컬 모델로 처리하는 대안으로 소개됐다.",
+   "org": "공직 커뮤니티",
+   "org_type": "기타",
+   "tags": [
+    "STT",
+    "로컬모델",
+    "오픈소스",
+    "회의록"
+   ],
+   "collected_at": "2026-08-14",
+   "id": "cbda9aefec586c48"
+  },
+  {
+   "source": "kakao",
+   "title": "경기도의회 법령·자치법규 나무 베타 공개",
+   "link": "https://ggc-lawtree.vercel.app/",
+   "date": "2026-08-14",
+   "summary": "경기도의회에서 임기제로 근무하는 법 전문가가 법령과 자치법규를 분야별 나무 구조로 탐색할 수 있는 대민 서비스를 베타로 공개했다. 흩어져 있는 법령·자치법규를 분야 체계로 정리해 의회·주민이 관련 규정을 쉽게 찾도록 돕는다.",
+   "org": "경기도의회",
+   "org_type": "지자체",
+   "tags": [
+    "법령",
+    "자치법규",
+    "의회",
+    "대민서비스"
+   ],
+   "collected_at": "2026-08-14",
+   "id": "5e76949a3f487274"
+  },
+  {
+   "source": "kakao",
+   "title": "하이패스 경비 정산 자동화 도구",
+   "link": "https://ggc-hipass.vercel.app/member/",
+   "date": "2026-08-14",
+   "summary": "의원별 하이패스 이용 내역을 API로 불러와 경비 정산을 자동화하는 도구가 경기도의회 실무자에 의해 개발·공유됐다. 개별 카드로 흩어진 통행료 내역 취합을 자동화한 사례로, 현재는 API 연동 기간이 끝나 재연동을 검토 중이다.",
+   "org": "경기도의회",
+   "org_type": "지자체",
+   "tags": [
+    "경비정산",
+    "API연동",
+    "의회",
+    "자동화"
+   ],
+   "collected_at": "2026-08-14",
+   "id": "31a47960ddebd977"
+  },
+  {
+   "source": "kakao",
+   "title": "범정부오피스 — 공무원이 만든 공문서 편집 자동화 프로그램",
+   "link": "https://youtu.be/e5ltUQbRDAo",
+   "date": "2026-08-14",
+   "summary": "간호직 공무원이 혼자 예산 없이 개발해 온 공문서 편집 자동화 프로그램 범정부오피스가 소개됐다. 혁신24 자료실을 통해 배포되어 여러 기관에서 쓰이고 있으며, 커뮤니티에서 공무원 자발 개발 도구의 선구 사례로 꼽힌다.",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "기타",
+   "tags": [
+    "문서자동화",
+    "공문서",
+    "확산",
+    "행정효율"
+   ],
+   "collected_at": "2026-08-14",
+   "id": "145a534a79c6fc53"
+  },
+  {
+   "collected_at": "2026-08-14",
+   "source": "kakao",
+   "org": "경기도의회",
+   "summary": "경기도의회가 일상의 궁금증과 이웃 간 분쟁을 시·군 조례와 대한민국 법령 근거로 풀어주는 대민 AI 안내 서비스를 베타로 공개했다. 자연어로 법을 물어보면 지역 조례를 근거와 함께 안내하고, 조례 이야기·의원별 조례·건의함 코너로 주민 참여까지 연결한다.",
+   "date": "2026-08-14",
+   "tags": [
+    "법령",
+    "조례",
+    "대민서비스",
+    "AI상담"
+   ],
+   "org_type": "지자체",
+   "link": "https://thislaw.co.kr",
+   "title": "세상에 그런법이 어딨어요? — 경기도의회 AI 법·조례 안내 서비스",
+   "id": "791311495e38151c"
+  },
+  {
+   "collected_at": "2026-08-14",
+   "source": "kakao",
+   "org": "CODEF(민간)",
+   "summary": "공공기관·금융기관의 데이터를 표준화된 API로 연동해주는 민간 구독형 API 플랫폼이 공유됐다. 정부·공공 서비스의 데이터를 애플리케이션에서 바로 활용할 수 있게 하는 민간 인프라로, 공공 데이터 연동 개발의 참고 사례로 소개됐다.",
+   "date": "2026-08-14",
+   "tags": [
+    "API",
+    "데이터연동",
+    "민간인프라",
+    "핀테크"
+   ],
+   "org_type": "기타",
+   "link": "https://codef.io",
+   "title": "CODEF — 공공·금융 데이터 연동 구독형 API 플랫폼",
+   "id": "611503a5916453a3"
+  },
+  {
+   "collected_at": "2026-08-14",
+   "source": "kakao",
+   "org": "공직 커뮤니티",
+   "summary": "HTML 슬라이드 덱에 어울리는 밈을 계획·수집해 삽입해주는 Claude Code·Codex용 도구가 공개됐다. AI로 만드는 발표자료에 유머 요소를 더해 전달력을 높이는 실무 보조 도구로 공직 커뮤니티에서 공유됐다.",
+   "date": "2026-08-14",
+   "tags": [
+    "발표자료",
+    "바이브코딩",
+    "오픈소스",
+    "슬라이드"
+   ],
+   "org_type": "기타",
+   "link": "https://github.com/amnotyoung/slide-meme-inserter",
+   "title": "발표 슬라이드 밈 삽입 도구 slide-meme-inserter",
+   "id": "7ac3b301c1a8f79d"
+  },
+  {
+   "collected_at": "2026-08-14",
+   "source": "kakao",
+   "org": "개발 커뮤니티",
+   "summary": "정치인·정당·법안·법률·표결·선거 데이터를 국회·정부 공식 자료 기반으로 조회하는 공개 데이터베이스 폴리위키가 공유됐다. 최근 통과 법안과 본회의 표결, 법률 변화를 타임라인으로 보여주고 지금 참여할 수 있는 입법예고·국민동의청원까지 안내한다.",
+   "date": "2026-08-14",
+   "tags": [
+    "입법",
+    "국회",
+    "공공데이터",
+    "시민참여"
+   ],
+   "org_type": "기타",
+   "link": "https://poliwiki.kr",
+   "title": "폴리위키 — 공직·입법 공개 데이터베이스",
+   "id": "789c1267f63c3b01"
+  },
+  {
+   "collected_at": "2026-08-14",
+   "source": "kakao",
+   "org": "개발 커뮤니티",
+   "summary": "한글(HWP/HWPX) 문서를 브라우저와 터미널에서 열고 고치고 내보내는 자체 엔진 오토한글이 오픈소스로 공개됐다. 파싱부터 조판·렌더링·편집·PDF 출력까지 자체 구현했고 Rust·웹어셈블리 기반에 MCP와 CLI를 제공해 AI 도구에서 한글 문서를 직접 다룰 수 있게 한다.",
+   "date": "2026-08-14",
+   "tags": [
+    "HWP",
+    "문서자동화",
+    "MCP",
+    "오픈소스"
+   ],
+   "org_type": "기타",
+   "link": "https://github.com/kwakseongjae/auto-hwp",
+   "title": "오토한글 — 브라우저·터미널용 HWP 편집 엔진",
+   "id": "e18d5e018e0cd10d"
+  },
+  {
+   "collected_at": "2026-08-14",
+   "source": "kakao",
+   "org": "과학기술정보통신부·NIA",
+   "summary": "생활 속 AI 활용 노하우를 공유하고 'AI 달인'에 도전하는 전국민 AI 경진대회 AI 달인 100 챌린지가 시작됐다. 일상·학업·업무 생산성·취미 등 시즌별 주제로 11월까지 진행되며, 국민 누구나 AI 활용 사례를 제출해 겨루는 방식으로 AI 확산을 유도한다.",
+   "date": "2026-08-12",
+   "tags": [
+    "AI확산",
+    "경진대회",
+    "교육",
+    "전국민"
+   ],
+   "org_type": "중앙부처",
+   "link": "https://aichallenge4all.or.kr/competitions/master100",
+   "title": "전국민 AI 경진대회 — AI 달인 100 챌린지 개최",
+   "id": "3a12372c14bc0972"
+  },
+  {
+   "date": "2026-08-14",
+   "org_type": "교육",
+   "org": "전북특별자치도교육청",
+   "title": "전북교육청, 문서 취합·변환 도구 공식 배포",
+   "tags": [
+    "문서자동화",
+    "교육청",
+    "PDF",
+    "내부망"
+   ],
+   "collected_at": "2026-08-14",
+   "summary": "전북특별자치도교육청이 교육데이터 허브의 데이터 도구실을 통해 문서 처리 도구를 공식 배포하고 있다. PDF·한글 문서의 취합, 형식 변환(HWP→HWPX·PDF), 용량 압축, 페이지 정리·번호 추가 등 8개 기능을 담았고, 외부 전송 없이 로컬에서만 처리해 인터넷 차단 환경에서도 쓸 수 있다.",
+   "source": "kakao",
+   "link": "https://www.jbe.go.kr/board/view.jbe?boardId=BBS_0000649&menuCd=DOM_000000106011002001&dataSid=1141429",
+   "id": "8d17b8feee1af705"
+  },
+  {
+   "date": "2026-08-08",
+   "org_type": "기타",
+   "org": "공직 커뮤니티",
+   "title": "공공AX 링크 보관함 — 자동 수집 링크 갤러리",
+   "tags": [
+    "링크수집",
+    "아카이브",
+    "커뮤니티",
+    "자동화"
+   ],
+   "collected_at": "2026-08-14",
+   "summary": "커뮤니티에서 공유되는 공공AX 관련 링크를 자동으로 수집해 보관하는 링크 갤러리가 운영되고 있다. 492개 이상의 링크를 모아 날짜별로 업데이트하며, 흩어져 사라지기 쉬운 채팅방 공유 자료를 다시 찾아볼 수 있는 보관소 역할을 한다.",
+   "source": "kakao",
+   "link": "https://daamable-sknk.github.io/link-gallery/",
+   "id": "5de0d36c1b37fe58"
+  },
+  {
+   "link": "https://www.threads.com/@jerry_jy.kim/post/DcCk4ZCFK2E",
+   "org_type": "중앙부처",
+   "date": "2026-08-15",
+   "title": "병무청, 내부 업무지원 AI '워크메이트' 가동",
+   "source": "threads",
+   "collected_at": "2026-08-15",
+   "org": "병무청",
+   "tags": [
+    "도입사례",
+    "내부검색",
+    "범정부공통기반",
+    "에이전트"
+   ],
+   "summary": "병무청이 내부 자료 검색과 업무를 지원하는 AI 워크메이트를 가동했다. 지난 3월 정식 개통한 범정부 AI 공통기반 위에서 운영되며, 이 공통기반에는 기관·정보시스템별로 70개 이상의 개발환경이 마련되어 각 기관 실무자가 바이브 코딩과 에이전트 빌더로 업무 적용을 직접 실험하는 흐름이 확산되고 있다.",
+   "id": "83dd1411a30c6653"
+  },
+  {
+   "org": "공직 현장(개인 개발)",
+   "link": "https://www.threads.com/@gongpenclaw/post/DcDcbJzAUTL",
+   "summary": "국가법령정보센터 API로 직제와 직제 시행규칙을 함께 파싱해 조직도를 자동으로 그리고 HWPX로 출력하는 생성기가 개발됐다. 실·국 단위만 담긴 직제와 과 단위가 담긴 시행규칙을 결합해 조직담당자가 실제로 쓰는 형태의 조직도를 만들고, 시행일 기준 스냅샷으로 특정 날짜의 조직 상태와 개정 전후를 비교할 수 있다.",
+   "source": "threads",
+   "org_type": "기타",
+   "title": "직제 기반 조직도 자동생성기 개발",
+   "tags": [
+    "조직도",
+    "법령API",
+    "문서자동화",
+    "HWPX"
+   ],
+   "date": "2026-08-15",
+   "collected_at": "2026-08-15",
+   "id": "3d07b6da99f5e1ed"
+  },
+  {
+   "org": "공직 커뮤니티",
+   "link": "https://github.com/gongnyang/gongnyang-prompt-kit",
+   "summary": "막연한 이미지 요청을 완성된 이미지 생성 프롬프트로 컴파일해주는 Claude Code 스킬이 공개됐다. 네거티브 표현 금지, 결과 기반 서술 등 프롬프트 원칙과 검증 스크립트를 담아 홍보물·포스터 등 공공 실무의 이미지 제작 품질을 끌어올리는 도구로 커뮤니티에서 활용되고 있다.",
+   "source": "kakao",
+   "org_type": "기타",
+   "title": "이미지 생성 프롬프트 컴파일 스킬 — 공냥이 프롬프트 킷",
+   "tags": [
+    "AI스킬",
+    "이미지생성",
+    "프롬프트",
+    "오픈소스"
+   ],
+   "date": "2026-08-15",
+   "popularity": 313,
+   "collected_at": "2026-08-15",
+   "id": "1c54d608228e0845"
+  },
+  {
+   "link": "https://gitlab.aigov.go.kr/wavelen/govwork",
+   "title": "온AI Work — 공무원 보고서 AI 작성 도구",
+   "org": "공직 현장(개인 개발)",
+   "tags": [
+    "보고서",
+    "문서자동화",
+    "AI작성",
+    "공공깃랩"
+   ],
+   "date": "2026-08-15",
+   "source": "kakao",
+   "collected_at": "2026-08-15",
+   "summary": "공무원 보고서 작성을 AI로 지원하는 온AI Work가 정부 공공 깃랩에 공개됐다. 보고서 초안 작성 업무를 AI가 보조해 문서 작성 시간을 줄여준다.",
+   "org_type": "기타",
+   "id": "ac09bd2e1c0fbb29"
+  },
+  {
+   "link": "https://gitlab.aigov.go.kr/y2kthr/koda",
+   "title": "KODA — 폐쇄망용 보안취약점 점검 도구",
+   "org": "공직 현장(개인 개발)",
+   "tags": [
+    "보안",
+    "폐쇄망",
+    "취약점점검",
+    "개발도구"
+   ],
+   "date": "2026-08-15",
+   "source": "kakao",
+   "collected_at": "2026-08-15",
+   "summary": "폐쇄망에서 소스코드·라이브러리·웹 보안취약점을 점검할 수 있는 도구 KODA가 정부 공공 깃랩에 공개됐다. 맥·윈도우·리눅스를 지원하며 외부 연결 없이 내부망 개발 산출물의 보안 점검을 수행할 수 있다.",
+   "org_type": "기타",
+   "id": "2798c2e0b79ab291"
+  },
+  {
+   "link": "https://gitlab.aigov.go.kr/AILab_Manager/central_budget",
+   "title": "나라예산 한눈에 — 중앙관서 세출예산서 8,500건 웹서비스",
+   "org": "행정안전부 AI실험실",
+   "tags": [
+    "예산",
+    "공공데이터",
+    "문서변환",
+    "재정"
+   ],
+   "date": "2026-08-15",
+   "source": "kakao",
+   "collected_at": "2026-08-15",
+   "summary": "62개 중앙관서의 세출 예산서 한글파일 약 8,500건을 마크다운으로 변환해 웹서비스로 구현한 나라예산 한눈에가 공개됐다. 실국·부서별 목록 기반으로 사업명을 모르더라도 예산 데이터를 쉽게 조회·검색할 수 있다.",
+   "org_type": "중앙부처",
+   "id": "a8492663acf67b99"
+  },
+  {
+   "link": "https://gitlab.aigov.go.kr/publicpeasant/rekian-comwriter-library",
+   "title": "Rekian — HWPX 공문서 재기안 에이전트 스킬셋",
+   "org": "공직 현장(개인 개발)",
+   "tags": [
+    "공문서",
+    "HWPX",
+    "AI스킬",
+    "재기안"
+   ],
+   "date": "2026-08-15",
+   "source": "kakao",
+   "collected_at": "2026-08-15",
+   "summary": "HWPX 기반 공문서 재기안 툴킷 Rekian이 공개됐다. 서식과 내용을 분리해 쌓아두면 비슷한 문서를 만들 때 각 기관 서식에 맞춰 쉽게 재기안할 수 있고, 읽어둔 서식은 프로필로 캐시되어 다른 내용에도 재사용된다.",
+   "org_type": "기타",
+   "id": "17ed2d7a88c03119"
+  },
+  {
+   "link": "https://gitlab.aigov.go.kr/jaekyeong/hangul-ai-widget",
+   "title": "한글 AI 도우미 — 로컬 LLM 웹한글 보고서 확장",
+   "org": "공직 현장(개인 개발)",
+   "tags": [
+    "로컬모델",
+    "웹한글",
+    "보고서",
+    "브라우저확장"
+   ],
+   "date": "2026-08-15",
+   "source": "kakao",
+   "collected_at": "2026-08-15",
+   "summary": "상용 AI 없이 100% 로컬(LM Studio) LLM으로 웹한글 기안기에서 보고서를 작성하도록 돕는 크롬 확장이 공개됐다. 외부 전송 없이 내부망 문서 작성에 AI를 붙이는 접근으로, NIA 마크다운 의무화를 이끈 실무자의 후속 도구다.",
+   "org_type": "기타",
+   "id": "8c5458af8f13435d"
+  },
+  {
+   "link": "https://gitlab.aigov.go.kr/pro9dan/diary-for-everyone",
+   "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱",
+   "org": "공직 현장(개인 개발)",
+   "tags": [
+    "심리지원",
+    "일기",
+    "AI에이전트",
+    "복지"
+   ],
+   "date": "2026-08-15",
+   "source": "kakao",
+   "collected_at": "2026-08-15",
+   "summary": "공무원이 하루의 감정과 경험을 안전하게 기록하면 AI가 마음을 분석하고 관계별 AI 에이전트가 답장해주는 반응형 웹 일기장이 공개됐다. 감정노동이 잦은 공직 환경에서 심리적 회복을 돕는 접근이다.",
+   "org_type": "기타",
+   "id": "d6c35b2999da8ca0"
+  },
+  {
+   "link": "https://gitlab.aigov.go.kr/pilddong/onnara-all-dept-search-sidebar",
+   "title": "온나라 전부서 문서 통합검색 사이드바",
+   "org": "공직 현장(개인 개발)",
+   "tags": [
+    "온나라",
+    "문서검색",
+    "브라우저확장",
+    "행정효율"
+   ],
+   "date": "2026-08-15",
+   "source": "kakao",
+   "collected_at": "2026-08-15",
+   "summary": "온나라 문서 화면에서 부서 조직도를 조회하고 여러 부서의 문서를 기간별로 통합 검색·중복 제거·CSV 저장할 수 있는 크롬·엣지 사이드바 확장이 공개됐다. 부서별로 흩어진 문서 검색을 한 화면으로 모아준다.",
+   "org_type": "기타",
+   "id": "8fb7daa690db1660"
+  },
+  {
+   "link": "https://gitlab.aigov.go.kr/knps.taejong/parknews",
+   "title": "parknews — 국립공원 현안 뉴스 지도·일일 요약",
+   "org": "국립공원공단",
+   "tags": [
+    "뉴스분석",
+    "지도",
+    "국립공원",
+    "요약"
+   ],
+   "date": "2026-08-15",
+   "source": "kakao",
+   "collected_at": "2026-08-15",
+   "summary": "국립공원 현안 뉴스를 지도에서 한눈에 보는 parknews가 공개됐다. 국내 24곳과 해외 2,034곳 공원의 보도를 모아 지도 위에 표시하고 일일 요약을 제공해 공원별 현안 파악을 돕는다.",
+   "org_type": "공공기관",
+   "id": "c6a58cb9146d0694"
+  },
+  {
+   "link": "https://gitlab.aigov.go.kr/pilddong/clova-gov-page-assistant",
+   "title": "범정부 내부망 AI 브라우저 사이드바 어시스턴트",
+   "org": "공직 현장(개인 개발)",
+   "tags": [
+    "범정부공통기반",
+    "내부망",
+    "RAG",
+    "브라우저확장"
+   ],
+   "date": "2026-08-15",
+   "source": "kakao",
+   "collected_at": "2026-08-15",
+   "summary": "범정부 AI 공통기반의 CLOVA Studio GOV를 활용해 기관 내부망 업무 페이지에서 대화·요약·RAG 검색·번역·음성·멀티모달 분석을 지원하는 크롬 사이드바 확장이 공개됐다. 내부망 페이지 어디서나 범정부 AI를 불러 쓰는 접근이다.",
+   "org_type": "기타",
+   "id": "50ab356bb2ee3f4d"
+  },
+  {
+   "link": "https://gitlab.aigov.go.kr/pilddong/new_mma_member",
+   "title": "병무청 신규자 업무 지식창고",
+   "org": "병무청",
+   "tags": [
+    "지식창고",
+    "온보딩",
+    "규정",
+    "병무행정"
+   ],
+   "date": "2026-08-15",
+   "source": "kakao",
+   "collected_at": "2026-08-15",
+   "summary": "병무청 신규자의 빠른 업무 적응을 돕는 규정·절차·실무 안내 지식창고가 정부 공공 깃랩에 공개됐다. 신규 직원이 반복해서 묻는 규정과 절차를 구조화해 적응 기간을 줄여준다.",
+   "org_type": "중앙부처",
+   "id": "85e155bd270cafc9"
+  },
+  {
+   "link": "https://gitlab.aigov.go.kr/hoho4348/ai-agent",
+   "title": "남양주 AI-Agent 시스템 베타 — 내부망 상용 AI",
+   "org": "남양주시",
+   "tags": [
+    "내부망",
+    "도입사례",
+    "에이전트",
+    "지자체"
+   ],
+   "date": "2026-08-15",
+   "source": "kakao",
+   "collected_at": "2026-08-15",
+   "summary": "내부망 전용으로 상용 AI(GPT·Gemini)를 쓸 수 있게 한 남양주 AI-Agent 시스템 베타가 공개됐다. 외부 접속이 제한된 행정 환경에서 상용 모델을 안전하게 활용하는 기관 차원의 시스템 구축 사례다.",
+   "org_type": "지자체",
+   "id": "b0b96e656d3572e9"
+  },
+  {
+   "link": "https://gitlab.aigov.go.kr/tyui22/gonggong-ax-local-4",
+   "title": "녹화 기반 Windows 업무 매크로 도구",
+   "org": "공직 현장(개인 개발)",
+   "tags": [
+    "매크로",
+    "RPA",
+    "업무자동화",
+    "로컬"
+   ],
+   "date": "2026-08-15",
+   "source": "kakao",
+   "collected_at": "2026-08-15",
+   "summary": "화면 녹화와 입력 이벤트를 함께 기록해 검토·재생하는 윈도우 로컬 업무 매크로 도구가 공개됐다. 반복 입력 업무를 녹화해 그대로 재생하는 방식으로 RPA식 자동화를 로컬에서 구현한다.",
+   "org_type": "기타",
+   "id": "aa5e039807da0e11"
+  },
+  {
+   "link": "https://gitlab.aigov.go.kr/inchangpark/modu-minwon-call",
+   "title": "모두의 민원콜 — 한 문장으로 담당 연락처 찾기",
+   "org": "공직 현장(개인 개발)",
+   "tags": [
+    "민원",
+    "연락처",
+    "검색",
+    "대민서비스"
+   ],
+   "date": "2026-08-15",
+   "source": "kakao",
+   "collected_at": "2026-08-15",
+   "summary": "민원·신고·상담이 막막할 때 한 문장만 입력하면 공식 데이터 기반으로 긴급전화부터 중앙부처·공공기관·지자체 담당부서 연락처까지 찾아주는 모두의 민원콜이 공개됐다. 어디에 물어야 할지 모르는 민원인의 탐색 비용을 줄여준다.",
+   "org_type": "기타",
+   "id": "1de6fb50cc324684"
+  }
+ ]
 }
