@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-08-08",
- "total": 154,
+ "total": 155,
  "cases": [
   {
    "no": 1,
@@ -4621,6 +4621,36 @@
    "service_url": "https://daamable-sknk.github.io/link-gallery/",
    "tool_type": "웹 서비스",
    "audience": "G2C 공개"
+  },
+  {
+   "no": 155,
+   "id": "83dd1411a30c6653",
+   "org": "병무청",
+   "title": "병무청, 내부 업무지원 AI '워크메이트' 가동",
+   "ax_prev": "AI-Enabled",
+   "ax": "AI-Enabled",
+   "s": "S2",
+   "s_name": "Tool bundle",
+   "c": "C1",
+   "c_name": "결과 제공",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Production",
+   "scope": "Internal",
+   "mcp_role": "Unknown/None",
+   "risk": "R1 낮음",
+   "human": "H1/H2 미확인",
+   "evidence": "E0 게시글 주장",
+   "confidence": "낮음",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "내부 자료 검색·업무 지원이라는 검증 가능한 결과를 제공하는 기관 운영 AI — Enabled로 판정. 세미나 발표 전언 기반이라 증거 등급은 게시글 주장 수준이며, 공식 보도·운영 상세 확인 시 상향 여지.",
+   "feedback": "미확인",
+   "resilience": "부분 확인—범정부 AI 공통기반 위 운영",
+   "post_url": "https://www.threads.com/@jerry_jy.kim/post/DcCk4ZCFK2E",
+   "service_url": "",
+   "tool_type": "도구·기타",
+   "audience": "G2E 공직 내부"
   }
  ]
 }
