@@ -133,6 +133,7 @@ const state = {
   sort: { key: 'popularity', dir: 'desc' }, // 기본: 인기 우선, 이후 최신순
   bookmarks: loadBookmarks(), // Set<caseId> — localStorage에 보존
   bookmarkCounts: new Map(), // 전체 사용자 누적 북마크 수 (Supabase)
+  champTerms: new Map(), // 사례 id → 챔피언 이름·소속·계정 검색어
   popularSet: new Set(), // 인기 항목 id (북마크순 상위 N)
   status: 'loading', // 'loading' | 'loaded' | 'error'
 };
@@ -254,10 +255,27 @@ const els = {
 async function load() {
   try {
     // no-cache: 항상 서버와 재검증(ETag) — 새 사례·태그가 배포 즉시 반영되도록
-    const [res, counts] = await Promise.all([
+    const [res, counts, champRes] = await Promise.all([
       fetch('./data/cases.json', { cache: 'no-cache' }),
       loadBookmarkCounts(),
+      fetch('./data/champions.json', { cache: 'no-cache' }).catch(() => null),
     ]);
+    // 챔피언 이름·소속·계정으로도 사례를 검색할 수 있게 사례별 검색어를 만든다.
+    // 챔피언 데이터 로드 실패는 검색 범위만 줄어들 뿐 치명적이지 않다.
+    if (champRes && champRes.ok) {
+      try {
+        const champDoc = await champRes.json();
+        for (const ch of champDoc.champions) {
+          const terms = [ch.name, ch.affiliation && ch.affiliation.value,
+            ...ch.accounts.map((a) => a.id)].filter(Boolean).join(' ').toLowerCase();
+          for (const caseId of ch.cases) {
+            state.champTerms.set(caseId, `${state.champTerms.get(caseId) || ''} ${terms}`);
+          }
+        }
+      } catch (err) {
+        console.error('챔피언 검색어 구성 실패:', err);
+      }
+    }
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const doc = await res.json();
     state.bookmarkCounts = counts;
@@ -411,7 +429,9 @@ function matches(c, f) {
   if (f.tag && !c.tags.includes(f.tag)) return false;
   const q = f.q.trim().toLowerCase();
   if (!q) return true;
-  return [c.title, c.summary, c.org, ...c.tags].join(' ').toLowerCase().includes(q);
+  const haystack = [c.title, c.summary, c.org, ...c.tags].join(' ').toLowerCase()
+    + (state.champTerms.get(c.id) || '');
+  return haystack.includes(q);
 }
 
 function setTag(tag) {
