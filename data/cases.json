@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T21:57:55+09:00",
+  "updated_at": "2026-08-17T00:03:21+09:00",
   "cases": [
     {
       "date": "2026-08-03",
@@ -2849,6 +2849,23 @@
       "source": "kakao",
       "collected_at": "2026-08-16",
       "id": "acd684108227b9c2"
+    },
+    {
+      "org_type": "기타",
+      "link": "https://github.com/newskool4d-sketch/minwon-answer-skill-pack",
+      "title": "민원 답변 작성 스킬 팩 — Codex·Claude Code·Gemini CLI 겸용",
+      "summary": "민원 답변서 작성을 돕는 한국어 스킬 팩이 오픈소스로 공개됐다. Codex, Claude Code, Gemini CLI 세 가지 AI 도구에서 동일하게 동작하도록 만들어져, 실무자가 쓰는 도구와 무관하게 민원 답변 초안 작성 규칙을 재사용할 수 있다.",
+      "collected_at": "2026-08-17",
+      "date": "2026-08-17",
+      "tags": [
+        "민원",
+        "AI스킬",
+        "문서작성",
+        "오픈소스"
+      ],
+      "source": "kakao",
+      "org": "공직 현장(개인 개발)",
+      "id": "4c918008fd4eff60"
     }
   ]
 }

@@ -2854,5 +2854,33 @@
   "resilience": "부분 확인—모델 비종속(3개 하네스) 설계로 공급자 의존 완화",
   "post_url": "",
   "service_url": "https://gitlab.aigov.go.kr/kwy/dev-eval-agents"
+ },
+ {
+  "no": 174,
+  "id": "4c918008fd4eff60",
+  "org": "공직 현장(개인 개발)",
+  "title": "민원 답변 작성 스킬 팩 — Codex·Claude Code·Gemini CLI 겸용",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S1",
+  "s_name": "Primitive tool",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Published tool",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R1 낮음",
+  "human": "H2 Human-in-the-loop",
+  "evidence": "E1 코드·도구 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "민원 답변 초안이라는 검증 가능한 업무 산출물을 AI가 작성하고 실무자가 확인 — Enabled. 3개 AI 도구 겸용 스킬로 공개돼 재사용성 높음. 대민 답변 맥락의 정확성 유의로 위험도 낮음.",
+  "feedback": "미확인",
+  "resilience": "부분 확인—3개 하네스 겸용으로 도구 의존 완화",
+  "post_url": "",
+  "service_url": "https://github.com/newskool4d-sketch/minwon-answer-skill-pack"
  }
 ]

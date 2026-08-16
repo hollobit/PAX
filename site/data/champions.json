@@ -1,5 +1,5 @@
 {
- "total": 82,
+ "total": 83,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -235,6 +235,30 @@
     "case_count": 1,
     "top_ax": 1,
     "stars": 170
+   }
+  },
+  {
+   "id": "github:newskool4d-sketch",
+   "name": "Juhyeong Hong",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "newskool4d-sketch",
+     "url": "https://github.com/newskool4d-sketch"
+    }
+   ],
+   "affiliation": {
+    "value": "인천광역시교육청",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "4c918008fd4eff60"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
    }
   },
   {
