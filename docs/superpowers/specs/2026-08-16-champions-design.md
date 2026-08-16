@@ -21,7 +21,7 @@
 
 ### 1. `scripts/build_champions.py` (신규)
 
-입력: `data/cases.json`, `docs/champion_links.json`, (캐시) `data/champion_profiles.json`
+입력: `data/cases.json`, `site/data/evaluations.json`, `docs/champion_links.json`, (캐시) `data/champion_profiles.json`
 출력: `site/data/champions.json`
 
 처리 순서:
@@ -48,7 +48,7 @@
   }
 ]
 ```
-- `evidence` 없는 연결은 빌드 스크립트가 거부(오류)
+- `evidence` 없는 연결은 병합에 사용하지 않는다 — 해당 항목을 건너뛰고 경고를 출력하며, 계정들은 단독 챔피언으로 남는다 (오류 처리 절과 동일한 규칙)
 - 이 파일에 없는 계정은 각각 단독 챔피언
 
 ### 3. `site/champions.html` + `site/champions.js` (신규)
