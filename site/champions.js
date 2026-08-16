@@ -13,7 +13,22 @@ const PLATFORM_LABEL = { github: 'GitHub', gitlab: '공공 GitLab', threads: 'Th
 const COUNTER_URL = 'https://pdkpqrxcqiznsetxcvaq.supabase.co';
 const COUNTER_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBka3BxcnhjcWl6bnNldHhjdmFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxMTA2MTAsImV4cCI6MjEwMTY4NjYxMH0.Rj7cnt9dHcQ7O-CuGeGwAyVxVdWFwQYuiCetOUbEHzI';
 
+const SORTS = ['name', 'score', 'cases'];
+
 const state = { champions: [], cases: new Map(), bookmarks: new Map(), sort: 'name' };
+
+/* URL ↔ 상태 동기화: ?sort=score|cases (기본 name은 생략) */
+function applyUrlToState() {
+  const sort = new URLSearchParams(location.search).get('sort');
+  if (SORTS.includes(sort)) state.sort = sort;
+}
+
+function syncUrl() {
+  const p = new URLSearchParams();
+  if (state.sort !== 'name') p.set('sort', state.sort);
+  const qs = p.toString();
+  history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+}
 
 async function load() {
   try {
@@ -76,10 +91,15 @@ function sorted() {
 
 function setSort(key) {
   state.sort = key;
-  for (const [id, k] of [['sort-name', 'name'], ['sort-score', 'score'], ['sort-cases', 'cases']]) {
-    document.getElementById(id).setAttribute('aria-pressed', String(k === key));
-  }
+  syncSortButtons();
+  syncUrl();
   render();
+}
+
+function syncSortButtons() {
+  for (const [id, k] of [['sort-name', 'name'], ['sort-score', 'score'], ['sort-cases', 'cases']]) {
+    document.getElementById(id).setAttribute('aria-pressed', String(k === state.sort));
+  }
 }
 
 function render() {
@@ -196,4 +216,6 @@ function renderUnattributed(list) {
 document.getElementById('sort-name').addEventListener('click', () => setSort('name'));
 document.getElementById('sort-score').addEventListener('click', () => setSort('score'));
 document.getElementById('sort-cases').addEventListener('click', () => setSort('cases'));
+applyUrlToState();
+syncSortButtons();
 load();
