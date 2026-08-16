@@ -121,15 +121,15 @@
    "link": "https://www.threads.com/@chris_gomdori/post/DZ49_V9DfJ_",
    "org": "공직 커뮤니티",
    "org_type": "기타",
-   "title": "PC 문서를 AI로 검색하는 로컬 도구 시연",
-   "summary": "PC 곳곳에 흩어진 문서를 AI가 읽고 질문에 답을 찾아주는 로컬 문서 검색 도구의 시연이 공유됐다. 한글 문서를 열지 않고 내용을 미리 보는 기능도 제공한다.",
+   "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
+   "summary": "파일 이름이 아니라 본문 내용으로 PC 문서를 찾아주는 오프라인 검색기 Anything(저장소명 Docufinder)이 공개됐다. HWP·PDF·오피스 문서와 스캔 이미지(OCR)까지 전문 검색하며 윈도우·맥을 지원하고, 네트워크 공유 폴더와 회사망·오프라인 환경의 즉시 실행을 지원해 내부망 문서 탐색 도구로 쓰인다.",
    "tags": [
     "문서검색",
     "로컬AI"
    ],
    "id": "de4b2dab339d69b7",
    "case_url": "https://github.com/chrisryugj/Docufinder",
-   "popularity": 134
+   "popularity": 623
   },
   {
    "date": "2026-04-01",
