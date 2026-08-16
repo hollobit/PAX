@@ -238,34 +238,6 @@
    }
   },
   {
-   "id": "github:hollobit",
-   "name": "Jonathan Jeon",
-   "accounts": [
-    {
-     "platform": "github",
-     "id": "hollobit",
-     "url": "https://github.com/hollobit"
-    }
-   ],
-   "affiliation": {
-    "value": "ETRI",
-    "inferred": false,
-    "evidence": "GitHub 공개 프로필 소속란"
-   },
-   "cases": [
-    "f8c9ae69a673c52a",
-    "ceceadd796cc6ea1",
-    "807dd39dd613b7da",
-    "73ca59dc1a41074f",
-    "7868cf416d6fe407"
-   ],
-   "stats": {
-    "case_count": 5,
-    "top_ax": 1,
-    "stars": 0
-   }
-  },
-  {
    "id": "github:Dayoooun",
    "name": "Kim dayoun",
    "accounts": [
@@ -1704,6 +1676,34 @@
    "stats": {
     "case_count": 1,
     "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "hollobit",
+   "name": "전종홍",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "hollobit",
+     "url": "https://github.com/hollobit"
+    }
+   ],
+   "affiliation": {
+    "value": "ETRI",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "f8c9ae69a673c52a",
+    "ceceadd796cc6ea1",
+    "807dd39dd613b7da",
+    "73ca59dc1a41074f",
+    "7868cf416d6fe407"
+   ],
+   "stats": {
+    "case_count": 5,
+    "top_ax": 1,
     "stars": 0
    }
   },

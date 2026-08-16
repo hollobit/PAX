@@ -68,5 +68,13 @@
       "evidence": "운영자 확인(2026-08-16)"
     },
     "evidence": "운영자 확인(2026-08-16) — GitHub koul777과 Threads changil.k이 동일인(김창일)임을 큐레이터가 확인. NCScope 등 사례의 게시물·저장소 연결과 부합"
+  },
+  {
+    "champion": "hollobit",
+    "name": "전종홍",
+    "accounts": [
+      "github:hollobit"
+    ],
+    "evidence": "운영자 본인(2026-08-16) — GitHub hollobit의 한국어 표기를 전종홍으로 지정"
   }
 ]
