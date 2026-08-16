@@ -166,20 +166,36 @@ function card(champ) {
 
   const list = document.createElement('ul');
   list.className = 'champ-card__cases';
-  champ.cases.slice(0, 3).forEach((id) => {
+  const caseItem = (id) => {
     const c = state.cases.get(id);
-    if (!c) return;
+    if (!c) return null;
     const li = document.createElement('li');
     const link = document.createElement('a');
     link.href = `./?q=${encodeURIComponent(c.title)}`;
     link.textContent = c.title;
     li.appendChild(link);
-    list.appendChild(li);
+    return li;
+  };
+  champ.cases.slice(0, 3).forEach((id) => {
+    const li = caseItem(id);
+    if (li) list.appendChild(li);
   });
   if (champ.cases.length > 3) {
     const li = document.createElement('li');
     li.className = 'champ-card__more';
-    li.textContent = `외 ${champ.cases.length - 3}건`;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'champ-card__more-btn';
+    btn.textContent = `외 ${champ.cases.length - 3}건 모두 보기`;
+    btn.setAttribute('aria-expanded', 'false');
+    btn.addEventListener('click', () => {
+      champ.cases.slice(3).forEach((id) => {
+        const item = caseItem(id);
+        if (item) list.insertBefore(item, li);
+      });
+      li.remove();
+    });
+    li.appendChild(btn);
     list.appendChild(li);
   }
   el.appendChild(list);

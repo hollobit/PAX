@@ -1616,3 +1616,16 @@ main {
 .champ-unattributed__org { color: var(--ink-3, #888); font-size: 0.82rem; }
 .champ-unattributed__site { margin-left: 0.35rem; text-decoration: none; }
 @media (max-width: 768px) { .champ-unattributed__list { columns: 1; } }
+
+/* 챔피언 카드 — 사례 전체 펼치기 */
+.champ-card__more-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  font-size: 0.84rem;
+  color: var(--accent, #1a4b8c);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
