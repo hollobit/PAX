@@ -76,6 +76,7 @@ JSON 리스트로 저장한다:
 ```bash
 PYTHONPATH=scripts python3 -m pax.merge data/incoming/TODAY.json
 PYTHONPATH=scripts python3 -m pax.publish
+python3 scripts/build_champions.py
 ```
 - merge가 거부 건을 출력하면 data/rejected/TODAY.json을 열어 원인(주로 익명화)을
   수정한 새 incoming 파일로 1회 재시도한다.
@@ -87,7 +88,7 @@ PYTHONPATH=scripts python3 -m pax.publish
 
 ## 6. 커밋·푸시
 ```bash
-git add data/cases.json site/data/cases.json site/thumbs site/data/changelog.json
+git add data/cases.json site/data/cases.json site/thumbs site/data/changelog.json site/data/champions.json
 git commit -m "chore: 사례 데이터 갱신 (TODAY)"
 git push
 ```

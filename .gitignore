@@ -8,3 +8,5 @@ log.md
 
 # 로컬 하네스/세션 상태 (공개 금지)
 .claude/
+.gstack/
+data/champion_profiles.json

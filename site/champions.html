@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>공공AX 챔피언 — 모두의 공공AX 사례 아카이브</title>
+  <meta name="description" content="공공AX 도구를 만드는 개발자들 — GitHub·공공 GitLab 공개 프로필 기반 챔피언 디렉토리">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">PUBLIC SECTOR AX RECORD · 챔피언</p>
+    <h1>공공AX 챔피언</h1>
+    <p class="tagline">아카이브 사례를 만든 개발자들 — <strong>GitHub·공공 GitLab 공개 프로필</strong>을 근거로 정리한 디렉토리</p>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="./">사례 아카이브</a>
+      <a href="dashboard.html">AX 평가</a>
+      <a href="champions.html" aria-current="page">챔피언</a>
+      <a href="ax-maturity-infographic.html">AX 성숙도 개념</a>
+      <a href="guidelines.html">안내서·가이드라인</a>
+      <a href="https://hollobit.github.io/GAPI2/ecosystem.html" target="_blank" rel="noopener">MCP·AI 도구 ↗</a>
+      <a href="https://ax360.kr/national-ax-project/card" target="_blank" rel="noopener">AX 사업 찾기 ↗</a>
+      <a href="https://ax360.kr/national-ai-resource/model" target="_blank" rel="noopener">AX 자원 찾기 ↗</a>
+      <a href="https://ax360.kr/private-ai-company/heatmap" target="_blank" rel="noopener">AI 기업 찾기 ↗</a>
+      <a href="https://axboard.aigov.go.kr/" target="_blank" rel="noopener">AI 정부실험실 ↗</a>
+      <a href="changelog.html">변경 기록</a>
+    </nav>
+    <p class="stats" id="stats" aria-live="polite"></p>
+  </header>
+
+  <main class="champions">
+    <div class="champ-toolbar" role="group" aria-label="정렬 방식">
+      <span class="champ-toolbar__label">정렬:</span>
+      <button type="button" id="sort-name" aria-pressed="true">가나다순</button>
+      <button type="button" id="sort-score" aria-pressed="false">종합 점수</button>
+      <button type="button" id="sort-cases" aria-pressed="false">사례 수</button>
+    </div>
+
+    <section id="champion-list" class="champ-grid" aria-label="챔피언 목록"></section>
+    <p id="error-state" class="empty-state" hidden>챔피언 데이터를 불러오지 못했습니다.</p>
+
+    <section class="guide__section champ-notes">
+      <h2>이 목록에 대하여</h2>
+      <p>이 디렉토리는 사례 아카이브에 등재된 개발 산출물의 <strong>GitHub·정부 공공 GitLab 공개
+      프로필</strong>과 게시물 속 저장소 링크만을 근거로 만들어집니다. 공개 프로필에 본인이 게시하지
+      않은 정보(실명·소속·연락처)는 싣지 않으며, 프로필 밖 자료로 유추한 소속에는
+      <span class="badge badge--inferred">추정</span> 배지를 붙입니다. 서로 다른 계정은 같은 저장소를
+      본인 개발물로 공유한 공개 게시물이 확인될 때만 한 사람으로 연결합니다.</p>
+      <p><strong>종합 점수</strong> = 사례 수 × 3 + 최고 AX 단계 가중(Ready 1 · Enabled 2 · First 4 ·
+      Native 8) + log₁₀(SNS 반응 합 + 1) × 2 + 누적 북마크 합. 기본 정렬은 점수와 무관한
+      가나다순입니다 — 모든 챔피언은 동등하게 조명됩니다.</p>
+      <p>본인 정보의 수정·제외를 원하시면 <a href="mailto:hollobit@etri.re.kr">hollobit@etri.re.kr</a>로
+      알려주세요. 확인 즉시 반영합니다.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__curator">Curated by Jonghong Jeon, <a href="mailto:hollobit@etri.re.kr">hollobit@etri.re.kr</a></p>
+  </footer>
+
+  <script src="champions.js"></script>
+</body>
+</html>

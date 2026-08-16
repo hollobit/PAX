@@ -1,0 +1,1813 @@
+{
+ "total": 83,
+ "champions": [
+  {
+   "id": "github:ChangooLee",
+   "name": "Changoo Lee",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "ChangooLee",
+     "url": "https://github.com/ChangooLee"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "daab018ffea87c77"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:DECK6",
+   "name": "DECK Yuk",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "DECK6",
+     "url": "https://github.com/DECK6"
+    }
+   ],
+   "affiliation": {
+    "value": "DEXA",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "0a2535cadf2d621a"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:djfksjd",
+   "name": "Danny",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "djfksjd",
+     "url": "https://github.com/djfksjd"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "54d599932088897f"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:Datajang",
+   "name": "Datajang",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "Datajang",
+     "url": "https://github.com/Datajang"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "b37636486ec1dee4"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:Koomook",
+   "name": "Dave Goobong Jeong",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "Koomook",
+     "url": "https://github.com/Koomook"
+    }
+   ],
+   "affiliation": {
+    "value": "team-attention",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "1f5e21b854f0aa3a"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 858
+   }
+  },
+  {
+   "id": "github:2geonhyup",
+   "name": "GEONHYUP LEE",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "2geonhyup",
+     "url": "https://github.com/2geonhyup"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "13342535139dd7a0"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 127
+   }
+  },
+  {
+   "id": "github:snaiws",
+   "name": "Gyuho Lee",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "snaiws",
+     "url": "https://github.com/snaiws"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "b9da6eddda89513d"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:hike-lab",
+   "name": "HIKE Lab.",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "hike-lab",
+     "url": "https://github.com/hike-lab"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "13e5e75fbf179ebf"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:koul777",
+   "name": "HRKIM",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "koul777",
+     "url": "https://github.com/koul777"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "ea2bce110972762e",
+    "f5abed24ff6bdd4a",
+    "48e33f2318bdffae",
+    "92d5147e02f7ae36"
+   ],
+   "stats": {
+    "case_count": 4,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:ohhan777",
+   "name": "Han Oh",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "ohhan777",
+     "url": "https://github.com/ohhan777"
+    }
+   ],
+   "affiliation": {
+    "value": "Korea Aerospace Research Institute",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "56c2bb56426019ec"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:lidge-jun",
+   "name": "JUN",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "lidge-jun",
+     "url": "https://github.com/lidge-jun"
+    }
+   ],
+   "affiliation": {
+    "value": "Korea University",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "dfe9d069e330d1c8"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:jjlabsio",
+   "name": "Jaejin Song",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "jjlabsio",
+     "url": "https://github.com/jjlabsio"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "e07be0004494e652"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 170
+   }
+  },
+  {
+   "id": "github:hollobit",
+   "name": "Jonathan Jeon",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "hollobit",
+     "url": "https://github.com/hollobit"
+    }
+   ],
+   "affiliation": {
+    "value": "ETRI",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "f8c9ae69a673c52a",
+    "ceceadd796cc6ea1",
+    "807dd39dd613b7da",
+    "73ca59dc1a41074f",
+    "7868cf416d6fe407"
+   ],
+   "stats": {
+    "case_count": 5,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:Dayoooun",
+   "name": "Kim dayoun",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "Dayoooun",
+     "url": "https://github.com/Dayoooun"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "09f079e1424f6992"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "Kminer2053",
+   "name": "Kminer2053",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "Kminer2053",
+     "url": "https://github.com/Kminer2053"
+    },
+    {
+     "platform": "threads",
+     "id": "koyou_ax",
+     "url": "https://www.threads.com/@koyou_ax"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "112bf7dc576ed8aa",
+    "7acf5f25369c1401",
+    "9d115930495a1e65",
+    "bfcd190155ae69f7"
+   ],
+   "stats": {
+    "case_count": 4,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:AgentBridge-Lab",
+   "name": "LDH",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "AgentBridge-Lab",
+     "url": "https://github.com/AgentBridge-Lab"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "2beb100ecc126fb2"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:epoko77-ai",
+   "name": "Liam lee",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "epoko77-ai",
+     "url": "https://github.com/epoko77-ai"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "a7abbaedd53db684"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "Milkbuttercheese2",
+   "name": "Milkbuttercheese2",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "Milkbuttercheese2",
+     "url": "https://github.com/Milkbuttercheese2"
+    },
+    {
+     "platform": "gitlab",
+     "id": "rhamasel3",
+     "url": "https://gitlab.aigov.go.kr/rhamasel3"
+    },
+    {
+     "platform": "threads",
+     "id": "milkbuttercheese",
+     "url": "https://www.threads.com/@milkbuttercheese"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "798f4e6bef72fc13",
+    "e160d086c0ce2b1b",
+    "d08bc7e9a69190af"
+   ],
+   "stats": {
+    "case_count": 3,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:NSLC7779",
+   "name": "NSLC7779",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "NSLC7779",
+     "url": "https://github.com/NSLC7779"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "ec4f975c809401cb"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:NomaDamas",
+   "name": "NomaDamas",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "NomaDamas",
+     "url": "https://github.com/NomaDamas"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "2f4ed1e68a6464c5"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 7142
+   }
+  },
+  {
+   "id": "github:tae0y",
+   "name": "ParkTaeYoung",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "tae0y",
+     "url": "https://github.com/tae0y"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "75b9815de6b6dcf5"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 368
+   }
+  },
+  {
+   "id": "github:scvcoder",
+   "name": "Public Developer",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "scvcoder",
+     "url": "https://github.com/scvcoder"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "c864500e8cf1d78d"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:SongT-50",
+   "name": "SongT-50",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "SongT-50",
+     "url": "https://github.com/SongT-50"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "b6f4cc079eb86f11"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:syleedlabs",
+   "name": "Sooyeon Lee",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "syleedlabs",
+     "url": "https://github.com/syleedlabs"
+    }
+   ],
+   "affiliation": {
+    "value": "Dlabs",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "8f1e3c48b2baa6d2"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:spring-ai-community",
+   "name": "Spring AI Community",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "spring-ai-community",
+     "url": "https://github.com/spring-ai-community"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "edf9a8632ff74a99"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:Seo-yul",
+   "name": "Yoon Seoyul",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "Seo-yul",
+     "url": "https://github.com/Seo-yul"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "3ba829c8e42e7cc7"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:amnotyoung",
+   "name": "amnotyoung",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "amnotyoung",
+     "url": "https://github.com/amnotyoung"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "7ac3b301c1a8f79d",
+    "aa58f3a62af622b6"
+   ],
+   "stats": {
+    "case_count": 2,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:boam79",
+   "name": "boam79",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "boam79",
+     "url": "https://github.com/boam79"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "bef8ee3811d115e4",
+    "971a8738f6563214"
+   ],
+   "stats": {
+    "case_count": 2,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "threads:changil.k",
+   "name": "changil.k",
+   "accounts": [
+    {
+     "platform": "threads",
+     "id": "changil.k",
+     "url": "https://www.threads.com/@changil.k"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "e52e2378641903f4"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:jkf87",
+   "name": "conanssam",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "jkf87",
+     "url": "https://github.com/jkf87"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "cbda9aefec586c48"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:daamable-sknk",
+   "name": "daamable-sknk",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "daamable-sknk",
+     "url": "https://github.com/daamable-sknk"
+    }
+   ],
+   "affiliation": {
+    "value": "Skunkworks Studio",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "5de0d36c1b37fe58"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "threads:dev_orijin",
+   "name": "dev_orijin",
+   "accounts": [
+    {
+     "platform": "threads",
+     "id": "dev_orijin",
+     "url": "https://www.threads.com/@dev_orijin"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "a2eaaf9f454da37f"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 118
+   }
+  },
+  {
+   "id": "github:emceeKim",
+   "name": "emceeKim",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "emceeKim",
+     "url": "https://github.com/emceeKim"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "4925d016e9377a50"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:finalchild",
+   "name": "finalchild",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "finalchild",
+     "url": "https://github.com/finalchild"
+    }
+   ],
+   "affiliation": {
+    "value": "PortOne",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "22be065e9c257d93"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:galvaomica396",
+   "name": "galvaomica396",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "galvaomica396",
+     "url": "https://github.com/galvaomica396"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "1c77044568e730de"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "threads:gov_ai.builder",
+   "name": "gov_ai.builder",
+   "accounts": [
+    {
+     "platform": "threads",
+     "id": "gov_ai.builder",
+     "url": "https://www.threads.com/@gov_ai.builder"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "02656bf9d2589964"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "threads:hakdol.senvip",
+   "name": "hakdol.senvip",
+   "accounts": [
+    {
+     "platform": "threads",
+     "id": "hakdol.senvip",
+     "url": "https://www.threads.com/@hakdol.senvip"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "54c2561cf3e1a268"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 134
+   }
+  },
+  {
+   "id": "github:hjsh200219",
+   "name": "hjsh200219",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "hjsh200219",
+     "url": "https://github.com/hjsh200219"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "ed42c0e326a6d068"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:hlucent",
+   "name": "hlucent",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "hlucent",
+     "url": "https://github.com/hlucent"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "bc609dfe7f04d6ed",
+    "92bbbba967365291"
+   ],
+   "stats": {
+    "case_count": 2,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:isnow890",
+   "name": "isnow890",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "isnow890",
+     "url": "https://github.com/isnow890"
+    }
+   ],
+   "affiliation": {
+    "value": "eumc seoul",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "0561ecd39ea94051"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:jaykim429",
+   "name": "jaykim429",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "jaykim429",
+     "url": "https://github.com/jaykim429"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "0011a7e888431aeb"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "threads:jerry_jy.kim",
+   "name": "jerry_jy.kim",
+   "accounts": [
+    {
+     "platform": "threads",
+     "id": "jerry_jy.kim",
+     "url": "https://www.threads.com/@jerry_jy.kim"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "83dd1411a30c6653"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:jinjukimink",
+   "name": "jinjukim_web",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "jinjukimink",
+     "url": "https://github.com/jinjukimink"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "5c3cb7251749ab2e"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:kkhinlove-design",
+   "name": "kkhinlove-design",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "kkhinlove-design",
+     "url": "https://github.com/kkhinlove-design"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "e7949c7bc45ca8e6"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:gongnyang",
+   "name": "kongnyng",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "gongnyang",
+     "url": "https://github.com/gongnyang"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "1c54d608228e0845",
+    "65e1983235232514"
+   ],
+   "stats": {
+    "case_count": 2,
+    "top_ax": 2,
+    "stars": 517
+   }
+  },
+  {
+   "id": "github:leokim90",
+   "name": "leokim90",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "leokim90",
+     "url": "https://github.com/leokim90"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "952ab7cccb367db6"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:lovelyquality",
+   "name": "lovelyquality",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "lovelyquality",
+     "url": "https://github.com/lovelyquality"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "6a9c5da9f1d3210f"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:msitsti2025",
+   "name": "msitsti2025",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "msitsti2025",
+     "url": "https://github.com/msitsti2025"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "0af085f0e51a1a7e"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:nine-hundred",
+   "name": "nine-hundred",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "nine-hundred",
+     "url": "https://github.com/nine-hundred"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "146501d37df93aa2"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "threads:orthodox_tauros",
+   "name": "orthodox_tauros",
+   "accounts": [
+    {
+     "platform": "threads",
+     "id": "orthodox_tauros",
+     "url": "https://www.threads.com/@orthodox_tauros"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "59ff218c60039cc9"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:pon00050",
+   "name": "pon00050",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "pon00050",
+     "url": "https://github.com/pon00050"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "32d199fa9ad4f674"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "threads:publicai_79",
+   "name": "publicai_79",
+   "accounts": [
+    {
+     "platform": "threads",
+     "id": "publicai_79",
+     "url": "https://www.threads.com/@publicai_79"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "a25534e407326d76",
+    "075fd5baf003c3b0"
+   ],
+   "stats": {
+    "case_count": 2,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:ratelworks",
+   "name": "ratelworks",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "ratelworks",
+     "url": "https://github.com/ratelworks"
+    }
+   ],
+   "affiliation": {
+    "value": "Ratelworks",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "05c30a6088be7960"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:redoxnet",
+   "name": "redoxnet",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "redoxnet",
+     "url": "https://github.com/redoxnet"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "991e9f9e7b324692"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:SeoNaRu",
+   "name": "seonaru",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "SeoNaRu",
+     "url": "https://github.com/SeoNaRu"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "81c14797b7aaafa0",
+    "10f6ec0f81090085"
+   ],
+   "stats": {
+    "case_count": 2,
+    "top_ax": 1,
+    "stars": 127
+   }
+  },
+  {
+   "id": "github:youjin8812-hub",
+   "name": "seoul_data_ax",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "youjin8812-hub",
+     "url": "https://github.com/youjin8812-hub"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "ee30aa1cae172991"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:seum8660",
+   "name": "seungmin",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "seum8660",
+     "url": "https://github.com/seum8660"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "578e4da94db0682d",
+    "def97ef350fe7cae"
+   ],
+   "stats": {
+    "case_count": 2,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:sharebook-kr",
+   "name": "sharebook-kr",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "sharebook-kr",
+     "url": "https://github.com/sharebook-kr"
+    }
+   ],
+   "affiliation": {
+    "value": "pystock",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "9aee6bbb0c29dddb"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:alphago2580",
+   "name": "sin seongsik",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "alphago2580",
+     "url": "https://github.com/alphago2580"
+    }
+   ],
+   "affiliation": {
+    "value": "Konkuk University",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "27c2fd1b292cfcbf"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:slicequeue",
+   "name": "slicequeue",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "slicequeue",
+     "url": "https://github.com/slicequeue"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "966d6a2ae42587a4"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:smilemin07",
+   "name": "smilemin07",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "smilemin07",
+     "url": "https://github.com/smilemin07"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "ce2287d57e6bacaa"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:tgtg4840-byte",
+   "name": "tgtg4840-byte",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "tgtg4840-byte",
+     "url": "https://github.com/tgtg4840-byte"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "9d2b45d14879241e"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:wintenboy",
+   "name": "wintenboy",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "wintenboy",
+     "url": "https://github.com/wintenboy"
+    }
+   ],
+   "affiliation": {
+    "value": "Yonsei University",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "05763974d3375178"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:gong-yeongbin",
+   "name": "yb9",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "gong-yeongbin",
+     "url": "https://github.com/gong-yeongbin"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "ca5651ea46caa07f"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:zzjiho",
+   "name": "zzjiho",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "zzjiho",
+     "url": "https://github.com/zzjiho"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "5bfadfc3b8e2292f"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:tyui22",
+   "name": "과학기술정보통신부 김동훈",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "tyui22",
+     "url": "https://gitlab.aigov.go.kr/tyui22"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "aa5e039807da0e11"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:kwakseongjae",
+   "name": "곽성재",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "kwakseongjae",
+     "url": "https://github.com/kwakseongjae"
+    }
+   ],
+   "affiliation": {
+    "value": "HONGIK UNIVERSITY",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "e18d5e018e0cd10d"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:publicpeasant",
+   "name": "광양시 정솔현",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "publicpeasant",
+     "url": "https://gitlab.aigov.go.kr/publicpeasant"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "17ed2d7a88c03119"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:knps.taejong",
+   "name": "국립공원공단 윤태종",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "knps.taejong",
+     "url": "https://gitlab.aigov.go.kr/knps.taejong"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "c6a58cb9146d0694"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:hoho4348",
+   "name": "남양주시 양준호",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "hoho4348",
+     "url": "https://gitlab.aigov.go.kr/hoho4348"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "b0b96e656d3572e9"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "chrisryugj",
+   "name": "딴짓하는 류주임",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "chrisryugj",
+     "url": "https://github.com/chrisryugj"
+    },
+    {
+     "platform": "threads",
+     "id": "chris_gomdori",
+     "url": "https://www.threads.com/@chris_gomdori"
+    }
+   ],
+   "affiliation": {
+    "value": "광진구",
+    "inferred": true,
+    "evidence": "본인 자기소개 게시물(DZgf3veiStV, '광진구청 8급')과 광진구 보도자료의 도구 목록 일치"
+   },
+   "cases": [
+    "43dc7f4ab2500260",
+    "83bb0ac0ed9f576d",
+    "76f07692203606ad",
+    "fe3bb0d913e27677",
+    "cba450dfb5c8fadf",
+    "1502d338e8e99382",
+    "56cdd4fc23166800",
+    "8ff758ac1d5e40eb",
+    "9d56d423296a3238",
+    "de4b2dab339d69b7",
+    "f76a328f43c0766f",
+    "d40cc4a9cf6e29b6"
+   ],
+   "stats": {
+    "case_count": 12,
+    "top_ax": 2,
+    "stars": 3979
+   }
+  },
+  {
+   "id": "github:modu-ai",
+   "name": "모두의AI",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "modu-ai",
+     "url": "https://github.com/modu-ai"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "c5aa260668941b92"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 291
+   }
+  },
+  {
+   "id": "github:Mrbaeksang",
+   "name": "백상현 / Sanghyeon Baek",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "Mrbaeksang",
+     "url": "https://github.com/Mrbaeksang"
+    }
+   ],
+   "affiliation": {
+    "value": "MadrasCheck",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "9070c4f923623855"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:pilddong",
+   "name": "병무청 최필선",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "pilddong",
+     "url": "https://gitlab.aigov.go.kr/pilddong"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "8fb7daa690db1660",
+    "50ab356bb2ee3f4d",
+    "85e155bd270cafc9"
+   ],
+   "stats": {
+    "case_count": 3,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "hosungseo",
+   "name": "서호성 (Hoseong Seo)",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "hosungseo",
+     "url": "https://github.com/hosungseo"
+    },
+    {
+     "platform": "threads",
+     "id": "gongpenclaw",
+     "url": "https://www.threads.com/@gongpenclaw"
+    }
+   ],
+   "affiliation": {
+    "value": "행정안전부",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "3d07b6da99f5e1ed",
+    "6c5b15f4c8414f29",
+    "63a81d23af115b66",
+    "fbde74aa0071ea45",
+    "f0c21de2b0af63b3",
+    "5451653f4cddb6f2",
+    "58420e002644542c"
+   ],
+   "stats": {
+    "case_count": 7,
+    "top_ax": 2,
+    "stars": 498
+   }
+  },
+  {
+   "id": "gitlab:pro9dan",
+   "name": "소방청 한종훈",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "pro9dan",
+     "url": "https://gitlab.aigov.go.kr/pro9dan"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "d6c35b2999da8ca0"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:anms0214",
+   "name": "전북특별자치도 군산시 안민수",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "anms0214",
+     "url": "https://gitlab.aigov.go.kr/anms0214"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "00411127055c4a07"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "obundh",
+   "name": "초부",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "obundh",
+     "url": "https://github.com/obundh"
+    },
+    {
+     "platform": "threads",
+     "id": "chobu62",
+     "url": "https://www.threads.com/@chobu62"
+    }
+   ],
+   "affiliation": {
+    "value": "과학기술정보통신부",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "759835514b4b7ca4",
+    "d69be456031471a4",
+    "ec17e6cd86e7aaa1",
+    "94639db9e5fd6c2c",
+    "6f376e827405e328",
+    "7c63339c2722da03",
+    "719692c2c31da09f",
+    "2c14f2adaa83a00e"
+   ],
+   "stats": {
+    "case_count": 8,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:y2kthr",
+   "name": "한국사회보장정보원 김지현",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "y2kthr",
+     "url": "https://gitlab.aigov.go.kr/y2kthr"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "2798c2e0b79ab291"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:jaekyeong",
+   "name": "한국지능정보사회진흥원 정재경",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "jaekyeong",
+     "url": "https://gitlab.aigov.go.kr/jaekyeong"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "8c5458af8f13435d"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:AILab_Manager",
+   "name": "행정안전부 김기현",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "AILab_Manager",
+     "url": "https://gitlab.aigov.go.kr/AILab_Manager"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "a8492663acf67b99",
+    "4ab9bf954cb48eb9"
+   ],
+   "stats": {
+    "case_count": 2,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:inchangpark",
+   "name": "행정안전부 박인창",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "inchangpark",
+     "url": "https://gitlab.aigov.go.kr/inchangpark"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "1de6fb50cc324684"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:wavelen",
+   "name": "행정안전부 정준우",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "wavelen",
+     "url": "https://gitlab.aigov.go.kr/wavelen"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "ac09bd2e1c0fbb29"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  }
+ ]
+}
