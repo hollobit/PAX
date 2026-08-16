@@ -41,9 +41,10 @@
     "champion": "obundh",
     "accounts": [
       "github:obundh",
-      "threads:chobu62"
+      "threads:chobu62",
+      "gitlab:tyui22"
     ],
-    "evidence": "게시물 Db735IZj7vM(레스큐79)에서 github.com/obundh/gonggong-disaster-series-rescue79를 본인 개발물로 공유"
+    "evidence": "게시물 Db735IZj7vM(레스큐79)에서 github.com/obundh/gonggong-disaster-series-rescue79를 본인 개발물로 공유; gitlab.aigov.go.kr/tyui22/gonggong-ax-local-4가 github.com/obundh/gonggong-ax-local-4와 이름·설명이 동일한 미러 저장소임을 확인(2026-08-16) — GitHub 프로필 소속(과학기술정보통신부)과 GitLab 프로필(과학기술정보통신부 김동훈) 일치"
   },
   {
     "champion": "publicpeasant",

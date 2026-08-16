@@ -1,5 +1,5 @@
 {
- "total": 82,
+ "total": 81,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -1306,9 +1306,19 @@
    }
   },
   {
-   "id": "gitlab:tyui22",
+   "id": "obundh",
    "name": "김동훈",
    "accounts": [
+    {
+     "platform": "github",
+     "id": "obundh",
+     "url": "https://github.com/obundh"
+    },
+    {
+     "platform": "threads",
+     "id": "chobu62",
+     "url": "https://www.threads.com/@chobu62"
+    },
     {
      "platform": "gitlab",
      "id": "tyui22",
@@ -1321,11 +1331,18 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
-    "aa5e039807da0e11"
+    "759835514b4b7ca4",
+    "d69be456031471a4",
+    "ec17e6cd86e7aaa1",
+    "94639db9e5fd6c2c",
+    "6f376e827405e328",
+    "7c63339c2722da03",
+    "719692c2c31da09f",
+    "2c14f2adaa83a00e"
    ],
    "stats": {
-    "case_count": 1,
-    "top_ax": 1,
+    "case_count": 8,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -1776,42 +1793,6 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 2,
-    "stars": 0
-   }
-  },
-  {
-   "id": "obundh",
-   "name": "초부",
-   "accounts": [
-    {
-     "platform": "github",
-     "id": "obundh",
-     "url": "https://github.com/obundh"
-    },
-    {
-     "platform": "threads",
-     "id": "chobu62",
-     "url": "https://www.threads.com/@chobu62"
-    }
-   ],
-   "affiliation": {
-    "value": "과학기술정보통신부",
-    "inferred": false,
-    "evidence": "GitHub 공개 프로필 소속란"
-   },
-   "cases": [
-    "759835514b4b7ca4",
-    "d69be456031471a4",
-    "ec17e6cd86e7aaa1",
-    "94639db9e5fd6c2c",
-    "6f376e827405e328",
-    "7c63339c2722da03",
-    "719692c2c31da09f",
-    "2c14f2adaa83a00e"
-   ],
-   "stats": {
-    "case_count": 8,
     "top_ax": 2,
     "stars": 0
    }
