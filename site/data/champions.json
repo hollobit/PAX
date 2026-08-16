@@ -1,5 +1,5 @@
 {
- "total": 83,
+ "total": 82,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -165,29 +165,6 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 2,
-    "stars": 0
-   }
-  },
-  {
-   "id": "github:koul777",
-   "name": "HRKIM",
-   "accounts": [
-    {
-     "platform": "github",
-     "id": "koul777",
-     "url": "https://github.com/koul777"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "ea2bce110972762e",
-    "f5abed24ff6bdd4a",
-    "48e33f2318bdffae",
-    "92d5147e02f7ae36"
-   ],
-   "stats": {
-    "case_count": 4,
     "top_ax": 2,
     "stars": 0
    }
@@ -551,26 +528,6 @@
    "stats": {
     "case_count": 2,
     "top_ax": 1,
-    "stars": 0
-   }
-  },
-  {
-   "id": "threads:changil.k",
-   "name": "changil.k",
-   "accounts": [
-    {
-     "platform": "threads",
-     "id": "changil.k",
-     "url": "https://www.threads.com/@changil.k"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "e52e2378641903f4"
-   ],
-   "stats": {
-    "case_count": 1,
-    "top_ax": 2,
     "stars": 0
    }
   },
@@ -1421,6 +1378,39 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "koul777",
+   "name": "김창일",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "koul777",
+     "url": "https://github.com/koul777"
+    },
+    {
+     "platform": "threads",
+     "id": "changil.k",
+     "url": "https://www.threads.com/@changil.k"
+    }
+   ],
+   "affiliation": {
+    "value": "한국학중앙연구원",
+    "inferred": true,
+    "evidence": "운영자 확인(2026-08-16)"
+   },
+   "cases": [
+    "ea2bce110972762e",
+    "f5abed24ff6bdd4a",
+    "48e33f2318bdffae",
+    "92d5147e02f7ae36",
+    "e52e2378641903f4"
+   ],
+   "stats": {
+    "case_count": 5,
+    "top_ax": 2,
     "stars": 0
    }
   },

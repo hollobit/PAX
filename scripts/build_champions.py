@@ -146,6 +146,7 @@ def main() -> int:
         cid = entry["champion"]
         merged[cid] = {"accounts": entry["accounts"],
                        "affiliation": entry.get("affiliation"),
+                       "name": entry.get("name"),
                        "extra_cases": entry.get("extra_cases", [])}
         for a in entry["accounts"]:
             acct_to_champion[a] = cid
@@ -207,7 +208,8 @@ def main() -> int:
                 github_name = github_name or p.get("name")
                 company = company or p.get("company")
         aff = merged.get(cid, {}).get("affiliation")
-        name = (gitlab_name or github_name or cid.split(":", 1)[-1]).strip()
+        curated_name = merged.get(cid, {}).get("name")
+        name = (curated_name or gitlab_name or github_name or cid.split(":", 1)[-1]).strip()
         if gitlab_name:
             org, person = split_gitlab_name(gitlab_name)
             if org:

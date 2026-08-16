@@ -54,5 +54,19 @@
       "856b4951cb5274d1"
     ],
     "evidence": "운영자 확인(2026-08-16) — K-Local(klocal.solvonluchs.com)이 공공 GitLab publicpeasant(광양시 정솔현)의 개발물임을 큐레이터가 확인"
+  },
+  {
+    "champion": "koul777",
+    "name": "김창일",
+    "accounts": [
+      "github:koul777",
+      "threads:changil.k"
+    ],
+    "affiliation": {
+      "value": "한국학중앙연구원",
+      "inferred": true,
+      "evidence": "운영자 확인(2026-08-16)"
+    },
+    "evidence": "운영자 확인(2026-08-16) — GitHub koul777과 Threads changil.k이 동일인(김창일)임을 큐레이터가 확인. NCScope 등 사례의 게시물·저장소 연결과 부합"
   }
 ]
