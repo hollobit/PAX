@@ -1,5 +1,5 @@
 {
- "total": 81,
+ "total": 82,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -1820,6 +1820,26 @@
    ],
    "stats": {
     "case_count": 3,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:kwy",
+   "name": "한국국제협력단 김우영",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "kwy",
+     "url": "https://gitlab.aigov.go.kr/kwy"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "acd684108227b9c2"
+   ],
+   "stats": {
+    "case_count": 1,
     "top_ax": 2,
     "stars": 0
    }

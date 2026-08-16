@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-08-08",
- "total": 171,
+ "total": 172,
  "cases": [
   {
    "no": 1,
@@ -5130,6 +5130,36 @@
    "post_url": "",
    "service_url": "https://hollobit.github.io/grid-siting-lab/",
    "tool_type": "웹 서비스",
+   "audience": "G2C 공개"
+  },
+  {
+   "no": 173,
+   "id": "acd684108227b9c2",
+   "org": "한국국제협력단(KOICA)",
+   "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크",
+   "ax_prev": "AI-Enabled",
+   "ax": "AI-Enabled",
+   "s": "S3",
+   "s_name": "Workflow",
+   "c": "C2",
+   "c_name": "연속 처리",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Published tool",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R1 낮음",
+   "human": "H2 Human-in-the-loop",
+   "evidence": "E1 코드·도구 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "DAC 6대 기준의 평가 산출물을 멀티 에이전트가 생산하고 근거 게이트·사람 승인 게이트로 검증하는 워크플로(S3·C2) — 검증 가능한 평가 결과를 AI가 만들고 사람이 승인하므로 Enabled. 모델 비종속 설계와 오픈 라이선스로 재사용성 높음. 실제 평가 업무 운영 증거는 없어 First 관문 미충족.",
+   "feedback": "미확인",
+   "resilience": "부분 확인—모델 비종속(3개 하네스) 설계로 공급자 의존 완화",
+   "post_url": "",
+   "service_url": "https://gitlab.aigov.go.kr/kwy/dev-eval-agents",
+   "tool_type": "AI 스킬·에이전트",
    "audience": "G2C 공개"
   }
  ]
