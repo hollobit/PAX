@@ -1718,7 +1718,7 @@
    }
   },
   {
-   "id": "gitlab:publicpeasant",
+   "id": "publicpeasant",
    "name": "정솔현",
    "accounts": [
     {
@@ -1733,10 +1733,11 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
-    "17ed2d7a88c03119"
+    "17ed2d7a88c03119",
+    "856b4951cb5274d1"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 2,
     "stars": 0
    }
@@ -1942,12 +1943,6 @@
    "title": "업무포털 원클릭 이동 프로그램",
    "org": "공직 현장(교육행정)",
    "url": "https://원클릭업무포털.com"
-  },
-  {
-   "id": "856b4951cb5274d1",
-   "title": "지방행정 실무 자료 포털 K-Local",
-   "org": "공직 커뮤니티",
-   "url": "https://klocal.solvonluchs.com/"
   },
   {
    "id": "e0be95cc501650ae",

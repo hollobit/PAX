@@ -1,7 +1,10 @@
 [
   {
     "champion": "chrisryugj",
-    "accounts": ["github:chrisryugj", "threads:chris_gomdori"],
+    "accounts": [
+      "github:chrisryugj",
+      "threads:chris_gomdori"
+    ],
     "affiliation": {
       "value": "광진구",
       "inferred": true,
@@ -11,22 +14,45 @@
   },
   {
     "champion": "hosungseo",
-    "accounts": ["github:hosungseo", "threads:gongpenclaw"],
+    "accounts": [
+      "github:hosungseo",
+      "threads:gongpenclaw"
+    ],
     "evidence": "게시물 Dbn8PbNgca4(hosungseo.github.io 상황판)·DbB6Zmck3t1(github.com/hosungseo/korea100studio)을 본인 개발물로 공유"
   },
   {
     "champion": "Milkbuttercheese2",
-    "accounts": ["github:Milkbuttercheese2", "gitlab:rhamasel3", "threads:milkbuttercheese"],
+    "accounts": [
+      "github:Milkbuttercheese2",
+      "gitlab:rhamasel3",
+      "threads:milkbuttercheese"
+    ],
     "evidence": "게시물 DbxFxbMEvmk에서 github.com/Milkbuttercheese2/Which-article-was-it-public을 본인 개발물로 공유; 공공 깃랩 rhamasel3/What-I-have-to-do는 동명 저장소 미러"
   },
   {
     "champion": "Kminer2053",
-    "accounts": ["github:Kminer2053", "threads:koyou_ax"],
+    "accounts": [
+      "github:Kminer2053",
+      "threads:koyou_ax"
+    ],
     "evidence": "사례 '공무원용 로컬 AI 에이전트 워크플레이스'에서 게시물(@koyou_ax/DacnKc9D_5i)과 저장소(github.com/Kminer2053/gongmuwon)가 같은 개발기로 연결"
   },
   {
     "champion": "obundh",
-    "accounts": ["github:obundh", "threads:chobu62"],
+    "accounts": [
+      "github:obundh",
+      "threads:chobu62"
+    ],
     "evidence": "게시물 Db735IZj7vM(레스큐79)에서 github.com/obundh/gonggong-disaster-series-rescue79를 본인 개발물로 공유"
+  },
+  {
+    "champion": "publicpeasant",
+    "accounts": [
+      "gitlab:publicpeasant"
+    ],
+    "extra_cases": [
+      "856b4951cb5274d1"
+    ],
+    "evidence": "운영자 확인(2026-08-16) — K-Local(klocal.solvonluchs.com)이 공공 GitLab publicpeasant(광양시 정솔현)의 개발물임을 큐레이터가 확인"
   }
 ]

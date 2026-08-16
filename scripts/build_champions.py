@@ -145,7 +145,8 @@ def main() -> int:
             continue
         cid = entry["champion"]
         merged[cid] = {"accounts": entry["accounts"],
-                       "affiliation": entry.get("affiliation")}
+                       "affiliation": entry.get("affiliation"),
+                       "extra_cases": entry.get("extra_cases", [])}
         for a in entry["accounts"]:
             acct_to_champion[a] = cid
     for gh_acct, gl_acct in auto_links.items():
@@ -158,7 +159,12 @@ def main() -> int:
     for a in sorted(all_accounts):
         acct_to_champion.setdefault(a, a)  # 미연결 계정은 단독 챔피언
 
-    # 3) 챔피언별 사례 귀속 — 병합된 스레드 핸들은 저장소 사례도 함께 소유
+    # 3) 챔피언별 사례 귀속 — 병합된 스레드 핸들은 저장소 사례도 함께 소유.
+    #    연결 파일의 extra_cases(수동 귀속, 근거 필수)도 해당 챔피언에 귀속된다.
+    manual_case_of: dict[str, str] = {}
+    for cid, info in merged.items():
+        for case_id in info.get("extra_cases", []):
+            manual_case_of[case_id] = cid
     champ_cases: dict[str, list] = {}
     for c in cases:
         owners = set(case_owners[c["id"]])
@@ -167,6 +173,8 @@ def main() -> int:
             if acct_to_champion.get(t) in {acct_to_champion.get(o) for o in owners}:
                 owners.add(t)
         champs = {acct_to_champion[o] for o in owners if o in acct_to_champion}
+        if c["id"] in manual_case_of:
+            champs.add(manual_case_of[c["id"]])
         for ch in champs:
             champ_cases.setdefault(ch, []).append(c)
 
@@ -234,7 +242,7 @@ def main() -> int:
     unattributed = [
         {"id": c["id"], "title": c["title"], "org": c["org"],
          "url": c.get("case_url") or c.get("link")}
-        for c in cases if not case_owners[c["id"]]
+        for c in cases if not case_owners[c["id"]] and c["id"] not in manual_case_of
     ]
 
     doc = {"total": len(champions), "champions": champions,
