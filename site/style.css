@@ -1513,9 +1513,9 @@ main {
 
 /* ── 챔피언 디렉토리 ─────────────────────────────────────── */
 .champions {
-  width: min(80vw, 1200px);
+  max-width: 80vw;
   margin: 0 auto;
-  padding: 1.5rem 0 3rem;
+  padding: 1.5rem 1.5rem 4rem;
 }
 .champ-toolbar {
   display: flex;
@@ -1601,7 +1601,7 @@ main {
 .champ-card__more { color: var(--ink-3, #888); list-style: none; }
 .champ-notes { margin-top: 2.5rem; }
 @media (max-width: 768px) {
-  .champions { width: 92vw; }
+  .champions { max-width: 100%; }
 }
 
 /* 챔피언 미확인 사례 */
