@@ -1347,6 +1347,30 @@
    }
   },
   {
+   "id": "gitlab:kwy",
+   "name": "김우영",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "kwy",
+     "url": "https://gitlab.aigov.go.kr/kwy"
+    }
+   ],
+   "affiliation": {
+    "value": "한국국제협력단",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "acd684108227b9c2"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:y2kthr",
    "name": "김지현",
    "accounts": [
@@ -1820,26 +1844,6 @@
    ],
    "stats": {
     "case_count": 3,
-    "top_ax": 2,
-    "stars": 0
-   }
-  },
-  {
-   "id": "gitlab:kwy",
-   "name": "한국국제협력단 김우영",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "kwy",
-     "url": "https://gitlab.aigov.go.kr/kwy"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "acd684108227b9c2"
-   ],
-   "stats": {
-    "case_count": 1,
     "top_ax": 2,
     "stars": 0
    }

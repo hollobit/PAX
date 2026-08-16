@@ -82,7 +82,7 @@ def fetch_profile(acct: str) -> dict | None:
 
 
 ORG_SUFFIX = re.compile(
-    r"^(?P<org>[가-힣A-Za-z0-9·\s]+(?:시|군|구|도|청|처|부|원|공사|공단|유통|의회|재단|진흥원|연구원|교육청|위원회|대학교?))\s+(?P<name>[가-힣]{2,4})$")
+    r"^(?P<org>[가-힣A-Za-z0-9·\s]+(?:시|군|구|도|청|처|부|원|공사|공단|협력단|사업단|유통|의회|재단|진흥원|연구원|교육청|위원회|대학교?))\s+(?P<name>[가-힣]{2,4})$")
 
 
 def split_gitlab_name(full: str) -> tuple[str | None, str]:
