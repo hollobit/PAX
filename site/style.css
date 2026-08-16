@@ -1603,3 +1603,16 @@ main {
 @media (max-width: 768px) {
   .champions { width: 92vw; }
 }
+
+/* 챔피언 미확인 사례 */
+.champ-unattributed { margin-top: 2.5rem; }
+.champ-unattributed__list {
+  columns: 2;
+  column-gap: 2rem;
+  padding-left: 1.1rem;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+.champ-unattributed__org { color: var(--ink-3, #888); font-size: 0.82rem; }
+.champ-unattributed__site { margin-left: 0.35rem; text-decoration: none; }
+@media (max-width: 768px) { .champ-unattributed__list { columns: 1; } }

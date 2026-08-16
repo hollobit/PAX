@@ -230,7 +230,15 @@ def main() -> int:
             if i not in case_ids:
                 print(f"경고: 챔피언 {ch['id']}의 사례 {i}가 cases.json에 없음", file=sys.stderr)
 
-    doc = {"total": len(champions), "champions": champions}
+    # 6) 챔피언 미확인 사례 — 귀속 계정이 하나도 없는 사례 목록
+    unattributed = [
+        {"id": c["id"], "title": c["title"], "org": c["org"],
+         "url": c.get("case_url") or c.get("link")}
+        for c in cases if not case_owners[c["id"]]
+    ]
+
+    doc = {"total": len(champions), "champions": champions,
+           "unattributed": unattributed}
     OUT.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"{OUT} ← 챔피언 {len(champions)}명 (프로필 신규 조회 {fetched}건)")
     return 0

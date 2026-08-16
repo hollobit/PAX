@@ -29,8 +29,9 @@ async function load() {
     state.cases = new Map(caseDoc.cases.map((c) => [c.id, c]));
     state.bookmarks = counts;
     document.getElementById('stats').textContent =
-      `챔피언 ${champDoc.total}명 · 사례 ${caseDoc.cases.length}건 기준`;
+      `챔피언 ${champDoc.total}명 · 사례 ${caseDoc.cases.length}건 기준 · 미확인 ${(champDoc.unattributed || []).length}건`;
     render();
+    renderUnattributed(champDoc.unattributed || []);
   } catch (err) {
     console.error('챔피언 데이터 로드 실패:', err);
     document.getElementById('error-state').hidden = false;
@@ -163,6 +164,33 @@ function card(champ) {
   }
   el.appendChild(list);
   return el;
+}
+
+function renderUnattributed(list) {
+  const root = document.getElementById('unattributed-list');
+  root.replaceChildren();
+  for (const item of list) {
+    const li = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = `./?q=${encodeURIComponent(item.title)}`;
+    link.textContent = item.title;
+    li.appendChild(link);
+    const org = document.createElement('span');
+    org.className = 'champ-unattributed__org';
+    org.textContent = ` — ${item.org}`;
+    li.appendChild(org);
+    if (item.url) {
+      const site = document.createElement('a');
+      site.href = item.url;
+      site.target = '_blank';
+      site.rel = 'noopener';
+      site.className = 'champ-unattributed__site';
+      site.textContent = '↗';
+      site.title = item.url;
+      li.appendChild(site);
+    }
+    root.appendChild(li);
+  }
 }
 
 document.getElementById('sort-name').addEventListener('click', () => setSort('name'));

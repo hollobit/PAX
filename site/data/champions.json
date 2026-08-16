@@ -1875,5 +1875,259 @@
     "stars": 0
    }
   }
+ ],
+ "unattributed": [
+  {
+   "id": "6a2d1fa6e385ef2b",
+   "title": "부서 수요 기반 ChatGPT 팀계정 지원 후 보안형 AI SaaS 도입",
+   "org": "기관 미상(공공)",
+   "url": null
+  },
+  {
+   "id": "422f3e4e0e9a23eb",
+   "title": "바이브 코딩으로 억대 규모 서비스 버전업 프로토타입을 1개월 만에 개발",
+   "org": "국립중앙의료원(중앙응급의료센터)",
+   "url": "https://icaretok.nemc.or.kr/pec/"
+  },
+  {
+   "id": "bf04cec910b4755d",
+   "title": "개인정보보호법 법령 리더기 PoC 공개",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://privacy-law-reader.vercel.app/"
+  },
+  {
+   "id": "d487843b67c6063e",
+   "title": "교육행정 업무 워크플로 맵 제작기 공유",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://gyohaeng.pages.dev/workflow-map"
+  },
+  {
+   "id": "38dc6d3806bf2e8f",
+   "title": "법령 비교·AI 법률 검색 웹서비스 LexDiff 공유",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://lexdiff.gomdori.app"
+  },
+  {
+   "id": "651bfec5c1ede6d1",
+   "title": "자연어 입력을 공문서로 바꿔주는 공문 생성기",
+   "org": "공직 커뮤니티",
+   "url": "https://gongmun.com"
+  },
+  {
+   "id": "a021bc5b58ed72cd",
+   "title": "교육행정 업무 자동화 도구·자료 모음 사이트",
+   "org": "공직 현장(교육행정)",
+   "url": "https://gyohaeng.pages.dev"
+  },
+  {
+   "id": "e93a0e5c75f51a7b",
+   "title": "한글(HWP) 작업 효율화 프로그램 쉽다한글",
+   "org": "공직 현장(교육청)",
+   "url": "https://brojun.kr/sdhg"
+  },
+  {
+   "id": "cbe008b504b9dd18",
+   "title": "의학 연구 동료 AI 플러그인 ResearchFellow",
+   "org": "공직 현장(의료 연구)",
+   "url": "https://researchfellow.vercel.app"
+  },
+  {
+   "id": "a93c7283cafb3b9b",
+   "title": "서무 업무 도구 모음 허브",
+   "org": "공직 현장(통일부)",
+   "url": "https://seomu-work-hub.tgtg4840.chatgpt.site/"
+  },
+  {
+   "id": "0d668fa0c977b439",
+   "title": "업무포털 원클릭 이동 프로그램",
+   "org": "공직 현장(교육행정)",
+   "url": "https://원클릭업무포털.com"
+  },
+  {
+   "id": "856b4951cb5274d1",
+   "title": "지방행정 실무 자료 포털 K-Local",
+   "org": "공직 커뮤니티",
+   "url": "https://klocal.solvonluchs.com/"
+  },
+  {
+   "id": "e0be95cc501650ae",
+   "title": "공공기관 공시항목 비교 사이트",
+   "org": "공직 커뮤니티",
+   "url": "https://alio-compare.vercel.app"
+  },
+  {
+   "id": "918bddd1b60d8a74",
+   "title": "로컬 엑셀 처리 도구 — 마스킹·파일 취합",
+   "org": "공직 커뮤니티",
+   "url": "https://excel.choshg.com/"
+  },
+  {
+   "id": "5835971d479dbf81",
+   "title": "국회의원 트랙레코드 사이트",
+   "org": "공직 커뮤니티",
+   "url": "https://9k1.fun"
+  },
+  {
+   "id": "c78372217646db56",
+   "title": "초실행관 — 공무원 AI 활용·실무 도구 사이트",
+   "org": "공직 커뮤니티",
+   "url": "https://choshg.com"
+  },
+  {
+   "id": "0826e58f026fe560",
+   "title": "파주 실시간 인파 지도 — 지금 파주",
+   "org": "공직 커뮤니티",
+   "url": "https://now-paju.pajulab.workers.dev/"
+  },
+  {
+   "id": "62ed887a548dfb25",
+   "title": "서울 인파레이더 — 명소 121곳 실시간 인구밀집 상황판",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://jocohunt.com/p/7uubvp1t"
+  },
+  {
+   "id": "5b37a71c441b663b",
+   "title": "북적북적 제주 — 명소 66곳 실시간 인파 지도",
+   "org": "공직 커뮤니티",
+   "url": "https://somodus.com/a/29ee7eab2c28c1d1dc2eef35425ccfc3"
+  },
+  {
+   "id": "ef0fc393d25e4e97",
+   "title": "북적북적 인천공항 — 실시간 혼잡 지도",
+   "org": "공직 커뮤니티",
+   "url": "https://somodus.com/a/266ae6e5a62ab845b736920033636b02"
+  },
+  {
+   "id": "c7ccd2903fbe27a5",
+   "title": "대한민국 제도 온톨로지 뷰어",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://chris.gomdori.app/korea100"
+  },
+  {
+   "id": "849b973bf966f4ff",
+   "title": "AX360° — AX 전 과정 원스톱 지원 포털 개설",
+   "org": "과학기술정보통신부·NIPA·KOSA",
+   "url": "https://ax360.kr/"
+  },
+  {
+   "id": "93482d8cbe86c9d9",
+   "title": "한국산업인력공단, 공식 HRDKorea MCP 서비스 개시",
+   "org": "한국산업인력공단",
+   "url": "https://openapi.hrdkorea.or.kr/mcp.html"
+  },
+  {
+   "id": "586bab7a0b40cb95",
+   "title": "지방의정 지원 AI 에이전트 자치아이 베타",
+   "org": "지방자치혁신연구원",
+   "url": "https://jachiai.kr"
+  },
+  {
+   "id": "235db3db0bff39d2",
+   "title": "미국 GovInfo, 정부 문서 MCP 공개 프리뷰",
+   "org": "미국 연방정부(GovInfo)",
+   "url": "https://www.govinfo.gov/features/mcp-public-preview"
+  },
+  {
+   "id": "0c994fa292d1d15d",
+   "title": "싱가포르 통계청, SingStat MCP 서비스 제공",
+   "org": "싱가포르 통계청",
+   "url": "https://www.singstat.gov.sg/data-tools-services/singstat-mcp"
+  },
+  {
+   "id": "17329009668eb397",
+   "title": "NIA, 발간 자료의 마크다운 병행 등록 의무화",
+   "org": "한국지능정보사회진흥원(NIA)",
+   "url": null
+  },
+  {
+   "id": "c46225d9c7efdb93",
+   "title": "금융규제 샌드박스 유사사례 검색 서비스 PoC",
+   "org": "UNIST 금융공학연구실",
+   "url": "https://yongjaeleee-financial-sandbox-similar-case-poc.hf.space/"
+  },
+  {
+   "id": "000bb96831380931",
+   "title": "농식품분야 특허 AI 기술분석 서비스",
+   "org": "개발 커뮤니티",
+   "url": "https://atipsum.lovable.app/"
+  },
+  {
+   "id": "999efcd7e3a80a93",
+   "title": "카카오 PlayMCP — MCP 에이전트 플랫폼",
+   "org": "카카오",
+   "url": "https://playmcp.kakao.com/"
+  },
+  {
+   "id": "a8fbf74431025f70",
+   "title": "공공조달 제도 88개 업무 흐름도 — 그 많던 조달은 어떻게 했을까",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://how-did-they-do-all-that-procurement.dali-n-narumi.workers.dev/"
+  },
+  {
+   "id": "026e1b69c1fe6678",
+   "title": "배너캅 — AI 불법현수막 단속·행정처분 관제 시스템",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://banner.choshg.com/"
+  },
+  {
+   "id": "9dc1a7081bc869b1",
+   "title": "광진구, 공무원이 직접 개발한 AI 도구 6종 전 직원 업무 전면 투입",
+   "org": "광진구",
+   "url": "https://www.gwangjin.go.kr/portal/bbs/B0000002/view.do?nttId=6617521&menuNo=200191"
+  },
+  {
+   "id": "e2f85975979aa487",
+   "title": "공무원이 직접 만든 'AI 법령 비서' 시범 개시",
+   "org": "법제처",
+   "url": "https://www.moleg.go.kr/board.es?mid=a10501000000&bid=0048&act=view&list_no=152980"
+  },
+  {
+   "id": "5e76949a3f487274",
+   "title": "경기도의회 법령·자치법규 나무 베타 공개",
+   "org": "경기도의회",
+   "url": "https://ggc-lawtree.vercel.app/"
+  },
+  {
+   "id": "31a47960ddebd977",
+   "title": "하이패스 경비 정산 자동화 도구",
+   "org": "경기도의회",
+   "url": "https://ggc-hipass.vercel.app/member/"
+  },
+  {
+   "id": "145a534a79c6fc53",
+   "title": "범정부오피스 — 공무원이 만든 공문서 편집 자동화 프로그램",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://youtu.be/e5ltUQbRDAo"
+  },
+  {
+   "id": "791311495e38151c",
+   "title": "세상에 그런법이 어딨어요? — 경기도의회 AI 법·조례 안내 서비스",
+   "org": "경기도의회",
+   "url": "https://thislaw.co.kr"
+  },
+  {
+   "id": "611503a5916453a3",
+   "title": "CODEF — 공공·금융 데이터 연동 구독형 API 플랫폼",
+   "org": "CODEF(민간)",
+   "url": "https://codef.io"
+  },
+  {
+   "id": "789c1267f63c3b01",
+   "title": "폴리위키 — 공직·입법 공개 데이터베이스",
+   "org": "개발 커뮤니티",
+   "url": "https://poliwiki.kr"
+  },
+  {
+   "id": "3a12372c14bc0972",
+   "title": "전국민 AI 경진대회 — AI 달인 100 챌린지 개최",
+   "org": "과학기술정보통신부·NIA",
+   "url": "https://aichallenge4all.or.kr/competitions/master100"
+  },
+  {
+   "id": "8d17b8feee1af705",
+   "title": "전북교육청, 문서 취합·변환 도구 공식 배포",
+   "org": "전북특별자치도교육청",
+   "url": "https://www.jbe.go.kr/board/view.jbe?boardId=BBS_0000649&menuCd=DOM_000000106011002001&dataSid=1141429"
+  }
  ]
 }
