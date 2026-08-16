@@ -81,6 +81,17 @@ def fetch_profile(acct: str) -> dict | None:
     return None
 
 
+ORG_SUFFIX = re.compile(
+    r"^(?P<org>[가-힣A-Za-z0-9·\s]+(?:시|군|구|도|청|처|부|원|공사|공단|유통|의회|재단|진흥원|연구원|교육청|위원회|대학교?))\s+(?P<name>[가-힣]{2,4})$")
+
+
+def split_gitlab_name(full: str) -> tuple[str | None, str]:
+    """공공 GitLab 표시명 '기관 이름' 형식을 (기관, 이름)으로 분리. 실패 시 (None, 원문)."""
+    if m := ORG_SUFFIX.match(full.strip()):
+        return m.group("org").strip(), m.group("name")
+    return None, full.strip()
+
+
 def load_json(path: Path, default):
     try:
         return json.loads(path.read_text(encoding="utf-8"))
@@ -108,6 +119,22 @@ def main() -> int:
         threads_of_case[c["id"]] = threads
         all_accounts |= repo | threads
 
+    # 1.5) 동일 계정명 프로브 — GitHub 계정과 같은 ID가 공공 GitLab에 있으면
+    #      같은 사람으로 자동 연결하고 GitLab 프로필을 우선 사용한다 (캐시: probe: 접두)
+    cache = load_json(CACHE, {})
+    auto_links: dict[str, str] = {}  # github:<n> → gitlab:<n>
+    for acct in sorted(a for a in all_accounts if a.startswith("github:")):
+        name = acct.split(":", 1)[1]
+        probe_key = f"probe:gitlab:{name}"
+        if probe_key not in cache and not no_fetch:
+            cache[probe_key] = fetch_profile(f"gitlab:{name}") or {"missing": True}
+        probe = cache.get(probe_key) or {"missing": True}
+        if not probe.get("missing"):
+            gl = f"gitlab:{name}"
+            cache.setdefault(gl, {k: v for k, v in probe.items() if k != "missing"})
+            all_accounts.add(gl)
+            auto_links[acct] = gl
+
     # 2) 승인된 연결로 챔피언 단위 병합 (근거 필수)
     links = load_json(LINKS, [])
     merged: dict[str, dict] = {}   # champion id → {accounts, affiliation}
@@ -121,6 +148,13 @@ def main() -> int:
                        "affiliation": entry.get("affiliation")}
         for a in entry["accounts"]:
             acct_to_champion[a] = cid
+    for gh_acct, gl_acct in auto_links.items():
+        champ = acct_to_champion.get(gh_acct, gh_acct)
+        acct_to_champion.setdefault(gh_acct, champ)
+        acct_to_champion[gl_acct] = champ
+        entry = merged.setdefault(champ, {"accounts": [gh_acct], "affiliation": None})
+        if gl_acct not in entry["accounts"]:
+            entry["accounts"].append(gl_acct)
     for a in sorted(all_accounts):
         acct_to_champion.setdefault(a, a)  # 미연결 계정은 단독 챔피언
 
@@ -137,7 +171,6 @@ def main() -> int:
             champ_cases.setdefault(ch, []).append(c)
 
     # 4) 프로필 조회 (캐시 우선)
-    cache = load_json(CACHE, {})
     fetched = 0
     for acct in sorted(all_accounts):
         if acct.startswith("threads:"):
@@ -153,15 +186,27 @@ def main() -> int:
     champions = []
     for cid, clist in champ_cases.items():
         accounts = merged.get(cid, {}).get("accounts") or [cid]
-        # 표시이름: 프로필 name 우선, 없으면 계정명
-        display = None
+        # 표시이름·소속: 공공 GitLab 프로필 우선(실명·기관 정확도가 가장 높음),
+        # 없으면 GitHub 프로필, 그다음 계정명
+        gitlab_name = None
+        github_name = None
         company = None
         for a in accounts:
             p = cache.get(a) or {}
-            display = display or p.get("name")
-            company = company or p.get("company")
-        name = (display or cid.split(":", 1)[-1]).strip()
+            if a.startswith("gitlab:") and p.get("name"):
+                gitlab_name = gitlab_name or p["name"]
+            if a.startswith("github:"):
+                github_name = github_name or p.get("name")
+                company = company or p.get("company")
         aff = merged.get(cid, {}).get("affiliation")
+        name = (gitlab_name or github_name or cid.split(":", 1)[-1]).strip()
+        if gitlab_name:
+            org, person = split_gitlab_name(gitlab_name)
+            if org:
+                name = person
+                if not aff or aff.get("inferred"):
+                    aff = {"value": org, "inferred": False,
+                           "evidence": "공공 GitLab 공개 프로필 표시명"}
         if not aff and company:
             aff = {"value": company.lstrip("@").strip(), "inferred": False,
                    "evidence": "GitHub 공개 프로필 소속란"}

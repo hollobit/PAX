@@ -309,34 +309,6 @@
    }
   },
   {
-   "id": "Kminer2053",
-   "name": "Kminer2053",
-   "accounts": [
-    {
-     "platform": "github",
-     "id": "Kminer2053",
-     "url": "https://github.com/Kminer2053"
-    },
-    {
-     "platform": "threads",
-     "id": "koyou_ax",
-     "url": "https://www.threads.com/@koyou_ax"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "112bf7dc576ed8aa",
-    "7acf5f25369c1401",
-    "9d115930495a1e65",
-    "bfcd190155ae69f7"
-   ],
-   "stats": {
-    "case_count": 4,
-    "top_ax": 2,
-    "stars": 0
-   }
-  },
-  {
    "id": "github:AgentBridge-Lab",
    "name": "LDH",
    "accounts": [
@@ -372,38 +344,6 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 1,
-    "stars": 0
-   }
-  },
-  {
-   "id": "Milkbuttercheese2",
-   "name": "Milkbuttercheese2",
-   "accounts": [
-    {
-     "platform": "github",
-     "id": "Milkbuttercheese2",
-     "url": "https://github.com/Milkbuttercheese2"
-    },
-    {
-     "platform": "gitlab",
-     "id": "rhamasel3",
-     "url": "https://gitlab.aigov.go.kr/rhamasel3"
-    },
-    {
-     "platform": "threads",
-     "id": "milkbuttercheese",
-     "url": "https://www.threads.com/@milkbuttercheese"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "798f4e6bef72fc13",
-    "e160d086c0ce2b1b",
-    "d08bc7e9a69190af"
-   ],
-   "stats": {
-    "case_count": 3,
     "top_ax": 1,
     "stars": 0
    }
@@ -1388,26 +1328,6 @@
    }
   },
   {
-   "id": "gitlab:tyui22",
-   "name": "과학기술정보통신부 김동훈",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "tyui22",
-     "url": "https://gitlab.aigov.go.kr/tyui22"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "aa5e039807da0e11"
-   ],
-   "stats": {
-    "case_count": 1,
-    "top_ax": 1,
-    "stars": 0
-   }
-  },
-  {
    "id": "github:kwakseongjae",
    "name": "곽성재",
    "accounts": [
@@ -1432,68 +1352,81 @@
    }
   },
   {
-   "id": "gitlab:publicpeasant",
-   "name": "광양시 정솔현",
+   "id": "gitlab:AILab_Manager",
+   "name": "김기현",
    "accounts": [
     {
      "platform": "gitlab",
-     "id": "publicpeasant",
-     "url": "https://gitlab.aigov.go.kr/publicpeasant"
+     "id": "AILab_Manager",
+     "url": "https://gitlab.aigov.go.kr/AILab_Manager"
     }
    ],
-   "affiliation": null,
+   "affiliation": {
+    "value": "행정안전부",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
    "cases": [
-    "17ed2d7a88c03119"
+    "a8492663acf67b99",
+    "4ab9bf954cb48eb9"
    ],
    "stats": {
-    "case_count": 1,
-    "top_ax": 2,
+    "case_count": 2,
+    "top_ax": 1,
     "stars": 0
    }
   },
   {
-   "id": "gitlab:knps.taejong",
-   "name": "국립공원공단 윤태종",
+   "id": "gitlab:tyui22",
+   "name": "김동훈",
    "accounts": [
     {
      "platform": "gitlab",
-     "id": "knps.taejong",
-     "url": "https://gitlab.aigov.go.kr/knps.taejong"
+     "id": "tyui22",
+     "url": "https://gitlab.aigov.go.kr/tyui22"
     }
    ],
-   "affiliation": null,
+   "affiliation": {
+    "value": "과학기술정보통신부",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
    "cases": [
-    "c6a58cb9146d0694"
+    "aa5e039807da0e11"
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 2,
+    "top_ax": 1,
     "stars": 0
    }
   },
   {
-   "id": "gitlab:hoho4348",
-   "name": "남양주시 양준호",
+   "id": "gitlab:y2kthr",
+   "name": "김지현",
    "accounts": [
     {
      "platform": "gitlab",
-     "id": "hoho4348",
-     "url": "https://gitlab.aigov.go.kr/hoho4348"
+     "id": "y2kthr",
+     "url": "https://gitlab.aigov.go.kr/y2kthr"
     }
    ],
-   "affiliation": null,
+   "affiliation": {
+    "value": "한국사회보장정보원",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
    "cases": [
-    "b0b96e656d3572e9"
+    "2798c2e0b79ab291"
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 2,
+    "top_ax": 1,
     "stars": 0
    }
   },
   {
    "id": "chrisryugj",
-   "name": "딴짓하는 류주임",
+   "name": "류승인",
    "accounts": [
     {
      "platform": "github",
@@ -1504,12 +1437,17 @@
      "platform": "threads",
      "id": "chris_gomdori",
      "url": "https://www.threads.com/@chris_gomdori"
+    },
+    {
+     "platform": "gitlab",
+     "id": "chrisryugj",
+     "url": "https://gitlab.aigov.go.kr/chrisryugj"
     }
    ],
    "affiliation": {
-    "value": "광진구",
-    "inferred": true,
-    "evidence": "본인 자기소개 게시물(DZgf3veiStV, '광진구청 8급')과 광진구 보도자료의 도구 목록 일치"
+    "value": "서울특별시 광진구",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
     "43dc7f4ab2500260",
@@ -1552,6 +1490,67 @@
    }
   },
   {
+   "id": "Kminer2053",
+   "name": "박봉훈",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "Kminer2053",
+     "url": "https://github.com/Kminer2053"
+    },
+    {
+     "platform": "threads",
+     "id": "koyou_ax",
+     "url": "https://www.threads.com/@koyou_ax"
+    },
+    {
+     "platform": "gitlab",
+     "id": "Kminer2053",
+     "url": "https://gitlab.aigov.go.kr/Kminer2053"
+    }
+   ],
+   "affiliation": {
+    "value": "코레일유통",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "112bf7dc576ed8aa",
+    "7acf5f25369c1401",
+    "9d115930495a1e65",
+    "bfcd190155ae69f7"
+   ],
+   "stats": {
+    "case_count": 4,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:inchangpark",
+   "name": "박인창",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "inchangpark",
+     "url": "https://gitlab.aigov.go.kr/inchangpark"
+    }
+   ],
+   "affiliation": {
+    "value": "행정안전부",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "1de6fb50cc324684"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
    "id": "github:Mrbaeksang",
    "name": "백상현 / Sanghyeon Baek",
    "accounts": [
@@ -1572,28 +1571,6 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
-    "stars": 0
-   }
-  },
-  {
-   "id": "gitlab:pilddong",
-   "name": "병무청 최필선",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "pilddong",
-     "url": "https://gitlab.aigov.go.kr/pilddong"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "8fb7daa690db1660",
-    "50ab356bb2ee3f4d",
-    "85e155bd270cafc9"
-   ],
-   "stats": {
-    "case_count": 3,
-    "top_ax": 2,
     "stars": 0
    }
   },
@@ -1633,18 +1610,22 @@
    }
   },
   {
-   "id": "gitlab:pro9dan",
-   "name": "소방청 한종훈",
+   "id": "gitlab:anms0214",
+   "name": "안민수",
    "accounts": [
     {
      "platform": "gitlab",
-     "id": "pro9dan",
-     "url": "https://gitlab.aigov.go.kr/pro9dan"
+     "id": "anms0214",
+     "url": "https://gitlab.aigov.go.kr/anms0214"
     }
    ],
-   "affiliation": null,
+   "affiliation": {
+    "value": "전북특별자치도 군산시",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
    "cases": [
-    "d6c35b2999da8ca0"
+    "00411127055c4a07"
    ],
    "stats": {
     "case_count": 1,
@@ -1653,18 +1634,154 @@
    }
   },
   {
-   "id": "gitlab:anms0214",
-   "name": "전북특별자치도 군산시 안민수",
+   "id": "gitlab:hoho4348",
+   "name": "양준호",
    "accounts": [
     {
      "platform": "gitlab",
-     "id": "anms0214",
-     "url": "https://gitlab.aigov.go.kr/anms0214"
+     "id": "hoho4348",
+     "url": "https://gitlab.aigov.go.kr/hoho4348"
     }
    ],
-   "affiliation": null,
+   "affiliation": {
+    "value": "남양주시",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
    "cases": [
-    "00411127055c4a07"
+    "b0b96e656d3572e9"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "Milkbuttercheese2",
+   "name": "우성균",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "Milkbuttercheese2",
+     "url": "https://github.com/Milkbuttercheese2"
+    },
+    {
+     "platform": "gitlab",
+     "id": "rhamasel3",
+     "url": "https://gitlab.aigov.go.kr/rhamasel3"
+    },
+    {
+     "platform": "threads",
+     "id": "milkbuttercheese",
+     "url": "https://www.threads.com/@milkbuttercheese"
+    }
+   ],
+   "affiliation": {
+    "value": "조달청",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "798f4e6bef72fc13",
+    "e160d086c0ce2b1b",
+    "d08bc7e9a69190af"
+   ],
+   "stats": {
+    "case_count": 3,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:knps.taejong",
+   "name": "윤태종",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "knps.taejong",
+     "url": "https://gitlab.aigov.go.kr/knps.taejong"
+    }
+   ],
+   "affiliation": {
+    "value": "국립공원공단",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "c6a58cb9146d0694"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:publicpeasant",
+   "name": "정솔현",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "publicpeasant",
+     "url": "https://gitlab.aigov.go.kr/publicpeasant"
+    }
+   ],
+   "affiliation": {
+    "value": "광양시",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "17ed2d7a88c03119"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:jaekyeong",
+   "name": "정재경",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "jaekyeong",
+     "url": "https://gitlab.aigov.go.kr/jaekyeong"
+    }
+   ],
+   "affiliation": {
+    "value": "한국지능정보사회진흥원",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "8c5458af8f13435d"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:wavelen",
+   "name": "정준우",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "wavelen",
+     "url": "https://gitlab.aigov.go.kr/wavelen"
+    }
+   ],
+   "affiliation": {
+    "value": "행정안전부",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "ac09bd2e1c0fbb29"
    ],
    "stats": {
     "case_count": 1,
@@ -1709,99 +1826,48 @@
    }
   },
   {
-   "id": "gitlab:y2kthr",
-   "name": "한국사회보장정보원 김지현",
+   "id": "gitlab:pilddong",
+   "name": "최필선",
    "accounts": [
     {
      "platform": "gitlab",
-     "id": "y2kthr",
-     "url": "https://gitlab.aigov.go.kr/y2kthr"
+     "id": "pilddong",
+     "url": "https://gitlab.aigov.go.kr/pilddong"
     }
    ],
-   "affiliation": null,
+   "affiliation": {
+    "value": "병무청",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
    "cases": [
-    "2798c2e0b79ab291"
+    "8fb7daa690db1660",
+    "50ab356bb2ee3f4d",
+    "85e155bd270cafc9"
    ],
    "stats": {
-    "case_count": 1,
-    "top_ax": 1,
-    "stars": 0
-   }
-  },
-  {
-   "id": "gitlab:jaekyeong",
-   "name": "한국지능정보사회진흥원 정재경",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "jaekyeong",
-     "url": "https://gitlab.aigov.go.kr/jaekyeong"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "8c5458af8f13435d"
-   ],
-   "stats": {
-    "case_count": 1,
+    "case_count": 3,
     "top_ax": 2,
     "stars": 0
    }
   },
   {
-   "id": "gitlab:AILab_Manager",
-   "name": "행정안전부 김기현",
+   "id": "gitlab:pro9dan",
+   "name": "한종훈",
    "accounts": [
     {
      "platform": "gitlab",
-     "id": "AILab_Manager",
-     "url": "https://gitlab.aigov.go.kr/AILab_Manager"
+     "id": "pro9dan",
+     "url": "https://gitlab.aigov.go.kr/pro9dan"
     }
    ],
-   "affiliation": null,
+   "affiliation": {
+    "value": "소방청",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
    "cases": [
-    "a8492663acf67b99",
-    "4ab9bf954cb48eb9"
-   ],
-   "stats": {
-    "case_count": 2,
-    "top_ax": 1,
-    "stars": 0
-   }
-  },
-  {
-   "id": "gitlab:inchangpark",
-   "name": "행정안전부 박인창",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "inchangpark",
-     "url": "https://gitlab.aigov.go.kr/inchangpark"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "1de6fb50cc324684"
-   ],
-   "stats": {
-    "case_count": 1,
-    "top_ax": 2,
-    "stars": 0
-   }
-  },
-  {
-   "id": "gitlab:wavelen",
-   "name": "행정안전부 정준우",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "wavelen",
-     "url": "https://gitlab.aigov.go.kr/wavelen"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "ac09bd2e1c0fbb29"
+    "d6c35b2999da8ca0"
    ],
    "stats": {
     "case_count": 1,
