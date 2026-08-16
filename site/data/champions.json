@@ -1712,6 +1712,7 @@
     "evidence": "GitHub 공개 프로필 소속란"
    },
    "cases": [
+    "aef95509b7611c96",
     "f8c9ae69a673c52a",
     "ceceadd796cc6ea1",
     "807dd39dd613b7da",
@@ -1719,7 +1720,7 @@
     "7868cf416d6fe407"
    ],
    "stats": {
-    "case_count": 5,
+    "case_count": 6,
     "top_ax": 1,
     "stars": 0
    }
