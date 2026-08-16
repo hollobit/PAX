@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-08-08",
- "total": 170,
+ "total": 171,
  "cases": [
   {
    "no": 1,
@@ -5101,6 +5101,36 @@
    "service_url": "https://gitlab.aigov.go.kr/inchangpark/modu-minwon-call",
    "tool_type": "웹 서비스",
    "audience": "G2C 대국민"
+  },
+  {
+   "no": 171,
+   "id": "65e1983235232514",
+   "org": "공직 커뮤니티",
+   "title": "bookforge — 한국어 전자책 PDF 생성 에이전트 스킬",
+   "ax_prev": "AI-Enabled",
+   "ax": "AI-Enabled",
+   "s": "S2",
+   "s_name": "Tool bundle",
+   "c": "C2",
+   "c_name": "연속 처리",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Published tool",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R0 최소",
+   "human": "H2 Human-in-the-loop",
+   "evidence": "E1 코드·도구 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "주제 입력→집필→배치·조판→품질 게이트→PDF 출력의 연속 처리로 전자책이라는 완성 산출물을 AI가 생산 — Enabled. 스타일 팩·QC 게이트 등 품질 통제 장치를 갖춘 스킬로 공개됨.",
+   "feedback": "미확인",
+   "resilience": "미확인",
+   "post_url": "",
+   "service_url": "https://github.com/gongnyang/bookforge",
+   "tool_type": "AI 스킬·에이전트",
+   "audience": "G2E 공직 실무자"
   }
  ]
 }
