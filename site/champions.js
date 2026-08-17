@@ -14,18 +14,23 @@ const COUNTER_URL = 'https://pdkpqrxcqiznsetxcvaq.supabase.co';
 const COUNTER_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBka3BxcnhjcWl6bnNldHhjdmFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxMTA2MTAsImV4cCI6MjEwMTY4NjYxMH0.Rj7cnt9dHcQ7O-CuGeGwAyVxVdWFwQYuiCetOUbEHzI';
 
 const SORTS = ['name', 'score', 'cases'];
+const TIERS = ['green', 'blue', 'black'];
 
-const state = { champions: [], cases: new Map(), bookmarks: new Map(), sort: 'name' };
+const state = { champions: [], cases: new Map(), bookmarks: new Map(), sort: 'name', tier: null };
 
-/* URL ↔ 상태 동기화: ?sort=score|cases (기본 name은 생략) */
+/* URL ↔ 상태 동기화: ?sort=score|cases&tier=green|blue|black (기본값은 생략) */
 function applyUrlToState() {
-  const sort = new URLSearchParams(location.search).get('sort');
+  const p = new URLSearchParams(location.search);
+  const sort = p.get('sort');
   if (SORTS.includes(sort)) state.sort = sort;
+  const tier = p.get('tier');
+  if (TIERS.includes(tier)) state.tier = tier;
 }
 
 function syncUrl() {
   const p = new URLSearchParams();
   if (state.sort !== 'name') p.set('sort', state.sort);
+  if (state.tier) p.set('tier', state.tier);
   const qs = p.toString();
   history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
 }
@@ -77,7 +82,11 @@ function score(champ) {
 }
 
 function sorted() {
-  const list = [...state.champions];
+  let list = [...state.champions];
+  if (state.tier) {
+    list = list.filter((c) => c.certification &&
+      c.certification.tier.toLowerCase() === state.tier);
+  }
   if (state.sort === 'score') {
     list.sort((a, b) => score(b) - score(a) || a.name.localeCompare(b.name, 'ko'));
   } else if (state.sort === 'cases') {
@@ -100,6 +109,17 @@ function syncSortButtons() {
   for (const [id, k] of [['sort-name', 'name'], ['sort-score', 'score'], ['sort-cases', 'cases']]) {
     document.getElementById(id).setAttribute('aria-pressed', String(k === state.sort));
   }
+  for (const tier of TIERS) {
+    document.getElementById(`tier-${tier}`)
+      .setAttribute('aria-pressed', String(state.tier === tier));
+  }
+}
+
+function setTier(tier) {
+  state.tier = state.tier === tier ? null : tier; // 재클릭 시 해제
+  syncSortButtons();
+  syncUrl();
+  render();
 }
 
 function render() {
@@ -257,6 +277,9 @@ function renderUnattributed(list) {
 document.getElementById('sort-name').addEventListener('click', () => setSort('name'));
 document.getElementById('sort-score').addEventListener('click', () => setSort('score'));
 document.getElementById('sort-cases').addEventListener('click', () => setSort('cases'));
+document.getElementById('tier-green').addEventListener('click', () => setTier('green'));
+document.getElementById('tier-blue').addEventListener('click', () => setTier('blue'));
+document.getElementById('tier-black').addEventListener('click', () => setTier('black'));
 applyUrlToState();
 syncSortButtons();
 load();

@@ -1721,3 +1721,23 @@ main {
     background: linear-gradient(160deg, rgba(88, 168, 116, 0.09), transparent 45%), var(--surface, #1c1c1c);
   }
 }
+
+/* 챔피언 인증 티어 필터 버튼 */
+.champ-toolbar__divider {
+  width: 1px;
+  height: 1.2rem;
+  background: var(--rule, #ccc);
+  margin: 0 0.35rem;
+}
+.tier-btn { font-weight: 600; }
+.tier-btn--green { color: #22633a; }
+.tier-btn--blue { color: #1a4b8c; }
+.tier-btn--black { color: #333; }
+.tier-btn--green[aria-pressed="true"] { background: #22633a; color: #fff; border-color: #22633a; }
+.tier-btn--blue[aria-pressed="true"] { background: #1a4b8c; color: #fff; border-color: #1a4b8c; }
+.tier-btn--black[aria-pressed="true"] { background: #222; color: #fff; border-color: #222; }
+@media (prefers-color-scheme: dark) {
+  .tier-btn--green { color: #98d3ad; }
+  .tier-btn--blue { color: #9dc0ee; }
+  .tier-btn--black { color: #ccc; }
+}
