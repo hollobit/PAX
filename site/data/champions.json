@@ -1355,6 +1355,7 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "75b6a86d91aea955",
     "759835514b4b7ca4",
     "d69be456031471a4",
     "ec17e6cd86e7aaa1",
@@ -1365,7 +1366,7 @@
     "2c14f2adaa83a00e"
    ],
    "stats": {
-    "case_count": 8,
+    "case_count": 9,
     "top_ax": 2,
     "stars": 0
    }
@@ -2143,6 +2144,12 @@
    "title": "전북교육청, 문서 취합·변환 도구 공식 배포",
    "org": "전북특별자치도교육청",
    "url": "https://www.jbe.go.kr/board/view.jbe?boardId=BBS_0000649&menuCd=DOM_000000106011002001&dataSid=1141429"
+  },
+  {
+   "id": "8f7e23fec614657c",
+   "title": "한국어 개인정보 탐지 모델 schift-ko-pii 오픈소스 공개",
+   "org": "개발 커뮤니티",
+   "url": "https://huggingface.co/schift-io/schift-ko-pii-v4"
   }
  ]
 }

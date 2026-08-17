@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T00:03:21+09:00",
+  "updated_at": "2026-08-17T09:35:43+09:00",
   "cases": [
     {
       "date": "2026-08-03",
@@ -2866,6 +2866,41 @@
       "source": "kakao",
       "org": "공직 현장(개인 개발)",
       "id": "4c918008fd4eff60"
+    },
+    {
+      "source": "threads",
+      "collected_at": "2026-08-17",
+      "link": "https://www.threads.com/@chobu62/post/DcGxzDrj7LK",
+      "org": "과학기술정보통신부",
+      "date": "2026-08-17",
+      "org_type": "중앙부처",
+      "case_url": "https://github.com/obundh/gonggong-ax-local-series-1-AISupportMessnger",
+      "tags": [
+        "로컬모델",
+        "메신저",
+        "폐쇄망",
+        "업무보조"
+      ],
+      "title": "AI지원담당 — 공공 실무용 로컬 AI 메신저 MVP (공공 AX 로컬 시리즈 1)",
+      "summary": "법령 검색, 공문 수정, PDF 처리, 회의 녹취 등 흩어진 도구를 오가는 대신, 메신저 친구목록에서 AI 담당자를 더블클릭해 평소 메신저 쓰듯 물어보는 공공기관 실무용 로컬 AI 메신저 MVP가 공개됐다. 폐쇄망을 염두에 두고 로컬 모델·로컬 자료·로컬 도구를 우선하는 설계로, 데모 웹과 저장소가 함께 공개됐다.",
+      "id": "75b6a86d91aea955"
+    },
+    {
+      "source": "kakao",
+      "collected_at": "2026-08-17",
+      "link": "https://huggingface.co/schift-io/schift-ko-pii-v4",
+      "org": "개발 커뮤니티",
+      "date": "2026-08-16",
+      "org_type": "기타",
+      "tags": [
+        "개인정보",
+        "PII탐지",
+        "로컬모델",
+        "오픈소스"
+      ],
+      "title": "한국어 개인정보 탐지 모델 schift-ko-pii 오픈소스 공개",
+      "summary": "한국어 문서에서 개인정보(PII)를 탐지하는 경량 모델이 오픈소스로 공개됐다. 100MB 수준이라 일반 업무 PC에서도 로컬로 구동할 수 있어 문서 반출 전 개인정보 점검 등 공공 실무에 쓸 수 있으며, 일부 공무원에게 개별 배포되던 버전을 정식 공개하고 미탐지 사례를 다음 학습에 반영받는 구조다.",
+      "id": "8f7e23fec614657c"
     }
   ]
 }
