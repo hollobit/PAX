@@ -1672,20 +1672,20 @@ main {
 }
 .champ-card--certified {
   background:
-    linear-gradient(160deg, rgba(26, 75, 140, 0.16), rgba(26, 75, 140, 0.05) 55%, rgba(201, 162, 39, 0.07)),
-    var(--surface, #fff);
+    linear-gradient(160deg, rgba(26, 75, 140, 0.20), rgba(26, 75, 140, 0.12) 60%, rgba(201, 162, 39, 0.14)),
+    #eef4fc;
   border-color: #8fb0dd;
 }
 .champ-card--cert-green {
   background:
-    linear-gradient(160deg, rgba(34, 99, 58, 0.16), rgba(34, 99, 58, 0.05) 55%, rgba(201, 162, 39, 0.07)),
-    var(--surface, #fff);
+    linear-gradient(160deg, rgba(34, 99, 58, 0.20), rgba(34, 99, 58, 0.12) 60%, rgba(201, 162, 39, 0.14)),
+    #ecf6ef;
   border-color: #93c7a5;
 }
 .champ-card--cert-black {
   background:
-    linear-gradient(160deg, rgba(30, 30, 30, 0.13), rgba(30, 30, 30, 0.04) 55%, rgba(201, 162, 39, 0.08)),
-    var(--surface, #fff);
+    linear-gradient(160deg, rgba(30, 30, 30, 0.16), rgba(30, 30, 30, 0.09) 60%, rgba(201, 162, 39, 0.15)),
+    #f0f0ee;
   border-color: #9a9a9a;
 }
 .champ-card__cert-mark { color: #c9a227; }
@@ -1720,15 +1720,15 @@ main {
   .champ-card--certified {
     box-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
     border-color: #3f6ba8;
-    background: linear-gradient(160deg, rgba(93, 141, 214, 0.22), rgba(93, 141, 214, 0.07) 55%, rgba(201, 162, 39, 0.10)), var(--surface, #1c1c1c);
+    background: linear-gradient(160deg, rgba(93, 141, 214, 0.28), rgba(93, 141, 214, 0.16) 60%, rgba(201, 162, 39, 0.14)), #16202f;
   }
   .champ-card--cert-green {
     border-color: #3d7d54;
-    background: linear-gradient(160deg, rgba(88, 168, 116, 0.22), rgba(88, 168, 116, 0.07) 55%, rgba(201, 162, 39, 0.10)), var(--surface, #1c1c1c);
+    background: linear-gradient(160deg, rgba(88, 168, 116, 0.28), rgba(88, 168, 116, 0.16) 60%, rgba(201, 162, 39, 0.14)), #14251a;
   }
   .champ-card--cert-black {
     border-color: #777;
-    background: linear-gradient(160deg, rgba(160, 160, 160, 0.18), rgba(160, 160, 160, 0.06) 55%, rgba(201, 162, 39, 0.10)), var(--surface, #1c1c1c);
+    background: linear-gradient(160deg, rgba(160, 160, 160, 0.24), rgba(160, 160, 160, 0.12) 60%, rgba(201, 162, 39, 0.14)), #232323;
   }
 }
 
