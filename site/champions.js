@@ -135,6 +135,20 @@ function card(champ) {
   }
   el.appendChild(head);
 
+  if (champ.certification) {
+    const cert = document.createElement('p');
+    cert.className = 'champ-card__cert';
+    const link = document.createElement('a');
+    link.href = champ.certification.source_url;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.className = `cert-badge cert-badge--${champ.certification.tier.toLowerCase()}`;
+    link.textContent = `✦ AI 챔피언 인증 ${champ.certification.tier}`;
+    link.title = `${champ.certification.source_name} — ${champ.certification.listed_as}`;
+    cert.appendChild(link);
+    el.appendChild(cert);
+  }
+
   const meta = document.createElement('p');
   meta.className = 'champ-card__meta';
   const bm = bookmarkSum(champ);

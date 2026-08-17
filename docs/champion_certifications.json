@@ -1,0 +1,21 @@
+{
+  "source": {
+    "name": "AI 챔피언 기록 저장소 (공공 AI 챔피언 명예의 전당)",
+    "url": "https://public-ax.kr/channels/L2NoYW5uZWxzLzIxNTI3/pages/aichampionhonorship",
+    "checked_at": "2026-08-17"
+  },
+  "certified": [
+    {
+      "champion": "chrisryugj",
+      "tier": "BLUE",
+      "listed_as": "서울특별시 광진구 류승인 — 주무관 / 구 소식지 제작 발행",
+      "evidence": "기록 저장소 명단의 성명·기관이 공공 GitLab 프로필(서울특별시 광진구 류승인)과 일치 (2026-08-17 확인)"
+    },
+    {
+      "champion": "gitlab:pro9dan",
+      "tier": "BLUE",
+      "listed_as": "소방청 한종훈 — 분석관",
+      "evidence": "기록 저장소 명단의 성명·기관이 공공 GitLab 프로필(소방청 한종훈)과 일치 (2026-08-17 확인)"
+    }
+  ]
+}

@@ -1495,6 +1495,12 @@
     "case_count": 12,
     "top_ax": 2,
     "stars": 4468
+   },
+   "certification": {
+    "tier": "BLUE",
+    "listed_as": "서울특별시 광진구 류승인 — 주무관 / 구 소식지 제작 발행",
+    "source_name": "AI 챔피언 기록 저장소 (공공 AI 챔피언 명예의 전당)",
+    "source_url": "https://public-ax.kr/channels/L2NoYW5uZWxzLzIxNTI3/pages/aichampionhonorship"
    }
   },
   {
@@ -1895,6 +1901,12 @@
     "case_count": 1,
     "top_ax": 2,
     "stars": 0
+   },
+   "certification": {
+    "tier": "BLUE",
+    "listed_as": "소방청 한종훈 — 분석관",
+    "source_name": "AI 챔피언 기록 저장소 (공공 AI 챔피언 명예의 전당)",
+    "source_url": "https://public-ax.kr/channels/L2NoYW5uZWxzLzIxNTI3/pages/aichampionhonorship"
    }
   }
  ],

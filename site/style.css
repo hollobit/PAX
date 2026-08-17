@@ -1629,3 +1629,23 @@ main {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+
+/* 챔피언 인증 배지 (AI 챔피언 기록 저장소) */
+.champ-card__cert { margin: 0; }
+.cert-badge {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 0.16rem 0.55rem;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+.cert-badge--blue { background: #eaf1fb; color: #1a4b8c; border-color: #b9cdea; }
+.cert-badge--green { background: #e9f5ec; color: #22633a; border-color: #b8dcc4; }
+.cert-badge--black { background: #eee; color: #222; border-color: #bbb; }
+@media (prefers-color-scheme: dark) {
+  .cert-badge--blue { background: #17273d; color: #9dc0ee; border-color: #2c4b75; }
+  .cert-badge--green { background: #16301f; color: #98d3ad; border-color: #2c5c3d; }
+  .cert-badge--black { background: #2a2a2a; color: #ccc; border-color: #555; }
+}

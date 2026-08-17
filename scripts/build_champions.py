@@ -16,6 +16,7 @@ from pathlib import Path
 CASES = Path("data/cases.json")
 EVALS = Path("site/data/evaluations.json")
 LINKS = Path("docs/champion_links.json")
+CERTS = Path("docs/champion_certifications.json")
 CACHE = Path("data/champion_profiles.json")
 OUT = Path("site/data/champions.json")
 
@@ -231,6 +232,20 @@ def main() -> int:
             "cases": [c["id"] for c in sorted(clist, key=lambda x: x["date"], reverse=True)],
             "stats": {"case_count": len(clist), "top_ax": top_ax, "stars": stars},
         })
+    # 5.5) 외부 인증(AI 챔피언 기록 저장소) 연결 — 성명·기관 일치 확인분만
+    certs_doc = load_json(CERTS, {})
+    cert_by_champ = {c["champion"]: c for c in certs_doc.get("certified", [])}
+    cert_source = certs_doc.get("source", {})
+    for ch in champions:
+        cert = cert_by_champ.get(ch["id"])
+        if cert:
+            ch["certification"] = {
+                "tier": cert["tier"],
+                "listed_as": cert.get("listed_as"),
+                "source_name": cert_source.get("name"),
+                "source_url": cert_source.get("url"),
+            }
+
     champions.sort(key=lambda x: x["name"])
 
     # 참조 무결성 경고
