@@ -1729,25 +1729,25 @@ main {
   background: var(--rule, #ccc);
   margin: 0 0.35rem;
 }
-.tier-btn {
+.champ-toolbar button.tier-btn {
   font-weight: 700;
   color: #fff;
   border-color: transparent;
   opacity: 0.82;
   transition: opacity 0.15s, box-shadow 0.15s, transform 0.15s;
 }
-.tier-btn--green { background: linear-gradient(120deg, #22633a, #3d8a58); }
-.tier-btn--blue { background: linear-gradient(120deg, #1a4b8c, #2f66b0); }
-.tier-btn--black { background: linear-gradient(120deg, #1b1b1b, #4a4a4a); }
-.tier-btn:hover { opacity: 1; }
-.tier-btn[aria-pressed="true"] {
+.champ-toolbar button.tier-btn--green { background: linear-gradient(120deg, #22633a, #3d8a58); }
+.champ-toolbar button.tier-btn--blue { background: linear-gradient(120deg, #1a4b8c, #2f66b0); }
+.champ-toolbar button.tier-btn--black { background: linear-gradient(120deg, #1b1b1b, #4a4a4a); }
+.champ-toolbar button.tier-btn:hover { opacity: 1; }
+.champ-toolbar button.tier-btn[aria-pressed="true"] {
   opacity: 1;
   box-shadow: 0 0 0 2px var(--surface, #fff), 0 0 0 4px #c9a227;
   transform: translateY(-1px);
 }
 @media (prefers-color-scheme: dark) {
-  .tier-btn--black { background: linear-gradient(120deg, #3a3a3a, #6a6a6a); }
-  .tier-btn[aria-pressed="true"] {
+  .champ-toolbar button.tier-btn--black { background: linear-gradient(120deg, #3a3a3a, #6a6a6a); }
+  .champ-toolbar button.tier-btn[aria-pressed="true"] {
     box-shadow: 0 0 0 2px var(--surface, #1c1c1c), 0 0 0 4px #c9a227;
   }
 }
