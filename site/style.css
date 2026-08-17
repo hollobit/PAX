@@ -1649,3 +1649,75 @@ main {
   .cert-badge--green { background: #16301f; color: #98d3ad; border-color: #2c5c3d; }
   .cert-badge--black { background: #2a2a2a; color: #ccc; border-color: #555; }
 }
+
+/* 인증 챔피언 카드 강조 — 티어 색 액센트와 은은한 광택 */
+.champ-card--certified {
+  position: relative;
+  overflow: hidden;
+  border-width: 1.5px;
+  box-shadow: 0 2px 12px rgba(26, 75, 140, 0.10);
+}
+.champ-card--certified::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1a4b8c, #5b8ed6 45%, #c9a227 100%);
+}
+.champ-card--cert-green::before {
+  background: linear-gradient(90deg, #22633a, #58a874 45%, #c9a227 100%);
+}
+.champ-card--cert-black::before {
+  background: linear-gradient(90deg, #222, #666 45%, #c9a227 100%);
+}
+.champ-card--certified {
+  background:
+    linear-gradient(160deg, rgba(26, 75, 140, 0.045), transparent 45%),
+    var(--surface, #fff);
+  border-color: #b9cdea;
+}
+.champ-card--cert-green {
+  background:
+    linear-gradient(160deg, rgba(34, 99, 58, 0.05), transparent 45%),
+    var(--surface, #fff);
+  border-color: #b8dcc4;
+}
+.champ-card__cert-mark { color: #c9a227; }
+.champ-card--certified .cert-badge {
+  background: linear-gradient(120deg, #1a4b8c, #2f66b0);
+  color: #fff;
+  border-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.champ-card--cert-green .cert-badge {
+  background: linear-gradient(120deg, #22633a, #3d8a58);
+}
+.champ-card--certified .cert-badge::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  animation: cert-shine 3.2s ease-in-out infinite;
+}
+@keyframes cert-shine {
+  0%, 55% { left: -60%; }
+  85%, 100% { left: 120%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .champ-card--certified .cert-badge::after { animation: none; }
+}
+@media (prefers-color-scheme: dark) {
+  .champ-card--certified {
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+    border-color: #2c4b75;
+    background: linear-gradient(160deg, rgba(93, 141, 214, 0.09), transparent 45%), var(--surface, #1c1c1c);
+  }
+  .champ-card--cert-green {
+    border-color: #2c5c3d;
+    background: linear-gradient(160deg, rgba(88, 168, 116, 0.09), transparent 45%), var(--surface, #1c1c1c);
+  }
+}

@@ -113,12 +113,23 @@ function render() {
 function card(champ) {
   const el = document.createElement('article');
   el.className = 'champ-card';
+  if (champ.certification) {
+    el.classList.add('champ-card--certified',
+      `champ-card--cert-${champ.certification.tier.toLowerCase()}`);
+  }
 
   const head = document.createElement('div');
   head.className = 'champ-card__head';
   const name = document.createElement('h2');
   name.className = 'champ-card__name';
-  name.textContent = champ.name;
+  if (champ.certification) {
+    const star = document.createElement('span');
+    star.className = 'champ-card__cert-mark';
+    star.textContent = '✦ ';
+    star.setAttribute('aria-hidden', 'true');
+    name.appendChild(star);
+  }
+  name.appendChild(document.createTextNode(champ.name));
   head.appendChild(name);
   if (champ.affiliation && champ.affiliation.value) {
     const aff = document.createElement('span');
