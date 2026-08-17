@@ -2938,5 +2938,33 @@
   "resilience": "미확인",
   "post_url": "",
   "service_url": "https://huggingface.co/schift-io/schift-ko-pii-v4"
+ },
+ {
+  "no": 177,
+  "id": "4e577ad2f13f9ea4",
+  "org": "공직 현장(개인 개발)",
+  "title": "메가 프로젝트 절차 지도 — 광주 반도체 클러스터 법정 절차 1,281개",
+  "ax_prev": "AI-Ready",
+  "ax": "AI-Ready",
+  "s": "S2",
+  "s_name": "Tool bundle",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Published tool",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R0 최소",
+  "human": "해당 없음",
+  "evidence": "E1 화면·서비스 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "제도 구조도 577개를 실제 메가 프로젝트의 절차 1,281개로 조합해 사업 전체의 법정 절차를 가시화 — 흩어진 제도 지식의 프로젝트 단위 구조화라는 Ready 준비자산. 오류 제보 경로를 공개해 개선 루프의 단초를 마련.",
+  "feedback": "부분 확인—사이트 '요청하기'로 오류 제보를 받는 보완 구조 공표",
+  "resilience": "해당 없음—정적 참고자료 사이트",
+  "post_url": "",
+  "service_url": "https://hosungseo.github.io/korea100/mega-projects/gwangju-semiconductor-cluster/"
  }
 ]
