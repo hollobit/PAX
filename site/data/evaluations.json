@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-08-08",
- "total": 176,
+ "total": 177,
  "cases": [
   {
    "no": 1,
@@ -5281,6 +5281,36 @@
    "service_url": "https://hosungseo.github.io/korea100/mega-projects/gwangju-semiconductor-cluster/",
    "tool_type": "웹 서비스",
    "audience": "G2C 공개"
+  },
+  {
+   "no": 178,
+   "id": "cb0abc29707cc710",
+   "org": "공직 현장(개인 개발)",
+   "title": "수정 가능한 PPTX·피그마 슬라이드 스킬 — 공공 카드뉴스 스타일",
+   "ax_prev": "AI-Enabled",
+   "ax": "AI-Enabled",
+   "s": "S2",
+   "s_name": "Tool bundle",
+   "c": "C1",
+   "c_name": "결과 제공",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Published tool",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R0 최소",
+   "human": "H2 Human-in-the-loop",
+   "evidence": "E1 코드·도구 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "기관 카드뉴스 스타일을 학습해 수정 가능한 슬라이드라는 검증 가능한 산출물을 AI가 생성하고 사람이 다듬는 구조 — Enabled. 3개 출력 형식과 서체·텍스트핏 등 실무 품질 장치를 갖춘 스킬로 공개됨.",
+   "feedback": "미확인",
+   "resilience": "미확인",
+   "post_url": "",
+   "service_url": "https://github.com/onpremisehuman/editable-pptx-figma-studio",
+   "tool_type": "AI 스킬·에이전트",
+   "audience": "G2E 공직 실무자"
   }
  ]
 }

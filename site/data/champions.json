@@ -1,5 +1,5 @@
 {
- "total": 83,
+ "total": 84,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -938,6 +938,31 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:onpremisehuman",
+   "name": "onpremisehuman",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "onpremisehuman",
+     "url": "https://github.com/onpremisehuman"
+    },
+    {
+     "platform": "gitlab",
+     "id": "onpremisehuman",
+     "url": "https://gitlab.aigov.go.kr/onpremisehuman"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "cb0abc29707cc710"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },
