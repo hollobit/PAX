@@ -1,5 +1,5 @@
 {
- "total": 84,
+ "total": 85,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -524,6 +524,26 @@
    "stats": {
     "case_count": 2,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "threads:civil__ax",
+   "name": "civil__ax",
+   "accounts": [
+    {
+     "platform": "threads",
+     "id": "civil__ax",
+     "url": "https://www.threads.com/@civil__ax"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "ccee126dc9e23cf6"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },
@@ -1654,6 +1674,7 @@
     "evidence": "GitHub 공개 프로필 소속란"
    },
    "cases": [
+    "c193c524e0a7be1f",
     "4e577ad2f13f9ea4",
     "3d07b6da99f5e1ed",
     "6c5b15f4c8414f29",
@@ -1664,7 +1685,7 @@
     "58420e002644542c"
    ],
    "stats": {
-    "case_count": 8,
+    "case_count": 9,
     "top_ax": 2,
     "stars": 498
    }
