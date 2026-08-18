@@ -347,6 +347,54 @@ Native 관문(핵심가치 결합+학습구조 C5+복원력)을 현재 데이터
 
 **전략적 유의점 두 가지**: 첫째, 추진단이 만들어지면 "공식 표준·공식 백로그"가 생긴다 — PAX는 표준의 경쟁자가 아니라 **표준의 현장 검증 데이터**로 자리매김해야 한다(공공 AX 포털과의 계층 분리와 같은 논리). 둘째, GDS 벤치마킹의 알려진 함정 — 초기 정치적 지지가 빠지면 조직이 형해화되는 것 — 을 감안하면, PAX의 독립 관측은 추진단의 성과를 외부에서 입증해주는 우군이 될 수 있다. 분기 공공 AX 지수에 "국민 서비스 완결성" 항목을 포함시키는 것이 그 연결 고리다.
 
+## 10-2. 해외 비교 — 우리가 놓치고 있는 것
+
+주요국의 2025~2026 공공AX 전략을 한국 상황(177건 관측, 실무자 자발 개발 54%, AI-First 0.6%)과 대조하면, 각국이 한국에 없는 장치를 하나씩 보여준다.
+
+| 국가 | 핵심 장치 | 한국에 없는 것 |
+|---|---|---|
+| **미국** | AI Action Plan + [USAi](https://www.gsa.gov/about-gsa/newsroom/news-releases/gsa-launches-usai-to-advance-white-house-americas-ai-action-plan-08142025)(구매 전 무상 시험 플랫폼) + OMB 의무 인벤토리 — 2025년 56개 기관 **3,611건**(전년 대비 105%↑)을 [GitHub에 전량 기계판독 공개](https://github.com/ombegov/2025-Federal-Agency-AI-Use-Case-Inventory) | **법적 근거 있는 사례 등록 의무**와 원천 데이터 공개. 177건은 자발적 관측치라 모수가 불확실하다 |
+| **영국** | GDS 산하 [i.AI](https://ai.gov.uk/)가 공무원용 도구군 Humphrey를 인하우스 제작, [17개 저장소 오픈소스](https://github.com/i-dot-ai), 도구별 [알고리즘 투명성 기록](https://www.gov.uk/algorithmic-transparency-records/dbt-redbox) 공시, Redbox **종료 사유까지 공개** | **표준 서식의 공식 기록 제도**와 **실패·종료 사례의 정면 기록**. 성공만 담는 아카이브는 평가 신뢰를 스스로 깎는다 |
+| **싱가포르** | 전 공무원 15만 명에게 Pair 기본 지급(80% 사용), 노코드 [AIBots](https://www.tech.gov.sg/products-and-services/for-government-agencies/productivity-and-marketing/aibots/) 위에서 115개 기관 1.2만 개 봇 자동 축적, 2026년 [AI 에이전트 레지스트리](https://www.thestar.com.my/aseanplus/aseanplus-news/2026/06/02/singapore-to-create-a-registry-of-ai-agents-for-150000-public-officers-amid-ai-push) 구축 | **자발성을 담을 그릇.** 중앙 플랫폼 위의 창작물은 자동으로 관측·재사용되지만, 한국은 관측 비용을 아카이브가 전부 부담한다 |
+| **에스토니아** | X-Road 데이터 계층 위에 [Bürokratt](https://www.ria.ee/en/state-information-system/personal-services/burokratt) 에이전트 네트워크, 2026년 세계 최초 [AI 에이전트 국가 신원(AI ID)](https://www.globalgovernmentforum.com/estonia-set-to-be-first-country-to-create-digital-identities-for-ai-agents/) — 조회·편집·결제한도를 검증 가능한 경계로 부여 | **에이전트 권한의 명시적 경계와 감사 추적.** 사고 후 급조하기 가장 어려운 인프라이며, MCP 확산이 빠른 한국이 가장 먼저 필요하다 |
+| **UAE** | [2년 내 정부 업무 50% AI 전환](https://www.thenationalnews.com/news/uae/2026/04/23/uae-to-launch-new-ai-powered-government-model-within-two-years/)을 숫자로 명시, 전 연방기관 CAIO 지정 | **AI-First를 명령하는 상위 지시.** 한국의 AI-First 0.6%는 역량이 아니라 "재설계하라"는 지시와 예산의 부재일 가능성이 크다 |
+| **덴마크** | 중앙-지방 공동 [AI 디지털 태스크포스](https://en.digst.dk/digital-governance/new-technologies/danish-strategies-for-artificial-intelligence/) — 검증된 솔루션의 **확산 자체를 별도 기능**으로 제도화 | **이식(transplant) 기능.** 177건 중 다른 기관으로 복제된 건수가 사실상의 성과 지표여야 한다 |
+
+PAX에의 시사: ① 사례 카드에 영국 알고리즘 투명성 기록 서식을 벤치마크한 고정 필드(목적·데이터·모델·위험·성과·비용)를 도입하고, ② 실패·중단·종료 사례를 정식 등재 유형으로 신설하며(2부 진단 "성공 편향"의 해법), ③ 기계판독 공개(0-5, 1-9)를 미국 인벤토리 수준의 원천 데이터 개방으로 확장하고, ④ 에이전트 권한 관측(P축)을 에스토니아 AI ID·싱가포르 레지스트리 논의와 연결해 §3-1의 "여섯 번째 독자" 분석과 함께 정책 제안으로 승격한다. §10-1의 추진단 연계에서 영국 GDS를 참조할 때, i.AI의 인하우스 제품팀·오픈소스 기본값·자기 종료 기록이 벤치마크의 실질임을 명시한다.
+
+## 10-3. 중국 비교 — 속도의 원천과 경계선
+
+중국은 DeepSeek R1 등장 후 **수 주 만에 70개 이상 지방정부 배포**([Jamestown](https://jamestown.org/program/prc-deploys-deepseek-across-local-governments/)), 선전 룽강구는 온프레미스 로컬라이즈로 공무원 2만 명에게 제공, 항저우는 City Brain 3.0에 통합, 상하이는 [「AI+정무서비스」 개혁](https://english.shanghai.gov.cn/en-Bulletin/20250728/22ec041b0c504b92b23598a72bfebb68.html)으로 一网通办에 자연어 민원·자동 사전심사를 도입했다(AI 상담원 해결률 80% 목표).
+
+이 속도의 원천은 모델이 아니라 **데이터 계층**이다: 전국 일체화 정무 빅데이터 체계가 [300만 개 이상의 데이터 라이브러리를 통합 목록화](https://english.www.gov.cn/policies/latestreleases/202210/28/content_WS635b9af9c6d0a757729e1e00.html)하고, 정무데이터 공유 조례가 데이터를 **무조건 공유/조건부 공유/공유 불가** 3단계로 사전 분류해 개별 사업마다의 협의 비용을 구조적으로 제거했다. 여기에 온프레미스 배포 가능한 오픈웨이트 자국 모델이 결합한다.
+
+**배울 것**: ⓐ 데이터 공유 가능성의 사전 분류 — 한국 사례가 소규모 자동화에 머무는 큰 이유가 데이터 접근 협의 비용이다(개인정보 영향평가와 결합해 도입). ⓑ 폐쇄망 배포 가능한 국산 오픈웨이트 모델 옵션 — 독파모 연계(§9)의 근거를 강화한다. **경계할 것**: 중국의 속도는 개인정보 자기결정권과 사법적 견제를 유보한 대가이며, 중국 내부에서도 [얼굴인식 규제(2025.6)](https://www.loc.gov/item/global-legal-monitor/2025-06-16/china-facial-recognition-measures-take-effect/)로 반작용이 시작됐다 — 감시형 확장은 결국 되돌리는 비용을 치른다. **PAX 반영**: 4축 성숙도에 "성숙도가 높아도 등재하지 않는 유형"(감시형 유스케이스 사전 배제 목록)을 명문화해, 성숙도 점수가 감시 확장을 정당화하는 도구로 쓰이지 않게 한다 — §2-1 헌법적 가치(존엄·적법절차)의 운영 규칙화다.
+
+## 10-4. 산업·수출 기여 — 아카이브를 수출 카탈로그로
+
+한국은 [OECD 디지털정부지수 2025 종합 1위(0.95)](https://www.oecd.org/en/publications/government-at-a-glance-2025_0efd0bcd-en/full-report/digital-government-index_1edec44e.html)라는 평판 자산을 갖고 있으나, 전자정부 수출의 공개 확정치는 [2021년 5억 달러](https://www.etnews.com/20230125000202) 이후 특정되지 않는다(최신치는 [행안부 전자정부 수출실적조사 API](https://www.data.go.kr/data/15107559/openapi.do) 직접 조회로 확정 필요 — 미확인 수치는 인용하지 않는다).
+
+정부 조달 수출에서 작동하는 것은 기능 명세가 아니라 **동일 조건에서 이미 작동했다는 증거**다. 세계은행 [GTMI 2025](https://www.worldbank.org/en/programs/govtech/gtmi-2025-update)에서 성숙-저성숙 격차가 벌어질수록 저성숙 국가는 검증된 사례의 통째 이식을 원한다. 인도는 이 수요를 "코드+표준+운영 노하우" 패키지로 포착해 [DPI MoU 24개국](https://www.ibef.org/news/india-has-signed-mou-agreements-with-23-countries-for-cooperation-on-digital-public-infrastructure)을 체결하고 [디지털 공공재(DPG) 등록](https://www.digitalpublicgoods.net/collections/coll-dpi)으로 무상 이전 자산화한 뒤 컨설팅·구축·운영에서 수익화했다. 한국은 KOICA 채널은 있으나 **이전 대상 자산이 표준화된 형태로 존재하지 않는다** — 여기가 PAX의 자리다.
+
+**실행 항목 (우선순위 순)**:
+
+| 순위 | 항목 | 내용 | 지표 |
+|---|---|---|---|
+| 1 (즉시) | 수출 적합성 태그 | 각 사례에 ⓐ한국 특유 법제 의존도 ⓑ데이터 요구 수준 ⓒ재현 난이도 ⓓ오픈소스화 가능성 플래그 → 이식 가능 후보군 즉시 식별 | 후보 사례 수 |
+| 2 (3~6개월) | 영문 표준 사례 카드 | 영국 투명성 기록 서식 벤치마크, 목적·데이터·모델·위험·성과·비용 고정 필드 — GTMI·OECD 제출 자료로 재사용 | 발행·인용 수 |
+| 3 (6~12개월) | DPG 등록 레퍼런스 3건 | 코드·설치 가이드·스키마 공개 후 DPG Alliance 등록, KOICA 이전 자산으로 지정 — 헌법 전문 "인류공영"(§2-1)의 실행형 | DPG 등재·ODA 연계 수 |
+| 4 (12개월+) | 기계판독 데이터셋 + 산업 접점 | 미국 OMB 방식의 CSV/JSON API 개방 — GovTech 기업의 수요 역탐색과 조달 파이프라인 연결 | API 호출·조달 공고 수 |
+
+1·2번은 기존 데이터에 메타데이터만 추가하므로 비용이 거의 없으면서 3·4번의 전제가 된다. 핵심은 아카이브를 "기록물"에서 **"수출 카탈로그"로 재정의**하는 것이다.
+
+## 10-5. 종합 — 한국 공공AX가 놓치고 있는 다섯 가지
+
+1. **의무화된 인벤토리와 기계판독 공개** — 아카이브의 법적 지위를 올리는 것이 다른 모든 개선의 선행 조건이다.
+2. **자발성을 담을 그릇** — 노코드 공통 플랫폼과 외부 공개 기본값 저장소 정책이 관측 비용을 근본적으로 낮춘다.
+3. **AI 에이전트의 권한·신원·감사 체계** — 한국의 강점(MCP 확산)이 그대로 최대 리스크다.
+4. **AI-First를 명령하는 상위 지시와 데이터 계층** — 컴퓨트(범정부 공통기반)는 풀렸지만 데이터 접근과 업무 재설계 권한은 잠겨 있다.
+5. **확산·이식 기능과 실패 기록** — 수집만 하고 이식하지 않으면 통계로만 남고, 실패를 담지 않으면 평가 신뢰가 깎인다.
+
 ---
 
 # 4부 — 통합 로드맵
