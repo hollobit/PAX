@@ -19,7 +19,12 @@
    "case_url": "https://www.ailearn4all.kr/",
    "popularity": 118,
    "case_class": "기관 공식",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-07-14",
@@ -38,7 +43,11 @@
    "id": "02656bf9d2589964",
    "case_url": "https://www.etnews.com/20260710000114",
    "case_class": "기관 공식",
-   "region": "서울"
+   "region": "서울",
+   "task_category": "문서·기안",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-04-26",
@@ -55,7 +64,11 @@
    ],
    "id": "59ff218c60039cc9",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "회계·정산",
+   "runtime_env": "설치 필요",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-08-03",
@@ -76,7 +89,11 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "공통·범용",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "date": "2026-07-26",
@@ -97,7 +114,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "설치 필요",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "date": "2026-07-26",
@@ -118,7 +140,11 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "인사·복무",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "date": "2026-05-17",
@@ -135,7 +161,10 @@
    ],
    "id": "075fd5baf003c3b0",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-06-22",
@@ -157,7 +186,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "date": "2026-04-01",
@@ -175,7 +209,11 @@
    "id": "d40cc4a9cf6e29b6",
    "popularity": 754,
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-07-11",
@@ -197,7 +235,11 @@
    "license_source": "github-pages",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "기획·정책",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "tags": [
@@ -215,7 +257,8 @@
    "date": "2026-08-06",
    "id": "6a2d1fa6e385ef2b",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무"
   },
   {
    "tags": [
@@ -232,7 +275,10 @@
    "date": "2026-08-06",
    "id": "422f3e4e0e9a23eb",
    "case_class": "기관 공식",
-   "region": "서울"
+   "region": "서울",
+   "task_category": "회계·정산",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "tags": [
@@ -250,7 +296,11 @@
    "date": "2026-08-06",
    "id": "bf04cec910b4755d",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-08-06",
@@ -267,7 +317,10 @@
    "source": "kakao",
    "id": "d487843b67c6063e",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "기획·정책",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-08-06",
@@ -287,7 +340,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "정체"
   },
   {
    "date": "2026-08-06",
@@ -307,7 +365,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "공통·범용",
+   "runtime_env": "설치 필요",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "date": "2026-08-06",
@@ -325,7 +388,11 @@
    "id": "38dc6d3806bf2e8f",
    "popularity": 210,
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "kakao",
@@ -342,7 +409,10 @@
    "collected_at": "2026-08-07",
    "id": "651bfec5c1ede6d1",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "kakao",
@@ -359,7 +429,11 @@
    "collected_at": "2026-08-07",
    "id": "a021bc5b58ed72cd",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "kakao",
@@ -380,7 +454,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -397,7 +476,11 @@
    "collected_at": "2026-08-07",
    "id": "e93a0e5c75f51a7b",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "설치 필요",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "kakao",
@@ -418,7 +501,11 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -435,7 +522,11 @@
    "collected_at": "2026-08-07",
    "id": "cbe008b504b9dd18",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "공통·범용",
+   "runtime_env": "AI 도구 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "kakao",
@@ -452,7 +543,10 @@
    "collected_at": "2026-08-07",
    "id": "a93c7283cafb3b9b",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "회계·정산",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "kakao",
@@ -473,7 +567,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "민원",
+   "runtime_env": "AI 도구 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -494,7 +593,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -514,7 +618,11 @@
    "license_source": "github-pages",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "공통·범용",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "kakao",
@@ -535,7 +643,11 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -555,7 +667,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "공통·범용",
+   "runtime_env": "설치 필요",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -576,7 +693,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -594,7 +716,11 @@
    "id": "0d668fa0c977b439",
    "popularity": 216,
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "인사·복무",
+   "runtime_env": "설치 필요",
+   "link_ok": false,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "kakao",
@@ -614,7 +740,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "인사·복무",
+   "runtime_env": "AI 도구 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -631,7 +762,11 @@
    "collected_at": "2026-08-07",
    "id": "856b4951cb5274d1",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "회계·정산",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "kakao",
@@ -648,7 +783,11 @@
    "collected_at": "2026-08-07",
    "id": "e0be95cc501650ae",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "kakao",
@@ -666,7 +805,11 @@
    "collected_at": "2026-08-07",
    "id": "918bddd1b60d8a74",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "runtime_env": "설치 필요",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "kakao",
@@ -687,7 +830,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "계약·조달",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -704,7 +852,11 @@
    "collected_at": "2026-08-07",
    "id": "5835971d479dbf81",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "link": "https://choshg.com",
@@ -721,7 +873,11 @@
    "source": "kakao",
    "id": "c78372217646db56",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "공통·범용",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "link": "https://www.threads.com/@gongpenclaw/post/DY7f9jPAend",
@@ -741,7 +897,12 @@
    "id": "58420e002644542c",
    "popularity": 139,
    "case_class": "기관 공식",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "AI 도구 설정",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "link": "https://www.threads.com/@chris_gomdori/post/DaS4hW2CW6n",
@@ -760,7 +921,11 @@
    "id": "9d56d423296a3238",
    "popularity": 226,
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "link": "https://www.threads.com/@publicai_79/post/DY4s0B9jLVm",
@@ -778,7 +943,12 @@
    "title": "내부망 문서용 로컬 RAG 구축기",
    "id": "a25534e407326d76",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "서버 구축",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "link": "https://www.threads.com/@koyou_ax/post/DacnKc9D_5i",
@@ -800,7 +970,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "설치 필요",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://www.threads.com/@chris_gomdori/post/DbW8LhniROp",
@@ -820,7 +995,11 @@
    "id": "56cdd4fc23166800",
    "popularity": 107,
    "case_class": "기관 공식",
-   "region": "경기"
+   "region": "경기",
+   "task_category": "감사·법무",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "link": "https://www.threads.com/@koyou_ax/post/DaLJpOljpV6",
@@ -838,7 +1017,12 @@
    "title": "내부망 LLM 기반 사내 AI 체험 플랫폼 AX플레이그라운드 구축",
    "id": "bfcd190155ae69f7",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "서버 구축",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "link": "https://www.threads.com/@chris_gomdori/post/DbaDIR3DZWE",
@@ -861,7 +1045,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "network_req": "로컬 완결",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://www.threads.com/@gongpenclaw/post/DbiLzQ5gfjC",
@@ -880,7 +1069,11 @@
    "title": "공공데이터포털에 AI 대화형 검색 도입",
    "id": "fbde74aa0071ea45",
    "case_class": "기관 공식",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "org_type": "커뮤니티",
@@ -901,7 +1094,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "AI 도구 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "org_type": "커뮤니티",
@@ -919,7 +1117,10 @@
    "title": "파주 실시간 인파 지도 — 지금 파주",
    "id": "0826e58f026fe560",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "org_type": "공직 개인",
@@ -937,7 +1138,10 @@
    "title": "서울 인파레이더 — 명소 121곳 실시간 인구밀집 상황판",
    "id": "62ed887a548dfb25",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "시설·안전",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "org_type": "커뮤니티",
@@ -955,7 +1159,10 @@
    "title": "북적북적 제주 — 명소 66곳 실시간 인파 지도",
    "id": "5b37a71c441b663b",
    "case_class": "커뮤니티",
-   "region": "부산"
+   "region": "부산",
+   "task_category": "데이터·통계",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "org_type": "커뮤니티",
@@ -973,7 +1180,10 @@
    "summary": "제주 실시간 인파 지도에서 확장된 북적북적 시리즈의 인천공항 편이 공유됐다. 공항 구역별 실시간 혼잡 상황을 지도로 보여줘 출국·마중 동선 계획에 활용할 수 있다.",
    "id": "ef0fc393d25e4e97",
    "case_class": "커뮤니티",
-   "region": "제주"
+   "region": "제주",
+   "task_category": "시설·안전",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "org_type": "커뮤니티",
@@ -994,7 +1204,11 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "org_type": "공직 개인",
@@ -1015,7 +1229,11 @@
    "license_source": "github-pages",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "기획·정책",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "org_type": "공직 개인",
@@ -1036,7 +1254,11 @@
    "license_source": "github-pages",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "회계·정산",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "org_type": "공직 개인",
@@ -1057,7 +1279,11 @@
    "license_source": "github-pages",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "org_type": "공직 개인",
@@ -1078,7 +1304,11 @@
    "license_source": "github-pages",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "summary": "국가 제도 구조도 프로젝트(제도100)를 온톨로지 형태로 탐색할 수 있게 만든 뷰어가 공유됐다. 제도 간 관계를 구조화된 지식 체계로 살펴볼 수 있어 제도 데이터의 기계 가독성을 높이는 시도다.",
@@ -1096,7 +1326,10 @@
    "title": "대한민국 제도 온톨로지 뷰어",
    "id": "c7ccd2903fbe27a5",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "기획·정책",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "summary": "PDF 문서를 번역하고 사람이 검토하는 과정을 한 화면에서 처리하는 로컬 작업장 도구가 공개됐다. 문서를 외부로 보내지 않는 공공 업무용 로컬 도구 시리즈의 여섯 번째 결과물이다.",
@@ -1117,7 +1350,11 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "summary": "로컬 Ollama의 Gemma 등 모델로 법령 MCP, 문서 파싱 MCP 같은 여러 MCP 서버를 동시에 돌리는 호스트가 공개됐다. 클라우드 API 없이 내부망과 오프라인 환경에서 AI 도구 호출을 쓸 수 있게 해준다.",
@@ -1138,7 +1375,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "summary": "표기가 제각각인 주소들을 도로명주소 표준으로 일괄 정리해 주는 도구가 공개됐다. 주소 데이터 정비에 반복 투입되는 행정 실무 시간을 줄여주는 자동화 사례다.",
@@ -1159,7 +1402,11 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "시설·안전",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "summary": "선택한 Windows 폴더의 새 저장본을 다른 물리 디스크에 자동 보관해 파일 유실을 막는 로컬 트레이 앱이 공개됐다. 문서 사고가 잦은 공공 업무 환경을 위한 로컬 도구 시리즈의 일곱 번째 결과물이다.",
@@ -1179,7 +1426,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "설치 필요",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "org_type": "중앙행정기관",
@@ -1197,7 +1449,11 @@
    "collected_at": "2026-08-07",
    "id": "849b973bf966f4ff",
    "case_class": "기관 공식",
-   "region": null
+   "region": null,
+   "task_category": "공통·범용",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "link": "https://openapi.hrdkorea.or.kr/mcp.html",
@@ -1215,7 +1471,11 @@
    "org": "한국산업인력공단",
    "id": "93482d8cbe86c9d9",
    "case_class": "기관 공식",
-   "region": "울산"
+   "region": "울산",
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "threads",
@@ -1236,7 +1496,11 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "threads",
@@ -1259,7 +1523,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "설치 필요",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "threads",
@@ -1281,7 +1551,11 @@
    "license_source": "github-pages",
    "license_checked": "2026-08-19",
    "case_class": "기관 공식",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "kakao",
@@ -1298,7 +1572,10 @@
    "collected_at": "2026-08-07",
    "id": "586bab7a0b40cb95",
    "case_class": "참고",
-   "region": null
+   "region": null,
+   "task_category": "기획·정책",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "kakao",
@@ -1320,7 +1597,11 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "기관 공식",
-   "region": null
+   "region": null,
+   "task_category": "시설·안전",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -1338,7 +1619,11 @@
    "collected_at": "2026-08-07",
    "id": "235db3db0bff39d2",
    "case_class": "참고",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "kakao",
@@ -1356,7 +1641,11 @@
    "collected_at": "2026-08-07",
    "id": "0c994fa292d1d15d",
    "case_class": "참고",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "tags": [
@@ -1377,7 +1666,13 @@
    "id": "e160d086c0ce2b1b",
    "case_url": "https://github.com/Milkbuttercheese2/Which-article-was-it-public",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "설치 필요",
+   "network_req": "폐쇄망 가능",
+   "cost_req": "무료",
+   "link_ok": false,
+   "health_checked": "2026-08-20"
   },
   {
    "tags": [
@@ -1400,7 +1695,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "title": "NIA, 발간 자료의 마크다운 병행 등록 의무화",
@@ -1419,7 +1720,9 @@
    "org_type": "공공기관",
    "id": "17329009668eb397",
    "case_class": "기관 공식",
-   "region": "대구"
+   "region": "대구",
+   "task_category": "문서·기안",
+   "network_req": "폐쇄망 가능"
   },
   {
    "title": "KIPRIS 특허 검색 MCP 공개",
@@ -1442,7 +1745,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "title": "공공데이터포털 API를 MCP 서버 모음으로 공개",
@@ -1466,7 +1775,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "방치"
   },
   {
    "collected_at": "2026-08-08",
@@ -1485,7 +1800,10 @@
    ],
    "id": "c46225d9c7efdb93",
    "case_class": "기관 공식",
-   "region": "울산"
+   "region": "울산",
+   "task_category": "문서·기안",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "summary": "매년 수료증을 취합하는 반복 업무를 줄이기 위한 공무원 필수교육 이수 관리 시스템이 정부 AI 개발 플랫폼 깃랩에 공개됐다. 교육 일정 캘린더, 수료증 AI 자동검수, 일괄 다운로드 기능으로 수료증 취합·확인 업무를 크게 줄여준다.",
@@ -1507,7 +1825,11 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "인사·복무",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "org_type": "공직 개인",
@@ -1530,7 +1852,11 @@
    "license_source": "github-pages",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "collected_at": "2026-08-11",
@@ -1551,7 +1877,12 @@
    "link": "https://www.threads.com/@hakdol.senvip/post/DbrwUd7IPAN",
    "id": "54c2561cf3e1a268",
    "case_class": "기관 공식",
-   "region": null
+   "region": null,
+   "task_category": "인사·복무",
+   "runtime_env": "서버 구축",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-08-11",
@@ -1570,7 +1901,10 @@
    "summary": "농식품 분야 특허를 AI가 자동으로 분석해주는 기술분석 서비스가 공개됐다. 특허 문서를 바탕으로 농식품 기술 동향을 검토하려는 실무자가 분야 특화 분석 결과를 빠르게 받아볼 수 있도록 구성됐다.",
    "id": "000bb96831380931",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-08-11",
@@ -1589,7 +1923,11 @@
    "summary": "카카오가 MCP 기반 AI 에이전트 생태계 플랫폼 PlayMCP를 공개했다. 다양한 MCP 서버를 등록·연결해 대화형 AI 경험을 만들 수 있는 플랫폼으로, 공공 분야에서도 MCP 생태계 확산의 참고 사례로 공유됐다.",
    "id": "999efcd7e3a80a93",
    "case_class": "참고",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-08-11",
@@ -1611,7 +1949,11 @@
    "license_source": "github-pages",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "공통·범용",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-08-11",
@@ -1630,7 +1972,11 @@
    "summary": "입찰참가자격 등록부터 계약 체결, 대금 지급까지 국가계약법·시행령·계약예규에 흩어진 공공조달 제도 88개를 담당자·서류·기한이 보이는 업무 흐름도로 정리한 안내 사이트가 공개됐다. 모든 근거를 국가법령정보센터 현행 법령의 조문 단위로 연결해 검증했고 법령 기준일을 명시한다.",
    "id": "a8fbf74431025f70",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "계약·조달",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-08-11",
@@ -1652,7 +1998,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "기획·정책",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "date": "2026-08-11",
@@ -1674,7 +2025,11 @@
    "license_source": "github-pages",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-08-11",
@@ -1697,7 +2052,13 @@
    "license_checked": "2026-08-19",
    "case_url": "https://gitlab.aigov.go.kr/Kminer2053/public-sector-research-skill",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "AI 도구 설정",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -1716,7 +2077,11 @@
    "link": "https://banner.choshg.com/",
    "id": "026e1b69c1fe6678",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "설치 필요",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-07-21",
@@ -1736,7 +2101,11 @@
    "summary": "광진구가 소속 공무원이 직접 개발한 AI 도구 6종을 전 직원 업무에 투입했다. 문서 요약·재작성, 법령 근거 확인, 출처 포함 통계 조회, 건축물대장 조회, 비정형 주소 정리, 개인 PC 문서 검색을 담당하며 법령·통계·건축 도구는 기관 자체 AI 서비스와 연동해 원문과 출처를 함께 제시한다. 개인정보 입력 금지, 원문·출처 확인 의무, 담당자와 팀장의 최종 판단 책임, 전용 문의 창구 운영을 4대 관리 원칙으로 정했고, 행정안전부 주관 지방정부 AI 우수사례 발표대회에 서울시 대표로 선정됐다.",
    "id": "9dc1a7081bc869b1",
    "case_class": "기관 공식",
-   "region": "서울"
+   "region": "서울",
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "org": "법제처",
@@ -1756,7 +2125,11 @@
    ],
    "id": "e2f85975979aa487",
    "case_class": "기관 공식",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "org_type": "공직 개인",
@@ -1778,7 +2151,11 @@
    "license_source": "github-pages",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "시설·안전",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "org_type": "공직 개인",
@@ -1800,7 +2177,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "network_req": "로컬 완결",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -1822,7 +2205,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": "서울"
+   "region": "서울",
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -1844,7 +2233,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "시설·안전",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "threads",
@@ -1867,7 +2261,11 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "시설·안전",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -1890,7 +2288,14 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "runtime_env": "MCP·CLI 설정",
+   "network_req": "폐쇄망 가능",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -1913,7 +2318,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -1934,7 +2345,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "방치"
   },
   {
    "collected_at": "2026-08-12",
@@ -1955,7 +2372,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "방치"
   },
   {
    "collected_at": "2026-08-12",
@@ -1977,7 +2400,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -1999,7 +2427,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "runtime_env": "MCP·CLI 설정",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "정체"
   },
   {
    "collected_at": "2026-08-12",
@@ -2021,7 +2455,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "정체"
   },
   {
    "collected_at": "2026-08-12",
@@ -2042,7 +2481,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "계약·조달",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "정체"
   },
   {
    "collected_at": "2026-08-12",
@@ -2064,7 +2508,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "방치"
   },
   {
    "collected_at": "2026-08-12",
@@ -2085,7 +2535,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "계약·조달",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "방치"
   },
   {
    "collected_at": "2026-08-12",
@@ -2106,7 +2561,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "계약·조달",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -2128,7 +2588,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -2150,7 +2615,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "방치"
   },
   {
    "collected_at": "2026-08-12",
@@ -2172,7 +2642,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -2193,7 +2668,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -2215,7 +2695,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -2236,7 +2721,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "방치"
   },
   {
    "collected_at": "2026-08-12",
@@ -2257,7 +2747,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "방치"
   },
   {
    "collected_at": "2026-08-12",
@@ -2278,7 +2773,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "정체"
   },
   {
    "collected_at": "2026-08-12",
@@ -2300,7 +2800,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -2321,7 +2826,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -2342,7 +2852,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "방치"
   },
   {
    "collected_at": "2026-08-12",
@@ -2363,7 +2878,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -2384,7 +2904,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "정체"
   },
   {
    "collected_at": "2026-08-12",
@@ -2406,7 +2931,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "runtime_env": "설치 필요",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -2427,7 +2958,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -2448,7 +2984,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -2469,7 +3010,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "정체"
   },
   {
    "collected_at": "2026-08-12",
@@ -2491,7 +3037,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "정체"
   },
   {
    "collected_at": "2026-08-12",
@@ -2512,7 +3063,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "정체"
   },
   {
    "collected_at": "2026-08-12",
@@ -2533,7 +3089,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "방치"
   },
   {
    "collected_at": "2026-08-12",
@@ -2554,7 +3115,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "방치"
   },
   {
    "collected_at": "2026-08-12",
@@ -2575,7 +3141,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -2597,7 +3168,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "공통·범용",
+   "runtime_env": "AI 도구 설정",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-12",
@@ -2619,7 +3196,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "시설·안전",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "summary": "식품의약품안전처 공공 OpenAPI를 10개 MCP 도구로 노출하는 서버가 공개됐다. 의약품 정보, 병용금기(DUR), 알약 식별, 식품 정보를 AI 도구에서 조회할 수 있다.",
@@ -2641,7 +3223,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "summary": "공공데이터포털의 심평원·식약처 의료 데이터를 다루는 MCP 서버가 공개됐다. 비급여 진료비, 병원 찾기, 의약품·DUR, 질병 통계를 AI 도구에서 조회할 수 있다.",
@@ -2662,7 +3249,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "summary": "대한민국 국회를 질문으로 탐색하고 공식 기록으로 검증하는 MCP 서버가 공개됐다. 법안·처리상태·위원회·회의록·검토보고서와 의원·정부 발언을 하나로 연결해 입법 논의 전체 맥락을 추적할 수 있다.",
@@ -2684,7 +3276,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "summary": "국가연구개발(정부 R&D) 규정 검토용 MCP 서버가 공개됐다. 국가연구개발혁신법·시행령과 행정규칙 55종을 AI로 검색·검토할 수 있어 연구비·과제 규정 확인 업무를 줄여준다.",
@@ -2706,7 +3303,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "summary": "한국 우주·항공·국방우주 분야 정부 R&D 지원사업 공고 데이터셋과 이를 다루는 크롤러·분류기·MCP·REST API가 공개됐다. 분야 특화 공고 탐색을 AI 도구에서 수행할 수 있다.",
@@ -2728,7 +3330,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "정체"
   },
   {
    "link": "https://github.com/gong-yeongbin/mcp-seoul-rtd",
@@ -2750,7 +3357,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": "서울"
+   "region": "서울",
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://github.com/hlucent/construction-alert-mcp",
@@ -2772,7 +3384,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": "서울"
+   "region": "서울",
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://github.com/jinjukimink/seoul-parking-mcp",
@@ -2794,7 +3411,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": "서울"
+   "region": "서울",
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "방치"
   },
   {
    "link": "https://github.com/Seo-yul/geup-ddong-seoul-mcp",
@@ -2816,7 +3438,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": "서울"
+   "region": "서울",
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://github.com/hlucent/seoul-air-quality-mcp",
@@ -2838,7 +3465,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": "서울"
+   "region": "서울",
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "date": "2026-08-13",
@@ -2860,7 +3492,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "runtime_env": "MCP·CLI 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "정체"
   },
   {
    "source": "threads",
@@ -2879,7 +3516,11 @@
    "org": "공직 현장(개인 개발)",
    "id": "e52e2378641903f4",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "인사·복무",
+   "runtime_env": "설치 필요",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-07-21",
@@ -2902,7 +3543,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "기획·정책",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -2924,7 +3570,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "민원",
+   "network_req": "로컬 완결",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "정체"
   },
   {
    "source": "kakao",
@@ -2943,7 +3595,11 @@
    "collected_at": "2026-08-14",
    "id": "5e76949a3f487274",
    "case_class": "기관 공식",
-   "region": "경기"
+   "region": "경기",
+   "task_category": "감사·법무",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "kakao",
@@ -2962,7 +3618,11 @@
    "collected_at": "2026-08-14",
    "id": "31a47960ddebd977",
    "case_class": "기관 공식",
-   "region": "경기"
+   "region": "경기",
+   "task_category": "회계·정산",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "source": "kakao",
@@ -2981,7 +3641,11 @@
    "collected_at": "2026-08-14",
    "id": "145a534a79c6fc53",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "설치 필요",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "collected_at": "2026-08-14",
@@ -3000,7 +3664,10 @@
    "title": "세상에 그런법이 어딨어요? — 경기도의회 AI 법·조례 안내 서비스",
    "id": "791311495e38151c",
    "case_class": "기관 공식",
-   "region": "경기"
+   "region": "경기",
+   "task_category": "감사·법무",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "collected_at": "2026-08-14",
@@ -3019,7 +3686,10 @@
    "title": "CODEF — 공공·금융 데이터 연동 구독형 API 플랫폼",
    "id": "611503a5916453a3",
    "case_class": "참고",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "collected_at": "2026-08-14",
@@ -3041,7 +3711,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-14",
@@ -3060,7 +3735,10 @@
    "title": "폴리위키 — 공직·입법 공개 데이터베이스",
    "id": "789c1267f63c3b01",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "collected_at": "2026-08-14",
@@ -3082,7 +3760,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "MCP·CLI 설정",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "collected_at": "2026-08-14",
@@ -3101,7 +3785,10 @@
    "title": "전국민 AI 경진대회 — AI 달인 100 챌린지 개최",
    "id": "3a12372c14bc0972",
    "case_class": "기관 공식",
-   "region": null
+   "region": null,
+   "task_category": "기획·정책",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-08-14",
@@ -3120,7 +3807,12 @@
    "link": "https://www.jbe.go.kr/board/view.jbe?boardId=BBS_0000649&menuCd=DOM_000000106011002001&dataSid=1141429",
    "id": "8d17b8feee1af705",
    "case_class": "기관 공식",
-   "region": "전북"
+   "region": "전북",
+   "task_category": "문서·기안",
+   "runtime_env": "브라우저만",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "date": "2026-08-08",
@@ -3142,7 +3834,11 @@
    "license_source": "github-pages",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "공통·범용",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "link": "https://www.threads.com/@jerry_jy.kim/post/DcCk4ZCFK2E",
@@ -3161,7 +3857,10 @@
    "summary": "병무청이 내부 자료 검색과 업무를 지원하는 AI 워크메이트를 가동했다. 지난 3월 정식 개통한 범정부 AI 공통기반 위에서 운영되며, 이 공통기반에는 기관·정보시스템별로 70개 이상의 개발환경이 마련되어 각 기관 실무자가 바이브 코딩과 에이전트 빌더로 업무 적용을 직접 실험하는 흐름이 확산되고 있다.",
    "id": "83dd1411a30c6653",
    "case_class": "기관 공식",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "org": "공직 현장(개인 개발)",
@@ -3180,7 +3879,10 @@
    "collected_at": "2026-08-15",
    "id": "3d07b6da99f5e1ed",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "org": "공직 커뮤니티",
@@ -3203,7 +3905,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "공통·범용",
+   "runtime_env": "AI 도구 설정",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://gitlab.aigov.go.kr/wavelen/govwork",
@@ -3225,7 +3933,11 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://gitlab.aigov.go.kr/y2kthr/koda",
@@ -3247,7 +3959,12 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://gitlab.aigov.go.kr/AILab_Manager/central_budget",
@@ -3269,7 +3986,12 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "기관 공식",
-   "region": null
+   "region": null,
+   "task_category": "회계·정산",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://gitlab.aigov.go.kr/publicpeasant/rekian-comwriter-library",
@@ -3291,7 +4013,12 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "AI 도구 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://gitlab.aigov.go.kr/jaekyeong/hangul-ai-widget",
@@ -3313,7 +4040,12 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://gitlab.aigov.go.kr/pro9dan/diary-for-everyone",
@@ -3335,7 +4067,12 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "시설·안전",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://gitlab.aigov.go.kr/pilddong/onnara-all-dept-search-sidebar",
@@ -3357,7 +4094,11 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://gitlab.aigov.go.kr/knps.taejong/parknews",
@@ -3380,7 +4121,12 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "기관 공식",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://gitlab.aigov.go.kr/pilddong/clova-gov-page-assistant",
@@ -3402,7 +4148,13 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://gitlab.aigov.go.kr/pilddong/new_mma_member",
@@ -3424,7 +4176,11 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "기관 공식",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://gitlab.aigov.go.kr/hoho4348/ai-agent",
@@ -3446,7 +4202,13 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "기관 공식",
-   "region": "경기"
+   "region": "경기",
+   "task_category": "시설·안전",
+   "runtime_env": "AI 도구 설정",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "link": "https://gitlab.aigov.go.kr/inchangpark/modu-minwon-call",
@@ -3468,7 +4230,11 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "민원",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -3491,7 +4257,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "AI 도구 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -3513,7 +4284,11 @@
    "license_source": "github-pages",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "시설·안전",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "org": "한국국제협력단(KOICA)",
@@ -3535,7 +4310,12 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "기관 공식",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "org_type": "공직 개인",
@@ -3557,7 +4337,13 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "민원",
+   "runtime_env": "AI 도구 설정",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "threads",
@@ -3580,7 +4366,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "기관 공식",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "source": "kakao",
@@ -3599,7 +4390,11 @@
    "summary": "한국어 문서에서 개인정보(PII)를 탐지하는 경량 모델이 오픈소스로 공개됐다. 100MB 수준이라 일반 업무 PC에서도 로컬로 구동할 수 있어 문서 반출 전 개인정보 점검 등 공공 실무에 쓸 수 있으며, 일부 공무원에게 개별 배포되던 버전을 정식 공개하고 미탐지 사례를 다음 학습에 반영받는 구조다.",
    "id": "8f7e23fec614657c",
    "case_class": "커뮤니티",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "collected_at": "2026-08-17",
@@ -3622,7 +4417,11 @@
    "license_source": "github-pages",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "기획·정책",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "collected_at": "2026-08-18",
@@ -3644,7 +4443,12 @@
    "license_source": "github",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "AI 도구 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "org_type": "공직 개인",
@@ -3663,7 +4467,11 @@
    "link": "https://www.threads.com/@civil__ax/post/DcL7kPKoKVk",
    "id": "ccee126dc9e23cf6",
    "case_class": "개인 개발",
-   "region": "경북"
+   "region": "경북",
+   "task_category": "시설·안전",
+   "runtime_env": "AI 도구 설정",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "collected_at": "2026-08-19",
@@ -3682,7 +4490,12 @@
    "source": "kakao",
    "id": "a384b647830b2bf7",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "문서·기안",
+   "runtime_env": "AI 도구 설정",
+   "cost_req": "무료",
+   "link_ok": true,
+   "health_checked": "2026-08-20"
   },
   {
    "org_type": "공직 개인",
@@ -3704,7 +4517,12 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "org_type": "공직 개인",
@@ -3726,7 +4544,12 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "민원",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "org_type": "공직 개인",
@@ -3748,7 +4571,12 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "설치 필요",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "org_type": "공직 개인",
@@ -3770,7 +4598,13 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "회계·정산",
+   "runtime_env": "설치 필요",
+   "cost_req": "API 키 필요",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "org_type": "공직 개인",
@@ -3792,7 +4626,12 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   },
   {
    "org_type": "공직 개인",
@@ -3814,7 +4653,13 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-19",
    "case_class": "개인 개발",
-   "region": null
+   "region": null,
+   "task_category": "감사·법무",
+   "runtime_env": "브라우저만",
+   "network_req": "폐쇄망 가능",
+   "link_ok": true,
+   "health_checked": "2026-08-20",
+   "maintenance": "활발"
   }
  ]
 }

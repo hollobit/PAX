@@ -24,6 +24,28 @@ const ORG_TYPE_BADGE_CLASS = {
   '해외(참고)': 'badge--org-type-참고',
 };
 
+const TASK_CATEGORIES = ['인사·복무', '회계·정산', '계약·조달', '민원', '문서·기안',
+  '감사·법무', '시설·안전', '데이터·통계', '기획·정책', '공통·범용'];
+
+// 검색 동의어 사전 (로드맵 1-1): 실무 어휘 ↔ 사례 표기의 간극을 메운다
+const SYNONYMS = {
+  여비: ['출장', '정산', '경비', '출장비'],
+  출장정산: ['여비', '출장', '정산'],
+  경비정산: ['여비', '정산'],
+  공문: ['기안', '공문서', '문서', 'hwp'],
+  기안: ['공문', '재기안', '품의'],
+  결재: ['품의', '기안'],
+  한글: ['hwp', 'hwpx'],
+  민원: ['신고', '상담', '콜'],
+  조달: ['입찰', '계약', '나라장터'],
+  회의록: ['회의', '녹취', '전사'],
+  번역: ['다국어', '통역'],
+  챗봇: ['상담', '어시스턴트', '비서'],
+  법령: ['법률', '법제', '조례', '규정'],
+  일정: ['캘린더', '스케줄'],
+  지도: ['gis', '맵', '현황판'],
+};
+
 const VIEWS = ['cards', 'list', 'tags'];
 
 /* ── 누적 북마크 카운터 (Supabase) ─────────────────────────
@@ -134,12 +156,14 @@ function siteHostname(c) {
 
 const state = {
   cases: [],
-  filter: { q: '', orgType: '전체', source: '전체', tag: null, bookmarkedOnly: false },
+  filter: { q: '', orgType: '전체', source: '전체', tag: null, bookmarkedOnly: false, taskCat: '전체', noInstallOnly: false },
   view: loadSavedView(), // 'cards' | 'list'
   sort: { key: 'popularity', dir: 'desc' }, // 기본: 인기 우선, 이후 최신순
   bookmarks: loadBookmarks(), // Set<caseId> — localStorage에 보존
   bookmarkCounts: new Map(), // 전체 사용자 누적 북마크 수 (Supabase)
   champTerms: new Map(), // 사례 id → 챔피언 이름·소속·계정 검색어
+  champOfCase: new Map(), // 사례 id → [{id, name}] (카드 '만든 사람' 표시용, 로드맵 1-8)
+  evalById: new Map(), // 사례 id → 4축 평가 (카드 배지·CSV 결합용, 로드맵 1-3)
   popularSet: new Set(), // 인기 항목 id (북마크순 상위 N)
   focusCaseId: null, // ?case=<id> 딥링크 대상 — 첫 렌더 후 스크롤·강조
   status: 'loading', // 'loading' | 'loaded' | 'error'
@@ -223,6 +247,8 @@ function applyUrlToState() {
     source: SOURCES.includes(source) ? source : '전체',
     tag: p.get('tag') || null,
     bookmarkedOnly: p.get('bm') === '1',
+    taskCat: TASK_CATEGORIES.includes(p.get('task')) ? p.get('task') : '전체',
+    noInstallOnly: p.get('ni') === '1',
   };
   state.focusCaseId = p.get('case') || null;
   if (VIEWS.includes(view)) state.view = view;
@@ -237,6 +263,8 @@ function syncUrl() {
   if (f.source !== '전체') p.set('src', f.source);
   if (f.tag) p.set('tag', f.tag);
   if (f.bookmarkedOnly) p.set('bm', '1');
+  if (f.taskCat !== '전체') p.set('task', f.taskCat);
+  if (f.noInstallOnly) p.set('ni', '1');
   if (state.view !== 'cards') p.set('view', state.view);
   if (state.sort.key !== 'popularity' || state.sort.dir !== 'desc') {
     p.set('sort', `${state.sort.key}.${state.sort.dir}`);
@@ -250,6 +278,8 @@ const els = {
   stats: document.getElementById('stats'),
   search: document.getElementById('search'),
   orgTypeFilter: document.getElementById('org-type-filter'),
+  taskChips: document.getElementById('task-chips'),
+  noInstallFilter: document.getElementById('no-install-filter'),
   sourceFilter: document.getElementById('source-filter'),
   viewTags: document.getElementById('view-tags'),
   activeTag: document.getElementById('active-tag'),
@@ -264,11 +294,21 @@ const els = {
 async function load() {
   try {
     // no-cache: 항상 서버와 재검증(ETag) — 새 사례·태그가 배포 즉시 반영되도록
-    const [res, counts, champRes] = await Promise.all([
+    const [res, counts, champRes, evalRes] = await Promise.all([
       fetch('./data/cases.json', { cache: 'no-cache' }),
       loadBookmarkCounts(),
       fetch('./data/champions.json', { cache: 'no-cache' }).catch(() => null),
+      fetch('./data/evaluations.json', { cache: 'no-cache' }).catch(() => null),
     ]);
+    // 4축 평가 결합 (로드맵 1-3) — 실패해도 배지·CSV 열만 빠질 뿐 치명적이지 않다
+    if (evalRes && evalRes.ok) {
+      try {
+        const evalDoc = await evalRes.json();
+        state.evalById = new Map(evalDoc.cases.map((e) => [e.id, e]));
+      } catch (err) {
+        console.error('평가 데이터 결합 실패:', err);
+      }
+    }
     // 챔피언 이름·소속·계정으로도 사례를 검색할 수 있게 사례별 검색어를 만든다.
     // 챔피언 데이터 로드 실패는 검색 범위만 줄어들 뿐 치명적이지 않다.
     if (champRes && champRes.ok) {
@@ -279,6 +319,9 @@ async function load() {
             ...ch.accounts.map((a) => a.id)].filter(Boolean).join(' ').toLowerCase();
           for (const caseId of ch.cases) {
             state.champTerms.set(caseId, `${state.champTerms.get(caseId) || ''} ${terms}`);
+            const owners = state.champOfCase.get(caseId) || [];
+            owners.push({ id: ch.id, name: ch.name });
+            state.champOfCase.set(caseId, owners);
           }
         }
       } catch (err) {
@@ -316,6 +359,11 @@ function buildFilterOptions() {
   fillSelect(els.orgTypeFilter, ORG_TYPES);
   fillSelect(els.sourceFilter, SOURCES);
 
+  els.noInstallFilter.addEventListener('click', () => {
+    state.filter = { ...state.filter, noInstallOnly: !state.filter.noInstallOnly };
+    els.noInstallFilter.setAttribute('aria-pressed', String(state.filter.noInstallOnly));
+    render();
+  });
   els.orgTypeFilter.addEventListener('change', () => {
     state.filter = { ...state.filter, orgType: els.orgTypeFilter.value };
     render();
@@ -433,16 +481,27 @@ function fillSelect(select, values) {
   }
 }
 
+function expandQuery(q) {
+  // 동의어 확장 (로드맵 1-1): 검색어가 사전에 있으면 동의어 중 하나만 맞아도 매칭
+  const terms = [q];
+  for (const [key, syns] of Object.entries(SYNONYMS)) {
+    if (q.includes(key.toLowerCase())) terms.push(...syns.map((s) => s.toLowerCase()));
+  }
+  return terms;
+}
+
 function matches(c, f) {
   if (f.bookmarkedOnly && !state.bookmarks.has(c.id)) return false;
   if (f.orgType !== '전체' && c.org_type !== f.orgType) return false;
   if (f.source !== '전체' && c.source !== (f.source === 'Threads' ? 'threads' : 'kakao')) return false;
   if (f.tag && !c.tags.includes(f.tag)) return false;
+  if (f.taskCat !== '전체' && c.task_category !== f.taskCat) return false;
+  if (f.noInstallOnly && c.runtime_env !== '브라우저만') return false;
   const q = f.q.trim().toLowerCase();
   if (!q) return true;
   const haystack = [c.title, c.summary, c.org, ...c.tags].join(' ').toLowerCase()
     + (state.champTerms.get(c.id) || '');
-  return haystack.includes(q);
+  return expandQuery(q).some((term) => haystack.includes(term));
 }
 
 function setTag(tag) {
@@ -460,8 +519,33 @@ function focusDeepLinkedCase() {
   state.focusCaseId = null; // 1회만 — 이후 필터 조작을 방해하지 않는다
 }
 
+function renderTaskChips() {
+  if (!els.taskChips) return;
+  els.taskChips.replaceChildren();
+  for (const cat of ['전체', ...TASK_CATEGORIES]) {
+    const n = cat === '전체'
+      ? state.cases.length
+      : state.cases.filter((c) => c.task_category === cat).length;
+    if (cat !== '전체' && n === 0) continue;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'task-chip';
+    btn.textContent = `${cat} ${n}`;
+    btn.setAttribute('aria-pressed', String(state.filter.taskCat === cat));
+    btn.addEventListener('click', () => {
+      state.filter = { ...state.filter, taskCat: cat };
+      render();
+    });
+    els.taskChips.appendChild(btn);
+  }
+}
+
 function render() {
   syncUrl();
+  renderTaskChips();
+  if (els.noInstallFilter) {
+    els.noInstallFilter.setAttribute('aria-pressed', String(state.filter.noInstallOnly));
+  }
   state.popularSet = computePopularSet();
   // fetch가 실패한 뒤에는 필터 변경 이벤트가 와도 렌더링을 건너뛴다 — 그렇지
   // 않으면 빈 결과(cases=[])가 empty-state를 열어 error-state와 동시에 표시된다.
@@ -584,13 +668,19 @@ function csvEscape(value) {
 }
 
 function exportCsv(results) {
-  const header = ['제목', '기관', '기관유형', '구분', '지역', '태그', '요약', '사례URL', '출처', '원문/공유링크', '게시일', '수집일', '라이선스'];
-  const rows = results.map((c) => [
-    c.title, c.org, c.org_type, c.case_class || '', c.region || '미상',
-    c.tags.join(' '), c.summary,
-    caseTargetUrl(c) || '', c.source === 'threads' ? 'Threads' : '오픈채팅',
-    c.link || '', c.date, c.collected_at, c.license || '미확인',
-  ].map(csvEscape).join(','));
+  const header = ['제목', '기관', '기관유형', '구분', '지역', '업무분류', '태그', '요약',
+    'AX단계', '업무범위', '완결성', '위험도', '인간통제', '증거등급',
+    '사례URL', '출처', '원문/공유링크', '게시일', '수집일', '라이선스'];
+  const rows = results.map((c) => {
+    const ev = state.evalById.get(c.id) || {};
+    return [
+      c.title, c.org, c.org_type, c.case_class || '', c.region || '미상',
+      c.task_category || '', c.tags.join(' '), c.summary,
+      ev.ax || '', ev.s || '', ev.c || '', ev.risk || '', ev.human || '', ev.evidence || '',
+      caseTargetUrl(c) || '', c.source === 'threads' ? 'Threads' : '오픈채팅',
+      c.link || '', c.date, c.collected_at, c.license || '미확인',
+    ].map(csvEscape).join(',');
+  });
   // BOM: Excel에서 한글이 깨지지 않도록
   const csv = '﻿' + [header.join(','), ...rows].join('\r\n');
   const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
@@ -666,6 +756,7 @@ function exportPdf(results) {
 const LIST_COLUMNS = [
   { key: 'bookmark', label: '★', sortable: false },
   { key: 'title', label: '제목', sortable: true },
+  { key: 'summary', label: '요약', sortable: false },
   { key: 'org', label: '기관', sortable: true },
   { key: 'org_type', label: '유형', sortable: true },
   { key: 'tags', label: '태그', sortable: false },
@@ -746,6 +837,10 @@ function createCaseRow(c) {
     titleTd.appendChild(span);
   }
 
+  const summaryTd = document.createElement('td');
+  summaryTd.className = 'case-table__summary';
+  summaryTd.textContent = c.summary;
+
   const orgTd = document.createElement('td');
   orgTd.textContent = c.org;
 
@@ -796,7 +891,7 @@ function createCaseRow(c) {
   dateTd.className = 'case-table__date';
   dateTd.textContent = c.date;
 
-  tr.append(bookmarkTd, titleTd, orgTd, typeTd, tagsTd, siteTd, sourceTd, dateTd);
+  tr.append(bookmarkTd, titleTd, summaryTd, orgTd, typeTd, tagsTd, siteTd, sourceTd, dateTd);
   return tr;
 }
 
@@ -859,16 +954,58 @@ function createCaseCard(c) {
   title.className = 'case-card__title';
   title.textContent = c.title;
 
-  // 사례 대상 URL이 있으면 설명문 대신 클릭 가능한 썸네일을 보여준다.
+  // 환경·평가·상태 배지 줄 (로드맵 1-2·1-3·1-6) — 파생된 값만 표시, 미확인은 생략
+  const badges = document.createElement('div');
+  badges.className = 'case-card__badges';
+  const addBadge = (text, cls, tip) => {
+    const b = document.createElement('span');
+    b.className = `mini-badge ${cls || ''}`;
+    b.textContent = text;
+    if (tip) b.title = tip;
+    badges.appendChild(b);
+  };
+  if (c.runtime_env) addBadge(c.runtime_env, 'mini-badge--env', '실행환경');
+  if (c.network_req) addBadge(c.network_req, 'mini-badge--net', '망 요건');
+  if (c.cost_req) addBadge(c.cost_req, 'mini-badge--cost', '비용·권한');
+  const ev = state.evalById.get(c.id);
+  if (ev && ev.ax) addBadge(ev.ax.replace('AI-', ''), 'mini-badge--ax', `AX 단계: ${ev.ax}`);
+  if (ev && ev.evidence) addBadge(ev.evidence.split(' ')[0], 'mini-badge--evidence', `증거 등급: ${ev.evidence}`);
+  if (c.link_ok === false) {
+    addBadge('링크 확인 안 됨', 'mini-badge--dead', `마지막 점검(${c.health_checked || ''})에서 대상 URL이 응답하지 않았습니다`);
+  } else if (c.maintenance === '정체' || c.maintenance === '방치') {
+    addBadge(`유지보수 ${c.maintenance}`, 'mini-badge--stale', '저장소 최근 활동 기준 (60일·180일 경계)');
+  }
+
+  // 사례 대상 URL이 있으면 썸네일과 함께 요약도 병기한다 (로드맵 1-4 — 툴팁 의존 해소).
   // 썸네일 이미지(site/thumbs/<id>.png)가 없으면 onerror로 설명문에 폴백.
   const targetUrl = caseTargetUrl(c);
   let summary;
+  let clampSummary = null;
   if (targetUrl) {
     summary = createThumbElement(c, targetUrl);
+    clampSummary = document.createElement('p');
+    clampSummary.className = 'case-card__summary case-card__summary--clamp';
+    clampSummary.textContent = c.summary;
   } else {
     summary = document.createElement('p');
     summary.className = 'case-card__summary';
     summary.textContent = c.summary;
+  }
+
+  // 만든 사람 (로드맵 1-8): 챔피언 디렉토리와 양방향 연결
+  let makerLine = null;
+  const owners = state.champOfCase.get(c.id) || [];
+  if (owners.length) {
+    makerLine = document.createElement('p');
+    makerLine.className = 'case-card__maker';
+    makerLine.append('만든 사람: ');
+    owners.slice(0, 3).forEach((o, i) => {
+      if (i > 0) makerLine.append(' · ');
+      const a = document.createElement('a');
+      a.href = `champions.html#champ-${encodeURIComponent(o.id)}`;
+      a.textContent = o.name;
+      makerLine.appendChild(a);
+    });
   }
 
   const tags = document.createElement('div');
@@ -925,7 +1062,10 @@ function createCaseCard(c) {
 
   article.appendChild(meta);
   article.appendChild(title);
+  if (badges.childElementCount) article.appendChild(badges);
   article.appendChild(summary);
+  if (clampSummary) article.appendChild(clampSummary);
+  if (makerLine) article.appendChild(makerLine);
   article.appendChild(tags);
   article.appendChild(footer);
 

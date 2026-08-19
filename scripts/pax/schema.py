@@ -10,7 +10,9 @@ REQUIRED_FIELDS = frozenset(
 #           region — 광역시도 (미상이면 null), case_class — 사례 성격 구분,
 #           license/license_source/license_checked — 저장소 확인 라이선스 (tag_licenses.py)
 OPTIONAL_FIELDS = frozenset(["case_url", "popularity", "region", "case_class",
-                             "license", "license_source", "license_checked"])
+                             "license", "license_source", "license_checked",
+                             "task_category", "runtime_env", "network_req", "cost_req",
+                             "link_ok", "health_checked", "maintenance"])
 SOURCES = frozenset(["threads", "kakao"])
 # 2026-08-19 재정비(로드맵 0-2): '기타' 85% 문제를 해소하는 10분류
 ORG_TYPES = frozenset(["중앙행정기관", "광역지자체", "기초지자체", "지방의회",
@@ -19,6 +21,8 @@ ORG_TYPES = frozenset(["중앙행정기관", "광역지자체", "기초지자체
 CASE_CLASSES = frozenset(["기관 공식", "개인 개발", "커뮤니티", "참고"])
 REGIONS = frozenset(["서울", "부산", "대구", "인천", "광주", "대전", "울산", "세종",
                      "경기", "강원", "충북", "충남", "전북", "전남", "경북", "경남", "제주"])
+TASK_CATEGORIES = frozenset(["인사·복무", "회계·정산", "계약·조달", "민원", "문서·기안",
+                             "감사·법무", "시설·안전", "데이터·통계", "기획·정책", "공통·범용"])
 
 _DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 _THREADS_LINK_RE = re.compile(r"^https://www\.threads\.(com|net)/")
@@ -71,6 +75,10 @@ def validate_case(case: dict) -> list[str]:
     case_class = case.get("case_class")
     if case_class is not None and case_class not in CASE_CLASSES:
         errors.append(f"알 수 없는 case_class: {case_class}")
+
+    task_category = case.get("task_category")
+    if task_category is not None and task_category not in TASK_CATEGORIES:
+        errors.append(f"알 수 없는 task_category: {task_category}")
 
     case_url = case.get("case_url")
     if case_url is not None and (

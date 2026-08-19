@@ -1832,3 +1832,92 @@ main {
   0%, 70% { outline-color: var(--accent); }
   100% { outline-color: transparent; }
 }
+
+
+/* ---- 업무 분류 칩 (로드맵 1-1) ---- */
+.task-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: -0.9rem 0 1.5rem;
+}
+
+.task-chips .task-chip {
+  padding: 0.3rem 0.7rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.task-chips .task-chip:hover {
+  border-color: var(--rule-strong);
+}
+
+.task-chips .task-chip[aria-pressed="true"] {
+  background: var(--accent-2);
+  border-color: var(--accent-2);
+  color: var(--bg-elevated);
+  font-weight: 600;
+}
+
+/* ---- 미니 배지 (로드맵 1-2·1-3·1-6) ---- */
+.case-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0.15rem 0 0.25rem;
+}
+
+.mini-badge {
+  padding: 0.08rem 0.42rem;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  cursor: default;
+}
+
+.mini-badge--env { background: var(--badge-central-bg); color: var(--badge-central-fg); }
+.mini-badge--net { background: var(--badge-agency-bg); color: var(--badge-agency-fg); }
+.mini-badge--cost { background: var(--badge-edu-bg); color: var(--badge-edu-fg); }
+.mini-badge--ax { background: var(--bg-inset); color: var(--ink-soft); }
+.mini-badge--evidence { background: var(--bg-inset); color: var(--ink-soft); }
+.mini-badge--dead { background: #fbe3e3; color: #a12622; }
+.mini-badge--stale { background: #f7edd7; color: #8a6210; }
+
+@media (prefers-color-scheme: dark) {
+  .mini-badge--dead { background: rgba(161, 38, 34, 0.3); color: #f0a8a3; }
+  .mini-badge--stale { background: rgba(138, 98, 16, 0.28); color: #e6c680; }
+}
+
+/* ---- 썸네일 병기 요약 (로드맵 1-4) ---- */
+.case-card__summary--clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 0.4rem;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+}
+
+.case-table__summary {
+  max-width: 26rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+/* ---- 만든 사람 (로드맵 1-8) ---- */
+.case-card__maker {
+  margin: 0.15rem 0 0;
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+}
+
+.champ-card--focused {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}

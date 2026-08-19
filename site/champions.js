@@ -52,6 +52,13 @@ async function load() {
       `챔피언 ${champDoc.total}명 · 사례 ${caseDoc.cases.length}건 기준 · 미확인 ${(champDoc.unattributed || []).length}건`;
     render();
     renderUnattributed(champDoc.unattributed || []);
+    if (location.hash.startsWith('#champ-')) {
+      const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (target) {
+        target.classList.add('champ-card--focused');
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
   } catch (err) {
     console.error('챔피언 데이터 로드 실패:', err);
     document.getElementById('error-state').hidden = false;
@@ -133,6 +140,7 @@ function render() {
 function card(champ) {
   const el = document.createElement('article');
   el.className = 'champ-card';
+  el.id = `champ-${champ.id}`;
   if (champ.certification) {
     el.classList.add('champ-card--certified',
       `champ-card--cert-${champ.certification.tier.toLowerCase()}`);
