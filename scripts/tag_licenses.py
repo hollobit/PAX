@@ -57,7 +57,10 @@ def gitlab_license(url: str):
         lic = info.get("license")
         if not lic:
             return "명시 없음"
-        return lic.get("nickname") or lic.get("key", "").upper() or "기타(비표준)"
+        raw = lic.get("nickname") or lic.get("key", "").upper() or "기타(비표준)"
+        # GitLab API 표기 정규화 — SPDX 표기와 일치시키고, 무의미한 값은 비표준 처리
+        return {"APACHE-2.0": "Apache-2.0", "LICENSE": "기타(비표준)",
+                "MIT LICENSE": "MIT", "GNU-AGPL-3.0": "AGPL-3.0"}.get(raw, raw)
     except Exception:
         return None
 

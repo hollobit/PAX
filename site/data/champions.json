@@ -1,5 +1,5 @@
 {
- "total": 85,
+ "total": 90,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -1441,6 +1441,30 @@
    }
   },
   {
+   "id": "gitlab:jikim",
+   "name": "김주일",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "jikim",
+     "url": "https://gitlab.aigov.go.kr/jikim"
+    }
+   ],
+   "affiliation": {
+    "value": "한국인터넷진흥원",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "dada6ac641debe8f"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:y2kthr",
    "name": "김지현",
    "accounts": [
@@ -1456,10 +1480,11 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
-    "2798c2e0b79ab291"
+    "2798c2e0b79ab291",
+    "de45e7387cab1c62"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 1,
     "stars": 0
    }
@@ -1774,6 +1799,30 @@
    }
   },
   {
+   "id": "gitlab:hypumiku12",
+   "name": "윤승재",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "hypumiku12",
+     "url": "https://gitlab.aigov.go.kr/hypumiku12"
+    }
+   ],
+   "affiliation": {
+    "value": "울산광역시 중구",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "76c050a0c58a9760"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:knps.taejong",
    "name": "윤태종",
    "accounts": [
@@ -1794,6 +1843,26 @@
    "stats": {
     "case_count": 1,
     "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:kimosed",
+   "name": "전남광주통합특별시 기획조정실 전략정책관 전략기획관실 김규범",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "kimosed",
+     "url": "https://gitlab.aigov.go.kr/kimosed"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "034b8bd869e0d6ea"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },
@@ -1896,6 +1965,50 @@
    "stats": {
     "case_count": 1,
     "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:westock",
+   "name": "조완희",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "westock",
+     "url": "https://gitlab.aigov.go.kr/westock"
+    }
+   ],
+   "affiliation": {
+    "value": "병무청 경기북부병무지청",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "0d94258abac0b093"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:jinn",
+   "name": "진희 안",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "jinn",
+     "url": "https://gitlab.aigov.go.kr/jinn"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "539d5aacb03635db"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },

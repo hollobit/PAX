@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-19T21:46:20+09:00",
+ "updated_at": "2026-08-19T22:48:13+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -1524,7 +1524,8 @@
    "id": "112bf7dc576ed8aa",
    "license": "MIT",
    "license_source": "github",
-   "license_checked": "2026-08-19"
+   "license_checked": "2026-08-19",
+   "case_url": "https://gitlab.aigov.go.kr/Kminer2053/public-sector-research-skill"
   },
   {
    "source": "kakao",
@@ -3324,6 +3325,126 @@
    "title": "쉽다공문 — 제미나이 GEM 공문서 초안 생성기 무료 배포",
    "source": "kakao",
    "id": "a384b647830b2bf7"
+  },
+  {
+   "org_type": "기타",
+   "summary": "서버·네트워크·정보보호시스템 등 IT 자산을 통합 관리하는 웹 솔루션. 자산 현황 대시보드, 랙실장도, 네트워크 포트맵, EoS·보증만료 경고, 데이터 품질 점수까지 갖췄고, 인터넷이 차단된 폐쇄망에서 완전히 독립 운영되도록 설계했다. 이중 해싱 로그인 등 보안 요건도 반영한 실무 개발 사례다.",
+   "title": "정보시스템 자산관리 솔루션 — 랙실장도·포트맵까지 폐쇄망 웹 관리",
+   "date": "2026-08-04",
+   "link": "https://gitlab.aigov.go.kr/jikim/rack",
+   "tags": [
+    "자산관리",
+    "폐쇄망",
+    "행정효율화",
+    "대시보드"
+   ],
+   "collected_at": "2026-08-19",
+   "org": "공직 현장(개인 개발)",
+   "source": "kakao",
+   "id": "dada6ac641debe8f",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-19"
+  },
+  {
+   "org_type": "기타",
+   "summary": "접수된 민원이 법적 처리·보호 대상 '신고'(7유형)에 해당하는지 유형·근거법령·소관부서·유사사례와 함께 즉시 제시하는 판별 모듈. 공익신고는 공익신고자 보호법 별표의 498개 대상 법률과 대조해 오분류와 신고자 보호조치 누락을 예방한다. 개인정보를 다루지 않는 결정론·오프라인 기반이며 최종 판정은 담당자가 하는 휴먼인더루프 구조를 명시했다.",
+   "title": "민원 신고 스크리너 — 신고 7유형·근거법령·소관부서 자동 판별 모듈",
+   "date": "2026-07-13",
+   "link": "https://gitlab.aigov.go.kr/jinn/screener",
+   "tags": [
+    "민원",
+    "신고분류",
+    "법령",
+    "휴먼인더루프"
+   ],
+   "collected_at": "2026-08-19",
+   "org": "공직 현장(개인 개발)",
+   "source": "kakao",
+   "id": "539d5aacb03635db",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-19"
+  },
+  {
+   "org_type": "기타",
+   "summary": "공직 실무자가 개발해 공공 깃랩에 공개한 Windows 데스크톱 일정·메모 관리 앱. 반복 일정, 첨부파일 연결, 사전 알람, 바탕화면 플로팅 메모 자동 복원, 전역 단축키를 지원하고 로컬 데이터를 Windows DPAPI로 암호화 저장한다. 업무망 PC에서 설치해 쓸 수 있는 개인 생산성 도구다.",
+   "title": "TaskCalendar — 실무자용 Windows 일정·메모 관리 앱",
+   "date": "2026-08-19",
+   "link": "https://gitlab.aigov.go.kr/westock/TaskCalendar",
+   "tags": [
+    "일정관리",
+    "업무도구",
+    "Windows",
+    "생산성"
+   ],
+   "collected_at": "2026-08-19",
+   "org": "공직 현장(개인 개발)",
+   "source": "kakao",
+   "id": "0d94258abac0b093",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-19"
+  },
+  {
+   "org_type": "기타",
+   "summary": "공무원 자가용 출장 여비 계산과 출장비 품의 문안 작성을 돕는 Windows 기능검증 시제품. 출장일자별 여비 계산, 이동구간 생성, 통행료 배분 기능을 검증해 최종적으로는 인사랑 여비정산 화면에 통합하는 것이 목표라고 명시했다. 기관 인증정보와 API 키를 제거한 공개용 소스로 AI 정부 실험실 검토를 받기 위해 공개됐다.",
+   "title": "여비업무통합도우미 — 자가용 출장 여비 계산·품의 문안 검증 시제품",
+   "date": "2026-08-16",
+   "link": "https://gitlab.aigov.go.kr/kimosed/travel-expense-calculator",
+   "tags": [
+    "여비",
+    "출장정산",
+    "인사랑",
+    "시제품"
+   ],
+   "collected_at": "2026-08-19",
+   "org": "공직 현장(개인 개발)",
+   "source": "kakao",
+   "id": "034b8bd869e0d6ea",
+   "license": "기타(비표준)",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-19"
+  },
+  {
+   "org_type": "기타",
+   "summary": "전통시장과 상점가 구역도를 QGIS와 연동해 디지털 지도로 표현하고, 일반현황·사업현황·업종명 등을 대시보드 형태로 보여주는 웹지도. 종이 구역도와 흩어진 현황 자료를 한 화면에서 조회할 수 있게 만든 완성 단계의 공개 사례다.",
+   "title": "전통시장·상점가 디지털 구역도 — QGIS 연동 웹지도 대시보드",
+   "date": "2026-08-11",
+   "link": "https://gitlab.aigov.go.kr/hypumiku12/tranditional_market_research",
+   "tags": [
+    "GIS",
+    "전통시장",
+    "웹지도",
+    "대시보드"
+   ],
+   "collected_at": "2026-08-19",
+   "org": "공직 현장(개인 개발)",
+   "source": "kakao",
+   "id": "76c050a0c58a9760",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-19"
+  },
+  {
+   "org_type": "기타",
+   "summary": "폐쇄망에서 운영하는 한국어 SBOM 관리 포털. 서비스별로 CycloneDX SBOM을 회차 단위로 업로드하면 구성요소·취약점·정책 위반을 분석해 보관하고 회차 간 변경점을 비교한다. 인터넷 없는 서버에서 Docker Compose 한 벌로 동작하도록 이미지·취약점 데이터·백업 도구까지 함께 제공하며, 국정원 기준을 참조한 정보보안 실무 도구다.",
+   "title": "KODA SBOM Tracker — 폐쇄망 한국어 SBOM 추적·취약점 관리 포털",
+   "date": "2026-08-03",
+   "link": "https://gitlab.aigov.go.kr/y2kthr/KODA-SBOM-Tracker",
+   "tags": [
+    "정보보안",
+    "SBOM",
+    "폐쇄망",
+    "취약점관리"
+   ],
+   "collected_at": "2026-08-19",
+   "org": "공직 현장(개인 개발)",
+   "source": "kakao",
+   "id": "de45e7387cab1c62",
+   "license": "Apache-2.0",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-19"
   }
  ]
 }
