@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-19T01:21:22+09:00",
+ "updated_at": "2026-08-19T21:46:20+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -3307,6 +3307,23 @@
    "source": "threads",
    "link": "https://www.threads.com/@civil__ax/post/DcL7kPKoKVk",
    "id": "ccee126dc9e23cf6"
+  },
+  {
+   "collected_at": "2026-08-19",
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-08-19",
+   "tags": [
+    "공문서",
+    "문서자동화",
+    "Gemini",
+    "프롬프트"
+   ],
+   "org_type": "기타",
+   "summary": "주제나 키워드만 입력하면 공문서 초안을 완성해 주는 제미나이(Gemini) 맞춤 GEM. 공문서 작성 규정을 담은 지침·지식파일을 무료로 배포해 누구나 5분 안에 자신의 GEM으로 만들 수 있게 했다. 한글 작업 효율화 도구 '쉽다한글'을 만든 실무자의 후속 공개 도구다.",
+   "link": "https://brojun.kr/sdgm/",
+   "title": "쉽다공문 — 제미나이 GEM 공문서 초안 생성기 무료 배포",
+   "source": "kakao",
+   "id": "a384b647830b2bf7"
   }
  ]
 }

@@ -3022,5 +3022,33 @@
   "resilience": "미확인",
   "post_url": "https://www.threads.com/@civil__ax/post/DcL7kPKoKVk",
   "service_url": null
+ },
+ {
+  "no": 179,
+  "id": "a384b647830b2bf7",
+  "org": "공직 현장(개인 개발)",
+  "title": "쉽다공문 — 제미나이 GEM 공문서 초안 생성기 무료 배포",
+  "ax_prev": "AI-Ready",
+  "ax": "AI-Ready",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Published tool",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R0 최소",
+  "human": "H2 Human-in-the-loop",
+  "evidence": "E1 코드·도구 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "resilience": "미확인",
+  "post_url": null,
+  "service_url": "https://brojun.kr/sdgm/",
+  "rationale": "키워드 입력으로 공문서 초안을 생성하는 제미나이 GEM — 지침과 규정 지식파일을 무료 배포해 재현 가능하게 한 점이 공유 원칙에 부합한다. 초안 생성 후 사람이 검토·완성하는 구조(H2)이며, 업무를 닫는 것이 아니라 결과물을 제공하는 단계(C1). 배포 페이지로 실체 확인(E1), 사용 성과는 미확인."
  }
 ]

@@ -2208,6 +2208,12 @@
    "title": "한국어 개인정보 탐지 모델 schift-ko-pii 오픈소스 공개",
    "org": "개발 커뮤니티",
    "url": "https://huggingface.co/schift-io/schift-ko-pii-v4"
+  },
+  {
+   "id": "a384b647830b2bf7",
+   "title": "쉽다공문 — 제미나이 GEM 공문서 초안 생성기 무료 배포",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://brojun.kr/sdgm/"
   }
  ]
 }
