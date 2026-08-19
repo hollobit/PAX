@@ -543,7 +543,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -1674,7 +1674,6 @@
     "evidence": "GitHub 공개 프로필 소속란"
    },
    "cases": [
-    "c193c524e0a7be1f",
     "4e577ad2f13f9ea4",
     "3d07b6da99f5e1ed",
     "6c5b15f4c8414f29",
@@ -1685,7 +1684,7 @@
     "58420e002644542c"
    ],
    "stats": {
-    "case_count": 9,
+    "case_count": 8,
     "top_ax": 2,
     "stars": 498
    }

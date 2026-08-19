@@ -174,7 +174,10 @@
    ],
    "id": "5451653f4cddb6f2",
    "case_url": "https://hosungseo.github.io/korea100/",
-   "popularity": 359
+   "popularity": 359,
+   "license": "MIT",
+   "license_source": "github-pages",
+   "license_checked": "2026-08-19"
   },
   {
    "tags": [
@@ -454,7 +457,10 @@
    "title": "서무랜드 — 서무 툴 모음 페이지",
    "date": "2026-08-07",
    "collected_at": "2026-08-07",
-   "id": "9d2b45d14879241e"
+   "id": "9d2b45d14879241e",
+   "license": "명시 없음",
+   "license_source": "github-pages",
+   "license_checked": "2026-08-19"
   },
   {
    "source": "kakao",
@@ -900,7 +906,10 @@
    "date": "2026-08-07",
    "source": "kakao",
    "summary": "대통령직속 국가인공지능전략위원회의 실천과제 99개와 정책권고 326개를 한눈에 볼 수 있게 정리한 비공식 종합 현황 대시보드가 공유됐다. 국가 AI 정책의 구조와 진행 상황을 시민이 추적할 수 있게 한다.",
-   "id": "ceceadd796cc6ea1"
+   "id": "ceceadd796cc6ea1",
+   "license": "명시 없음",
+   "license_source": "github-pages",
+   "license_checked": "2026-08-19"
   },
   {
    "org_type": "기타",
@@ -916,7 +925,10 @@
    "date": "2026-08-07",
    "source": "kakao",
    "summary": "2026년 정부 AI 관련 재정사업을 모아 구조적으로 분석할 수 있게 만든 플랫폼이 공유됐다. 예산 규모와 사업 구성을 들여다보며 국가 AI 투자 방향을 파악하는 용도다.",
-   "id": "807dd39dd613b7da"
+   "id": "807dd39dd613b7da",
+   "license": "MIT",
+   "license_source": "github-pages",
+   "license_checked": "2026-08-19"
   },
   {
    "org_type": "기타",
@@ -932,7 +944,10 @@
    "date": "2026-08-07",
    "source": "kakao",
    "summary": "대한민국 공공 Open API의 전체 현황을 수집해 품질과 활용성 관점에서 종합 분석한 사이트가 공유됐다. AI 시대에 기계가 바로 호출해 쓸 수 있는 공공 API가 얼마나 되는지 가늠하는 기초 자료가 된다.",
-   "id": "73ca59dc1a41074f"
+   "id": "73ca59dc1a41074f",
+   "license": "명시 없음",
+   "license_source": "github-pages",
+   "license_checked": "2026-08-19"
   },
   {
    "org_type": "기타",
@@ -948,7 +963,10 @@
    "date": "2026-08-07",
    "source": "kakao",
    "summary": "2026년 4월 기준선 대비 한국 공공 API가 얼마나 개선됐는지를 라이브 재측정과 증거 기반 방법론으로 비교하는 사이트가 공유됐다. AI 에이전트가 직접 호출하는 시대에 맞춘 공공 API 품질 추적 프로젝트다.",
-   "id": "7868cf416d6fe407"
+   "id": "7868cf416d6fe407",
+   "license": "명시 없음",
+   "license_source": "github-pages",
+   "license_checked": "2026-08-19"
   },
   {
    "summary": "국가 제도 구조도 프로젝트(제도100)를 온톨로지 형태로 탐색할 수 있게 만든 뷰어가 공유됐다. 제도 간 관계를 구조화된 지식 체계로 살펴볼 수 있어 제도 데이터의 기계 가독성을 높이는 시도다.",
@@ -1128,7 +1146,10 @@
    "date": "2026-04-12",
    "collected_at": "2026-08-07",
    "id": "0af085f0e51a1a7e",
-   "case_url": "https://msitsti2025.github.io/stlaws/"
+   "case_url": "https://msitsti2025.github.io/stlaws/",
+   "license": "명시 없음",
+   "license_source": "github-pages",
+   "license_checked": "2026-08-19"
   },
   {
    "source": "kakao",
@@ -1350,7 +1371,10 @@
    "title": "인구감소지역 부동산 상황판 공개",
    "summary": "인구감소지역·관심지역 107곳의 지정 특례와 최근 24개월 아파트 실거래를 한 화면에 모은 상황판이 공개됐다. 흩어져 있던 특례 고시와 실거래 자료를 모아 지역별 정책 차이·표본 규모·기준일을 먼저 보여주는 구성으로, 관심이 적은 지역의 시장 정보를 가시화하는 실험으로 소개됐다.",
    "date": "2026-08-05",
-   "id": "63a81d23af115b66"
+   "id": "63a81d23af115b66",
+   "license": "명시 없음",
+   "license_source": "github-pages",
+   "license_checked": "2026-08-19"
   },
   {
    "collected_at": "2026-08-11",
@@ -1420,7 +1444,10 @@
     "UI"
    ],
    "summary": "49개 디자인 사조(ism)의 시각적 레퍼런스를 효과·색상·타이포그래피·레이아웃·모션 주제별로 탐색하는 보드가 공개됐다. 바이브 코딩으로 화면을 만들 때 시각적 방향을 빠르게 정하도록 돕는 의사결정 보조와 AI 슬롭 진단 관점을 담았다.",
-   "id": "dfe9d069e330d1c8"
+   "id": "dfe9d069e330d1c8",
+   "license": "명시 없음",
+   "license_source": "github-pages",
+   "license_checked": "2026-08-19"
   },
   {
    "date": "2026-08-11",
@@ -1474,7 +1501,10 @@
     "우선순위"
    ],
    "summary": "공공데이터포털의 파일데이터 중 무엇을 먼저 API로 전환해야 하는지 검토 우선순위 큐로 보여주는 분석 도구가 공개됐다. 카탈로그 메타데이터와 연간 이용 이력을 결합해 수요 신호를 산출하고, 서로 다른 데이터 기준시점을 숨기지 않고 함께 표시하는 방법론을 담았다.",
-   "id": "6c5b15f4c8414f29"
+   "id": "6c5b15f4c8414f29",
+   "license": "명시 없음",
+   "license_source": "github-pages",
+   "license_checked": "2026-08-19"
   },
   {
    "date": "2026-08-11",
@@ -1564,7 +1594,10 @@
    "link": "https://seum8660.github.io/workflow/%ED%95%99%EA%B5%90%EC%8B%9C%EC%84%A4%20%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0%20%EC%9D%B8%ED%8A%B8%EB%A1%9C.dc.html",
    "summary": "학교시설 사업의 기획부터 준공·사용승인까지 담당자가 실제로 밟는 절차를 정리한 워크플로우 보드가 공개됐다. 설계변경·공기연장·인허가·안전사고 등 26개 업무를 단계 게이트와 담당 주체 레인으로 나눠 같은 문법으로 읽을 수 있게 했고, 업무별 기한·법적 근거·병목 구간을 47장의 세부 절차 시트와 전자책 형태로 제공한다.",
    "date": "2026-08-11",
-   "id": "def97ef350fe7cae"
+   "id": "def97ef350fe7cae",
+   "license": "MIT",
+   "license_source": "github-pages",
+   "license_checked": "2026-08-19"
   },
   {
    "org_type": "기타",
@@ -2797,7 +2830,10 @@
    "summary": "커뮤니티에서 공유되는 공공AX 관련 링크를 자동으로 수집해 보관하는 링크 갤러리가 운영되고 있다. 492개 이상의 링크를 모아 날짜별로 업데이트하며, 흩어져 사라지기 쉬운 채팅방 공유 자료를 다시 찾아볼 수 있는 보관소 역할을 한다.",
    "source": "kakao",
    "link": "https://daamable-sknk.github.io/link-gallery/",
-   "id": "5de0d36c1b37fe58"
+   "id": "5de0d36c1b37fe58",
+   "license": "명시 없음",
+   "license_source": "github-pages",
+   "license_checked": "2026-08-19"
   },
   {
    "link": "https://www.threads.com/@jerry_jy.kim/post/DcCk4ZCFK2E",
@@ -3131,7 +3167,10 @@
     "지역정책"
    ],
    "org_type": "기타",
-   "id": "aef95509b7611c96"
+   "id": "aef95509b7611c96",
+   "license": "명시 없음",
+   "license_source": "github-pages",
+   "license_checked": "2026-08-19"
   },
   {
    "org": "한국국제협력단(KOICA)",
@@ -3213,20 +3252,24 @@
   },
   {
    "collected_at": "2026-08-17",
-   "link": "https://hosungseo.github.io/korea100/mega-projects/gwangju-semiconductor-cluster/",
+   "link": "https://www.threads.com/@gongpenclaw/post/DcIONJpgZo6",
    "tags": [
     "메가프로젝트",
     "법정절차",
-    "업무구조도",
-    "지역정책"
+    "시각화",
+    "업무구조도"
    ],
    "date": "2026-08-17",
    "org": "공직 현장(개인 개발)",
    "title": "메가 프로젝트 절차 지도 — 광주 반도체 클러스터 법정 절차 1,281개",
    "source": "kakao",
-   "summary": "제도 구조도 577개 데이터를 실제 프로젝트 하나에 묶어, 광주 군공항 부지 반도체 클러스터 완공까지 통과해야 하는 법정 절차 1,281개를 한 화면에 모은 실험이 공개됐다. 각 부처 담당자도 소관 밖 절차는 모르는 상황에서 사업 전체의 절차 큰 그림을 처음으로 가시화한 시도로, 오류 제보를 받아 보완하는 구조다.",
+   "summary": "국가 제도 아카이브 '대한민국 제도 100'(577개 제도)을 광주 군공항 부지 반도체 클러스터 사업에 적용해, 완공까지의 법정 절차 1,281개를 8개 게이트·49개 마일스톤·제도 103개로 구조화한 통합 절차 지도를 공개했다. 부처별로 흩어져 누구의 화면에도 없던 메가 프로젝트의 전체 절차 그림을 한눈에 보여주는 실험으로, 오류 제보를 받아 보완한다.",
    "org_type": "기타",
-   "id": "4e577ad2f13f9ea4"
+   "id": "4e577ad2f13f9ea4",
+   "case_url": "https://hosungseo.github.io/korea100/mega-projects/gwangju-semiconductor-cluster/",
+   "license": "MIT",
+   "license_source": "github-pages",
+   "license_checked": "2026-08-19"
   },
   {
    "collected_at": "2026-08-18",
@@ -3247,24 +3290,6 @@
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-08-19"
-  },
-  {
-   "org_type": "기타",
-   "case_url": "https://hosungseo.github.io/korea100/mega-projects/gwangju-semiconductor-cluster/",
-   "date": "2026-08-18",
-   "org": "공직 현장(개인 개발)",
-   "title": "제도100 메가프로젝트 실험 — 반도체 클러스터 법정 절차 1,281개 통합 지도",
-   "summary": "국가 제도 아카이브 '대한민국 제도 100'(577개 제도)을 광주 군공항 부지 반도체 클러스터 사업에 적용해, 완공까지의 법정 절차 1,281개를 8개 게이트·49개 마일스톤·제도 103개로 구조화한 통합 절차 지도를 공개했다. 부처별로 흩어져 누구의 화면에도 없던 메가 프로젝트의 전체 절차 그림을 한눈에 보여주는 실험으로, 오류 제보를 받아 보완한다.",
-   "tags": [
-    "행정절차",
-    "메가프로젝트",
-    "시각화",
-    "제도데이터"
-   ],
-   "collected_at": "2026-08-19",
-   "source": "threads",
-   "link": "https://www.threads.com/@gongpenclaw/post/DcIONJpgZo6",
-   "id": "c193c524e0a7be1f"
   },
   {
    "org_type": "기타",

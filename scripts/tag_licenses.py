@@ -63,7 +63,12 @@ def gitlab_license(url: str):
 
 
 def repo_of(case):
-    """사례에서 (종류, 대상) 추출 — GitHub 우선, 없으면 공공 GitLab."""
+    """사례에서 (종류, 대상) 추출 — GitHub → 공공 GitLab → GitHub Pages 순.
+
+    GitHub Pages(*.github.io)는 소스 저장소로 역매핑한다:
+    https://{user}.github.io/{repo}/... → {user}/{repo},
+    루트 페이지는 {user}/{user}.github.io.
+    """
     urls = [u for u in [case.get("link"), case.get("case_url")] if u]
     for u in urls:
         m = re.match(r"https://github\.com/([\w.\-]+)/([\w.\-]+)", u)
@@ -72,6 +77,12 @@ def repo_of(case):
     for u in urls:
         if GITLAB_HOST in u and re.search(rf"{GITLAB_HOST}/[\w.\-]+/[\w.\-]+", u):
             return "gitlab", u
+    for u in urls:
+        m = re.match(r"https://([\w-]+)\.github\.io(?:/([\w.\-]+))?", u)
+        if m:
+            user = m.group(1)
+            repo = m.group(2) or f"{user}.github.io"
+            return "github-pages", f"{user}/{repo}"
     return None, None
 
 
@@ -88,7 +99,8 @@ def main():
         kind, target = repo_of(c)
         if not kind:
             continue
-        lic = github_license(target) if kind == "github" else gitlab_license(target)
+        lic = (gitlab_license(target) if kind == "gitlab"
+               else github_license(target))  # github / github-pages 모두 GitHub API
         if lic is None:
             failed += 1
             continue

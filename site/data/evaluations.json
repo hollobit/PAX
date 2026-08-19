@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-08-08",
- "total": 179,
+ "total": 178,
  "cases": [
   {
    "no": 1,
@@ -5043,7 +5043,7 @@
    "audience": "G2E 공직 내부"
   },
   {
-   "no": 170,
+   "no": 169,
    "id": "1de6fb50cc324684",
    "org": "공직 현장(개인 개발)",
    "title": "모두의 민원콜 — 한 문장으로 담당 연락처 찾기",
@@ -5073,7 +5073,7 @@
    "audience": "G2C 대국민"
   },
   {
-   "no": 171,
+   "no": 170,
    "id": "65e1983235232514",
    "org": "공직 커뮤니티",
    "title": "bookforge — 한국어 전자책 PDF 생성 에이전트 스킬",
@@ -5103,7 +5103,7 @@
    "audience": "G2E 공직 실무자"
   },
   {
-   "no": 172,
+   "no": 171,
    "id": "aef95509b7611c96",
    "org": "공공기관 연구자(개인 개발)",
    "title": "AIDC 입지 시뮬레이터 — 전력망·용수·SOC 종합 검토",
@@ -5133,7 +5133,7 @@
    "audience": "G2C 공개"
   },
   {
-   "no": 173,
+   "no": 172,
    "id": "acd684108227b9c2",
    "org": "한국국제협력단(KOICA)",
    "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크",
@@ -5163,7 +5163,7 @@
    "audience": "G2C 공개"
   },
   {
-   "no": 174,
+   "no": 173,
    "id": "4c918008fd4eff60",
    "org": "공직 현장(개인 개발)",
    "title": "민원 답변 작성 스킬 팩 — Codex·Claude Code·Gemini CLI 겸용",
@@ -5193,7 +5193,7 @@
    "audience": "G2C 대국민"
   },
   {
-   "no": 175,
+   "no": 174,
    "id": "75b6a86d91aea955",
    "org": "과학기술정보통신부",
    "title": "AI지원담당 — 공공 실무용 로컬 AI 메신저 MVP (공공 AX 로컬 시리즈 1)",
@@ -5223,7 +5223,7 @@
    "audience": "G2E 공직 내부"
   },
   {
-   "no": 176,
+   "no": 175,
    "id": "8f7e23fec614657c",
    "org": "개발 커뮤니티",
    "title": "한국어 개인정보 탐지 모델 schift-ko-pii 오픈소스 공개",
@@ -5253,7 +5253,7 @@
    "audience": "G2C 공개"
   },
   {
-   "no": 177,
+   "no": 176,
    "id": "4e577ad2f13f9ea4",
    "org": "공직 현장(개인 개발)",
    "title": "메가 프로젝트 절차 지도 — 광주 반도체 클러스터 법정 절차 1,281개",
@@ -5283,7 +5283,7 @@
    "audience": "G2C 공개"
   },
   {
-   "no": 178,
+   "no": 177,
    "id": "cb0abc29707cc710",
    "org": "공직 현장(개인 개발)",
    "title": "수정 가능한 PPTX·피그마 슬라이드 스킬 — 공공 카드뉴스 스타일",
@@ -5313,37 +5313,7 @@
    "audience": "G2E 공직 실무자"
   },
   {
-   "no": 179,
-   "id": "c193c524e0a7be1f",
-   "org": "공직 현장(개인 개발)",
-   "title": "제도100 메가프로젝트 실험 — 반도체 클러스터 법정 절차 1,281개 통합 지도",
-   "ax_prev": "AI-Ready",
-   "ax": "AI-Ready",
-   "s": "S2",
-   "s_name": "Tool bundle",
-   "c": "C1",
-   "c_name": "결과 제공",
-   "m": "해당 없음",
-   "m_name": "비-MCP 사례",
-   "native_scope": "해당 없음",
-   "status": "Published service",
-   "scope": "External",
-   "mcp_role": "Unknown/None",
-   "risk": "R0 최소",
-   "human": "H1 Human-on-the-loop",
-   "evidence": "E1 코드·도구 확인",
-   "confidence": "중간",
-   "gate": "상위 관문 미충족/해당 없음",
-   "rationale": "577개 제도 데이터를 실제 메가 프로젝트(광주 반도체 클러스터)에 적용해 법정 절차 1,281개를 8게이트·49마일스톤으로 구조화한 조회형 지도 — 흩어진 제도 정보를 AI로 정리한 준비 자산(Ready)이며 업무 수행 자체를 닫지는 않는다(C1). 부처 경계를 넘는 절차 전체 그림이라는 관측 가치가 크고, 작성자 스스로 오류 가능성을 명시하고 제보를 받는 증거 기반 태도를 갖췄다. 정확성은 미확인.",
-   "feedback": "미확인",
-   "resilience": "미확인",
-   "post_url": "https://www.threads.com/@gongpenclaw/post/DcIONJpgZo6",
-   "service_url": "https://hosungseo.github.io/korea100/mega-projects/gwangju-semiconductor-cluster/",
-   "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
-  },
-  {
-   "no": 180,
+   "no": 178,
    "id": "ccee126dc9e23cf6",
    "org": "공직 현장(개인 개발)",
    "title": "경북 면사무소 토목직의 AX — 토목 전용 GPTs와 횡단면도 작성 앱",
