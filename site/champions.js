@@ -216,7 +216,7 @@ function card(champ) {
     if (!c) return null;
     const li = document.createElement('li');
     const link = document.createElement('a');
-    link.href = `./?q=${encodeURIComponent(c.title)}`;
+    link.href = `./?case=${encodeURIComponent(id)}`;
     link.textContent = c.title;
     li.appendChild(link);
     return li;
@@ -253,7 +253,7 @@ function renderUnattributed(list) {
   for (const item of list) {
     const li = document.createElement('li');
     const link = document.createElement('a');
-    link.href = `./?q=${encodeURIComponent(item.title)}`;
+    link.href = `./?case=${encodeURIComponent(item.id)}`;
     link.textContent = item.title;
     li.appendChild(link);
     const org = document.createElement('span');

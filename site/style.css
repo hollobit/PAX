@@ -413,11 +413,19 @@ main {
   letter-spacing: 0.02em;
 }
 
-.badge--org-type-중앙부처 { background: var(--badge-central-bg); color: var(--badge-central-fg); }
+.badge--org-type-중앙     { background: var(--badge-central-bg); color: var(--badge-central-fg); }
 .badge--org-type-지자체   { background: var(--badge-local-bg);   color: var(--badge-local-fg); }
 .badge--org-type-공공기관 { background: var(--badge-agency-bg); color: var(--badge-agency-fg); }
 .badge--org-type-교육     { background: var(--badge-edu-bg);    color: var(--badge-edu-fg); }
+.badge--org-type-개인     { background: #fdf0e3; color: #9a5b13; }
+.badge--org-type-커뮤니티 { background: #ece7fb; color: #5b3fa8; }
+.badge--org-type-참고     { background: var(--badge-etc-bg); color: var(--badge-etc-fg); }
 .badge--org-type-기타     { background: var(--badge-etc-bg);    color: var(--badge-etc-fg); }
+
+@media (prefers-color-scheme: dark) {
+  .badge--org-type-개인     { background: rgba(154, 91, 19, 0.28); color: #f0b269; }
+  .badge--org-type-커뮤니티 { background: rgba(91, 63, 168, 0.28); color: #c2aef2; }
+}
 
 .case-card__org {
   color: var(--ink-soft);
@@ -1788,4 +1796,39 @@ main {
   .champ-toolbar button.tier-btn[aria-pressed="true"] {
     box-shadow: 0 0 0 2px var(--surface, #1c1c1c), 0 0 0 4px #c9a227;
   }
+}
+
+
+/* ---- 표본 고지 (로드맵 0-3) ---- */
+.sample-note {
+  max-width: 40rem;
+  margin: 0.55rem auto 0;
+  color: var(--ink-faint);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+/* ---- 사례 딥링크 (로드맵 0-4) ---- */
+.copy-link-btn {
+  padding: 0 0.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  opacity: 0.55;
+}
+
+.copy-link-btn:hover {
+  opacity: 1;
+}
+
+.case-card--focused {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  animation: case-focus-fade 2.4s ease-out forwards;
+}
+
+@keyframes case-focus-fade {
+  0%, 70% { outline-color: var(--accent); }
+  100% { outline-color: transparent; }
 }

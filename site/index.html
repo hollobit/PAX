@@ -5,7 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>모두의 공공AX 사례 아카이브</title>
   <meta name="description" content="Threads와 오픈채팅에서 수집한 공공기관 AI 전환(AX) 사례 모음">
+    <link rel="canonical" href="https://hollobit.github.io/PAX/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="모두의 공공AX 사례 아카이브">
+  <meta property="og:description" content="오픈채팅·Threads에서 수집한 공공부문 AI 전환(AX) 사례 아카이브 — 4축 성숙도 평가와 챔피언 기록">
+  <meta property="og:url" content="https://hollobit.github.io/PAX/">
+  <meta property="og:site_name" content="모두의 공공AX 사례 아카이브">
   <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "모두의 공공AX 사례 아카이브 (PAX)",
+    "description": "한국 공공부문 AI 전환(AX) 사례를 커뮤니티에서 수집해 4축 성숙도로 평가하는 민간 관측 데이터셋. 자기선택 표본.",
+    "url": "https://hollobit.github.io/PAX/",
+    "keywords": ["공공AX", "AI 전환", "공공부문 AI", "MCP", "디지털정부"],
+    "creator": {"@type": "Person", "name": "전종홍"},
+    "isAccessibleForFree": true,
+    "distribution": [
+      {"@type": "DataDownload", "encodingFormat": "application/json",
+       "contentUrl": "https://hollobit.github.io/PAX/data/cases.json"},
+      {"@type": "DataDownload", "encodingFormat": "application/json",
+       "contentUrl": "https://hollobit.github.io/PAX/data/evaluations.json"}
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -26,6 +50,7 @@
       <a href="changelog.html">변경 기록</a>
     </nav>
     <p class="stats" id="stats" aria-live="polite"></p>
+    <p class="sample-note">이 아카이브는 오픈채팅·Threads의 자발적 공유에 기반한 <strong>자기선택 표본</strong>으로, 전국 공공부문 전체를 대표하지 않습니다.</p>
   </header>
   <main>
     <section class="controls" aria-label="검색 및 필터">

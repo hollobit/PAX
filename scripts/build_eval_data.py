@@ -2,6 +2,7 @@
 
 사용법: PYTHONPATH=scripts python3 scripts/build_eval_data.py <xlsx 경로>
 """
+import datetime
 import json
 import sys
 from pathlib import Path
@@ -106,7 +107,20 @@ def main() -> int:
             case["audience"] = derive_audience(case)
             cases.append(case)
 
-    doc = {"evaluated_at": "2026-08-08", "total": len(cases), "cases": cases}
+    # 증거 등급 정규화 (로드맵 0-6): E1의 이중 의미(코드 확인 vs 화면 확인)를
+    # 분리한다 — E1은 코드·도구 실체, E2는 화면·서비스 실체. E0 표기도 통일.
+    EVIDENCE_NORM = {
+        "E1 화면·서비스 확인": "E2 화면·서비스 확인",
+        "E0 자기보고": "E0 게시글 주장",
+    }
+    for case in cases:
+        ev = case.get("evidence")
+        if ev in EVIDENCE_NORM:
+            case["evidence"] = EVIDENCE_NORM[ev]
+
+    # evaluated_at 자동 갱신 (로드맵 0-6): 빌드 시점 = 최종 평가 반영 시점
+    today = datetime.date.today().isoformat()
+    doc = {"evaluated_at": today, "total": len(cases), "cases": cases}
     OUT.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"{OUT} ← {len(cases)}건")
     return 0

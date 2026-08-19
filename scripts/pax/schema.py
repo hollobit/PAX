@@ -6,10 +6,19 @@ REQUIRED_FIELDS = frozenset(
      "org_type", "title", "summary", "tags"]
 )
 # 선택 필드: case_url — 사례 대상 URL (썸네일·연결용),
-#           popularity — 커뮤니티 반응 기반 인기 지표 (좋아요 수 등, 양의 정수)
-OPTIONAL_FIELDS = frozenset(["case_url", "popularity"])
+#           popularity — 커뮤니티 반응 기반 인기 지표 (좋아요 수 등, 양의 정수),
+#           region — 광역시도 (미상이면 null), case_class — 사례 성격 구분,
+#           license/license_source/license_checked — 저장소 확인 라이선스 (tag_licenses.py)
+OPTIONAL_FIELDS = frozenset(["case_url", "popularity", "region", "case_class",
+                             "license", "license_source", "license_checked"])
 SOURCES = frozenset(["threads", "kakao"])
-ORG_TYPES = frozenset(["중앙부처", "지자체", "공공기관", "교육", "기타"])
+# 2026-08-19 재정비(로드맵 0-2): '기타' 85% 문제를 해소하는 10분류
+ORG_TYPES = frozenset(["중앙행정기관", "광역지자체", "기초지자체", "지방의회",
+                       "공공기관", "교육기관", "공직 개인", "커뮤니티",
+                       "민간(참고)", "해외(참고)"])
+CASE_CLASSES = frozenset(["기관 공식", "개인 개발", "커뮤니티", "참고"])
+REGIONS = frozenset(["서울", "부산", "대구", "인천", "광주", "대전", "울산", "세종",
+                     "경기", "강원", "충북", "충남", "전북", "전남", "경북", "경남", "제주"])
 
 _DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 _THREADS_LINK_RE = re.compile(r"^https://www\.threads\.(com|net)/")
@@ -54,6 +63,14 @@ def validate_case(case: dict) -> list[str]:
 
     if not isinstance(case["id"], str) or not re.match(r"^[0-9a-f]{16}$", case["id"]):
         errors.append("id는 16자리 소문자 16진수여야 합니다")
+
+    region = case.get("region")
+    if region is not None and region not in REGIONS:
+        errors.append(f"알 수 없는 region: {region}")
+
+    case_class = case.get("case_class")
+    if case_class is not None and case_class not in CASE_CLASSES:
+        errors.append(f"알 수 없는 case_class: {case_class}")
 
     case_url = case.get("case_url")
     if case_url is not None and (

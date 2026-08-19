@@ -7,15 +7,21 @@
  * 사례 데이터를 문자열로 연결하는 코드는 두지 않는다 (XSS 방지).
  */
 
-const ORG_TYPES = ['전체', '중앙부처', '지자체', '공공기관', '교육', '기타'];
+const ORG_TYPES = ['전체', '중앙행정기관', '광역지자체', '기초지자체', '지방의회',
+  '공공기관', '교육기관', '공직 개인', '커뮤니티', '민간(참고)', '해외(참고)'];
 const SOURCES = ['전체', 'Threads', '오픈채팅'];
 
 const ORG_TYPE_BADGE_CLASS = {
-  중앙부처: 'badge--org-type-중앙부처',
-  지자체: 'badge--org-type-지자체',
+  중앙행정기관: 'badge--org-type-중앙',
+  광역지자체: 'badge--org-type-지자체',
+  기초지자체: 'badge--org-type-지자체',
+  지방의회: 'badge--org-type-지자체',
   공공기관: 'badge--org-type-공공기관',
-  교육: 'badge--org-type-교육',
-  기타: 'badge--org-type-기타',
+  교육기관: 'badge--org-type-교육',
+  '공직 개인': 'badge--org-type-개인',
+  커뮤니티: 'badge--org-type-커뮤니티',
+  '민간(참고)': 'badge--org-type-참고',
+  '해외(참고)': 'badge--org-type-참고',
 };
 
 const VIEWS = ['cards', 'list', 'tags'];
@@ -135,6 +141,7 @@ const state = {
   bookmarkCounts: new Map(), // 전체 사용자 누적 북마크 수 (Supabase)
   champTerms: new Map(), // 사례 id → 챔피언 이름·소속·계정 검색어
   popularSet: new Set(), // 인기 항목 id (북마크순 상위 N)
+  focusCaseId: null, // ?case=<id> 딥링크 대상 — 첫 렌더 후 스크롤·강조
   status: 'loading', // 'loading' | 'loaded' | 'error'
 };
 
@@ -217,6 +224,7 @@ function applyUrlToState() {
     tag: p.get('tag') || null,
     bookmarkedOnly: p.get('bm') === '1',
   };
+  state.focusCaseId = p.get('case') || null;
   if (VIEWS.includes(view)) state.view = view;
   state.sort = sort;
 }
@@ -233,6 +241,7 @@ function syncUrl() {
   if (state.sort.key !== 'popularity' || state.sort.dir !== 'desc') {
     p.set('sort', `${state.sort.key}.${state.sort.dir}`);
   }
+  if (state.focusCaseId) p.set('case', state.focusCaseId);
   const qs = p.toString();
   history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
 }
@@ -298,7 +307,9 @@ function renderStats(updatedAt, count) {
   const label = typeof updatedAt === 'string' && updatedAt.length >= 16
     ? `${updatedAt.slice(0, 10)} ${updatedAt.slice(11, 16)}`
     : '알 수 없음';
-  els.stats.textContent = `전체 ${count}건 · 최근 갱신 ${label}`;
+  const kakaoN = state.cases.filter((c) => c.source === 'kakao').length;
+  const threadsN = state.cases.filter((c) => c.source === 'threads').length;
+  els.stats.textContent = `전체 ${count}건 (오픈채팅 ${kakaoN} · Threads ${threadsN}) · 최근 갱신 ${label}`;
 }
 
 function buildFilterOptions() {
@@ -440,6 +451,15 @@ function setTag(tag) {
   render();
 }
 
+function focusDeepLinkedCase() {
+  if (!state.focusCaseId) return;
+  const el = document.querySelector(`[data-case-id="${CSS.escape(state.focusCaseId)}"]`);
+  if (!el) return;
+  el.classList.add('case-card--focused');
+  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  state.focusCaseId = null; // 1회만 — 이후 필터 조작을 방해하지 않는다
+}
+
 function render() {
   syncUrl();
   state.popularSet = computePopularSet();
@@ -492,6 +512,7 @@ function render() {
     card.style.setProperty('--i', String(i));
     els.caseList.appendChild(card);
   });
+  focusDeepLinkedCase();
 }
 
 function createPopularBadge(c) {
@@ -563,9 +584,10 @@ function csvEscape(value) {
 }
 
 function exportCsv(results) {
-  const header = ['제목', '기관', '기관유형', '태그', '요약', '사례URL', '출처', '원문/공유링크', '게시일', '수집일', '라이선스'];
+  const header = ['제목', '기관', '기관유형', '구분', '지역', '태그', '요약', '사례URL', '출처', '원문/공유링크', '게시일', '수집일', '라이선스'];
   const rows = results.map((c) => [
-    c.title, c.org, c.org_type, c.tags.join(' '), c.summary,
+    c.title, c.org, c.org_type, c.case_class || '', c.region || '미상',
+    c.tags.join(' '), c.summary,
     caseTargetUrl(c) || '', c.source === 'threads' ? 'Threads' : '오픈채팅',
     c.link || '', c.date, c.collected_at, c.license || '미확인',
   ].map(csvEscape).join(','));
@@ -811,6 +833,7 @@ function renderActiveTag() {
 function createCaseCard(c) {
   const article = document.createElement('article');
   article.className = 'case-card';
+  article.dataset.caseId = c.id;
 
   const meta = document.createElement('div');
   meta.className = 'case-card__meta';
@@ -867,6 +890,24 @@ function createCaseCard(c) {
   date.className = 'case-card__date';
   date.textContent = c.date;
   footer.appendChild(date);
+
+  const copyBtn = document.createElement('button');
+  copyBtn.type = 'button';
+  copyBtn.className = 'copy-link-btn';
+  copyBtn.textContent = '🔗';
+  copyBtn.title = '이 사례의 고정 링크 복사';
+  copyBtn.setAttribute('aria-label', '사례 링크 복사');
+  copyBtn.addEventListener('click', async () => {
+    const url = `${location.origin}${location.pathname}?case=${c.id}`;
+    try {
+      await navigator.clipboard.writeText(url);
+      copyBtn.textContent = '✓';
+      setTimeout(() => { copyBtn.textContent = '🔗'; }, 1200);
+    } catch {
+      window.prompt('아래 링크를 복사하세요', url);
+    }
+  });
+  footer.appendChild(copyBtn);
 
   // 저장소에서 확인된 라이선스만 표시한다 (미확인 사례는 배지 없음 — 미확인 원칙)
   if (c.license) {
