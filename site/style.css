@@ -521,6 +521,34 @@ main {
   font-size: 0.76rem;
 }
 
+.license-badge {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #1a6b3c;
+  background: #e5f5ec;
+  border: 1px solid #bfe5d0;
+  cursor: help;
+}
+
+.license-badge--none {
+  color: var(--ink-faint);
+  background: transparent;
+  border: 1px dashed var(--rule);
+  font-weight: 500;
+}
+
+@media (prefers-color-scheme: dark) {
+  .license-badge {
+    color: #7dd8a5;
+    background: rgba(38, 96, 62, 0.25);
+    border-color: rgba(125, 216, 165, 0.35);
+  }
+}
+
 .case-card__source-link {
   color: var(--accent-2);
   font-size: 0.84rem;

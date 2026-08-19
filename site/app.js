@@ -563,11 +563,11 @@ function csvEscape(value) {
 }
 
 function exportCsv(results) {
-  const header = ['제목', '기관', '기관유형', '태그', '요약', '사례URL', '출처', '원문/공유링크', '게시일', '수집일'];
+  const header = ['제목', '기관', '기관유형', '태그', '요약', '사례URL', '출처', '원문/공유링크', '게시일', '수집일', '라이선스'];
   const rows = results.map((c) => [
     c.title, c.org, c.org_type, c.tags.join(' '), c.summary,
     caseTargetUrl(c) || '', c.source === 'threads' ? 'Threads' : '오픈채팅',
-    c.link || '', c.date, c.collected_at,
+    c.link || '', c.date, c.collected_at, c.license || '미확인',
   ].map(csvEscape).join(','));
   // BOM: Excel에서 한글이 깨지지 않도록
   const csv = '﻿' + [header.join(','), ...rows].join('\r\n');
@@ -867,6 +867,18 @@ function createCaseCard(c) {
   date.className = 'case-card__date';
   date.textContent = c.date;
   footer.appendChild(date);
+
+  // 저장소에서 확인된 라이선스만 표시한다 (미확인 사례는 배지 없음 — 미확인 원칙)
+  if (c.license) {
+    const lic = document.createElement('span');
+    const none = c.license === '명시 없음';
+    lic.className = 'license-badge' + (none ? ' license-badge--none' : '');
+    lic.textContent = none ? '라이선스 없음' : c.license;
+    lic.title = none
+      ? '저장소에 라이선스 파일이 없어 재사용 조건이 명시되지 않았습니다'
+      : `오픈소스 라이선스 ${c.license} — 저장소에서 확인됨 (${c.license_checked || ''})`;
+    footer.appendChild(lic);
+  }
 
   footer.appendChild(createSourceElement(c));
 
