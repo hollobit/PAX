@@ -75,6 +75,7 @@ JSON 리스트로 저장한다:
 ## 5. 병합·배포 데이터 갱신
 ```bash
 PYTHONPATH=scripts python3 -m pax.merge data/incoming/TODAY.json
+python3 scripts/tag_licenses.py   # 신규 사례의 저장소 라이선스 확인·태깅 (기존 태깅은 건너뜀)
 PYTHONPATH=scripts python3 -m pax.publish
 python3 scripts/build_champions.py
 ```
