@@ -36,9 +36,34 @@ def prepare_candidate(cand: dict) -> dict:
     return prepared
 
 
+def normalize_url(url) -> str | None:
+    """중복 판정용 URL 정규화 — 스킴·호스트 소문자화, 프래그먼트·끝 슬래시 제거.
+
+    쿼리 스트링은 보존한다(서비스가 쿼리로 구분될 수 있음 — 과잉 중복 판정 방지).
+    """
+    if not url or not isinstance(url, str):
+        return None
+    m = re.match(r"(https?)://([^/?#]+)([^#]*)", url.strip())
+    if not m:
+        return None
+    scheme, host, rest = m.group(1).lower(), m.group(2).lower(), m.group(3)
+    return f"{scheme}://{host}{rest.rstrip('/')}"
+
+
+def case_urls(case: dict):
+    """중복 판정에 쓰는 사례의 URL 집합 — link와 case_url을 구분 없이 본다."""
+    return {u for u in (normalize_url(case.get("link")),
+                        normalize_url(case.get("case_url"))) if u}
+
+
 def merge_cases(existing_doc: dict, candidates: list[dict],
                 updated_at: str) -> tuple[dict, list[dict]]:
     seen_ids = {c["id"] for c in existing_doc["cases"]}
+    # link ↔ case_url 교차 중복 검사: 같은 결과물이 한쪽 사례에서는 link에,
+    # 다른 쪽에서는 case_url에 실려도 잡아낸다 (2026-08-19 중복 사례의 재발 방지).
+    seen_urls = set()
+    for c in existing_doc["cases"]:
+        seen_urls |= case_urls(c)
     accepted, rejected = [], []
     for cand in candidates:
         prepared = prepare_candidate(cand)
@@ -48,7 +73,12 @@ def merge_cases(existing_doc: dict, candidates: list[dict],
             continue
         if prepared["id"] in seen_ids:
             continue
+        dup_urls = case_urls(prepared) & seen_urls
+        if dup_urls:
+            print(f"중복 URL 제외: {prepared.get('title', '?')[:40]} ← {sorted(dup_urls)[0]}")
+            continue
         seen_ids.add(prepared["id"])
+        seen_urls |= case_urls(prepared)
         accepted.append(prepared)
     new_doc = {"updated_at": updated_at,
                "cases": [*existing_doc["cases"], *accepted]}

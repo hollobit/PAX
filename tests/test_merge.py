@@ -173,3 +173,45 @@ def test_prepare_candidate_keeps_case_url():
 def test_prepare_candidate_omits_absent_case_url():
     prepared = prepare_candidate(make_candidate())
     assert "case_url" not in prepared
+
+
+# ── URL 교차 중복 검사 (link ↔ case_url) ──────────────────────
+
+def _doc(*cases):
+    return {"updated_at": "2026-08-06T09:00:00+09:00", "cases": list(cases)}
+
+
+def test_merge_skips_candidate_whose_case_url_matches_existing_link():
+    # 기존 사례는 서비스 URL을 link에, 새 후보는 같은 URL을 case_url에 —
+    # 필드가 달라도 같은 결과물이면 중복이다 (2026-08-19 메가프로젝트 실사례).
+    existing = make_case(link="https://hosungseo.github.io/korea100/mega/")
+    cand = make_candidate(
+        raw_text="다른 원문이라 id는 다름",
+        link="https://www.threads.com/@user/post/zzz",
+        case_url="https://hosungseo.github.io/korea100/mega/")
+    new_doc, rejected = merge_cases(_doc(existing), [cand], "2026-08-19T09:00:00+09:00")
+    assert len(new_doc["cases"]) == 1 and not rejected
+
+
+def test_merge_url_dedup_ignores_trailing_slash_and_host_case():
+    existing = make_case(link="https://GitHub.com/User/Repo/")
+    cand = make_candidate(raw_text="원문2", link="https://github.com/User/Repo")
+    new_doc, _ = merge_cases(_doc(existing), [cand], "2026-08-19T09:00:00+09:00")
+    assert len(new_doc["cases"]) == 1
+
+
+def test_merge_url_dedup_within_same_batch():
+    a = make_candidate(raw_text="원문A", case_url="https://gitlab.aigov.go.kr/x/tool")
+    b = make_candidate(raw_text="원문B",
+                       link="https://www.threads.com/@user/post/other",
+                       case_url="https://gitlab.aigov.go.kr/x/tool")
+    new_doc, _ = merge_cases(_doc(), [a, b], "2026-08-19T09:00:00+09:00")
+    assert len(new_doc["cases"]) == 1
+
+
+def test_merge_distinct_urls_still_accepted():
+    existing = make_case(source="kakao", link="https://github.com/user/repo-a")
+    cand = make_candidate(raw_text="원문3", source="kakao",
+                          link="https://github.com/user/repo-b")
+    new_doc, _ = merge_cases(_doc(existing), [cand], "2026-08-19T09:00:00+09:00")
+    assert len(new_doc["cases"]) == 2
