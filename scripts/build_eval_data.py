@@ -153,6 +153,16 @@ def main() -> int:
     doc = {"evaluated_at": today, "total": len(cases), "cases": cases}
     OUT.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"{OUT} ← {len(cases)}건")
+
+    # 경량본 (성능 최적화): 아카이브 카드 배지·CSV·자가진단에 필요한 필드만 —
+    # rationale 등 서술을 뺀 1/7 크기. 대시보드만 풀 버전을 로드한다.
+    LITE_FIELDS = ["id", "ax", "s", "c", "p", "risk", "human", "evidence"]
+    lite = {"evaluated_at": today,
+            "cases": [{f: case.get(f) for f in LITE_FIELDS} for case in cases]}
+    lite_path = OUT.parent / "evals-lite.json"
+    lite_path.write_text(json.dumps(lite, ensure_ascii=False, separators=(",", ":")) + "\n",
+                         encoding="utf-8")
+    print(f"{lite_path} ← 경량본")
     return 0
 
 

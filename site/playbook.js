@@ -72,7 +72,7 @@ async function similarCases(target) {
   try {
     const [casesRes, evalRes] = await Promise.all([
       fetch('./data/cases.json', { cache: 'no-cache' }),
-      fetch('./data/evaluations.json', { cache: 'no-cache' }),
+      fetch('./data/evals-lite.json', { cache: 'no-cache' }),
     ]);
     const cases = (await casesRes.json()).cases;
     const evals = (await evalRes.json()).cases;

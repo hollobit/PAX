@@ -293,56 +293,72 @@ const els = {
 
 async function load() {
   try {
+    // 점진 렌더: cases.json 도착 즉시 첫 화면을 그린다. 북마크 카운트(외부 API)·
+    // 챔피언·평가 데이터는 배경에서 받아 도착 후 한 번에 제자리 보강한다 —
+    // 외부 서비스 지연이 첫 화면을 붙잡지 않게 하는 구조.
     // no-cache: 항상 서버와 재검증(ETag) — 새 사례·태그가 배포 즉시 반영되도록
-    const [res, counts, champRes, evalRes] = await Promise.all([
-      fetch('./data/cases.json', { cache: 'no-cache' }),
+    const enhancements = Promise.allSettled([
       loadBookmarkCounts(),
-      fetch('./data/champions.json', { cache: 'no-cache' }).catch(() => null),
-      fetch('./data/evaluations.json', { cache: 'no-cache' }).catch(() => null),
+      fetch('./data/champions.json', { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : null)),
+      fetch('./data/evals-lite.json', { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : null)),
     ]);
-    // 4축 평가 결합 (로드맵 1-3) — 실패해도 배지·CSV 열만 빠질 뿐 치명적이지 않다
-    if (evalRes && evalRes.ok) {
-      try {
-        const evalDoc = await evalRes.json();
-        state.evalById = new Map(evalDoc.cases.map((e) => [e.id, e]));
-      } catch (err) {
-        console.error('평가 데이터 결합 실패:', err);
-      }
-    }
-    // 챔피언 이름·소속·계정으로도 사례를 검색할 수 있게 사례별 검색어를 만든다.
-    // 챔피언 데이터 로드 실패는 검색 범위만 줄어들 뿐 치명적이지 않다.
-    if (champRes && champRes.ok) {
-      try {
-        const champDoc = await champRes.json();
-        for (const ch of champDoc.champions) {
-          const terms = [ch.name, ch.affiliation && ch.affiliation.value,
-            ...ch.accounts.map((a) => a.id)].filter(Boolean).join(' ').toLowerCase();
-          for (const caseId of ch.cases) {
-            state.champTerms.set(caseId, `${state.champTerms.get(caseId) || ''} ${terms}`);
-            const owners = state.champOfCase.get(caseId) || [];
-            owners.push({ id: ch.id, name: ch.name });
-            state.champOfCase.set(caseId, owners);
-          }
-        }
-      } catch (err) {
-        console.error('챔피언 검색어 구성 실패:', err);
-      }
-    }
+    const res = await fetch('./data/cases.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const doc = await res.json();
-    state.bookmarkCounts = counts;
     state.cases = [...doc.cases];
-    // 인기 집합을 먼저 계산해야 기본 정렬(인기 → 신규 → 최신)이 올바르게 동작한다
+    // 첫 렌더의 인기 집합은 SNS 반응(popularity) 기준 — 북마크 수는 도착 후 반영
     state.popularSet = computePopularSet();
     state.cases.sort(comparePopularFirst);
     state.status = 'loaded';
     renderStats(doc.updated_at, state.cases.length);
     render();
+    applyEnhancements(enhancements);
   } catch (err) {
     console.error('cases.json 로드 실패:', err);
     state.status = 'error';
     els.errorState.hidden = false;
   }
+}
+
+async function applyEnhancements(pending) {
+  const [countsRes, champRes, evalRes] = await pending;
+  let changed = false;
+  if (countsRes.status === 'fulfilled' && countsRes.value.size) {
+    state.bookmarkCounts = countsRes.value;
+    changed = true;
+  }
+  // 4축 평가 결합 (로드맵 1-3) — 경량본(evals-lite) 사용, 실패해도 배지·CSV 열만 빠진다
+  if (evalRes.status === 'fulfilled' && evalRes.value) {
+    try {
+      state.evalById = new Map(evalRes.value.cases.map((e) => [e.id, e]));
+      changed = true;
+    } catch (err) {
+      console.error('평가 데이터 결합 실패:', err);
+    }
+  }
+  // 챔피언 이름·소속·계정 검색어와 '만든 사람' 링크 — 실패해도 검색 범위만 줄어든다
+  if (champRes.status === 'fulfilled' && champRes.value) {
+    try {
+      for (const ch of champRes.value.champions) {
+        const terms = [ch.name, ch.affiliation && ch.affiliation.value,
+          ...ch.accounts.map((a) => a.id)].filter(Boolean).join(' ').toLowerCase();
+        for (const caseId of ch.cases) {
+          state.champTerms.set(caseId, `${state.champTerms.get(caseId) || ''} ${terms}`);
+          const owners = state.champOfCase.get(caseId) || [];
+          owners.push({ id: ch.id, name: ch.name });
+          state.champOfCase.set(caseId, owners);
+        }
+      }
+      changed = true;
+    } catch (err) {
+      console.error('챔피언 검색어 구성 실패:', err);
+    }
+  }
+  if (!changed || state.status !== 'loaded') return;
+  // 북마크 순위가 도착했으므로 인기 집합·정렬을 갱신하고 한 번만 다시 그린다
+  state.popularSet = computePopularSet();
+  state.cases.sort(comparePopularFirst);
+  render();
 }
 
 function renderStats(updatedAt, count) {
