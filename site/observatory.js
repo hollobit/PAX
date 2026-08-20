@@ -66,6 +66,8 @@ async function main() {
   const ax = idx.ax_distribution;
   cards.appendChild(indexCard('관측 사례', `${idx.total_cases}건`,
     `MCP ${idx.mcp_cases}건 포함`));
+  cards.appendChild(indexCard('챔피언', `${idx.total_champions}명`,
+    `인증 연동 ${idx.certified_champions}명 · 귀속 미확인 사례 ${idx.unattributed_cases}건`));
   cards.appendChild(indexCard('AX 단계 분포',
     `Ready ${ax['AI-Ready'] || 0} · Enabled ${ax['AI-Enabled'] || 0} · First ${ax['AI-First'] || 0}`,
     'AI-Native 0 — 재설계 단계 공백'));

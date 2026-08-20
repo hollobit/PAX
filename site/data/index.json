@@ -3,6 +3,9 @@
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
  "total_cases": 188,
+ "total_champions": 91,
+ "certified_champions": 2,
+ "unattributed_cases": 44,
  "ax_distribution": {
   "AI-Ready": 128,
   "AI-Enabled": 49,

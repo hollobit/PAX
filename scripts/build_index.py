@@ -29,6 +29,7 @@ def c_score(c_grade: str) -> int | None:
 def build() -> dict:
     cases = json.load(open("data/cases.json"))["cases"]
     evals = json.load(open("site/data/evaluations.json"))["cases"]
+    champ_doc = json.load(open("site/data/champions.json"))
     ev_by_id = {e["id"]: e for e in evals}
 
     ax_dist = Counter(e["ax"] for e in evals if e.get("ax"))
@@ -61,6 +62,10 @@ def build() -> dict:
         "quarter": f"{datetime.date.today().year}Q{(datetime.date.today().month - 1) // 3 + 1}",
         "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
         "total_cases": len(cases),
+        "total_champions": champ_doc.get("total", 0),
+        "certified_champions": sum(
+            1 for ch in champ_doc.get("champions", []) if ch.get("certification")),
+        "unattributed_cases": len(champ_doc.get("unattributed", [])),
         "ax_distribution": dict(ax_dist),
         "c_axis_mean": round(sum(c_scores) / len(c_scores), 2) if c_scores else None,
         "p_distribution": dict(p_dist),
