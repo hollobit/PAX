@@ -168,7 +168,7 @@ async function main() {
       tr.appendChild(td);
       const devTd = document.createElement('td');
       const devLink = el('a', null, r.developer || '미상');
-      devLink.href = `champions.html?q=${encodeURIComponent((r.developer || '').split(' · ')[0])}`;
+      devLink.href = `./?q=${encodeURIComponent((r.developer || '').split(' · ')[0])}`;
       if (r.developer && r.developer !== '미상') devTd.appendChild(devLink);
       else devTd.textContent = '미상';
       tr.appendChild(devTd);
