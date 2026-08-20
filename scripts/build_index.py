@@ -46,7 +46,7 @@ def build() -> dict:
 
     # 공공 깃랩 브릿지 (2-7): 미러 쌍과 개방율
     def urls(c):
-        return [u for u in (c.get("link"), c.get("case_url")) if u]
+        return [u for u in (c.get("link"), c.get("case_url"), c.get("mirror_url")) if u]
     gitlab_cases = [c for c in cases if any("gitlab.aigov" in u for u in urls(c))]
     mirror_pairs = [c for c in gitlab_cases
                     if any("github.com" in u for u in urls(c))]

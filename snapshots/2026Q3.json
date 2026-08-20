@@ -2,24 +2,24 @@
  "generated_at": "2026-08-21",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 188,
- "total_champions": 91,
+ "total_cases": 195,
+ "total_champions": 97,
  "certified_champions": 2,
  "unattributed_cases": 44,
  "ax_distribution": {
-  "AI-Ready": 128,
-  "AI-Enabled": 49,
+  "AI-Ready": 131,
+  "AI-Enabled": 53,
   "AX 단계 외": 10,
   "AI-First": 1
  },
- "c_axis_mean": 0.53,
+ "c_axis_mean": 0.54,
  "p_distribution": {
-  "P0": 83,
-  "P1": 101,
-  "P2": 4
+  "P0": 84,
+  "P1": 106,
+  "P2": 5
  },
  "model_dependency": {
-  "미확인": 162,
+  "미확인": 169,
   "해외 상용 API": 18,
   "혼합": 1,
   "해외 오픈웨이트(로컬)": 7
@@ -27,22 +27,22 @@
  "domestic_model_rate": 0.0,
  "local_model_rate": 0.269,
  "model_known": 26,
- "license_tagged": 126,
- "license_stated_rate": 0.651,
- "gitlab_cases": 25,
- "gitlab_mirror_pairs": 2,
- "gitlab_open_rate": 0.08,
+ "license_tagged": 133,
+ "license_stated_rate": 0.632,
+ "gitlab_cases": 38,
+ "gitlab_mirror_pairs": 7,
+ "gitlab_open_rate": 0.184,
  "mcp_cases": 63,
  "transition_funnel": {
-  "기관 공식": 26,
-  "미확인": 156,
-  "부서 공유": 4,
+  "기관 공식": 28,
+  "미확인": 159,
+  "부서 공유": 6,
   "타 기관 재사용": 1,
   "범정부 탑재": 1
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.505
+  "feedback": 0.518
  },
  "maintenance_distribution": {
   "활발": 88,
@@ -52,16 +52,51 @@
  "stars_collected": 111,
  "repo_stats": {
   "gitlab": {
-   "count": 25,
-   "starred": 24,
+   "count": 38,
+   "starred": 29,
    "maintenance": {
-    "활발": 24
+    "활발": 29
    },
    "top": [
+    {
+     "id": "43dc7f4ab2500260",
+     "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
+     "stars": 2488,
+     "maintenance": "활발",
+     "license": "MIT"
+    },
+    {
+     "id": "8ff758ac1d5e40eb",
+     "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
+     "stars": 1755,
+     "maintenance": "활발",
+     "license": "MIT"
+    },
+    {
+     "id": "de4b2dab339d69b7",
+     "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
+     "stars": 635,
+     "maintenance": "활발",
+     "license": "Other"
+    },
+    {
+     "id": "fe3bb0d913e27677",
+     "title": "로컬 Ollama 기반 MCP 멀티 호스트",
+     "stars": 22,
+     "maintenance": "활발",
+     "license": "MIT"
+    },
     {
      "id": "ac09bd2e1c0fbb29",
      "title": "온AI Work — 공무원 보고서 AI 작성 도구",
      "stars": 15,
+     "maintenance": "활발",
+     "license": "MIT"
+    },
+    {
+     "id": "1502d338e8e99382",
+     "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구",
+     "stars": 14,
      "maintenance": "활발",
      "license": "MIT"
     },
@@ -92,49 +127,14 @@
      "stars": 7,
      "maintenance": "활발",
      "license": "MIT"
-    },
-    {
-     "id": "d6c35b2999da8ca0",
-     "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱",
-     "stars": 6,
-     "maintenance": "활발",
-     "license": "명시 없음"
-    },
-    {
-     "id": "8c5458af8f13435d",
-     "title": "한글 AI 도우미 — 로컬 LLM 웹한글 보고서 확장",
-     "stars": 5,
-     "maintenance": "활발",
-     "license": "명시 없음"
-    },
-    {
-     "id": "c6a58cb9146d0694",
-     "title": "parknews — 국립공원 현안 뉴스 지도·일일 요약",
-     "stars": 5,
-     "maintenance": "활발",
-     "license": "명시 없음"
-    },
-    {
-     "id": "4ab9bf954cb48eb9",
-     "title": "AI 정부 실험실 프로젝트 현황 보드 공개",
-     "stars": 4,
-     "maintenance": "활발",
-     "license": "명시 없음"
-    },
-    {
-     "id": "112bf7dc576ed8aa",
-     "title": "공공행정 리서치 스킬 — 공식 근거를 검토용 보고서로 정리",
-     "stars": 4,
-     "maintenance": "활발",
-     "license": "MIT"
     }
    ]
   },
   "github": {
-   "count": 89,
-   "starred": 87,
+   "count": 84,
+   "starred": 82,
    "maintenance": {
-    "활발": 64,
+    "활발": 59,
     "정체": 12,
     "방치": 12
    },
@@ -145,27 +145,6 @@
      "stars": 7258,
      "maintenance": "활발",
      "license": "MIT"
-    },
-    {
-     "id": "43dc7f4ab2500260",
-     "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
-     "stars": 2488,
-     "maintenance": "활발",
-     "license": "MIT"
-    },
-    {
-     "id": "8ff758ac1d5e40eb",
-     "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
-     "stars": 1755,
-     "maintenance": "활발",
-     "license": "MIT"
-    },
-    {
-     "id": "de4b2dab339d69b7",
-     "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
-     "stars": 635,
-     "maintenance": "활발",
-     "license": "Other"
     },
     {
      "id": "75b9815de6b6dcf5",
@@ -208,18 +187,39 @@
      "stars": 255,
      "maintenance": "활발",
      "license": "Other"
+    },
+    {
+     "id": "e07be0004494e652",
+     "title": "한국 주식 분석 MCP",
+     "stars": 174,
+     "maintenance": "활발",
+     "license": "ISC"
+    },
+    {
+     "id": "edf9a8632ff74a99",
+     "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연",
+     "stars": 135,
+     "maintenance": "활발",
+     "license": "Apache-2.0"
+    },
+    {
+     "id": "81c14797b7aaafa0",
+     "title": "LexGuard MCP — 일반인용 법률 정보 조회",
+     "stars": 128,
+     "maintenance": "활발",
+     "license": "Other"
     }
    ]
   }
  },
  "license_distribution": {
   "MIT": 54,
-  "명시 없음": 44,
+  "명시 없음": 49,
   "Other": 14,
   "Apache-2.0": 10,
-  "AGPL-3.0": 2,
-  "ISC": 1,
-  "기타(비표준)": 1
+  "AGPL-3.0": 3,
+  "기타(비표준)": 2,
+  "ISC": 1
  },
  "license_by_source": {
   "github": {
@@ -231,8 +231,8 @@
    "stated": 4
   },
   "gitlab": {
-   "total": 22,
-   "stated": 8
+   "total": 29,
+   "stated": 10
   }
  },
  "mcp_stats": {
@@ -257,16 +257,46 @@
  },
  "mirror_pair_cases": [
   {
+   "id": "de4b2dab339d69b7",
+   "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
+   "github": "https://github.com/chrisryugj/Docufinder",
+   "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/Docufinder"
+  },
+  {
    "id": "d08bc7e9a69190af",
    "title": "내부망용 빠른 메모·구조화 앱",
    "github": "https://github.com/Milkbuttercheese2/What-I-have-to-do",
    "gitlab": "https://gitlab.aigov.go.kr/rhamasel3/What-I-have-to-do"
   },
   {
+   "id": "1502d338e8e99382",
+   "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구",
+   "github": "https://github.com/chrisryugj/edoc-summarizer",
+   "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/edoc-summarizer"
+  },
+  {
+   "id": "fe3bb0d913e27677",
+   "title": "로컬 Ollama 기반 MCP 멀티 호스트",
+   "github": "https://github.com/chrisryugj/ollama-mcp-host",
+   "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/ollama-mcp-host"
+  },
+  {
+   "id": "8ff758ac1d5e40eb",
+   "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
+   "github": "https://github.com/chrisryugj/kordoc",
+   "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/kordoc"
+  },
+  {
    "id": "112bf7dc576ed8aa",
    "title": "공공행정 리서치 스킬 — 공식 근거를 검토용 보고서로 정리",
    "github": "https://github.com/Kminer2053/public-sector-research-skill",
    "gitlab": "https://gitlab.aigov.go.kr/Kminer2053/public-sector-research-skill"
+  },
+  {
+   "id": "43dc7f4ab2500260",
+   "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
+   "github": "https://github.com/chrisryugj/korean-law-mcp",
+   "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/korean-law-mcp"
   }
  ]
 }

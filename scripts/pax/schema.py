@@ -18,7 +18,7 @@ OPTIONAL_FIELDS = frozenset(["case_url", "popularity", "region", "case_class",
                              "deployment_env", "n2sf_class", "funding_source",
                              "mcp_provider_agency", "mcp_official",
                              "adoption_budget", "adoption_period", "adoption_procurement",
-                             "adoption_security_review", "adoption_pia"])
+                             "adoption_security_review", "adoption_pia", "mirror_url"])
 SOURCES = frozenset(["threads", "kakao"])
 # 2026-08-19 재정비(로드맵 0-2): '기타' 85% 문제를 해소하는 10분류
 ORG_TYPES = frozenset(["중앙행정기관", "광역지자체", "기초지자체", "지방의회",
@@ -100,6 +100,11 @@ def validate_case(case: dict) -> list[str]:
         value = case.get(field)
         if value is not None and value not in allowed:
             errors.append(f"알 수 없는 {field}: {value}")
+
+    mirror_url = case.get("mirror_url")
+    if mirror_url is not None and (
+            not isinstance(mirror_url, str) or not mirror_url.startswith("https://")):
+        errors.append("mirror_url은 null 또는 https:// URL이어야 합니다")
 
     case_url = case.get("case_url")
     if case_url is not None and (

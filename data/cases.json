@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-20T21:35:34+09:00",
+ "updated_at": "2026-08-21T08:30:24+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -200,7 +200,8 @@
    "health_checked": "2026-08-21",
    "maintenance": "활발",
    "deployment_env": "행정망",
-   "stars": 635
+   "stars": 635,
+   "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/Docufinder"
   },
   {
    "date": "2026-04-01",
@@ -250,7 +251,8 @@
    "task_category": "기획·정책",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-21"
+   "health_checked": "2026-08-21",
+   "mirror_url": "https://gitlab.aigov.go.kr/hosung.seo/korea100_MOIS"
   },
   {
    "tags": [
@@ -1098,7 +1100,8 @@
    "maintenance": "활발",
    "model_dependency": "해외 오픈웨이트(로컬)",
    "deployment_env": "로컬 PC",
-   "stars": 14
+   "stars": 14,
+   "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/edoc-summarizer"
   },
   {
    "link": "https://www.threads.com/@gongpenclaw/post/DbiLzQ5gfjC",
@@ -1595,7 +1598,8 @@
    "link_ok": true,
    "health_checked": "2026-08-21",
    "maintenance": "활발",
-   "stars": 1755
+   "stars": 1755,
+   "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/kordoc"
   },
   {
    "source": "threads",
@@ -5001,6 +5005,176 @@
    "transition_stage": "기관 공식",
    "link_ok": true,
    "health_checked": "2026-08-21"
+  },
+  {
+   "org": "화성특례시 AI스마트전략실",
+   "tags": [
+    "신규자교육",
+    "지식창고",
+    "웹앱",
+    "재사용"
+   ],
+   "transition_stage": "기관 공식",
+   "source": "kakao",
+   "org_type": "기초지자체",
+   "date": "2026-07-17",
+   "title": "화성특례시 신규자 지식창고 — 규정 검증 카드 130장 웹앱 (원본)",
+   "task_category": "인사·복무",
+   "runtime_env": "브라우저만",
+   "collected_at": "2026-08-21",
+   "summary": "첫 출근부터 예산·계약·지출까지, 화성특례시 신규 공무원이 30초 안에 답을 찾도록 만든 단일 파일 웹앱. 규정으로 검증한 카드 130장과 누구나 묻고 답하는 '모두의 지식'으로 구성되며, 시 AI스마트전략실 빅데이터팀이 제작해 공공 깃랩에 공개했다. 광진구 포팅판이 파생될 만큼 재사용성이 검증된 원본 사례다.",
+   "region": "경기",
+   "case_url": "https://hskb.netlify.app",
+   "link": "https://gitlab.aigov.go.kr/hwanchulshin/hwaseong-kb",
+   "case_class": "기관 공식",
+   "id": "10f18583c9e56e12",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-21"
+  },
+  {
+   "org": "공직 현장(개인 개발)",
+   "tags": [
+    "개인정보",
+    "비식별화",
+    "기록물",
+    "오프라인"
+   ],
+   "source": "kakao",
+   "org_type": "공직 개인",
+   "date": "2026-08-18",
+   "title": "KID — 공공문서 개인정보 자동 검출·마스킹 데스크톱 도구",
+   "task_category": "감사·법무",
+   "runtime_env": "설치 필요",
+   "collected_at": "2026-08-21",
+   "summary": "기록물관리 전문요원(기록연구사)이 만든 개인정보 비식별화 도구. HWP·워드·엑셀·PDF·이미지에서 개인정보 15종을 자동 검출하면 검수자가 공개/가명/비공개를 판단해 마스킹된 PDF 사본을 만든다. 외부 서버 없이 PC 안에서 모든 처리가 끝나는 완전 오프라인 설계로, 정보공개·기록물 업무의 비식별화 부담을 줄인다. AGPL 오픈소스.",
+   "network_req": "폐쇄망 가능",
+   "link": "https://gitlab.aigov.go.kr/chanili2/KID",
+   "case_class": "개인 개발",
+   "id": "ea8ce2a3d003400f",
+   "license": "AGPL-3.0",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-21"
+  },
+  {
+   "org": "소방 119빅데이터팀",
+   "tags": [
+    "소방",
+    "민원",
+    "RAG",
+    "법령"
+   ],
+   "transition_stage": "부서 공유",
+   "source": "kakao",
+   "org_type": "공직 개인",
+   "date": "2026-08-14",
+   "title": "소방기술민원 답변생성기 — 법령·유사민원 검색과 참고 답변 초안",
+   "task_category": "민원",
+   "runtime_env": "서버 구축",
+   "collected_at": "2026-08-21",
+   "summary": "소방기술민원과 관련된 법령·유사 민원·참고자료를 검색하고 참고용 답변 초안을 생성하는 Streamlit 서비스. 관리자용 요청·승인·적재 도구를 갖춘 RAG 구조로, 공식 유권해석이나 법적 판단을 제공하지 않는다고 명시해 참고 도구의 경계를 분명히 했다. 소방 분야의 드문 공개 사례다.",
+   "link": "https://gitlab.aigov.go.kr/minhoon/sobangmin1",
+   "case_class": "개인 개발",
+   "id": "b3294bcc65e7f2e7",
+   "license": "기타(비표준)",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-21"
+  },
+  {
+   "org": "성남시(AI동호회)",
+   "tags": [
+    "SNS",
+    "자동화",
+    "브라우저확장",
+    "실적취합"
+   ],
+   "transition_stage": "부서 공유",
+   "source": "kakao",
+   "org_type": "공직 개인",
+   "date": "2026-07-28",
+   "title": "SN-SNS-Solution — 성남시 SNS 실적 취합 자동화 브라우저 확장",
+   "task_category": "데이터·통계",
+   "runtime_env": "설치 필요",
+   "collected_at": "2026-08-21",
+   "summary": "페이스북 프로필별 월간 게시물을 자동으로 훑어 날짜·직위·이름·공유/생산 구분·게시물 URL을 정리하고, 기존 SNS 실적 취합표에 바로 붙여넣게 해 주는 Chrome·Edge 확장. 성남시 AI동호회 리더와 청년인턴이 함께 만들어 활용 영상·설치 안내와 함께 공개했다. 수작업 취합 업무를 자동화한 기초지자체 협업 사례다.",
+   "region": "경기",
+   "link": "https://gitlab.aigov.go.kr/sajw1994/sn-sns-solution",
+   "case_class": "개인 개발",
+   "id": "9ed53fd6dad0561a",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-21"
+  },
+  {
+   "org": "공직 현장(개인 개발)",
+   "tags": [
+    "온나라",
+    "다크모드",
+    "브라우저확장",
+    "폐쇄망"
+   ],
+   "source": "kakao",
+   "org_type": "공직 개인",
+   "date": "2026-07-14",
+   "title": "온나라 리마스터 — 결재 화면 다크모드·가독성 개선 확장",
+   "task_category": "공통·범용",
+   "runtime_env": "설치 필요",
+   "collected_at": "2026-08-21",
+   "summary": "온나라 문서시스템 화면을 눈이 편한 저채도 다크모드와 또렷한 글꼴·벡터 아이콘으로 개선하는 크롬·엣지 확장. 폐쇄망에서 완전히 동작하도록 설계됐다. 전 공무원이 매일 보는 화면의 사용성 문제를 실무자가 직접 고친 사례로, 레거시 시스템 개선 수요의 실증이기도 하다.",
+   "network_req": "폐쇄망 가능",
+   "link": "https://gitlab.aigov.go.kr/ptlkiki/onnara-remaster",
+   "case_class": "개인 개발",
+   "id": "afc5c1316c86db8e",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-21"
+  },
+  {
+   "org": "공직 현장(개인 개발)",
+   "tags": [
+    "GIS",
+    "지도",
+    "시설물",
+    "전처리"
+   ],
+   "source": "kakao",
+   "org_type": "공직 개인",
+   "date": "2026-07-07",
+   "title": "GeoPoint Editor — 엑셀 위경도·주소를 지도에서 편집하는 GIS 도구",
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "collected_at": "2026-08-21",
+   "summary": "위경도나 주소가 담긴 엑셀·CSV를 업로드해 지도 위에서 조회·편집하고 다시 내려받는 웹 GIS 도구. 위경도 컬럼 자동 인식과 주소 지오코딩을 지원하며, 순수 HTML/JS 단일 파일로 동작해 설치 부담이 없다. 시설물 위치 정보 확인·전처리라는 국토교통 실무 수요에서 나온 도구다.",
+   "link": "https://gitlab.aigov.go.kr/levis7251/gis_editor",
+   "case_class": "개인 개발",
+   "id": "0d6d0bf3edf2b438",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-21"
+  },
+  {
+   "org": "행정안전부 AI실험실",
+   "tags": [
+    "예산",
+    "마크다운",
+    "HWP변환",
+    "공공데이터"
+   ],
+   "transition_stage": "기관 공식",
+   "source": "kakao",
+   "org_type": "중앙행정기관",
+   "date": "2026-07-01",
+   "title": "행안부 세출예산서 마크다운 저장소 — 나라예산 한눈에의 출발점",
+   "task_category": "회계·정산",
+   "runtime_env": "브라우저만",
+   "collected_at": "2026-08-21",
+   "summary": "행정안전부의 2023~2026년 세출예산서 한글파일을 마크다운으로 변환해 웹에서 사업명·부서명으로 검색·조회할 수 있게 만든 저장소. 이후 62개 중앙관서 8,500건으로 확장된 '나라예산 한눈에'(central_budget)의 출발점이 된 자매 저장소로, HWP 예산서를 AI가 읽을 수 있는 형태로 바꾸는 접근의 원형이다.",
+   "link": "https://gitlab.aigov.go.kr/AILab_Manager/moisbudget",
+   "case_class": "기관 공식",
+   "id": "72209c4dc90a2188",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-21"
   }
  ]
 }

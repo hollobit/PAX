@@ -158,6 +158,9 @@ def main():
         if c.get("link"):
             label = "원문 게시물" if "threads.com" in c["link"] else "공유 링크"
             links.append(f'<a href="{esc(c["link"])}" target="_blank" rel="noopener">{label}</a>')
+        if c.get("mirror_url"):
+            mlabel = "공공 깃랩 미러" if "gitlab.aigov" in c["mirror_url"] else "미러 저장소"
+            links.append(f'<a href="{esc(c["mirror_url"])}" target="_blank" rel="noopener">{mlabel}</a>')
         links.append(f'<a href="../?case={esc(c["id"])}">아카이브에서 보기</a>')
         page = TEMPLATE.format(
             base=BASE, cid=esc(c["id"]), title=esc(c["title"]),

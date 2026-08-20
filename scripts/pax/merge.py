@@ -53,7 +53,8 @@ def normalize_url(url) -> str | None:
 def case_urls(case: dict):
     """중복 판정에 쓰는 사례의 URL 집합 — link와 case_url을 구분 없이 본다."""
     return {u for u in (normalize_url(case.get("link")),
-                        normalize_url(case.get("case_url"))) if u}
+                        normalize_url(case.get("case_url")),
+                        normalize_url(case.get("mirror_url"))) if u}
 
 
 def merge_cases(existing_doc: dict, candidates: list[dict],

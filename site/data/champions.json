@@ -1,5 +1,5 @@
 {
- "total": 91,
+ "total": 97,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -1346,6 +1346,30 @@
    }
   },
   {
+   "id": "gitlab:ptlkiki",
+   "name": "강기륜",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "ptlkiki",
+     "url": "https://gitlab.aigov.go.kr/ptlkiki"
+    }
+   ],
+   "affiliation": {
+    "value": "고용노동부",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "afc5c1316c86db8e"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
    "id": "github:kwakseongjae",
    "name": "곽성재",
    "accounts": [
@@ -1386,10 +1410,35 @@
    },
    "cases": [
     "a8492663acf67b99",
-    "4ab9bf954cb48eb9"
+    "4ab9bf954cb48eb9",
+    "72209c4dc90a2188"
    ],
    "stats": {
-    "case_count": 2,
+    "case_count": 3,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:levis7251",
+   "name": "김남수",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "levis7251",
+     "url": "https://gitlab.aigov.go.kr/levis7251"
+    }
+   ],
+   "affiliation": {
+    "value": "광양시",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "0d6d0bf3edf2b438"
+   ],
+   "stats": {
+    "case_count": 1,
     "top_ax": 1,
     "stars": 0
    }
@@ -1692,6 +1741,30 @@
    },
    "cases": [
     "9070c4f923623855"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:sajw1994",
+   "name": "사진우",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "sajw1994",
+     "url": "https://gitlab.aigov.go.kr/sajw1994"
+    }
+   ],
+   "affiliation": {
+    "value": "성남시청",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "9ed53fd6dad0561a"
    ],
    "stats": {
     "case_count": 1,
@@ -2034,6 +2107,26 @@
    }
   },
   {
+   "id": "gitlab:chanili2",
+   "name": "찬일 문",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "chanili2",
+     "url": "https://gitlab.aigov.go.kr/chanili2"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "ea8ce2a3d003400f"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:pilddong",
    "name": "최필선",
    "accounts": [
@@ -2055,6 +2148,30 @@
    ],
    "stats": {
     "case_count": 3,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:minhoon",
+   "name": "한민훈",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "minhoon",
+     "url": "https://gitlab.aigov.go.kr/minhoon"
+    }
+   ],
+   "affiliation": {
+    "value": "소방청",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "b3294bcc65e7f2e7"
+   ],
+   "stats": {
+    "case_count": 1,
     "top_ax": 2,
     "stars": 0
    }
@@ -2087,6 +2204,26 @@
     "listed_as": "소방청 한종훈 — 분석관",
     "source_name": "AI 챔피언 기록 저장소 (공공 AI 챔피언 명예의 전당)",
     "source_url": "https://public-ax.kr/channels/L2NoYW5uZWxzLzIxNTI3/pages/aichampionhonorship"
+   }
+  },
+  {
+   "id": "gitlab:hwanchulshin",
+   "name": "환철 신",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "hwanchulshin",
+     "url": "https://gitlab.aigov.go.kr/hwanchulshin"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "10f18583c9e56e12"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
    }
   }
  ],

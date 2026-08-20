@@ -72,6 +72,8 @@ JSON 리스트로 저장한다:
 - title: 한 줄 제목 (직접 작성)
 - summary: 2~3문장, 300자 이내 요약 (닉네임·인용부호·연락처 금지, 재작성)
 - tags: 분야·기술 태그 2~4개 (예: 민원, 문서자동화, LLM, RAG, 챗봇, 데이터분석)
+- mirror_url (선택): link·case_url이 모두 찬 사례의 세 번째 주소 슬롯 —
+  주로 GitHub↔공공 깃랩 미러 병기에 쓴다.
 - case_url (선택): 게시물/메시지에서 확인한 사례 대상 URL(https).
   같은 도구가 깃허브와 정부 공공 깃랩(gitlab.aigov.go.kr) 양쪽에 있으면
   한쪽을 link, 다른 쪽을 case_url에 담아 두 주소를 모두 제공한다(미러 저장소 병기 규칙). 있으면 사이트가
@@ -99,6 +101,9 @@ python3 scripts/build_case_pages.py       # 사례별 정적 상세 페이지 �
 ### 주간 점검 (월요일 오전 실행분에서만)
 - `python3 scripts/check_health.py` — 전체 사례 링크 생존·유지보수 상태 재점검 (약 3분).
   끊긴 링크가 새로 나오면 log에 기록한다.
+- 공공 깃랩 스타 조사: `https://gitlab.aigov.go.kr/api/v4/projects?order_by=star_count&sort=desc&per_page=100`
+  을 curl로 조회해 스타 3+ 중 미등재(전체 사례의 link/case_url/mirror_url과 대조)를 찾는다.
+  기등재 사례의 미러면 mirror_url로 병기하고, 순수 신규는 사용자에게 후보 목록으로 보고한다.
 
 ## 6. 커밋·푸시
 ```bash
