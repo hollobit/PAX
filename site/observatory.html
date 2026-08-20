@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>관측소 — 공공 AX 지수·데이터 접근성·깃랩 브릿지</title>
+  <meta name="description" content="공공 AX 지수(분기), 공공데이터 AI 접근성 매트릭스, 공공 깃랩-GitHub 브릿지 관측">
+  <link rel="canonical" href="https://hollobit.github.io/PAX/observatory.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="관측소 — 공공 AX 지수">
+  <meta property="og:description" content="AX 성숙도 분포, 국산·로컬 모델 채택률, 데이터 AI 접근성, 공공 깃랩 개방율의 분기 관측">
+  <meta property="og:url" content="https://hollobit.github.io/PAX/observatory.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">PUBLIC SECTOR AX OBSERVATORY · 관측소</p>
+    <h1>공공 AX 지수</h1>
+    <p class="tagline">일관된 척도의 분기 반복 관측 — 정부가 자기 자료로 만들 수 없는 숫자</p>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="./">사례 아카이브</a>
+      <a href="dashboard.html">AX 평가</a>
+      <a href="observatory.html" aria-current="page">관측소</a>
+      <a href="gap-map.html">격차 지도</a>
+      <a href="playbook.html">전이 플레이북</a>
+      <a href="champions.html">챔피언</a>
+    </nav>
+    <p class="sample-note">모든 지표는 오픈채팅·Threads 자기선택 표본에 기반하며 전국 공공부문 전체를 대표하지 않습니다.</p>
+  </header>
+  <main>
+    <section class="obs-section" aria-label="공공 AX 지수">
+      <h2 class="obs-heading">분기 지수 <span id="obs-quarter" class="obs-quarter"></span></h2>
+      <div id="index-cards" class="obs-cards"></div>
+      <p class="obs-note">분기 말 데이터 버전은 <a href="https://github.com/hollobit/PAX/tree/main/snapshots">snapshots/</a>에 고정됩니다.
+        세 분기가 쌓이면 추이 차트가 이 자리에 표시됩니다.</p>
+    </section>
+
+    <section class="obs-section" aria-label="데이터 AI 접근성">
+      <h2 class="obs-heading">공공데이터 AI 접근성 매트릭스</h2>
+      <p class="obs-desc">고가치 공공데이터 도메인별로 커뮤니티·공식 MCP가 존재하는지의 관측 —
+        풀뿌리 MCP는 "AI가 쓰고 싶은 데이터"의 수요 순위표입니다.</p>
+      <div class="table-wrap"><table class="obs-table" id="data-matrix">
+        <thead><tr><th scope="col">데이터 도메인</th><th scope="col">MCP 관측</th><th scope="col">사례</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+      <p class="obs-note">데이터를 쓰다 결함(API 오류·문서 불일치·형식 문제)을 발견하셨나요?
+        <a href="https://github.com/hollobit/PAX/issues/new?labels=data-defect&title=%5B%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B2%B0%ED%95%A8%5D%20">결함 리포트</a>로
+        알려주시면 기관별 분기 리포트로 환류합니다. 해결 실적이 확인된 기관은 우선 표시합니다.</p>
+    </section>
+
+    <section class="obs-section" aria-label="공공 깃랩 브릿지">
+      <h2 class="obs-heading">공공 깃랩 ↔ GitHub 브릿지</h2>
+      <p class="obs-desc">내부망에서 만들어진 도구가 외부 생태계로 공개되는 비율 —
+        정부가 스스로 집계하기 어려운 개방성 지표입니다.</p>
+      <div id="bridge-cards" class="obs-cards"></div>
+      <div class="table-wrap"><table class="obs-table" id="mirror-table">
+        <thead><tr><th scope="col">미러 쌍 사례</th><th scope="col">GitHub</th><th scope="col">공공 깃랩</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>모두의 공공AX 사례 아카이브 · <a href="./">아카이브로 돌아가기</a></p>
+  </footer>
+  <script src="observatory.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
- "evaluated_at": "2026-08-20",
+ "evaluated_at": "2026-08-21",
  "total": 188,
  "cases": [
   {
@@ -30,7 +30,10 @@
    "post_url": "https://www.threads.com/@dev_orijin/post/Dbk1dtEnT3k",
    "service_url": "https://www.ailearn4all.kr/",
    "tool_type": "플랫폼·포털",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 2,
@@ -60,7 +63,10 @@
    "post_url": "https://www.threads.com/@gov_ai.builder/post/Dawsl0VEZSD",
    "service_url": "https://www.etnews.com/20260710000114",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E·G2C 혼합"
+   "audience": "G2E·G2C 혼합",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 3,
@@ -90,7 +96,10 @@
    "post_url": "https://www.threads.com/@orthodox_tauros/post/DXmJA6IDykL",
    "service_url": "",
    "tool_type": "데스크톱 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 4,
@@ -120,7 +129,10 @@
    "post_url": "https://www.threads.com/@chobu62/post/DblOFkKD8U_",
    "service_url": "",
    "tool_type": "도구·기타",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 5,
@@ -150,7 +162,10 @@
    "post_url": "https://www.threads.com/@chobu62/post/DbQJBY5D3hI",
    "service_url": "https://github.com/obundh/gonggong-ax-local",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 6,
@@ -180,7 +195,10 @@
    "post_url": "https://www.threads.com/@chobu62/post/DbQOCCaD0vM",
    "service_url": "https://github.com/obundh/gonggong-ax-local-3",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 7,
@@ -210,7 +228,10 @@
    "post_url": "https://www.threads.com/@publicai_79/post/DYbE18jj6kV",
    "service_url": "",
    "tool_type": "도구·기타",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 8,
@@ -240,7 +261,10 @@
    "post_url": "https://www.threads.com/@chris_gomdori/post/DZ49_V9DfJ_",
    "service_url": "https://github.com/chrisryugj/Docufinder",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 9,
@@ -270,7 +294,10 @@
    "post_url": "https://www.threads.com/@chris_gomdori/post/DWlzH2MicNK",
    "service_url": "",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 10,
@@ -300,7 +327,10 @@
    "post_url": "https://www.threads.com/@gongpenclaw/post/DaoePfGgXdv",
    "service_url": "https://hosungseo.github.io/korea100/",
    "tool_type": "대시보드·분석",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 11,
@@ -330,7 +360,10 @@
    "post_url": "",
    "service_url": "",
    "tool_type": "도입·정책",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 12,
@@ -360,7 +393,10 @@
    "post_url": "",
    "service_url": "https://icaretok.nemc.or.kr/pec/",
    "tool_type": "웹 서비스",
-   "audience": "G2E·G2C 혼합"
+   "audience": "G2E·G2C 혼합",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 13,
@@ -390,7 +426,10 @@
    "post_url": "",
    "service_url": "https://privacy-law-reader.vercel.app/",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 14,
@@ -420,7 +459,10 @@
    "post_url": "",
    "service_url": "https://gyohaeng.pages.dev/workflow-map",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 15,
@@ -450,7 +492,10 @@
    "post_url": "",
    "service_url": "https://github.com/boam79/public-data-api-finder",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 16,
@@ -480,7 +525,10 @@
    "post_url": "",
    "service_url": "https://github.com/Kminer2053/demo-video-skill",
    "tool_type": "AI 스킬·에이전트",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 17,
@@ -510,7 +558,10 @@
    "post_url": "",
    "service_url": "https://lexdiff.gomdori.app",
    "tool_type": "대시보드·분석",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 18,
@@ -540,7 +591,10 @@
    "post_url": "",
    "service_url": "https://gongmun.com",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 19,
@@ -570,7 +624,10 @@
    "post_url": "",
    "service_url": "https://gyohaeng.pages.dev",
    "tool_type": "플랫폼·포털",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 20,
@@ -600,7 +657,10 @@
    "post_url": "",
    "service_url": "https://github.com/Milkbuttercheese2/What-I-have-to-do",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 21,
@@ -630,7 +690,10 @@
    "post_url": "",
    "service_url": "https://brojun.kr/sdhg",
    "tool_type": "데스크톱 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 22,
@@ -660,7 +723,10 @@
    "post_url": "",
    "service_url": "https://github.com/galvaomica396/Nothing",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 23,
@@ -690,7 +756,10 @@
    "post_url": "",
    "service_url": "https://researchfellow.vercel.app",
    "tool_type": "AI 스킬·에이전트",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 24,
@@ -720,7 +789,10 @@
    "post_url": "",
    "service_url": "https://seomu-work-hub.tgtg4840.chatgpt.site/",
    "tool_type": "플랫폼·포털",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 25,
@@ -750,7 +822,10 @@
    "post_url": "",
    "service_url": "https://github.com/pon00050/minwon-draft",
    "tool_type": "AI 스킬·에이전트",
-   "audience": "G2C 대국민"
+   "audience": "G2C 대국민",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 26,
@@ -780,7 +855,10 @@
    "post_url": "",
    "service_url": "https://github.com/koul777/Public-Regulation-MCP-Builder",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 27,
@@ -810,7 +888,10 @@
    "post_url": "",
    "service_url": "https://tgtg4840-byte.github.io/seomuland/",
    "tool_type": "플랫폼·포털",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 28,
@@ -840,7 +921,10 @@
    "post_url": "",
    "service_url": "https://github.com/koul777/VHLookup",
    "tool_type": "데스크톱 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 29,
@@ -870,7 +954,10 @@
    "post_url": "",
    "service_url": "https://github.com/koul777/clickguide-local-private",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 30,
@@ -900,7 +987,10 @@
    "post_url": "",
    "service_url": "https://dexa.art/mice-safety/",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 31,
@@ -930,7 +1020,10 @@
    "post_url": "",
    "service_url": "https://원클릭업무포털.com",
    "tool_type": "플랫폼·포털",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 32,
@@ -960,7 +1053,10 @@
    "post_url": "",
    "service_url": "https://github.com/koul777/NCScope",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 33,
@@ -990,7 +1086,10 @@
    "post_url": "",
    "service_url": "https://klocal.solvonluchs.com/",
    "tool_type": "플랫폼·포털",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 34,
@@ -1020,7 +1119,10 @@
    "post_url": "",
    "service_url": "https://alio-compare.vercel.app",
    "tool_type": "대시보드·분석",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 35,
@@ -1050,7 +1152,10 @@
    "post_url": "",
    "service_url": "https://excel.choshg.com/",
    "tool_type": "데스크톱 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 36,
@@ -1080,7 +1185,10 @@
    "post_url": "",
    "service_url": "https://amnotyoung.github.io/overseas-procurement-100/",
    "tool_type": "웹 서비스",
-   "audience": "G2B 기업"
+   "audience": "G2B 기업",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 37,
@@ -1110,7 +1218,10 @@
    "post_url": "",
    "service_url": "https://9k1.fun",
    "tool_type": "대시보드·분석",
-   "audience": "G2C 대국민"
+   "audience": "G2C 대국민",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 38,
@@ -1140,7 +1251,10 @@
    "post_url": "",
    "service_url": "https://choshg.com",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 39,
@@ -1170,7 +1284,10 @@
    "post_url": "https://www.threads.com/@gongpenclaw/post/DY7f9jPAend",
    "service_url": "https://mobile.newsis.com/view/NISX20260515_0003631882",
    "tool_type": "도입·정책",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 40,
@@ -1200,7 +1317,10 @@
    "post_url": "https://www.threads.com/@chris_gomdori/post/DaS4hW2CW6n",
    "service_url": "https://mcp.gomdori.app",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 41,
@@ -1230,7 +1350,10 @@
    "post_url": "https://www.threads.com/@publicai_79/post/DY4s0B9jLVm",
    "service_url": "",
    "tool_type": "도입·정책",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 42,
@@ -1260,7 +1383,10 @@
    "post_url": "https://www.threads.com/@koyou_ax/post/DacnKc9D_5i",
    "service_url": "https://github.com/Kminer2053/gongmuwon",
    "tool_type": "AI 스킬·에이전트",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 43,
@@ -1290,7 +1416,10 @@
    "post_url": "https://www.threads.com/@chris_gomdori/post/DbW8LhniROp",
    "service_url": "https://chris.gomdori.app/newbgj",
    "tool_type": "웹 서비스",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 44,
@@ -1320,7 +1449,10 @@
    "post_url": "https://www.threads.com/@koyou_ax/post/DaLJpOljpV6",
    "service_url": "",
    "tool_type": "플랫폼·포털",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 45,
@@ -1350,7 +1482,10 @@
    "post_url": "https://www.threads.com/@chris_gomdori/post/DbaDIR3DZWE",
    "service_url": "https://github.com/chrisryugj/edoc-summarizer",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 46,
@@ -1380,7 +1515,10 @@
    "post_url": "https://www.threads.com/@gongpenclaw/post/DbiLzQ5gfjC",
    "service_url": "https://www.data.go.kr/",
    "tool_type": "플랫폼·포털",
-   "audience": "G2E·G2C 혼합"
+   "audience": "G2E·G2C 혼합",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 47,
@@ -1410,7 +1548,10 @@
    "post_url": "",
    "service_url": "https://github.com/djfksjd/ir-search",
    "tool_type": "AI 스킬·에이전트",
-   "audience": "G2B 기업"
+   "audience": "G2B 기업",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 48,
@@ -1440,7 +1581,10 @@
    "post_url": "",
    "service_url": "https://now-paju.pajulab.workers.dev/",
    "tool_type": "대시보드·분석",
-   "audience": "G2C 대국민"
+   "audience": "G2C 대국민",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 49,
@@ -1470,7 +1614,10 @@
    "post_url": "",
    "service_url": "https://jocohunt.com/p/7uubvp1t",
    "tool_type": "대시보드·분석",
-   "audience": "G2C 대국민"
+   "audience": "G2C 대국민",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 50,
@@ -1500,7 +1647,10 @@
    "post_url": "",
    "service_url": "https://somodus.com/a/29ee7eab2c28c1d1dc2eef35425ccfc3",
    "tool_type": "대시보드·분석",
-   "audience": "G2C 대국민"
+   "audience": "G2C 대국민",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 51,
@@ -1530,7 +1680,10 @@
    "post_url": "",
    "service_url": "https://somodus.com/a/266ae6e5a62ab845b736920033636b02",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 52,
@@ -1560,7 +1713,10 @@
    "post_url": "",
    "service_url": "https://github.com/hike-lab/public-data-lens",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 53,
@@ -1590,7 +1746,10 @@
    "post_url": "",
    "service_url": "https://hollobit.github.io/K-AI2026/",
    "tool_type": "대시보드·분석",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 54,
@@ -1620,7 +1779,10 @@
    "post_url": "",
    "service_url": "https://hollobit.github.io/KAIB2026/",
    "tool_type": "대시보드·분석",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 55,
@@ -1650,7 +1812,10 @@
    "post_url": "",
    "service_url": "https://hollobit.github.io/K-GAPI/",
    "tool_type": "대시보드·분석",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 56,
@@ -1680,7 +1845,10 @@
    "post_url": "",
    "service_url": "https://hollobit.github.io/GAPI2/",
    "tool_type": "대시보드·분석",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 57,
@@ -1710,7 +1878,10 @@
    "post_url": "",
    "service_url": "https://chris.gomdori.app/korea100",
    "tool_type": "대시보드·분석",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 58,
@@ -1740,7 +1911,10 @@
    "post_url": "",
    "service_url": "https://github.com/obundh/gonggong-ax-local-6",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 59,
@@ -1770,7 +1944,10 @@
    "post_url": "",
    "service_url": "https://github.com/chrisryugj/ollama-mcp-host",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 60,
@@ -1800,7 +1977,10 @@
    "post_url": "",
    "service_url": "https://github.com/chrisryugj/gjdong",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 61,
@@ -1830,7 +2010,10 @@
    "post_url": "",
    "service_url": "https://github.com/obundh/gonggong-ax-local-7",
    "tool_type": "데스크톱 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 62,
@@ -1860,7 +2043,10 @@
    "post_url": "",
    "service_url": "https://ax360.kr/",
    "tool_type": "플랫폼·포털",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 63,
@@ -1890,7 +2076,10 @@
    "post_url": "",
    "service_url": "https://openapi.hrdkorea.or.kr/mcp.html",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E·G2C 혼합"
+   "audience": "G2E·G2C 혼합",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 64,
@@ -1920,7 +2109,10 @@
    "post_url": "https://www.threads.com/@chobu62/post/DbdWP6hj0TU",
    "service_url": "https://github.com/obundh/gonggong-ax-local-5",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 65,
@@ -1950,7 +2142,10 @@
    "post_url": "https://www.threads.com/@chris_gomdori/post/DarG1dOE70_",
    "service_url": "https://github.com/chrisryugj/kordoc",
    "tool_type": "브라우저 확장",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 66,
@@ -1980,7 +2175,10 @@
    "post_url": "https://www.threads.com/@spatiumliberum/post/DXBGL0bGfPe",
    "service_url": "https://msitsti2025.github.io/stlaws/",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E·G2C 혼합"
+   "audience": "G2E·G2C 혼합",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 67,
@@ -2010,7 +2208,10 @@
    "post_url": "",
    "service_url": "https://jachiai.kr",
    "tool_type": "AI 스킬·에이전트",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 68,
@@ -2040,7 +2241,10 @@
    "post_url": "",
    "service_url": "https://axboard.aigov.go.kr/",
    "tool_type": "대시보드·분석",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 69,
@@ -2070,7 +2274,10 @@
    "post_url": "",
    "service_url": "https://www.govinfo.gov/features/mcp-public-preview",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 70,
@@ -2100,7 +2307,10 @@
    "post_url": "",
    "service_url": "https://www.singstat.gov.sg/data-tools-services/singstat-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 71,
@@ -2130,7 +2340,10 @@
    "post_url": "https://www.threads.com/@milkbuttercheese/post/Dbvsk_8king",
    "service_url": "https://github.com/Milkbuttercheese2/Which-article-was-it-public",
    "tool_type": "데스크톱 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 72,
@@ -2160,7 +2373,10 @@
    "post_url": "",
    "service_url": "https://github.com/spring-ai-community/spring-ai-playground",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 73,
@@ -2190,7 +2406,10 @@
    "post_url": "",
    "service_url": "",
    "tool_type": "도구·기타",
-   "audience": "G2E·G2C 혼합"
+   "audience": "G2E·G2C 혼합",
+   "p": "P2 시스템 쓰기(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 74,
@@ -2220,7 +2439,10 @@
    "post_url": "https://www.threads.com/@chris_gomdori/post/DZ10EToCbZ2",
    "service_url": "https://github.com/chrisryugj/korean-patent-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 75,
@@ -2250,7 +2472,10 @@
    "post_url": "https://www.threads.com/@stormleehj/post/DUWuyUykurq",
    "service_url": "https://github.com/Koomook/data-go-mcp-servers",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 76,
@@ -2280,7 +2505,10 @@
    "post_url": "",
    "service_url": "https://yongjaeleee-financial-sandbox-similar-case-poc.hf.space/",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 77,
@@ -2310,7 +2538,10 @@
    "post_url": "",
    "service_url": "https://gitlab.aigov.go.kr/anms0214/gongedu",
    "tool_type": "웹 서비스",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 78,
@@ -2340,7 +2571,10 @@
    "post_url": "https://www.threads.com/@gongpenclaw/post/Dbn8PbNgca4",
    "service_url": "https://hosungseo.github.io/gonpunclaw-population-decline-realestate/",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 79,
@@ -2370,7 +2604,10 @@
    "post_url": "https://www.threads.com/@hakdol.senvip/post/DbrwUd7IPAN",
    "service_url": "https://gitlab.aigov.go.kr/explore/projects/active",
    "tool_type": "도입·정책",
-   "audience": "G2E·G2C 혼합"
+   "audience": "G2E·G2C 혼합",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 80,
@@ -2400,7 +2637,10 @@
    "post_url": "",
    "service_url": "https://atipsum.lovable.app/",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 81,
@@ -2430,7 +2670,10 @@
    "post_url": "",
    "service_url": "https://playmcp.kakao.com/",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P2 시스템 쓰기(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 82,
@@ -2460,7 +2703,10 @@
    "post_url": "",
    "service_url": "https://lidge-jun.github.io/design-isms/",
    "tool_type": "플랫폼·포털",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 83,
@@ -2490,7 +2736,10 @@
    "post_url": "",
    "service_url": "https://how-did-they-do-all-that-procurement.dali-n-narumi.workers.dev/",
    "tool_type": "웹 서비스",
-   "audience": "G2B 기업"
+   "audience": "G2B 기업",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 84,
@@ -2520,7 +2769,10 @@
    "post_url": "",
    "service_url": "https://github.com/Milkbuttercheese2/procurement-system-100",
    "tool_type": "오픈소스 도구",
-   "audience": "G2B 기업"
+   "audience": "G2B 기업",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 85,
@@ -2550,7 +2802,10 @@
    "post_url": "",
    "service_url": "https://hosungseo.github.io/public-data-portal-intelligence/",
    "tool_type": "플랫폼·포털",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 86,
@@ -2580,7 +2835,10 @@
    "post_url": "",
    "service_url": "https://github.com/Kminer2053/public-sector-research-skill",
    "tool_type": "AI 스킬·에이전트",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 87,
@@ -2610,7 +2868,10 @@
    "post_url": "",
    "service_url": "https://banner.choshg.com/",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 88,
@@ -2640,7 +2901,10 @@
    "post_url": "",
    "service_url": "https://www.gwangjin.go.kr/portal/bbs/B0000002/view.do?nttId=6617521&menuNo=200191",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 89,
@@ -2670,7 +2934,10 @@
    "post_url": "",
    "service_url": "https://www.moleg.go.kr/board.es?mid=a10501000000&bid=0048&act=view&list_no=152980",
    "tool_type": "도입·정책",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 90,
@@ -2700,7 +2967,10 @@
    "post_url": "",
    "service_url": "https://seum8660.github.io/workflow/%ED%95%99%EA%B5%90%EC%8B%9C%EC%84%A4%20%EC%9B%8C%ED%81%AC%ED%94%8C%EB%A1%9C%EC%9A%B0%20%EC%9D%B8%ED%8A%B8%EB%A1%9C.dc.html",
    "tool_type": "플랫폼·포털",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 91,
@@ -2730,7 +3000,10 @@
    "post_url": "https://www.threads.com/@eumpaeumpa____/post/Db2_Rw6Aatd",
    "service_url": "https://github.com/kkhinlove-design/travel-expense-automation-kr",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 92,
@@ -2760,7 +3033,10 @@
    "post_url": "",
    "service_url": "https://github.com/youjin8812-hub/seoul-opendata-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 93,
@@ -2790,7 +3066,10 @@
    "post_url": "",
    "service_url": "https://github.com/seum8660/pumsem",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 94,
@@ -2820,7 +3099,10 @@
    "post_url": "https://www.threads.com/@chobu62/post/Db735IZj7vM",
    "service_url": "https://github.com/obundh/gonggong-disaster-series-rescue79",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 95,
@@ -2850,7 +3132,10 @@
    "post_url": "",
    "service_url": "https://github.com/snaiws/DART-mcp-server",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 96,
@@ -2880,7 +3165,10 @@
    "post_url": "",
    "service_url": "https://github.com/2geonhyup/dart-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 97,
@@ -2910,7 +3198,10 @@
    "post_url": "",
    "service_url": "https://github.com/NomaDamas/k-skill",
    "tool_type": "플랫폼·포털",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 98,
@@ -2940,7 +3231,10 @@
    "post_url": "",
    "service_url": "https://github.com/lovelyquality/korail-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 99,
@@ -2970,7 +3264,10 @@
    "post_url": "",
    "service_url": "https://github.com/Dayoooun/korea-stats-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 100,
@@ -3000,7 +3297,10 @@
    "post_url": "",
    "service_url": "https://github.com/redoxnet/mcp-lsopenapi",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 101,
@@ -3030,7 +3330,10 @@
    "post_url": "",
    "service_url": "https://github.com/SeoNaRu/lexguard-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 102,
@@ -3060,7 +3363,10 @@
    "post_url": "",
    "service_url": "https://github.com/modu-ai/moai-cowork",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 103,
@@ -3090,7 +3396,10 @@
    "post_url": "",
    "service_url": "https://github.com/chrisryugj/korean-dart-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 104,
@@ -3120,7 +3429,10 @@
    "post_url": "",
    "service_url": "https://github.com/SeoNaRu/korean-law-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 105,
@@ -3150,7 +3462,10 @@
    "post_url": "",
    "service_url": "https://github.com/finalchild/law-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 106,
@@ -3180,7 +3495,10 @@
    "post_url": "",
    "service_url": "https://github.com/sharebook-kr/pykrx-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 107,
@@ -3210,7 +3528,10 @@
    "post_url": "",
    "service_url": "https://github.com/ratelworks/agent-safety-oss",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 108,
@@ -3240,7 +3561,10 @@
    "post_url": "",
    "service_url": "https://github.com/chrisryugj/archhub-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 109,
@@ -3270,7 +3594,10 @@
    "post_url": "",
    "service_url": "https://github.com/SongT-50/korean-public-data-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 110,
@@ -3300,7 +3627,10 @@
    "post_url": "",
    "service_url": "https://github.com/obundh/korea-public-data-catalog-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 111,
@@ -3330,7 +3660,10 @@
    "post_url": "https://www.threads.com/@chris_gomdori/post/DWbsucHCb2X",
    "service_url": "https://github.com/chrisryugj/korean-law-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P2 시스템 쓰기(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 112,
@@ -3360,7 +3693,10 @@
    "post_url": "",
    "service_url": "https://github.com/hollobit/assembly-api-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 113,
@@ -3390,7 +3726,10 @@
    "post_url": "",
    "service_url": "https://github.com/ohhan777/korea_weather",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 114,
@@ -3420,7 +3759,10 @@
    "post_url": "",
    "service_url": "https://github.com/Datajang/narajangteo_mcp_server",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 115,
@@ -3450,7 +3792,10 @@
    "post_url": "",
    "service_url": "https://github.com/nine-hundred/naramarket-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 116,
@@ -3480,7 +3825,10 @@
    "post_url": "",
    "service_url": "https://github.com/alphago2580/naramarketmcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2B 기업"
+   "audience": "G2B 기업",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 117,
@@ -3510,7 +3858,10 @@
    "post_url": "",
    "service_url": "https://github.com/isnow890/data4library-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 118,
@@ -3540,7 +3891,10 @@
    "post_url": "",
    "service_url": "https://github.com/wintenboy/law-ontology-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 119,
@@ -3570,7 +3924,10 @@
    "post_url": "",
    "service_url": "https://github.com/ChangooLee/mcp-kr-legislation",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 120,
@@ -3600,7 +3957,10 @@
    "post_url": "",
    "service_url": "https://github.com/slicequeue/k-mfds-fooddb-mcp-server",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 121,
@@ -3630,7 +3990,10 @@
    "post_url": "",
    "service_url": "https://github.com/syleedlabs/deal-locator-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 122,
@@ -3660,7 +4023,10 @@
    "post_url": "",
    "service_url": "https://github.com/tae0y/real-estate-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 123,
@@ -3690,7 +4056,10 @@
    "post_url": "",
    "service_url": "https://github.com/leokim90/gov-data-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2B 기업"
+   "audience": "G2B 기업",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 124,
@@ -3720,7 +4089,10 @@
    "post_url": "",
    "service_url": "https://github.com/boam79/gov_support_mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2B 기업"
+   "audience": "G2B 기업",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 125,
@@ -3750,7 +4122,10 @@
    "post_url": "",
    "service_url": "https://github.com/jaykim429/korea-statistic-MCP-cginside",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 126,
@@ -3780,7 +4155,10 @@
    "post_url": "",
    "service_url": "https://github.com/hjsh200219/korea-public-data-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 127,
@@ -3810,7 +4188,10 @@
    "post_url": "",
    "service_url": "https://github.com/emceeKim/korea-finance-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 128,
@@ -3840,7 +4221,10 @@
    "post_url": "",
    "service_url": "https://github.com/jjlabsio/korea-stock-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 129,
@@ -3870,7 +4254,10 @@
    "post_url": "",
    "service_url": "https://github.com/Mrbaeksang/korea-stock-analyzer-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 130,
@@ -3900,7 +4287,10 @@
    "post_url": "",
    "service_url": "https://github.com/NSLC7779/dk-korea-health-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 131,
@@ -3930,7 +4320,10 @@
    "post_url": "",
    "service_url": "https://github.com/epoko77-ai/korean-bill-debate-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 132,
@@ -3960,7 +4353,10 @@
    "post_url": "",
    "service_url": "https://github.com/zzjiho/kr-medicine-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 133,
@@ -3990,7 +4386,10 @@
    "post_url": "",
    "service_url": "https://github.com/AgentBridge-Lab/korea-space-support-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2B 기업"
+   "audience": "G2B 기업",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 134,
@@ -4020,7 +4419,10 @@
    "post_url": "",
    "service_url": "https://github.com/smilemin07/korean-rnd-regs-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 135,
@@ -4050,7 +4452,10 @@
    "post_url": "",
    "service_url": "https://github.com/gong-yeongbin/mcp-seoul-rtd",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 136,
@@ -4080,7 +4485,10 @@
    "post_url": "",
    "service_url": "https://github.com/hlucent/construction-alert-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 137,
@@ -4110,7 +4518,10 @@
    "post_url": "",
    "service_url": "https://github.com/jinjukimink/seoul-parking-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 138,
@@ -4140,7 +4551,10 @@
    "post_url": "",
    "service_url": "https://github.com/Seo-yul/geup-ddong-seoul-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 139,
@@ -4170,7 +4584,10 @@
    "post_url": "",
    "service_url": "https://github.com/hlucent/seoul-air-quality-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 140,
@@ -4200,7 +4617,10 @@
    "post_url": "",
    "service_url": "https://github.com/scvcoder/korean-privacy-law-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 141,
@@ -4230,7 +4650,10 @@
    "post_url": "https://www.threads.com/@changil.k/post/DaSDwqfk93O",
    "service_url": "",
    "tool_type": "데스크톱 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 142,
@@ -4260,7 +4683,10 @@
    "post_url": "https://www.threads.com/@gongpenclaw/post/DbB6Zmck3t1",
    "service_url": "https://github.com/hosungseo/korea100studio",
    "tool_type": "대시보드·분석",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 143,
@@ -4290,7 +4716,10 @@
    "post_url": "",
    "service_url": "https://github.com/jkf87/murmur",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 144,
@@ -4320,7 +4749,10 @@
    "post_url": "",
    "service_url": "https://ggc-lawtree.vercel.app/",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 145,
@@ -4350,7 +4782,10 @@
    "post_url": "",
    "service_url": "https://ggc-hipass.vercel.app/member/",
    "tool_type": "웹 서비스",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 146,
@@ -4380,7 +4815,10 @@
    "post_url": "",
    "service_url": "https://youtu.be/e5ltUQbRDAo",
    "tool_type": "데스크톱 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 147,
@@ -4410,7 +4848,10 @@
    "post_url": "",
    "service_url": "https://thislaw.co.kr",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 148,
@@ -4440,7 +4881,10 @@
    "post_url": "",
    "service_url": "https://codef.io",
    "tool_type": "플랫폼·포털",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 149,
@@ -4470,7 +4914,10 @@
    "post_url": "",
    "service_url": "https://github.com/amnotyoung/slide-meme-inserter",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 150,
@@ -4500,7 +4947,10 @@
    "post_url": "",
    "service_url": "https://poliwiki.kr",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 151,
@@ -4530,7 +4980,10 @@
    "post_url": "",
    "service_url": "https://github.com/kwakseongjae/auto-hwp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 152,
@@ -4560,7 +5013,10 @@
    "post_url": "",
    "service_url": "https://aichallenge4all.or.kr/competitions/master100",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 153,
@@ -4590,7 +5046,10 @@
    "post_url": "",
    "service_url": "https://www.jbe.go.kr/board/view.jbe?boardId=BBS_0000649&menuCd=DOM_000000106011002001&dataSid=1141429",
    "tool_type": "웹 서비스",
-   "audience": "G2E·G2C 혼합"
+   "audience": "G2E·G2C 혼합",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 154,
@@ -4620,7 +5079,10 @@
    "post_url": "",
    "service_url": "https://daamable-sknk.github.io/link-gallery/",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 155,
@@ -4650,7 +5112,10 @@
    "post_url": "https://www.threads.com/@jerry_jy.kim/post/DcCk4ZCFK2E",
    "service_url": "",
    "tool_type": "도구·기타",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 156,
@@ -4680,7 +5145,10 @@
    "post_url": "https://www.threads.com/@gongpenclaw/post/DcDcbJzAUTL",
    "service_url": "",
    "tool_type": "도구·기타",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 157,
@@ -4710,7 +5178,10 @@
    "post_url": "",
    "service_url": "https://github.com/gongnyang/gongnyang-prompt-kit",
    "tool_type": "AI 스킬·에이전트",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 158,
@@ -4740,7 +5211,10 @@
    "post_url": "",
    "service_url": "https://gitlab.aigov.go.kr/wavelen/govwork",
    "tool_type": "도입·정책",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 159,
@@ -4770,7 +5244,10 @@
    "post_url": "",
    "service_url": "https://gitlab.aigov.go.kr/y2kthr/koda",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 160,
@@ -4800,7 +5277,10 @@
    "post_url": "",
    "service_url": "https://gitlab.aigov.go.kr/AILab_Manager/central_budget",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 161,
@@ -4830,7 +5310,10 @@
    "post_url": "",
    "service_url": "https://gitlab.aigov.go.kr/publicpeasant/rekian-comwriter-library",
    "tool_type": "AI 스킬·에이전트",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 162,
@@ -4860,7 +5343,10 @@
    "post_url": "",
    "service_url": "https://gitlab.aigov.go.kr/jaekyeong/hangul-ai-widget",
    "tool_type": "브라우저 확장",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 163,
@@ -4890,7 +5376,10 @@
    "post_url": "",
    "service_url": "https://gitlab.aigov.go.kr/pro9dan/diary-for-everyone",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 164,
@@ -4920,7 +5409,10 @@
    "post_url": "",
    "service_url": "https://gitlab.aigov.go.kr/pilddong/onnara-all-dept-search-sidebar",
    "tool_type": "웹 서비스",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 165,
@@ -4950,7 +5442,10 @@
    "post_url": "",
    "service_url": "https://gitlab.aigov.go.kr/knps.taejong/parknews",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 166,
@@ -4980,7 +5475,10 @@
    "post_url": "",
    "service_url": "https://gitlab.aigov.go.kr/pilddong/clova-gov-page-assistant",
    "tool_type": "웹 서비스",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 167,
@@ -5010,7 +5508,10 @@
    "post_url": "",
    "service_url": "https://gitlab.aigov.go.kr/pilddong/new_mma_member",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 168,
@@ -5040,7 +5541,10 @@
    "post_url": "",
    "service_url": "https://gitlab.aigov.go.kr/hoho4348/ai-agent",
    "tool_type": "웹 서비스",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 169,
@@ -5070,7 +5574,10 @@
    "post_url": "",
    "service_url": "https://gitlab.aigov.go.kr/inchangpark/modu-minwon-call",
    "tool_type": "웹 서비스",
-   "audience": "G2C 대국민"
+   "audience": "G2C 대국민",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 170,
@@ -5100,7 +5607,10 @@
    "post_url": "",
    "service_url": "https://github.com/gongnyang/bookforge",
    "tool_type": "AI 스킬·에이전트",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 171,
@@ -5130,7 +5640,10 @@
    "post_url": "",
    "service_url": "https://hollobit.github.io/grid-siting-lab/",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 172,
@@ -5160,7 +5673,10 @@
    "post_url": "",
    "service_url": "https://gitlab.aigov.go.kr/kwy/dev-eval-agents",
    "tool_type": "AI 스킬·에이전트",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 173,
@@ -5190,7 +5706,10 @@
    "post_url": "",
    "service_url": "https://github.com/newskool4d-sketch/minwon-answer-skill-pack",
    "tool_type": "AI 스킬·에이전트",
-   "audience": "G2C 대국민"
+   "audience": "G2C 대국민",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 174,
@@ -5220,7 +5739,10 @@
    "post_url": "https://www.threads.com/@chobu62/post/DcGxzDrj7LK",
    "service_url": "https://github.com/obundh/gonggong-ax-local-series-1-AISupportMessnger",
    "tool_type": "오픈소스 도구",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 175,
@@ -5250,7 +5772,10 @@
    "post_url": "",
    "service_url": "https://huggingface.co/schift-io/schift-ko-pii-v4",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 176,
@@ -5280,7 +5805,10 @@
    "post_url": "",
    "service_url": "https://hosungseo.github.io/korea100/mega-projects/gwangju-semiconductor-cluster/",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 177,
@@ -5310,7 +5838,10 @@
    "post_url": "",
    "service_url": "https://github.com/onpremisehuman/editable-pptx-figma-studio",
    "tool_type": "AI 스킬·에이전트",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 178,
@@ -5340,7 +5871,10 @@
    "post_url": "https://www.threads.com/@civil__ax/post/DcL7kPKoKVk",
    "service_url": null,
    "tool_type": "도구·기타",
-   "audience": "G2E 공직 내부"
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 179,
@@ -5370,7 +5904,10 @@
    "post_url": null,
    "service_url": "https://brojun.kr/sdgm/",
    "tool_type": "웹 서비스",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 180,
@@ -5400,7 +5937,10 @@
    "post_url": null,
    "service_url": null,
    "tool_type": "도구·기타",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P2 시스템 쓰기(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 181,
@@ -5430,7 +5970,10 @@
    "post_url": null,
    "service_url": null,
    "tool_type": "도구·기타",
-   "audience": "G2C 대국민"
+   "audience": "G2C 대국민",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 182,
@@ -5460,7 +6003,10 @@
    "post_url": null,
    "service_url": null,
    "tool_type": "데스크톱 도구",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 183,
@@ -5490,7 +6036,10 @@
    "post_url": null,
    "service_url": null,
    "tool_type": "도구·기타",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 184,
@@ -5520,7 +6069,10 @@
    "post_url": null,
    "service_url": null,
    "tool_type": "대시보드·분석",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 185,
@@ -5550,7 +6102,10 @@
    "post_url": null,
    "service_url": null,
    "tool_type": "플랫폼·포털",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 186,
@@ -5580,7 +6135,10 @@
    "post_url": "https://www.threads.com/@koyou_ax/post/DYUYmnJjiPY",
    "service_url": "https://github.com/Kminer2053/public-doc-to-hwpx",
    "tool_type": "AI 스킬·에이전트",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 187,
@@ -5610,7 +6168,10 @@
    "post_url": "https://www.threads.com/@g1_ai_teacher/post/DbYeteVH3j3",
    "service_url": "https://github.com/raphysicst-create/korean-secondary-learning-map-mcp",
    "tool_type": "MCP 서버·도구",
-   "audience": "G2E 공직 실무자"
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   },
   {
    "no": 188,
@@ -5640,7 +6201,10 @@
    "post_url": null,
    "service_url": "https://open.hasa.re.kr/",
    "tool_type": "플랫폼·포털",
-   "audience": "G2C 공개"
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
   }
  ]
 }

@@ -12,7 +12,13 @@ REQUIRED_FIELDS = frozenset(
 OPTIONAL_FIELDS = frozenset(["case_url", "popularity", "region", "case_class",
                              "license", "license_source", "license_checked",
                              "task_category", "runtime_env", "network_req", "cost_req",
-                             "link_ok", "health_checked", "maintenance"])
+                             "link_ok", "health_checked", "maintenance",
+                             # 로드맵 2-1 스키마 확장 — 전부 '미확인'(누락) 허용
+                             "transition_stage", "blocker", "model_dependency",
+                             "deployment_env", "n2sf_class", "funding_source",
+                             "mcp_provider_agency", "mcp_official",
+                             "adoption_budget", "adoption_period", "adoption_procurement",
+                             "adoption_security_review", "adoption_pia"])
 SOURCES = frozenset(["threads", "kakao"])
 # 2026-08-19 재정비(로드맵 0-2): '기타' 85% 문제를 해소하는 10분류
 ORG_TYPES = frozenset(["중앙행정기관", "광역지자체", "기초지자체", "지방의회",
@@ -23,6 +29,14 @@ REGIONS = frozenset(["서울", "부산", "대구", "인천", "광주", "대전",
                      "경기", "강원", "충북", "충남", "전북", "전남", "경북", "경남", "제주"])
 TASK_CATEGORIES = frozenset(["인사·복무", "회계·정산", "계약·조달", "민원", "문서·기안",
                              "감사·법무", "시설·안전", "데이터·통계", "기획·정책", "공통·범용"])
+# 로드맵 2-1: 각 필드는 하나의 정책 질문에 대응한다 — 전이는 어디서 멈추는가,
+# 무엇에 막혔는가, 어떤 모델에 의존하는가, 어디에 배포되는가.
+TRANSITION_STAGES = frozenset(["개인 사용", "부서 공유", "기관 공식", "타 기관 재사용", "범정부 탑재"])
+BLOCKERS = frozenset(["보안검토", "예산", "담당자 이동", "레거시 미연동", "법적 근거", "조직 저항"])
+MODEL_DEPS = frozenset(["국산 독자모델", "국산 오픈웨이트", "해외 상용 API",
+                        "해외 오픈웨이트(로컬)", "혼합", "미상"])
+DEPLOYMENT_ENVS = frozenset(["인터넷망", "행정망", "폐쇄망", "로컬 PC", "클라우드(CSAP)", "혼합"])
+N2SF_CLASSES = frozenset(["O(공개)", "S(민감)", "C(기밀)"])
 
 _DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 _THREADS_LINK_RE = re.compile(r"^https://www\.threads\.(com|net)/")
@@ -79,6 +93,13 @@ def validate_case(case: dict) -> list[str]:
     task_category = case.get("task_category")
     if task_category is not None and task_category not in TASK_CATEGORIES:
         errors.append(f"알 수 없는 task_category: {task_category}")
+
+    for field, allowed in (("transition_stage", TRANSITION_STAGES), ("blocker", BLOCKERS),
+                           ("model_dependency", MODEL_DEPS), ("deployment_env", DEPLOYMENT_ENVS),
+                           ("n2sf_class", N2SF_CLASSES)):
+        value = case.get(field)
+        if value is not None and value not in allowed:
+            errors.append(f"알 수 없는 {field}: {value}")
 
     case_url = case.get("case_url")
     if case_url is not None and (

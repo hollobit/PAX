@@ -1,0 +1,58 @@
+{
+ "generated_at": "2026-08-21",
+ "quarter": "2026Q3",
+ "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
+ "total_cases": 188,
+ "ax_distribution": {
+  "AI-Ready": 128,
+  "AI-Enabled": 49,
+  "AX 단계 외": 10,
+  "AI-First": 1
+ },
+ "c_axis_mean": 0.53,
+ "p_distribution": {
+  "P0": 83,
+  "P1": 101,
+  "P2": 4
+ },
+ "model_dependency": {
+  "미확인": 162,
+  "해외 상용 API": 18,
+  "혼합": 1,
+  "해외 오픈웨이트(로컬)": 7
+ },
+ "domestic_model_rate": 0.0,
+ "local_model_rate": 0.269,
+ "model_known": 26,
+ "license_tagged": 126,
+ "license_stated_rate": 0.651,
+ "gitlab_cases": 25,
+ "gitlab_mirror_pairs": 2,
+ "gitlab_open_rate": 0.08,
+ "mcp_cases": 63,
+ "transition_funnel": {
+  "기관 공식": 26,
+  "미확인": 156,
+  "부서 공유": 4,
+  "타 기관 재사용": 1,
+  "범정부 탑재": 1
+ },
+ "unknown_rates": {
+  "approval_gate": 1.0,
+  "feedback": 0.505
+ },
+ "mirror_pair_cases": [
+  {
+   "id": "d08bc7e9a69190af",
+   "title": "내부망용 빠른 메모·구조화 앱",
+   "github": "https://github.com/Milkbuttercheese2/What-I-have-to-do",
+   "gitlab": "https://gitlab.aigov.go.kr/rhamasel3/What-I-have-to-do"
+  },
+  {
+   "id": "112bf7dc576ed8aa",
+   "title": "공공행정 리서치 스킬 — 공식 근거를 검토용 보고서로 정리",
+   "github": "https://github.com/Kminer2053/public-sector-research-skill",
+   "gitlab": "https://gitlab.aigov.go.kr/Kminer2053/public-sector-research-skill"
+  }
+ ]
+}

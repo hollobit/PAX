@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>출장 여비 서류 자동화 오픈소스 — 신청서·명세서·복명서 일괄 생성 — 모두의 공공AX</title>
+  <meta name="description" content="출장 승인 문서(PDF·HWPX)를 파싱해 여비를 계산하고 여비신청서·여비명세서·출장복명서를 세트로 만들어주는 자동화 도구가 오픈소스로 공개됐다. 복명서 본문은 로컬 LLM이 작성해 PDF로 출력하며, 기관별 서식을 넣어 맞춤 설정할 수 있어 반복적인 출장 정산 서류 ">
+  <link rel="canonical" href="https://hollobit.github.io/PAX/case/e7949c7bc45ca8e6.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="출장 여비 서류 자동화 오픈소스 — 신청서·명세서·복명서 일괄 생성">
+  <meta property="og:description" content="출장 승인 문서(PDF·HWPX)를 파싱해 여비를 계산하고 여비신청서·여비명세서·출장복명서를 세트로 만들어주는 자동화 도구가 오픈소스로 공개됐다. 복명서 본문은 로컬 LLM이 작성해 PDF로 출력하며, 기관별 서식을 넣어 맞춤 설정할 수 있어 반복적인 출장 정산 서류 ">
+  <meta property="og:url" content="https://hollobit.github.io/PAX/case/e7949c7bc45ca8e6.html">
+  <meta property="og:site_name" content="모두의 공공AX 사례 아카이브">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">PUBLIC SECTOR AX CASE · 사례 e7949c7bc45ca8e6</p>
+    <h1>출장 여비 서류 자동화 오픈소스 — 신청서·명세서·복명서 일괄 생성</h1>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="../">사례 아카이브</a>
+      <a href="../dashboard.html">AX 평가</a>
+      <a href="../observatory.html">관측소</a>
+      <a href="../playbook.html">전이 플레이북</a>
+    </nav>
+  </header>
+  <main class="case-page">
+    <section class="obs-section">
+      <p class="case-page__meta">공직 현장(개인 개발) · 공직 개인 · 문서·기안 · 2026-08-11 게시</p>
+      <p class="case-page__summary">출장 승인 문서(PDF·HWPX)를 파싱해 여비를 계산하고 여비신청서·여비명세서·출장복명서를 세트로 만들어주는 자동화 도구가 오픈소스로 공개됐다. 복명서 본문은 로컬 LLM이 작성해 PDF로 출력하며, 기관별 서식을 넣어 맞춤 설정할 수 있어 반복적인 출장 정산 서류 작성을 줄여준다.</p>
+      <p class="case-page__links"><a href="https://github.com/kkhinlove-design/travel-expense-automation-kr" target="_blank" rel="noopener">공유 링크</a> · <a href="../?case=e7949c7bc45ca8e6">아카이브에서 보기</a></p>
+    </section>
+    <section class="obs-section">
+      <h2 class="obs-heading">4축 평가</h2>
+      <div class="table-wrap"><table class="obs-table"><tr><th scope="row">AX 단계</th><td>AI-Enabled</td></tr><tr><th scope="row">업무 범위</th><td>S2 Tool bundle</td></tr><tr><th scope="row">업무 완결성</th><td>C2 연속 처리</td></tr><tr><th scope="row">권한(P축)</th><td>P1 산출물 생성(잠정)</td></tr><tr><th scope="row">위험도</th><td>R1 낮음</td></tr><tr><th scope="row">인간 통제</th><td>H2 Human-in-the-loop</td></tr><tr><th scope="row">증거 등급</th><td>E1 코드·도구 확인</td></tr><tr><th scope="row">신뢰도</th><td>중간</td></tr></table></div>
+      <p class="obs-note">승인 문서 파싱→여비 계산→서류 3종 생성의 여러 단계를 연결하고(C2), 복명서 본문을 로컬 LLM이 작성해 사람이 확인·출력하는 구조가 작성자 공개 게시물로 확인됨 — 검증 가능한 업무 산출물을 AI가 생산하므로 Enabled로 상향(기존 Ready). 내부망 친화적 로컬 실행.</p>
+    </section>
+    <section class="obs-section">
+      <h2 class="obs-heading">실무 도입 카드</h2>
+      <div class="obs-cards">
+        <div class="obs-card"><p class="obs-card__label">필요한 것</p><p class="obs-card__note">망 요건: 로컬 완결 · 비용·권한: 무료 · 라이선스: MIT</p></div>
+        <div class="obs-card"><p class="obs-card__label">첫 3단계</p><p class="obs-card__note">① 원문·저장소에서 실체 확인 → ② 소규모 업무로 시험 → ③ 결과를 동료와 교차 검증</p></div>
+        <div class="obs-card"><p class="obs-card__label">주의사항</p><p class="obs-card__note">실사용 피드백이 미확인입니다 — 도입 전 소규모 검증을 권합니다 · 성과 수치는 출처가 확인된 것만 신뢰하세요</p></div>
+      </div>
+      <p class="obs-note">전이 절차(보안검토→품의→배포)는 <a href="../playbook.html">전이 플레이북</a>을 참고하세요.</p>
+    </section>
+    <section class="obs-section">
+      <h2 class="obs-heading">비슷한 업무의 사례</h2>
+      <ul class="case-page__related"><li><a href="02656bf9d2589964.html">서울시, 기관 공용 AI 엔진 기반 AI 에이전트 구축 착수</a></li><li><a href="719692c2c31da09f.html">로컬 문서 검수 도구 공개 — 맞춤법·공공언어 검사</a></li><li><a href="075fd5baf003c3b0.html">AI 기반 업무 인수인계 관리 사례</a></li></ul>
+    </section>
+    <footer class="obs-note">
+      <p>출처: 모두의 공공AX 사례 아카이브 · 자기선택 표본 · 근거 없는 항목은 '미확인'으로 표기 ·
+      인용 시 이 페이지 URL을 사용하세요.</p>
+    </footer>
+  </main>
+</body>
+</html>

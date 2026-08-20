@@ -85,6 +85,8 @@ PYTHONPATH=scripts python3 -m pax.merge data/incoming/TODAY.json
 python3 scripts/tag_licenses.py   # 신규 사례의 저장소 라이선스 확인·태깅 (기존 태깅은 건너뜀)
 PYTHONPATH=scripts python3 -m pax.publish
 python3 scripts/build_champions.py
+python3 scripts/build_index.py            # 공공 AX 지수 갱신 (분기 말에는 --snapshot 추가)
+python3 scripts/build_case_pages.py       # 사례별 정적 상세 페이지 재생성
 ```
 - merge가 거부 건을 출력하면 data/rejected/TODAY.json을 열어 원인(주로 익명화)을
   수정한 새 incoming 파일로 1회 재시도한다.
@@ -100,7 +102,7 @@ python3 scripts/build_champions.py
 
 ## 6. 커밋·푸시
 ```bash
-git add data/cases.json site/data/cases.json site/thumbs site/data/changelog.json site/data/champions.json
+git add data/cases.json site/data site/thumbs site/case
 git commit -m "chore: 사례 데이터 갱신 (TODAY)"
 git push
 ```

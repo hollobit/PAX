@@ -46,6 +46,26 @@ def derive_tool_type(case: dict) -> str:
     return "도구·기타"
 
 
+def derive_p_axis(case: dict) -> str:
+    """권한 범위 P축 잠정 판정 (로드맵 2-6) — 공개 서술 기반 기계 판정.
+
+    P0 읽기 전용(조회·검색·시각화) / P1 산출물 생성(문서·코드 — 업무 시스템 밖)
+    P2 업무 시스템 쓰기 / P3 처분 보조 / P4 자율 처분.
+    서술에 권한 근거가 없으면 보수적으로 낮은 등급 + '(잠정)'을 붙인다.
+    """
+    title = case["title"].lower()
+    text = (case["title"] + " " + str(case.get("rationale") or "")).lower()
+    if any(k in text for k in ["결재", "등록", "시스템 반영", "자동 발송", "자동 처리"]):
+        return "P2 시스템 쓰기(잠정)"
+    if any(k in title for k in ["생성", "작성", "변환", "자동화", "재기안", "초안", "만드는", "빌더",
+                                "스킬", "hwpx", "pdf", "슬라이드", "보고서"]):
+        return "P1 산출물 생성(잠정)"
+    if any(k in title for k in ["조회", "검색", "지도", "대시보드", "현황", "mcp", "분석", "비교",
+                                "모음", "포털", "뷰어", "관측"]):
+        return "P0 읽기 전용(잠정)"
+    return "P1 산출물 생성(잠정)"
+
+
 def derive_audience(case: dict) -> str:
     """사용자 관계(G2x) 자동 분류 (표시용)."""
     scope = case.get("scope") or ""
@@ -85,6 +105,7 @@ def main() -> int:
         case = dict(zip(FIELDS, [v if v is not None else "" for v in row]))
         case["tool_type"] = derive_tool_type(case)
         case["audience"] = derive_audience(case)
+        case["p"] = case.get("p") or derive_p_axis(case)
         cases.append(case)
 
     if ADDITIONS.exists():
@@ -105,7 +126,16 @@ def main() -> int:
             case = {f: raw[f] for f in FIELDS}
             case["tool_type"] = derive_tool_type(case)
             case["audience"] = derive_audience(case)
+            case["p"] = raw.get("p") or derive_p_axis(case)
             cases.append(case)
+
+    # 안전 프로필 6항목 표준 골격 (로드맵 2-6): 서술이 없으면 '미확인'을 명시한다 —
+    # 미확인 비율 자체가 대시보드 KPI가 된다.
+    for case in cases:
+        case["approval_gate"] = case.get("approval_gate") or "미확인"
+        case["audit_log"] = case.get("audit_log") or "미확인"
+        case.setdefault("feedback", "미확인")
+        case.setdefault("resilience", "미확인")
 
     # 증거 등급 정규화 (로드맵 0-6): E1의 이중 의미(코드 확인 vs 화면 확인)를
     # 분리한다 — E1은 코드·도구 실체, E2는 화면·서비스 실체. E0 표기도 통일.

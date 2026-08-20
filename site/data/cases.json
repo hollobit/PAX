@@ -24,7 +24,8 @@
    "runtime_env": "브라우저만",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식"
   },
   {
    "date": "2026-07-14",
@@ -47,7 +48,10 @@
    "task_category": "문서·기안",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식",
+   "mcp_official": true,
+   "mcp_provider_agency": "서울특별시"
   },
   {
    "date": "2026-04-26",
@@ -191,7 +195,8 @@
    "network_req": "폐쇄망 가능",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "deployment_env": "행정망"
   },
   {
    "date": "2026-04-01",
@@ -213,7 +218,8 @@
    "task_category": "감사·법무",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "mcp_official": false
   },
   {
    "date": "2026-07-11",
@@ -258,7 +264,9 @@
    "id": "6a2d1fa6e385ef2b",
    "case_class": "개인 개발",
    "region": null,
-   "task_category": "감사·법무"
+   "task_category": "감사·법무",
+   "transition_stage": "부서 공유",
+   "model_dependency": "해외 상용 API"
   },
   {
    "tags": [
@@ -278,7 +286,8 @@
    "region": "서울",
    "task_category": "회계·정산",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식"
   },
   {
    "tags": [
@@ -300,7 +309,8 @@
    "task_category": "감사·법무",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "mcp_official": false
   },
   {
    "date": "2026-08-06",
@@ -392,7 +402,8 @@
    "task_category": "감사·법무",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "mcp_official": false
   },
   {
    "source": "kakao",
@@ -459,7 +470,8 @@
    "network_req": "폐쇄망 가능",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "deployment_env": "행정망"
   },
   {
    "source": "kakao",
@@ -526,7 +538,9 @@
    "task_category": "공통·범용",
    "runtime_env": "AI 도구 설정",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "부서 공유",
+   "model_dependency": "해외 상용 API"
   },
   {
    "source": "kakao",
@@ -572,7 +586,8 @@
    "runtime_env": "AI 도구 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "model_dependency": "해외 상용 API"
   },
   {
    "source": "kakao",
@@ -598,7 +613,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "source": "kakao",
@@ -698,7 +714,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "source": "kakao",
@@ -904,7 +921,10 @@
    "runtime_env": "AI 도구 설정",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식",
+   "model_dependency": "혼합",
+   "deployment_env": "행정망"
   },
   {
    "link": "https://www.threads.com/@chris_gomdori/post/DaS4hW2CW6n",
@@ -927,7 +947,8 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "mcp_official": false
   },
   {
    "link": "https://www.threads.com/@publicai_79/post/DY4s0B9jLVm",
@@ -950,7 +971,9 @@
    "runtime_env": "서버 구축",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "부서 공유",
+   "deployment_env": "행정망"
   },
   {
    "link": "https://www.threads.com/@koyou_ax/post/DacnKc9D_5i",
@@ -977,7 +1000,8 @@
    "runtime_env": "설치 필요",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "model_dependency": "해외 오픈웨이트(로컬)"
   },
   {
    "link": "https://www.threads.com/@chris_gomdori/post/DbW8LhniROp",
@@ -1001,7 +1025,8 @@
    "task_category": "감사·법무",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식"
   },
   {
    "link": "https://www.threads.com/@koyou_ax/post/DaLJpOljpV6",
@@ -1024,7 +1049,8 @@
    "runtime_env": "서버 구축",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "deployment_env": "행정망"
   },
   {
    "link": "https://www.threads.com/@chris_gomdori/post/DbaDIR3DZWE",
@@ -1052,7 +1078,9 @@
    "network_req": "로컬 완결",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "model_dependency": "해외 오픈웨이트(로컬)",
+   "deployment_env": "로컬 PC"
   },
   {
    "link": "https://www.threads.com/@gongpenclaw/post/DbiLzQ5gfjC",
@@ -1075,7 +1103,8 @@
    "task_category": "데이터·통계",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식"
   },
   {
    "org_type": "커뮤니티",
@@ -1101,7 +1130,8 @@
    "runtime_env": "AI 도구 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "model_dependency": "해외 상용 API"
   },
   {
    "org_type": "커뮤니티",
@@ -1383,7 +1413,10 @@
    "network_req": "폐쇄망 가능",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "model_dependency": "해외 오픈웨이트(로컬)",
+   "deployment_env": "행정망",
+   "mcp_official": false
   },
   {
    "summary": "표기가 제각각인 주소들을 도로명주소 표준으로 일괄 정리해 주는 도구가 공개됐다. 주소 데이터 정비에 반복 투입되는 행정 실무 시간을 줄여주는 자동화 사례다.",
@@ -1455,7 +1488,8 @@
    "task_category": "공통·범용",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식"
   },
   {
    "link": "https://openapi.hrdkorea.or.kr/mcp.html",
@@ -1477,7 +1511,11 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식",
+   "model_dependency": "해외 상용 API",
+   "mcp_official": true,
+   "mcp_provider_agency": "한국산업인력공단"
   },
   {
    "source": "threads",
@@ -1557,7 +1595,10 @@
    "task_category": "감사·법무",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식",
+   "mcp_official": true,
+   "mcp_provider_agency": "과학기술혁신본부"
   },
   {
    "source": "kakao",
@@ -1603,7 +1644,8 @@
    "task_category": "시설·안전",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "transition_stage": "기관 공식"
   },
   {
    "source": "kakao",
@@ -1674,7 +1716,8 @@
    "network_req": "폐쇄망 가능",
    "cost_req": "무료",
    "link_ok": false,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "deployment_env": "행정망"
   },
   {
    "tags": [
@@ -1703,7 +1746,8 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "title": "NIA, 발간 자료의 마크다운 병행 등록 의무화",
@@ -1724,7 +1768,9 @@
    "case_class": "기관 공식",
    "region": "대구",
    "task_category": "문서·기안",
-   "network_req": "폐쇄망 가능"
+   "network_req": "폐쇄망 가능",
+   "transition_stage": "타 기관 재사용",
+   "deployment_env": "행정망"
   },
   {
    "title": "KIPRIS 특허 검색 MCP 공개",
@@ -1753,7 +1799,9 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "model_dependency": "해외 상용 API",
+   "mcp_official": false
   },
   {
    "title": "공공데이터포털 API를 MCP 서버 모음으로 공개",
@@ -1783,7 +1831,8 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "방치"
+   "maintenance": "방치",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-08",
@@ -1805,7 +1854,8 @@
    "region": "울산",
    "task_category": "문서·기안",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식"
   },
   {
    "summary": "매년 수료증을 취합하는 반복 업무를 줄이기 위한 공무원 필수교육 이수 관리 시스템이 정부 AI 개발 플랫폼 깃랩에 공개됐다. 교육 일정 캘린더, 수료증 AI 자동검수, 일괄 다운로드 기능으로 수료증 취합·확인 업무를 크게 줄여준다.",
@@ -1884,7 +1934,8 @@
    "runtime_env": "서버 구축",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식"
   },
   {
    "date": "2026-08-11",
@@ -2107,7 +2158,10 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식",
+   "mcp_official": true,
+   "mcp_provider_agency": "광진구"
   },
   {
    "org": "법제처",
@@ -2131,7 +2185,9 @@
    "task_category": "감사·법무",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식",
+   "deployment_env": "행정망"
   },
   {
    "org_type": "공직 개인",
@@ -2185,7 +2241,9 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "model_dependency": "해외 오픈웨이트(로컬)",
+   "deployment_env": "로컬 PC"
   },
   {
    "source": "kakao",
@@ -2213,7 +2271,8 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "source": "kakao",
@@ -2240,7 +2299,9 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "funding_source": "개인 사비",
+   "mcp_official": false
   },
   {
    "source": "threads",
@@ -2297,7 +2358,9 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "deployment_env": "행정망",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2326,7 +2389,8 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2353,7 +2417,8 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "방치"
+   "maintenance": "방치",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2380,7 +2445,9 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "방치"
+   "maintenance": "방치",
+   "model_dependency": "해외 상용 API",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2407,7 +2474,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2435,7 +2503,8 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "정체"
+   "maintenance": "정체",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2462,7 +2531,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "정체"
+   "maintenance": "정체",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2488,7 +2558,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "정체"
+   "maintenance": "정체",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2516,7 +2587,8 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "방치"
+   "maintenance": "방치",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2542,7 +2614,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "방치"
+   "maintenance": "방치",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2568,7 +2641,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2595,7 +2669,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2622,7 +2697,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "방치"
+   "maintenance": "방치",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2649,7 +2725,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2675,7 +2752,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2702,7 +2780,9 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "model_dependency": "해외 상용 API",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2728,7 +2808,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "방치"
+   "maintenance": "방치",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2754,7 +2835,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "방치"
+   "maintenance": "방치",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2780,7 +2862,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "정체"
+   "maintenance": "정체",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2807,7 +2890,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2833,7 +2917,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2859,7 +2944,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "방치"
+   "maintenance": "방치",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2885,7 +2971,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2911,7 +2998,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "정체"
+   "maintenance": "정체",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2939,7 +3027,8 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2965,7 +3054,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -2991,7 +3081,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -3017,7 +3108,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "정체"
+   "maintenance": "정체",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -3044,7 +3136,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "정체"
+   "maintenance": "정체",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -3070,7 +3163,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "정체"
+   "maintenance": "정체",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -3096,7 +3190,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "방치"
+   "maintenance": "방치",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -3122,7 +3217,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "방치"
+   "maintenance": "방치",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -3148,7 +3244,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-12",
@@ -3176,7 +3273,8 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "model_dependency": "해외 상용 API"
   },
   {
    "collected_at": "2026-08-12",
@@ -3230,7 +3328,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "summary": "공공데이터포털의 심평원·식약처 의료 데이터를 다루는 MCP 서버가 공개됐다. 비급여 진료비, 병원 찾기, 의약품·DUR, 질병 통계를 AI 도구에서 조회할 수 있다.",
@@ -3256,7 +3355,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "summary": "대한민국 국회를 질문으로 탐색하고 공식 기록으로 검증하는 MCP 서버가 공개됐다. 법안·처리상태·위원회·회의록·검토보고서와 의원·정부 발언을 하나로 연결해 입법 논의 전체 맥락을 추적할 수 있다.",
@@ -3283,7 +3383,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "summary": "국가연구개발(정부 R&D) 규정 검토용 MCP 서버가 공개됐다. 국가연구개발혁신법·시행령과 행정규칙 55종을 AI로 검색·검토할 수 있어 연구비·과제 규정 확인 업무를 줄여준다.",
@@ -3310,7 +3411,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "summary": "한국 우주·항공·국방우주 분야 정부 R&D 지원사업 공고 데이터셋과 이를 다루는 크롤러·분류기·MCP·REST API가 공개됐다. 분야 특화 공고 탐색을 AI 도구에서 수행할 수 있다.",
@@ -3337,7 +3439,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "정체"
+   "maintenance": "정체",
+   "mcp_official": false
   },
   {
    "link": "https://github.com/gong-yeongbin/mcp-seoul-rtd",
@@ -3364,7 +3467,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "link": "https://github.com/hlucent/construction-alert-mcp",
@@ -3391,7 +3495,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "link": "https://github.com/jinjukimink/seoul-parking-mcp",
@@ -3418,7 +3523,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "방치"
+   "maintenance": "방치",
+   "mcp_official": false
   },
   {
    "link": "https://github.com/Seo-yul/geup-ddong-seoul-mcp",
@@ -3445,7 +3551,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "link": "https://github.com/hlucent/seoul-air-quality-mcp",
@@ -3472,7 +3579,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "date": "2026-08-13",
@@ -3499,7 +3607,8 @@
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "정체"
+   "maintenance": "정체",
+   "mcp_official": false
   },
   {
    "source": "threads",
@@ -3578,7 +3687,9 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "정체"
+   "maintenance": "정체",
+   "model_dependency": "해외 오픈웨이트(로컬)",
+   "deployment_env": "로컬 PC"
   },
   {
    "source": "kakao",
@@ -3601,7 +3712,8 @@
    "task_category": "감사·법무",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식"
   },
   {
    "source": "kakao",
@@ -3624,7 +3736,8 @@
    "task_category": "회계·정산",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식"
   },
   {
    "source": "kakao",
@@ -3669,7 +3782,8 @@
    "region": "경기",
    "task_category": "감사·법무",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식"
   },
   {
    "collected_at": "2026-08-14",
@@ -3718,7 +3832,8 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "model_dependency": "해외 상용 API"
   },
   {
    "collected_at": "2026-08-14",
@@ -3768,7 +3883,8 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "collected_at": "2026-08-14",
@@ -3790,7 +3906,8 @@
    "region": null,
    "task_category": "기획·정책",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식"
   },
   {
    "date": "2026-08-14",
@@ -3814,7 +3931,9 @@
    "runtime_env": "브라우저만",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "기관 공식",
+   "deployment_env": "행정망"
   },
   {
    "date": "2026-08-08",
@@ -3862,7 +3981,8 @@
    "region": null,
    "task_category": "데이터·통계",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "범정부 탑재"
   },
   {
    "org": "공직 현장(개인 개발)",
@@ -3913,7 +4033,8 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "model_dependency": "해외 상용 API"
   },
   {
    "link": "https://gitlab.aigov.go.kr/wavelen/govwork",
@@ -3966,7 +4087,8 @@
    "network_req": "폐쇄망 가능",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "deployment_env": "폐쇄망"
   },
   {
    "link": "https://gitlab.aigov.go.kr/AILab_Manager/central_budget",
@@ -3993,7 +4115,8 @@
    "runtime_env": "브라우저만",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "transition_stage": "기관 공식"
   },
   {
    "link": "https://gitlab.aigov.go.kr/publicpeasant/rekian-comwriter-library",
@@ -4047,7 +4170,9 @@
    "network_req": "폐쇄망 가능",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "model_dependency": "해외 오픈웨이트(로컬)",
+   "deployment_env": "행정망"
   },
   {
    "link": "https://gitlab.aigov.go.kr/pro9dan/diary-for-everyone",
@@ -4128,7 +4253,8 @@
    "runtime_env": "브라우저만",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "transition_stage": "기관 공식"
   },
   {
    "link": "https://gitlab.aigov.go.kr/pilddong/clova-gov-page-assistant",
@@ -4156,7 +4282,8 @@
    "network_req": "폐쇄망 가능",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "deployment_env": "행정망"
   },
   {
    "link": "https://gitlab.aigov.go.kr/pilddong/new_mma_member",
@@ -4182,7 +4309,8 @@
    "task_category": "감사·법무",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "transition_stage": "기관 공식"
   },
   {
    "link": "https://gitlab.aigov.go.kr/hoho4348/ai-agent",
@@ -4210,7 +4338,10 @@
    "network_req": "폐쇄망 가능",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "transition_stage": "기관 공식",
+   "model_dependency": "해외 상용 API",
+   "deployment_env": "행정망"
   },
   {
    "link": "https://gitlab.aigov.go.kr/inchangpark/modu-minwon-call",
@@ -4264,7 +4395,8 @@
    "runtime_env": "AI 도구 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "model_dependency": "해외 상용 API"
   },
   {
    "source": "kakao",
@@ -4317,7 +4449,9 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "transition_stage": "기관 공식",
+   "model_dependency": "해외 상용 API"
   },
   {
    "org_type": "공직 개인",
@@ -4345,7 +4479,8 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "model_dependency": "해외 상용 API"
   },
   {
    "source": "threads",
@@ -4373,7 +4508,10 @@
    "network_req": "폐쇄망 가능",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "transition_stage": "기관 공식",
+   "model_dependency": "해외 오픈웨이트(로컬)",
+   "deployment_env": "폐쇄망"
   },
   {
    "source": "kakao",
@@ -4450,7 +4588,8 @@
    "runtime_env": "AI 도구 설정",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "mcp_official": false
   },
   {
    "org_type": "공직 개인",
@@ -4473,7 +4612,9 @@
    "task_category": "시설·안전",
    "runtime_env": "AI 도구 설정",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "transition_stage": "부서 공유",
+   "model_dependency": "해외 상용 API"
   },
   {
    "collected_at": "2026-08-19",
@@ -4497,7 +4638,8 @@
    "runtime_env": "AI 도구 설정",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-20"
+   "health_checked": "2026-08-20",
+   "model_dependency": "해외 상용 API"
   },
   {
    "org_type": "공직 개인",
@@ -4524,7 +4666,8 @@
    "network_req": "폐쇄망 가능",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "deployment_env": "폐쇄망"
   },
   {
    "org_type": "공직 개인",
@@ -4661,7 +4804,8 @@
    "network_req": "폐쇄망 가능",
    "link_ok": true,
    "health_checked": "2026-08-20",
-   "maintenance": "활발"
+   "maintenance": "활발",
+   "deployment_env": "폐쇄망"
   },
   {
    "source": "threads",
@@ -4686,7 +4830,8 @@
    "id": "0b9d4e9c2beed197",
    "license": "MIT",
    "license_source": "github",
-   "license_checked": "2026-08-20"
+   "license_checked": "2026-08-20",
+   "model_dependency": "해외 상용 API"
   },
   {
    "source": "threads",
@@ -4710,7 +4855,8 @@
    "id": "386d7292c2c1f4dd",
    "license": "Other",
    "license_source": "github",
-   "license_checked": "2026-08-20"
+   "license_checked": "2026-08-20",
+   "mcp_official": false
   },
   {
    "org": "경북IT융합산업기술원(GITC)",
@@ -4731,7 +4877,8 @@
    "runtime_env": "브라우저만",
    "collected_at": "2026-08-20",
    "link": "https://open.hasa.re.kr/",
-   "id": "baebbc7b8aa4c952"
+   "id": "baebbc7b8aa4c952",
+   "transition_stage": "기관 공식"
   }
  ]
 }

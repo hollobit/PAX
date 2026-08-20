@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KODA SBOM Tracker — 폐쇄망 한국어 SBOM 추적·취약점 관리 포털 — 모두의 공공AX</title>
+  <meta name="description" content="폐쇄망에서 운영하는 한국어 SBOM 관리 포털. 서비스별로 CycloneDX SBOM을 회차 단위로 업로드하면 구성요소·취약점·정책 위반을 분석해 보관하고 회차 간 변경점을 비교한다. 인터넷 없는 서버에서 Docker Compose 한 벌로 동작하도록 이미지·취약점 데">
+  <link rel="canonical" href="https://hollobit.github.io/PAX/case/de45e7387cab1c62.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="KODA SBOM Tracker — 폐쇄망 한국어 SBOM 추적·취약점 관리 포털">
+  <meta property="og:description" content="폐쇄망에서 운영하는 한국어 SBOM 관리 포털. 서비스별로 CycloneDX SBOM을 회차 단위로 업로드하면 구성요소·취약점·정책 위반을 분석해 보관하고 회차 간 변경점을 비교한다. 인터넷 없는 서버에서 Docker Compose 한 벌로 동작하도록 이미지·취약점 데">
+  <meta property="og:url" content="https://hollobit.github.io/PAX/case/de45e7387cab1c62.html">
+  <meta property="og:site_name" content="모두의 공공AX 사례 아카이브">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">PUBLIC SECTOR AX CASE · 사례 de45e7387cab1c62</p>
+    <h1>KODA SBOM Tracker — 폐쇄망 한국어 SBOM 추적·취약점 관리 포털</h1>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="../">사례 아카이브</a>
+      <a href="../dashboard.html">AX 평가</a>
+      <a href="../observatory.html">관측소</a>
+      <a href="../playbook.html">전이 플레이북</a>
+    </nav>
+  </header>
+  <main class="case-page">
+    <section class="obs-section">
+      <p class="case-page__meta">공직 현장(개인 개발) · 공직 개인 · 감사·법무 · 2026-08-03 게시</p>
+      <p class="case-page__summary">폐쇄망에서 운영하는 한국어 SBOM 관리 포털. 서비스별로 CycloneDX SBOM을 회차 단위로 업로드하면 구성요소·취약점·정책 위반을 분석해 보관하고 회차 간 변경점을 비교한다. 인터넷 없는 서버에서 Docker Compose 한 벌로 동작하도록 이미지·취약점 데이터·백업 도구까지 함께 제공하며, 국정원 기준을 참조한 정보보안 실무 도구다.</p>
+      <p class="case-page__links"><a href="https://gitlab.aigov.go.kr/y2kthr/KODA-SBOM-Tracker" target="_blank" rel="noopener">공유 링크</a> · <a href="../?case=de45e7387cab1c62">아카이브에서 보기</a></p>
+    </section>
+    <section class="obs-section">
+      <h2 class="obs-heading">4축 평가</h2>
+      <div class="table-wrap"><table class="obs-table"><tr><th scope="row">AX 단계</th><td>AI-Ready</td></tr><tr><th scope="row">업무 범위</th><td>S2 Tool bundle</td></tr><tr><th scope="row">업무 완결성</th><td>C2 부분 완결</td></tr><tr><th scope="row">권한(P축)</th><td>P0 읽기 전용(잠정)</td></tr><tr><th scope="row">위험도</th><td>R1 낮음</td></tr><tr><th scope="row">인간 통제</th><td>H2 Human-in-the-loop</td></tr><tr><th scope="row">증거 등급</th><td>E1 코드·도구 확인</td></tr><tr><th scope="row">신뢰도</th><td>중간</td></tr></table></div>
+      <p class="obs-note">SBOM 업로드→구성요소·취약점·정책 분석→회차 비교·보관까지 폐쇄망 안에서 업무 흐름이 닫히는 포털(C2). 오프라인 Docker 배포·취약점 데이터·백업까지 제공해 복원력 고려가 서술된 드문 사례. 동일 개발자의 KODA에 이은 정보보안 도구군 확장.</p>
+    </section>
+    <section class="obs-section">
+      <h2 class="obs-heading">실무 도입 카드</h2>
+      <div class="obs-cards">
+        <div class="obs-card"><p class="obs-card__label">필요한 것</p><p class="obs-card__note">실행환경: 브라우저만 · 망 요건: 폐쇄망 가능 · 라이선스: Apache-2.0</p></div>
+        <div class="obs-card"><p class="obs-card__label">첫 3단계</p><p class="obs-card__note">① 링크 접속 → ② 내 업무 데이터로 시험 → ③ 동료와 결과 검증</p></div>
+        <div class="obs-card"><p class="obs-card__label">주의사항</p><p class="obs-card__note">실사용 피드백이 미확인입니다 — 도입 전 소규모 검증을 권합니다 · 성과 수치는 출처가 확인된 것만 신뢰하세요</p></div>
+      </div>
+      <p class="obs-note">전이 절차(보안검토→품의→배포)는 <a href="../playbook.html">전이 플레이북</a>을 참고하세요.</p>
+    </section>
+    <section class="obs-section">
+      <h2 class="obs-heading">비슷한 업무의 사례</h2>
+      <ul class="case-page__related"><li><a href="d40cc4a9cf6e29b6.html">국가법령정보 MCP 활용 사례 공유</a></li><li><a href="6a2d1fa6e385ef2b.html">부서 수요 기반 ChatGPT 팀계정 지원 후 보안형 AI SaaS 도입</a></li><li><a href="bf04cec910b4755d.html">개인정보보호법 법령 리더기 PoC 공개</a></li></ul>
+    </section>
+    <footer class="obs-note">
+      <p>출처: 모두의 공공AX 사례 아카이브 · 자기선택 표본 · 근거 없는 항목은 '미확인'으로 표기 ·
+      인용 시 이 페이지 URL을 사용하세요.</p>
+    </footer>
+  </main>
+</body>
+</html>

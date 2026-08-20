@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>전이 플레이북 — 개인 도구가 기관 공식이 되는 절차</title>
+  <meta name="description" content="보안성 검토→품의→배포→의무화 — 검증된 전이 절차의 플레이북과 C×H×P×R 자가진단 위저드">
+  <link rel="canonical" href="https://hollobit.github.io/PAX/playbook.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="전이 플레이북 — 개인 도구가 기관 공식이 되는 절차">
+  <meta property="og:description" content="NIA·광진구가 실제로 밟은 절차를 단계별 체크리스트로. 자가진단 위저드로 현 단계와 다음 관문을 확인하세요.">
+  <meta property="og:url" content="https://hollobit.github.io/PAX/playbook.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">TRANSITION PLAYBOOK · 전이 플레이북</p>
+    <h1>개인의 검증이 조직의 채택이 되기까지</h1>
+    <p class="tagline">성패를 가른 것은 개인의 헌신이 아니라 기관의 수용 절차였습니다</p>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="./">사례 아카이브</a>
+      <a href="dashboard.html">AX 평가</a>
+      <a href="observatory.html">관측소</a>
+      <a href="gap-map.html">격차 지도</a>
+      <a href="playbook.html" aria-current="page">전이 플레이북</a>
+      <a href="champions.html">챔피언</a>
+    </nav>
+  </header>
+  <main>
+    <section class="obs-section" aria-label="세 가지 전이 경로">
+      <h2 class="obs-heading">검증된 전이 경로 세 가지</h2>
+      <div class="obs-cards">
+        <div class="obs-card">
+          <p class="obs-card__label">① 수용 — 기관이 개인 도구를 공식화</p>
+          <p class="obs-card__note">보안성 검토 → 품의 → 배포 → (의무화). NIA 마크다운 의무화, 광진구 도구 6종 전 직원 투입이 이 길을 걸었습니다.</p>
+        </div>
+        <div class="obs-card">
+          <p class="obs-card__label">② 탑재 — 범정부 인프라에 올리기</p>
+          <p class="obs-card__note">범정부 AI 공통기반(온AI 실험실)이 배포 인프라 역할. 법제처 AI 법령비서가 공무원 개발 → 탑재 → 전 공무원 사용의 원형입니다.</p>
+        </div>
+        <div class="obs-card">
+          <p class="obs-card__label">③ 개방 — 코드 공개 후 각자 수용</p>
+          <p class="obs-card__note">공공 깃랩·GitHub 공개 → 타 기관이 자체 절차로 수용. 라이선스 명시가 출발점입니다 (아카이브 관측: 명시율 65%).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="obs-section" aria-label="수용 절차 4단계">
+      <h2 class="obs-heading">수용 경로의 4단계 — 단계별 체크리스트</h2>
+      <ol class="playbook-steps">
+        <li>
+          <h3>1. 보안성 검토</h3>
+          <ul>
+            <li>외부 API 호출 여부를 명시한다 — 있다면 무엇을 보내는지, 없앨 수 있는지 (NIA 패턴: API 제거 후 내부망 배포)</li>
+            <li>개인정보·비공개 정보 취급 여부와 처리 방식(로컬 처리/필터링)을 문서화한다</li>
+            <li>망 요건(인터넷망/행정망/폐쇄망)과 설치 방식(브라우저/설치형)을 정리한다</li>
+            <li>N2SF 등급(O/S/C) 관점에서 다루는 자료의 등급을 잠정 분류해 둔다</li>
+          </ul>
+        </li>
+        <li>
+          <h3>2. 품의(내부 결재)</h3>
+          <ul>
+            <li>업무 근거: 어떤 업무의 어떤 단계를 줄이는지 — 시간·건수 추정치를 보수적으로 제시한다</li>
+            <li>유사 기관 선례를 붙인다 — 아카이브의 사례 고정 링크(<code>/?case=ID</code>)가 결재 첨부용입니다</li>
+            <li>운영 책임: 유지보수 주체와 장애 시 폴백(수동 절차 복귀)을 명시한다</li>
+            <li>이용 범위(부서/기관)와 확대 조건을 단계적으로 설계한다</li>
+          </ul>
+        </li>
+        <li>
+          <h3>3. 배포</h3>
+          <ul>
+            <li>설치 가이드와 사용 예시를 담당자가 아닌 동료 기준으로 작성한다</li>
+            <li>문의 창구를 개인 연락처가 아닌 공용 채널로 연다 — 유지보수 하중의 개인 귀속을 피하는 장치</li>
+            <li>사용 현황(설치 수·사용 빈도)을 셀 수 있는 최소한의 방법을 마련한다</li>
+          </ul>
+        </li>
+        <li>
+          <h3>4. 의무화·확산 (선택)</h3>
+          <ul>
+            <li>기관장 결재로 표준 절차에 편입한다 (NIA: 공문서 마크다운 첨부 의무화)</li>
+            <li>관리 원칙을 공표한다 (광진구: 4대 관리 원칙 공표 후 전 직원 투입)</li>
+            <li>타 기관 공유 시 라이선스·미러 저장소(공공 깃랩+GitHub 병기)를 갖춘다</li>
+          </ul>
+        </li>
+      </ol>
+      <p class="obs-note">막히면 그 사유(보안검토/예산/담당자 이동/레거시 미연동/법적 근거/조직 저항)를
+        <a href="https://github.com/hollobit/PAX/issues/new?labels=blocker&title=%5B%EC%A0%84%EC%9D%B4%20%EB%B3%91%EB%AA%A9%5D%20">병목 제보</a>로 알려주세요 —
+        "어디서 막히는가"의 실증 데이터가 제도 개선의 근거가 됩니다.</p>
+    </section>
+
+    <section class="obs-section" aria-label="자가진단">
+      <h2 class="obs-heading">자가진단 — 내 도구는 지금 어디에 있는가</h2>
+      <p class="obs-desc">여섯 문항으로 C(완결성)·H(인간통제)·P(권한)·R(복원력) 좌표를 판정하고,
+        비슷한 좌표의 사례와 다음 관문 체크리스트를 제시합니다.</p>
+      <div id="wizard" class="wizard"></div>
+      <div id="wizard-result" class="wizard-result" hidden></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>모두의 공공AX 사례 아카이브 · <a href="./">아카이브로 돌아가기</a></p>
+  </footer>
+  <script src="playbook.js"></script>
+</body>
+</html>

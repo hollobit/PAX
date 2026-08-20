@@ -1921,3 +1921,100 @@ main {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
+
+
+/* ---- 관측소·격차·플레이북 공통 (로드맵 2-2~2-5·2-8) ---- */
+.obs-section {
+  max-width: 56rem;
+  margin: 0 auto 2.5rem;
+}
+
+.obs-heading {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  border-bottom: 2px solid var(--rule-strong);
+  padding-bottom: 0.4rem;
+}
+
+.obs-quarter { font-size: 0.85rem; color: var(--ink-faint); font-family: var(--font-mono); }
+.obs-desc { color: var(--ink-soft); font-size: 0.92rem; }
+.obs-note { color: var(--ink-faint); font-size: 0.84rem; }
+.obs-strong { font-weight: 700; }
+
+.obs-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+.obs-card {
+  padding: 0.9rem 1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
+}
+
+.obs-card__label { margin: 0; color: var(--ink-faint); font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600; }
+.obs-card__value { margin: 0.3rem 0 0; font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; }
+.obs-card__note { margin: 0.35rem 0 0; color: var(--ink-soft); font-size: 0.8rem; line-height: 1.45; }
+
+.obs-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.obs-table th, .obs-table td { padding: 0.5rem 0.65rem; border-bottom: 1px solid var(--rule); text-align: left; }
+.obs-table thead th { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-faint); }
+.obs-covered { color: #2c6b3a; font-weight: 600; }
+.obs-uncovered { color: var(--ink-faint); }
+
+/* 격차 지도 지역 그리드 */
+.region-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+.region-cell {
+  padding: 0.8rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.region-cell--empty { background: var(--bg-inset); opacity: 0.65; }
+.region-cell--link { cursor: pointer; }
+.region-cell--link:hover { border-color: var(--accent-2); }
+.region-cell__name { margin: 0; font-weight: 700; }
+.region-cell__count { margin: 0.2rem 0 0; font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft); }
+.region-cell--empty .region-cell__count { color: var(--ink-faint); }
+
+/* 플레이북 */
+.playbook-steps { padding-left: 1.2rem; }
+.playbook-steps > li { margin-bottom: 1.4rem; }
+.playbook-steps h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+.playbook-steps ul { padding-left: 1.1rem; list-style: disc; color: var(--ink-soft); font-size: 0.92rem; }
+.playbook-steps li li { margin-bottom: 0.3rem; }
+
+/* 자가진단 위저드 */
+.wizard { max-width: 34rem; padding: 1.2rem; background: var(--bg-elevated); border: 1px solid var(--rule); border-radius: var(--radius-md); }
+.wizard__progress { margin: 0; color: var(--ink-faint); font-family: var(--font-mono); font-size: 0.75rem; }
+.wizard__question { margin: 0.4rem 0 0.8rem; }
+.wizard__options { display: flex; flex-direction: column; gap: 0.5rem; }
+.wizard__option { padding: 0.65rem 0.9rem; background: var(--bg); border: 1px solid var(--rule); border-radius: var(--radius-sm); text-align: left; cursor: pointer; font-size: 0.92rem; }
+.wizard__option:hover { border-color: var(--accent-2); }
+.wizard__back { margin-top: 0.8rem; background: none; border: none; color: var(--accent-2); cursor: pointer; font-size: 0.85rem; }
+.wizard-result { max-width: 34rem; margin-top: 1.2rem; padding: 1.2rem; border: 2px solid var(--accent-2); border-radius: var(--radius-md); background: var(--bg-elevated); }
+.wizard-result__stage { margin: 0; font-family: var(--font-display); }
+.wizard-result__coords { color: var(--ink-soft); font-family: var(--font-mono); font-size: 0.85rem; }
+.wizard-result__gates li, .wizard-result__cases li { margin-bottom: 0.45rem; font-size: 0.92rem; }
+.wizard-result__gates { list-style: disc; padding-left: 1.2rem; }
+.wizard-result__cases { padding-left: 1.2rem; list-style: circle; }
+.wizard-result__actions { display: flex; gap: 0.6rem; margin-top: 1rem; }
+
+/* 사례 상세 페이지 */
+.case-page__meta { color: var(--ink-faint); font-family: var(--font-mono); font-size: 0.82rem; }
+.case-page__summary { font-size: 1.02rem; line-height: 1.65; }
+.case-page__links a { margin-right: 0.4rem; }
+.case-page__related { padding-left: 1.2rem; list-style: disc; }
+
+.site-footer { max-width: 56rem; margin: 3rem auto 2rem; padding: 1rem 1.5rem; color: var(--ink-faint); font-size: 0.85rem; text-align: center; border-top: 1px solid var(--rule); }

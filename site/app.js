@@ -1035,7 +1035,7 @@ function createCaseCard(c) {
   copyBtn.title = '이 사례의 고정 링크 복사';
   copyBtn.setAttribute('aria-label', '사례 링크 복사');
   copyBtn.addEventListener('click', async () => {
-    const url = `${location.origin}${location.pathname}?case=${c.id}`;
+    const url = `${location.origin}${location.pathname.replace(/index\.html$/, '')}case/${c.id}.html`;
     try {
       await navigator.clipboard.writeText(url);
       copyBtn.textContent = '✓';
