@@ -29,9 +29,9 @@
  "model_known": 26,
  "license_tagged": 126,
  "license_stated_rate": 0.651,
- "gitlab_cases": 25,
- "gitlab_mirror_pairs": 2,
- "gitlab_open_rate": 0.08,
+ "gitlab_cases": 27,
+ "gitlab_mirror_pairs": 3,
+ "gitlab_open_rate": 0.111,
  "mcp_cases": 63,
  "transition_funnel": {
   "기관 공식": 26,
@@ -52,12 +52,19 @@
  "stars_collected": 111,
  "repo_stats": {
   "gitlab": {
-   "count": 25,
-   "starred": 24,
+   "count": 27,
+   "starred": 25,
    "maintenance": {
-    "활발": 24
+    "활발": 25
    },
    "top": [
+    {
+     "id": "fe3bb0d913e27677",
+     "title": "로컬 Ollama 기반 MCP 멀티 호스트",
+     "stars": 22,
+     "maintenance": "활발",
+     "license": "MIT"
+    },
     {
      "id": "ac09bd2e1c0fbb29",
      "title": "온AI Work — 공무원 보고서 AI 작성 도구",
@@ -120,21 +127,14 @@
      "stars": 4,
      "maintenance": "활발",
      "license": "명시 없음"
-    },
-    {
-     "id": "112bf7dc576ed8aa",
-     "title": "공공행정 리서치 스킬 — 공식 근거를 검토용 보고서로 정리",
-     "stars": 4,
-     "maintenance": "활발",
-     "license": "MIT"
     }
    ]
   },
   "github": {
-   "count": 89,
-   "starred": 87,
+   "count": 88,
+   "starred": 86,
    "maintenance": {
-    "활발": 64,
+    "활발": 63,
     "정체": 12,
     "방치": 12
    },
@@ -261,6 +261,12 @@
    "title": "내부망용 빠른 메모·구조화 앱",
    "github": "https://github.com/Milkbuttercheese2/What-I-have-to-do",
    "gitlab": "https://gitlab.aigov.go.kr/rhamasel3/What-I-have-to-do"
+  },
+  {
+   "id": "fe3bb0d913e27677",
+   "title": "로컬 Ollama 기반 MCP 멀티 호스트",
+   "github": "https://github.com/chrisryugj/ollama-mcp-host",
+   "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/ollama-mcp-host"
   },
   {
    "id": "112bf7dc576ed8aa",
