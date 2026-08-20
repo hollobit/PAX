@@ -1,5 +1,5 @@
 {
- "total": 90,
+ "total": 91,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -1048,6 +1048,26 @@
    }
   },
   {
+   "id": "github:raphysicst-create",
+   "name": "raphysicst-create",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "raphysicst-create",
+     "url": "https://github.com/raphysicst-create"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "386d7292c2c1f4dd"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
+    "stars": 0
+   }
+  },
+  {
    "id": "github:ratelworks",
    "name": "ratelworks",
    "accounts": [
@@ -1460,7 +1480,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -1619,15 +1639,16 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "0b9d4e9c2beed197",
     "112bf7dc576ed8aa",
     "7acf5f25369c1401",
     "9d115930495a1e65",
     "bfcd190155ae69f7"
    ],
    "stats": {
-    "case_count": 4,
+    "case_count": 5,
     "top_ax": 2,
-    "stars": 0
+    "stars": 100
    }
   },
   {
@@ -1818,7 +1839,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -1862,7 +1883,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -1988,7 +2009,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -2008,7 +2029,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },

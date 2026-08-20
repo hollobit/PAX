@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-19T22:48:13+09:00",
+ "updated_at": "2026-08-20T09:36:21+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -4660,6 +4660,55 @@
    "link_ok": true,
    "health_checked": "2026-08-20",
    "maintenance": "활발"
+  },
+  {
+   "source": "threads",
+   "title": "public-doc-to-hwpx — AI 초안을 공공기관 보고서 서식 HWPX로 만드는 스킬",
+   "org": "공직 현장(공공기관)",
+   "link": "https://www.threads.com/@koyou_ax/post/DYUYmnJjiPY",
+   "popularity": 100,
+   "case_class": "개인 개발",
+   "collected_at": "2026-08-20",
+   "date": "2026-08-19",
+   "tags": [
+    "HWPX",
+    "보고서",
+    "스킬",
+    "문서자동화"
+   ],
+   "summary": "AI가 작성한 보고서 초안을 공공기관 특유의 보고서 가독성(서식·구조)을 살린 HWPX 문서로 생성해 주는 Claude Skill. 일반 Claude 대화창과 코딩 에이전트 양쪽에서 쓸 수 있고 MIT 라이선스로 공개됐다. 공개 직후 하루 만에 100명 이상이 제작자를 팔로우할 만큼 실무 수요가 확인된 도구다.",
+   "case_url": "https://github.com/Kminer2053/public-doc-to-hwpx",
+   "org_type": "공직 개인",
+   "task_category": "문서·기안",
+   "runtime_env": "AI 도구 설정",
+   "id": "0b9d4e9c2beed197",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-08-20"
+  },
+  {
+   "source": "threads",
+   "title": "2022 개정 교육과정 MCP — 중고등 수업 설계의 근거 기반 AI 답변",
+   "org": "공직 현장(교육)",
+   "link": "https://www.threads.com/@g1_ai_teacher/post/DbYeteVH3j3",
+   "case_class": "개인 개발",
+   "collected_at": "2026-08-20",
+   "date": "2026-08-20",
+   "tags": [
+    "교육과정",
+    "MCP",
+    "교육",
+    "근거기반"
+   ],
+   "summary": "2022 개정 교육과정(중·고등학교)을 MCP 서버로 만들어, AI가 임의로 지어내는 답이 아니라 실제 교육과정 문서에 근거한 답을 내놓게 한 교사 개발 도구. 교육과정 근거가 필수인 수업 설계·평가 계획 업무에서 환각을 줄이는 접근으로, 교육 분야에서 드문 현장 교사의 MCP 개발 사례다.",
+   "case_url": "https://github.com/raphysicst-create/korean-secondary-learning-map-mcp",
+   "org_type": "공직 개인",
+   "task_category": "데이터·통계",
+   "runtime_env": "MCP·CLI 설정",
+   "id": "386d7292c2c1f4dd",
+   "license": "Other",
+   "license_source": "github",
+   "license_checked": "2026-08-20"
   }
  ]
 }
