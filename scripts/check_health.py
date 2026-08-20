@@ -35,12 +35,19 @@ def http_status(url: str) -> int:
 
 
 def repo_activity(url: str):
-    """저장소 최근 push/활동 시각 (ISO) 또는 None."""
+    """저장소 (최근 활동 ISO, 스타 수) 또는 (None, None)."""
     m = re.match(r"https://github\.com/([\w.\-]+/[\w.\-]+)", url)
     if m:
-        r = subprocess.run(["gh", "api", f"repos/{m.group(1)}", "--jq", ".pushed_at"],
+        r = subprocess.run(["gh", "api", f"repos/{m.group(1)}", "--jq",
+                            '{p: .pushed_at, s: .stargazers_count}'],
                            capture_output=True, text=True, timeout=30)
-        return r.stdout.strip() or None if r.returncode == 0 else None
+        if r.returncode == 0:
+            try:
+                info = json.loads(r.stdout)
+                return info.get("p"), info.get("s")
+            except Exception:
+                pass
+        return None, None
     m = re.match(r"https://gitlab\.aigov\.go\.kr/([\w.\-/]+?)/?$", url)
     if m:
         pid = urllib.parse.quote(m.group(1), safe="")
@@ -48,28 +55,29 @@ def repo_activity(url: str):
                             f"https://gitlab.aigov.go.kr/api/v4/projects/{pid}"],
                            capture_output=True, text=True, timeout=20)
         try:
-            return json.loads(r.stdout).get("last_activity_at")
+            info = json.loads(r.stdout)
+            return info.get("last_activity_at"), info.get("star_count")
         except Exception:
-            return None
-    return None
+            return None, None
+    return None, None
 
 
 def check_case(c):
     target = c.get("case_url") or c.get("link")
     if not target:
-        return c["id"], None, None
+        return c["id"], None, None, None
     code = http_status(target)
     link_ok = 200 <= code < 400
-    maint = None
+    maint = stars = None
     for u in (c.get("link"), c.get("case_url")):
         if u and ("github.com/" in u or "gitlab.aigov" in u):
-            ts = repo_activity(u)
+            ts, stars = repo_activity(u)
             if ts:
                 age = (datetime.datetime.now(datetime.timezone.utc)
                        - datetime.datetime.fromisoformat(ts.replace("Z", "+00:00"))).days
                 maint = "활발" if age <= ACTIVE_DAYS else ("정체" if age <= STALE_DAYS else "방치")
             break
-    return c["id"], link_ok, maint
+    return c["id"], link_ok, maint, stars
 
 
 def main():
@@ -77,10 +85,12 @@ def main():
     cases = data["cases"]
     today = datetime.date.today().isoformat()
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
-        results = {cid: (ok, maint) for cid, ok, maint in ex.map(check_case, cases)}
+        results = {cid: (ok, maint, stars) for cid, ok, maint, stars in ex.map(check_case, cases)}
     dead = active = stale = idle = 0
     for c in cases:
-        ok, maint = results.get(c["id"], (None, None))
+        ok, maint, stars = results.get(c["id"], (None, None, None))
+        if stars is not None:
+            c["stars"] = stars
         if ok is None:
             continue
         c["link_ok"] = ok

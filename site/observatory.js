@@ -111,6 +111,91 @@ async function main() {
     tbody.appendChild(tr);
   }
 
+  // ── MCP 현황과 이슈 ──
+  const m = idx.mcp_stats;
+  const mcpCards = document.getElementById('mcp-cards');
+  mcpCards.appendChild(indexCard('MCP 사례', `${m.total}건`,
+    `아카이브 전체의 ${Math.round((m.total / idx.total_cases) * 100)}%`));
+  mcpCards.appendChild(indexCard('공급 vs 소비',
+    `Server ${m.roles['Server'] || 0} : Client ${m.roles['Client/Host'] || 0}`,
+    '배관은 깔렸는데 물이 흐른 사례는 드물다'));
+  mcpCards.appendChild(indexCard('공식 제공', `${m.official}건`,
+    `비공식(커뮤니티·개인) ${m.unofficial}건 — 공식화 경로가 다음 과제`));
+  mcpCards.appendChild(indexCard('완결성', `C0 ${m.c_grades['C0'] || 0}건`,
+    `C2 이상 ${(m.c_grades['C2'] || 0) + (m.c_grades['C3'] || 0)}건 — 기능 제공 단계에 집중`));
+  mcpCards.appendChild(indexCard('유지보수', `활발 ${m.maintenance['활발'] || 0}`,
+    `정체 ${m.maintenance['정체'] || 0} · 방치 ${m.maintenance['방치'] || 0} — 3분의 1이 손을 떠났다`));
+  const issues = document.getElementById('mcp-issues');
+  const issue = (strong, rest) => {
+    const li = document.createElement('li');
+    const b = el('strong', null, strong);
+    li.appendChild(b);
+    li.append(' ' + rest);
+    issues.appendChild(li);
+  };
+  issue(`공급-소비 비대칭 (${m.roles['Server'] || 0}:${m.roles['Client/Host'] || 0}).`,
+    '서버는 폭증했지만 이를 실제 업무에서 소비하는 클라이언트·호스트 사례는 한 자릿수 — 만드는 사람과 쓰는 사람이 아직 연결되지 않았습니다.');
+  issue(`완결성 정체 (C0 ${m.c_grades['C0'] || 0}건).`,
+    '거의 전부가 "데이터를 연결해 준다"(기능 제공)에 머물고, 업무가 닫히는 폐쇄루프는 1건 — 다음 단계는 서버가 아니라 업무 결합입니다.');
+  issue(`공식 제공 희소 (${m.official}건).`,
+    '커뮤니티가 먼저 만들고 기관이 따라오는 구조 — 비공식 MCP의 공식화 경로(인지→공동 유지보수→공식)가 제도 공백입니다.');
+  issue('권한·감사 서술 부재 (승인 게이트 미확인 100%).',
+    '어떤 MCP가 무엇을 읽고 쓸 수 있는지 서술하는 관행 자체가 없습니다 — 에이전트 확산의 최대 리스크.');
+  issue(`유지보수 개인 의존 (정체·방치 ${(m.maintenance['정체'] || 0) + (m.maintenance['방치'] || 0)}건).`,
+    'MCP 3건 중 1건은 최근 활동이 멈췄습니다 — 데이터 스키마가 바뀌면 조용히 깨지는 도구들입니다.');
+
+  // ── 저장소 지표 ──
+  const repoCards = document.getElementById('repo-cards');
+  const md = idx.maintenance_distribution;
+  repoCards.appendChild(indexCard('스타 수집', `${idx.stars_collected}개 저장소`,
+    'GitHub·공공 깃랩 API 실측'));
+  repoCards.appendChild(indexCard('유지보수 활발', `${md['활발'] || 0}건`,
+    '최근 60일 내 활동'));
+  repoCards.appendChild(indexCard('정체·방치', `${(md['정체'] || 0) + (md['방치'] || 0)}건`,
+    '카드에 배지로 표시되어 도입 전 확인 가능'));
+  const starBody = document.querySelector('#star-table tbody');
+  for (const r of idx.top_starred) {
+    const tr = document.createElement('tr');
+    const td = document.createElement('td');
+    const a = el('a', null, r.title.length > 42 ? r.title.slice(0, 42) + '…' : r.title);
+    a.href = `./?case=${r.id}`;
+    td.appendChild(a);
+    tr.appendChild(td);
+    tr.appendChild(el('td', 'obs-strong', String(r.stars)));
+    tr.appendChild(el('td', null, r.maintenance || '—'));
+    tr.appendChild(el('td', null, r.license || '미확인'));
+    tr.appendChild(el('td', null, r.source === 'gitlab' ? '공공 깃랩' : 'GitHub'));
+    starBody.appendChild(tr);
+  }
+
+  // ── 라이선스 현황 ──
+  const licCards = document.getElementById('license-cards');
+  licCards.appendChild(indexCard('저장소 확인', `${idx.license_tagged}건`,
+    `전체 ${idx.total_cases}건 중 저장소 기반 사례`));
+  licCards.appendChild(indexCard('라이선스 명시율', pct(idx.license_stated_rate),
+    '명시 없음 = 재사용 조건 불명'));
+  const bySrc = idx.license_by_source;
+  licCards.appendChild(indexCard('플랫폼별 명시율',
+    `GitHub ${Math.round((bySrc.github.stated / bySrc.github.total) * 100)}% · 깃랩 ${Math.round((bySrc.gitlab.stated / bySrc.gitlab.total) * 100)}%`,
+    `Pages 역매핑 ${Math.round((bySrc['github-pages'].stated / bySrc['github-pages'].total) * 100)}% — 내부망산 도구일수록 라이선스 관행이 약하다`));
+  const LICENSE_MEANING = {
+    'MIT': '자유 재사용 — 출처 표시만',
+    'Apache-2.0': '자유 재사용 + 특허 조항',
+    'ISC': 'MIT와 사실상 동일',
+    'AGPL-3.0': '강한 카피레프트 — 서비스 제공 시 소스 공개 의무',
+    'Other': '커스텀 조항 — 개별 확인 필요',
+    '기타(비표준)': '커스텀 조항 — 개별 확인 필요',
+    '명시 없음': '재사용 조건 불명 — 법적으로 이용 범위가 정해지지 않음',
+  };
+  const licBody = document.querySelector('#license-table tbody');
+  for (const [name, n] of Object.entries(idx.license_distribution)) {
+    const tr = document.createElement('tr');
+    tr.appendChild(el('td', name === '명시 없음' ? null : 'obs-strong', name));
+    tr.appendChild(el('td', null, `${n}건`));
+    tr.appendChild(el('td', null, LICENSE_MEANING[name] || '개별 확인 필요'));
+    licBody.appendChild(tr);
+  }
+
   // ── 깃랩 브릿지 ──
   const bridge = document.getElementById('bridge-cards');
   bridge.appendChild(indexCard('공공 깃랩 사례', `${idx.gitlab_cases}건`, null));

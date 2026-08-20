@@ -79,6 +79,38 @@ def build() -> dict:
             "approval_gate": round(unknown_gate / len(evals), 3),
             "feedback": round(unknown_feedback / len(evals), 3),
         },
+        # 저장소 지표 (관측소 확장): 스타·유지보수 — 커뮤니티 검증의 대리 지표
+        "maintenance_distribution": dict(Counter(
+            c.get("maintenance") for c in cases if c.get("maintenance"))),
+        "stars_collected": sum(1 for c in cases if c.get("stars") is not None),
+        "top_starred": [
+            {"id": c["id"], "title": c["title"], "stars": c["stars"],
+             "maintenance": c.get("maintenance"), "license": c.get("license"),
+             "source": "gitlab" if any("gitlab.aigov" in u for u in urls(c)) else "github"}
+            for c in sorted([x for x in cases if x.get("stars")],
+                            key=lambda x: -x["stars"])[:15]
+        ],
+        # 라이선스 현황
+        "license_distribution": dict(Counter(
+            c["license"] for c in cases if c.get("license")).most_common()),
+        "license_by_source": {
+            src: {"total": sum(1 for c in cases if c.get("license_source") == src),
+                  "stated": sum(1 for c in cases if c.get("license_source") == src
+                                and c["license"] != "명시 없음")}
+            for src in ("github", "github-pages", "gitlab")
+        },
+        # MCP 현황 — 공급/소비·공식/비공식·완결성
+        "mcp_stats": {
+            "total": len(mcp_cases),
+            "official": sum(1 for c in mcp_cases if c.get("mcp_official") is True),
+            "unofficial": sum(1 for c in mcp_cases if c.get("mcp_official") is False),
+            "roles": dict(Counter(
+                (ev_by_id.get(c["id"], {}).get("mcp_role") or "미상") for c in mcp_cases)),
+            "c_grades": dict(Counter(
+                (ev_by_id.get(c["id"], {}).get("c") or "미상") for c in mcp_cases)),
+            "maintenance": dict(Counter(
+                c.get("maintenance") for c in mcp_cases if c.get("maintenance"))),
+        },
         "mirror_pair_cases": [
             {"id": c["id"], "title": c["title"],
              "github": next(u for u in urls(c) if "github.com" in u),

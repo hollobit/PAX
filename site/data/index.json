@@ -41,6 +41,177 @@
   "approval_gate": 1.0,
   "feedback": 0.505
  },
+ "maintenance_distribution": {
+  "활발": 88,
+  "정체": 12,
+  "방치": 12
+ },
+ "stars_collected": 111,
+ "top_starred": [
+  {
+   "id": "2f4ed1e68a6464c5",
+   "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
+   "stars": 7258,
+   "maintenance": "활발",
+   "license": "MIT",
+   "source": "github"
+  },
+  {
+   "id": "43dc7f4ab2500260",
+   "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
+   "stars": 2488,
+   "maintenance": "활발",
+   "license": "MIT",
+   "source": "github"
+  },
+  {
+   "id": "8ff758ac1d5e40eb",
+   "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
+   "stars": 1755,
+   "maintenance": "활발",
+   "license": "MIT",
+   "source": "github"
+  },
+  {
+   "id": "de4b2dab339d69b7",
+   "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
+   "stars": 635,
+   "maintenance": "활발",
+   "license": "Other",
+   "source": "github"
+  },
+  {
+   "id": "75b9815de6b6dcf5",
+   "title": "아파트 실거래가 MCP — 국토교통부 공개 API 기반",
+   "stars": 368,
+   "maintenance": "활발",
+   "license": "MIT",
+   "source": "github"
+  },
+  {
+   "id": "54d599932088897f",
+   "title": "정부 지원사업 전수조사 에이전트 스킬 ir-search",
+   "stars": 361,
+   "maintenance": "활발",
+   "license": "MIT",
+   "source": "github"
+  },
+  {
+   "id": "1c54d608228e0845",
+   "title": "이미지 생성 프롬프트 컴파일 스킬 — 공냥이 프롬프트 킷",
+   "stars": 314,
+   "maintenance": "활발",
+   "license": "MIT",
+   "source": "github"
+  },
+  {
+   "id": "c5aa260668941b92",
+   "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커",
+   "stars": 294,
+   "maintenance": "활발",
+   "license": "Apache-2.0",
+   "source": "github"
+  },
+  {
+   "id": "1f5e21b854f0aa3a",
+   "title": "공공데이터포털 API를 MCP 서버 모음으로 공개",
+   "stars": 288,
+   "maintenance": "방치",
+   "license": "Apache-2.0",
+   "source": "github"
+  },
+  {
+   "id": "65e1983235232514",
+   "title": "bookforge — 한국어 전자책 PDF 생성 에이전트 스킬",
+   "stars": 255,
+   "maintenance": "활발",
+   "license": "Other",
+   "source": "github"
+  },
+  {
+   "id": "e07be0004494e652",
+   "title": "한국 주식 분석 MCP",
+   "stars": 174,
+   "maintenance": "활발",
+   "license": "ISC",
+   "source": "github"
+  },
+  {
+   "id": "edf9a8632ff74a99",
+   "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연",
+   "stars": 135,
+   "maintenance": "활발",
+   "license": "Apache-2.0",
+   "source": "github"
+  },
+  {
+   "id": "81c14797b7aaafa0",
+   "title": "LexGuard MCP — 일반인용 법률 정보 조회",
+   "stars": 128,
+   "maintenance": "활발",
+   "license": "Other",
+   "source": "github"
+  },
+  {
+   "id": "13342535139dd7a0",
+   "title": "DART 전자공시 MCP",
+   "stars": 127,
+   "maintenance": "방치",
+   "license": "명시 없음",
+   "source": "github"
+  },
+  {
+   "id": "83bb0ac0ed9f576d",
+   "title": "OpenDART 전자공시 MCP — 83개 API를 15개 도구로",
+   "stars": 94,
+   "maintenance": "활발",
+   "license": "MIT",
+   "source": "github"
+  }
+ ],
+ "license_distribution": {
+  "MIT": 54,
+  "명시 없음": 44,
+  "Other": 14,
+  "Apache-2.0": 10,
+  "AGPL-3.0": 2,
+  "ISC": 1,
+  "기타(비표준)": 1
+ },
+ "license_by_source": {
+  "github": {
+   "total": 90,
+   "stated": 70
+  },
+  "github-pages": {
+   "total": 14,
+   "stated": 4
+  },
+  "gitlab": {
+   "total": 22,
+   "stated": 8
+  }
+ },
+ "mcp_stats": {
+  "total": 63,
+  "official": 4,
+  "unofficial": 56,
+  "roles": {
+   "Planned": 1,
+   "Server": 56,
+   "Client/Host": 6
+  },
+  "c_grades": {
+   "C0": 59,
+   "C2": 3,
+   "C3": 1
+  },
+  "maintenance": {
+   "활발": 31,
+   "방치": 12,
+   "정체": 10
+  }
+ },
  "mirror_pair_cases": [
   {
    "id": "d08bc7e9a69190af",

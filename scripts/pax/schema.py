@@ -12,7 +12,7 @@ REQUIRED_FIELDS = frozenset(
 OPTIONAL_FIELDS = frozenset(["case_url", "popularity", "region", "case_class",
                              "license", "license_source", "license_checked",
                              "task_category", "runtime_env", "network_req", "cost_req",
-                             "link_ok", "health_checked", "maintenance",
+                             "link_ok", "health_checked", "maintenance", "stars",
                              # 로드맵 2-1 스키마 확장 — 전부 '미확인'(누락) 허용
                              "transition_stage", "blocker", "model_dependency",
                              "deployment_env", "n2sf_class", "funding_source",

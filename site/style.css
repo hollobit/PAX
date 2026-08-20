@@ -2031,3 +2031,9 @@ main {
 .site-nav--external a {
   color: var(--ink-soft);
 }
+
+
+.obs-subheading { font-size: 1.02rem; margin: 1.4rem 0 0.6rem; }
+.obs-issues { padding-left: 1.2rem; list-style: disc; }
+.obs-issues li { margin-bottom: 0.55rem; font-size: 0.92rem; color: var(--ink-soft); }
+.obs-issues strong { color: var(--ink); }
