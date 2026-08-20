@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-20T09:36:21+09:00",
+ "updated_at": "2026-08-20T21:35:34+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -4709,6 +4709,27 @@
    "license": "Other",
    "license_source": "github",
    "license_checked": "2026-08-20"
+  },
+  {
+   "org": "경북IT융합산업기술원(GITC)",
+   "source": "kakao",
+   "org_type": "공공기관",
+   "date": "2026-08-20",
+   "region": "경북",
+   "task_category": "데이터·통계",
+   "case_class": "기관 공식",
+   "tags": [
+    "AI인프라",
+    "오픈소스",
+    "API",
+    "지역기관"
+   ],
+   "summary": "경북 경산의 출자·출연기관 경북IT융합산업기술원(GITC)이 운영하는 공공형 AI 모델 서빙 플랫폼. 지역 기업·기관·개발자·학생이 오픈소스 AI 모델을 Playground에서 무료로 체험하고 API로 실서비스까지 개발할 수 있게 지원한다. 지역 공공기관이 AI 인프라를 무료 개방한 드문 사례로, 커뮤니티에 직접 공유되며 알려졌다.",
+   "title": "Open AI Service Hub — 경북IT융합산업기술원의 공공형 AI 모델 서빙 플랫폼",
+   "runtime_env": "브라우저만",
+   "collected_at": "2026-08-20",
+   "link": "https://open.hasa.re.kr/",
+   "id": "baebbc7b8aa4c952"
   }
  ]
 }

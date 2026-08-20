@@ -1063,7 +1063,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -2348,6 +2348,12 @@
    "title": "쉽다공문 — 제미나이 GEM 공문서 초안 생성기 무료 배포",
    "org": "공직 현장(개인 개발)",
    "url": "https://brojun.kr/sdgm/"
+  },
+  {
+   "id": "baebbc7b8aa4c952",
+   "title": "Open AI Service Hub — 경북IT융합산업기술원의 공공형 AI 모델 서빙 플랫폼",
+   "org": "경북IT융합산업기술원(GITC)",
+   "url": "https://open.hasa.re.kr/"
   }
  ]
 }

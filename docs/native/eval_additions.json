@@ -3274,5 +3274,33 @@
   "post_url": "https://www.threads.com/@g1_ai_teacher/post/DbYeteVH3j3",
   "service_url": "https://github.com/raphysicst-create/korean-secondary-learning-map-mcp",
   "rationale": "2022 개정 교육과정을 MCP로 구조화해 AI 답변에 공식 근거를 물리는 접근 — 환각 억제를 목적으로 명시한 드문 교육 현장 사례. 기능 제공 단계(C0)의 준비 자산이며, 수업 설계 업무와의 결합(완결성 상향)은 아직 관측 전."
+ },
+ {
+  "no": 188,
+  "id": "baebbc7b8aa4c952",
+  "org": "경북IT융합산업기술원(GITC)",
+  "title": "Open AI Service Hub — 경북IT융합산업기술원의 공공형 AI 모델 서빙 플랫폼",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S2",
+  "s_name": "Tool bundle",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "In service",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R1 낮음",
+  "human": "해당 없음",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "resilience": "미확인",
+  "post_url": null,
+  "service_url": "https://open.hasa.re.kr/",
+  "rationale": "지역 출자·출연기관이 오픈소스 AI 모델 서빙 인프라(Playground+API)를 기관 공식 서비스로 무료 개방 — 체험에서 실서비스 연동까지 흐름을 설계한 Enabled 단계. 지역·기관유형(공공기관, 경북) 관측이 희소한 아카이브에서 드문 비수도권 기관 공식 사례. 이용 규모·운영 성과는 미확인."
  }
 ]
