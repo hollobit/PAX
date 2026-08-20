@@ -2018,3 +2018,15 @@ main {
 .case-page__related { padding-left: 1.2rem; list-style: disc; }
 
 .site-footer { max-width: 56rem; margin: 3rem auto 2rem; padding: 1rem 1.5rem; color: var(--ink-faint); font-size: 0.85rem; text-align: center; border-top: 1px solid var(--rule); }
+
+
+/* ---- 2줄 내비: 외부 링크 줄 ---- */
+.site-nav--external {
+  margin-top: 0.45rem;
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+.site-nav--external a {
+  color: var(--ink-soft);
+}
