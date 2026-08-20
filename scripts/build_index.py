@@ -84,17 +84,30 @@ def build() -> dict:
             "approval_gate": round(unknown_gate / len(evals), 3),
             "feedback": round(unknown_feedback / len(evals), 3),
         },
-        # 저장소 지표 (관측소 확장): 스타·유지보수 — 커뮤니티 검증의 대리 지표
+        # 저장소 지표 (관측소 확장): 스타·유지보수 — GitHub/공공 깃랩 분리 집계
         "maintenance_distribution": dict(Counter(
             c.get("maintenance") for c in cases if c.get("maintenance"))),
         "stars_collected": sum(1 for c in cases if c.get("stars") is not None),
-        "top_starred": [
-            {"id": c["id"], "title": c["title"], "stars": c["stars"],
-             "maintenance": c.get("maintenance"), "license": c.get("license"),
-             "source": "gitlab" if any("gitlab.aigov" in u for u in urls(c)) else "github"}
-            for c in sorted([x for x in cases if x.get("stars")],
-                            key=lambda x: -x["stars"])[:15]
-        ],
+        "repo_stats": {
+            platform: {
+                "count": len(plat_cases),
+                "starred": sum(1 for c in plat_cases if c.get("stars") is not None),
+                "maintenance": dict(Counter(
+                    c.get("maintenance") for c in plat_cases if c.get("maintenance"))),
+                "top": [
+                    {"id": c["id"], "title": c["title"], "stars": c["stars"],
+                     "maintenance": c.get("maintenance"), "license": c.get("license")}
+                    for c in sorted([x for x in plat_cases if x.get("stars") is not None],
+                                    key=lambda x: -x["stars"])[:10]
+                ],
+            }
+            for platform, plat_cases in (
+                ("gitlab", [c for c in cases if any("gitlab.aigov" in u for u in urls(c))]),
+                ("github", [c for c in cases
+                            if any("github.com" in u for u in urls(c))
+                            and not any("gitlab.aigov" in u for u in urls(c))]),
+            )
+        },
         # 라이선스 현황
         "license_distribution": dict(Counter(
             c["license"] for c in cases if c.get("license")).most_common()),

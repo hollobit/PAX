@@ -50,128 +50,168 @@
   "방치": 12
  },
  "stars_collected": 111,
- "top_starred": [
-  {
-   "id": "2f4ed1e68a6464c5",
-   "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
-   "stars": 7258,
-   "maintenance": "활발",
-   "license": "MIT",
-   "source": "github"
+ "repo_stats": {
+  "gitlab": {
+   "count": 25,
+   "starred": 24,
+   "maintenance": {
+    "활발": 24
+   },
+   "top": [
+    {
+     "id": "ac09bd2e1c0fbb29",
+     "title": "온AI Work — 공무원 보고서 AI 작성 도구",
+     "stars": 15,
+     "maintenance": "활발",
+     "license": "MIT"
+    },
+    {
+     "id": "d08bc7e9a69190af",
+     "title": "내부망용 빠른 메모·구조화 앱",
+     "stars": 12,
+     "maintenance": "활발",
+     "license": "AGPL-3.0"
+    },
+    {
+     "id": "2798c2e0b79ab291",
+     "title": "KODA — 폐쇄망용 보안취약점 점검 도구",
+     "stars": 9,
+     "maintenance": "활발",
+     "license": "Apache-2.0"
+    },
+    {
+     "id": "a8492663acf67b99",
+     "title": "나라예산 한눈에 — 중앙관서 세출예산서 8,500건 웹서비스",
+     "stars": 8,
+     "maintenance": "활발",
+     "license": "명시 없음"
+    },
+    {
+     "id": "17ed2d7a88c03119",
+     "title": "Rekian — HWPX 공문서 재기안 에이전트 스킬셋",
+     "stars": 7,
+     "maintenance": "활발",
+     "license": "MIT"
+    },
+    {
+     "id": "d6c35b2999da8ca0",
+     "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱",
+     "stars": 6,
+     "maintenance": "활발",
+     "license": "명시 없음"
+    },
+    {
+     "id": "8c5458af8f13435d",
+     "title": "한글 AI 도우미 — 로컬 LLM 웹한글 보고서 확장",
+     "stars": 5,
+     "maintenance": "활발",
+     "license": "명시 없음"
+    },
+    {
+     "id": "c6a58cb9146d0694",
+     "title": "parknews — 국립공원 현안 뉴스 지도·일일 요약",
+     "stars": 5,
+     "maintenance": "활발",
+     "license": "명시 없음"
+    },
+    {
+     "id": "4ab9bf954cb48eb9",
+     "title": "AI 정부 실험실 프로젝트 현황 보드 공개",
+     "stars": 4,
+     "maintenance": "활발",
+     "license": "명시 없음"
+    },
+    {
+     "id": "112bf7dc576ed8aa",
+     "title": "공공행정 리서치 스킬 — 공식 근거를 검토용 보고서로 정리",
+     "stars": 4,
+     "maintenance": "활발",
+     "license": "MIT"
+    }
+   ]
   },
-  {
-   "id": "43dc7f4ab2500260",
-   "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
-   "stars": 2488,
-   "maintenance": "활발",
-   "license": "MIT",
-   "source": "github"
-  },
-  {
-   "id": "8ff758ac1d5e40eb",
-   "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
-   "stars": 1755,
-   "maintenance": "활발",
-   "license": "MIT",
-   "source": "github"
-  },
-  {
-   "id": "de4b2dab339d69b7",
-   "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
-   "stars": 635,
-   "maintenance": "활발",
-   "license": "Other",
-   "source": "github"
-  },
-  {
-   "id": "75b9815de6b6dcf5",
-   "title": "아파트 실거래가 MCP — 국토교통부 공개 API 기반",
-   "stars": 368,
-   "maintenance": "활발",
-   "license": "MIT",
-   "source": "github"
-  },
-  {
-   "id": "54d599932088897f",
-   "title": "정부 지원사업 전수조사 에이전트 스킬 ir-search",
-   "stars": 361,
-   "maintenance": "활발",
-   "license": "MIT",
-   "source": "github"
-  },
-  {
-   "id": "1c54d608228e0845",
-   "title": "이미지 생성 프롬프트 컴파일 스킬 — 공냥이 프롬프트 킷",
-   "stars": 314,
-   "maintenance": "활발",
-   "license": "MIT",
-   "source": "github"
-  },
-  {
-   "id": "c5aa260668941b92",
-   "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커",
-   "stars": 294,
-   "maintenance": "활발",
-   "license": "Apache-2.0",
-   "source": "github"
-  },
-  {
-   "id": "1f5e21b854f0aa3a",
-   "title": "공공데이터포털 API를 MCP 서버 모음으로 공개",
-   "stars": 288,
-   "maintenance": "방치",
-   "license": "Apache-2.0",
-   "source": "github"
-  },
-  {
-   "id": "65e1983235232514",
-   "title": "bookforge — 한국어 전자책 PDF 생성 에이전트 스킬",
-   "stars": 255,
-   "maintenance": "활발",
-   "license": "Other",
-   "source": "github"
-  },
-  {
-   "id": "e07be0004494e652",
-   "title": "한국 주식 분석 MCP",
-   "stars": 174,
-   "maintenance": "활발",
-   "license": "ISC",
-   "source": "github"
-  },
-  {
-   "id": "edf9a8632ff74a99",
-   "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연",
-   "stars": 135,
-   "maintenance": "활발",
-   "license": "Apache-2.0",
-   "source": "github"
-  },
-  {
-   "id": "81c14797b7aaafa0",
-   "title": "LexGuard MCP — 일반인용 법률 정보 조회",
-   "stars": 128,
-   "maintenance": "활발",
-   "license": "Other",
-   "source": "github"
-  },
-  {
-   "id": "13342535139dd7a0",
-   "title": "DART 전자공시 MCP",
-   "stars": 127,
-   "maintenance": "방치",
-   "license": "명시 없음",
-   "source": "github"
-  },
-  {
-   "id": "83bb0ac0ed9f576d",
-   "title": "OpenDART 전자공시 MCP — 83개 API를 15개 도구로",
-   "stars": 94,
-   "maintenance": "활발",
-   "license": "MIT",
-   "source": "github"
+  "github": {
+   "count": 89,
+   "starred": 87,
+   "maintenance": {
+    "활발": 64,
+    "정체": 12,
+    "방치": 12
+   },
+   "top": [
+    {
+     "id": "2f4ed1e68a6464c5",
+     "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
+     "stars": 7258,
+     "maintenance": "활발",
+     "license": "MIT"
+    },
+    {
+     "id": "43dc7f4ab2500260",
+     "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
+     "stars": 2488,
+     "maintenance": "활발",
+     "license": "MIT"
+    },
+    {
+     "id": "8ff758ac1d5e40eb",
+     "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
+     "stars": 1755,
+     "maintenance": "활발",
+     "license": "MIT"
+    },
+    {
+     "id": "de4b2dab339d69b7",
+     "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
+     "stars": 635,
+     "maintenance": "활발",
+     "license": "Other"
+    },
+    {
+     "id": "75b9815de6b6dcf5",
+     "title": "아파트 실거래가 MCP — 국토교통부 공개 API 기반",
+     "stars": 368,
+     "maintenance": "활발",
+     "license": "MIT"
+    },
+    {
+     "id": "54d599932088897f",
+     "title": "정부 지원사업 전수조사 에이전트 스킬 ir-search",
+     "stars": 361,
+     "maintenance": "활발",
+     "license": "MIT"
+    },
+    {
+     "id": "1c54d608228e0845",
+     "title": "이미지 생성 프롬프트 컴파일 스킬 — 공냥이 프롬프트 킷",
+     "stars": 314,
+     "maintenance": "활발",
+     "license": "MIT"
+    },
+    {
+     "id": "c5aa260668941b92",
+     "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커",
+     "stars": 294,
+     "maintenance": "활발",
+     "license": "Apache-2.0"
+    },
+    {
+     "id": "1f5e21b854f0aa3a",
+     "title": "공공데이터포털 API를 MCP 서버 모음으로 공개",
+     "stars": 288,
+     "maintenance": "방치",
+     "license": "Apache-2.0"
+    },
+    {
+     "id": "65e1983235232514",
+     "title": "bookforge — 한국어 전자책 PDF 생성 에이전트 스킬",
+     "stars": 255,
+     "maintenance": "활발",
+     "license": "Other"
+    }
+   ]
   }
- ],
+ },
  "license_distribution": {
   "MIT": 54,
   "명시 없음": 44,

@@ -146,29 +146,41 @@ async function main() {
   issue(`유지보수 개인 의존 (정체·방치 ${(m.maintenance['정체'] || 0) + (m.maintenance['방치'] || 0)}건).`,
     'MCP 3건 중 1건은 최근 활동이 멈췄습니다 — 데이터 스키마가 바뀌면 조용히 깨지는 도구들입니다.');
 
-  // ── 저장소 지표 ──
-  const repoCards = document.getElementById('repo-cards');
-  const md = idx.maintenance_distribution;
-  repoCards.appendChild(indexCard('스타 수집', `${idx.stars_collected}개 저장소`,
-    'GitHub·공공 깃랩 API 실측'));
-  repoCards.appendChild(indexCard('유지보수 활발', `${md['활발'] || 0}건`,
-    '최근 60일 내 활동'));
-  repoCards.appendChild(indexCard('정체·방치', `${(md['정체'] || 0) + (md['방치'] || 0)}건`,
-    '카드에 배지로 표시되어 도입 전 확인 가능'));
-  const starBody = document.querySelector('#star-table tbody');
-  for (const r of idx.top_starred) {
-    const tr = document.createElement('tr');
-    const td = document.createElement('td');
-    const a = el('a', null, r.title.length > 42 ? r.title.slice(0, 42) + '…' : r.title);
-    a.href = `./?case=${r.id}`;
-    td.appendChild(a);
-    tr.appendChild(td);
-    tr.appendChild(el('td', 'obs-strong', String(r.stars)));
-    tr.appendChild(el('td', null, r.maintenance || '—'));
-    tr.appendChild(el('td', null, r.license || '미확인'));
-    tr.appendChild(el('td', null, r.source === 'gitlab' ? '공공 깃랩' : 'GitHub'));
-    starBody.appendChild(tr);
-  }
+  // ── 저장소 지표 (플랫폼 분리) ──
+  const renderPlatform = (key) => {
+    const s = idx.repo_stats[key];
+    const cards = document.getElementById(`repo-cards-${key}`);
+    const label = key === 'gitlab' ? '공공 깃랩' : 'GitHub';
+    cards.appendChild(indexCard('저장소', `${s.count}건`,
+      `스타 실측 ${s.starred}건`));
+    cards.appendChild(indexCard('유지보수 활발', `${s.maintenance['활발'] || 0}건`,
+      '최근 60일 내 활동'));
+    cards.appendChild(indexCard('정체·방치',
+      `${(s.maintenance['정체'] || 0) + (s.maintenance['방치'] || 0)}건`,
+      key === 'gitlab' ? '개설 초기라 전원 활발 — 다음 분기부터 관측 의미' : '카드 배지로 도입 전 확인 가능'));
+    const body = document.querySelector(`#star-table-${key} tbody`);
+    for (const r of s.top) {
+      const tr = document.createElement('tr');
+      const td = document.createElement('td');
+      const a = el('a', null, r.title.length > 42 ? r.title.slice(0, 42) + '…' : r.title);
+      a.href = `./?case=${r.id}`;
+      td.appendChild(a);
+      tr.appendChild(td);
+      tr.appendChild(el('td', 'obs-strong', String(r.stars)));
+      tr.appendChild(el('td', null, r.maintenance || '—'));
+      tr.appendChild(el('td', null, r.license || '미확인'));
+      body.appendChild(tr);
+    }
+    if (!s.top.length) {
+      const tr = document.createElement('tr');
+      const td = el('td', null, `${label} 스타 데이터 없음`);
+      td.colSpan = 4;
+      tr.appendChild(td);
+      body.appendChild(tr);
+    }
+  };
+  renderPlatform('github');
+  renderPlatform('gitlab');
 
   // ── 라이선스 현황 ──
   const licCards = document.getElementById('license-cards');
