@@ -63,70 +63,80 @@
      "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
      "stars": 2488,
      "maintenance": "활발",
-     "license": "MIT"
+     "license": "MIT",
+     "developer": "류승인"
     },
     {
      "id": "8ff758ac1d5e40eb",
      "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
      "stars": 1755,
      "maintenance": "활발",
-     "license": "MIT"
+     "license": "MIT",
+     "developer": "류승인"
     },
     {
      "id": "de4b2dab339d69b7",
      "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
      "stars": 635,
      "maintenance": "활발",
-     "license": "Other"
+     "license": "Other",
+     "developer": "류승인"
     },
     {
      "id": "fe3bb0d913e27677",
      "title": "로컬 Ollama 기반 MCP 멀티 호스트",
      "stars": 22,
      "maintenance": "활발",
-     "license": "MIT"
+     "license": "MIT",
+     "developer": "류승인"
     },
     {
      "id": "ac09bd2e1c0fbb29",
      "title": "온AI Work — 공무원 보고서 AI 작성 도구",
      "stars": 15,
      "maintenance": "활발",
-     "license": "MIT"
+     "license": "MIT",
+     "developer": "정준우"
     },
     {
      "id": "1502d338e8e99382",
      "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구",
      "stars": 14,
      "maintenance": "활발",
-     "license": "MIT"
+     "license": "MIT",
+     "developer": "류승인"
     },
     {
      "id": "d08bc7e9a69190af",
      "title": "내부망용 빠른 메모·구조화 앱",
      "stars": 12,
      "maintenance": "활발",
-     "license": "AGPL-3.0"
+     "license": "AGPL-3.0",
+     "developer": "우성균"
     },
     {
      "id": "2798c2e0b79ab291",
      "title": "KODA — 폐쇄망용 보안취약점 점검 도구",
      "stars": 9,
      "maintenance": "활발",
-     "license": "Apache-2.0"
+     "license": "Apache-2.0",
+     "developer": "김지현"
     },
     {
      "id": "a8492663acf67b99",
      "title": "나라예산 한눈에 — 중앙관서 세출예산서 8,500건 웹서비스",
      "stars": 8,
      "maintenance": "활발",
-     "license": "명시 없음"
+     "license": "명시 없음",
+     "developer": "김기현"
     },
     {
      "id": "17ed2d7a88c03119",
      "title": "Rekian — HWPX 공문서 재기안 에이전트 스킬셋",
      "stars": 7,
      "maintenance": "활발",
-     "license": "MIT"
+     "license": "MIT",
+     "developer": "정솔현"
     }
    ]
   },
@@ -144,70 +154,80 @@
      "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
      "stars": 7258,
      "maintenance": "활발",
-     "license": "MIT"
+     "license": "MIT",
+     "developer": "NomaDamas"
     },
     {
      "id": "75b9815de6b6dcf5",
      "title": "아파트 실거래가 MCP — 국토교통부 공개 API 기반",
      "stars": 368,
      "maintenance": "활발",
-     "license": "MIT"
+     "license": "MIT",
+     "developer": "ParkTaeYoung"
     },
     {
      "id": "54d599932088897f",
      "title": "정부 지원사업 전수조사 에이전트 스킬 ir-search",
      "stars": 361,
      "maintenance": "활발",
-     "license": "MIT"
+     "license": "MIT",
+     "developer": "Danny"
     },
     {
      "id": "1c54d608228e0845",
      "title": "이미지 생성 프롬프트 컴파일 스킬 — 공냥이 프롬프트 킷",
      "stars": 314,
      "maintenance": "활발",
-     "license": "MIT"
+     "license": "MIT",
+     "developer": "kongnyng"
     },
     {
      "id": "c5aa260668941b92",
      "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커",
      "stars": 294,
      "maintenance": "활발",
-     "license": "Apache-2.0"
+     "license": "Apache-2.0",
+     "developer": "모두의AI"
     },
     {
      "id": "1f5e21b854f0aa3a",
      "title": "공공데이터포털 API를 MCP 서버 모음으로 공개",
      "stars": 288,
      "maintenance": "방치",
-     "license": "Apache-2.0"
+     "license": "Apache-2.0",
+     "developer": "Dave Goobong Jeong"
     },
     {
      "id": "65e1983235232514",
      "title": "bookforge — 한국어 전자책 PDF 생성 에이전트 스킬",
      "stars": 255,
      "maintenance": "활발",
-     "license": "Other"
+     "license": "Other",
+     "developer": "kongnyng"
     },
     {
      "id": "e07be0004494e652",
      "title": "한국 주식 분석 MCP",
      "stars": 174,
      "maintenance": "활발",
-     "license": "ISC"
+     "license": "ISC",
+     "developer": "Jaejin Song"
     },
     {
      "id": "edf9a8632ff74a99",
      "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연",
      "stars": 135,
      "maintenance": "활발",
-     "license": "Apache-2.0"
+     "license": "Apache-2.0",
+     "developer": "Spring AI Community"
     },
     {
      "id": "81c14797b7aaafa0",
      "title": "LexGuard MCP — 일반인용 법률 정보 조회",
      "stars": 128,
      "maintenance": "활발",
-     "license": "Other"
+     "license": "Other",
+     "developer": "seonaru"
     }
    ]
   }
@@ -220,6 +240,36 @@
   "AGPL-3.0": 3,
   "기타(비표준)": 2,
   "ISC": 1
+ },
+ "license_matrix": {
+  "MIT": {
+   "github": 49,
+   "gitlab": 5
+  },
+  "명시 없음": {
+   "github": 30,
+   "gitlab": 19
+  },
+  "Other": {
+   "github": 14,
+   "gitlab": 0
+  },
+  "Apache-2.0": {
+   "github": 8,
+   "gitlab": 2
+  },
+  "AGPL-3.0": {
+   "github": 2,
+   "gitlab": 1
+  },
+  "기타(비표준)": {
+   "github": 0,
+   "gitlab": 2
+  },
+  "ISC": {
+   "github": 1,
+   "gitlab": 0
+  }
  },
  "license_by_source": {
   "github": {

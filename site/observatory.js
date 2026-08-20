@@ -162,10 +162,16 @@ async function main() {
     for (const r of s.top) {
       const tr = document.createElement('tr');
       const td = document.createElement('td');
-      const a = el('a', null, r.title.length > 42 ? r.title.slice(0, 42) + '…' : r.title);
+      const a = el('a', null, r.title.length > 38 ? r.title.slice(0, 38) + '…' : r.title);
       a.href = `./?case=${r.id}`;
       td.appendChild(a);
       tr.appendChild(td);
+      const devTd = document.createElement('td');
+      const devLink = el('a', null, r.developer || '미상');
+      devLink.href = `champions.html?q=${encodeURIComponent((r.developer || '').split(' · ')[0])}`;
+      if (r.developer && r.developer !== '미상') devTd.appendChild(devLink);
+      else devTd.textContent = '미상';
+      tr.appendChild(devTd);
       tr.appendChild(el('td', 'obs-strong', String(r.stars)));
       tr.appendChild(el('td', null, r.maintenance || '—'));
       tr.appendChild(el('td', null, r.license || '미확인'));
@@ -174,7 +180,7 @@ async function main() {
     if (!s.top.length) {
       const tr = document.createElement('tr');
       const td = el('td', null, `${label} 스타 데이터 없음`);
-      td.colSpan = 4;
+      td.colSpan = 5;
       tr.appendChild(td);
       body.appendChild(tr);
     }
@@ -203,9 +209,12 @@ async function main() {
   };
   const licBody = document.querySelector('#license-table tbody');
   for (const [name, n] of Object.entries(idx.license_distribution)) {
+    const mx = idx.license_matrix[name] || { github: 0, gitlab: 0 };
     const tr = document.createElement('tr');
     tr.appendChild(el('td', name === '명시 없음' ? null : 'obs-strong', name));
-    tr.appendChild(el('td', null, `${n}건`));
+    tr.appendChild(el('td', null, `${mx.github}건`));
+    tr.appendChild(el('td', null, `${mx.gitlab}건`));
+    tr.appendChild(el('td', 'obs-strong', `${n}건`));
     tr.appendChild(el('td', null, LICENSE_MEANING[name] || '개별 확인 필요'));
     licBody.appendChild(tr);
   }

@@ -30,6 +30,10 @@ def build() -> dict:
     cases = json.load(open("data/cases.json"))["cases"]
     evals = json.load(open("site/data/evaluations.json"))["cases"]
     champ_doc = json.load(open("site/data/champions.json"))
+    champ_of_case = {}
+    for ch in champ_doc.get("champions", []):
+        for cid in ch.get("cases", []):
+            champ_of_case.setdefault(cid, []).append(ch["name"])
     ev_by_id = {e["id"]: e for e in evals}
 
     ax_dist = Counter(e["ax"] for e in evals if e.get("ax"))
@@ -96,7 +100,11 @@ def build() -> dict:
                     c.get("maintenance") for c in plat_cases if c.get("maintenance"))),
                 "top": [
                     {"id": c["id"], "title": c["title"], "stars": c["stars"],
-                     "maintenance": c.get("maintenance"), "license": c.get("license")}
+                     "maintenance": c.get("maintenance"), "license": c.get("license"),
+                     # 챔피언 귀속명 우선, 미귀속이면 저장소 계정명
+                     "developer": " · ".join(champ_of_case.get(c["id"], [])[:2])
+                                  or next((u.split("/")[3] for u in urls(c)
+                                           if "github.com" in u or "gitlab.aigov" in u), "미상")}
                     for c in sorted([x for x in plat_cases if x.get("stars") is not None],
                                     key=lambda x: -x["stars"])[:10]
                 ],
@@ -111,6 +119,15 @@ def build() -> dict:
         # 라이선스 현황
         "license_distribution": dict(Counter(
             c["license"] for c in cases if c.get("license")).most_common()),
+        # 라이선스 × 플랫폼 매트릭스 (github-pages는 GitHub로 합산)
+        "license_matrix": {
+            name: {"github": sum(1 for c in cases if c.get("license") == name
+                                 and c.get("license_source") in ("github", "github-pages")),
+                   "gitlab": sum(1 for c in cases if c.get("license") == name
+                                 and c.get("license_source") == "gitlab")}
+            for name in dict(Counter(
+                c["license"] for c in cases if c.get("license")).most_common())
+        },
         "license_by_source": {
             src: {"total": sum(1 for c in cases if c.get("license_source") == src),
                   "stated": sum(1 for c in cases if c.get("license_source") == src
