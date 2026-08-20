@@ -30,8 +30,8 @@
  "license_tagged": 126,
  "license_stated_rate": 0.651,
  "gitlab_cases": 27,
- "gitlab_mirror_pairs": 3,
- "gitlab_open_rate": 0.111,
+ "gitlab_mirror_pairs": 4,
+ "gitlab_open_rate": 0.148,
  "mcp_cases": 63,
  "transition_funnel": {
   "기관 공식": 26,
@@ -53,11 +53,18 @@
  "repo_stats": {
   "gitlab": {
    "count": 27,
-   "starred": 25,
+   "starred": 26,
    "maintenance": {
-    "활발": 25
+    "활발": 26
    },
    "top": [
+    {
+     "id": "43dc7f4ab2500260",
+     "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
+     "stars": 2488,
+     "maintenance": "활발",
+     "license": "MIT"
+    },
     {
      "id": "fe3bb0d913e27677",
      "title": "로컬 Ollama 기반 MCP 멀티 호스트",
@@ -120,21 +127,14 @@
      "stars": 5,
      "maintenance": "활발",
      "license": "명시 없음"
-    },
-    {
-     "id": "4ab9bf954cb48eb9",
-     "title": "AI 정부 실험실 프로젝트 현황 보드 공개",
-     "stars": 4,
-     "maintenance": "활발",
-     "license": "명시 없음"
     }
    ]
   },
   "github": {
-   "count": 88,
-   "starred": 86,
+   "count": 87,
+   "starred": 85,
    "maintenance": {
-    "활발": 63,
+    "활발": 62,
     "정체": 12,
     "방치": 12
    },
@@ -143,13 +143,6 @@
      "id": "2f4ed1e68a6464c5",
      "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
      "stars": 7258,
-     "maintenance": "활발",
-     "license": "MIT"
-    },
-    {
-     "id": "43dc7f4ab2500260",
-     "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
-     "stars": 2488,
      "maintenance": "활발",
      "license": "MIT"
     },
@@ -208,6 +201,13 @@
      "stars": 255,
      "maintenance": "활발",
      "license": "Other"
+    },
+    {
+     "id": "e07be0004494e652",
+     "title": "한국 주식 분석 MCP",
+     "stars": 174,
+     "maintenance": "활발",
+     "license": "ISC"
     }
    ]
   }
@@ -273,6 +273,12 @@
    "title": "공공행정 리서치 스킬 — 공식 근거를 검토용 보고서로 정리",
    "github": "https://github.com/Kminer2053/public-sector-research-skill",
    "gitlab": "https://gitlab.aigov.go.kr/Kminer2053/public-sector-research-skill"
+  },
+  {
+   "id": "43dc7f4ab2500260",
+   "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
+   "github": "https://github.com/chrisryugj/korean-law-mcp",
+   "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/korean-law-mcp"
   }
  ]
 }

@@ -224,7 +224,7 @@
    "link_ok": true,
    "health_checked": "2026-08-21",
    "mcp_official": false,
-   "case_url": "https://gitlab.aigov.go.kr/chrisryugj/korean-law-mcp"
+   "case_url": null
   },
   {
    "date": "2026-07-11",
@@ -2398,7 +2398,8 @@
    "maintenance": "활발",
    "deployment_env": "행정망",
    "mcp_official": false,
-   "stars": 2488
+   "stars": 2488,
+   "case_url": "https://gitlab.aigov.go.kr/chrisryugj/korean-law-mcp"
   },
   {
    "collected_at": "2026-08-12",
