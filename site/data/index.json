@@ -45,51 +45,20 @@
   "feedback": 0.518
  },
  "maintenance_distribution": {
-  "활발": 88,
+  "활발": 96,
   "정체": 12,
   "방치": 12
  },
- "stars_collected": 111,
+ "stars_collected": 119,
  "repo_stats": {
   "gitlab": {
    "count": 38,
-   "starred": 29,
+   "starred": 37,
+   "stars_sum": 162,
    "maintenance": {
-    "활발": 29
+    "활발": 37
    },
    "top": [
-    {
-     "id": "43dc7f4ab2500260",
-     "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
-     "stars": 2488,
-     "maintenance": "활발",
-     "license": "MIT",
-     "developer": "류승인"
-    },
-    {
-     "id": "8ff758ac1d5e40eb",
-     "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
-     "stars": 1755,
-     "maintenance": "활발",
-     "license": "MIT",
-     "developer": "류승인"
-    },
-    {
-     "id": "de4b2dab339d69b7",
-     "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
-     "stars": 635,
-     "maintenance": "활발",
-     "license": "Other",
-     "developer": "류승인"
-    },
-    {
-     "id": "fe3bb0d913e27677",
-     "title": "로컬 Ollama 기반 MCP 멀티 호스트",
-     "stars": 22,
-     "maintenance": "활발",
-     "license": "MIT",
-     "developer": "류승인"
-    },
     {
      "id": "ac09bd2e1c0fbb29",
      "title": "온AI Work — 공무원 보고서 AI 작성 도구",
@@ -99,20 +68,12 @@
      "developer": "정준우"
     },
     {
-     "id": "1502d338e8e99382",
-     "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구",
-     "stars": 14,
+     "id": "43dc7f4ab2500260",
+     "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
+     "stars": 11,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "류승인"
-    },
-    {
-     "id": "d08bc7e9a69190af",
-     "title": "내부망용 빠른 메모·구조화 앱",
-     "stars": 12,
-     "maintenance": "활발",
-     "license": "AGPL-3.0",
-     "developer": "우성균"
     },
     {
      "id": "2798c2e0b79ab291",
@@ -137,14 +98,55 @@
      "maintenance": "활발",
      "license": "MIT",
      "developer": "정솔현"
+    },
+    {
+     "id": "de4b2dab339d69b7",
+     "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
+     "stars": 6,
+     "maintenance": "활발",
+     "license": "Other",
+     "developer": "류승인"
+    },
+    {
+     "id": "8ff758ac1d5e40eb",
+     "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
+     "stars": 6,
+     "maintenance": "활발",
+     "license": "MIT",
+     "developer": "류승인"
+    },
+    {
+     "id": "d6c35b2999da8ca0",
+     "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱",
+     "stars": 6,
+     "maintenance": "활발",
+     "license": "명시 없음",
+     "developer": "한종훈"
+    },
+    {
+     "id": "10f18583c9e56e12",
+     "title": "화성특례시 신규자 지식창고 — 규정 검증 카드 130장 웹앱 (원본)",
+     "stars": 6,
+     "maintenance": "활발",
+     "license": "명시 없음",
+     "developer": "환철 신"
+    },
+    {
+     "id": "d08bc7e9a69190af",
+     "title": "내부망용 빠른 메모·구조화 앱",
+     "stars": 5,
+     "maintenance": "활발",
+     "license": "AGPL-3.0",
+     "developer": "우성균"
     }
    ]
   },
   "github": {
-   "count": 84,
-   "starred": 82,
+   "count": 91,
+   "starred": 89,
+   "stars_sum": 15896,
    "maintenance": {
-    "활발": 59,
+    "활발": 66,
     "정체": 12,
     "방치": 12
    },
@@ -156,6 +158,30 @@
      "maintenance": "활발",
      "license": "MIT",
      "developer": "NomaDamas"
+    },
+    {
+     "id": "43dc7f4ab2500260",
+     "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
+     "stars": 2488,
+     "maintenance": "활발",
+     "license": "MIT",
+     "developer": "류승인"
+    },
+    {
+     "id": "8ff758ac1d5e40eb",
+     "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
+     "stars": 1755,
+     "maintenance": "활발",
+     "license": "MIT",
+     "developer": "류승인"
+    },
+    {
+     "id": "de4b2dab339d69b7",
+     "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
+     "stars": 635,
+     "maintenance": "활발",
+     "license": "Other",
+     "developer": "류승인"
     },
     {
      "id": "75b9815de6b6dcf5",
@@ -204,30 +230,6 @@
      "maintenance": "활발",
      "license": "Other",
      "developer": "kongnyng"
-    },
-    {
-     "id": "e07be0004494e652",
-     "title": "한국 주식 분석 MCP",
-     "stars": 174,
-     "maintenance": "활발",
-     "license": "ISC",
-     "developer": "Jaejin Song"
-    },
-    {
-     "id": "edf9a8632ff74a99",
-     "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연",
-     "stars": 135,
-     "maintenance": "활발",
-     "license": "Apache-2.0",
-     "developer": "Spring AI Community"
-    },
-    {
-     "id": "81c14797b7aaafa0",
-     "title": "LexGuard MCP — 일반인용 법률 정보 조회",
-     "stars": 128,
-     "maintenance": "활발",
-     "license": "Other",
-     "developer": "seonaru"
     }
    ]
   }

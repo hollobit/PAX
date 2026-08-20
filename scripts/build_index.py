@@ -92,28 +92,30 @@ def build() -> dict:
         "maintenance_distribution": dict(Counter(
             c.get("maintenance") for c in cases if c.get("maintenance"))),
         "stars_collected": sum(1 for c in cases if c.get("stars") is not None),
+        # 플랫폼별 지표 — 미러 사례는 양쪽에 모두 나타나되 각 플랫폼 자기 스타를 쓴다
         "repo_stats": {
             platform: {
                 "count": len(plat_cases),
-                "starred": sum(1 for c in plat_cases if c.get("stars") is not None),
+                "starred": sum(1 for c in plat_cases if c.get(star_field) is not None),
+                "stars_sum": sum(c.get(star_field) or 0 for c in plat_cases),
                 "maintenance": dict(Counter(
                     c.get("maintenance") for c in plat_cases if c.get("maintenance"))),
                 "top": [
-                    {"id": c["id"], "title": c["title"], "stars": c["stars"],
+                    {"id": c["id"], "title": c["title"], "stars": c[star_field],
                      "maintenance": c.get("maintenance"), "license": c.get("license"),
                      # 챔피언 귀속명 우선, 미귀속이면 저장소 계정명
                      "developer": " · ".join(champ_of_case.get(c["id"], [])[:2])
                                   or next((u.split("/")[3] for u in urls(c)
                                            if "github.com" in u or "gitlab.aigov" in u), "미상")}
-                    for c in sorted([x for x in plat_cases if x.get("stars") is not None],
-                                    key=lambda x: -x["stars"])[:10]
+                    for c in sorted([x for x in plat_cases if x.get(star_field) is not None],
+                                    key=lambda x: -x[star_field])[:10]
                 ],
             }
-            for platform, plat_cases in (
-                ("gitlab", [c for c in cases if any("gitlab.aigov" in u for u in urls(c))]),
-                ("github", [c for c in cases
-                            if any("github.com" in u for u in urls(c))
-                            and not any("gitlab.aigov" in u for u in urls(c))]),
+            for platform, star_field, plat_cases in (
+                ("gitlab", "stars_gitlab",
+                 [c for c in cases if any("gitlab.aigov" in u for u in urls(c))]),
+                ("github", "stars_github",
+                 [c for c in cases if any("github.com" in u for u in urls(c))]),
             )
         },
         # 라이선스 현황

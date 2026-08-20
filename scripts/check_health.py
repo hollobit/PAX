@@ -65,18 +65,25 @@ def repo_activity(url: str):
 def check_case(c):
     target = c.get("case_url") or c.get("link")
     if not target:
-        return c["id"], None, None, None
+        return c["id"], None, None, {}
     code = http_status(target)
     link_ok = 200 <= code < 400
-    maint = stars = None
-    for u in (c.get("link"), c.get("case_url")):
-        if u and ("github.com/" in u or "gitlab.aigov" in u):
-            ts, stars = repo_activity(u)
-            if ts:
-                age = (datetime.datetime.now(datetime.timezone.utc)
-                       - datetime.datetime.fromisoformat(ts.replace("Z", "+00:00"))).days
-                maint = "활발" if age <= ACTIVE_DAYS else ("정체" if age <= STALE_DAYS else "방치")
-            break
+    maint = None
+    stars = {}  # 플랫폼별 스타 — 미러 사례는 양쪽이 다르다
+    for u in (c.get("link"), c.get("case_url"), c.get("mirror_url")):
+        if not u:
+            continue
+        platform = ("github" if "github.com/" in u
+                    else "gitlab" if "gitlab.aigov" in u else None)
+        if not platform or platform in stars:
+            continue
+        ts, s = repo_activity(u)
+        if s is not None:
+            stars[platform] = s
+        if ts and maint is None:
+            age = (datetime.datetime.now(datetime.timezone.utc)
+                   - datetime.datetime.fromisoformat(ts.replace("Z", "+00:00"))).days
+            maint = "활발" if age <= ACTIVE_DAYS else ("정체" if age <= STALE_DAYS else "방치")
     return c["id"], link_ok, maint, stars
 
 
@@ -88,9 +95,14 @@ def main():
         results = {cid: (ok, maint, stars) for cid, ok, maint, stars in ex.map(check_case, cases)}
     dead = active = stale = idle = 0
     for c in cases:
-        ok, maint, stars = results.get(c["id"], (None, None, None))
-        if stars is not None:
-            c["stars"] = stars
+        ok, maint, stars = results.get(c["id"], (None, None, {}))
+        if stars:
+            if "github" in stars:
+                c["stars_github"] = stars["github"]
+            if "gitlab" in stars:
+                c["stars_gitlab"] = stars["gitlab"]
+            # 하위 호환: 대표 스타는 GitHub 우선
+            c["stars"] = stars.get("github", stars.get("gitlab"))
         if ok is None:
             continue
         c["link_ok"] = ok

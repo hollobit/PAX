@@ -152,7 +152,9 @@ async function main() {
     const cards = document.getElementById(`repo-cards-${key}`);
     const label = key === 'gitlab' ? '공공 깃랩' : 'GitHub';
     cards.appendChild(indexCard('저장소', `${s.count}건`,
-      `스타 실측 ${s.starred}건`));
+      `스타 실측 ${s.starred}건 — 표의 ★는 ${label} 자체 스타`));
+    cards.appendChild(indexCard('스타 합계', `${s.stars_sum.toLocaleString()}★`,
+      `${label} 저장소 ${s.starred}건의 합 (미러 사례는 플랫폼별 각각 집계)`));
     cards.appendChild(indexCard('유지보수 활발', `${s.maintenance['활발'] || 0}건`,
       '최근 60일 내 활동'));
     cards.appendChild(indexCard('정체·방치',
