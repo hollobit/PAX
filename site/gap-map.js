@@ -48,9 +48,9 @@ async function main() {
     if (n > 0) {
       cell.classList.add('region-cell--link');
       cell.addEventListener('click', () => {
-        location.href = './?q=' + encodeURIComponent(r);
+        location.href = './?region=' + encodeURIComponent(r);
       });
-      cell.title = `${r} 사례 검색`;
+      cell.title = `${r} 지역 사례 보기 (확정 분류 기준)`;
     }
     grid.appendChild(cell);
   }

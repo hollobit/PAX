@@ -156,7 +156,7 @@ function siteHostname(c) {
 
 const state = {
   cases: [],
-  filter: { q: '', orgType: '전체', source: '전체', tag: null, bookmarkedOnly: false, taskCat: '전체', noInstallOnly: false },
+  filter: { q: '', orgType: '전체', source: '전체', tag: null, bookmarkedOnly: false, taskCat: '전체', noInstallOnly: false, region: null },
   view: loadSavedView(), // 'cards' | 'list'
   sort: { key: 'popularity', dir: 'desc' }, // 기본: 인기 우선, 이후 최신순
   bookmarks: loadBookmarks(), // Set<caseId> — localStorage에 보존
@@ -249,6 +249,7 @@ function applyUrlToState() {
     bookmarkedOnly: p.get('bm') === '1',
     taskCat: TASK_CATEGORIES.includes(p.get('task')) ? p.get('task') : '전체',
     noInstallOnly: p.get('ni') === '1',
+    region: p.get('region') || null,
   };
   state.focusCaseId = p.get('case') || null;
   if (VIEWS.includes(view)) state.view = view;
@@ -265,6 +266,7 @@ function syncUrl() {
   if (f.bookmarkedOnly) p.set('bm', '1');
   if (f.taskCat !== '전체') p.set('task', f.taskCat);
   if (f.noInstallOnly) p.set('ni', '1');
+  if (f.region) p.set('region', f.region);
   if (state.view !== 'cards') p.set('view', state.view);
   if (state.sort.key !== 'popularity' || state.sort.dir !== 'desc') {
     p.set('sort', `${state.sort.key}.${state.sort.dir}`);
@@ -513,6 +515,7 @@ function matches(c, f) {
   if (f.tag && !c.tags.includes(f.tag)) return false;
   if (f.taskCat !== '전체' && c.task_category !== f.taskCat) return false;
   if (f.noInstallOnly && c.runtime_env !== '브라우저만') return false;
+  if (f.region && c.region !== f.region) return false;
   const q = f.q.trim().toLowerCase();
   if (!q) return true;
   const haystack = [c.title, c.summary, c.org, ...c.tags].join(' ').toLowerCase()
@@ -559,6 +562,7 @@ function renderTaskChips() {
 function render() {
   syncUrl();
   renderTaskChips();
+  renderRegionFilter();
   if (els.noInstallFilter) {
     els.noInstallFilter.setAttribute('aria-pressed', String(state.filter.noInstallOnly));
   }
@@ -909,6 +913,34 @@ function createCaseRow(c) {
 
   tr.append(bookmarkTd, titleTd, summaryTd, orgTd, typeTd, tagsTd, siteTd, sourceTd, dateTd);
   return tr;
+}
+
+function renderRegionFilter() {
+  // region 필터가 URL로 들어온 경우 상단에 표시하고 해제할 수 있게 한다 (격차 지도 연결용)
+  let bar = document.getElementById('region-filter-bar');
+  if (!state.filter.region) {
+    if (bar) bar.remove();
+    return;
+  }
+  if (!bar) {
+    bar = document.createElement('div');
+    bar.id = 'region-filter-bar';
+    bar.className = 'active-tag';
+    els.caseList.parentNode.insertBefore(bar, els.caseList);
+  }
+  bar.hidden = false;
+  bar.replaceChildren();
+  const span = document.createElement('span');
+  span.textContent = `지역 필터: ${state.filter.region} (지역 확정 분류 기준)`;
+  const clear = document.createElement('button');
+  clear.type = 'button';
+  clear.className = 'export-btn';
+  clear.textContent = '해제';
+  clear.addEventListener('click', () => {
+    state.filter = { ...state.filter, region: null };
+    render();
+  });
+  bar.append(span, ' ', clear);
 }
 
 function renderActiveTag() {
