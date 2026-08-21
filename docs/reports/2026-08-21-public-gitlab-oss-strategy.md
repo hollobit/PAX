@@ -196,6 +196,18 @@ code.gov를 만들었지만, 강제 장치가 없어 8년 뒤에도 13개 기관
   코드(깃랩)·API(게이트웨이)·데이터(단일 관문)의 삼중 스택이 갖춰질 때 개별 도구의 재사용이
   구조적으로 쉬워진다.
 
+- **플랫폼 정부(GaaP) 이론이 주는 위치 감각** ([서형준, 「국내 디지털플랫폼정부 구현을 위한
+  정책연구」, 정보화정책 30-4, 2023](https://www.nia.or.kr/common/board/Download.do?bcIdx=26215&cbIdx=65684&fileNo=1)):
+  플랫폼 정부는 네 유형 — 통합시스템·데이터·소통·**협업생산** 플랫폼 — 으로 나뉘는데,
+  내용분석 결과 한국 디지털플랫폼정부 정책은 **통합시스템 플랫폼에 편중**되어 있다.
+  논문의 제언 셋(유형 균형, 외부 이해관계자의 능동적 참여·생태계 유인, 공공부문의
+  재구조화 선행)은 본 보고서의 언어로 정확히 번역된다: 공공 깃랩은 한국 정책 지형에서
+  드문 **협업생산 플랫폼**의 실물이며, "인프라만 짓고 이해관계자 유인·생태계 구축에 소홀한
+  플랫폼은 실패한다"(van Alstyne)는 민간 플랫폼 전략의 교훈이 그대로 적용된다 —
+  라이선스·기여 가이드·공개 경로 같은 생태계 장치 없이 저장소(인프라)만 있는 현재 상태가
+  바로 그 실패 패턴의 입구다. 형식주의·부처 칸막이가 협업생산을 막는다는 지적은
+  제언 4(부처 자산 연결)가 조직 문화 과제이기도 함을 상기시킨다.
+
 ## 4. 개선 제언 — 우선순위와 실행 주체
 
 | # | 제언 | 근거 관측 | 벤치마크 | 비용 |
@@ -237,5 +249,6 @@ code.gov를 만들었지만, 강제 장치가 없어 8년 뒤에도 13개 기관
 EU·독일: [code.europa.eu](https://about.code.europa.eu/) · [EU OSS Catalogue](https://interoperable-europe.ec.europa.eu/eu-oss-catalogue/about) · [openCoDE 소개](https://interoperable-europe.ec.europa.eu/eu-oss-catalogue/source/hosting_platform:open_code)
 기업 관행: [TODO Group OSPO 정의](https://github.com/todogroup/ospodefinition.org) · [OSPO Book](https://ospobook.todogroup.org/01-chapter/) · [InnerSource Commons: Governance](https://innersourcecommons.gitbook.io/managing-innersource-projects/governance) · [InnerSource before Open Source 패턴](https://github.com/InnerSourceCommons/InnerSourcePatterns/blob/main/patterns/1-initial/innersource-before-open-source.md)
 한국 자산·국제 규범(추가 조사): [NIPA 공공 오픈소스SW 거버넌스 가이드 2025](https://www.oss.kr/pages/12/4246) · [EU 기술주권 패키지 기획기사(오픈소스 포털)](https://www.oss.kr/pages/11/4600) · [G7 AI 개방성·AI-BOM 브리핑(제469호)](https://www.oss.kr/pages/11/4606) · [SPRi RE-202 오픈소스AI 활성화 방안](https://spri.kr/posts/view/23990?code=research&study_type=&board_type=&flg=1) · [머브 히콕: 소버린AI와 한국의 SLM·오픈소스 전략](https://v.daum.net/v/uMIzjdEo1f) · [GitLab Foundation Demo Day 교훈](https://www.linkedin.com/pulse/building-roads-ai-public-sector-four-takeaways-from-amber-cnave/) · [500+ AI Agents Projects 소개](https://discuss.pytorch.kr/t/7621)
+플랫폼 정부 이론: [서형준(2023) 플랫폼 정부 유형화 연구(정보화정책 30-4)](https://www.nia.or.kr/common/board/Download.do?bcIdx=26215&cbIdx=65684&fileNo=1)
 스택·조달·데이터(2차 추가): [NIA 디지털서비스 이슈리포트 2025-2 — 영국 vs 싱가포르 인프라 전략](https://www.nia.or.kr/common/board/Download.do?bcIdx=28788&cbIdx=99863&fileNo=1) · [API7: 디지털 정부 API 10대 모범 사례](https://api7.ai/ko/blog/api-digital-government-best-practices) · [영국 NDL·GOV.UK AI 서비스 분석](https://zooey31.tistory.com/46)
 한국 관측: PAX 공공 AX 지수 2026Q3 (hollobit.github.io/PAX/observatory.html)
