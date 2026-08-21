@@ -6,13 +6,14 @@
 
 ---
 
-## 요약 — 다섯 문장
+## 요약 — 여섯 문장
 
 1. 한국 공공 깃랩은 **세계에서 가장 빠르게 채워지는 정부 코드 저장소** 중 하나지만(개설 한 달 만에 1,000명·405프로젝트, PAX 관측 사례 38건), 라이선스 명시율 36%·외부 공개율 18.4%라는 관측치는 **"올리는 문화"는 생겼는데 "재사용되는 자산"의 조건은 아직 없다**는 뜻이다.
 2. 미국은 권고(2016 연방 소스코드 정책)가 8년간 실패한 끝에 **법률(SHARE IT Act, 2024.12)로 전환**했다 — 의무 없는 공유 정책은 작동하지 않는다는 것이 미국의 결론이다.
 3. 스위스(EMBAG)·영국(Service Standard)·프랑스는 **공개를 기본값**으로 뒤집었고, 독일(openCoDE)·이탈리아(Developers Italia)는 저장소와 별개의 **검증 카탈로그**로 "찾아서 가져다 쓰는" 단계를 만들었다.
 4. 기업 측에서는 **OSPO**(전담 거버넌스 조직)와 **이너소스**(사내 개발을 오픈소스 방식으로)가 표준 관행이 됐다 — 공공 깃랩은 사실상 "범정부 이너소스 플랫폼"이므로 이 패턴들이 그대로 이식된다.
-5. 최우선 개선은 비용이 거의 들지 않는 것부터다: **저장소 생성 시 라이선스 선택 필수화**, **외부 공개(미러) 절차의 표준화**, **재사용 지표의 공표**. PAX는 이 셋의 독립 관측을 이미 시작했다.
+5. 추가 조사의 가장 중요한 발견: **한국은 거버넌스 자산이 없는 게 아니라 흩어져 있다** — NIPA의 공공 오픈소스 거버넌스 가이드(RFP 예시 포함)·오픈소스 포털의 라이선스 검증·교육 체계가 이미 있으나 공공 깃랩(행안부)과 연결되어 있지 않다. EU가 2026 기술주권 패키지에서 공공 OSPO 네트워크·유지관리 재원·조달 연계로 간 길이 정확히 이 연결의 설계도다.
+6. 최우선 개선은 비용이 거의 들지 않는 것부터다: **저장소 생성 시 라이선스 선택 필수화**, **외부 공개(미러) 절차의 표준화**, **재사용 지표의 공표**. PAX는 이 셋의 독립 관측을 이미 시작했다.
 
 ---
 
@@ -114,18 +115,73 @@ code.gov를 만들었지만, 강제 장치가 없어 8년 뒤에도 13개 기관
 
 ---
 
+## 3½. 추가 조사 반영 — 한국의 기존 자산과 국제 규범의 최신 좌표
+
+### 한국에 이미 있는 것 — 새 제도가 아니라 연결이 필요하다
+
+- **[공공 오픈소스SW 거버넌스 가이드 2025 개정판](https://www.oss.kr/pages/12/4246)** (NIPA·Open UP):
+  정보화사업의 기획→계약→수행→운영→성과평가 단계별 오픈소스 관리 절차와,
+  **사업유형별 제안요청서(RFP) 오픈소스 요구사항 작성예시**까지 이미 존재한다.
+  본 보고서 제언 3(용역 계약 표준조항)은 무에서 만드는 것이 아니라 — 이 가이드에
+  "산출물의 공공 깃랩 등록·라이선스 명시·정부 내 공유 권리" 조항을 추가하고
+  **권고를 계약 요건으로 격상**하는 문제다.
+- **오픈소스 포털(oss.kr)·Open UP**: 라이선스 검증, 컨트리뷰션 아카데미, 개발자대회 등
+  OSPO의 교육·컴플라이언스 기능 상당수를 이미 수행 중이다. 문제는 이 체계(과기정통부·NIPA)와
+  공공 깃랩(행안부)이 **분리되어 있다는 것** — 제언 4의 정부 OSPO는 신설이 아니라
+  **두 부처 자산의 연결**로 재정의한다.
+- **ETRI 범출연연 오픈소스 협의체** 확대(2026.7): 연구기관 블록에서도 조직 단위 오픈소스
+  거버넌스가 형성되고 있다 — 공공 깃랩 OSPO 네트워크의 예비 노드들이다.
+
+### 국제 규범의 최신 좌표 (2026)
+
+- **[EU 기술주권 패키지(2026.6.3)](https://www.oss.kr/pages/11/4600)**: 오픈소스가 개발자 지원책이
+  아니라 반도체법 2.0·클라우드AI개발법(CADA)과 나란한 **기술 주권 전략의 한 축**이 됐다.
+  실행 과제에 본 보고서의 제언과 정확히 겹치는 항목들이 있다 — **공공부문 OSPO 네트워크**,
+  오픈소스 친화 조달 가이드라인, 핵심 자산 스튜어드십 툴킷, **유지관리 재원(Open Source
+  Maintenance Instrument)**, 그리고 유럽 오픈소스의 해외 진출을 지원하는 EU Tech Business Offer
+  (전략 보고서 v2의 수출 카탈로그 제안과 동형). 동시에 Tech Policy Press는 "7년 20억 유로로
+  연 2,600억 유로의 의존을 풀 수 없다 — 성패는 실행 규범"이라 지적했다: **전략 선언이 아니라
+  조달·유지보수·인력의 실행 설계가 관건**이라는 교훈은 한국에도 그대로 적용된다.
+- **[G7 AI 개방성 원칙·OECD 분석](https://www.oss.kr/pages/11/4606)**: OECD는 글로벌 오픈소스
+  기여 10% 증가가 장기 GDP 약 0.5% 증가(약 1조 달러 규모)와 연관된다고 추정했다 — 공공 코드
+  개방은 투명성 의제이자 **경제 정책**이다. G7은 AI 개방성을 4단계 스펙트럼으로 정의했는데,
+  이는 공공 깃랩 저장소에도 적용 가능한 문법이다(코드만 공개 / 가중치 공개 / 데이터·과정 공개 …).
+  같은 브리핑이 주목한 **AI-BOM**(모델·데이터·라이선스·의존관계 문서화)은 제언 7(SBOM)의
+  확장형이다 — AI 도구가 대부분인 공공 깃랩에는 SBOM보다 AI-BOM이 정확한 요구다.
+- **소버린 AI와의 접속** ([머브 히콕 칼럼](https://v.daum.net/v/uMIzjdEo1f), [SPRi RE-202](https://spri.kr/posts/view/23990?code=research&study_type=&board_type=&flg=1)):
+  공공 자금으로 개발되는 한국 소버린 AI 모델은 오픈소스로 공개될 예정이며, SPRi는 오픈소스 AI
+  활성화를 AI 경쟁력의 축으로 분석한다. oss.kr 기획기사의 한국 진단이 정곡이다 —
+  **"모델을 여는 단계에서 스택 전체를 여는 단계로"**. 모델(독파모)은 열면서 그 모델로 만든
+  공공 도구(깃랩의 코드)는 라이선스조차 없는 현재의 비대칭이, 공공 깃랩 개선이 소버린 AI
+  전략의 일부인 이유다. 중국의 교훈도 같은 방향이다: 딥시크 이후 경쟁은 모델 공개가 아니라
+  **모델+추론 인프라+칩 최적화를 묶어 여는 시스템 경쟁**으로 옮겨갔다.
+
+### 문화·운영 관행의 참조점
+
+- **[GitLab Foundation·OpenAI Demo Day의 네 가지 교훈](https://www.linkedin.com/pulse/building-roads-ai-public-sector-four-takeaways-from-amber-cnave/)** (미 공공 AI Hub 운영 경험):
+  ① 가장 강력한 해법은 비기술 실무자에게서 나온다(케이스매니저·행정담당 — PAX의 실무자 주도
+  54%와 동일 관찰) ② "말하지 말고 보여줘라" — 검증된 프롬프트·블루프린트를 미완성이라도 공유
+  ③ **차가 아니라 길을 놓아라** — 단일 제품이 아닌, 기관들이 스스로 해법을 만들 인프라(교육·
+  동료학습·실험 공간) ④ 성과만큼 **실패 공유와 역량 투자**에 재원을 대라. 공공 깃랩의 다음
+  단계 설계 원칙으로 이보다 압축적인 문장은 없다 — 참고로 미국도 Code for America 조사 기준
+  AI 준비 고급 단계 주정부가 3곳뿐이다: 한국의 격차 관측과 같은 그림이다.
+- **[500+ AI Agents Projects](https://discuss.pytorch.kr/t/7621)**: 산업·프레임워크별 에이전트
+  사례를 코드 링크와 함께 모은 글로벌 큐레이션 저장소 — "사례 아카이브 + 실행 가능한 코드"
+  결합이 참조·재사용을 만든다는 방증이며, PAX 사례-저장소 연결과 공공 깃랩 카탈로그(제언 5)가
+  지향할 형태다.
+
 ## 4. 개선 제언 — 우선순위와 실행 주체
 
 | # | 제언 | 근거 관측 | 벤치마크 | 비용 |
 |---|---|---|---|---|
 | 1 | **저장소 생성 시 라이선스 선택 필수화** (권장 기본값: MIT 또는 Apache-2.0, 공공누리 병행 안내) | 명시율 36% — 재사용 조건 없는 코드 2/3 | 기업 라이선스 게이트 | 극소 (플랫폼 설정) |
 | 2 | **외부 공개(미러) 절차 표준화** — 내부 검증 후 GitHub 미러를 공식 경로로 문서화, "공개 ≠ 지원 약속" 명문화 | 개방율 18.4%, 미러 관행 자생 중 | 이너소스→오픈소스 2단계, 영국 coding in the open | 소 (지침 1건) |
-| 3 | **용역 계약 표준조항** — 정부 발주 개발물의 소스·수정권 확보와 깃랩 등록 의무 | 신규 개발물 다수가 깃랩 밖 | 미국 SHARE IT Act 계약 요건 | 소 (조달 지침) |
-| 4 | **정부 OSPO 기능 신설** — 행안부 AI실험실의 역할을 라이선스 정책·기여 가이드 템플릿·교육·분쟁 창구로 확장 | 규칙 부재가 명시율·공개율의 원인 | 기업 OSPO, TODO Group | 중 (조직 역할) |
+| 3 | **용역 계약 표준조항** — 정부 발주 개발물의 소스·수정권 확보와 깃랩 등록 의무. NIPA 거버넌스 가이드의 RFP 예시에 조항 추가 후 계약 요건으로 격상 | 신규 개발물 다수가 깃랩 밖 | 미국 SHARE IT Act + **NIPA 가이드(기존 자산)** | 소 (조달 지침) |
+| 4 | **정부 OSPO 기능 — 신설이 아니라 연결**: 행안부 AI실험실(플랫폼) × 과기정통부 NIPA·Open UP(라이선스 검증·교육) × 범출연연 협의체를 공공 OSPO 네트워크로 묶기 | 규칙 부재가 명시율·공개율의 원인, 부처 간 자산 분리 | 기업 OSPO, **EU 공공 OSPO 네트워크** | 중 (부처 협력) |
 | 5 | **검증 카탈로그 분리** — 저장소와 별개로 "타 기관 사용 검증" 카탈로그(재사용 이력·설치 가이드·담당 역할 표기) 구축, 장기적으로 조달 전 재사용 검토와 연결 | 재사용 신호 부재, 실험실 보드는 목록 수준 | 독일 openCoDE, 이탈리아 CAD 68·69 | 중 |
 | 6 | **"정부 내 공유 의무"의 제도화 검토** — 권고→훈령→법의 단계, 최종적으로 opt-out 공개 기본값 | 미국 8년 실패의 교훈 | SHARE IT Act, 스위스 EMBAG | 대 (입법) |
-| 7 | **SBOM·보안 게이트 도입** — 공개 저장소의 취약점 스캔, KODA류 도구의 공식 채택 검토 | 보안 우려가 공개 반대 논리로 사용됨 | OpenSSF, 기업 공급망 관행 | 중 |
-| 8 | **플랫폼 지표 공표** — 개방율·명시율·재사용·활성도를 분기 공개 | 자기 관측 부재 | CHAOSS류 지표, EU 카탈로그 통계 | 소 |
+| 7 | **SBOM→AI-BOM 게이트** — 취약점 스캔에 더해 AI 도구의 모델·데이터·라이선스·의존관계 문서화(AI-BOM), KODA류 자생 도구의 공식 채택 검토 | 보안 우려가 공개 반대 논리로 사용됨, 깃랩 다수가 AI 도구 | OpenSSF, **G7·AI-BOM 논의** | 중 |
+| 8 | **플랫폼 지표 공표** — 개방율·명시율·재사용·활성도를 분기 공개. 개방의 경제 효과(OECD: 기여 10%↑→GDP 0.5%↑)를 근거로 예산 논리화 | 자기 관측 부재 | CHAOSS류 지표, **OECD Benefits of AI Openness** | 소 |
 
 **PAX의 역할**: 1·2·8의 독립 관측은 이미 가동 중이다(라이선스 태깅, 미러 추적, 분기 지수).
 여기에 ⓐ 재사용 계보(parent_case) 관측 확대, ⓑ 깃랩 라이선스 명시율의 분기 추이 공표,
@@ -153,4 +209,5 @@ code.gov를 만들었지만, 강제 장치가 없어 8년 뒤에도 13개 기관
 영국: [GDS: Coding in the open](https://gds.blog.gov.uk/2012/10/12/coding-in-the-open/) · [GDS Way: source code](https://gds-way.digital.cabinet-office.gov.uk/standards/source-code/) · [보안 실무 지침](https://technology.blog.gov.uk/2017/09/27/dont-be-afraid-to-code-in-the-open-heres-how-to-do-it-securely/)
 EU·독일: [code.europa.eu](https://about.code.europa.eu/) · [EU OSS Catalogue](https://interoperable-europe.ec.europa.eu/eu-oss-catalogue/about) · [openCoDE 소개](https://interoperable-europe.ec.europa.eu/eu-oss-catalogue/source/hosting_platform:open_code)
 기업 관행: [TODO Group OSPO 정의](https://github.com/todogroup/ospodefinition.org) · [OSPO Book](https://ospobook.todogroup.org/01-chapter/) · [InnerSource Commons: Governance](https://innersourcecommons.gitbook.io/managing-innersource-projects/governance) · [InnerSource before Open Source 패턴](https://github.com/InnerSourceCommons/InnerSourcePatterns/blob/main/patterns/1-initial/innersource-before-open-source.md)
+한국 자산·국제 규범(추가 조사): [NIPA 공공 오픈소스SW 거버넌스 가이드 2025](https://www.oss.kr/pages/12/4246) · [EU 기술주권 패키지 기획기사(오픈소스 포털)](https://www.oss.kr/pages/11/4600) · [G7 AI 개방성·AI-BOM 브리핑(제469호)](https://www.oss.kr/pages/11/4606) · [SPRi RE-202 오픈소스AI 활성화 방안](https://spri.kr/posts/view/23990?code=research&study_type=&board_type=&flg=1) · [머브 히콕: 소버린AI와 한국의 SLM·오픈소스 전략](https://v.daum.net/v/uMIzjdEo1f) · [GitLab Foundation Demo Day 교훈](https://www.linkedin.com/pulse/building-roads-ai-public-sector-four-takeaways-from-amber-cnave/) · [500+ AI Agents Projects 소개](https://discuss.pytorch.kr/t/7621)
 한국 관측: PAX 공공 AX 지수 2026Q3 (hollobit.github.io/PAX/observatory.html)
