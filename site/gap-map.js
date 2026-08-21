@@ -28,60 +28,95 @@ function el(tag, cls, text) {
   return node;
 }
 
-// 중앙행정기관 목록 (19부 + 주요 처·청) — keywords는 org 표기 매칭용
-const MINISTRIES = [
-  { name: '기획재정부', kw: ['기획재정부', '기재부'] },
-  { name: '교육부', kw: ['교육부'] },
-  { name: '과학기술정보통신부', kw: ['과학기술정보통신부', '과기정통부', '과학기술혁신본부'] },
-  { name: '외교부', kw: ['외교부'] },
-  { name: '통일부', kw: ['통일부'] },
-  { name: '법무부', kw: ['법무부'] },
-  { name: '국방부', kw: ['국방부'] },
-  { name: '행정안전부', kw: ['행정안전부', '행안부', 'AI 정부 실험실', 'AI정부실험실', 'AI실험실'] },
-  { name: '국가보훈부', kw: ['보훈부'] },
-  { name: '문화체육관광부', kw: ['문화체육관광부', '문체부'] },
-  { name: '농림축산식품부', kw: ['농림축산식품부', '농식품부'] },
-  { name: '산업통상자원부', kw: ['산업통상자원부', '산업부'] },
-  { name: '보건복지부', kw: ['보건복지부', '복지부'] },
-  { name: '환경부', kw: ['환경부'] },
-  { name: '고용노동부', kw: ['고용노동부', '노동부'] },
-  { name: '여성가족부', kw: ['여성가족부'] },
-  { name: '국토교통부', kw: ['국토교통부', '국토부'] },
-  { name: '해양수산부', kw: ['해양수산부', '해수부'] },
-  { name: '중소벤처기업부', kw: ['중소벤처기업부', '중기부'] },
-  { name: '법제처', kw: ['법제처'] },
-  { name: '인사혁신처', kw: ['인사혁신처'] },
-  { name: '식품의약품안전처', kw: ['식약처', '식품의약품안전처'] },
-  { name: '국가데이터처', kw: ['국가데이터처'] },
-  { name: '국세청', kw: ['국세청'] },
-  { name: '관세청', kw: ['관세청'] },
-  { name: '조달청', kw: ['조달청'] },
-  { name: '병무청', kw: ['병무청'] },
-  { name: '경찰청', kw: ['경찰청'] },
-  { name: '소방청', kw: ['소방청', '소방 119'] },
-  { name: '기상청', kw: ['기상청'] },
-  { name: '질병관리청', kw: ['질병관리청'] },
-  { name: '특허청', kw: ['특허청'] },
-  { name: '산림청', kw: ['산림청'] },
-  { name: '우주항공청', kw: ['우주항공청'] },
+// 중앙행정기관 전체 목록 — 2026년 정부조직 개편 반영
+// (기재부→재정경제부+기획예산처 분리, 산업통상부·기후에너지환경부·성평등가족부 개칭,
+//  통계청→국가데이터처·특허청→지식재산처 승격, 검찰청은 2026-10 공소청 개편 예정)
+// kw에는 옛 명칭도 포함 — 개편 전 표기의 사례를 놓치지 않는다.
+const MINISTRY_GROUPS = [
+  { group: '부 (19부)', items: [
+    { name: '재정경제부', kw: ['재정경제부', '재경부', '기획재정부', '기재부'] },
+    { name: '교육부', kw: ['교육부'] },
+    { name: '과학기술정보통신부', kw: ['과학기술정보통신부', '과기정통부', '과학기술혁신본부'] },
+    { name: '외교부', kw: ['외교부'] },
+    { name: '통일부', kw: ['통일부'] },
+    { name: '법무부', kw: ['법무부'] },
+    { name: '국방부', kw: ['국방부'] },
+    { name: '행정안전부', kw: ['행정안전부', '행안부', 'AI 정부 실험실', 'AI정부실험실', 'AI실험실'] },
+    { name: '국가보훈부', kw: ['보훈부'] },
+    { name: '문화체육관광부', kw: ['문화체육관광부', '문체부'] },
+    { name: '농림축산식품부', kw: ['농림축산식품부', '농식품부'] },
+    { name: '산업통상부', kw: ['산업통상부', '산업통상자원부', '산업부'] },
+    { name: '보건복지부', kw: ['보건복지부', '복지부'] },
+    { name: '기후에너지환경부', kw: ['기후에너지환경부', '환경부'] },
+    { name: '고용노동부', kw: ['고용노동부', '노동부'] },
+    { name: '성평등가족부', kw: ['성평등가족부', '여성가족부'] },
+    { name: '국토교통부', kw: ['국토교통부', '국토부'] },
+    { name: '해양수산부', kw: ['해양수산부', '해수부'] },
+    { name: '중소벤처기업부', kw: ['중소벤처기업부', '중기부'] },
+  ] },
+  { group: '대통령·국무총리 소속', items: [
+    { name: '국무조정실·총리비서실', kw: ['국무조정실', '국무총리'] },
+    { name: '기획예산처', kw: ['기획예산처'] },
+    { name: '법제처', kw: ['법제처'] },
+    { name: '인사혁신처', kw: ['인사혁신처'] },
+    { name: '식품의약품안전처', kw: ['식약처', '식품의약품안전처'] },
+    { name: '국가데이터처', kw: ['국가데이터처', '통계청'] },
+    { name: '지식재산처', kw: ['지식재산처', '특허청'] },
+    { name: '국가정보원', kw: ['국가정보원', '국정원'] },
+  ] },
+  { group: '장관급 위원회', items: [
+    { name: '공정거래위원회', kw: ['공정거래위원회', '공정위'] },
+    { name: '금융위원회', kw: ['금융위원회', '금융위'] },
+    { name: '국민권익위원회', kw: ['권익위'] },
+    { name: '방송미디어통신위원회', kw: ['방송미디어통신위원회', '방송통신위원회', '방통위'] },
+    { name: '개인정보보호위원회', kw: ['개인정보보호위원회', '개인정보위'] },
+    { name: '원자력안전위원회', kw: ['원자력안전위원회'] },
+  ] },
+  { group: '청', items: [
+    { name: '국세청', kw: ['국세청'] },
+    { name: '관세청', kw: ['관세청'] },
+    { name: '조달청', kw: ['조달청'] },
+    { name: '병무청', kw: ['병무청'] },
+    { name: '방위사업청', kw: ['방위사업청'] },
+    { name: '경찰청', kw: ['경찰청'] },
+    { name: '소방청', kw: ['소방청', '소방 119'] },
+    { name: '국가유산청', kw: ['국가유산청', '문화재청'] },
+    { name: '농촌진흥청', kw: ['농촌진흥청'] },
+    { name: '산림청', kw: ['산림청'] },
+    { name: '질병관리청', kw: ['질병관리청'] },
+    { name: '기상청', kw: ['기상청'] },
+    { name: '재외동포청', kw: ['재외동포청'] },
+    { name: '행정중심복합도시건설청', kw: ['행정중심복합도시건설청', '행복청'] },
+    { name: '새만금개발청', kw: ['새만금개발청'] },
+    { name: '우주항공청', kw: ['우주항공청'] },
+    { name: '검찰청 (2026.10 공소청 개편 예정)', kw: ['검찰청', '공소청'] },
+  ] },
 ];
 
 function renderMinistries(cases, affOfCase) {
   const grid = document.getElementById('ministry-grid');
   let observed = 0;
-  for (const min of MINISTRIES) {
-    const n = cases.filter((c) => min.kw.some((k) =>
-      c.org.includes(k) || (affOfCase.get(c.id) || '').includes(k))).length;
-    if (n > 0) observed += 1;
-    const cell = el('div', 'region-cell' + (n === 0 ? ' region-cell--empty' : ''));
-    cell.appendChild(el('p', 'region-cell__name', min.name));
-    cell.appendChild(el('p', 'region-cell__count', n === 0 ? '관측 없음' : `${n}건`));
-    grid.appendChild(cell);
+  let total = 0;
+  for (const g of MINISTRY_GROUPS) {
+    const heading = el('p', 'ministry-group-label', g.group);
+    grid.appendChild(heading);
+    const row = el('div', 'region-grid');
+    for (const min of g.items) {
+      total += 1;
+      const n = cases.filter((c) => min.kw.some((k) =>
+        c.org.includes(k) || (affOfCase.get(c.id) || '').includes(k))).length;
+      if (n > 0) observed += 1;
+      const cell = el('div', 'region-cell' + (n === 0 ? ' region-cell--empty' : ''));
+      cell.appendChild(el('p', 'region-cell__name', min.name));
+      cell.appendChild(el('p', 'region-cell__count', n === 0 ? '관측 없음' : `${n}건`));
+      row.appendChild(cell);
+    }
+    grid.appendChild(row);
   }
   document.getElementById('ministry-note').textContent =
-    `부·처·청 ${MINISTRIES.length}곳 중 ${observed}곳 관측 — ` +
-    '회색 부처는 사례가 없다는 뜻이 아니라 이 관측망에 아직 잡히지 않았다는 뜻입니다. ' +
-    '집계 기준이 기관 표기라 지역 칸과 달리 클릭 이동은 제공하지 않습니다.';
+    `중앙행정기관·위원회 ${total}곳 중 ${observed}곳 관측 — 2026년 정부조직 개편(기재부 분리, ` +
+    '국가데이터처·지식재산처 승격 등)을 반영했으며, 옛 명칭 표기 사례도 새 기관으로 합산합니다. ' +
+    '회색은 사례가 없다는 뜻이 아니라 이 관측망에 아직 잡히지 않았다는 뜻입니다.';
 }
 
 async function main() {
