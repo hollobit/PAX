@@ -28,9 +28,84 @@ function el(tag, cls, text) {
   return node;
 }
 
+// 중앙행정기관 목록 (19부 + 주요 처·청) — keywords는 org 표기 매칭용
+const MINISTRIES = [
+  { name: '기획재정부', kw: ['기획재정부', '기재부'] },
+  { name: '교육부', kw: ['교육부'] },
+  { name: '과학기술정보통신부', kw: ['과학기술정보통신부', '과기정통부', '과학기술혁신본부'] },
+  { name: '외교부', kw: ['외교부'] },
+  { name: '통일부', kw: ['통일부'] },
+  { name: '법무부', kw: ['법무부'] },
+  { name: '국방부', kw: ['국방부'] },
+  { name: '행정안전부', kw: ['행정안전부', '행안부', 'AI 정부 실험실', 'AI정부실험실', 'AI실험실'] },
+  { name: '국가보훈부', kw: ['보훈부'] },
+  { name: '문화체육관광부', kw: ['문화체육관광부', '문체부'] },
+  { name: '농림축산식품부', kw: ['농림축산식품부', '농식품부'] },
+  { name: '산업통상자원부', kw: ['산업통상자원부', '산업부'] },
+  { name: '보건복지부', kw: ['보건복지부', '복지부'] },
+  { name: '환경부', kw: ['환경부'] },
+  { name: '고용노동부', kw: ['고용노동부', '노동부'] },
+  { name: '여성가족부', kw: ['여성가족부'] },
+  { name: '국토교통부', kw: ['국토교통부', '국토부'] },
+  { name: '해양수산부', kw: ['해양수산부', '해수부'] },
+  { name: '중소벤처기업부', kw: ['중소벤처기업부', '중기부'] },
+  { name: '법제처', kw: ['법제처'] },
+  { name: '인사혁신처', kw: ['인사혁신처'] },
+  { name: '식품의약품안전처', kw: ['식약처', '식품의약품안전처'] },
+  { name: '국가데이터처', kw: ['국가데이터처'] },
+  { name: '국세청', kw: ['국세청'] },
+  { name: '관세청', kw: ['관세청'] },
+  { name: '조달청', kw: ['조달청'] },
+  { name: '병무청', kw: ['병무청'] },
+  { name: '경찰청', kw: ['경찰청'] },
+  { name: '소방청', kw: ['소방청', '소방 119'] },
+  { name: '기상청', kw: ['기상청'] },
+  { name: '질병관리청', kw: ['질병관리청'] },
+  { name: '특허청', kw: ['특허청'] },
+  { name: '산림청', kw: ['산림청'] },
+  { name: '우주항공청', kw: ['우주항공청'] },
+];
+
+function renderMinistries(cases, affOfCase) {
+  const grid = document.getElementById('ministry-grid');
+  let observed = 0;
+  for (const min of MINISTRIES) {
+    const n = cases.filter((c) => min.kw.some((k) =>
+      c.org.includes(k) || (affOfCase.get(c.id) || '').includes(k))).length;
+    if (n > 0) observed += 1;
+    const cell = el('div', 'region-cell' + (n === 0 ? ' region-cell--empty' : ''));
+    cell.appendChild(el('p', 'region-cell__name', min.name));
+    cell.appendChild(el('p', 'region-cell__count', n === 0 ? '관측 없음' : `${n}건`));
+    grid.appendChild(cell);
+  }
+  document.getElementById('ministry-note').textContent =
+    `부·처·청 ${MINISTRIES.length}곳 중 ${observed}곳 관측 — ` +
+    '회색 부처는 사례가 없다는 뜻이 아니라 이 관측망에 아직 잡히지 않았다는 뜻입니다. ' +
+    '집계 기준이 기관 표기라 지역 칸과 달리 클릭 이동은 제공하지 않습니다.';
+}
+
 async function main() {
-  const res = await fetch('./data/cases.json', { cache: 'no-cache' });
+  const [res, champRes] = await Promise.all([
+    fetch('./data/cases.json', { cache: 'no-cache' }),
+    fetch('./data/champions.json', { cache: 'no-cache' }).catch(() => null),
+  ]);
   const cases = (await res.json()).cases;
+  // 사례 id → 챔피언 소속 문자열 (부처 식별 보강 — 기관 표기에 없는 소속을 챔피언 정보로 보완)
+  const affOfCase = new Map();
+  if (champRes && champRes.ok) {
+    try {
+      const champDoc = await champRes.json();
+      for (const ch of champDoc.champions) {
+        const aff = (ch.affiliation && ch.affiliation.value) || '';
+        if (!aff) continue;
+        for (const cid of ch.cases) {
+          affOfCase.set(cid, `${affOfCase.get(cid) || ''} ${aff}`);
+        }
+      }
+    } catch { /* 소속 보강 실패는 집계 범위만 줄인다 */ }
+  }
+
+  renderMinistries(cases, affOfCase);
 
   // ── 지역 그리드 ──
   const counts = new Map(REGIONS.map((r) => [r, 0]));
