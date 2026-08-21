@@ -170,6 +170,32 @@ code.gov를 만들었지만, 강제 장치가 없어 8년 뒤에도 13개 기관
   결합이 참조·재사용을 만든다는 방증이며, PAX 사례-저장소 연결과 공공 깃랩 카탈로그(제언 5)가
   지향할 형태다.
 
+### 저장소를 넘어 — 스택·조달·데이터 계층의 시야 (2차 추가 조사)
+
+- **싱가포르 SGTS가 보여주는 저장소의 목적지** ([NIA 디지털서비스 이슈리포트 2025-2](https://www.nia.or.kr/common/board/Download.do?bcIdx=28788&cbIdx=99863&fileNo=1)):
+  싱가포르 정부기술청(GovTech)의 기술 스택(SGTS)은 저장소가 아니라 **정부 공통 개발·배포
+  체계 전체**다 — GCC(보안 표준이 입혀진 민간 클라우드), **SHIP-HATS(정부 공통 CI/CD·자동화
+  테스트)**, APEX(중앙 API 게이트웨이), NDI(통합 인증). 부처는 검증된 스택 위에서 만들기만
+  하면 된다("중앙에서 검증하고, 부처는 활용한다"). 공공 깃랩의 다음 단계가 무엇이냐는 질문의
+  답이 여기 있다: **코드를 올리는 곳에서, 코드가 서비스가 되는 곳으로** — CI/CD·테스트·배포
+  파이프라인이 붙지 않으면 저장소는 아카이브에 머문다. 온AI 실험실에 대한 실사용 혹평
+  ("개발 시스템이 직관적이지 않다")은 정확히 이 공백의 증상이다.
+- **영국 Spend Controls — 재사용을 강제하는 조달 게이트** (같은 리포트): 영국은 10만 파운드
+  이상 디지털 사업에 GDS 사전 검토·승인을 의무화해 중복 투자를 막고 표준 준수를 강제했다.
+  이탈리아의 조달 전 재사용 평가(CAD 68·69조)와 같은 계열의 장치로, 제언 5(검증 카탈로그)가
+  힘을 가지려면 **"카탈로그를 먼저 확인했는가"를 묻는 조달 게이트**가 필요하다는 근거다.
+  NIA 리포트의 결론 — 한국은 영국(민간 개방)도 싱가포르(정부 통합)도 그대로 이식할 수 없고,
+  국산 클라우드·모델 생태계를 활용하는 **하이브리드 제3 모델**이 필요하다 — 는 본 보고서의
+  "연결" 제언과 같은 방향이다.
+- **API 계층과 데이터 계층의 병행** ([API7: 디지털 정부 API 10대 모범 사례](https://api7.ai/ko/blog/api-digital-government-best-practices),
+  [영국 NDL·GOV.UK AI 분석](https://zooey31.tistory.com/46)): 영국은 국가 API 전략으로 API를
+  표준화된 공공 인터페이스로 관리하고, 싱가포르는 APEX 하나로 정부 API를 중앙 게이트웨이화했다.
+  격차 지도의 레거시 연동 수요(새올·이호조·인사랑 API 부재)의 구조적 해법은 개별 우회 도구가
+  아니라 이 **중앙 API 계층**이다. 영국이 1억 파운드 이상을 투입하는 National Data Library
+  (공공데이터의 단일 신뢰 관문)는 코드 저장소와 짝을 이루는 **데이터 계층**의 설계다 —
+  코드(깃랩)·API(게이트웨이)·데이터(단일 관문)의 삼중 스택이 갖춰질 때 개별 도구의 재사용이
+  구조적으로 쉬워진다.
+
 ## 4. 개선 제언 — 우선순위와 실행 주체
 
 | # | 제언 | 근거 관측 | 벤치마크 | 비용 |
@@ -178,9 +204,10 @@ code.gov를 만들었지만, 강제 장치가 없어 8년 뒤에도 13개 기관
 | 2 | **외부 공개(미러) 절차 표준화** — 내부 검증 후 GitHub 미러를 공식 경로로 문서화, "공개 ≠ 지원 약속" 명문화 | 개방율 18.4%, 미러 관행 자생 중 | 이너소스→오픈소스 2단계, 영국 coding in the open | 소 (지침 1건) |
 | 3 | **용역 계약 표준조항** — 정부 발주 개발물의 소스·수정권 확보와 깃랩 등록 의무. NIPA 거버넌스 가이드의 RFP 예시에 조항 추가 후 계약 요건으로 격상 | 신규 개발물 다수가 깃랩 밖 | 미국 SHARE IT Act + **NIPA 가이드(기존 자산)** | 소 (조달 지침) |
 | 4 | **정부 OSPO 기능 — 신설이 아니라 연결**: 행안부 AI실험실(플랫폼) × 과기정통부 NIPA·Open UP(라이선스 검증·교육) × 범출연연 협의체를 공공 OSPO 네트워크로 묶기 | 규칙 부재가 명시율·공개율의 원인, 부처 간 자산 분리 | 기업 OSPO, **EU 공공 OSPO 네트워크** | 중 (부처 협력) |
-| 5 | **검증 카탈로그 분리** — 저장소와 별개로 "타 기관 사용 검증" 카탈로그(재사용 이력·설치 가이드·담당 역할 표기) 구축, 장기적으로 조달 전 재사용 검토와 연결 | 재사용 신호 부재, 실험실 보드는 목록 수준 | 독일 openCoDE, 이탈리아 CAD 68·69 | 중 |
+| 5 | **검증 카탈로그 분리 + 조달 게이트** — "타 기관 사용 검증" 카탈로그 구축, 일정 규모 이상 정보화 사업은 조달 전 카탈로그 재사용 검토를 의무화 | 재사용 신호 부재, 실험실 보드는 목록 수준 | 독일 openCoDE, 이탈리아 CAD 68·69, **영국 Spend Controls** | 중 |
 | 6 | **"정부 내 공유 의무"의 제도화 검토** — 권고→훈령→법의 단계, 최종적으로 opt-out 공개 기본값 | 미국 8년 실패의 교훈 | SHARE IT Act, 스위스 EMBAG | 대 (입법) |
 | 7 | **SBOM→AI-BOM 게이트** — 취약점 스캔에 더해 AI 도구의 모델·데이터·라이선스·의존관계 문서화(AI-BOM), KODA류 자생 도구의 공식 채택 검토 | 보안 우려가 공개 반대 논리로 사용됨, 깃랩 다수가 AI 도구 | OpenSSF, **G7·AI-BOM 논의** | 중 |
+| 8½ | **공통 개발·배포 스택으로 확장** — 깃랩에 CI/CD·자동화 테스트·배포 파이프라인 결합(정부 공통 러너·템플릿), 장기적으로 중앙 API 게이트웨이·데이터 관문과 삼중 스택화 | 온AI 실험실 실사용 혹평 — 저장소만으로는 서비스가 안 됨 | **싱가포르 SGTS(SHIP-HATS·APEX)**, 영국 NDL | 대 (인프라) |
 | 8 | **플랫폼 지표 공표** — 개방율·명시율·재사용·활성도를 분기 공개. 개방의 경제 효과(OECD: 기여 10%↑→GDP 0.5%↑)를 근거로 예산 논리화 | 자기 관측 부재 | CHAOSS류 지표, **OECD Benefits of AI Openness** | 소 |
 
 **PAX의 역할**: 1·2·8의 독립 관측은 이미 가동 중이다(라이선스 태깅, 미러 추적, 분기 지수).
@@ -210,4 +237,5 @@ code.gov를 만들었지만, 강제 장치가 없어 8년 뒤에도 13개 기관
 EU·독일: [code.europa.eu](https://about.code.europa.eu/) · [EU OSS Catalogue](https://interoperable-europe.ec.europa.eu/eu-oss-catalogue/about) · [openCoDE 소개](https://interoperable-europe.ec.europa.eu/eu-oss-catalogue/source/hosting_platform:open_code)
 기업 관행: [TODO Group OSPO 정의](https://github.com/todogroup/ospodefinition.org) · [OSPO Book](https://ospobook.todogroup.org/01-chapter/) · [InnerSource Commons: Governance](https://innersourcecommons.gitbook.io/managing-innersource-projects/governance) · [InnerSource before Open Source 패턴](https://github.com/InnerSourceCommons/InnerSourcePatterns/blob/main/patterns/1-initial/innersource-before-open-source.md)
 한국 자산·국제 규범(추가 조사): [NIPA 공공 오픈소스SW 거버넌스 가이드 2025](https://www.oss.kr/pages/12/4246) · [EU 기술주권 패키지 기획기사(오픈소스 포털)](https://www.oss.kr/pages/11/4600) · [G7 AI 개방성·AI-BOM 브리핑(제469호)](https://www.oss.kr/pages/11/4606) · [SPRi RE-202 오픈소스AI 활성화 방안](https://spri.kr/posts/view/23990?code=research&study_type=&board_type=&flg=1) · [머브 히콕: 소버린AI와 한국의 SLM·오픈소스 전략](https://v.daum.net/v/uMIzjdEo1f) · [GitLab Foundation Demo Day 교훈](https://www.linkedin.com/pulse/building-roads-ai-public-sector-four-takeaways-from-amber-cnave/) · [500+ AI Agents Projects 소개](https://discuss.pytorch.kr/t/7621)
+스택·조달·데이터(2차 추가): [NIA 디지털서비스 이슈리포트 2025-2 — 영국 vs 싱가포르 인프라 전략](https://www.nia.or.kr/common/board/Download.do?bcIdx=28788&cbIdx=99863&fileNo=1) · [API7: 디지털 정부 API 10대 모범 사례](https://api7.ai/ko/blog/api-digital-government-best-practices) · [영국 NDL·GOV.UK AI 서비스 분석](https://zooey31.tistory.com/46)
 한국 관측: PAX 공공 AX 지수 2026Q3 (hollobit.github.io/PAX/observatory.html)
