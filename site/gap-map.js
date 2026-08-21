@@ -94,24 +94,22 @@ const MINISTRY_GROUPS = [
 ];
 
 function renderMinistries(cases, affOfCase) {
+  // 그룹 구분 없이 한 그리드에 나열 — 관측 있는 기관을 앞에, 미관측은 뒤에
   const grid = document.getElementById('ministry-grid');
-  let observed = 0;
-  let total = 0;
-  for (const g of MINISTRY_GROUPS) {
-    const heading = el('p', 'ministry-group-label', g.group);
-    grid.appendChild(heading);
-    const row = el('div', 'region-grid');
-    for (const min of g.items) {
-      total += 1;
-      const n = cases.filter((c) => min.kw.some((k) =>
-        c.org.includes(k) || (affOfCase.get(c.id) || '').includes(k))).length;
-      if (n > 0) observed += 1;
-      const cell = el('div', 'region-cell' + (n === 0 ? ' region-cell--empty' : ''));
-      cell.appendChild(el('p', 'region-cell__name', min.name));
-      cell.appendChild(el('p', 'region-cell__count', n === 0 ? '관측 없음' : `${n}건`));
-      row.appendChild(cell);
-    }
-    grid.appendChild(row);
+  const items = MINISTRY_GROUPS.flatMap((g) => g.items);
+  const counted = items.map((min) => ({
+    min,
+    n: cases.filter((c) => min.kw.some((k) =>
+      c.org.includes(k) || (affOfCase.get(c.id) || '').includes(k))).length,
+  }));
+  counted.sort((a, b) => b.n - a.n);
+  const total = counted.length;
+  const observed = counted.filter((x) => x.n > 0).length;
+  for (const { min, n } of counted) {
+    const cell = el('div', 'region-cell' + (n === 0 ? ' region-cell--empty' : ''));
+    cell.appendChild(el('p', 'region-cell__name', min.name));
+    cell.appendChild(el('p', 'region-cell__count', n === 0 ? '관측 없음' : `${n}건`));
+    grid.appendChild(cell);
   }
   document.getElementById('ministry-note').textContent =
     `중앙행정기관·위원회 ${total}곳 중 ${observed}곳 관측 — 2026년 정부조직 개편(기재부 분리, ` +
