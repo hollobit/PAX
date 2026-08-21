@@ -156,13 +156,14 @@ function siteHostname(c) {
 
 const state = {
   cases: [],
-  filter: { q: '', orgType: '전체', source: '전체', tag: null, bookmarkedOnly: false, taskCat: '전체', noInstallOnly: false, region: null },
+  filter: { q: '', orgType: '전체', source: '전체', tag: null, bookmarkedOnly: false, taskCat: '전체', noInstallOnly: false, region: null, ministry: null },
   view: loadSavedView(), // 'cards' | 'list'
   sort: { key: 'popularity', dir: 'desc' }, // 기본: 인기 우선, 이후 최신순
   bookmarks: loadBookmarks(), // Set<caseId> — localStorage에 보존
   bookmarkCounts: new Map(), // 전체 사용자 누적 북마크 수 (Supabase)
   champTerms: new Map(), // 사례 id → 챔피언 이름·소속·계정 검색어
   champOfCase: new Map(), // 사례 id → [{id, name}] (카드 '만든 사람' 표시용, 로드맵 1-8)
+  champAffOfCase: new Map(), // 사례 id → 챔피언 소속 문자열 (부처 필터 매칭용 — 격차 지도와 동일 기준)
   evalById: new Map(), // 사례 id → 4축 평가 (카드 배지·CSV 결합용, 로드맵 1-3)
   popularSet: new Set(), // 인기 항목 id (북마크순 상위 N)
   focusCaseId: null, // ?case=<id> 딥링크 대상 — 첫 렌더 후 스크롤·강조
@@ -250,6 +251,8 @@ function applyUrlToState() {
     taskCat: TASK_CATEGORIES.includes(p.get('task')) ? p.get('task') : '전체',
     noInstallOnly: p.get('ni') === '1',
     region: p.get('region') || null,
+    ministry: (typeof MINISTRY_BY_NAME !== 'undefined' && MINISTRY_BY_NAME.has(p.get('ministry')))
+      ? p.get('ministry') : null,
   };
   state.focusCaseId = p.get('case') || null;
   if (VIEWS.includes(view)) state.view = view;
@@ -267,6 +270,7 @@ function syncUrl() {
   if (f.taskCat !== '전체') p.set('task', f.taskCat);
   if (f.noInstallOnly) p.set('ni', '1');
   if (f.region) p.set('region', f.region);
+  if (f.ministry) p.set('ministry', f.ministry);
   if (state.view !== 'cards') p.set('view', state.view);
   if (state.sort.key !== 'popularity' || state.sort.dir !== 'desc') {
     p.set('sort', `${state.sort.key}.${state.sort.dir}`);
@@ -344,11 +348,15 @@ async function applyEnhancements(pending) {
       for (const ch of champRes.value.champions) {
         const terms = [ch.name, ch.affiliation && ch.affiliation.value,
           ...ch.accounts.map((a) => a.id)].filter(Boolean).join(' ').toLowerCase();
+        const aff = (ch.affiliation && ch.affiliation.value) || '';
         for (const caseId of ch.cases) {
           state.champTerms.set(caseId, `${state.champTerms.get(caseId) || ''} ${terms}`);
           const owners = state.champOfCase.get(caseId) || [];
           owners.push({ id: ch.id, name: ch.name });
           state.champOfCase.set(caseId, owners);
+          if (aff) {
+            state.champAffOfCase.set(caseId, `${state.champAffOfCase.get(caseId) || ''} ${aff}`);
+          }
         }
       }
       changed = true;
@@ -516,6 +524,11 @@ function matches(c, f) {
   if (f.taskCat !== '전체' && c.task_category !== f.taskCat) return false;
   if (f.noInstallOnly && c.runtime_env !== '브라우저만') return false;
   if (f.region && c.region !== f.region) return false;
+  if (f.ministry) {
+    const kws = MINISTRY_BY_NAME.get(f.ministry) || [];
+    const aff = state.champAffOfCase.get(c.id) || '';
+    if (!kws.some((k) => c.org.includes(k) || aff.includes(k))) return false;
+  }
   const q = f.q.trim().toLowerCase();
   if (!q) return true;
   const haystack = [c.title, c.summary, c.org, ...c.tags].join(' ').toLowerCase()
@@ -916,9 +929,9 @@ function createCaseRow(c) {
 }
 
 function renderRegionFilter() {
-  // region 필터가 URL로 들어온 경우 상단에 표시하고 해제할 수 있게 한다 (격차 지도 연결용)
+  // region/ministry 필터가 URL로 들어온 경우 상단에 표시하고 해제할 수 있게 한다 (격차 지도 연결용)
   let bar = document.getElementById('region-filter-bar');
-  if (!state.filter.region) {
+  if (!state.filter.region && !state.filter.ministry) {
     if (bar) bar.remove();
     return;
   }
@@ -931,13 +944,15 @@ function renderRegionFilter() {
   bar.hidden = false;
   bar.replaceChildren();
   const span = document.createElement('span');
-  span.textContent = `지역 필터: ${state.filter.region} (지역 확정 분류 기준)`;
+  span.textContent = state.filter.ministry
+    ? `기관 필터: ${state.filter.ministry} (기관 표기·챔피언 소속 기준)`
+    : `지역 필터: ${state.filter.region} (지역 확정 분류 기준)`;
   const clear = document.createElement('button');
   clear.type = 'button';
   clear.className = 'export-btn';
   clear.textContent = '해제';
   clear.addEventListener('click', () => {
-    state.filter = { ...state.filter, region: null };
+    state.filter = { ...state.filter, region: null, ministry: null };
     render();
   });
   bar.append(span, ' ', clear);
