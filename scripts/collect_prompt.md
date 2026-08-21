@@ -5,6 +5,11 @@
 마지막에 log.md에 결과를 기록한다.
 
 ## 0. 준비
+- **크론 만료 점검 (매 실행 필수)**: `data/state.json`의 `cron.registered_at`을 확인한다.
+  세션 크론은 등록 후 7일에 만료되므로, **오늘이 registered_at+5일 이상이면**(만료 2일 전)
+  CronList로 기존 작업을 확인 → CronDelete로 삭제 → 같은 프롬프트로 09:03/21:03 두 건을
+  CronCreate 재등록하고, state.json의 registered_at·ids를 갱신한 뒤 log에 기록한다.
+  CronList가 비어 있으면(만료 이미 발생) 즉시 재등록한다.
 - `config/rooms.json`을 읽어 수집 대상을 확인한다.
 - `data/state.json`을 읽는다. 없으면 `{"threads": {"seen_ids": []}, "kakao": {"last_read": null}}`로 시작한다.
   - threads.seen_ids: 이미 처리한 게시물 URL 목록 (최대 500개 유지)
