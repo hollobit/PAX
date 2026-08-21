@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-08-21",
- "total": 195,
+ "total": 196,
  "cases": [
   {
    "no": 1,
@@ -6434,6 +6434,39 @@
    "tool_type": "웹 서비스",
    "audience": "G2C 공개",
    "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 196,
+   "id": "9c850ff3e7429a24",
+   "org": "소방 현장(개인 개발)",
+   "title": "소방 장비서무 인수인계 대시보드 — 3교대 공용 PC용 로컬 관제판",
+   "ax_prev": "AI-Ready",
+   "ax": "AI-Ready",
+   "s": "S2",
+   "s_name": "Tool bundle",
+   "c": "C2",
+   "c_name": "부분 완결",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Published tool",
+   "scope": "Internal",
+   "mcp_role": "Unknown/None",
+   "risk": "R0 최소",
+   "human": "해당 없음",
+   "evidence": "E1 코드·도구 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "교대 근무의 인수인계 누락이라는 구체 문제를 관제판·기한·팀별 확인으로 닫는 도구 — 팀 공용 사용을 전제로 설계되어 업무 흐름의 상당 부분이 도구 안에서 완결된다(C2). 업무 데이터를 로컬 SQLite에만 두는 명시적 프라이버시 설계와 소스(깃랩)·설치본(GitHub) 분리 공개가 돋보인다. AI 요소는 제한적이라 Ready.",
+   "feedback": "부분확인(3교대 팀 공용 사용 전제 설계)",
+   "resilience": "부분확인(로컬 완결 — 인터넷 불필요)",
+   "post_url": null,
+   "service_url": "https://github.com/MuyeongKim/equipment-handover-releases",
+   "tool_type": "대시보드·분석",
+   "audience": "G2E 공직 내부",
+   "p": "P0 읽기 전용(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }

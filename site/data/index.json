@@ -2,24 +2,24 @@
  "generated_at": "2026-08-21",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 195,
- "total_champions": 97,
+ "total_cases": 196,
+ "total_champions": 99,
  "certified_champions": 2,
  "unattributed_cases": 44,
  "ax_distribution": {
-  "AI-Ready": 131,
+  "AI-Ready": 132,
   "AI-Enabled": 53,
   "AX 단계 외": 10,
   "AI-First": 1
  },
- "c_axis_mean": 0.54,
+ "c_axis_mean": 0.55,
  "p_distribution": {
-  "P0": 84,
+  "P0": 85,
   "P1": 106,
   "P2": 5
  },
  "model_dependency": {
-  "미확인": 169,
+  "미확인": 170,
   "해외 상용 API": 18,
   "혼합": 1,
   "해외 오픈웨이트(로컬)": 7
@@ -27,22 +27,22 @@
  "domestic_model_rate": 0.0,
  "local_model_rate": 0.269,
  "model_known": 26,
- "license_tagged": 133,
- "license_stated_rate": 0.632,
- "gitlab_cases": 38,
- "gitlab_mirror_pairs": 7,
- "gitlab_open_rate": 0.184,
+ "license_tagged": 134,
+ "license_stated_rate": 0.627,
+ "gitlab_cases": 39,
+ "gitlab_mirror_pairs": 8,
+ "gitlab_open_rate": 0.205,
  "mcp_cases": 63,
  "transition_funnel": {
   "기관 공식": 28,
-  "미확인": 159,
+  "미확인": 160,
   "부서 공유": 6,
   "타 기관 재사용": 1,
   "범정부 탑재": 1
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.518
+  "feedback": 0.515
  },
  "maintenance_distribution": {
   "활발": 96,
@@ -52,7 +52,7 @@
  "stars_collected": 119,
  "repo_stats": {
   "gitlab": {
-   "count": 38,
+   "count": 39,
    "starred": 37,
    "stars_sum": 162,
    "maintenance": {
@@ -142,7 +142,7 @@
    ]
   },
   "github": {
-   "count": 91,
+   "count": 92,
    "starred": 89,
    "stars_sum": 15896,
    "maintenance": {
@@ -236,7 +236,7 @@
  },
  "license_distribution": {
   "MIT": 54,
-  "명시 없음": 49,
+  "명시 없음": 50,
   "Other": 14,
   "Apache-2.0": 10,
   "AGPL-3.0": 3,
@@ -249,7 +249,7 @@
    "gitlab": 5
   },
   "명시 없음": {
-   "github": 30,
+   "github": 31,
    "gitlab": 19
   },
   "Other": {
@@ -275,7 +275,7 @@
  },
  "license_by_source": {
   "github": {
-   "total": 90,
+   "total": 91,
    "stated": 70
   },
   "github-pages": {
@@ -349,6 +349,12 @@
    "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
    "github": "https://github.com/chrisryugj/korean-law-mcp",
    "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/korean-law-mcp"
+  },
+  {
+   "id": "9c850ff3e7429a24",
+   "title": "소방 장비서무 인수인계 대시보드 — 3교대 공용 PC용 로컬 관제판",
+   "github": "https://github.com/MuyeongKim/equipment-handover-releases",
+   "gitlab": "https://gitlab.aigov.go.kr/tenmoo/sobang-EMD"
   }
  ]
 }

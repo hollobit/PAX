@@ -1,5 +1,5 @@
 {
- "total": 97,
+ "total": 99,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -1262,6 +1262,26 @@
    }
   },
   {
+   "id": "github:MuyeongKim",
+   "name": "tenmoo",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "MuyeongKim",
+     "url": "https://github.com/MuyeongKim"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "9c850ff3e7429a24"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
+    "stars": 0
+   }
+  },
+  {
    "id": "github:tgtg4840-byte",
    "name": "tgtg4840-byte",
    "accounts": [
@@ -1853,6 +1873,26 @@
    "stats": {
     "case_count": 1,
     "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:tenmoo",
+   "name": "완주소방서 김무영",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "tenmoo",
+     "url": "https://gitlab.aigov.go.kr/tenmoo"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "9c850ff3e7429a24"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },

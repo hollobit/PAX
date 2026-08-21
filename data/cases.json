@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-21T08:30:24+09:00",
+ "updated_at": "2026-08-21T22:02:19+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -5331,6 +5331,31 @@
    "link_ok": true,
    "health_checked": "2026-08-21",
    "maintenance": "활발"
+  },
+  {
+   "link": "https://gitlab.aigov.go.kr/tenmoo/sobang-EMD",
+   "network_req": "로컬 완결",
+   "date": "2026-08-04",
+   "org": "소방 현장(개인 개발)",
+   "task_category": "시설·안전",
+   "tags": [
+    "소방",
+    "인수인계",
+    "3교대",
+    "로컬"
+   ],
+   "summary": "3교대 소방 근무자가 공용 Windows PC 한 대에서 함께 쓰는 장비서무 인수인계 대시보드. 교대 시 빠지는 업무를 줄이기 위해 할 일·진행 상황·팀별 확인·기한 캘린더·월보 추적·장비 대여를 한 화면에서 관리하며, 업무 데이터는 인터넷에 올라가지 않고 로컬 SQLite에만 저장된다. 공공 깃랩에 소스를, GitHub에 설치본을 공개한 소방 현장의 드문 사례다.",
+   "case_class": "개인 개발",
+   "case_url": "https://github.com/MuyeongKim/equipment-handover-releases",
+   "runtime_env": "설치 필요",
+   "org_type": "공직 개인",
+   "title": "소방 장비서무 인수인계 대시보드 — 3교대 공용 PC용 로컬 관제판",
+   "collected_at": "2026-08-21",
+   "source": "kakao",
+   "id": "9c850ff3e7429a24",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-08-21"
   }
  ]
 }
