@@ -87,6 +87,40 @@ async function main() {
     `기관 공식 ${funnel['기관 공식'] || 0} · 타기관 재사용 ${funnel['타 기관 재사용'] || 0} · 범정부 ${funnel['범정부 탑재'] || 0}`,
     `미확인 ${funnel['미확인'] || 0}건 — 다음 관측 과제`));
 
+  // ── 커뮤니티 활력 ──
+  try {
+    const comRes = await fetch('./data/community.json', { cache: 'no-cache' });
+    if (comRes.ok) {
+      const com = await comRes.json();
+      const cc = document.getElementById('community-cards');
+      cc.appendChild(indexCard('오픈톡 가입자', `${(com.members.latest || 0).toLocaleString()}명`,
+        com.members.first && com.members.latest !== com.members.first
+          ? `${com.members.first_date} ${com.members.first.toLocaleString()}명 이후 ${com.members.latest - com.members.first >= 0 ? '+' : ''}${(com.members.latest - com.members.first).toLocaleString()}`
+          : `${com.members.latest_date} 기준 — 변화 추적 시작`));
+      cc.appendChild(indexCard('대화 (오늘)', `${com.kakao.today.toLocaleString()}건`, null));
+      cc.appendChild(indexCard('대화 (7일)', `${com.kakao.week.toLocaleString()}건`,
+        `일평균 ${Math.round(com.kakao.week / 7).toLocaleString()}건`));
+      cc.appendChild(indexCard('대화 (30일)', `${com.kakao.month.toLocaleString()}건`, null));
+      cc.appendChild(indexCard('대화 (관측 전체)', `${com.kakao.total.toLocaleString()}건`,
+        `${com.kakao.observed_days}일 관측 누적`));
+      cc.appendChild(indexCard('Threads 관측 게시물', `${com.threads.observed_total || 0}건`,
+        '태그 검색 관측 누적'));
+      const chart = document.getElementById('kakao-chart');
+      const max = Math.max(...com.kakao_recent.map(([, n]) => n), 1);
+      for (const [date, n] of com.kakao_recent) {
+        const bar = el('div', 'mini-chart__bar');
+        const fill = el('div', 'mini-chart__fill');
+        fill.style.height = `${Math.round((n / max) * 100)}%`;
+        bar.title = `${date}: ${n}건`;
+        bar.appendChild(fill);
+        bar.appendChild(el('span', 'mini-chart__label', date.slice(8)));
+        chart.appendChild(bar);
+      }
+    }
+  } catch (err) {
+    console.error('커뮤니티 지표 로드 실패:', err);
+  }
+
   // ── 데이터 매트릭스 ──
   const mcpCases = cases.filter((c) =>
     c.title.includes('MCP') || c.tags.includes('MCP'));
