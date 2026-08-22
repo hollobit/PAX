@@ -94,6 +94,7 @@ PYTHONPATH=scripts python3 -m pax.publish
 python3 scripts/build_champions.py
 python3 scripts/build_index.py            # 공공 AX 지수 갱신 (분기 말에는 --snapshot 추가)
 python3 scripts/build_case_pages.py       # 사례별 정적 상세 페이지 재생성
+python3 scripts/build_community_stats.py  # 커뮤니티 활력 지표(대화량·가입자·Threads 관측) 갱신
 ```
 - merge가 거부 건을 출력하면 data/rejected/TODAY.json을 열어 원인(주로 익명화)을
   수정한 새 incoming 파일로 1회 재시도한다.

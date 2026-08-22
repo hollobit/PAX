@@ -67,6 +67,13 @@ def build() -> dict:
         "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
         "total_cases": len(cases),
         "total_champions": champ_doc.get("total", 0),
+        "community": (lambda c: {
+            "members": c.get("members", {}).get("latest"),
+            "kakao_week": c.get("kakao", {}).get("week"),
+            "kakao_total_observed": c.get("kakao", {}).get("total"),
+            "threads_observed": c.get("threads", {}).get("observed_total"),
+        })(json.load(open("site/data/community.json"))
+           if Path("site/data/community.json").exists() else {}),
         "certified_champions": sum(
             1 for ch in champ_doc.get("champions", []) if ch.get("certification")),
         "unattributed_cases": len(champ_doc.get("unattributed", [])),

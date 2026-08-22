@@ -2049,3 +2049,43 @@ main {
 }
 
 #ministry-grid > .region-grid { margin: 0.2rem 0 0.4rem; }
+
+
+/* ---- 커뮤니티 활력 미니 차트 ---- */
+.mini-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 120px;
+  padding: 0.5rem 0 1.2rem;
+  max-width: 40rem;
+}
+
+.mini-chart__bar {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  cursor: default;
+}
+
+.mini-chart__fill {
+  width: 100%;
+  background: var(--accent-2);
+  border-radius: 2px 2px 0 0;
+  min-height: 2px;
+  opacity: 0.85;
+}
+
+.mini-chart__bar:hover .mini-chart__fill { opacity: 1; }
+
+.mini-chart__label {
+  position: absolute;
+  bottom: -1.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--ink-faint);
+}
