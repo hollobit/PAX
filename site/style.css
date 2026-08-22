@@ -2094,3 +2094,5 @@ main {
 }
 
 .mini-chart__label--weekend { color: var(--accent); }
+
+.mini-chart__fill--members { background: var(--accent-gold); }
