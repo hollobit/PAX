@@ -1,5 +1,5 @@
 {
- "total": 99,
+ "total": 100,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -278,6 +278,30 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:darjeeling",
+   "name": "Kwon-Han Bae",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "darjeeling",
+     "url": "https://github.com/darjeeling"
+    }
+   ],
+   "affiliation": {
+    "value": "LineCorp",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "f20250742f06ccb5"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },
@@ -1277,7 +1301,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -1648,10 +1672,11 @@
     "9d56d423296a3238",
     "de4b2dab339d69b7",
     "f76a328f43c0766f",
+    "33c36cc77c4bfc5c",
     "d40cc4a9cf6e29b6"
    ],
    "stats": {
-    "case_count": 12,
+    "case_count": 13,
     "top_ax": 2,
     "stars": 4468
    },
@@ -1892,7 +1917,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -2531,6 +2556,18 @@
    "title": "Open AI Service Hub — 경북IT융합산업기술원의 공공형 AI 모델 서빙 플랫폼",
    "org": "경북IT융합산업기술원(GITC)",
    "url": "https://open.hasa.re.kr/"
+  },
+  {
+   "id": "6c44153f6db7d61c",
+   "title": "팩트방망이(FactBat) — 공공 원문 통합검색 + 원격 MCP",
+   "org": "팩트방망이(민간 개인 개발)",
+   "url": "https://factbat.com/mcp-guide"
+  },
+  {
+   "id": "e6b6f2b13b9ea1aa",
+   "title": "OpenData MCP — 공공데이터포털 API 문서를 표준화해 MCP로 제공",
+   "org": "이지알앤디(민간 기업)",
+   "url": "https://mcp.ezrnd.co.kr/"
   }
  ]
 }
