@@ -33,8 +33,8 @@
  "domestic_model_rate": 0.0,
  "local_model_rate": 0.269,
  "model_known": 26,
- "license_tagged": 136,
- "license_stated_rate": 0.625,
+ "license_tagged": 137,
+ "license_stated_rate": 0.628,
  "gitlab_cases": 39,
  "gitlab_mirror_pairs": 8,
  "gitlab_open_rate": 0.205,
@@ -242,7 +242,7 @@
   }
  },
  "license_distribution": {
-  "MIT": 55,
+  "MIT": 56,
   "명시 없음": 51,
   "Other": 14,
   "Apache-2.0": 10,
@@ -252,7 +252,7 @@
  },
  "license_matrix": {
   "MIT": {
-   "github": 50,
+   "github": 51,
    "gitlab": 5
   },
   "명시 없음": {
@@ -282,8 +282,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 93,
-   "stated": 71
+   "total": 94,
+   "stated": 72
   },
   "github-pages": {
    "total": 14,
