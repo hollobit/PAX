@@ -111,9 +111,14 @@ async function main() {
         const bar = el('div', 'mini-chart__bar');
         const fill = el('div', 'mini-chart__fill');
         fill.style.height = `${Math.round((n / max) * 100)}%`;
-        bar.title = `${date}: ${n}건`;
+        const yoil = ['일', '월', '화', '수', '목', '금', '토'][new Date(`${date}T00:00:00+09:00`).getDay()];
+        bar.title = `${date} (${yoil}): ${n}건`;
         bar.appendChild(fill);
-        bar.appendChild(el('span', 'mini-chart__label', date.slice(8)));
+        const label = el('span', 'mini-chart__label', date.slice(8));
+        label.appendChild(document.createElement('br'));
+        label.append(`(${yoil})`);
+        if (yoil === '토' || yoil === '일') label.classList.add('mini-chart__label--weekend');
+        bar.appendChild(label);
         chart.appendChild(bar);
       }
     }
