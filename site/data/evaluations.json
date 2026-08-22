@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-08-22",
- "total": 200,
+ "total": 201,
  "cases": [
   {
    "no": 1,
@@ -6599,6 +6599,39 @@
    "tool_type": "MCP 서버·도구",
    "audience": "G2C 공개",
    "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 201,
+   "id": "fe06420a5b17251f",
+   "org": "경기도의회(공직 개인 개발)",
+   "title": "경기도의회 회의 실시간 자막 서비스 — 기관 도메인으로 정식 출시",
+   "ax_prev": "AI-Enabled",
+   "ax": "AI-Enabled",
+   "s": "S2",
+   "s_name": "Tool bundle",
+   "c": "C2",
+   "c_name": "부분 완결",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Live service",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R1 낮음",
+   "human": "해당 없음",
+   "evidence": "E1 코드·도구 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "회의 발언 실시간 자막이라는 의정 지원 업무를 서비스로 가동(임시 주소 응답 확인)하고, 기관 공식 도메인(aisub.ggc.go.kr) 발급이 진행 중 — 개인 개발이 기관 공식 서비스로 전환되는 전이 단계의 실측 사례. 공개 회의 발언을 다뤄 위험은 낮고, 도메인 개통·운영 실적이 확인되면 상향 여지가 있다.",
+   "feedback": "미확인",
+   "resilience": "미확인—음성인식 모델·서버 운영 의존, 도메인 전환 진행 중",
+   "post_url": "",
+   "service_url": "https://aisub.ggc.go.kr",
+   "tool_type": "웹 서비스",
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }

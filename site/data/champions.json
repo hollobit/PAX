@@ -2586,6 +2586,12 @@
    "title": "OpenData MCP — 공공데이터포털 API 문서를 표준화해 MCP로 제공",
    "org": "이지알앤디(민간 기업)",
    "url": "https://mcp.ezrnd.co.kr/"
+  },
+  {
+   "id": "fe06420a5b17251f",
+   "title": "경기도의회 회의 실시간 자막 서비스 — 기관 도메인으로 정식 출시",
+   "org": "경기도의회(공직 개인 개발)",
+   "url": "https://aisub.ggc.go.kr"
   }
  ]
 }
