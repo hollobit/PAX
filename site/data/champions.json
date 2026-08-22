@@ -1,5 +1,5 @@
 {
- "total": 100,
+ "total": 101,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -301,7 +301,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -2152,6 +2152,30 @@
    }
   },
   {
+   "id": "주문호",
+   "name": "주문호",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "moon9239-lgtm",
+     "url": "https://github.com/moon9239-lgtm"
+    }
+   ],
+   "affiliation": {
+    "value": "개인정보보호위원회",
+    "inferred": false,
+    "evidence": "운영자 제공 — 주문호 서기관(개인정보보호위원회), 2026-08-22"
+   },
+   "cases": [
+    "bf04cec910b4755d"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:jinn",
    "name": "진희 안",
    "accounts": [
@@ -2304,12 +2328,6 @@
    "title": "바이브 코딩으로 억대 규모 서비스 버전업 프로토타입을 1개월 만에 개발",
    "org": "국립중앙의료원(중앙응급의료센터)",
    "url": "https://icaretok.nemc.or.kr/pec/"
-  },
-  {
-   "id": "bf04cec910b4755d",
-   "title": "개인정보보호법 법령 리더기 PoC 공개",
-   "org": "공직 현장(개인 개발)",
-   "url": "https://privacy-law-reader.vercel.app/"
   },
   {
    "id": "d487843b67c6063e",
