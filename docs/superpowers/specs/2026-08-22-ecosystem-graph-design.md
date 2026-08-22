@@ -1,7 +1,7 @@
 # PAX 생태계 연결 관측 (Ecosystem Connection Observatory) 설계
 
 날짜: 2026-08-22
-상태: 사용자 승인 대기
+상태: 승인 완료 · 구현 계획 작성됨(docs/superpowers/plans/2026-08-22-ecosystem-graph.md) · 구현은 보류(사용자 재확인 후 착수)
 선행 문서: 2026-08-18-pax-expansion-analysis.md (v2), 2026-08-21-public-gitlab-oss-strategy.md
 
 ## 1. 목적
