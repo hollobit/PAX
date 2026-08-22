@@ -130,6 +130,39 @@ GraphRAG의 구성(LLM 개체·관계 추출 → 그래프 → 군집 탐지 →
    graph.json의 metrics.clusters에 포함 → 진단 패널에 "의미 군집 지도"로 렌더.
    이 군집 요약이 후속 pax-mcp(로드맵 2-10)의 검색 컨텍스트 단위가 된다.
 
+### 3.6 자원 정보 취합·통합 계획 (data/resources.json)
+
+공백 분석("안 쓰이는 자원")은 사례에서 관측된 자원만으로는 불가능하다 — **전체 모집단**이
+필요하다. 하향(공식 목록) + 상향(사례 관측)의 이중 취합으로 `data/resources.json`을 구축한다.
+
+```json
+{"id": "data-building-register", "type": "공공데이터", "name": "건축물대장",
+ "provider": "국토교통부", "url": "https://www.data.go.kr/...",
+ "tier": "국가중점", "source": "포털목록|사례관측|보도자료|커뮤니티",
+ "first_seen": "2026-08-23", "status": "제공중"}
+```
+
+**유형별 취합 방법:**
+
+| 자원 | 하향(공식 목록) | 상향(관측) | 규모 전략 |
+|---|---|---|---|
+| **공공데이터** | data.go.kr **국가중점데이터** 목록(약 100~200건)을 Chrome 브라우저로 조회·등재. 전체 9만+ 데이터셋은 등재하지 않음 | 사례 uses_data에 나온 자원은 tier와 무관하게 자동 등재 | 국가중점 + 관측분만 — "정책적으로 중요한데 안 쓰임"을 판정할 수 있는 최소 모집단 |
+| **공공API** | data.go.kr **활용신청 상위 API**(상위 100건) + 주요 기관 개별 API(법제처 OPEN API, 국회 열린API, 서울열린데이터광장, 나이스 교육정보 등 큐레이션 ~20건) | 사례 uses_api 자동 등재 | 상동 |
+| **정부 MCP** | 공식 레지스트리 부재 — **PAX가 사실상 최초 목록**. gitlab.aigov.go.kr 검색(주간) + 부처 보도자료·발표 관측 | 사례 mcp_provider_agency + 커뮤니티(카카오·Threads) 관측 | 전수 등재(현재 수십 건 규모) — 관측소 MCP 현황 섹션과 단일 원천 공유 |
+| **저장소** | gitlab.aigov 스타 조사(기존 주간 절차) + GitHub 관측 | link/case_url/mirror_url에서 자동 파생 | 기존 체계 그대로 — resources.json에 중복 등재하지 않고 사례 필드에서 노드 생성 |
+| **제도·표준** | §3.3 standards.json 큐레이션. 법령은 korean-law MCP로 현행 여부·정식 명칭 검증 후 등재 | 사례·보고서에서 언급된 기준 추가 | 약 20건 시작, 점진 확대 |
+
+**통합(정규화·병합) 규칙:**
+1. **이름 정규화**: 공백·괄호·조사 제거 + 별칭 사전(`RESOURCE_ALIASES` — "건축물대장정보"→"건축물대장").
+   build_graph가 resources.json 항목과 사례 관측(uses_data/uses_api)을 정규화 이름으로 조인.
+2. **동일성 판정 우선순위**: url 일치 > 정규화 이름 일치. 조인 실패한 관측 자원은
+   `source: 사례관측`으로 자동 신규 등재(누락 방지) 후 빌드 로그에 출력 — 다음 큐레이션에서 검토.
+3. **단일 원천 원칙**: 관측소 MCP 현황 등 기존 화면이 쓰는 자원 정보는 점진적으로
+   resources.json을 원천으로 통일(이번 사이클에서는 그래프만, 기존 화면 전환은 후속).
+4. **갱신 주기**: 하향 목록은 **주간 점검(월요일)**에 재조회(신규·폐지 반영, status 갱신),
+   상향 관측은 매 수집마다 자동. first_seen은 최초 등재일 유지.
+5. **검증**: schema 테스트 — id 유일성, type 6유형, url 형식, 조인 후 고아 관측(등재 실패) 0건.
+
 ## 4. 2층 — 그래프 화면 (site/connections.html/js)
 
 - **노드 8유형**: 공공데이터 · 공공API · MCP · 깃랩 저장소 · GitHub 저장소 · 프로젝트(사례) ·
@@ -171,7 +204,7 @@ graph.json의 metrics를 렌더. 전부 자동 산출:
 → build_community_stats → changelog → 커밋·배포 검증
 ```
 
-- build_graph.py: 입력 cases.json + champions.json + standards.json + semantic_edges.json →
+- build_graph.py: 입력 cases.json + champions.json + standards.json + semantic_edges.json + resources.json →
   출력 site/data/graph.json (nodes/edges/metrics). build_index보다 먼저 실행
   (연결 지수를 index가 읽음).
 - collect_prompt.md 5단계에 build_graph 실행 추가.
@@ -198,7 +231,7 @@ graph.json의 metrics를 렌더. 전부 자동 산출:
 
 ## 9. 구현 범위 (이 스펙 = 1사이클)
 
-포함: 스키마 확장, standards.json 초기 20건, build_graph.py(TF-IDF·군집 포함),
+포함: 스키마 확장, standards.json 초기 20건, resources.json 초기 구축(국가중점데이터·상위 API·MCP 전수), build_graph.py(TF-IDF·군집 포함),
 전수 백필(명시 관계 + 의미 관계 LLM 추출), connections 페이지(그래프+진단 패널+군집 지도+표 뷰),
 연결 지수 index 편입, 수집 절차 편입(관계 태깅+의미 관계 추출), 메뉴 추가.
 
