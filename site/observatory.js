@@ -105,6 +105,41 @@ async function main() {
         `${com.kakao.observed_days}일 관측 누적`));
       cc.appendChild(indexCard('Threads 관측 게시물', `${com.threads.observed_total || 0}건`,
         '태그 검색 관측 누적'));
+      // 가입자 일별 추이 — 누적 막대 + 수치 표
+      const md = com.members_daily || [];
+      if (md.length) {
+        const mchart = document.getElementById('member-chart');
+        const mmax = Math.max(...md.map((r) => r.cumulative), 1);
+        const mmin = Math.min(...md.map((r) => r.cumulative));
+        for (const r of md) {
+          const bar = el('div', 'mini-chart__bar');
+          const fill = el('div', 'mini-chart__fill mini-chart__fill--members');
+          const ratio = (r.cumulative - mmin * 0.9) / (mmax - mmin * 0.9);
+          fill.style.height = `${Math.max(Math.round(ratio * 100), 4)}%`;
+          const yoil = ['일', '월', '화', '수', '목', '금', '토'][new Date(`${r.date}T00:00:00+09:00`).getDay()];
+          bar.title = `${r.date} (${yoil}): 누적 ${r.cumulative.toLocaleString()}명 (+${r.joins}/-${r.leaves})`;
+          bar.appendChild(fill);
+          const label = el('span', 'mini-chart__label', r.date.slice(8));
+          label.appendChild(document.createElement('br'));
+          label.append(`(${yoil})`);
+          if (yoil === '토' || yoil === '일') label.classList.add('mini-chart__label--weekend');
+          bar.appendChild(label);
+          mchart.appendChild(bar);
+        }
+        const mbody = document.querySelector('#member-table tbody');
+        for (const r of [...md].reverse()) {
+          const tr = document.createElement('tr');
+          const net = r.joins - r.leaves;
+          tr.appendChild(el('td', null, r.date));
+          tr.appendChild(el('td', null, `+${r.joins}`));
+          tr.appendChild(el('td', null, `-${r.leaves}`));
+          tr.appendChild(el('td', net >= 0 ? 'obs-covered' : 'obs-uncovered',
+            `${net >= 0 ? '+' : ''}${net}`));
+          tr.appendChild(el('td', 'obs-strong', r.cumulative.toLocaleString()));
+          mbody.appendChild(tr);
+        }
+      }
+
       const chart = document.getElementById('kakao-chart');
       const max = Math.max(...com.kakao_recent.map(([, n]) => n), 1);
       for (const [date, n] of com.kakao_recent) {

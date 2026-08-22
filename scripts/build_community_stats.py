@@ -49,6 +49,42 @@ def backfill_kakao(ledger: dict):
         ledger["kakao_daily"][date] = max(ledger["kakao_daily"].get(date, 0), n)
 
 
+def backfill_membership(ledger: dict):
+    """system 피드(feedType 4=입장, 2=퇴장)에서 일별 입장·퇴장을 집계한다.
+    메시지 id 기준 dedupe — 여러 raw 파일에 겹쳐 있어도 안전."""
+    seen = set()
+    joins = {}
+    leaves = {}
+    for f in glob.glob("data/raw/*kakao*.json"):
+        try:
+            msgs = json.load(open(f))
+        except (json.JSONDecodeError, OSError):
+            continue
+        if not isinstance(msgs, list):
+            continue
+        for m in msgs:
+            if m.get("type") != "system" or not m.get("id") or m["id"] in seen:
+                continue
+            seen.add(m["id"])
+            try:
+                feed = json.loads(m.get("text") or "{}")
+            except json.JSONDecodeError:
+                continue
+            date = (m.get("timestamp") or "")[:10]
+            if not date:
+                continue
+            if feed.get("feedType") == 4 and "members" in feed:
+                joins[date] = joins.get(date, 0) + len(feed["members"])
+            elif feed.get("feedType") == 2 and "member" in feed:
+                leaves[date] = leaves.get(date, 0) + 1
+    for d in set(list(joins) + list(leaves)):
+        prev = ledger.setdefault("membership_daily", {}).get(d, {})
+        ledger["membership_daily"][d] = {
+            "joins": max(prev.get("joins", 0), joins.get(d, 0)),
+            "leaves": max(prev.get("leaves", 0), leaves.get(d, 0)),
+        }
+
+
 def snapshot_members(ledger: dict, today: str):
     try:
         out = subprocess.run(["kakaocli", "chats", "--limit", "30", "--json"],
@@ -69,6 +105,25 @@ def snapshot_threads(ledger: dict, today: str):
         pass
 
 
+def reconstruct_members_daily(membership: dict, latest_count) -> list:
+    """가입자 일별 추이 — 최신 실측 스냅샷을 기준점으로 입장·퇴장 피드를 역산한다.
+
+    cumulative(마지막 날) = 현재 실측값이 되도록 뒤에서 앞으로 순증을 빼며 채운다.
+    피드 유실 시 오차 가능(관측치) — 표시 시 항상 병기할 것.
+    """
+    if not membership or not latest_count:
+        return []
+    days = sorted(membership)
+    cumulative = {}
+    running = latest_count
+    for d in reversed(days):
+        cumulative[d] = running
+        running -= membership[d]["joins"] - membership[d]["leaves"]
+    return [{"date": d, "joins": membership[d]["joins"],
+             "leaves": membership[d]["leaves"], "cumulative": cumulative[d]}
+            for d in days]
+
+
 def aggregates(daily: dict, today: datetime.date) -> dict:
     def window(days):
         cutoff = (today - datetime.timedelta(days=days - 1)).isoformat()
@@ -83,6 +138,7 @@ def main():
     today = datetime.date.today()
     ledger = load_ledger()
     backfill_kakao(ledger)
+    backfill_membership(ledger)
     snapshot_members(ledger, today.isoformat())
     snapshot_threads(ledger, today.isoformat())
     LEDGER.write_text(json.dumps(ledger, ensure_ascii=False, indent=1) + "\n",
@@ -107,6 +163,9 @@ def main():
             "first_date": member_dates[0] if member_dates else None,
             "series": [(d, members[d]) for d in member_dates[-30:]],
         },
+        "members_daily": reconstruct_members_daily(
+            ledger.get("membership_daily", {}),
+            members[member_dates[-1]] if member_dates else None),
         "threads": {
             "observed_total": threads[thread_dates[-1]] if thread_dates else None,
             "week_new": (threads[thread_dates[-1]] - threads[thread_dates[0]])
