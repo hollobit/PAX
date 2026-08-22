@@ -107,6 +107,9 @@ python3 scripts/build_community_stats.py  # 커뮤니티 활력 지표(대화량
 ### 주간 점검 (월요일 오전 실행분에서만)
 - `python3 scripts/check_health.py` — 전체 사례 링크 생존·유지보수 상태 재점검 (약 3분).
   끊긴 링크가 새로 나오면 log에 기록한다.
+- 카카오 대화량 백필: `kakaocli messages --chat-id <id> --since 8d --limit 20000 --json`으로
+  지난주 전체를 재조회해 data/raw/TODAY-kakao-backfill.json으로 저장 —
+  수집 창(1d·개수 제한)에 잘린 메시지를 원장에 보정한다(build_community_stats가 자동 반영).
 - 공공 깃랩 스타 조사: `https://gitlab.aigov.go.kr/api/v4/projects?order_by=star_count&sort=desc&per_page=100`
   을 curl로 조회해 스타 3+ 중 미등재(전체 사례의 link/case_url/mirror_url과 대조)를 찾는다.
   기등재 사례의 미러면 mirror_url로 병기하고, 순수 신규는 사용자에게 후보 목록으로 보고한다.
