@@ -2057,7 +2057,7 @@ main {
   align-items: flex-end;
   gap: 3px;
   height: 120px;
-  padding: 0.5rem 0 1.2rem;
+  padding: 0.5rem 0 2.1rem;
   max-width: 40rem;
 }
 
@@ -2082,10 +2082,15 @@ main {
 
 .mini-chart__label {
   position: absolute;
-  bottom: -1.1rem;
+  bottom: -2rem;
   left: 50%;
   transform: translateX(-50%);
   font-family: var(--font-mono);
   font-size: 0.58rem;
+  line-height: 1.25;
+  text-align: center;
   color: var(--ink-faint);
+  white-space: nowrap;
 }
+
+.mini-chart__label--weekend { color: var(--accent); }
