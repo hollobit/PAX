@@ -121,7 +121,7 @@ GraphRAG의 구성(LLM 개체·관계 추출 → 그래프 → 군집 탐지 →
    - 미확인 원칙의 변형: 의미 관계는 본질적으로 해석이므로 `confidence`로 구분하고,
      evidence 문장을 반드시 남긴다. "추정" 엣지는 화면에서 점선·토글로 구분 표시.
    - 수집 절차(collect_prompt.md 4단계)에 "신규 사례와 기존 사례 간 의미 관계 추출" 지침 추가.
-2. **TF-IDF 유사도 엣지** — build_graph.py가 사례 제목+설명의 형태소 단위 TF-IDF 코사인
+2. **TF-IDF 유사도 엣지** — build_graph.py가 사례 제목+설명의 간이 토큰(공백 분리 + 한글 2-gram) TF-IDF 코사인
    유사도를 계산(순수 파이썬, 외부 의존 없음), 임계값 이상·사례당 top-3만 `유사(자동)`
    엣지로 추가. LLM 추출과 별개 method로 표기해 구분.
 3. **군집 탐지** — label propagation(자체 구현)으로 전체 그래프의 의미 군집을 산출.
@@ -171,7 +171,7 @@ graph.json의 metrics를 렌더. 전부 자동 산출:
 → build_community_stats → changelog → 커밋·배포 검증
 ```
 
-- build_graph.py: 입력 cases.json + champions.json + standards.json →
+- build_graph.py: 입력 cases.json + champions.json + standards.json + semantic_edges.json →
   출력 site/data/graph.json (nodes/edges/metrics). build_index보다 먼저 실행
   (연결 지수를 index가 읽음).
 - collect_prompt.md 5단계에 build_graph 실행 추가.
