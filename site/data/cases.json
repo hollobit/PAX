@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-21T22:02:19+09:00",
+ "updated_at": "2026-08-22T21:21:38+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -5356,6 +5356,102 @@
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-08-21"
+  },
+  {
+   "link": "https://github.com/chrisryugj/korean-stats-mcp",
+   "case_url": "https://github.com/chrisryugj/korean-stats-mcp",
+   "org_type": "공직 개인",
+   "case_class": "개인 개발",
+   "transition_stage": "개인 사용",
+   "source": "kakao",
+   "title": "Korean Stats MCP — KOSIS 통계를 자연어로, 출처 자동 인용",
+   "tags": [
+    "MCP",
+    "통계",
+    "KOSIS",
+    "공공데이터",
+    "출처인용"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-05-19",
+   "collected_at": "2026-08-22",
+   "task_category": "데이터·통계",
+   "summary": "국가데이터처 KOSIS OpenAPI를 감싼 MCP 서버. 91개 키워드·17개 시도·230여 자치구 수치를 자연어로 물으면 통계표 ID 출처와 함께 답한다. 시정연설·의회 답변·정책보고서에 필요한 '출처 표기'를 자동화한 점이 공직 실무 지향적이다. 건축HUB MCP를 만든 개발자의 두 번째 공공데이터 MCP로, npm 배포·웹 커넥터 등 설치 없는 경로까지 갖췄다.",
+   "runtime_env": "MCP·CLI 설정",
+   "id": "33c36cc77c4bfc5c",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-08-22"
+  },
+  {
+   "link": "https://github.com/darjeeling/awesome-mcp-korea",
+   "case_url": "https://github.com/darjeeling/awesome-mcp-korea",
+   "org_type": "커뮤니티",
+   "case_class": "커뮤니티",
+   "transition_stage": "부서 공유",
+   "source": "kakao",
+   "title": "Awesome MCP Korea — 한국 특화 MCP 서버 큐레이션 목록",
+   "tags": [
+    "MCP",
+    "큐레이션",
+    "커뮤니티",
+    "레지스트리"
+   ],
+   "org": "개발 커뮤니티",
+   "date": "2026-03-02",
+   "collected_at": "2026-08-22",
+   "task_category": "공통·범용",
+   "summary": "법률·커머스·공공데이터·금융·부동산·지도 등 한국 생태계 특화 MCP 서버를 선별 등재하는 커뮤니티 큐레이션 저장소(스타 236). 선정 기준과 보안 면책 고지를 명문화해 '목록 자체의 책임 경계'를 밝힌 점이 특징으로, 공식 정부 MCP 레지스트리가 없는 현재 사실상의 민간 색인 역할을 한다.",
+   "runtime_env": "브라우저만",
+   "id": "f20250742f06ccb5",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-08-22"
+  },
+  {
+   "link": "https://factbat.com/",
+   "case_url": "https://factbat.com/mcp-guide",
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "transition_stage": "개인 사용",
+   "source": "kakao",
+   "title": "팩트방망이(FactBat) — 공공 원문 통합검색 + 원격 MCP",
+   "tags": [
+    "MCP",
+    "공공데이터",
+    "정보공개",
+    "통합검색",
+    "원격MCP"
+   ],
+   "org": "팩트방망이(민간 개인 개발)",
+   "date": "2026-08-09",
+   "collected_at": "2026-08-22",
+   "task_category": "공통·범용",
+   "summary": "공공기관 누리집 2,160곳의 메뉴 URL 53만 건, 공공데이터포털 목록, 정보공개포털 원문 1,650만 건을 통합 색인하고 AI로 찾아주는 민간 서비스. 원격 MCP 서버(locate_public_records 도구, 구글 로그인, 분당 30회)를 베타 공개해 Claude 데스크탑·Claude Code에서 '공공자료 위치찾기'를 바로 쓸 수 있다. 흩어진 공공 원문의 소재 파악이라는 공통 병목을 민간이 먼저 푼 참고 사례.",
+   "runtime_env": "MCP·CLI 설정",
+   "id": "6c44153f6db7d61c"
+  },
+  {
+   "link": "https://mcp.ezrnd.co.kr/",
+   "case_url": "https://mcp.ezrnd.co.kr/",
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "transition_stage": "개인 사용",
+   "source": "kakao",
+   "title": "OpenData MCP — 공공데이터포털 API 문서를 표준화해 MCP로 제공",
+   "tags": [
+    "MCP",
+    "공공데이터포털",
+    "API문서",
+    "표준화"
+   ],
+   "org": "이지알앤디(민간 기업)",
+   "date": "2026-08-22",
+   "collected_at": "2026-08-22",
+   "task_category": "데이터·통계",
+   "summary": "공공데이터포털의 제각각인 API 문서를 표준 Markdown 문서로 정리하고, 검색·열람·신규 문서 요청까지 지원하는 민간(이지알앤디) MCP 웹 클라이언트. 나라장터·IRIS 통합공고 검색-요약 서비스와 연계된다. 공공데이터 활용의 첫 관문인 'API 문서 해독 비용'을 MCP로 낮춘 참고 사례.",
+   "runtime_env": "MCP·CLI 설정",
+   "id": "e6b6f2b13b9ea1aa"
   }
  ]
 }
