@@ -68,3 +68,20 @@ const MINISTRY_GROUPS = [
 // 이름으로 kw 목록 조회 (아카이브 부처 필터 · 격차 지도 공용)
 const MINISTRY_BY_NAME = new Map(
   MINISTRY_GROUPS.flatMap((g) => g.items).map((m) => [m.name, m.kw]));
+
+// 지역 축 스코프 판별 (격차 지도 · ?region=미상 필터 공용):
+// 중앙행정기관·공공기관(소속 포함)은 '전국 단위'로, 지역 미상으로 분류하지 않는다.
+const PAX_PUBLIC_ORG_RE = /(진흥원|연구원|정보원|개발원|공사|공단|협력단|재단|유통|공공기관|ETRI|KISA|NIA|KOICA)/;
+function paxRegionScope(c, aff) {
+  if (c.region) return 'region';
+  if (c.org_type === '중앙행정기관') return 'central';
+  if (c.org_type === '공공기관') return 'public';
+  if (c.org_type === '커뮤니티') return 'community';
+  if (c.org_type === '민간(참고)' || c.org_type === '해외(참고)') return 'reference';
+  const hay = (c.org || '') + ' ' + (aff || '');
+  for (const kws of MINISTRY_BY_NAME.values()) {
+    if (kws.some((k) => hay.includes(k))) return 'central';
+  }
+  if (PAX_PUBLIC_ORG_RE.test(hay)) return 'public';
+  return 'unknown';
+}
