@@ -523,7 +523,9 @@ function matches(c, f) {
   if (f.tag && !c.tags.includes(f.tag)) return false;
   if (f.taskCat !== '전체' && c.task_category !== f.taskCat) return false;
   if (f.noInstallOnly && c.runtime_env !== '브라우저만') return false;
-  if (f.region && c.region !== f.region) return false;
+  if (f.region) {
+    if (f.region === '미상' ? !!c.region : c.region !== f.region) return false;
+  }
   if (f.ministry) {
     const kws = MINISTRY_BY_NAME.get(f.ministry) || [];
     const aff = state.champAffOfCase.get(c.id) || '';
@@ -946,7 +948,9 @@ function renderRegionFilter() {
   const span = document.createElement('span');
   span.textContent = state.filter.ministry
     ? `기관 필터: ${state.filter.ministry} (기관 표기·챔피언 소속 기준)`
-    : `지역 필터: ${state.filter.region} (지역 확정 분류 기준)`;
+    : (state.filter.region === '미상'
+      ? '지역 필터: 미상 — 지역이 확정되지 않은 사례 (전국 단위·커뮤니티·소속 미확인 포함)'
+      : `지역 필터: ${state.filter.region} (지역 확정 분류 기준)`);
   const clear = document.createElement('button');
   clear.type = 'button';
   clear.className = 'export-btn';

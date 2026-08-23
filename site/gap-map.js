@@ -109,7 +109,38 @@ async function main() {
   const observed = REGIONS.filter((r) => counts.get(r) > 0).length;
   document.getElementById('region-note').textContent =
     `17개 광역시도 중 ${observed}곳 관측 · 지역 미상 ${unknown}건 — ` +
-    '미상이 대부분인 것 자체가 현재 관측망의 한계이자 다음 수집 과제입니다.';
+    '미상의 구성은 아래 표에서 유형별로 확인할 수 있습니다.';
+
+  // ── 지역 미상 분해 — 지역 개념이 없는 유형과 '미확인(수집 과제)'을 구분한다 ──
+  const UNKNOWN_NATURE = {
+    '공직 개인': '소속 기관 미확인 — 챔피언 소속이 확인되는 대로 지역을 확정해 지도에 반영(백필)합니다. 지역 격차의 실제 수집 과제.',
+    '커뮤니티': '시민·개발자 커뮤니티 산출물 — 특정 지역에 속하지 않아 지역 격차 집계 대상이 아닙니다.',
+    '중앙행정기관': '전국 단위 기관 — 지역이 아닌 부처 그리드에서 관측됩니다.',
+    '공공기관': '전국 사업 단위 — 본사 소재지 표기는 추후 과제입니다.',
+    '민간(참고)': '참고 사례 — 지역 집계에서 제외합니다.',
+    '해외(참고)': '참고 사례 — 지역 집계에서 제외합니다.',
+  };
+  const unkByType = new Map();
+  for (const c of cases) {
+    if (c.region) continue;
+    unkByType.set(c.org_type, (unkByType.get(c.org_type) || 0) + 1);
+  }
+  const utbody = document.querySelector('#region-unknown-table tbody');
+  [...unkByType.entries()].sort((a, b) => b[1] - a[1]).forEach(([type, n]) => {
+    const tr = document.createElement('tr');
+    tr.appendChild(el('td', 'obs-strong', type));
+    tr.appendChild(el('td', null, `${n}건`));
+    tr.appendChild(el('td', null, UNKNOWN_NATURE[type] || '분류 확인 필요'));
+    utbody.appendChild(tr);
+  });
+  const pending = unkByType.get('공직 개인') || 0;
+  const note = document.getElementById('region-unknown-note');
+  note.textContent = `미상 ${unknown}건 중 실제 '지역 미확인'은 공직 개인 ${pending}건입니다 — ` +
+    '나머지는 전국 단위·커뮤니티·참고 사례로 지역 격차의 결측이 아닙니다. 미상 사례 전체 보기: ';
+  const a = document.createElement('a');
+  a.href = './?region=' + encodeURIComponent('미상');
+  a.textContent = '아카이브에서 필터로 열기 →';
+  note.appendChild(a);
 
   // ── 기관유형 표 ──
   const typeCounts = new Map();
