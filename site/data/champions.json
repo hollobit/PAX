@@ -1776,9 +1776,14 @@
    }
   },
   {
-   "id": "Kminer2053",
+   "id": "박봉훈",
    "name": "박봉훈",
    "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "Kminer2053",
+     "url": "https://gitlab.aigov.go.kr/Kminer2053"
+    },
     {
      "platform": "github",
      "id": "Kminer2053",
@@ -1788,17 +1793,12 @@
      "platform": "threads",
      "id": "koyou_ax",
      "url": "https://www.threads.com/@koyou_ax"
-    },
-    {
-     "platform": "gitlab",
-     "id": "Kminer2053",
-     "url": "https://gitlab.aigov.go.kr/Kminer2053"
     }
    ],
    "affiliation": {
     "value": "코레일유통",
     "inferred": false,
-    "evidence": "공공 GitLab 공개 프로필 표시명"
+    "evidence": "공공 GitLab 공개 프로필 표시명(코레일유통 박봉훈)"
    },
    "cases": [
     "0b9d4e9c2beed197",
@@ -2604,6 +2604,12 @@
    "title": "경기도의회 회의 실시간 자막 서비스 — 기관 도메인으로 정식 출시",
    "org": "경기도의회(공직 개인 개발)",
    "url": "https://aisub.ggc.go.kr"
+  },
+  {
+   "id": "2808aea47c52b21c",
+   "title": "경기도의회 지능형 법령정보시스템 — LexDiff 타 기관 재사용 구축",
+   "org": "경기도의회(공직 개인 개발)",
+   "url": "https://ggc-lexdiff.vercel.app/"
   }
  ]
 }
