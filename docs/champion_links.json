@@ -101,5 +101,19 @@
    "evidence": "기관 공식 사례 '화성특례시 신규자 지식창고'(gitlab hwanchulshin/hwaseong-kb)의 제작 주체가 시 AI스마트전략실 빅데이터팀으로 명시"
   },
   "evidence": "hwaseong-kb 저장소 소유 계정"
+ },
+ {
+  "champion": "박봉훈",
+  "accounts": [
+   "gitlab:Kminer2053",
+   "github:Kminer2053",
+   "threads:koyou_ax"
+  ],
+  "affiliation": {
+   "value": "코레일유통",
+   "inferred": false,
+   "evidence": "공공 GitLab 공개 프로필 표시명(코레일유통 박봉훈)"
+  },
+  "evidence": "threads @koyou_ax 게시물 Da5bReUDiL0('깃허브에 올려두었습니다')의 스레드에 github.com/Kminer2053/gongmuwon 공유 — 저장소명·설명이 게시물 제목('로컬 AI에이전트 워크플레이스 : 공무원')과 정확히 일치"
  }
 ]

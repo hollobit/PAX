@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-22T21:39:04+09:00",
+ "updated_at": "2026-08-23T09:37:35+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -1022,7 +1022,7 @@
    "org_type": "공직 개인",
    "org": "공직 현장(개인 개발)",
    "date": "2026-07-06",
-   "summary": "일정, 파일, 지식, 문서 작성, 실행 기록까지 PC 안에서 연결하는 공무원용 로컬 AI 에이전트 워크플레이스 개발기가 공유됐다. 일반 업무용 PC에서 구동되도록 Gemma4 E2B로 최적화했고 원클릭 설치 패키지를 만들고 있다.",
+   "summary": "일정·파일·지식·문서작성·실행기록을 한 몸으로 연결하는 공무원용 로컬 AI 에이전트 워크스페이스가 개발 예고 약 3주 만에 GitHub에 공개됐다. Tauri+FastAPI 데스크톱 앱으로 Ollama·gemma-4 E2B 경량모델을 묶은 원클릭 셋업 패키지를 제공하며, 인터넷 없이 동작하고 자료가 PC 밖으로 나가지 않는 폐쇄망 대응 설계다. 답변 근거를 내 지식폴더에서 찾고 한글(HWPX) 문서 작성까지 잇는다.",
    "source": "threads",
    "collected_at": "2026-08-07",
    "tags": [
@@ -1045,7 +1045,8 @@
    "maintenance": "활발",
    "model_dependency": "해외 오픈웨이트(로컬)",
    "stars": 10,
-   "stars_github": 10
+   "stars_github": 10,
+   "network_req": "로컬 완결"
   },
   {
    "link": "https://www.threads.com/@chris_gomdori/post/DbW8LhniROp",
@@ -5478,6 +5479,30 @@
    "org_type": "지방의회",
    "date": "2026-08-21",
    "id": "fe06420a5b17251f"
+  },
+  {
+   "tags": [
+    "법령",
+    "신구대조",
+    "재사용",
+    "의회",
+    "RAG"
+   ],
+   "date": "2026-08-22",
+   "org": "경기도의회(공직 개인 개발)",
+   "task_category": "감사·법무",
+   "source": "kakao",
+   "runtime_env": "브라우저만",
+   "collected_at": "2026-08-23",
+   "org_type": "지방의회",
+   "network_req": "인터넷 필수",
+   "transition_stage": "타 기관 재사용",
+   "region": "경기",
+   "case_class": "개인 개발",
+   "title": "경기도의회 지능형 법령정보시스템 — LexDiff 타 기관 재사용 구축",
+   "summary": "광진구 실무자가 만든 LexDiff를 경기도의회가 재사용해 구축한 지능형 법령정보 서비스. 법제처 데이터 기반으로 위임법령 3단 비교·신구법 대조·판례 통합 검색·전국 조례 벤치마킹·위임 미비 탐지와 일상 언어 AI 법률 질의응답을 제공한다. 화면 하단에 원작자 권한을 표기하고 API 비용 보호를 위해 수도권 접속 제한을 둔, 개인 개발 도구의 타 기관 재사용 계보가 명시된 사례다.",
+   "link": "https://ggc-lexdiff.vercel.app/",
+   "id": "2808aea47c52b21c"
   }
  ]
 }
