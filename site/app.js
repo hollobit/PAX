@@ -524,7 +524,10 @@ function matches(c, f) {
   if (f.taskCat !== '전체' && c.task_category !== f.taskCat) return false;
   if (f.noInstallOnly && c.runtime_env !== '브라우저만') return false;
   if (f.region) {
-    if (f.region === '미상' ? !!c.region : c.region !== f.region) return false;
+    if (f.region === '미상') {
+      const scope = paxRegionScope(c, state.champAffOfCase.get(c.id) || '');
+      if (scope !== 'unknown') return false;
+    } else if (c.region !== f.region) return false;
   }
   if (f.ministry) {
     const kws = MINISTRY_BY_NAME.get(f.ministry) || [];
@@ -949,7 +952,7 @@ function renderRegionFilter() {
   span.textContent = state.filter.ministry
     ? `기관 필터: ${state.filter.ministry} (기관 표기·챔피언 소속 기준)`
     : (state.filter.region === '미상'
-      ? '지역 필터: 미상 — 지역이 확정되지 않은 사례 (전국 단위·커뮤니티·소속 미확인 포함)'
+      ? '지역 필터: 미확인 — 소속·지역 증거가 없는 사례 (중앙부처·공공기관·커뮤니티는 전국 단위로 분류되어 제외)'
       : `지역 필터: ${state.filter.region} (지역 확정 분류 기준)`);
   const clear = document.createElement('button');
   clear.type = 'button';
