@@ -2610,6 +2610,18 @@
    "title": "경기도의회 지능형 법령정보시스템 — LexDiff 타 기관 재사용 구축",
    "org": "경기도의회(공직 개인 개발)",
    "url": "https://ggc-lexdiff.vercel.app/"
+  },
+  {
+   "id": "1488ff8944c8de22",
+   "title": "TechPartners — 싱가포르 공공데이터로 만든 연구협력 파트너 탐색 사이트",
+   "org": "개발 커뮤니티",
+   "url": "https://techpartners.site/"
+  },
+  {
+   "id": "dcba0f654467bdc9",
+   "title": "schift-ko-pii-v6 — 한국어 개인정보 검출·마스킹 경량 모델",
+   "org": "Schift(민간 개발팀)",
+   "url": "https://huggingface.co/schift-io/schift-ko-pii-v6"
   }
  ]
 }
