@@ -82,14 +82,27 @@ def fetch_profile(acct: str) -> dict | None:
     return None
 
 
-ORG_SUFFIX = re.compile(
-    r"^(?P<org>[가-힣A-Za-z0-9·\s]+(?:시|군|구|도|청|처|부|원|공사|공단|협력단|사업단|유통|의회|재단|진흥원|연구원|교육청|위원회|대학교?))\s+(?P<name>[가-힣]{2,4})$")
+# 조직 토큰 판별: 마지막 어절이 이 접미사로 끝나면 소속 경로의 일부로 본다
+ORG_TOKEN = re.compile(
+    r"(?:시|군|구|도|청|처|부|원|공사|공단|협력단|사업단|유통|의회|재단|진흥원|연구원|교육청|"
+    r"위원회|대학교?|소방서|경찰서|세관|우체국|보건소|본부|지청|지사|센터|실|과|팀|단|관)$")
+KOREAN_NAME = re.compile(r"[가-힣]{2,4}$")
 
 
 def split_gitlab_name(full: str) -> tuple[str | None, str]:
-    """공공 GitLab 표시명 '기관 이름' 형식을 (기관, 이름)으로 분리. 실패 시 (None, 원문)."""
-    if m := ORG_SUFFIX.match(full.strip()):
-        return m.group("org").strip(), m.group("name")
+    """공공 GitLab 표시명을 (소속, 이름)으로 정규화한다. 실패 시 (None, 원문).
+
+    - '고용노동부 강기륜', '완주소방서 김무영', 다중 어절 조직 경로+이름을 분리
+    - first/last name 역순 표기('진희 안')는 성+이름으로 재결합
+    """
+    tokens = full.strip().split()
+    if len(tokens) >= 2 and KOREAN_NAME.fullmatch(tokens[-1]):
+        org_tokens = tokens[:-1]
+        if all(ORG_TOKEN.search(tok) for tok in org_tokens):
+            return " ".join(org_tokens), tokens[-1]
+    if (len(tokens) == 2 and re.fullmatch(r"[가-힣]", tokens[1])
+            and re.fullmatch(r"[가-힣]{1,2}", tokens[0])):
+        return None, tokens[1] + tokens[0]
     return None, full.strip()
 
 
@@ -213,8 +226,8 @@ def main() -> int:
         name = (curated_name or gitlab_name or github_name or cid.split(":", 1)[-1]).strip()
         if gitlab_name:
             org, person = split_gitlab_name(gitlab_name)
+            name = person
             if org:
-                name = person
                 if not aff or aff.get("inferred"):
                     aff = {"value": org, "inferred": False,
                            "evidence": "공공 GitLab 공개 프로필 표시명"}

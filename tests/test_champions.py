@@ -35,3 +35,31 @@ def test_mixed_repo_and_threads():
         "link": "https://www.threads.com/@sharer/post/X",
         "case_url": "https://github.com/dev/tool"})
     assert repo == {"github:dev"} and threads == {"threads:sharer"}
+
+
+# --- 깃랩 표시명 분리·정규화 (2026-08-23 재검증) ---
+from build_champions import split_gitlab_name
+
+
+def test_split_simple_org_name():
+    assert split_gitlab_name("고용노동부 강기륜") == ("고용노동부", "강기륜")
+
+
+def test_split_fire_station_suffix():
+    assert split_gitlab_name("완주소방서 김무영") == ("완주소방서", "김무영")
+
+
+def test_split_multi_token_org_path():
+    org, name = split_gitlab_name("전남광주통합특별시 기획조정실 전략정책관 전략기획관실 김규범")
+    assert name == "김규범"
+    assert org == "전남광주통합특별시 기획조정실 전략정책관 전략기획관실"
+
+
+def test_reversed_given_family_order():
+    assert split_gitlab_name("진희 안") == (None, "안진희")
+    assert split_gitlab_name("환철 신") == (None, "신환철")
+
+
+def test_plain_name_untouched():
+    assert split_gitlab_name("사진우") == (None, "사진우")
+    assert split_gitlab_name("onpremisehuman") == (None, "onpremisehuman")

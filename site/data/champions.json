@@ -1438,6 +1438,30 @@
    }
   },
   {
+   "id": "gitlab:kimosed",
+   "name": "김규범",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "kimosed",
+     "url": "https://gitlab.aigov.go.kr/kimosed"
+    }
+   ],
+   "affiliation": {
+    "value": "전남광주통합특별시 기획조정실 전략정책관 전략기획관실",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "034b8bd869e0d6ea"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:AILab_Manager",
    "name": "김기현",
    "accounts": [
@@ -1526,6 +1550,30 @@
    "stats": {
     "case_count": 9,
     "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:tenmoo",
+   "name": "김무영",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "tenmoo",
+     "url": "https://gitlab.aigov.go.kr/tenmoo"
+    }
+   ],
+   "affiliation": {
+    "value": "완주소방서",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "9c850ff3e7429a24"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -1708,6 +1756,26 @@
    }
   },
   {
+   "id": "gitlab:chanili2",
+   "name": "문찬일",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "chanili2",
+     "url": "https://gitlab.aigov.go.kr/chanili2"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "ea8ce2a3d003400f"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
    "id": "Kminer2053",
    "name": "박봉훈",
    "accounts": [
@@ -1854,6 +1922,30 @@
    }
   },
   {
+   "id": "신환철",
+   "name": "신환철",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "hwanchulshin",
+     "url": "https://gitlab.aigov.go.kr/hwanchulshin"
+    }
+   ],
+   "affiliation": {
+    "value": "화성특례시",
+    "inferred": true,
+    "evidence": "기관 공식 사례 '화성특례시 신규자 지식창고'(gitlab hwanchulshin/hwaseong-kb)의 제작 주체가 시 AI스마트전략실 빅데이터팀으로 명시"
+   },
+   "cases": [
+    "10f18583c9e56e12"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:anms0214",
    "name": "안민수",
    "accounts": [
@@ -1878,6 +1970,26 @@
    }
   },
   {
+   "id": "gitlab:jinn",
+   "name": "안진희",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "jinn",
+     "url": "https://gitlab.aigov.go.kr/jinn"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "539d5aacb03635db"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:hoho4348",
    "name": "양준호",
    "accounts": [
@@ -1898,26 +2010,6 @@
    "stats": {
     "case_count": 1,
     "top_ax": 2,
-    "stars": 0
-   }
-  },
-  {
-   "id": "gitlab:tenmoo",
-   "name": "완주소방서 김무영",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "tenmoo",
-     "url": "https://gitlab.aigov.go.kr/tenmoo"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "9c850ff3e7429a24"
-   ],
-   "stats": {
-    "case_count": 1,
-    "top_ax": 1,
     "stars": 0
    }
   },
@@ -2002,26 +2094,6 @@
    "stats": {
     "case_count": 1,
     "top_ax": 2,
-    "stars": 0
-   }
-  },
-  {
-   "id": "gitlab:kimosed",
-   "name": "전남광주통합특별시 기획조정실 전략정책관 전략기획관실 김규범",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "kimosed",
-     "url": "https://gitlab.aigov.go.kr/kimosed"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "034b8bd869e0d6ea"
-   ],
-   "stats": {
-    "case_count": 1,
-    "top_ax": 1,
     "stars": 0
    }
   },
@@ -2176,46 +2248,6 @@
    }
   },
   {
-   "id": "gitlab:jinn",
-   "name": "진희 안",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "jinn",
-     "url": "https://gitlab.aigov.go.kr/jinn"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "539d5aacb03635db"
-   ],
-   "stats": {
-    "case_count": 1,
-    "top_ax": 1,
-    "stars": 0
-   }
-  },
-  {
-   "id": "gitlab:chanili2",
-   "name": "찬일 문",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "chanili2",
-     "url": "https://gitlab.aigov.go.kr/chanili2"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "ea8ce2a3d003400f"
-   ],
-   "stats": {
-    "case_count": 1,
-    "top_ax": 2,
-    "stars": 0
-   }
-  },
-  {
    "id": "gitlab:pilddong",
    "name": "최필선",
    "accounts": [
@@ -2293,26 +2325,6 @@
     "listed_as": "소방청 한종훈 — 분석관",
     "source_name": "AI 챔피언 기록 저장소 (공공 AI 챔피언 명예의 전당)",
     "source_url": "https://public-ax.kr/channels/L2NoYW5uZWxzLzIxNTI3/pages/aichampionhonorship"
-   }
-  },
-  {
-   "id": "gitlab:hwanchulshin",
-   "name": "환철 신",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "hwanchulshin",
-     "url": "https://gitlab.aigov.go.kr/hwanchulshin"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "10f18583c9e56e12"
-   ],
-   "stats": {
-    "case_count": 1,
-    "top_ax": 2,
-    "stars": 0
    }
   }
  ],
