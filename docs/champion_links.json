@@ -89,5 +89,17 @@
    "evidence": "운영자 제공 — 주문호 서기관(개인정보보호위원회), 2026-08-22"
   },
   "evidence": "운영자 제공 — 보-편(보호법 편히보기) 개발자, 서비스 privacy-law-reader.vercel.app + 저장소 data-law-guide"
+ },
+ {
+  "champion": "신환철",
+  "accounts": [
+   "gitlab:hwanchulshin"
+  ],
+  "affiliation": {
+   "value": "화성특례시",
+   "inferred": true,
+   "evidence": "기관 공식 사례 '화성특례시 신규자 지식창고'(gitlab hwanchulshin/hwaseong-kb)의 제작 주체가 시 AI스마트전략실 빅데이터팀으로 명시"
+  },
+  "evidence": "hwaseong-kb 저장소 소유 계정"
  }
 ]
