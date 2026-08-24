@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-23T21:38:09+09:00",
+ "updated_at": "2026-08-24T09:39:56+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -5583,6 +5583,31 @@
    "id": "dcba0f654467bdc9",
    "link_ok": true,
    "health_checked": "2026-08-24"
+  },
+  {
+   "collected_at": "2026-08-24",
+   "region": "전북",
+   "summary": "인구감소·지역소멸위기 대응을 위해 이주·정착 희망자에게 주거·취업·보건복지 지원금 등 맞춤 정책 정보를 한눈에 제공하는 원스톱 안내 서비스. 군산시 실무자가 개발해 공공 깃랩에 공개했고 스타 3개를 받았다. 흩어진 정착 지원 제도를 수요자 관점으로 묶은 인구정책 분야의 드문 사례다.",
+   "task_category": "민원",
+   "org": "군산시(공직 개인 개발)",
+   "case_class": "개인 개발",
+   "org_type": "공직 개인",
+   "tags": [
+    "인구정책",
+    "지역소멸",
+    "정착지원",
+    "원스톱안내"
+   ],
+   "source": "kakao",
+   "transition_stage": "개인 사용",
+   "date": "2026-07-03",
+   "link": "https://gitlab.aigov.go.kr/iyhlys08/bodeumsettle",
+   "runtime_env": "브라우저만",
+   "title": "보듬정착 — 지역소멸위기 지역 이주·정착 원스톱 안내 서비스",
+   "id": "48047741db1ff1cd",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-24"
   }
  ]
 }

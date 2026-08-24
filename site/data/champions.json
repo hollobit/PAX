@@ -1,5 +1,5 @@
 {
- "total": 101,
+ "total": 102,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -1574,6 +1574,30 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:iyhlys08",
+   "name": "김수미",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "iyhlys08",
+     "url": "https://gitlab.aigov.go.kr/iyhlys08"
+    }
+   ],
+   "affiliation": {
+    "value": "군산시",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "48047741db1ff1cd"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },
