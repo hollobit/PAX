@@ -2647,6 +2647,12 @@
    "title": "schift-ko-pii-v6 — 한국어 개인정보 검출·마스킹 경량 모델",
    "org": "Schift(민간 개발팀)",
    "url": "https://huggingface.co/schift-io/schift-ko-pii-v6"
+  },
+  {
+   "id": "d9d7249fcb949e9a",
+   "title": "ONE윈도우 — 대화형 AI 검색을 갖춘 국가데이터통합플랫폼",
+   "org": "한국지능정보사회진흥원(NIA)",
+   "url": "https://www.data1window.kr/"
   }
  ]
 }

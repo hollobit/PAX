@@ -3806,5 +3806,33 @@
   "resilience": "미확인—저장소 삭제 예약 관측, 서비스 지속성 주시",
   "post_url": "",
   "service_url": "https://disaster.moislab.net"
+ },
+ {
+  "no": 207,
+  "id": "d9d7249fcb949e9a",
+  "org": "한국지능정보사회진흥원(NIA)",
+  "title": "ONE윈도우 — 대화형 AI 검색을 갖춘 국가데이터통합플랫폼",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S2",
+  "s_name": "Tool bundle",
+  "c": "C2",
+  "c_name": "부분 완결",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Live service",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R1 낮음",
+  "human": "해당 없음",
+  "evidence": "E1 코드·도구 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "국가 데이터 통합 접근이라는 인프라 업무를 대화형 AI 검색 포함 라이브 포털로 운영(화면 확인) — 데이터 탐색·요청·정책 창구가 플랫폼 안에서 상당 부분 완결된다(C2). 기관 공식 인프라로서 데이터 원천 연계(AI Hub·공공데이터포털)가 명시적이며, AI 검색의 실효(정확도·활용 실적) 증거가 쌓이면 상향 여지.",
+  "feedback": "부분확인(데이터 요청·Q&A 소통 창구 운영)",
+  "resilience": "부분확인(국가 인프라 — NIA 상시 운영 체제)",
+  "post_url": "",
+  "service_url": "https://www.data1window.kr/"
  }
 ]
