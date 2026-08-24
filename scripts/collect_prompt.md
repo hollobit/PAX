@@ -7,7 +7,7 @@
 ## 0. 준비
 - **크론 만료 점검 (매 실행 필수)**: `data/state.json`의 `cron.registered_at`을 확인한다.
   세션 크론은 등록 후 7일에 만료되므로, **오늘이 registered_at+5일 이상이면**(만료 2일 전)
-  CronList로 기존 작업을 확인 → CronDelete로 삭제 → 같은 프롬프트로 09:03/21:03 두 건을
+  CronList로 기존 작업을 확인 → CronDelete로 삭제 → 같은 프롬프트로 09:03/15:03/21:03 세 건을
   CronCreate 재등록하고, state.json의 registered_at·ids를 갱신한 뒤 log에 기록한다.
   CronList가 비어 있으면(만료 이미 발생) 즉시 재등록한다.
 - `config/rooms.json`을 읽어 수집 대상을 확인한다.
@@ -30,13 +30,15 @@
 ## 2. 카카오톡 수집 (kakaocli)
 - `kakaocli`로 로컬 DB를 직접 읽는다 (2026-08-07 검증된 경로):
   ```bash
-  kakaocli messages --chat-id <state.json의 kakao.chat_id> --since 1d --limit 500 --json
+  kakaocli messages --chat-id <state.json의 kakao.chat_id> --since 1d --limit 2000 --json
   ```
   chat_id가 state.json에 없으면 `kakaocli search "공공AX" --json`으로 히트가 가장 많은
   chat_id를 찾는다 (방 이름은 DB에서 "(unknown)"으로 나오므로 이름 매칭은 불가).
 - `kakaocli` 미설치/실패 시(빌드에 전체 Xcode 필요) kakaotalk-mac 스킬로 폴백하고,
   둘 다 안 되면 이 소스는 건너뛰고 log에 기록한다.
 - last_read 이후의 메시지만 사용한다 (첫 실행이면 최근 3일 분량만).
+- **수신 범위 점검**: 반환된 메시지의 최소 timestamp가 last_read보다 뒤면 창이 잘린 것 —
+  --since 2d --limit 5000으로 확장 재수집해 공백을 보정한다(2026-08-24 실제 발생).
 - 봇 메시지(예: "Cronjob Response" 시작)와 120자 미만 잡담은 후보에서 제외해도 된다.
 - 메시지의 (텍스트, timestamp)를 raw 목록에 담는다. sender_id·닉네임은 raw에만 저장한다.
 
