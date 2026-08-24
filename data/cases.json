@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-24T09:39:56+09:00",
+ "updated_at": "2026-08-24T09:42:26+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -5605,6 +5605,32 @@
    "runtime_env": "브라우저만",
    "title": "보듬정착 — 지역소멸위기 지역 이주·정착 원스톱 안내 서비스",
    "id": "48047741db1ff1cd",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-24"
+  },
+  {
+   "summary": "재난안전문자 공공 API를 기반으로 최근 재난문자를 지도와 목록으로 함께 보여주는 대시보드. 지역별로 묶인 메시지를 한눈에 확인하고 유형 필터·기간 조회·정렬·지역 검색·상세 패널을 지원한다. 행정안전부 실무자가 개발해 서비스와 공공 깃랩 저장소(스타 3)로 공개했다.",
+   "source": "kakao",
+   "network_req": "인터넷 필수",
+   "transition_stage": "개인 사용",
+   "case_url": "https://gitlab.aigov.go.kr/AILab_Manager/disaster-deletion_scheduled-10",
+   "title": "재난문자 지도 — 재난안전문자를 지도·목록으로 보는 대시보드",
+   "tags": [
+    "재난안전",
+    "공공API",
+    "지도",
+    "대시보드"
+   ],
+   "runtime_env": "브라우저만",
+   "date": "2026-08-11",
+   "org": "행정안전부(개인 개발)",
+   "link": "https://disaster.moislab.net",
+   "task_category": "시설·안전",
+   "collected_at": "2026-08-24",
+   "org_type": "공직 개인",
+   "case_class": "개인 개발",
+   "id": "c549f992e1c521a8",
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-08-24"

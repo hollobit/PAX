@@ -3778,5 +3778,33 @@
   "resilience": "미확인—정책·지원금 정보의 수동 최신화 의존 추정",
   "post_url": "",
   "service_url": "https://gitlab.aigov.go.kr/iyhlys08/bodeumsettle"
+ },
+ {
+  "no": 206,
+  "id": "c549f992e1c521a8",
+  "org": "행정안전부(개인 개발)",
+  "title": "재난문자 지도 — 재난안전문자를 지도·목록으로 보는 대시보드",
+  "ax_prev": "AI-Ready",
+  "ax": "AI-Ready",
+  "s": "S1",
+  "s_name": "Script/보조",
+  "c": "C0",
+  "c_name": "기능 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Live service",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R0 최소",
+  "human": "해당 없음",
+  "evidence": "E1 코드·도구 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "재난안전문자 공공 API를 지도·목록 대시보드로 재가공해 서비스와 소스를 함께 공개 — 라이브 서비스 응답과 저장소(스타 3)로 확인. 공공 깃랩 저장소가 삭제 예약 상태라 지속성 관측이 필요하다.",
+  "feedback": "미확인",
+  "resilience": "미확인—저장소 삭제 예약 관측, 서비스 지속성 주시",
+  "post_url": "",
+  "service_url": "https://disaster.moislab.net"
  }
 ]
