@@ -1,31 +1,31 @@
 {
- "generated_at": "2026-08-24",
+ "generated_at": "2026-08-25",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 206,
+ "total_cases": 207,
  "total_champions": 102,
  "community": {
-  "members": 1240,
-  "kakao_week": 3996,
-  "kakao_total_observed": 14263,
-  "threads_observed": 159
+  "members": 1259,
+  "kakao_week": 4463,
+  "kakao_total_observed": 15194,
+  "threads_observed": 162
  },
  "certified_champions": 2,
- "unattributed_cases": 49,
+ "unattributed_cases": 50,
  "ax_distribution": {
   "AI-Ready": 140,
-  "AI-Enabled": 55,
+  "AI-Enabled": 56,
   "AX 단계 외": 10,
   "AI-First": 1
  },
- "c_axis_mean": 0.54,
+ "c_axis_mean": 0.55,
  "p_distribution": {
-  "P0": 90,
+  "P0": 91,
   "P1": 111,
   "P2": 5
  },
  "model_dependency": {
-  "미확인": 180,
+  "미확인": 181,
   "해외 상용 API": 18,
   "혼합": 1,
   "해외 오픈웨이트(로컬)": 7
@@ -40,7 +40,7 @@
  "gitlab_open_rate": 0.195,
  "mcp_cases": 67,
  "transition_funnel": {
-  "기관 공식": 29,
+  "기관 공식": 30,
   "미확인": 160,
   "부서 공유": 7,
   "타 기관 재사용": 2,
@@ -49,7 +49,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.515
+  "feedback": 0.512
  },
  "maintenance_distribution": {
   "활발": 97,
