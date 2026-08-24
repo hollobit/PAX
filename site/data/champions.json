@@ -2653,6 +2653,18 @@
    "title": "ONE윈도우 — 대화형 AI 검색을 갖춘 국가데이터통합플랫폼",
    "org": "한국지능정보사회진흥원(NIA)",
    "url": "https://www.data1window.kr/"
+  },
+  {
+   "id": "0de42ad232a72d2c",
+   "title": "쨍하고해뜰날 — 주소 하나로 태양광 설치·수익을 진단하는 AI 도우미",
+   "org": "LX 한국국토정보공사(AI 챔피언 해커톤 결선)",
+   "url": "https://sun-flax.vercel.app"
+  },
+  {
+   "id": "1e20470325db3ee6",
+   "title": "데이터버스 — AI챔피언 교육·인증 공식 학습지원시스템",
+   "org": "행정안전부(운영지원 NIA)",
+   "url": "https://databus.kr/"
   }
  ]
 }
