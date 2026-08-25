@@ -52,11 +52,11 @@
   "feedback": 0.509
  },
  "maintenance_distribution": {
-  "활발": 97,
+  "활발": 98,
   "정체": 14,
   "방치": 13
  },
- "stars_collected": 124,
+ "stars_collected": 125,
  "repo_stats": {
   "gitlab": {
    "count": 41,
@@ -150,10 +150,10 @@
   },
   "github": {
    "count": 97,
-   "starred": 94,
-   "stars_sum": 16338,
+   "starred": 95,
+   "stars_sum": 18097,
    "maintenance": {
-    "활발": 67,
+    "활발": 68,
     "정체": 14,
     "방치": 13
    },
@@ -181,6 +181,14 @@
      "maintenance": "활발",
      "license": "MIT",
      "developer": "류승인"
+    },
+    {
+     "id": "847dfef5759dbcac",
+     "title": "HOP is Open HWP — HWP·HWPX를 여는 크로스플랫폼 오픈소스 편집기",
+     "stars": 1759,
+     "maintenance": "활발",
+     "license": "MIT",
+     "developer": "Jin Kim"
     },
     {
      "id": "de4b2dab339d69b7",
@@ -229,14 +237,6 @@
      "maintenance": "방치",
      "license": "Apache-2.0",
      "developer": "Dave Goobong Jeong"
-    },
-    {
-     "id": "65e1983235232514",
-     "title": "bookforge — 한국어 전자책 PDF 생성 에이전트 스킬",
-     "stars": 279,
-     "maintenance": "활발",
-     "license": "Other",
-     "developer": "kongnyng"
     }
    ]
   }

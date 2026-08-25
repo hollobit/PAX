@@ -5726,7 +5726,12 @@
    "id": "847dfef5759dbcac",
    "license": "MIT",
    "license_source": "github",
-   "license_checked": "2026-08-25"
+   "license_checked": "2026-08-25",
+   "stars_github": 1759,
+   "stars": 1759,
+   "maintenance": "활발",
+   "link_ok": true,
+   "health_checked": "2026-08-25"
   },
   {
    "date": "2026-08-25",
