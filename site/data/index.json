@@ -2,8 +2,8 @@
  "generated_at": "2026-08-25",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 209,
- "total_champions": 102,
+ "total_cases": 212,
+ "total_champions": 104,
  "community": {
   "members": 1259,
   "kakao_week": 4463,
@@ -11,21 +11,21 @@
   "threads_observed": 162
  },
  "certified_champions": 2,
- "unattributed_cases": 52,
+ "unattributed_cases": 53,
  "ax_distribution": {
-  "AI-Ready": 141,
-  "AI-Enabled": 57,
+  "AI-Ready": 143,
+  "AI-Enabled": 58,
   "AX 단계 외": 10,
   "AI-First": 1
  },
- "c_axis_mean": 0.56,
+ "c_axis_mean": 0.58,
  "p_distribution": {
   "P0": 91,
-  "P1": 113,
+  "P1": 116,
   "P2": 5
  },
  "model_dependency": {
-  "미확인": 183,
+  "미확인": 186,
   "해외 상용 API": 18,
   "혼합": 1,
   "해외 오픈웨이트(로컬)": 7
@@ -33,8 +33,8 @@
  "domestic_model_rate": 0.0,
  "local_model_rate": 0.269,
  "model_known": 26,
- "license_tagged": 139,
- "license_stated_rate": 0.619,
+ "license_tagged": 141,
+ "license_stated_rate": 0.617,
  "gitlab_cases": 41,
  "gitlab_mirror_pairs": 8,
  "gitlab_open_rate": 0.195,
@@ -45,11 +45,11 @@
   "부서 공유": 7,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
-  "개인 사용": 8
+  "개인 사용": 11
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.512
+  "feedback": 0.509
  },
  "maintenance_distribution": {
   "활발": 97,
@@ -149,7 +149,7 @@
    ]
   },
   "github": {
-   "count": 95,
+   "count": 97,
    "starred": 94,
    "stars_sum": 16338,
    "maintenance": {
@@ -242,8 +242,8 @@
   }
  },
  "license_distribution": {
-  "MIT": 56,
-  "명시 없음": 53,
+  "MIT": 57,
+  "명시 없음": 54,
   "Other": 14,
   "Apache-2.0": 10,
   "AGPL-3.0": 3,
@@ -252,11 +252,11 @@
  },
  "license_matrix": {
   "MIT": {
-   "github": 51,
+   "github": 52,
    "gitlab": 5
   },
   "명시 없음": {
-   "github": 32,
+   "github": 33,
    "gitlab": 21
   },
   "Other": {
@@ -282,8 +282,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 94,
-   "stated": 72
+   "total": 96,
+   "stated": 73
   },
   "github-pages": {
    "total": 14,
