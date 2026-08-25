@@ -253,7 +253,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -603,10 +603,11 @@
    ],
    "affiliation": null,
    "cases": [
+    "539f90471f451d80",
     "cbda9aefec586c48"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 2,
     "stars": 0
    }
@@ -1171,7 +1172,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
