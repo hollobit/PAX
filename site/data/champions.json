@@ -1,5 +1,5 @@
 {
- "total": 102,
+ "total": 104,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -235,6 +235,26 @@
     "case_count": 1,
     "top_ax": 1,
     "stars": 170
+   }
+  },
+  {
+   "id": "github:golbin",
+   "name": "Jin Kim",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "golbin",
+     "url": "https://github.com/golbin"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "847dfef5759dbcac"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
+    "stars": 0
    }
   },
   {
@@ -1132,6 +1152,26 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:rumins01",
+   "name": "rumins01",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "rumins01",
+     "url": "https://github.com/rumins01"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "22bd8e0c137caa21"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },
@@ -2665,6 +2705,12 @@
    "title": "데이터버스 — AI챔피언 교육·인증 공식 학습지원시스템",
    "org": "행정안전부(운영지원 NIA)",
    "url": "https://databus.kr/"
+  },
+  {
+   "id": "4559d150e4eddb0a",
+   "title": "UrbanLaw — 주소 한 줄로 도시·건축 법규를 검토하는 AI 컨설턴트",
+   "org": "개발 커뮤니티",
+   "url": "https://urbanlaw.ngrok.app/"
   }
  ]
 }

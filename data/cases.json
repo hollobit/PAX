@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-25T08:21:26+09:00",
+ "updated_at": "2026-08-25T10:00:03+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -5701,6 +5701,80 @@
    "case_class": "기관 공식",
    "org": "행정안전부(운영지원 NIA)",
    "id": "1e20470325db3ee6"
+  },
+  {
+   "date": "2026-08-25",
+   "summary": "공공 문서 표준인 HWP/HWPX를 macOS·Windows·Linux에서 보고 편집하는 오픈소스 데스크톱 앱(MIT, 스타 1,700+). 한컴오피스 없는 환경에서도 공문서를 다룰 수 있게 해 공직 밖 협업자·타 OS 사용자와의 문서 병목을 푼다. Homebrew 설치를 지원하며 로컬에서 완결되어 문서가 외부로 나가지 않는다.",
+   "link": "https://golbin.github.io/hop/",
+   "source": "kakao",
+   "case_class": "커뮤니티",
+   "org_type": "커뮤니티",
+   "task_category": "문서·기안",
+   "runtime_env": "설치 필요",
+   "title": "HOP is Open HWP — HWP·HWPX를 여는 크로스플랫폼 오픈소스 편집기",
+   "network_req": "로컬 완결",
+   "org": "개발 커뮤니티",
+   "tags": [
+    "HWP",
+    "오픈소스",
+    "문서편집",
+    "크로스플랫폼"
+   ],
+   "collected_at": "2026-08-25",
+   "case_url": "https://github.com/golbin/hop",
+   "transition_stage": "개인 사용",
+   "id": "847dfef5759dbcac",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-08-25"
+  },
+  {
+   "date": "2026-08-25",
+   "summary": "제22대 국회의원 299명의 표결·발의·재산·국감 발언을 열린국회정보 Open API로 모아 지역구 지도, 표결 매칭, 의원 비교, 데이터 내려받기까지 제공하는 무료 시빅테크 사이트. 당론 이탈률·발의 성사율 같은 파생 지표를 만들고 공공누리 제1유형 출처 표기를 명시한, 국회 공공데이터 활용의 모범적 커뮤니티 사례다.",
+   "link": "https://rumins01.github.io/dogam/",
+   "source": "kakao",
+   "case_class": "커뮤니티",
+   "org_type": "커뮤니티",
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "title": "정치인 도감 — 22대 국회의원 299명을 공공데이터로 한눈에",
+   "network_req": "인터넷 필수",
+   "org": "개발 커뮤니티",
+   "tags": [
+    "국회",
+    "공공데이터",
+    "시빅테크",
+    "표결분석"
+   ],
+   "collected_at": "2026-08-25",
+   "case_url": "https://github.com/rumins01/dogam",
+   "transition_stage": "개인 사용",
+   "id": "22bd8e0c137caa21",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-08-25"
+  },
+  {
+   "date": "2026-08-25",
+   "summary": "주소를 입력하면 VWorld·건축물대장으로 필지 정보를 수집하고, 법령 6만 2천 건에서 관련 조항을 찾아 5인 AI 전문가 패널이 병렬 분석해 근거 조문과 판례번호가 붙은 검토 리포트를 만들어주는 서비스. 지구단위계획·건폐율·용적률까지 한 흐름으로 검토하는 다단계 AI 파이프라인이 특징이다. 개인 서버(ngrok) 기반이라 지속 운영 여부는 관측이 필요하다.",
+   "link": "https://urbanlaw.ngrok.app/",
+   "source": "kakao",
+   "case_class": "커뮤니티",
+   "org_type": "커뮤니티",
+   "task_category": "감사·법무",
+   "runtime_env": "브라우저만",
+   "title": "UrbanLaw — 주소 한 줄로 도시·건축 법규를 검토하는 AI 컨설턴트",
+   "network_req": "인터넷 필수",
+   "org": "개발 커뮤니티",
+   "tags": [
+    "건축법규",
+    "AI패널",
+    "공공데이터",
+    "법령검토"
+   ],
+   "collected_at": "2026-08-25",
+   "transition_stage": "개인 사용",
+   "id": "4559d150e4eddb0a"
   }
  ]
 }
