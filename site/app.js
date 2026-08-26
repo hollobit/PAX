@@ -1161,7 +1161,7 @@ function createThumbElement(c, targetUrl) {
   anchor.title = c.summary;
 
   const img = document.createElement('img');
-  img.src = `thumbs/${encodeURIComponent(c.id)}.jpg`;
+  img.src = `thumbs/${encodeURIComponent(c.id)}.jpg${c.thumb_v ? `?v=${c.thumb_v}` : ''}`;
   img.alt = `사례 미리보기: ${c.title}`;
   img.loading = 'lazy';
   img.decoding = 'async';
