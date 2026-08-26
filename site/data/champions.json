@@ -2193,7 +2193,7 @@
    }
   },
   {
-   "id": "github:kklique",
+   "id": "Buyong JEONG",
    "name": "정부용",
    "accounts": [
     {
@@ -2208,16 +2208,19 @@
     }
    ],
    "affiliation": {
-    "value": "지식재산처",
+    "value": "지식재산처 IP-AX 추진단",
     "inferred": false,
-    "evidence": "공공 GitLab 공개 프로필 표시명"
+    "evidence": "본인 서비스 4종 푸터 명시 — 'IP-AX 추진단 / Designed by Buyong JEONG', 개인 프로젝트 시범 운영 고지"
    },
    "cases": [
-    "4ccc2c692aed50aa"
+    "4ccc2c692aed50aa",
+    "cd965d88ba23849c",
+    "36b1148d2ee2caea",
+    "cc9ad59a95da1241"
    ],
    "stats": {
-    "case_count": 1,
-    "top_ax": 0,
+    "case_count": 4,
+    "top_ax": 2,
     "stars": 0
    }
   },
