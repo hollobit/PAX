@@ -1,5 +1,5 @@
 {
- "total": 104,
+ "total": 105,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -2189,6 +2189,35 @@
    "stats": {
     "case_count": 6,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:kklique",
+   "name": "정부용",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "kklique",
+     "url": "https://github.com/kklique"
+    },
+    {
+     "platform": "gitlab",
+     "id": "kklique",
+     "url": "https://gitlab.aigov.go.kr/kklique"
+    }
+   ],
+   "affiliation": {
+    "value": "지식재산처",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "4ccc2c692aed50aa"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },

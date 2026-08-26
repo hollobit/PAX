@@ -4002,5 +4002,33 @@
   "resilience": "부분확인(활발한 릴리즈, HWP 변환은 Windows 한컴 엔진 의존)",
   "post_url": "",
   "service_url": "https://github.com/jkf87/hwpx-skill"
+ },
+ {
+  "no": 214,
+  "id": "4ccc2c692aed50aa",
+  "org": "지식재산처(개인 개발)",
+  "title": "Gov.AX Insight — 정부 부처 AI 보도자료 수집·AX 동향 자동 리포트",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S2",
+  "s_name": "Tool bundle",
+  "c": "C2",
+  "c_name": "부분 완결",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Live service",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R0 최소",
+  "human": "해당 없음",
+  "evidence": "E1 코드·도구 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "보도자료 수집→분류·시각화→AI 동향보고서 자동 작성이라는 관측 업무 흐름을 한 서비스에서 완결(C2)하고 이중 배포(github.io/vercel)로 공개 — 신설 지식재산처의 AX 전략 수립을 겨냥한 목적 지향 개인 개발. 자동 보고서의 품질·실제 정책 반영 증거가 쌓이면 상향 여지.",
+  "feedback": "미확인",
+  "resilience": "미확인—개인 유지보수, 보도자료 수집 파이프라인 의존",
+  "post_url": "",
+  "service_url": "https://kklique.github.io/ipax-govnews/"
  }
 ]
