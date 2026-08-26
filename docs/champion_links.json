@@ -115,5 +115,17 @@
    "evidence": "공공 GitLab 공개 프로필 표시명(코레일유통 박봉훈)"
   },
   "evidence": "threads @koyou_ax 게시물 Da5bReUDiL0('깃허브에 올려두었습니다')의 스레드에 github.com/Kminer2053/gongmuwon 공유 — 저장소명·설명이 게시물 제목('로컬 AI에이전트 워크플레이스 : 공무원')과 정확히 일치"
+ },
+ {
+  "champion": "Buyong JEONG",
+  "accounts": [
+   "github:kklique"
+  ],
+  "affiliation": {
+   "value": "지식재산처 IP-AX 추진단",
+   "inferred": false,
+   "evidence": "본인 서비스 4종 푸터 명시 — 'IP-AX 추진단 / Designed by Buyong JEONG', 개인 프로젝트 시범 운영 고지"
+  },
+  "evidence": "ipax-news·ipax-lawmonitor·ipax-support·ipax-govnews 저장소 소유 계정"
  }
 ]

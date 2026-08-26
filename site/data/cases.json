@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-26T22:48:42+09:00",
+ "updated_at": "2026-08-26T22:56:06+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -5828,6 +5828,75 @@
    ],
    "transition_stage": "개인 사용",
    "id": "4ccc2c692aed50aa"
+  },
+  {
+   "runtime_env": "브라우저만",
+   "summary": "AI가 매일 해외 지식재산(IP5 관청 중심) AI 뉴스를 자동 검색·선별(중복 제거)해 누적 보관하고, 전체 보관분을 근거로 분기별 IP-AX 동향보고서를 자동 갱신하는 아카이브. 지식재산처 IP-AX 추진단 실무자가 개인 프로젝트로 시범 운영하며 공식 서비스가 아님을 명시했다. 수집→선별→누적→AI 보고서라는 루틴 자동화가 정책 정보 업무의 관측 파이프라인을 그대로 구현한다.",
+   "collected_at": "2026-08-26",
+   "task_category": "기획·정책",
+   "transition_stage": "개인 사용",
+   "network_req": "인터넷 필수",
+   "link": "https://kklique.github.io/ipax-news/",
+   "date": "2026-07-18",
+   "case_url": "https://github.com/kklique/ipax-news",
+   "org_type": "공직 개인",
+   "org": "지식재산처(개인 개발)",
+   "case_class": "개인 개발",
+   "tags": [
+    "지식재산",
+    "뉴스수집",
+    "AI리포트",
+    "자동화"
+   ],
+   "source": "kakao",
+   "title": "IP-AX 글로벌 뉴스 아카이브 — 해외 IP·AI 뉴스 자동 수집·분기 AI 리포트",
+   "id": "cd965d88ba23849c"
+  },
+  {
+   "runtime_env": "브라우저만",
+   "summary": "키워드로 법령 조문까지 확장 검색하고, 입법예고와 국회 발의법안의 소관부서를 조회하며, 부처 검토의견 AI 초안 작성까지 지원하는 법령 모니터링 에이전트. 지식재산처 IP-AX 추진단 실무자의 개인 시범 프로젝트로, 부처 입법 대응 업무(동향 파악→소관 판단→의견 작성)의 전 단계를 하나의 도구로 잇는다. AI 기반 정보는 공식 사이트 재확인을 안내하는 휴먼 검증 원칙을 명시했다.",
+   "collected_at": "2026-08-26",
+   "task_category": "감사·법무",
+   "transition_stage": "개인 사용",
+   "network_req": "인터넷 필수",
+   "link": "https://kklique.github.io/ipax-lawmonitor/",
+   "date": "2026-06-16",
+   "case_url": "https://github.com/kklique/ipax-lawmonitor",
+   "org_type": "공직 개인",
+   "org": "지식재산처(개인 개발)",
+   "case_class": "개인 개발",
+   "tags": [
+    "법령",
+    "입법예고",
+    "에이전트",
+    "검토의견"
+   ],
+   "source": "kakao",
+   "title": "IP-AX Law Monitor — 입법 동향을 감시하고 검토의견 초안까지 쓰는 법령 에이전트",
+   "id": "cc9ad59a95da1241"
+  },
+  {
+   "runtime_env": "브라우저만",
+   "summary": "창출·보호·활용·금융까지 지식재산처와 유관기관의 지원사업 전체를 분야별로 조망하고, AI 상담으로 수요자에게 맞는 사업을 매칭해주는 베타 서비스. 기업마당(bizinfo.go.kr) OpenAPI로 공고 데이터를 받아 최신 공고 확인을 안내한다. 흩어진 지원사업 정보를 수요자 관점 탐색과 대화형 매칭으로 재구성한 지식재산처 실무자의 개인 시범 프로젝트다.",
+   "collected_at": "2026-08-26",
+   "task_category": "민원",
+   "transition_stage": "개인 사용",
+   "network_req": "인터넷 필수",
+   "link": "https://kklique.github.io/ipax-support/",
+   "date": "2026-07-18",
+   "case_url": "https://github.com/kklique/ipax-support",
+   "org_type": "공직 개인",
+   "org": "지식재산처(개인 개발)",
+   "case_class": "개인 개발",
+   "tags": [
+    "지원사업",
+    "매칭상담",
+    "공공API",
+    "지식재산"
+   ],
+   "source": "kakao",
+   "title": "지식재산처 지원사업 한눈에 — 분야별 조망과 AI 매칭 상담",
+   "id": "36b1148d2ee2caea"
   }
  ]
 }
