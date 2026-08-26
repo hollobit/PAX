@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-25T23:33:52+09:00",
+ "updated_at": "2026-08-26T22:48:42+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -5804,6 +5804,30 @@
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-08-25"
+  },
+  {
+   "source": "kakao",
+   "org_type": "공직 개인",
+   "runtime_env": "브라우저만",
+   "summary": "대한민국 부처·청·위원회의 AI/AX 관련 보도자료를 수집해 기관·분류 필터, 마일스톤, 히트맵, 월별 추이로 보여주고, 수집 근거로 AI가 전체·분기 동향보고서를 자동 작성하는 관측 도구. 지식재산처의 AX 전략(IP-AX) 수립을 위한 개인 개발 사례로, 지식재산처를 위한 AI 제언 절이 포함된다. 보도자료라는 공개 원천으로 범정부 AX 흐름을 계량하는 접근이 PAX와 상보적이다.",
+   "mirror_url": "https://gov-ax.vercel.app/",
+   "date": "2026-08-26",
+   "collected_at": "2026-08-26",
+   "org": "지식재산처(개인 개발)",
+   "case_url": "https://github.com/kklique/ipax-govnews",
+   "network_req": "인터넷 필수",
+   "task_category": "기획·정책",
+   "case_class": "개인 개발",
+   "link": "https://kklique.github.io/ipax-govnews/",
+   "title": "Gov.AX Insight — 정부 부처 AI 보도자료 수집·AX 동향 자동 리포트",
+   "tags": [
+    "보도자료",
+    "AX동향",
+    "자동리포트",
+    "지식재산처"
+   ],
+   "transition_stage": "개인 사용",
+   "id": "4ccc2c692aed50aa"
   }
  ]
 }
