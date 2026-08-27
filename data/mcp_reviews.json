@@ -1,1 +1,1852 @@
-{"reviews": []}
+{
+ "reviews": [
+  {
+   "case_id": "02656bf9d2589964",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "d40cc4a9cf6e29b6",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "bf04cec910b4755d",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "ea2bce110972762e",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 373건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "0a2535cadf2d621a",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 5건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 3건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "9d56d423296a3238",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "fe3bb0d913e27677",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 2건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 6건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "93482d8cbe86c9d9",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "0af085f0e51a1a7e",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "235db3db0bff39d2",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "0c994fa292d1d15d",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "edf9a8632ff74a99",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 4건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Apache-2.0·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "f76a328f43c0766f",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 1건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 2건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "1f5e21b854f0aa3a",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 21건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "유지보수 방치"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "런타임은 httpx params 인자로 파라미터화 호출 (근거: src/*/api_client.py:144 등). shell=True는 개발용 템플릿 훅에만 존재하며 서버 런타임 경로 아님 (template/hooks/post_gen_project.py:15)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "odcloud·data.go.kr·kosha 공식 엔드포인트만, 제3자 전송 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
+   }
+  },
+  {
+   "case_id": "999efcd7e3a80a93",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "9dc1a7081bc869b1",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "ee30aa1cae172991",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "락파일 없음(버전 미고정)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "578e4da94db0682d",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "43dc7f4ab2500260",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 5건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 1건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "타입드 파라미터 객체로 API 호출 구성, 셸 미사용 (근거: src/tools/annex-list.ts:109, src/cli.ts:165)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "법제처·대법원·국세청 공식 엔드포인트만 호출, 제3자 전송 없음 (근거: 소스 전수 URL 추출 — open.law.go.kr, glaw.scourt.go.kr, taxlaw.nts.go.kr)"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
+   }
+  },
+  {
+   "case_id": "81c14797b7aaafa0",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Other·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "10f6ec0f81090085",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음 · 유지보수 방치"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "22be065e9c257d93",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음 · 유지보수 방치"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "ed42c0e326a6d068",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 12건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 13건"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "daab018ffea87c77",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 15건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "주의",
+     "note": ".env 파일이 저장소에 포함됨 — 내용 확인 권장"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Other·정체"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "05763974d3375178",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·정체"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "b37636486ec1dee4",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Other·정체"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "146501d37df93aa2",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음 · 유지보수 방치"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "27c2fd1b292cfcbf",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 3건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "유지보수 방치"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "952ab7cccb367db6",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 2건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 3건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "e07be0004494e652",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 7건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "ISC·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "13342535139dd7a0",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음 · 유지보수 방치"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "opendart 단일 공식 엔드포인트, 셸·파일 쓰기 패턴 없음 (근거: 소스 전수 패턴·URL 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "opendart.fss.or.kr 외 전송 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
+   }
+  },
+  {
+   "case_id": "83bb0ac0ed9f576d",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 4건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 11건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "4925d016e9377a50",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 7건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Other·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "9070c4f923623855",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Apache-2.0·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "b9da6eddda89513d",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 4건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "유지보수 방치"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "9aee6bbb0c29dddb",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "락파일 없음(버전 미고정)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "유지보수 방치"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "991e9f9e7b324692",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 7건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·정체"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "75b9815de6b6dcf5",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "국토부 RTMS·odcloud 공식 API를 구조화 파라미터로 호출, 셸·파일 쓰기 없음 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "apis.data.go.kr·api.odcloud.kr 외 전송 없음 (근거: URL 전수 추출)"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
+   }
+  },
+  {
+   "case_id": "d69be456031471a4",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 18건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 3건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "09f079e1424f6992",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 2건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "락파일 없음(버전 미고정)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "유지보수 방치"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "0011a7e888431aeb",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 2건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "락파일 없음(버전 미고정)"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "b6f4cc079eb86f11",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·정체"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "76f07692203606ad",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "8f1e3c48b2baa6d2",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "패턴 일치 2건은 테스트 픽스처의 모의 키 마커로 수동 확인(오탐) — 실제 자격증명 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   },
+   "false_positives": [
+    "tests/test_deal_card_create.py"
+   ]
+  },
+  {
+   "case_id": "56c2bb56426019ec",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음 · 유지보수 방치"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "f8c9ae69a673c52a",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 5건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 10건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·정체"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "bef8ee3811d115e4",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 1건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "락파일 없음(버전 미고정)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "0561ecd39ea94051",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 8건"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "유지보수 방치"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "966d6a2ae42587a4",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 10건"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음 · 유지보수 방치"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "6a9c5da9f1d3210f",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "5bfadfc3b8e2292f",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 3건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "ec4f975c809401cb",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 2건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·정체"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "a7abbaedd53db684",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 58건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 1건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Apache-2.0·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "ce2287d57e6bacaa",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 2건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Apache-2.0·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "2beb100ecc126fb2",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 4건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 8건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·정체"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "ca5651ea46caa07f",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "락파일 없음(버전 미고정)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "bc609dfe7f04d6ed",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "5c3cb7251749ab2e",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 11건"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음 · 유지보수 방치"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "3ba829c8e42e7cc7",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·정체"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "92bbbba967365291",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 1건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "c864500e8cf1d78d",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 6건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 7건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Other·정체"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "e18d5e018e0cd10d",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 76건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Apache-2.0·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "386d7292c2c1f4dd",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 1건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Other·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "33c36cc77c4bfc5c",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 2건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "락파일 없음(버전 미고정)"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "f20250742f06ccb5",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "6c44153f6db7d61c",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "e6b6f2b13b9ea1aa",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  }
+ ]
+}

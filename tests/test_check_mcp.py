@@ -92,3 +92,11 @@ def test_merge_preserves_llm_axes():
     assert r["axes"]["secrets"]["note"] == "새 결과"
     assert r["disclosure"]["notified_at"] == "d"
     assert r["checked_at"] == "2026-08-28"
+
+
+def test_secrets_false_positives_suppressed(tmp_path):
+    """오탐 확정 경로는 재검에서 다시 심각으로 올라오지 않는다."""
+    r = check_mcp.scan_secrets(FIX / "mcp_secrets", private_dir=None,
+                               ignore_paths={"config.py"})
+    assert r["verdict"] == "통과"
+    assert "오탐 확인" in r["note"]

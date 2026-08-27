@@ -66,7 +66,8 @@ def scan_permission_surface(repo_dir: Path) -> dict:
     return {"verdict": "통과", "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)", "counts": counts}
 
 
-def scan_secrets(repo_dir: Path, private_dir: Path | None, case_id: str = "") -> dict:
+def scan_secrets(repo_dir: Path, private_dir: Path | None, case_id: str = "",
+                 ignore_paths: set | None = None) -> dict:
     """축 2 — 자격증명 패턴. 공개 note에는 종류·개수도 아닌 존재 사실만 남긴다."""
     findings = []
     env_committed = any(f.name == ".env" for f in Path(repo_dir).rglob(".env")
@@ -80,6 +81,12 @@ def scan_secrets(repo_dir: Path, private_dir: Path | None, case_id: str = "") ->
                 if PLACEHOLDER.search(context):
                     continue
                 findings.append((str(f.relative_to(repo_dir)), line))
+    ignore_paths = ignore_paths or set()
+    real = [(p, l) for p, l in findings if p not in ignore_paths]
+    if findings and not real:
+        return {"verdict": "통과",
+                "note": "패턴 일치는 오탐 확인 완료(테스트 픽스처 등) — 원장 false_positives 등재"}
+    findings = real
     if findings:
         if private_dir:
             private_dir = Path(private_dir)
@@ -197,8 +204,12 @@ def check_case(target: dict, case: dict, ledger: dict, today: str, tools: dict,
                 if audit_only:
                     axes = {"supply_chain": scan_supply_chain(repo_dir)}
                 else:
+                    prev = next((x for x in ledger["reviews"]
+                                 if x["case_id"] == target["case_id"]), {})
+                    fps = set(prev.get("false_positives", []))
                     axes = {"permission_surface": scan_permission_surface(repo_dir),
-                            "secrets": scan_secrets(repo_dir, PRIVATE_DIR, target["case_id"]),
+                            "secrets": scan_secrets(repo_dir, PRIVATE_DIR, target["case_id"],
+                                                    ignore_paths=fps),
                             "supply_chain": scan_supply_chain(repo_dir)}
     if not audit_only:
         axes["hygiene"] = hygiene_axis(case)
