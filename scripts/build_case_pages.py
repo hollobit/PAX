@@ -39,6 +39,7 @@ TEMPLATE = """<!DOCTYPE html>
       <a href="../ax-maturity-infographic.html">AX 성숙도 개념</a>
       <a href="../observatory.html">관측소</a>
       <a href="../gap-map.html">격차 지도</a>
+      <a href="../mcp-review.html">MCP 검증</a>
       <a href="../playbook.html">전이 플레이북</a>
       <a href="../guidelines.html">안내서·가이드라인</a>
       <a href="../changelog.html">변경 기록</a>
@@ -143,6 +144,11 @@ def eval_table(ev):
 
 def main():
     cases = json.load(open("data/cases.json"))["cases"]
+    mcp_path = Path("site/data/mcp-review.json")
+    mcp_reviews = {}
+    if mcp_path.exists():
+        for r in json.loads(mcp_path.read_text(encoding="utf-8")).get("reviews", []):
+            mcp_reviews[r["case_id"]] = r
     evals = {e["id"]: e for e in json.load(open("site/data/evaluations.json"))["cases"]}
     OUT_DIR.mkdir(exist_ok=True)
     for c in cases:
@@ -162,6 +168,11 @@ def main():
             mlabel = "공공 깃랩 미러" if "gitlab.aigov" in c["mirror_url"] else "미러 저장소"
             links.append(f'<a href="{esc(c["mirror_url"])}" target="_blank" rel="noopener">{mlabel}</a>')
         links.append(f'<a href="../?case={esc(c["id"])}">아카이브에서 보기</a>')
+        review = mcp_reviews.get(c["id"])
+        if review:
+            links.append(
+                f'<a href="../mcp-review.html">MCP 검증: {esc(review["overall"])}'
+                f' ({esc(review.get("checked_at") or "")})</a>')
         page = TEMPLATE.format(
             base=BASE, cid=esc(c["id"]), title=esc(c["title"]),
             desc=esc(c["summary"][:150]), org=esc(c["org"]), org_type=esc(c["org_type"]),
