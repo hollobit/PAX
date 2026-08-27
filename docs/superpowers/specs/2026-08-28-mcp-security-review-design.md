@@ -1,7 +1,7 @@
 # MCP 보안·안전 검증 리뷰 (MCP Security Review) 설계
 
 날짜: 2026-08-28
-상태: 사용자 승인 대기
+상태: 승인 완료 · 구현 계획 작성됨(docs/superpowers/plans/2026-08-28-mcp-security-review.md)
 선행: 관측소 MCP 현황·이슈 섹션, 2026-08-22 생태계 연결 관측 스펙(제도·표준 3공백 진단)
 
 ## 1. 목적
