@@ -10,3 +10,4 @@ log.md
 .claude/
 .gstack/
 data/champion_profiles.json
+data/private/
