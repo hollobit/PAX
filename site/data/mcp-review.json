@@ -1,0 +1,1787 @@
+{
+ "generated_at": "2026-08-28",
+ "summary": {
+  "total": 67,
+  "counts": {
+   "주의": 56,
+   "양호": 11
+  },
+  "top_warn_axis": "hygiene"
+ },
+ "reviews": [
+  {
+   "case_id": "43dc7f4ab2500260",
+   "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
+   "stars": 2509,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 5건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 1건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "타입드 파라미터 객체로 API 호출 구성, 셸 미사용 (근거: src/tools/annex-list.ts:109, src/cli.ts:165)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "법제처·대법원·국세청 공식 엔드포인트만 호출, 제3자 전송 없음 (근거: 소스 전수 URL 추출 — open.law.go.kr, glaw.scourt.go.kr, taxlaw.nts.go.kr)"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "1f5e21b854f0aa3a",
+   "title": "공공데이터포털 API를 MCP 서버 모음으로 공개",
+   "stars": 288,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 21건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "유지보수 방치"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "런타임은 httpx params 인자로 파라미터화 호출 (근거: src/*/api_client.py:144 등). shell=True는 개발용 템플릿 훅에만 존재하며 서버 런타임 경로 아님 (template/hooks/post_gen_project.py:15)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "odcloud·data.go.kr·kosha 공식 엔드포인트만, 제3자 전송 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "f20250742f06ccb5",
+   "title": "Awesome MCP Korea — 한국 특화 MCP 서버 큐레이션 목록",
+   "stars": 236,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "e07be0004494e652",
+   "title": "한국 주식 분석 MCP",
+   "stars": 173,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 7건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "ISC·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "edf9a8632ff74a99",
+   "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연",
+   "stars": 136,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 4건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Apache-2.0·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "13342535139dd7a0",
+   "title": "DART 전자공시 MCP",
+   "stars": 128,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음 · 유지보수 방치"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "opendart 단일 공식 엔드포인트, 셸·파일 쓰기 패턴 없음 (근거: 소스 전수 패턴·URL 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "opendart.fss.or.kr 외 전송 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "83bb0ac0ed9f576d",
+   "title": "OpenDART 전자공시 MCP — 83개 API를 15개 도구로",
+   "stars": 94,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 4건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 11건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "33c36cc77c4bfc5c",
+   "title": "Korean Stats MCP — KOSIS 통계를 자연어로, 출처 자동 인용",
+   "stars": 91,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 2건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "락파일 없음(버전 미고정)"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "f8c9ae69a673c52a",
+   "title": "국회 API MCP — 국회·국민참여입법 API 통합",
+   "stars": 88,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 5건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 10건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·정체"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "10f6ec0f81090085",
+   "title": "korean-law-mcp — 한국 법령 조회 MCP",
+   "stars": 73,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음 · 유지보수 방치"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "4925d016e9377a50",
+   "title": "한국 금융 통합 MCP — ECOS·부동산·DART·KRX",
+   "stars": 55,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 7건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Other·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "f76a328f43c0766f",
+   "title": "KIPRIS 특허 검색 MCP 공개",
+   "stars": 52,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 1건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 2건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "bef8ee3811d115e4",
+   "title": "정부 지원사업 조회 MCP",
+   "stars": 41,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 1건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "락파일 없음(버전 미고정)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "e18d5e018e0cd10d",
+   "title": "오토한글 — 브라우저·터미널용 HWP 편집 엔진",
+   "stars": 38,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 76건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Apache-2.0·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "ea2bce110972762e",
+   "title": "공공기관 규정 MCP 생성기",
+   "stars": 33,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 373건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "22be065e9c257d93",
+   "title": "law-mcp — 국가법령정보 공동활용 API MCP",
+   "stars": 31,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음 · 유지보수 방치"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "a7abbaedd53db684",
+   "title": "국회 법안·회의록 탐색 MCP — 공식 기록 검증",
+   "stars": 25,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 58건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 1건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Apache-2.0·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "fe3bb0d913e27677",
+   "title": "로컬 Ollama 기반 MCP 멀티 호스트",
+   "stars": 22,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 2건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 6건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "d69be456031471a4",
+   "title": "공공데이터 카탈로그 조합 설계 MCP",
+   "stars": 15,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 18건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 3건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "09f079e1424f6992",
+   "title": "KOSIS 통계 자연어 조회 MCP",
+   "stars": 15,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 2건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "락파일 없음(버전 미고정)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "유지보수 방치"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "386d7292c2c1f4dd",
+   "title": "2022 개정 교육과정 MCP — 중고등 수업 설계의 근거 기반 AI 답변",
+   "stars": 13,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 1건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Other·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "56c2bb56426019ec",
+   "title": "기상청 날씨 MCP 서버",
+   "stars": 12,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음 · 유지보수 방치"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "b9da6eddda89513d",
+   "title": "DART 전자공시 API MCP 서버",
+   "stars": 11,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 4건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "유지보수 방치"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "ce2287d57e6bacaa",
+   "title": "정부 R&D 규정 검토 MCP — 혁신법·행정규칙 55종",
+   "stars": 11,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 2건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Apache-2.0·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "ed42c0e326a6d068",
+   "title": "한국 공공데이터 통합 MCP — 법령·DART·공공데이터포털",
+   "stars": 9,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 12건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 13건"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "daab018ffea87c77",
+   "title": "법제처 OPEN API 통합 MCP — 130여 개 도구",
+   "stars": 9,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 15건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "주의",
+     "note": ".env 파일이 저장소에 포함됨 — 내용 확인 권장"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Other·정체"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "0561ecd39ea94051",
+   "title": "도서관 정보나루 MCP — 도서·도서관 검색 25개 도구",
+   "stars": 9,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 8건"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "유지보수 방치"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "0a2535cadf2d621a",
+   "title": "MICE 안전관리 문서 MCP와 웹 시뮬레이터",
+   "stars": 6,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 5건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 3건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "146501d37df93aa2",
+   "title": "나라장터 데이터 수집·가공 MCP",
+   "stars": 5,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음 · 유지보수 방치"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "966d6a2ae42587a4",
+   "title": "식약처 식품영양성분DB MCP",
+   "stars": 5,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 10건"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음 · 유지보수 방치"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "27c2fd1b292cfcbf",
+   "title": "나라장터(G2B) 조달 조회 MCP — 15개 도구",
+   "stars": 4,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 3건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "유지보수 방치"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "c864500e8cf1d78d",
+   "title": "개인정보보호법 쉬운 안내 MCP — 소상공인·개인용",
+   "stars": 4,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 6건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 7건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Other·정체"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "9aee6bbb0c29dddb",
+   "title": "pykrx 기반 KRX 시세 MCP",
+   "stars": 3,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "락파일 없음(버전 미고정)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "유지보수 방치"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "ca5651ea46caa07f",
+   "title": "서울 실시간 도시데이터 MCP — 121개 장소 혼잡도·교통·날씨",
+   "stars": 3,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "락파일 없음(버전 미고정)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "578e4da94db0682d",
+   "title": "건설공사 표준품셈 검색 MCP 공개",
+   "stars": 2,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "952ab7cccb367db6",
+   "title": "정부 공공데이터 5종 통합 MCP — 중기부·정부24·기업마당 등",
+   "stars": 2,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 2건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 3건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "991e9f9e7b324692",
+   "title": "LS증권 OpenAPI MCP — 시세·차트·스크리너 자연어 조회",
+   "stars": 2,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 7건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·정체"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "0011a7e888431aeb",
+   "title": "통계청 API MCP",
+   "stars": 2,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 2건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "락파일 없음(버전 미고정)"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "6a9c5da9f1d3210f",
+   "title": "KORAIL 공공데이터 MCP 서버 모음",
+   "stars": 2,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "ec4f975c809401cb",
+   "title": "공공 의료 데이터 MCP — 심평원·식약처 통합",
+   "stars": 1,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 2건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·정체"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "02656bf9d2589964",
+   "title": "서울시, 기관 공용 AI 엔진 기반 AI 에이전트 구축 착수",
+   "stars": null,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "d40cc4a9cf6e29b6",
+   "title": "국가법령정보 MCP 활용 사례 공유",
+   "stars": null,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "9d56d423296a3238",
+   "title": "공공데이터 MCP 5종 통합 서버 운영",
+   "stars": null,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "93482d8cbe86c9d9",
+   "title": "한국산업인력공단, 공식 HRDKorea MCP 서비스 개시",
+   "stars": null,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "0af085f0e51a1a7e",
+   "title": "법령 MCP로 과학기술 법령 체계 분석",
+   "stars": null,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "235db3db0bff39d2",
+   "title": "미국 GovInfo, 정부 문서 MCP 공개 프리뷰",
+   "stars": null,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "0c994fa292d1d15d",
+   "title": "싱가포르 통계청, SingStat MCP 서비스 제공",
+   "stars": null,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "999efcd7e3a80a93",
+   "title": "카카오 PlayMCP — MCP 에이전트 플랫폼",
+   "stars": null,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "9dc1a7081bc869b1",
+   "title": "광진구, 공무원이 직접 개발한 AI 도구 6종 전 직원 업무 전면 투입",
+   "stars": null,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "ee30aa1cae172991",
+   "title": "서울 열린데이터광장 메타검색 MCP 공개",
+   "stars": 0,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "락파일 없음(버전 미고정)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "5bfadfc3b8e2292f",
+   "title": "식약처 의약품 OpenAPI MCP — 의약품·DUR·알약식별",
+   "stars": 0,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 3건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "2beb100ecc126fb2",
+   "title": "우주·항공 정부 R&D 지원사업 공고 MCP",
+   "stars": 0,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 4건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 8건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·정체"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "5c3cb7251749ab2e",
+   "title": "서울시 공영주차장 MCP",
+   "stars": 0,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 11건"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음 · 유지보수 방치"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "92bbbba967365291",
+   "title": "서울시 대기환경 MCP",
+   "stars": 0,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 1건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "6c44153f6db7d61c",
+   "title": "팩트방망이(FactBat) — 공공 원문 통합검색 + 원격 MCP",
+   "stars": null,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "e6b6f2b13b9ea1aa",
+   "title": "OpenData MCP — 공공데이터포털 API 문서를 표준화해 MCP로 제공",
+   "stars": null,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "75b9815de6b6dcf5",
+   "title": "아파트 실거래가 MCP — 국토교통부 공개 API 기반",
+   "stars": 371,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "국토부 RTMS·odcloud 공식 API를 구조화 파라미터로 호출, 셸·파일 쓰기 없음 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "apis.data.go.kr·api.odcloud.kr 외 전송 없음 (근거: URL 전수 추출)"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
+   "case_id": "81c14797b7aaafa0",
+   "title": "LexGuard MCP — 일반인용 법률 정보 조회",
+   "stars": 130,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Other·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
+   "case_id": "76f07692203606ad",
+   "title": "건축HUB MCP — 건축물대장·인허가·필지 종합카드",
+   "stars": 63,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
+   "case_id": "8f1e3c48b2baa6d2",
+   "title": "실거래가×건축물대장 역매칭 MCP",
+   "stars": 25,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "패턴 일치 2건은 테스트 픽스처의 모의 키 마커로 수동 확인(오탐) — 실제 자격증명 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
+   "case_id": "9070c4f923623855",
+   "title": "한국 주식 분석 원격 MCP — DART·KRX 기반",
+   "stars": 23,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Apache-2.0·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
+   "case_id": "b37636486ec1dee4",
+   "title": "나라장터 MCP 서버",
+   "stars": 5,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Other·정체"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
+   "case_id": "05763974d3375178",
+   "title": "법령 온톨로지 검색 MCP — 법제처 LOD SPARQL 기반",
+   "stars": 2,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·정체"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
+   "case_id": "b6f4cc079eb86f11",
+   "title": "공공데이터 5종 연결 MCP — 날씨·실거래가·대기질·경제통계·사업자조회",
+   "stars": 1,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·정체"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
+   "case_id": "bf04cec910b4755d",
+   "title": "보-편 | 보호법 편히보기 — 개인정보 법령·고시 통합 리더",
+   "stars": 0,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
+   "case_id": "bc609dfe7f04d6ed",
+   "title": "서울시 건설알림이 MCP",
+   "stars": 0,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
+   "case_id": "3ba829c8e42e7cc7",
+   "title": "서울시 공중화장실 조회 MCP — 급똥서울",
+   "stars": 0,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·정체"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  }
+ ]
+}
