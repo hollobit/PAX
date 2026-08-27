@@ -1213,7 +1213,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -2776,6 +2776,12 @@
    "title": "민원AI — 감정 섞인 하소연을 격식 있는 민원·청구서로 바꾸는 서비스",
    "org": "민원AI(민간 서비스)",
    "url": "https://minwonai.kr/"
+  },
+  {
+   "id": "9e0778df3c0ad630",
+   "title": "AKwiki — 오픈카톡 대화를 일간 위키·기사로 바꾸는 커뮤니티 지식화 사례",
+   "org": "AI 커뮤니티(개인 개발)",
+   "url": "https://akwiki.org/"
   }
  ]
 }
