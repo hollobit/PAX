@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCP 검증 — 모두의 공공AX 사례 아카이브</title>
+  <meta name="description" content="등재된 MCP 사례의 보안·안전 검증 결과 — 6축 프레임(권한 표면·시크릿·공급망·인젝션·데이터 흐름·운영 위생)과 책임 있는 공개 원칙">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="./">모두의 공공AX 사례 아카이브</a></h1>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="./">사례 아카이브</a>
+      <a href="dashboard.html">AX 평가</a>
+      <a href="champions.html">챔피언</a>
+      <a href="ax-maturity-infographic.html">AX 성숙도 개념</a>
+      <a href="observatory.html">관측소</a>
+      <a href="gap-map.html">격차 지도</a>
+      <a href="mcp-review.html" aria-current="page">MCP 검증</a>
+      <a href="playbook.html">전이 플레이북</a>
+      <a href="guidelines.html">안내서·가이드라인</a>
+      <a href="changelog.html">변경 기록</a>
+    </nav>
+    <nav class="site-nav site-nav--external" aria-label="관련 사이트">
+      <a href="https://hollobit.github.io/GAPI2/ecosystem.html" target="_blank" rel="noopener">MCP·AI 도구 ↗</a>
+      <a href="https://ax360.kr/national-ax-project/card" target="_blank" rel="noopener">AX 사업 찾기 ↗</a>
+      <a href="https://ax360.kr/national-ai-resource/model" target="_blank" rel="noopener">AX 자원 찾기 ↗</a>
+      <a href="https://ax360.kr/private-ai-company/heatmap" target="_blank" rel="noopener">AI 기업 찾기 ↗</a>
+      <a href="https://axboard.aigov.go.kr/" target="_blank" rel="noopener">AI 정부실험실 ↗</a>
+    </nav>
+  </header>
+
+  <main class="obs-main">
+    <section class="obs-section">
+      <h2>MCP 보안·안전 검증</h2>
+      <p class="obs-lead">등재된 MCP 사례를 6개 축의 공통 프레임으로 검증한 결과입니다.
+        정적 검사(권한 표면·시크릿·공급망)는 자동으로, 입력 검증·데이터 흐름은 코드 감사로
+        근거와 함께 판정하며, 일부 사례는 MCP Inspector로 실제 노출 도구까지 대조합니다.</p>
+      <div class="obs-cards" id="mcp-summary"></div>
+      <p class="obs-note"><strong>판정을 읽는 법</strong> — "미검증"은 위험하다는 뜻이 아니라
+        아직 확인하지 못했다는 뜻입니다. "주의"는 도입 전 해당 항목을 직접 확인하라는 신호이고,
+        "심각(비공개 처리 중)"은 개발자에게 통보되어 수정 절차가 진행 중이라는 표시입니다 —
+        악용 가능한 상세 내용은 수정 전까지 공개하지 않습니다(책임 있는 공개 원칙).</p>
+      <p class="obs-note">이 검증은 참고 정보이며 도구의 안전을 보증하지 않습니다.
+        기관 도입 시에는 반드시 기관 자체의 보안성 검토 절차를 거치시기 바랍니다.</p>
+    </section>
+
+    <section class="obs-section">
+      <h3 class="obs-subheading">검증 매트릭스</h3>
+      <div class="table-wrap"><table class="obs-table" id="mcp-matrix">
+        <thead><tr>
+          <th scope="col">MCP 사례</th>
+          <th scope="col">권한 표면</th>
+          <th scope="col">시크릿</th>
+          <th scope="col">공급망</th>
+          <th scope="col">입력 검증</th>
+          <th scope="col">데이터 흐름</th>
+          <th scope="col">운영 위생</th>
+          <th scope="col">동적 대조</th>
+          <th scope="col">종합</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table></div>
+      <p class="obs-note" id="mcp-meta"></p>
+    </section>
+
+    <section class="obs-section">
+      <h3 class="obs-subheading">검사 축 설명</h3>
+      <div class="table-wrap"><table class="obs-table">
+        <thead><tr><th scope="col">축</th><th scope="col">무엇을 보나</th><th scope="col">방법</th></tr></thead>
+        <tbody>
+          <tr><td class="obs-strong">권한 표면</td><td>셸 실행·파일 쓰기·네트워크 도구가 목적 대비 과다한지</td><td>자동(패턴 스캔)</td></tr>
+          <tr><td class="obs-strong">시크릿</td><td>하드코딩된 자격증명·커밋된 .env</td><td>자동(패턴 스캔, 상세 비공개)</td></tr>
+          <tr><td class="obs-strong">공급망</td><td>의존성의 알려진 취약점(CVE)·버전 고정 여부</td><td>자동(npm audit · pip-audit)</td></tr>
+          <tr><td class="obs-strong">입력 검증</td><td>명령 주입·경로 탈출·프롬프트 인젝션 취약 표면</td><td>코드 감사(파일·행 근거 필수)</td></tr>
+          <tr><td class="obs-strong">데이터 흐름</td><td>원 API 외 제3자 전송 여부, 로컬 완결성 주장과 코드의 일치</td><td>코드 감사 + README 교차</td></tr>
+          <tr><td class="obs-strong">운영 위생</td><td>라이선스 명시·유지보수 상태</td><td>기존 관측 필드</td></tr>
+          <tr><td class="obs-strong">동적 대조</td><td>선언된 도구와 실제 노출 도구의 일치(선별 — 기관 제공·스타 30+·원격)</td><td>MCP Inspector, 자격증명 없이</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>관측소의 <a href="observatory.html">MCP 현황·이슈</a>와 함께 보세요.
+      검증 방법·이의 제기는 저장소 이슈로 받습니다.</p>
+  </footer>
+
+  <script src="mcp-review.js"></script>
+</body>
+</html>

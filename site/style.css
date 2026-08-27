@@ -2096,3 +2096,12 @@ main {
 .mini-chart__label--weekend { color: var(--accent); }
 
 .mini-chart__fill--members { background: var(--accent-gold); }
+
+/* MCP 검증 판정 배지 — 색+텍스트 병기(색맹 대비) */
+.mcp-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 0.6rem;
+  font-size: 0.78rem; font-weight: 600; white-space: nowrap; }
+.mcp-badge--pass { background: var(--badge-agency-bg); color: var(--badge-agency-fg); }
+.mcp-badge--warn { background: var(--badge-edu-bg); color: var(--badge-edu-fg); }
+.mcp-badge--critical { background: var(--badge-local-bg); color: var(--badge-local-fg); }
+.mcp-badge--unknown { background: #ececec; color: #555; }
+.mcp-badge--na { background: transparent; color: #999; border: 1px dashed #ccc; }
