@@ -1,5 +1,5 @@
 {
- "total": 105,
+ "total": 106,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -1195,6 +1195,26 @@
     "case_count": 2,
     "top_ax": 1,
     "stars": 127
+   }
+  },
+  {
+   "id": "github:seoul-raphael",
+   "name": "seoul-raphael",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "seoul-raphael",
+     "url": "https://github.com/seoul-raphael"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "32eccfe07448d060"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
+    "stars": 0
    }
   },
   {
@@ -2744,6 +2764,18 @@
    "title": "UrbanLaw — 주소 한 줄로 도시·건축 법규를 검토하는 AI 컨설턴트",
    "org": "개발 커뮤니티",
    "url": "https://urbanlaw.ngrok.app/"
+  },
+  {
+   "id": "4f5ffee21b8bc19c",
+   "title": "내편안전 — 서울 중구의 중대재해·산업안전 통합관리시스템",
+   "org": "서울특별시 중구",
+   "url": "https://n.news.naver.com/article/028/0002820360"
+  },
+  {
+   "id": "a6cf409b9ccc336c",
+   "title": "민원AI — 감정 섞인 하소연을 격식 있는 민원·청구서로 바꾸는 서비스",
+   "org": "민원AI(민간 서비스)",
+   "url": "https://minwonai.kr/"
   }
  ]
 }
