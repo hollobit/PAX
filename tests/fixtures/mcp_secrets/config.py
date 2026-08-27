@@ -1,0 +1,2 @@
+AWS_KEY = "AKIAIOSFODNN7EXAMPLE"
+OPENAI = "sk-abcdefghijklmnopqrstuvwxyz0123456789ABCD"
