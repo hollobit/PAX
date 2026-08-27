@@ -60,6 +60,9 @@ raw 항목마다 판단한다 — **실제 공공AX 사례인가?** 아래 두 �
 - 제외: 일반 뉴스 링크만 있는 글, 세미나/강의 홍보, 잡담, 의견/질문, 민간기업 사례,
   단순 타사 도구 추천(본인 개발·활용 사례가 아닌 것),
   **사례 URL(서비스·저장소·기사 등 실체 링크)이 없는 단순 소식**(인사·발령·모임 후기·동정)
+- **신규 MCP 사례**(제목·태그에 MCP): 등재 후
+  `PYTHONPATH=scripts python3 scripts/check_mcp.py --case <id>` 실행 +
+  scripts/mcp_audit_prompt.md 절차로 LLM 감사(축 4·5)를 수행한다.
 사례로 판단한 항목을 아래 형식의 dict로 만들어 data/incoming/TODAY.json에
 JSON 리스트로 저장한다:
 - raw_text: 원문 전체 (해시용 — 병합 시 자동 제거됨)
@@ -97,6 +100,7 @@ python3 scripts/build_champions.py
 python3 scripts/build_index.py            # 공공 AX 지수 갱신 (분기 말에는 --snapshot 추가)
 python3 scripts/build_case_pages.py       # 사례별 정적 상세 페이지 재생성
 python3 scripts/build_community_stats.py  # 커뮤니티 활력 지표(대화량·가입자·Threads 관측) 갱신
+PYTHONPATH=scripts python3 scripts/build_mcp_review.py  # MCP 검증 공개본 (원장 변경 시)
 ```
 - merge가 거부 건을 출력하면 data/rejected/TODAY.json을 열어 원인(주로 익명화)을
   수정한 새 incoming 파일로 1회 재시도한다.
@@ -112,6 +116,8 @@ python3 scripts/build_community_stats.py  # 커뮤니티 활력 지표(대화량
 - 카카오 대화량 백필: `kakaocli messages --chat-id <id> --since 8d --limit 20000 --json`으로
   지난주 전체를 재조회해 data/raw/TODAY-kakao-backfill.json으로 저장 —
   수집 창(1d·개수 제한)에 잘린 메시지를 원장에 보정한다(build_community_stats가 자동 반영).
+- MCP CVE 재검: `PYTHONPATH=scripts python3 scripts/check_mcp.py --audit-only` 후
+  build_mcp_review·build_case_pages 재실행 — 주의 항목 변화는 log에 기록.
 - 공공 깃랩 스타 조사: `https://gitlab.aigov.go.kr/api/v4/projects?order_by=star_count&sort=desc&per_page=100`
   을 curl로 조회해 스타 3+ 중 미등재(전체 사례의 link/case_url/mirror_url과 대조)를 찾는다.
   기등재 사례의 미러면 mirror_url로 병기하고, 순수 신규는 사용자에게 후보 목록으로 보고한다.
