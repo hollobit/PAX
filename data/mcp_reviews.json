@@ -2414,6 +2414,49 @@
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
+  },
+  {
+   "case_id": "1c8fb0ad57992fe1",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "위험 패턴은 탐지 규칙 문서·AST 방문자 정의·고정 도구(semgrep) 호출 (근거: src/gvskb/scanners/semgrep_scanner.py:129 — 리스트 인자)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "패턴 일치는 전부 탐지 벤치마크 코퍼스(eval_corpus)와 탐지 검증 테스트 픽스처로 수동 확인(오탐) — 보안 스캐너의 시험 데이터"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Other·유지보수 미상"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "subprocess는 고정 도구(semgrep) 리스트 인자 호출, 사용자 입력 셸 조합 없음 (근거: src/gvskb/scanners/semgrep_scanner.py:129)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "외부 호출은 취약점 DB(api.osv.dev·EPSS) 조회로 도구 목적에 명시 — api.ipify.org 등은 호출이 아니라 외부 표면 탐지 규칙 데이터 (근거: src/gvskb/scanners/external_surface.py:56)"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-08-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   },
+   "false_positives": [
+    "eval_corpus/projects/h_hard_variants/secrets_hard.py",
+    "tests/test_report_store_and_inventory.py",
+    "tests/test_round2_fixes.py",
+    "tests/test_round5_install_and_secrets.py",
+    "tests/test_scan_path.py",
+    "tests/test_secret_and_pii_coverage.py"
+   ]
   }
  ]
 }

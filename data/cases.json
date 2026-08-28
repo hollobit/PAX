@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-28T15:32:20+09:00",
+ "updated_at": "2026-08-28T21:55:19+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -6009,6 +6009,56 @@
    ],
    "task_category": "민원",
    "id": "11f22180ed7f62b8"
+  },
+  {
+   "title": "vibecode-checker — AI 생성 코드를 공공 보안 기준으로 점검하는 1차 보안 린터",
+   "runtime_env": "MCP·CLI 설정",
+   "network_req": "폐쇄망 가능",
+   "case_class": "개인 개발",
+   "collected_at": "2026-08-28",
+   "summary": "AI 코딩 도구로 만든 코드에서 개인정보 노출·API 키·SQL 삽입·위험 명령 실행·취약 패키지를 찾아 공무원이 읽을 수 있는 한국어 보고서로 알려주는 1차 보안 린터. CLI와 MCP 양쪽을 지원하고 망분리 환경에서 동작하며, 테스트 1,589개·독립 벤치마크 검증을 명시했다. 커뮤니티에서 경기도 바이브코딩 거버넌스 준비(보안성 검토 간소화)의 점검 도구로 소개된, 바이브코딩 보안 공백을 직접 겨냥한 사례다.",
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-06-13",
+   "task_category": "공통·범용",
+   "source": "kakao",
+   "transition_stage": "부서 공유",
+   "link": "https://github.com/Lex6won/vibecode-checker",
+   "tags": [
+    "보안점검",
+    "린터",
+    "바이브코딩",
+    "MCP",
+    "망분리"
+   ],
+   "org_type": "공직 개인",
+   "id": "1c8fb0ad57992fe1",
+   "license": "Other",
+   "license_source": "github",
+   "license_checked": "2026-08-28"
+  },
+  {
+   "title": "바이브코드 하네스 — 기획부터 보안 점검까지 같은 순서로 만드는 실행형 개발 하네스",
+   "runtime_env": "설치 필요",
+   "case_class": "개인 개발",
+   "collected_at": "2026-08-28",
+   "summary": "공무원이 Codex·Claude Code 등으로 업무 도구를 만들 때 기획→화면 설계→구현→테스트→보안 점검을 같은 순서로 진행하게 하는 실행형 개발 하네스. '빨리 만들기'가 아니라 나중에 검증·보완·운영으로 갈 수 있도록 공통 개발 약속과 증적을 처음부터 남기는 것이 목표이며, vibecode-checker 보안 점검을 통합했다. 바이브코딩 산출물의 지속가능성 공백(검증·증적 부재)을 개발 단계에서 막는 접근이다.",
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-08-13",
+   "task_category": "공통·범용",
+   "source": "kakao",
+   "transition_stage": "개인 사용",
+   "link": "https://github.com/Lex6won/vibecode-harness",
+   "tags": [
+    "개발하네스",
+    "바이브코딩",
+    "증적",
+    "보안점검"
+   ],
+   "org_type": "공직 개인",
+   "id": "4032cd7b445543e6",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-08-28"
   }
  ]
 }

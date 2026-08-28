@@ -1,5 +1,5 @@
 {
- "total": 106,
+ "total": 107,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -2132,6 +2132,36 @@
    "stats": {
     "case_count": 3,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:Lex6won",
+   "name": "원준석",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "Lex6won",
+     "url": "https://github.com/Lex6won"
+    },
+    {
+     "platform": "gitlab",
+     "id": "Lex6won",
+     "url": "https://gitlab.aigov.go.kr/Lex6won"
+    }
+   ],
+   "affiliation": {
+    "value": "경기도",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "4032cd7b445543e6",
+    "1c8fb0ad57992fe1"
+   ],
+   "stats": {
+    "case_count": 2,
+    "top_ax": 0,
     "stars": 0
    }
   },

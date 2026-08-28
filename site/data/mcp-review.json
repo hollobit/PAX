@@ -1,10 +1,10 @@
 {
  "generated_at": "2026-08-28",
  "summary": {
-  "total": 67,
+  "total": 68,
   "counts": {
    "주의": 57,
-   "양호": 10
+   "양호": 11
   },
   "top_warn_axis": "hygiene"
  },
@@ -2282,6 +2282,40 @@
     "data_flow": {
      "verdict": "통과",
      "note": "공식 API 도메인만 호출(map.seoul.go.kr) — 제3자 전송 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
+   "case_id": "1c8fb0ad57992fe1",
+   "title": "vibecode-checker — AI 생성 코드를 공공 보안 기준으로 점검하는 1차 보안 린터",
+   "stars": null,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "위험 패턴은 탐지 규칙 문서·AST 방문자 정의·고정 도구(semgrep) 호출 (근거: src/gvskb/scanners/semgrep_scanner.py:129 — 리스트 인자)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "패턴 일치는 전부 탐지 벤치마크 코퍼스(eval_corpus)와 탐지 검증 테스트 픽스처로 수동 확인(오탐) — 보안 스캐너의 시험 데이터"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Other·유지보수 미상"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "subprocess는 고정 도구(semgrep) 리스트 인자 호출, 사용자 입력 셸 조합 없음 (근거: src/gvskb/scanners/semgrep_scanner.py:129)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "외부 호출은 취약점 DB(api.osv.dev·EPSS) 조회로 도구 목적에 명시 — api.ipify.org 등은 호출이 아니라 외부 표면 탐지 규칙 데이터 (근거: src/gvskb/scanners/external_surface.py:56)"
     }
    },
    "dynamic": null,
