@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-28T21:55:19+09:00",
+ "updated_at": "2026-08-28T22:05:53+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -6056,6 +6056,78 @@
    ],
    "org_type": "공직 개인",
    "id": "4032cd7b445543e6",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-08-28"
+  },
+  {
+   "link": "https://github.com/stablyai/orca",
+   "task_category": "공통·범용",
+   "tags": [
+    "에이전트",
+    "오케스트레이션",
+    "ADE",
+    "해외참고"
+   ],
+   "title": "Orca — 병렬 에이전트 플릿을 부리는 에이전트 개발 환경(ADE)",
+   "summary": "여러 코딩 에이전트를 병렬로 운용하는 에이전트 개발 환경(ADE)으로, 자기 구독으로 임의의 코딩 에이전트를 데스크톱·모바일·VPS에서 돌린다(MIT, 스타 5.5만+). 한 명의 실무자가 에이전트 여러 개를 지휘하는 작업 방식의 대표 사례로, 공공 실무의 멀티 에이전트 오케스트레이션 논의(어떤 에이전트에 어떤 일을 맡길지)에 참고가 된다.",
+   "collected_at": "2026-08-28",
+   "source": "kakao",
+   "transition_stage": "개인 사용",
+   "org_type": "해외(참고)",
+   "org": "Stably AI(해외 오픈소스)",
+   "runtime_env": "설치 필요",
+   "date": "2026-08-28",
+   "case_class": "참고",
+   "id": "c54ee4b5fb3ee4c5",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-08-28"
+  },
+  {
+   "link": "https://github.com/virgiliojr94/book-to-skill",
+   "task_category": "공통·범용",
+   "tags": [
+    "스킬화",
+    "지식변환",
+    "Claude스킬",
+    "해외참고"
+   ],
+   "title": "book-to-skill — 기술 서적 PDF를 Claude Code 스킬로 바꾸는 도구",
+   "summary": "기술 서적 PDF를 업무 중 참조·활용 가능한 Claude Code 스킬로 변환하는 오픈소스(MIT, 스타 2.6만+). 긴 문서를 에이전트가 쓸 수 있는 지식 단위로 바꾸는 접근으로, 공공 실무의 규정집·업무 매뉴얼·지침서를 스킬화하는 응용(공공기관 규정 MCP 생성기와 같은 문제의식)에 직접 참고가 된다.",
+   "collected_at": "2026-08-28",
+   "source": "kakao",
+   "transition_stage": "개인 사용",
+   "org_type": "해외(참고)",
+   "org": "해외 오픈소스",
+   "runtime_env": "AI 도구 설정",
+   "date": "2026-08-28",
+   "case_class": "참고",
+   "id": "f108979f0d8b2009",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-08-28"
+  },
+  {
+   "link": "https://github.com/modelcontextprotocol/inspector",
+   "task_category": "공통·범용",
+   "tags": [
+    "MCP",
+    "테스트도구",
+    "공식",
+    "해외참고"
+   ],
+   "title": "MCP Inspector — MCP 서버를 눈으로 검사하는 공식 테스트 도구",
+   "summary": "MCP 서버의 도구·리소스·프롬프트를 시각적으로 점검하는 공식 테스트 도구(스타 1만+). 서버가 실제로 무엇을 노출하는지 선언과 대조할 수 있어 MCP 개발·검증의 표준 장비에 해당하며, PAX의 MCP 보안·안전 검증(동적 대조 축)도 이 도구를 사용한다. 정부·공공 MCP를 만드는 실무자의 필수 참고 도구다.",
+   "collected_at": "2026-08-28",
+   "source": "kakao",
+   "transition_stage": "개인 사용",
+   "org_type": "해외(참고)",
+   "org": "Model Context Protocol(공식)",
+   "runtime_env": "설치 필요",
+   "date": "2026-08-28",
+   "case_class": "참고",
+   "id": "b64e832490a6c814",
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-08-28"
