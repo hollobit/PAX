@@ -179,12 +179,12 @@ def model_stats(cases: list) -> dict:
         (re.compile(r"schift", re.I), "schift(자체 학습)"),
         (re.compile(r"Gemma", re.I), "Gemma"),
         (re.compile(r"Gemini|제미나이", re.I), "Gemini"),
+        (re.compile(r"OpenAI 호환|Ollama|vLLM|LiteLLM|LM Studio|WebGPU", re.I), "로컬 서빙(Ollama·vLLM 등)"),
         (re.compile(r"GPT|OpenAI", re.I), "GPT(OpenAI)"),
         (re.compile(r"Claude|Codex|Anthropic|상용 코딩 에이전트", re.I), "Claude/Codex(상용 에이전트)"),
         (re.compile(r"Qwen", re.I), "Qwen"),
         (re.compile(r"GLM", re.I), "GLM"),
         (re.compile(r"Whisper", re.I), "Whisper"),
-        (re.compile(r"Ollama|vLLM|LiteLLM|LM Studio|WebGPU", re.I), "로컬 서빙(Ollama·vLLM 등)"),
     ]
 
     def family_of(name: str) -> str:
@@ -213,18 +213,39 @@ def model_stats(cases: list) -> dict:
                       for c in cases
                       if c.get("model_dependency") in ("국산 독자모델", "국산 오픈웨이트")
                       or any(dom_re.search(m) for m in c.get("models_used") or [])]
-    LLM_DEPS = {"국산 독자모델", "국산 오픈웨이트", "해외 상용 API", "해외 오픈웨이트(로컬)", "혼합"}
+    LLM_DEPS = ["국산 독자모델", "국산 오픈웨이트", "혼합", "해외 상용 API", "해외 오픈웨이트(로컬)"]
     dist_detail = {}
     for c in cases:
-        dep = c.get("model_dependency")
-        if not dep:
-            dep = "미확인"
+        dep = c.get("model_dependency") or "미확인"
         d = dist_detail.setdefault(dep, {"n": 0, "specified": 0})
         d["n"] += 1
         if c.get("models_used"):
             d["specified"] += 1
+
+    # 분류별 패밀리 구성 — 소계(사례 수)가 분포 표 건수와 정확히 일치하도록 분류 안에서 집계
+    models_by_dep = []
+    for dep in LLM_DEPS:
+        dep_cases = [c for c in cases if c.get("model_dependency") == dep]
+        if not dep_cases:
+            continue
+        fams2: dict[str, dict] = {}
+        for c in dep_cases:
+            seen = set()
+            for m in c.get("models_used") or []:
+                fam = family_of(m)
+                e = fams2.setdefault(fam, {"name": fam, "n": 0, "cases": [],
+                                           "domestic": bool(dom_re.search(fam)), "variants": set()})
+                e["variants"].add(m)
+                if fam not in seen:
+                    e["n"] += 1
+                    e["cases"].append({"id": c["id"], "title": c["title"]})
+                    seen.add(fam)
+        fam_list = sorted(fams2.values(), key=lambda e: -e["n"])
+        for e in fam_list:
+            e["variants"] = sorted(e["variants"])
+        models_by_dep.append({"dep": dep, "n": len(dep_cases), "families": fam_list})
     return {"models_top": models_top, "domestic_cases": domestic_cases,
-            "dist_detail": dist_detail}
+            "dist_detail": dist_detail, "models_by_dep": models_by_dep}
 
 
 def main():

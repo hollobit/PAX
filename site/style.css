@@ -2120,3 +2120,5 @@ main {
 .model-detail-row td { background: #fafafa; padding: 0.4rem 0.9rem; }
 .model-case-list { margin: 0; padding-left: 1.1rem; font-size: 0.85rem; }
 .model-case-list li { margin: 0.15rem 0; }
+.model-group-row td { background: #eef2f7; padding: 0.35rem 0.7rem; border-top: 2px solid #c9d4e2; }
+.model-family-cell { padding-left: 1.6rem; }
