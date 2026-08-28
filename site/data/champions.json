@@ -1,5 +1,5 @@
 {
- "total": 107,
+ "total": 110,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -967,6 +967,26 @@
    }
   },
   {
+   "id": "github:modelcontextprotocol",
+   "name": "modelcontextprotocol",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "modelcontextprotocol",
+     "url": "https://github.com/modelcontextprotocol"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "b64e832490a6c814"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
+    "stars": 0
+   }
+  },
+  {
    "id": "github:msitsti2025",
    "name": "msitsti2025",
    "accounts": [
@@ -1347,6 +1367,26 @@
    }
   },
   {
+   "id": "github:stablyai",
+   "name": "stablyai",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "stablyai",
+     "url": "https://github.com/stablyai"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "c54ee4b5fb3ee4c5"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
+    "stars": 0
+   }
+  },
+  {
    "id": "github:MuyeongKim",
    "name": "tenmoo",
    "accounts": [
@@ -1383,6 +1423,26 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:virgiliojr94",
+   "name": "virgiliojr94",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "virgiliojr94",
+     "url": "https://github.com/virgiliojr94"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "f108979f0d8b2009"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },
@@ -2161,7 +2221,7 @@
    ],
    "stats": {
     "case_count": 2,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
