@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-29T08:04:53+09:00",
+ "updated_at": "2026-08-29T08:34:58+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -755,6 +755,7 @@
    "maintenance": "활발",
    "stars": 36,
    "stars_github": 36,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110277
   },
   {
@@ -6728,7 +6729,38 @@
    "date": "2026-08-28",
    "link": "https://profound-starburst-b39e5b.netlify.app",
    "summary": "늘봄학교 운영 사업의 2026년 본예산·추가경정예산 현황과 2027년 편성을 실시간 클라우드 동시 협업으로 작성하는 대시보드. 세부사업 추가·저장과 Excel(xlsx/xls)·한셀(cell)·인쇄/PDF 내보내기를 지원해 교육행정 예산 편성의 취합·병합 반복을 줄인다. 한셀 내보내기까지 갖춘 점이 교육행정 실무 환경(한컴 오피스)을 정확히 겨냥한다.",
-   "id": "2863151971658b11"
+   "id": "2863151971658b11",
+   "thumb_v": 1787958307
+  },
+  {
+   "models_used": [
+    "로컬 분석(기본)",
+    "외부 AI(선택 연결)"
+   ],
+   "task_category": "데이터·통계",
+   "model_dependency": "혼합",
+   "org_type": "공직 개인",
+   "transition_stage": "개인 사용",
+   "source": "threads",
+   "title": "AI Survey Insight — 설문 주관식 수백 건을 주제·감정별로 정리하는 분석 도구",
+   "link": "https://www.threads.com/@changil.k/post/DbW4N0Qj-K3",
+   "case_class": "개인 개발",
+   "runtime_env": "설치 필요",
+   "case_url": "https://github.com/koul777/AI-Survey-Insight",
+   "summary": "설문 파일을 업로드하면 주관식 답변의 유사 의견을 자동으로 묶어 핵심 주제와 긍정·부정 반응, 우선 이슈를 정리해 주는 도구. 분석 전 개인정보를 자동 비식별 처리하고 근거 의견을 함께 제시하며, Excel·Word·PPT 보고서를 자동 생성한다. 기본 분석은 PC 안에서 처리하고 심층 해석에만 외부 AI를 선택 연결하는 로컬 우선 설계다. 공공 HR 실무자(AI공공정책학 박사)의 6종 도구 연작 중 하나.",
+   "date": "2026-07-29",
+   "collected_at": "2026-08-29",
+   "org": "공직 현장(개인 개발)",
+   "tags": [
+    "설문분석",
+    "비식별",
+    "로컬우선",
+    "보고서자동화"
+   ],
+   "id": "c7e0862df664bbe5",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-08-29"
   }
  ]
 }
