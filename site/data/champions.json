@@ -1963,7 +1963,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -2139,7 +2139,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -2887,6 +2887,12 @@
    "title": "Archify — 코드베이스·시스템 설명을 검증 가능한 다이어그램으로 바꾸는 에이전트 스킬",
    "org": "해외 오픈소스",
    "url": "https://github.com/tt-a1i/archify"
+  },
+  {
+   "id": "2863151971658b11",
+   "title": "늘봄학교 예산 편성 대시보드 — 실시간 협업으로 본예산·추경을 함께 짜는 도구",
+   "org": "교육 현장(개인 개발)",
+   "url": "https://profound-starburst-b39e5b.netlify.app"
   }
  ]
 }
