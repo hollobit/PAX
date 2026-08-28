@@ -18,13 +18,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
+    },
+    "data_flow": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -45,13 +54,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
+    },
+    "data_flow": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -72,13 +90,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "패턴 일치는 정규식 .exec()(XML 파싱)로 코드 실행 아님을 행 단위 확인 (근거: src/link-utils.js:155 등)"
+    },
+    "data_flow": {
+     "verdict": "주의",
+     "note": "공식 외 도메인 관측(api.vercel.com) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -99,13 +126,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "subprocess는 리스트 인자(셸 미경유)로 로컬 UI 기능(폴더 열기 등)에 사용 (근거: frontend/streamlit_app.py:5384). 로컬 스트림릿 앱 본질 기능"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "LLM API(openai·anthropic) 전송은 도구 목적(규정 생성)에 명시된 경로 — README에 사용자 키 사용 안내"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -126,13 +162,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "파일 쓰기는 데이터 구축 스크립트·테스트 한정, 런타임 도구는 조회 중심 (근거: scripts/·tests/ 경로)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API(문화·기상·식품·법령) + 명시된 데이터 원천(SKT 혼잡도·HF 데이터셋은 구축 스크립트 한정)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -153,13 +198,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
+    },
+    "data_flow": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -180,13 +234,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "위험 패턴은 테스트·빌드 스크립트 경로에 한정, 런타임 도구 코드에는 없음 (근거: test/config.test.ts:2 등)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "하드코딩 외부 URL 없음(설정 기반 호출) — 제3자 전송 패턴 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -207,13 +270,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
+    },
+    "data_flow": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -234,13 +306,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
+    },
+    "data_flow": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -261,13 +342,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
+    },
+    "data_flow": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -288,13 +378,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
+    },
+    "data_flow": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -315,13 +414,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "Apache-2.0·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸 사용은 로컬 데스크톱 본질 기능(whisper STT·업데이터)에 한정 (근거: electron/whisper-stt.js:6, updater.js:4)"
+    },
+    "data_flow": {
+     "verdict": "주의",
+     "note": "로컬 완결 표방이나 googletagmanager 도메인 참조 관측 — 텔레메트리 여부 확인 권장 (근거: 소스 도메인 추출)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -342,13 +450,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "위험 패턴은 테스트·빌드 스크립트 경로에 한정, 런타임 도구 코드에는 없음 (근거: test/run-scenarios.mjs:12 등)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(plus.kipris.or.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -405,13 +522,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
+    },
+    "data_flow": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -432,13 +558,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
+    },
+    "data_flow": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -459,13 +594,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(data.seoul.go.kr, openapi.seoul.go.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -486,13 +630,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "하드코딩 외부 URL 없음(설정 기반 호출) — 제3자 전송 패턴 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -549,13 +702,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "Other·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "주의",
+     "note": "공식 외 도메인 관측(api.ipify.org, x.com) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -576,13 +738,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음 · 유지보수 방치"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(www.law.go.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -603,13 +774,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음 · 유지보수 방치"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(www.law.go.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -630,13 +810,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "주의",
+     "note": "외부 프로세스(yt-dlp)에 사용자 입력 URL이 전달되는 경로 있음 — 인자 검증 확인 권장 (근거: src/youtube-api.ts:3)"
+    },
+    "data_flow": {
+     "verdict": "주의",
+     "note": "공공데이터 외 상업 서비스 연동(유튜브 자막·쿠팡 링크 도메인) 포함 — 도구 목적 대비 데이터 흐름 확인 권장 (근거: 소스 도메인 추출)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -657,13 +846,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "Other·정체"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "파일 쓰기는 로컬 캐시·자동화 리포트 저장 용도, 셸 미사용 (근거: src/mcp_kr_legislation/tools/law_tools.py:138)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "법제처(law.go.kr) 계열만 호출"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -684,13 +882,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·정체"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(lod.law.go.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -711,13 +918,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "Other·정체"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(apis.data.go.kr, www.data.go.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -738,13 +954,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음 · 유지보수 방치"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "하드코딩 외부 URL 없음(설정 기반 호출) — 제3자 전송 패턴 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -765,13 +990,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "유지보수 방치"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "파일 쓰기는 수집 결과 로컬 캐시 저장 용도 (근거: src/services/crawler.py:174) — 셸 미사용"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "나라장터(g2b)·공공데이터포털만 호출"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -792,13 +1026,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "패턴 일치는 정규식 .exec()(XML 파싱)로 코드 실행 아님을 행 단위 확인 (근거: src/core/bizinfo.js:35 등)"
+    },
+    "data_flow": {
+     "verdict": "주의",
+     "note": "공식 외 도메인 관측(api.odcloud.kr) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -819,13 +1062,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "ISC·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "패턴 일치는 정규식 .exec()(XML 파싱)로 코드 실행 아님을 행 단위 확인 (근거: src/dart/disclosure-xml.ts:110 등)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(dart.fss.or.kr, data-dbg.krx.co.kr, opendart.fss.or.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -882,13 +1134,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "패턴 일치는 정규식 .exec()(XML 파싱)로 코드 실행 아님을 행 단위 확인 (근거: src/lib/xbrl-parser.ts:237 등)"
+    },
+    "data_flow": {
+     "verdict": "주의",
+     "note": "공식 외 도메인 관측(www.xbrl.org) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -909,13 +1170,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "Other·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "패턴 일치는 정규식 .exec()(XML 파싱)로 코드 실행 아님을 행 단위 확인 (근거: src/lib/dart.ts:599 등)"
+    },
+    "data_flow": {
+     "verdict": "주의",
+     "note": "공식 외 도메인 관측(www.r-one.co.kr) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -936,13 +1206,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "Apache-2.0·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "주의",
+     "note": "공식 외 도메인 관측(test) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -963,13 +1242,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "유지보수 방치"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "파일 쓰기는 기업코드 목록 로컬 캐시 갱신 용도 (근거: api1_4_update_corplist.py:37) — 셸 미사용"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "opendart.fss.or.kr만 호출"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -990,13 +1278,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "유지보수 방치"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "하드코딩 외부 URL 없음(설정 기반 호출) — 제3자 전송 패턴 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1017,13 +1314,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·정체"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "위험 패턴은 테스트·빌드 스크립트 경로에 한정, 런타임 도구 코드에는 없음 (근거: scripts/portfolio-smoke.py:26 등)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "하드코딩 외부 URL 없음(설정 기반 호출) — 제3자 전송 패턴 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1080,13 +1386,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "위험 패턴은 테스트·빌드 스크립트 경로에 한정, 런타임 도구 코드에는 없음 (근거: tests/legal-safe-signed-release.test.ts:245 등)"
+    },
+    "data_flow": {
+     "verdict": "주의",
+     "note": "공식 외 도메인 관측(169.254.169.254, WWW.Data.GO.KR, WWW.FAIRDATA.GO.KR, abp.bccard.com) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1107,13 +1422,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "유지보수 방치"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "위험 패턴은 테스트·빌드 스크립트 경로에 한정, 런타임 도구 코드에는 없음 (근거: test-all-keywords.js:10 등)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(kosis.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1134,13 +1458,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "child_process는 자체 서버 기동 런처·설치 훅에 한정, 사용자 입력 셸 조합 없음 (근거: bin/kosis-analysis-mcp.js:2, scripts/npm-postinstall.js:5). npm postinstall 훅 존재는 참고"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "kosis.kr·nabostats.go.kr 공식 통계 API만 호출"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1161,13 +1494,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·정체"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "주의",
+     "note": "공식 외 도메인 관측(api.odcloud.kr) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1188,13 +1530,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "하드코딩 외부 URL 없음(설정 기반 호출) — 제3자 전송 패턴 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1215,13 +1566,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(apis.data.go.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    },
    "false_positives": [
     "tests/test_deal_card_create.py"
@@ -1245,13 +1605,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음 · 유지보수 방치"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(apis.data.go.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1272,13 +1641,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·정체"
+    },
+    "injection": {
+     "verdict": "주의",
+     "note": "런타임 경로에 위험 패턴 존재 — 사용 전 확인 권장 (근거: fswrite scripts/discover-all-codes.ts:13)"
+    },
+    "data_flow": {
+     "verdict": "주의",
+     "note": "공식 외 도메인 관측(fallback.com) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1299,13 +1677,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "패턴 일치는 정규식 .exec()(XML 파싱)로 코드 실행 아님을 행 단위 확인 (근거: src/govSupport/tools/documentChecklist.ts:243 등)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(apis.data.go.kr, www.bizinfo.go.kr, www.ei.go.kr, www.hometax.go.kr, www.iros.go.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1326,13 +1713,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "유지보수 방치"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(data4library.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1353,13 +1749,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음 · 유지보수 방치"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(apis.data.go.kr, www.data.go.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1380,13 +1785,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "위험 패턴은 프레젠테이션 벤더 라이브러리(gsap.min.js)뿐 — 런타임 서버 코드는 파라미터화 호출"
+    },
+    "data_flow": {
+     "verdict": "주의",
+     "note": "요청이 개발자 운영 프록시(korail-mcp-proxy.workers.dev)를 경유 — 키 보호 목적으로 보이나 이용 데이터가 제3자 인프라를 지남 (근거: 소스 도메인 추출)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1407,13 +1821,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(apis.data.go.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1434,13 +1857,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·정체"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(apis.data.go.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1461,13 +1893,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "Apache-2.0·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "subprocess는 고정 도구(pdftotext)·설치 CLI 호출 (근거: src/kasm/adapters/korea/pdf_text.py:17, setup.py:108) — 사용자 입력 셸 조합 없음"
+    },
+    "data_flow": {
+     "verdict": "주의",
+     "note": "국회 공식 API 외에 LLM API(openai·anthropic) 전송 경로가 도구 기능에 포함 — 민감 자료 입력 시 인지 필요 (근거: 소스 도메인 추출)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1488,13 +1929,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "Apache-2.0·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "위험 패턴은 테스트·빌드 스크립트 경로에 한정, 런타임 도구 코드에는 없음 (근거: tests/test_manual_tools.py:11 등)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(www.kaia.re.kr, www.kistep.re.kr, www.law.go.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1515,13 +1965,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·정체"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·쓰기는 수집 스크립트(scripts/) 한정 — MCP 런타임은 조회 전용"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "정부·출연연 공고 원천 다수 + 수집 스크립트의 r.jina.ai(크롤 보조)는 빌드 타임 한정"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1542,13 +2001,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(data.seoul.go.kr, openapi.seoul.go.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1569,13 +2037,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "패턴 일치는 정규식 .exec()(XML 파싱)로 코드 실행 아님을 행 단위 확인 (근거: src/index.js:25 등)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(openapi.seoul.go.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1596,13 +2073,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음 · 유지보수 방치"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "위험 패턴 없음 — 파라미터화 API 호출"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "서울 열린데이터광장 + 카카오 지도 API(dapi.kakao.com — 좌표 변환 목적 명시)만 호출"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1623,13 +2109,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·정체"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(map.seoul.go.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1650,13 +2145,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "위험 패턴은 테스트·빌드 스크립트 경로에 한정, 런타임 도구 코드에는 없음 (근거: fix_order.py:21 등)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(data.seoul.go.kr, openapi.seoul.go.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1677,13 +2181,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "Other·정체"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "패턴 일치는 정규식 .exec()(XML 파싱)로 코드 실행 아님을 행 단위 확인 (근거: src/lib/citations.ts:164 등)"
+    },
+    "data_flow": {
+     "verdict": "주의",
+     "note": "공식 외 도메인 관측(scvcoder-korean-privacy-law-mcp.hf.space) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1704,13 +2217,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "Apache-2.0·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·쓰기는 검증 스크립트 한정이며 공격 픽스처(attacker.example 등)로 경계 테스트를 수행하는 모범적 테스트 체계 (근거: scripts/ 경로)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "문서 편집 로컬 완결 — 런타임 외부 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1731,13 +2253,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "Other·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "위험 패턴은 테스트·빌드 스크립트 경로에 한정, 런타임 도구 코드에는 없음 (근거: pipeline/fetch-sources.mjs:3 등)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "하드코딩 외부 URL 없음(설정 기반 호출) — 제3자 전송 패턴 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1758,13 +2289,22 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "패턴 일치는 정규식 .exec()(XML 파싱)로 코드 실행 아님을 행 단위 확인 (근거: src/tools/fetchKosisExcel.ts:162 등)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공식 API 도메인만 호출(kosis.kr, stat.kosis.kr) — 제3자 전송 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1785,13 +2325,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "하드코딩 외부 URL 없음(설정 기반 호출) — 제3자 전송 패턴 없음"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1812,13 +2361,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
+    },
+    "data_flow": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   },
   {
@@ -1839,13 +2397,22 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
+    },
+    "data_flow": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
     }
    },
    "disclosure": null,
    "checked_at": "2026-08-28",
    "tools": {
     "npm": "11.14.1",
-    "pip_audit": "2.9.0"
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-08-28"
    }
   }
  ]
