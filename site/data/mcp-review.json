@@ -3,8 +3,8 @@
  "summary": {
   "total": 67,
   "counts": {
-   "주의": 60,
-   "양호": 7
+   "주의": 57,
+   "양호": 10
   },
   "top_warn_axis": "hygiene"
  },
@@ -274,8 +274,8 @@
      "note": "패턴 일치는 정규식 .exec()(XML 파싱)로 코드 실행 아님을 행 단위 확인 (근거: src/lib/xbrl-parser.ts:237 등)"
     },
     "data_flow": {
-     "verdict": "주의",
-     "note": "공식 외 도메인 관측(www.xbrl.org) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
+     "verdict": "통과",
+     "note": "opendart·dart 공식 API만 호출 — www.xbrl.org는 XML 표준 네임스페이스 참조로 전송 아님"
     }
    },
    "dynamic": null,
@@ -342,8 +342,8 @@
      "note": "런타임 경로에 위험 패턴 존재 — 사용 전 확인 권장 (근거: fswrite scripts/discover-all-codes.ts:13)"
     },
     "data_flow": {
-     "verdict": "주의",
-     "note": "공식 외 도메인 관측(fallback.com) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
+     "verdict": "통과",
+     "note": "국회·법제처·공공데이터포털 공식 API만 호출 — fallback.com 등은 테스트 더미 도메인"
     }
    },
    "dynamic": null,
@@ -410,8 +410,8 @@
      "note": "패턴 일치는 정규식 .exec()(XML 파싱)로 코드 실행 아님을 행 단위 확인 (근거: src/lib/dart.ts:599 등)"
     },
     "data_flow": {
-     "verdict": "주의",
-     "note": "공식 외 도메인 관측(www.r-one.co.kr) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
+     "verdict": "통과",
+     "note": "공식 API만 호출(ECOS·공공데이터포털·opendart·한국부동산원 R-ONE) — 제3자 전송 없음"
     }
    },
    "dynamic": null,
@@ -622,40 +622,6 @@
    "overall": "주의"
   },
   {
-   "case_id": "9070c4f923623855",
-   "title": "한국 주식 분석 원격 MCP — DART·KRX 기반",
-   "stars": 23,
-   "checked_at": "2026-08-28",
-   "axes": {
-    "permission_surface": {
-     "verdict": "통과",
-     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
-    },
-    "secrets": {
-     "verdict": "통과",
-     "note": "하드코딩 자격증명 패턴 없음"
-    },
-    "supply_chain": {
-     "verdict": "통과",
-     "note": "알려진 High 이상 CVE 없음"
-    },
-    "hygiene": {
-     "verdict": "통과",
-     "note": "Apache-2.0·활발"
-    },
-    "injection": {
-     "verdict": "통과",
-     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
-    },
-    "data_flow": {
-     "verdict": "주의",
-     "note": "공식 외 도메인 관측(test) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
-    }
-   },
-   "dynamic": null,
-   "overall": "주의"
-  },
-  {
    "case_id": "fe3bb0d913e27677",
    "title": "로컬 Ollama 기반 MCP 멀티 호스트",
    "stars": 22,
@@ -716,8 +682,8 @@
      "note": "위험 패턴은 테스트·빌드 스크립트 경로에 한정, 런타임 도구 코드에는 없음 (근거: tests/legal-safe-signed-release.test.ts:245 등)"
     },
     "data_flow": {
-     "verdict": "주의",
-     "note": "공식 외 도메인 관측(169.254.169.254, WWW.Data.GO.KR, WWW.FAIRDATA.GO.KR, abp.bccard.com) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
+     "verdict": "통과",
+     "note": "관측된 비공식 도메인은 전부 테스트 픽스처(169.254.169.254 등 SSRF 방어 테스트 포함 — 모범적 보안 테스트) — 런타임은 공식 API만"
     }
    },
    "dynamic": null,
@@ -1158,8 +1124,8 @@
      "note": "패턴 일치는 정규식 .exec()(XML 파싱)로 코드 실행 아님을 행 단위 확인 (근거: src/lib/citations.ts:164 등)"
     },
     "data_flow": {
-     "verdict": "주의",
-     "note": "공식 외 도메인 관측(scvcoder-korean-privacy-law-mcp.hf.space) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
+     "verdict": "통과",
+     "note": "법제처·개인정보위 공식 API만 호출 — hf.space 주소는 자체 배포본 안내로 제3자 전송 아님"
     }
    },
    "dynamic": null,
@@ -1294,8 +1260,8 @@
      "note": "패턴 일치는 정규식 .exec()(XML 파싱)로 코드 실행 아님을 행 단위 확인 (근거: src/core/bizinfo.js:35 등)"
     },
     "data_flow": {
-     "verdict": "주의",
-     "note": "공식 외 도메인 관측(api.odcloud.kr) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
+     "verdict": "통과",
+     "note": "공공데이터포털 공식 게이트웨이(apis.data.go.kr·api.odcloud.kr)·기업마당만 호출"
     }
    },
    "dynamic": null,
@@ -1404,40 +1370,6 @@
    "overall": "주의"
   },
   {
-   "case_id": "b6f4cc079eb86f11",
-   "title": "공공데이터 5종 연결 MCP — 날씨·실거래가·대기질·경제통계·사업자조회",
-   "stars": 1,
-   "checked_at": "2026-08-28",
-   "axes": {
-    "permission_surface": {
-     "verdict": "통과",
-     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
-    },
-    "secrets": {
-     "verdict": "통과",
-     "note": "하드코딩 자격증명 패턴 없음"
-    },
-    "supply_chain": {
-     "verdict": "통과",
-     "note": "알려진 High 이상 CVE 없음"
-    },
-    "hygiene": {
-     "verdict": "통과",
-     "note": "MIT·정체"
-    },
-    "injection": {
-     "verdict": "통과",
-     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
-    },
-    "data_flow": {
-     "verdict": "주의",
-     "note": "공식 외 도메인 관측(api.odcloud.kr) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
-    }
-   },
-   "dynamic": null,
-   "overall": "주의"
-  },
-  {
    "case_id": "ec4f975c809401cb",
    "title": "공공 의료 데이터 MCP — 심평원·식약처 통합",
    "stars": 1,
@@ -1534,40 +1466,6 @@
     "data_flow": {
      "verdict": "해당 없음",
      "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
-    }
-   },
-   "dynamic": null,
-   "overall": "주의"
-  },
-  {
-   "case_id": "bf04cec910b4755d",
-   "title": "보-편 | 보호법 편히보기 — 개인정보 법령·고시 통합 리더",
-   "stars": 0,
-   "checked_at": "2026-08-28",
-   "axes": {
-    "permission_surface": {
-     "verdict": "통과",
-     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
-    },
-    "secrets": {
-     "verdict": "통과",
-     "note": "하드코딩 자격증명 패턴 없음"
-    },
-    "supply_chain": {
-     "verdict": "통과",
-     "note": "알려진 High 이상 CVE 없음"
-    },
-    "hygiene": {
-     "verdict": "통과",
-     "note": "MIT·활발"
-    },
-    "injection": {
-     "verdict": "통과",
-     "note": "패턴 일치는 정규식 .exec()(XML 파싱)로 코드 실행 아님을 행 단위 확인 (근거: src/link-utils.js:155 등)"
-    },
-    "data_flow": {
-     "verdict": "주의",
-     "note": "공식 외 도메인 관측(api.vercel.com) — 용도 확인 권장 (근거: 소스 URL 전수 추출)"
     }
    },
    "dynamic": null,
@@ -2152,6 +2050,40 @@
    "overall": "양호"
   },
   {
+   "case_id": "9070c4f923623855",
+   "title": "한국 주식 분석 원격 MCP — DART·KRX 기반",
+   "stars": 23,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Apache-2.0·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "dart·opendart 공식 API만 호출 — 'test'는 테스트 더미"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
    "case_id": "b37636486ec1dee4",
    "title": "나라장터 MCP 서버",
    "stars": 5,
@@ -2214,6 +2146,74 @@
     "data_flow": {
      "verdict": "통과",
      "note": "공식 API 도메인만 호출(lod.law.go.kr) — 제3자 전송 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
+   "case_id": "b6f4cc079eb86f11",
+   "title": "공공데이터 5종 연결 MCP — 날씨·실거래가·대기질·경제통계·사업자조회",
+   "stars": 1,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·정체"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 쓰기 패턴 없음 — 파라미터화 API 호출 (근거: 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "공공데이터포털(apis.data.go.kr·api.odcloud.kr)·ECOS 공식 API만 호출"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
+   "case_id": "bf04cec910b4755d",
+   "title": "보-편 | 보호법 편히보기 — 개인정보 법령·고시 통합 리더",
+   "stars": 0,
+   "checked_at": "2026-08-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·활발"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "패턴 일치는 정규식 .exec()(XML 파싱)로 코드 실행 아님을 행 단위 확인 (근거: src/link-utils.js:155 등)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "법제처 공식 API만 호출 — api.vercel.com은 배포 플랫폼 참조(빌드 경로)로 이용자 데이터 전송 아님"
     }
    },
    "dynamic": null,
