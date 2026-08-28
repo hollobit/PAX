@@ -299,7 +299,10 @@
    "region": null,
    "task_category": "감사·법무",
    "transition_stage": "부서 공유",
-   "model_dependency": "해외 상용 API"
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "ChatGPT(팀계정)"
+   ]
   },
   {
    "tags": [
@@ -613,6 +616,9 @@
    "health_checked": "2026-08-24",
    "transition_stage": "부서 공유",
    "model_dependency": "해외 상용 API",
+   "models_used": [
+    "상용 API(세부 미상)"
+   ],
    "thumb_v": 1786110276
   },
   {
@@ -665,6 +671,9 @@
    "model_dependency": "해외 상용 API",
    "stars": 7,
    "stars_github": 7,
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1786110275
   },
   {
@@ -1052,6 +1061,10 @@
    "transition_stage": "기관 공식",
    "model_dependency": "혼합",
    "deployment_env": "행정망",
+   "models_used": [
+    "EXAONE(엑사원)",
+    "Gemma 4"
+   ],
    "thumb_v": 1786110276
   },
   {
@@ -1282,6 +1295,9 @@
    "model_dependency": "해외 상용 API",
    "stars": 361,
    "stars_github": 361,
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1786110276
   },
   {
@@ -1708,7 +1724,7 @@
    "link_ok": true,
    "health_checked": "2026-08-24",
    "transition_stage": "기관 공식",
-   "model_dependency": "해외 상용 API",
+   "model_dependency": "모델 중립(BYO)",
    "mcp_official": true,
    "mcp_provider_agency": "한국산업인력공단",
    "thumb_v": 1786110276
@@ -2021,7 +2037,7 @@
    "link_ok": true,
    "health_checked": "2026-08-24",
    "maintenance": "활발",
-   "model_dependency": "해외 상용 API",
+   "model_dependency": "모델 중립(BYO)",
    "mcp_official": false,
    "stars": 52,
    "stars_github": 52,
@@ -2741,7 +2757,7 @@
    "link_ok": true,
    "health_checked": "2026-08-24",
    "maintenance": "방치",
-   "model_dependency": "해외 상용 API",
+   "model_dependency": "모델 중립(BYO)",
    "mcp_official": false,
    "stars": 31,
    "stars_github": 31,
@@ -3123,7 +3139,7 @@
    "link_ok": true,
    "health_checked": "2026-08-24",
    "maintenance": "활발",
-   "model_dependency": "해외 상용 API",
+   "model_dependency": "모델 중립(BYO)",
    "mcp_official": false,
    "stars": 23,
    "stars_github": 23,
@@ -4172,6 +4188,9 @@
    "deployment_env": "로컬 PC",
    "stars": 2,
    "stars_github": 2,
+   "models_used": [
+    "로컬 음성인식 모델(세부 미상)"
+   ],
    "thumb_v": 1786715190
   },
   {
@@ -4328,6 +4347,9 @@
    "model_dependency": "해외 상용 API",
    "stars": 83,
    "stars_github": 83,
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1786716354
   },
   {
@@ -4546,6 +4568,9 @@
    "model_dependency": "해외 상용 API",
    "stars": 316,
    "stars_github": 316,
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1786798862
   },
   {
@@ -4910,6 +4935,9 @@
    "deployment_env": "행정망",
    "stars": 3,
    "stars_gitlab": 3,
+   "models_used": [
+    "상용 AI(내부망 도입, 세부 미상)"
+   ],
    "thumb_v": 1786799825
   },
   {
@@ -4972,6 +5000,9 @@
    "model_dependency": "해외 상용 API",
    "stars": 279,
    "stars_github": 279,
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1786840527
   },
   {
@@ -5067,6 +5098,9 @@
    "model_dependency": "해외 상용 API",
    "stars": 9,
    "stars_github": 9,
+   "models_used": [
+    "Claude Code/Codex/Gemini(스킬 팩)"
+   ],
    "thumb_v": 1786892606
   },
   {
@@ -5221,7 +5255,10 @@
    "link_ok": true,
    "health_checked": "2026-08-24",
    "transition_stage": "부서 공유",
-   "model_dependency": "해외 상용 API"
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "ChatGPT GPTs"
+   ]
   },
   {
    "collected_at": "2026-08-19",
@@ -5247,6 +5284,9 @@
    "link_ok": true,
    "health_checked": "2026-08-24",
    "model_dependency": "해외 상용 API",
+   "models_used": [
+    "Gemini GEM"
+   ],
    "thumb_v": 1787143591
   },
   {
@@ -5470,6 +5510,9 @@
    "health_checked": "2026-08-24",
    "maintenance": "활발",
    "stars_github": 50,
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1787186188
   },
   {
@@ -6787,7 +6830,8 @@
    "id": "1d90d7ec74b027d1",
    "license": "명시 없음",
    "license_source": "github",
-   "license_checked": "2026-08-29"
+   "license_checked": "2026-08-29",
+   "thumb_v": 1787960185
   }
  ]
 }

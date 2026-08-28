@@ -29,15 +29,15 @@
   "없음(비LLM)": 65,
   "해외 오픈웨이트(로컬)": 9,
   "혼합": 7,
-  "해외 상용 API": 37,
-  "모델 중립(BYO)": 47,
+  "해외 상용 API": 33,
+  "모델 중립(BYO)": 51,
   "국산 독자모델": 3
  },
  "model_stats": {
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 13,
+    "n": 19,
     "variants": [
      "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
      "상용 API 모드(Claude 등)"
@@ -46,6 +46,14 @@
      {
       "id": "7acf5f25369c1401",
       "title": "시연 영상 제작 자동화 스킬 공유"
+     },
+     {
+      "id": "32d199fa9ad4f674",
+      "title": "국민신문고 민원 초안 생성 스킬 minwon-draft"
+     },
+     {
+      "id": "54d599932088897f",
+      "title": "정부 지원사업 전수조사 에이전트 스킬 ir-search"
      },
      {
       "id": "112bf7dc576ed8aa",
@@ -60,6 +68,14 @@
       "title": "업무구조도 생성기 korea100studio 오픈소스 공개"
      },
      {
+      "id": "7ac3b301c1a8f79d",
+      "title": "발표 슬라이드 밈 삽입 도구 slide-meme-inserter"
+     },
+     {
+      "id": "1c54d608228e0845",
+      "title": "이미지 생성 프롬프트 컴파일 스킬 — 공냥이 프롬프트 킷"
+     },
+     {
       "id": "ac09bd2e1c0fbb29",
       "title": "온AI Work — 공무원 보고서 AI 작성 도구"
      },
@@ -68,12 +84,20 @@
       "title": "Rekian — HWPX 공문서 재기안 에이전트 스킬셋"
      },
      {
+      "id": "65e1983235232514",
+      "title": "bookforge — 한국어 전자책 PDF 생성 에이전트 스킬"
+     },
+     {
       "id": "acd684108227b9c2",
       "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
      },
      {
       "id": "cb0abc29707cc710",
       "title": "수정 가능한 PPTX·피그마 슬라이드 스킬 — 공공 카드뉴스 스타일"
+     },
+     {
+      "id": "0b9d4e9c2beed197",
+      "title": "public-doc-to-hwpx — AI 초안을 공공기관 보고서 서식 HWPX로 만드는 스킬"
      },
      {
       "id": "539f90471f451d80",
@@ -100,8 +124,10 @@
    },
    {
     "name": "GPT(OpenAI)",
-    "n": 9,
+    "n": 11,
     "variants": [
+     "ChatGPT GPTs",
+     "ChatGPT(팀계정)",
      "ChatGPT/Claude/Codex(승인 문서 조회)",
      "GPT(OpenAI API)",
      "GPT-5.6 Luna",
@@ -117,6 +143,10 @@
      {
       "id": "de4b2dab339d69b7",
       "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
+     },
+     {
+      "id": "6a2d1fa6e385ef2b",
+      "title": "부서 수요 기반 ChatGPT 팀계정 지원 후 보안형 AI SaaS 도입"
      },
      {
       "id": "ea2bce110972762e",
@@ -147,8 +177,95 @@
       "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱"
      },
      {
+      "id": "ccee126dc9e23cf6",
+      "title": "경북 면사무소 토목직의 AX — 토목 전용 GPTs와 횡단면도 작성 앱"
+     },
+     {
       "id": "b3294bcc65e7f2e7",
       "title": "소방기술민원 답변생성기 — 법령·유사민원 검색과 참고 답변 초안"
+     }
+    ],
+    "domestic": false
+   },
+   {
+    "name": "Gemini",
+    "n": 7,
+    "variants": [
+     "Claude Code/Codex/Gemini(스킬 팩)",
+     "Claude/Codex/Gemini(어댑터)",
+     "Gemini 3.5 Flash",
+     "Gemini GEM",
+     "Gemini(옵션 전환)",
+     "Gemini(옵션)",
+     "OpenAI/Gemini/Claude(사용자 선택)"
+    ],
+    "cases": [
+     {
+      "id": "de4b2dab339d69b7",
+      "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
+     },
+     {
+      "id": "48e33f2318bdffae",
+      "title": "클릭 과정을 PDF 가이드로 만드는 ClickGuide Local"
+     },
+     {
+      "id": "1502d338e8e99382",
+      "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
+     },
+     {
+      "id": "c5aa260668941b92",
+      "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커"
+     },
+     {
+      "id": "4c918008fd4eff60",
+      "title": "민원 답변 작성 스킬 팩 — Codex·Claude Code·Gemini CLI 겸용"
+     },
+     {
+      "id": "a384b647830b2bf7",
+      "title": "쉽다공문 — 제미나이 GEM 공문서 초안 생성기 무료 배포"
+     },
+     {
+      "id": "539d5aacb03635db",
+      "title": "민원 신고 스크리너 — 신고 7유형·근거법령·소관부서 자동 판별 모듈"
+     }
+    ],
+    "domestic": false
+   },
+   {
+    "name": "Gemma",
+    "n": 6,
+    "variants": [
+     "Gemma 4",
+     "Gemma 4 E2B(Ollama 번들)",
+     "Gemma 4 E2B(Ollama, 선택형 요약)",
+     "Gemma 4 E4B(Ollama 권장)",
+     "Gemma 4 E4B(Ollama)",
+     "LLM42-Gemma4(멀티모달 전환)"
+    ],
+    "cases": [
+     {
+      "id": "2c14f2adaa83a00e",
+      "title": "로컬 인수인계 도구 MVP 공개 — 공공 AX 로컬 시리즈 3"
+     },
+     {
+      "id": "58420e002644542c",
+      "title": "행안부, 엑사원·Gemma4를 행정 내부망에 도입"
+     },
+     {
+      "id": "9d115930495a1e65",
+      "title": "공무원용 로컬 AI 에이전트 워크플레이스 개발"
+     },
+     {
+      "id": "ec17e6cd86e7aaa1",
+      "title": "PDF 번역·검토 작업장 — 공공 AX 로컬 시리즈 6"
+     },
+     {
+      "id": "50ab356bb2ee3f4d",
+      "title": "범정부 내부망 AI 브라우저 사이드바 어시스턴트"
+     },
+     {
+      "id": "75b6a86d91aea955",
+      "title": "AI지원담당 — 공공 실무용 로컬 AI 메신저 MVP (공공 AX 로컬 시리즈 1)"
      }
     ],
     "domestic": false
@@ -194,74 +311,6 @@
     "domestic": false
    },
    {
-    "name": "Gemma",
-    "n": 5,
-    "variants": [
-     "Gemma 4 E2B(Ollama 번들)",
-     "Gemma 4 E2B(Ollama, 선택형 요약)",
-     "Gemma 4 E4B(Ollama 권장)",
-     "Gemma 4 E4B(Ollama)",
-     "LLM42-Gemma4(멀티모달 전환)"
-    ],
-    "cases": [
-     {
-      "id": "2c14f2adaa83a00e",
-      "title": "로컬 인수인계 도구 MVP 공개 — 공공 AX 로컬 시리즈 3"
-     },
-     {
-      "id": "9d115930495a1e65",
-      "title": "공무원용 로컬 AI 에이전트 워크플레이스 개발"
-     },
-     {
-      "id": "ec17e6cd86e7aaa1",
-      "title": "PDF 번역·검토 작업장 — 공공 AX 로컬 시리즈 6"
-     },
-     {
-      "id": "50ab356bb2ee3f4d",
-      "title": "범정부 내부망 AI 브라우저 사이드바 어시스턴트"
-     },
-     {
-      "id": "75b6a86d91aea955",
-      "title": "AI지원담당 — 공공 실무용 로컬 AI 메신저 MVP (공공 AX 로컬 시리즈 1)"
-     }
-    ],
-    "domestic": false
-   },
-   {
-    "name": "Gemini",
-    "n": 5,
-    "variants": [
-     "Claude/Codex/Gemini(어댑터)",
-     "Gemini 3.5 Flash",
-     "Gemini(옵션 전환)",
-     "Gemini(옵션)",
-     "OpenAI/Gemini/Claude(사용자 선택)"
-    ],
-    "cases": [
-     {
-      "id": "de4b2dab339d69b7",
-      "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
-     },
-     {
-      "id": "48e33f2318bdffae",
-      "title": "클릭 과정을 PDF 가이드로 만드는 ClickGuide Local"
-     },
-     {
-      "id": "1502d338e8e99382",
-      "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
-     },
-     {
-      "id": "c5aa260668941b92",
-      "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커"
-     },
-     {
-      "id": "539d5aacb03635db",
-      "title": "민원 신고 스크리너 — 신고 7유형·근거법령·소관부서 자동 판별 모듈"
-     }
-    ],
-    "domestic": false
-   },
-   {
     "name": "HyperCLOVA X",
     "n": 2,
     "variants": [
@@ -299,6 +348,20 @@
     "domestic": true
    },
    {
+    "name": "상용 API(세부 미상)",
+    "n": 1,
+    "variants": [
+     "상용 API(세부 미상)"
+    ],
+    "cases": [
+     {
+      "id": "cbe008b504b9dd18",
+      "title": "의학 연구 동료 AI 플러그인 ResearchFellow"
+     }
+    ],
+    "domestic": false
+   },
+   {
     "name": "Qwen",
     "n": 1,
     "variants": [
@@ -311,6 +374,20 @@
      }
     ],
     "domestic": false
+   },
+   {
+    "name": "EXAONE(엑사원)",
+    "n": 1,
+    "variants": [
+     "EXAONE(엑사원)"
+    ],
+    "cases": [
+     {
+      "id": "58420e002644542c",
+      "title": "행안부, 엑사원·Gemma4를 행정 내부망에 도입"
+     }
+    ],
+    "domestic": true
    },
    {
     "name": "Whisper",
@@ -336,6 +413,34 @@
      {
       "id": "c5aa260668941b92",
       "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커"
+     }
+    ],
+    "domestic": false
+   },
+   {
+    "name": "로컬 음성인식 모델(세부 미상)",
+    "n": 1,
+    "variants": [
+     "로컬 음성인식 모델(세부 미상)"
+    ],
+    "cases": [
+     {
+      "id": "cbda9aefec586c48",
+      "title": "맥 전용 로컬 실시간 음성전사 도구 murmur 공유"
+     }
+    ],
+    "domestic": false
+   },
+   {
+    "name": "상용 AI(내부망 도입, 세부 미상)",
+    "n": 1,
+    "variants": [
+     "상용 AI(내부망 도입, 세부 미상)"
+    ],
+    "cases": [
+     {
+      "id": "b0b96e656d3572e9",
+      "title": "남양주 AI-Agent 시스템 베타 — 내부망 상용 AI"
      }
     ],
     "domestic": false
@@ -371,6 +476,14 @@
   ],
   "domestic_cases": [
    {
+    "id": "58420e002644542c",
+    "title": "행안부, 엑사원·Gemma4를 행정 내부망에 도입",
+    "models": [
+     "EXAONE(엑사원)",
+     "Gemma 4"
+    ]
+   },
+   {
     "id": "50ab356bb2ee3f4d",
     "title": "범정부 내부망 AI 브라우저 사이드바 어시스턴트",
     "models": [
@@ -399,11 +512,41 @@
      "HCX-GOV-THINK-V1-32B(범정부 AI 공통기반)"
     ]
    }
-  ]
+  ],
+  "dist_detail": {
+   "미확인": {
+    "n": 66,
+    "specified": 0
+   },
+   "없음(비LLM)": {
+    "n": 65,
+    "specified": 0
+   },
+   "해외 오픈웨이트(로컬)": {
+    "n": 9,
+    "specified": 9
+   },
+   "혼합": {
+    "n": 7,
+    "specified": 7
+   },
+   "해외 상용 API": {
+    "n": 33,
+    "specified": 33
+   },
+   "모델 중립(BYO)": {
+    "n": 51,
+    "specified": 0
+   },
+   "국산 독자모델": {
+    "n": 3,
+    "specified": 3
+   }
+  }
  },
- "domestic_model_rate": 0.054,
- "local_model_rate": 0.161,
- "model_known": 56,
+ "domestic_model_rate": 0.058,
+ "local_model_rate": 0.173,
+ "model_known": 52,
  "license_tagged": 153,
  "license_stated_rate": 0.608,
  "gitlab_cases": 44,
