@@ -82,6 +82,7 @@ def build() -> dict:
         "c_axis_mean": round(sum(c_scores) / len(c_scores), 2) if c_scores else None,
         "p_distribution": dict(p_dist),
         "model_dependency": dict(model_dist),
+        "model_stats": model_stats(cases),
         "domestic_model_rate": round(domestic / known_model, 3) if known_model else None,
         "local_model_rate": round(local / known_model, 3) if known_model else None,
         "model_known": known_model,
@@ -163,6 +164,28 @@ def build() -> dict:
             for c in mirror_pairs
         ],
     }
+
+
+DOMESTIC_MODEL_RE = None  # 아래 함수에서 지연 컴파일
+
+
+def model_stats(cases: list) -> dict:
+    """관측소 모델 현황 섹션용 — 구체 모델 사용 집계와 국산 채택 사례."""
+    import re
+    from collections import Counter
+    dom_re = re.compile(r"HyperCLOVA|하이퍼클로바|CLOVA|HCX|schift|EXAONE|엑사원|Solar|가우스|믿:?음|Kanana|A\.X")
+    model_count = Counter()
+    for c in cases:
+        for m in c.get("models_used") or []:
+            model_count[m] += 1
+    models_top = [{"name": name, "n": n, "domestic": bool(dom_re.search(name))}
+                  for name, n in model_count.most_common(20)]
+    domestic_cases = [{"id": c["id"], "title": c["title"],
+                       "models": c.get("models_used") or []}
+                      for c in cases
+                      if c.get("model_dependency") in ("국산 독자모델", "국산 오픈웨이트")
+                      or any(dom_re.search(m) for m in c.get("models_used") or [])]
+    return {"models_top": models_top, "domestic_cases": domestic_cases}
 
 
 def main():

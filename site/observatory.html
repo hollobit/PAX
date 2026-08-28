@@ -79,6 +79,32 @@
     <section class="obs-section" aria-label="MCP 현황">
       <h2 class="obs-heading">MCP 현황과 이슈</h2>
       <div id="mcp-cards" class="obs-cards"></div>
+    </section>
+
+    <section class="obs-section">
+      <h2>모델 현황 — 무엇으로 돌아가는가</h2>
+      <p class="obs-lead">사례가 런타임에 어떤 AI 모델에 의존하는지의 실측입니다.
+        판정은 저장소 README·설정 파일의 명시 근거 기준이며, 개발에만 AI를 쓴 경우(바이브 코딩)는
+        모델 의존으로 세지 않습니다.</p>
+      <div class="obs-cards" id="model-cards"></div>
+      <h3 class="obs-subheading">모델 의존 분포</h3>
+      <div class="table-wrap"><table class="obs-table" id="model-dist-table">
+        <thead><tr><th scope="col">분류</th><th scope="col">건수</th><th scope="col" style="width:45%">비중</th><th scope="col">의미</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+      <h3 class="obs-subheading">확인된 구체 모델</h3>
+      <div class="table-wrap"><table class="obs-table" id="models-used-table">
+        <thead><tr><th scope="col">모델</th><th scope="col">사용 사례</th><th scope="col">국산</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+      <h3 class="obs-subheading">국산 모델 채택 사례</h3>
+      <ul id="domestic-model-list" class="obs-list"></ul>
+      <p class="obs-note">모델 중립(BYO)은 MCP 서버처럼 자체 모델 호출 없이 이용자의 클라이언트 모델
+        위에서 구동되는 사례입니다 — 국산 클라이언트·모델이 확산되면 코드 수정 없이 이식되는 층으로,
+        국산 전환의 실질 관건이 모델이 아니라 클라이언트 생태계임을 보여줍니다.</p>
+    </section>
+
+    <section class="obs-section">
       <h3 class="obs-subheading">관측된 구조적 이슈</h3>
       <ul id="mcp-issues" class="obs-issues"></ul>
     </section>
