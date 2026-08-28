@@ -159,7 +159,7 @@
    "stars_github": 10,
    "model_dependency": "해외 오픈웨이트(로컬)",
    "models_used": [
-    "Gemma(Ollama)"
+    "Gemma 4 E2B(Ollama, 선택형 요약)"
    ]
   },
   {
@@ -215,8 +215,8 @@
    "stars_gitlab": 6,
    "model_dependency": "혼합",
    "models_used": [
-    "Gemini",
-    "OpenAI 호환 로컬(vLLM/Ollama)"
+    "Gemini(옵션)",
+    "vLLM/Ollama/LiteLLM 로컬(OpenAI 호환)"
    ]
   },
   {
@@ -676,8 +676,9 @@
    "stars_github": 33,
    "model_dependency": "혼합",
    "models_used": [
-    "ChatGPT/Claude/Codex(조회)",
-    "Ollama(로컬 옵션)"
+    "Qwen(로컬 RAG 챗)",
+    "ChatGPT/Claude/Codex(승인 문서 조회)",
+    "Ollama(로컬 실행)"
    ]
   },
   {
@@ -1096,7 +1097,10 @@
    "model_dependency": "해외 오픈웨이트(로컬)",
    "stars": 10,
    "stars_github": 10,
-   "network_req": "로컬 완결"
+   "network_req": "로컬 완결",
+   "models_used": [
+    "Gemma 4 E2B(Ollama 번들)"
+   ]
   },
   {
    "link": "https://www.threads.com/@chris_gomdori/post/DbW8LhniROp",
@@ -1174,12 +1178,16 @@
    "link_ok": true,
    "health_checked": "2026-08-24",
    "maintenance": "활발",
-   "model_dependency": "해외 오픈웨이트(로컬)",
+   "model_dependency": "혼합",
    "deployment_env": "로컬 PC",
    "stars": 14,
    "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/edoc-summarizer",
    "stars_github": 14,
-   "stars_gitlab": 5
+   "stars_gitlab": 5,
+   "models_used": [
+    "Ollama/vLLM 로컬(기본)",
+    "Gemini(옵션 전환)"
+   ]
   },
   {
    "link": "https://www.threads.com/@gongpenclaw/post/DbiLzQ5gfjC",
@@ -1537,7 +1545,10 @@
    "stars": 22,
    "case_url": "https://gitlab.aigov.go.kr/chrisryugj/ollama-mcp-host",
    "stars_github": 22,
-   "stars_gitlab": 3
+   "stars_gitlab": 3,
+   "models_used": [
+    "Ollama 로컬 모델(멀티 호스트)"
+   ]
   },
   {
    "summary": "표기가 제각각인 주소들을 도로명주소 표준으로 일괄 정리해 주는 도구가 공개됐다. 주소 데이터 정비에 반복 투입되는 행정 실무 시간을 줄여주는 자동화 사례다.",
@@ -1888,7 +1899,7 @@
    "stars_github": 136,
    "model_dependency": "해외 오픈웨이트(로컬)",
    "models_used": [
-    "Ollama 로컬 모델",
+    "Ollama 로컬 모델(Spring AI)",
     "Whisper(STT)"
    ]
   },
@@ -2413,7 +2424,11 @@
    "model_dependency": "해외 오픈웨이트(로컬)",
    "deployment_env": "로컬 PC",
    "stars": 4,
-   "stars_github": 4
+   "stars_github": 4,
+   "models_used": [
+    "Ollama 로컬 모델",
+    "WebGPU 브라우저 모델"
+   ]
   },
   {
    "source": "kakao",
@@ -3556,7 +3571,11 @@
    "maintenance": "활발",
    "model_dependency": "해외 상용 API",
    "stars": 295,
-   "stars_github": 295
+   "stars_github": 295,
+   "models_used": [
+    "Claude/Codex/Gemini(어댑터)",
+    "GLM-5.3(에이전트 레지스트리)"
+   ]
   },
   {
    "collected_at": "2026-08-12",
@@ -4537,7 +4556,10 @@
    "model_dependency": "해외 오픈웨이트(로컬)",
    "deployment_env": "행정망",
    "stars": 6,
-   "stars_gitlab": 6
+   "stars_gitlab": 6,
+   "models_used": [
+    "LM Studio 로컬 모델(OpenAI 호환)"
+   ]
   },
   {
    "link": "https://gitlab.aigov.go.kr/pro9dan/diary-for-everyone",
@@ -4664,9 +4686,8 @@
    "stars_gitlab": 3,
    "model_dependency": "혼합",
    "models_used": [
-    "HyperCLOVA X",
-    "Gemma",
-    "Whisper"
+    "HCX-GOV-THINK-V1-32B(범정부 AI 공통기반)",
+    "LLM42-Gemma4(멀티모달 전환)"
    ]
   },
   {
@@ -4845,9 +4866,13 @@
    "health_checked": "2026-08-24",
    "maintenance": "활발",
    "transition_stage": "기관 공식",
-   "model_dependency": "해외 상용 API",
+   "model_dependency": "혼합",
    "stars": 1,
-   "stars_gitlab": 1
+   "stars_gitlab": 1,
+   "models_used": [
+    "상용 API 모드(Claude 등)",
+    "Ollama 오픈웨이트 모드(로컬 완결)"
+   ]
   },
   {
    "org_type": "공직 개인",
@@ -4911,7 +4936,10 @@
    "model_dependency": "해외 오픈웨이트(로컬)",
    "deployment_env": "폐쇄망",
    "stars": 3,
-   "stars_github": 3
+   "stars_github": 3,
+   "models_used": [
+    "Gemma 4 E4B(Ollama 권장)"
+   ]
   },
   {
    "source": "kakao",
@@ -6431,7 +6459,7 @@
    "license_checked": "2026-08-28",
    "model_dependency": "국산 독자모델",
    "models_used": [
-    "HyperCLOVA X(범정부 AI 공통기반)"
+    "HCX-GOV-THINK-V1-32B(범정부 AI 공통기반)"
    ]
   },
   {
