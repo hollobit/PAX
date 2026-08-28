@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-28T22:30:55+09:00",
+ "updated_at": "2026-08-28T22:45:26+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -4881,7 +4881,7 @@
    "summary": "서버·네트워크·정보보호시스템 등 IT 자산을 통합 관리하는 웹 솔루션. 자산 현황 대시보드, 랙실장도, 네트워크 포트맵, EoS·보증만료 경고, 데이터 품질 점수까지 갖췄고, 인터넷이 차단된 폐쇄망에서 완전히 독립 운영되도록 설계했다. 이중 해싱 로그인 등 보안 요건도 반영한 실무 개발 사례다.",
    "title": "정보시스템 자산관리 솔루션 — 랙실장도·포트맵까지 폐쇄망 웹 관리",
    "date": "2026-08-04",
-   "link": "https://gitlab.aigov.go.kr/jikim/rack",
+   "link": "https://gitlab.aigov.go.kr/jikim/rack-deletion_scheduled-309",
    "tags": [
     "자산관리",
     "폐쇄망",
@@ -6154,6 +6154,78 @@
    "id": "4f136eeeea72fe65",
    "license": "MIT",
    "license_source": "github",
+   "license_checked": "2026-08-28"
+  },
+  {
+   "summary": "학교와 교육청 교직원의 교무·행정 업무를 한 프로그램에서 지원하는 통합 도구로 공공 깃랩에 공개돼 스타 5개를 받았다. 교육행정 분야에서 분절된 업무 도구들을 묶는 통합형 접근의 사례다.",
+   "source": "kakao",
+   "org": "교육 현장(개인 개발)",
+   "title": "펜통(PenTong) — 학교·교육청의 교무·행정 통합 업무 지원 프로그램",
+   "runtime_env": "설치 필요",
+   "collected_at": "2026-08-28",
+   "link": "https://gitlab.aigov.go.kr/dandaro/pentong",
+   "date": "2026-08-25",
+   "tags": [
+    "교육행정",
+    "통합도구",
+    "교무행정"
+   ],
+   "task_category": "공통·범용",
+   "transition_stage": "개인 사용",
+   "case_class": "개인 개발",
+   "org_type": "공직 개인",
+   "id": "81e87c38477c4016",
+   "license": "GNU AGPLv3",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-28"
+  },
+  {
+   "summary": "온나라 접수대기 문서의 메타데이터를 범정부 AI 공통기반의 RAG와 생성형 AI로 분석해 업무 담당자를 찾아 배분하는 도구(스타 4). 문서 접수·배분이라는 전 기관 공통 병목을 정부 공식 AI 인프라 위에서 푸는 접근으로, 온나라 연계 수요와 범정부 AI 공통기반 활용이 결합된 드문 실측 사례다.",
+   "source": "kakao",
+   "org": "공직 현장(개인 개발)",
+   "title": "온나라 AI 문서 분배기 — 접수대기 문서를 범정부 AI 공통기반으로 분석해 담당 배분",
+   "runtime_env": "서버 구축",
+   "collected_at": "2026-08-28",
+   "link": "https://gitlab.aigov.go.kr/pilddong/onnara-ai-document-distributor",
+   "date": "2026-08-28",
+   "tags": [
+    "온나라",
+    "문서배분",
+    "RAG",
+    "범정부AI공통기반"
+   ],
+   "task_category": "문서·기안",
+   "transition_stage": "개인 사용",
+   "case_class": "개인 개발",
+   "org_type": "공직 개인",
+   "id": "0dd22d6d0375bc39",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-28"
+  },
+  {
+   "network_req": "로컬 완결",
+   "summary": "여러 PDF를 하나로 합본하고 특정 페이지를 추출하는 프로그램으로, 별도 설치와 인터넷 연결이 모두 불필요해 행정망 PC에서 바로 쓸 수 있다(스타 3). 문서 취합이라는 일상 병목을 폐쇄망 제약 안에서 푸는 로컬 완결형 사례다.",
+   "source": "kakao",
+   "org": "공직 현장(개인 개발)",
+   "title": "통일(tongil) — 설치·인터넷 없이 PDF를 합본하는 오프라인 도구",
+   "runtime_env": "브라우저만",
+   "collected_at": "2026-08-28",
+   "link": "https://gitlab.aigov.go.kr/jhoh9505/tongil",
+   "date": "2026-08-28",
+   "tags": [
+    "PDF",
+    "합본",
+    "오프라인",
+    "폐쇄망"
+   ],
+   "task_category": "문서·기안",
+   "transition_stage": "개인 사용",
+   "case_class": "개인 개발",
+   "org_type": "공직 개인",
+   "id": "d00d45bbe02f222b",
+   "license": "명시 없음",
+   "license_source": "gitlab",
    "license_checked": "2026-08-28"
   }
  ]

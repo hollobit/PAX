@@ -1,5 +1,5 @@
 {
- "total": 107,
+ "total": 109,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -1948,6 +1948,26 @@
    }
   },
   {
+   "id": "gitlab:dandaro",
+   "name": "부산광역시교육청 교육정책연구소 서명호",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "dandaro",
+     "url": "https://gitlab.aigov.go.kr/dandaro"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "81e87c38477c4016"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:sajw1994",
    "name": "사진우",
    "accounts": [
@@ -2096,6 +2116,30 @@
    "stats": {
     "case_count": 1,
     "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:jhoh9505",
+   "name": "오정훈",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "jhoh9505",
+     "url": "https://gitlab.aigov.go.kr/jhoh9505"
+    }
+   ],
+   "affiliation": {
+    "value": "통일부",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "d00d45bbe02f222b"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },
@@ -2411,12 +2455,13 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "0dd22d6d0375bc39",
     "8fb7daa690db1660",
     "50ab356bb2ee3f4d",
     "85e155bd270cafc9"
    ],
    "stats": {
-    "case_count": 3,
+    "case_count": 4,
     "top_ax": 2,
     "stars": 0
    }
