@@ -9,7 +9,7 @@ REQUIRED_FIELDS = frozenset(
 #           popularity — 커뮤니티 반응 기반 인기 지표 (좋아요 수 등, 양의 정수),
 #           region — 광역시도 (미상이면 null), case_class — 사례 성격 구분,
 #           license/license_source/license_checked — 저장소 확인 라이선스 (tag_licenses.py)
-OPTIONAL_FIELDS = frozenset(["case_url", "popularity", "region", "case_class",
+OPTIONAL_FIELDS = frozenset(["case_url", "popularity", "region", "case_class", "models_used",
                              "license", "license_source", "license_checked",
                              "task_category", "runtime_env", "network_req", "cost_req",
                              "link_ok", "health_checked", "maintenance", "stars", "stars_github", "stars_gitlab",
@@ -34,7 +34,7 @@ TASK_CATEGORIES = frozenset(["인사·복무", "회계·정산", "계약·조달
 TRANSITION_STAGES = frozenset(["개인 사용", "부서 공유", "기관 공식", "타 기관 재사용", "범정부 탑재"])
 BLOCKERS = frozenset(["보안검토", "예산", "담당자 이동", "레거시 미연동", "법적 근거", "조직 저항"])
 MODEL_DEPS = frozenset(["국산 독자모델", "국산 오픈웨이트", "해외 상용 API",
-                        "해외 오픈웨이트(로컬)", "혼합", "미상"])
+                        "해외 오픈웨이트(로컬)", "혼합", "없음(비LLM)", "미상"])
 DEPLOYMENT_ENVS = frozenset(["인터넷망", "행정망", "폐쇄망", "로컬 PC", "클라우드(CSAP)", "혼합"])
 N2SF_CLASSES = frozenset(["O(공개)", "S(민감)", "C(기밀)"])
 
@@ -100,6 +100,11 @@ def validate_case(case: dict) -> list[str]:
         value = case.get(field)
         if value is not None and value not in allowed:
             errors.append(f"알 수 없는 {field}: {value}")
+    for m in case.get("models_used") or []:
+        if not isinstance(m, str) or not m.strip():
+            errors.append("models_used: 비어 있지 않은 문자열 목록이어야 합니다")
+            break
+
 
     mirror_url = case.get("mirror_url")
     if mirror_url is not None and (

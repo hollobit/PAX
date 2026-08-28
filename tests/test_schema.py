@@ -90,3 +90,13 @@ def test_popularity_non_positive_rejected():
 def test_popularity_non_int_rejected():
     errors = validate_case(make_case(popularity="많음"))
     assert any("popularity" in e for e in errors)
+
+
+def test_model_dependency_accepts_non_llm():
+    assert validate_case(make_case(model_dependency="없음(비LLM)")) == []
+
+
+def test_models_used_validation():
+    assert validate_case(make_case(models_used=["Claude", "EXAONE 3.5"])) == []
+    errors = validate_case(make_case(models_used=["", "GPT-4"]))
+    assert any("models_used" in e for e in errors)
