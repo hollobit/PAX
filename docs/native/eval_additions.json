@@ -4226,5 +4226,33 @@
   "resilience": "미확인—개인 운영, 원천 커뮤니티 정책 의존",
   "post_url": "",
   "service_url": "https://akwiki.org/"
+ },
+ {
+  "no": 222,
+  "id": "11f22180ed7f62b8",
+  "org": "지방자치혁신연구원",
+  "title": "우리동네 민원 판정기 — 민원을 조례·상위법에 비춰 다음 행동을 좁히는 검토 도구",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S2",
+  "s_name": "Tool bundle",
+  "c": "C2",
+  "c_name": "부분 완결",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Live service",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R1 낮음",
+  "human": "검토 후 사용(내부 검토용 명시)",
+  "evidence": "E1 코드·도구 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "민원→조례·상위법 대조→행동 후보(질의·감사·개정·제정)라는 의정 판단 흐름을 4단계로 완결(C2)한 라이브 베타 — '답변 생성기가 아니다'라는 목적 한정과 개인정보 제외 안내가 명확한 판단 지원 설계. 실사용·정확도 증거가 쌓이면 상향 여지.",
+  "feedback": "미확인",
+  "resilience": "미확인—민간 연구원 운영, 조례 데이터 최신화 의존",
+  "post_url": "",
+  "service_url": "https://minwon.jachiai.kr"
  }
 ]
