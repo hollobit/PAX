@@ -31,6 +31,14 @@ RE_GHIO = re.compile(r"https://([a-z0-9-]+)\.github\.io")
 RE_THREADS = re.compile(r"https://www\.threads\.(?:com|net)/@([A-Za-z0-9_.]+)/")
 
 
+NON_CHAMPION_ORG_TYPES = {"민간(참고)", "해외(참고)"}
+
+
+def is_champion_source(case: dict) -> bool:
+    """참고 분류(민간·해외) 사례의 계정은 공공AX 챔피언으로 추출하지 않는다."""
+    return case.get("org_type") not in NON_CHAMPION_ORG_TYPES
+
+
 def extract_accounts(case: dict) -> tuple[set, set]:
     """사례에서 (저장소 계정, 스레드 핸들) 집합을 추출한다."""
     repo, threads = set(), set()
@@ -127,6 +135,10 @@ def main() -> int:
     all_accounts: set = set()
     threads_of_case: dict[str, set] = {}
     for c in cases:
+        if not is_champion_source(c):
+            case_owners[c["id"]] = set()
+            threads_of_case[c["id"]] = set()
+            continue
         repo, threads = extract_accounts(c)
         owners = repo if repo else threads
         case_owners[c["id"]] = owners

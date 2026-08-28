@@ -3,7 +3,7 @@
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
  "total_cases": 227,
- "total_champions": 110,
+ "total_champions": 107,
  "community": {
   "members": 1422,
   "kakao_week": 4460,
@@ -11,7 +11,7 @@
   "threads_observed": 177
  },
  "certified_champions": 2,
- "unattributed_cases": 57,
+ "unattributed_cases": 60,
  "ax_distribution": {
   "AI-Ready": 150,
   "AI-Enabled": 66,

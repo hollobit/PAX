@@ -63,3 +63,12 @@ def test_reversed_given_family_order():
 def test_plain_name_untouched():
     assert split_gitlab_name("사진우") == (None, "사진우")
     assert split_gitlab_name("onpremisehuman") == (None, "onpremisehuman")
+
+
+def test_reference_cases_excluded_from_champions():
+    """민간(참고)·해외(참고) 사례의 계정은 챔피언으로 추출하지 않는다."""
+    from build_champions import extract_accounts, is_champion_source
+    ref = {"org_type": "해외(참고)", "link": "https://github.com/bigcorp/tool", "case_url": None}
+    dom = {"org_type": "공직 개인", "link": "https://github.com/dev/tool", "case_url": None}
+    assert not is_champion_source(ref)
+    assert is_champion_source(dom)

@@ -1,5 +1,5 @@
 {
- "total": 110,
+ "total": 107,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -967,26 +967,6 @@
    }
   },
   {
-   "id": "github:modelcontextprotocol",
-   "name": "modelcontextprotocol",
-   "accounts": [
-    {
-     "platform": "github",
-     "id": "modelcontextprotocol",
-     "url": "https://github.com/modelcontextprotocol"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "b64e832490a6c814"
-   ],
-   "stats": {
-    "case_count": 1,
-    "top_ax": 0,
-    "stars": 0
-   }
-  },
-  {
    "id": "github:msitsti2025",
    "name": "msitsti2025",
    "accounts": [
@@ -1367,26 +1347,6 @@
    }
   },
   {
-   "id": "github:stablyai",
-   "name": "stablyai",
-   "accounts": [
-    {
-     "platform": "github",
-     "id": "stablyai",
-     "url": "https://github.com/stablyai"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "c54ee4b5fb3ee4c5"
-   ],
-   "stats": {
-    "case_count": 1,
-    "top_ax": 0,
-    "stars": 0
-   }
-  },
-  {
    "id": "github:MuyeongKim",
    "name": "tenmoo",
    "accounts": [
@@ -1423,26 +1383,6 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
-    "stars": 0
-   }
-  },
-  {
-   "id": "github:virgiliojr94",
-   "name": "virgiliojr94",
-   "accounts": [
-    {
-     "platform": "github",
-     "id": "virgiliojr94",
-     "url": "https://github.com/virgiliojr94"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "f108979f0d8b2009"
-   ],
-   "stats": {
-    "case_count": 1,
-    "top_ax": 0,
     "stars": 0
    }
   },
@@ -2878,6 +2818,24 @@
    "title": "우리동네 민원 판정기 — 민원을 조례·상위법에 비춰 다음 행동을 좁히는 검토 도구",
    "org": "지방자치혁신연구원",
    "url": "https://minwon.jachiai.kr"
+  },
+  {
+   "id": "c54ee4b5fb3ee4c5",
+   "title": "Orca — 병렬 에이전트 플릿을 부리는 에이전트 개발 환경(ADE)",
+   "org": "Stably AI(해외 오픈소스)",
+   "url": "https://github.com/stablyai/orca"
+  },
+  {
+   "id": "f108979f0d8b2009",
+   "title": "book-to-skill — 기술 서적 PDF를 Claude Code 스킬로 바꾸는 도구",
+   "org": "해외 오픈소스",
+   "url": "https://github.com/virgiliojr94/book-to-skill"
+  },
+  {
+   "id": "b64e832490a6c814",
+   "title": "MCP Inspector — MCP 서버를 눈으로 검사하는 공식 테스트 도구",
+   "org": "Model Context Protocol(공식)",
+   "url": "https://github.com/modelcontextprotocol/inspector"
   }
  ]
 }
