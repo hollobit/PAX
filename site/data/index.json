@@ -27,9 +27,9 @@
  "model_dependency": {
   "미확인": 66,
   "없음(비LLM)": 63,
-  "해외 오픈웨이트(로컬)": 10,
-  "혼합": 4,
-  "해외 상용 API": 38,
+  "해외 오픈웨이트(로컬)": 9,
+  "혼합": 6,
+  "해외 상용 API": 37,
   "모델 중립(BYO)": 47,
   "국산 독자모델": 3
  },
@@ -41,27 +41,37 @@
     "domestic": false
    },
    {
-    "name": "Gemma(Ollama)",
+    "name": "HCX-GOV-THINK-V1-32B(범정부 AI 공통기반)",
+    "n": 2,
+    "domestic": true
+   },
+   {
+    "name": "Gemma 4 E2B(Ollama, 선택형 요약)",
     "n": 1,
     "domestic": false
    },
    {
-    "name": "Gemini",
+    "name": "Gemini(옵션)",
     "n": 1,
     "domestic": false
    },
    {
-    "name": "OpenAI 호환 로컬(vLLM/Ollama)",
+    "name": "vLLM/Ollama/LiteLLM 로컬(OpenAI 호환)",
     "n": 1,
     "domestic": false
    },
    {
-    "name": "ChatGPT/Claude/Codex(조회)",
+    "name": "Qwen(로컬 RAG 챗)",
     "n": 1,
     "domestic": false
    },
    {
-    "name": "Ollama(로컬 옵션)",
+    "name": "ChatGPT/Claude/Codex(승인 문서 조회)",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "Ollama(로컬 실행)",
     "n": 1,
     "domestic": false
    },
@@ -81,12 +91,32 @@
     "domestic": false
    },
    {
+    "name": "Gemma 4 E2B(Ollama 번들)",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "Ollama/vLLM 로컬(기본)",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "Gemini(옵션 전환)",
+    "n": 1,
+    "domestic": false
+   },
+   {
     "name": "Gemma 4 E4B(Ollama)",
     "n": 1,
     "domestic": false
    },
    {
-    "name": "Ollama 로컬 모델",
+    "name": "Ollama 로컬 모델(멀티 호스트)",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "Ollama 로컬 모델(Spring AI)",
     "n": 1,
     "domestic": false
    },
@@ -101,39 +131,9 @@
     "domestic": false
    },
    {
-    "name": "OpenAI/Anthropic(사용자 키)",
+    "name": "Ollama 로컬 모델",
     "n": 1,
     "domestic": false
-   },
-   {
-    "name": "GPT-5.6 Luna(OpenRouter, 동의 시)",
-    "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "OpenAI GPT-5(Responses API)",
-    "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "HyperCLOVA X",
-    "n": 1,
-    "domestic": true
-   },
-   {
-    "name": "Gemma",
-    "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "Whisper",
-    "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "schift-ko-pii(자체 학습)",
-    "n": 1,
-    "domestic": true
    }
   ],
   "domestic_cases": [
@@ -141,9 +141,8 @@
     "id": "50ab356bb2ee3f4d",
     "title": "범정부 내부망 AI 브라우저 사이드바 어시스턴트",
     "models": [
-     "HyperCLOVA X",
-     "Gemma",
-     "Whisper"
+     "HCX-GOV-THINK-V1-32B(범정부 AI 공통기반)",
+     "LLM42-Gemma4(멀티모달 전환)"
     ]
    },
    {
@@ -164,13 +163,13 @@
     "id": "0dd22d6d0375bc39",
     "title": "온나라 AI 문서 분배기 — 접수대기 문서를 범정부 AI 공통기반으로 분석해 담당 배분",
     "models": [
-     "HyperCLOVA X(범정부 AI 공통기반)"
+     "HCX-GOV-THINK-V1-32B(범정부 AI 공통기반)"
     ]
    }
   ]
  },
  "domestic_model_rate": 0.055,
- "local_model_rate": 0.182,
+ "local_model_rate": 0.164,
  "model_known": 55,
  "license_tagged": 151,
  "license_stated_rate": 0.609,
