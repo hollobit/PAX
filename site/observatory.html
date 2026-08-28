@@ -10,7 +10,7 @@
   <meta property="og:title" content="관측소 — 공공 AX 지수">
   <meta property="og:description" content="AX 성숙도 분포, 국산·로컬 모델 채택률, 데이터 AI 접근성, 공공 깃랩 개방율의 분기 관측">
   <meta property="og:url" content="https://hollobit.github.io/PAX/observatory.html">
-  <link rel="stylesheet" href="style.css?v=758b66c5">
+  <link rel="stylesheet" href="style.css?v=eacc43c5">
 </head>
 <body>
   <header class="site-header">
@@ -88,11 +88,11 @@
         <tbody></tbody>
       </table></div>
       <h3 class="obs-subheading">확인된 구체 모델</h3>
-      <p class="obs-note">LLM 런타임 사례 전건의 구체 모델이 기재되어 위 분포와 정합합니다.
-        한 사례가 여러 모델을 쓰면 각 패밀리에 모두 집계되므로 패밀리 합계는 사례 수보다 클 수 있습니다.
-        건수를 누르면 해당 사례가 펼쳐집니다.</p>
+      <p class="obs-note">분류별 소계(사례 수)는 위 분포 표의 건수와 정확히 일치합니다.
+        한 사례가 여러 모델을 쓰면 같은 분류 안의 여러 패밀리에 나타날 수 있어
+        패밀리 건수의 합은 소계보다 클 수 있습니다. 건수를 누르면 해당 사례가 펼쳐집니다.</p>
       <div class="table-wrap"><table class="obs-table" id="models-used-table">
-        <thead><tr><th scope="col">모델</th><th scope="col">사용 사례</th><th scope="col">국산</th></tr></thead>
+        <thead><tr><th scope="col">분류 · 모델 패밀리</th><th scope="col">사용 사례</th><th scope="col">국산</th></tr></thead>
         <tbody></tbody>
       </table></div>
       <h3 class="obs-subheading">국산 모델 채택 사례</h3>
@@ -154,6 +154,6 @@
   <footer class="site-footer">
     <p>모두의 공공AX 사례 아카이브 · <a href="./">아카이브로 돌아가기</a></p>
   </footer>
-  <script src="observatory.js?v=8db99919"></script>
+  <script src="observatory.js?v=3bafd91a"></script>
 </body>
 </html>

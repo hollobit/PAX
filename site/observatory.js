@@ -114,50 +114,55 @@ async function main() {
     }
 
     const mtbody = document.querySelector('#models-used-table tbody');
-    for (const m of stats.models_top) {
-      const tr = document.createElement('tr');
-      const nameTd = el('td', 'obs-strong', m.name);
-      if (m.variants && m.variants.length > 1) {
-        nameTd.appendChild(el('span', 'model-variants', ` (표기 ${m.variants.length}종)`));
-        nameTd.title = m.variants.join('\n');
+    for (const group of stats.models_by_dep || []) {
+      // 분류 소계 행 — 분포 표의 건수와 문자 그대로 일치한다
+      const gtr = document.createElement('tr');
+      gtr.className = 'model-group-row';
+      const gtd = document.createElement('td');
+      gtd.colSpan = 3;
+      gtd.appendChild(el('strong', null, `${group.dep} — 사례 ${group.n}건`));
+      gtr.appendChild(gtd);
+      mtbody.appendChild(gtr);
+      for (const m of group.families) {
+        const tr = document.createElement('tr');
+        const nameTd = el('td', 'model-family-cell', m.name);
+        if (m.variants && m.variants.length > 1) {
+          nameTd.appendChild(el('span', 'model-variants', ` (표기 ${m.variants.length}종)`));
+          nameTd.title = m.variants.join('\n');
+        }
+        tr.appendChild(nameTd);
+        const countTd = document.createElement('td');
+        const btn = el('button', 'model-count-btn', `${m.n}건 ▾`);
+        btn.type = 'button';
+        btn.setAttribute('aria-expanded', 'false');
+        countTd.appendChild(btn);
+        tr.appendChild(countTd);
+        tr.appendChild(el('td', m.domestic ? 'obs-covered' : null, m.domestic ? '국산 ✓' : '—'));
+        mtbody.appendChild(tr);
+        const detail = document.createElement('tr');
+        detail.className = 'model-detail-row';
+        detail.hidden = true;
+        const dtd = document.createElement('td');
+        dtd.colSpan = 3;
+        const ul = el('ul', 'model-case-list');
+        for (const cse of m.cases || []) {
+          const li = document.createElement('li');
+          const a = el('a', null, cse.title);
+          a.href = `case/${encodeURIComponent(cse.id)}.html`;
+          li.appendChild(a);
+          ul.appendChild(li);
+        }
+        dtd.appendChild(ul);
+        detail.appendChild(dtd);
+        mtbody.appendChild(detail);
+        btn.addEventListener('click', () => {
+          detail.hidden = !detail.hidden;
+          btn.setAttribute('aria-expanded', String(!detail.hidden));
+          btn.textContent = `${m.n}건 ${detail.hidden ? '▾' : '▴'}`;
+        });
       }
-      tr.appendChild(nameTd);
-      const countTd = document.createElement('td');
-      const btn = el('button', 'model-count-btn', `${m.n}건 ▾`);
-      btn.type = 'button';
-      btn.setAttribute('aria-expanded', 'false');
-      countTd.appendChild(btn);
-      tr.appendChild(countTd);
-      tr.appendChild(el('td', m.domestic ? 'obs-covered' : null, m.domestic ? '국산 ✓' : '—'));
-      mtbody.appendChild(tr);
-      // 펼침 행 — 해당 모델을 쓰는 사례 링크 목록
-      const detail = document.createElement('tr');
-      detail.className = 'model-detail-row';
-      detail.hidden = true;
-      const dtd = document.createElement('td');
-      dtd.colSpan = 3;
-      const ul = el('ul', 'model-case-list');
-      for (const cse of m.cases || []) {
-        const li = document.createElement('li');
-        const a = el('a', null, cse.title);
-        a.href = `case/${encodeURIComponent(cse.id)}.html`;
-        li.appendChild(a);
-        ul.appendChild(li);
-      }
-      dtd.appendChild(ul);
-      detail.appendChild(dtd);
-      mtbody.appendChild(detail);
-      btn.addEventListener('click', () => {
-        detail.hidden = !detail.hidden;
-        btn.setAttribute('aria-expanded', String(!detail.hidden));
-        btn.textContent = `${m.n}건 ${detail.hidden ? '▾' : '▴'}`;
-      });
     }
-    if (!stats.models_top.length) {
-      const tr = document.createElement('tr');
-      tr.appendChild(el('td', null, '기재된 구체 모델 없음'));
-      mtbody.appendChild(tr);
-    }
+
 
     const dl = document.getElementById('domestic-model-list');
     for (const d of stats.domestic_cases) {
