@@ -2111,3 +2111,12 @@ main {
 .model-bar__fill { height: 100%; border-radius: 0.4rem; background: #7a93b5; }
 .model-bar__fill--domestic { background: #2c6b3a; }
 .model-bar__pct { position: absolute; right: 0.4rem; top: 0; font-size: 0.72rem; line-height: 1.15rem; color: #333; }
+
+/* 모델 표 — 건수 클릭 펼침 */
+.model-count-btn { background: none; border: 1px solid #c8c8c8; border-radius: 0.5rem;
+  padding: 0.1rem 0.55rem; font-size: 0.82rem; cursor: pointer; color: #234a72; }
+.model-count-btn:hover { background: #eef3f8; }
+.model-variants { font-weight: 400; font-size: 0.75rem; color: #888; }
+.model-detail-row td { background: #fafafa; padding: 0.4rem 0.9rem; }
+.model-case-list { margin: 0; padding-left: 1.1rem; font-size: 0.85rem; }
+.model-case-list li { margin: 0.15rem 0; }
