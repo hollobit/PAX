@@ -97,6 +97,10 @@ async function main() {
       const tr = document.createElement('tr');
       tr.appendChild(el('td', 'obs-strong', key));
       tr.appendChild(el('td', null, `${n}건`));
+      const detail = (stats.dist_detail || {})[key === '미확인' ? '미확인' : key];
+      const spec = detail ? detail.specified : 0;
+      const LLM_KEYS = ['국산 독자모델', '국산 오픈웨이트', '해외 상용 API', '해외 오픈웨이트(로컬)', '혼합'];
+      tr.appendChild(el('td', null, LLM_KEYS.includes(key) ? `${spec}/${n}건` : '해당 없음'));
       const barTd = document.createElement('td');
       const wrap = el('div', 'model-bar');
       const fill = el('div', 'model-bar__fill' + (key.startsWith('국산') ? ' model-bar__fill--domestic' : ''));

@@ -213,7 +213,18 @@ def model_stats(cases: list) -> dict:
                       for c in cases
                       if c.get("model_dependency") in ("국산 독자모델", "국산 오픈웨이트")
                       or any(dom_re.search(m) for m in c.get("models_used") or [])]
-    return {"models_top": models_top, "domestic_cases": domestic_cases}
+    LLM_DEPS = {"국산 독자모델", "국산 오픈웨이트", "해외 상용 API", "해외 오픈웨이트(로컬)", "혼합"}
+    dist_detail = {}
+    for c in cases:
+        dep = c.get("model_dependency")
+        if not dep:
+            dep = "미확인"
+        d = dist_detail.setdefault(dep, {"n": 0, "specified": 0})
+        d["n"] += 1
+        if c.get("models_used"):
+            d["specified"] += 1
+    return {"models_top": models_top, "domestic_cases": domestic_cases,
+            "dist_detail": dist_detail}
 
 
 def main():
