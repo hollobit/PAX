@@ -2,8 +2,8 @@
  "generated_at": "2026-08-28",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 228,
- "total_champions": 107,
+ "total_cases": 231,
+ "total_champions": 109,
  "community": {
   "members": 1422,
   "kakao_week": 4460,
@@ -13,19 +13,19 @@
  "certified_champions": 2,
  "unattributed_cases": 61,
  "ax_distribution": {
-  "AI-Ready": 151,
-  "AI-Enabled": 66,
+  "AI-Ready": 153,
+  "AI-Enabled": 67,
   "AX 단계 외": 10,
   "AI-First": 1
  },
- "c_axis_mean": 0.66,
+ "c_axis_mean": 0.68,
  "p_distribution": {
-  "P0": 92,
-  "P1": 131,
+  "P0": 93,
+  "P1": 133,
   "P2": 5
  },
  "model_dependency": {
-  "미확인": 202,
+  "미확인": 205,
   "해외 상용 API": 18,
   "혼합": 1,
   "해외 오픈웨이트(로컬)": 7
@@ -33,11 +33,11 @@
  "domestic_model_rate": 0.0,
  "local_model_rate": 0.269,
  "model_known": 26,
- "license_tagged": 148,
- "license_stated_rate": 0.615,
- "gitlab_cases": 41,
+ "license_tagged": 151,
+ "license_stated_rate": 0.609,
+ "gitlab_cases": 44,
  "gitlab_mirror_pairs": 8,
- "gitlab_open_rate": 0.195,
+ "gitlab_open_rate": 0.182,
  "mcp_cases": 69,
  "transition_funnel": {
   "기관 공식": 32,
@@ -45,11 +45,11 @@
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
-  "개인 사용": 25
+  "개인 사용": 28
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.509
+  "feedback": 0.502
  },
  "maintenance_distribution": {
   "활발": 98,
@@ -59,7 +59,7 @@
  "stars_collected": 125,
  "repo_stats": {
   "gitlab": {
-   "count": 41,
+   "count": 44,
    "starred": 38,
    "stars_sum": 171,
    "maintenance": {
@@ -243,12 +243,13 @@
  },
  "license_distribution": {
   "MIT": 60,
-  "명시 없음": 57,
+  "명시 없음": 59,
   "Other": 15,
   "Apache-2.0": 10,
   "AGPL-3.0": 3,
   "기타(비표준)": 2,
-  "ISC": 1
+  "ISC": 1,
+  "GNU AGPLv3": 1
  },
  "license_matrix": {
   "MIT": {
@@ -257,7 +258,7 @@
   },
   "명시 없음": {
    "github": 36,
-   "gitlab": 21
+   "gitlab": 23
   },
   "Other": {
    "github": 15,
@@ -278,6 +279,10 @@
   "ISC": {
    "github": 1,
    "gitlab": 0
+  },
+  "GNU AGPLv3": {
+   "github": 0,
+   "gitlab": 1
   }
  },
  "license_by_source": {
@@ -290,8 +295,8 @@
    "stated": 4
   },
   "gitlab": {
-   "total": 31,
-   "stated": 10
+   "total": 34,
+   "stated": 11
   }
  },
  "mcp_stats": {
