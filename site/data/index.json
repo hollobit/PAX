@@ -33,6 +33,142 @@
   "모델 중립(BYO)": 47,
   "국산 독자모델": 3
  },
+ "model_stats": {
+  "models_top": [
+   {
+    "name": "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
+    "n": 12,
+    "domestic": false
+   },
+   {
+    "name": "Gemma(Ollama)",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "Gemini",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "OpenAI 호환 로컬(vLLM/Ollama)",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "ChatGPT/Claude/Codex(조회)",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "Ollama(로컬 옵션)",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "OpenAI/Gemini/Claude(사용자 선택)",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "GPT-5.6 Terra",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "GPT-5.6 Luna",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "Gemma 4 E4B(Ollama)",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "Ollama 로컬 모델",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "Whisper(STT)",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "OpenAI/Claude(제공자 전환형)",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "OpenAI/Anthropic(사용자 키)",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "GPT-5.6 Luna(OpenRouter, 동의 시)",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "OpenAI GPT-5(Responses API)",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "HyperCLOVA X",
+    "n": 1,
+    "domestic": true
+   },
+   {
+    "name": "Gemma",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "Whisper",
+    "n": 1,
+    "domestic": false
+   },
+   {
+    "name": "schift-ko-pii(자체 학습)",
+    "n": 1,
+    "domestic": true
+   }
+  ],
+  "domestic_cases": [
+   {
+    "id": "50ab356bb2ee3f4d",
+    "title": "범정부 내부망 AI 브라우저 사이드바 어시스턴트",
+    "models": [
+     "HyperCLOVA X",
+     "Gemma",
+     "Whisper"
+    ]
+   },
+   {
+    "id": "8f7e23fec614657c",
+    "title": "한국어 개인정보 탐지 모델 schift-ko-pii 오픈소스 공개",
+    "models": [
+     "schift-ko-pii(자체 학습)"
+    ]
+   },
+   {
+    "id": "dcba0f654467bdc9",
+    "title": "schift-ko-pii-v6 — 한국어 개인정보 검출·마스킹 경량 모델",
+    "models": [
+     "schift-ko-pii-v6(자체 학습)"
+    ]
+   },
+   {
+    "id": "0dd22d6d0375bc39",
+    "title": "온나라 AI 문서 분배기 — 접수대기 문서를 범정부 AI 공통기반으로 분석해 담당 배분",
+    "models": [
+     "HyperCLOVA X(범정부 AI 공통기반)"
+    ]
+   }
+  ]
+ },
  "domestic_model_rate": 0.055,
  "local_model_rate": 0.182,
  "model_known": 55,

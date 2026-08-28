@@ -56,6 +56,86 @@ async function main() {
     fetch('./data/cases.json', { cache: 'no-cache' }),
   ]);
   const idx = await idxRes.json();
+
+  // ── 모델 현황 — 의존 분포·구체 모델·국산 채택 (2026-08-29) ──
+  (function renderModelStatus() {
+    const dist = idx.model_dependency || {};
+    const stats = idx.model_stats || { models_top: [], domestic_cases: [] };
+    const cards = document.getElementById('model-cards');
+    if (!cards) return;
+    const known = idx.model_known || 0;
+    const mkCard = (v, l) => {
+      const d = el('div', 'obs-card');
+      d.appendChild(el('p', 'obs-card__value', v));
+      d.appendChild(el('p', 'obs-card__label', l));
+      cards.appendChild(d);
+    };
+    mkCard(idx.domestic_model_rate != null ? `${(idx.domestic_model_rate * 100).toFixed(1)}%` : '—',
+      `국산 모델 채택률 (LLM 런타임 ${known}건 기준)`);
+    mkCard(idx.local_model_rate != null ? `${(idx.local_model_rate * 100).toFixed(1)}%` : '—',
+      '로컬 오픈웨이트 실행률');
+    mkCard(`${dist['모델 중립(BYO)'] || 0}건`, '모델 중립(BYO) — 클라이언트 모델 위 구동');
+    mkCard(`${dist['없음(비LLM)'] || 0}건`, '비LLM 도구 (규칙 기반)');
+
+    const ORDER = ['국산 독자모델', '국산 오픈웨이트', '혼합', '해외 상용 API',
+      '해외 오픈웨이트(로컬)', '모델 중립(BYO)', '없음(비LLM)', '미확인'];
+    const MEANING = {
+      '국산 독자모델': '국내 파운데이션 모델 런타임 호출',
+      '국산 오픈웨이트': '국산 공개 가중치 모델 로컬 실행',
+      '혼합': '국산·해외 또는 상용·로컬 병행',
+      '해외 상용 API': 'GPT·Claude·Gemini 등 해외 API 호출',
+      '해외 오픈웨이트(로컬)': 'Llama·Gemma 등 로컬 실행(데이터 미유출)',
+      '모델 중립(BYO)': 'MCP 서버 등 — 모델 교체 무관, 국산 이식 용이 층',
+      '없음(비LLM)': '규칙 기반 도구 — 개발에만 AI 활용',
+      '미확인': 'AI 기능은 있으나 모델 증거 미확보 — 수집 과제',
+    };
+    const total = Object.values(dist).reduce((a, b) => a + b, 0) || 1;
+    const dtbody = document.querySelector('#model-dist-table tbody');
+    for (const key of ORDER) {
+      const n = dist[key] || 0;
+      if (!n) continue;
+      const tr = document.createElement('tr');
+      tr.appendChild(el('td', 'obs-strong', key));
+      tr.appendChild(el('td', null, `${n}건`));
+      const barTd = document.createElement('td');
+      const wrap = el('div', 'model-bar');
+      const fill = el('div', 'model-bar__fill' + (key.startsWith('국산') ? ' model-bar__fill--domestic' : ''));
+      fill.style.width = `${Math.max((n / total) * 100, 2)}%`;
+      wrap.appendChild(fill);
+      wrap.appendChild(el('span', 'model-bar__pct', `${((n / total) * 100).toFixed(1)}%`));
+      barTd.appendChild(wrap);
+      tr.appendChild(barTd);
+      tr.appendChild(el('td', null, MEANING[key] || ''));
+      dtbody.appendChild(tr);
+    }
+
+    const mtbody = document.querySelector('#models-used-table tbody');
+    for (const m of stats.models_top) {
+      const tr = document.createElement('tr');
+      tr.appendChild(el('td', 'obs-strong', m.name));
+      tr.appendChild(el('td', null, `${m.n}건`));
+      tr.appendChild(el('td', m.domestic ? 'obs-covered' : null, m.domestic ? '국산 ✓' : '—'));
+      mtbody.appendChild(tr);
+    }
+    if (!stats.models_top.length) {
+      const tr = document.createElement('tr');
+      tr.appendChild(el('td', null, '기재된 구체 모델 없음'));
+      mtbody.appendChild(tr);
+    }
+
+    const dl = document.getElementById('domestic-model-list');
+    for (const d of stats.domestic_cases) {
+      const li = document.createElement('li');
+      const a = el('a', null, d.title);
+      a.href = `case/${encodeURIComponent(d.id)}.html`;
+      li.appendChild(a);
+      if (d.models && d.models.length) li.append(` — ${d.models.join(', ')}`);
+      dl.appendChild(li);
+    }
+    if (!stats.domestic_cases.length) {
+      dl.appendChild(el('li', null, '아직 관측되지 않음 — 이 빈칸 자체가 관측 결과입니다'));
+    }
+  })();
   const cases = (await casesRes.json()).cases;
 
   document.getElementById('obs-quarter').textContent =
