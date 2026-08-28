@@ -1,6 +1,6 @@
 {
- "evaluated_at": "2026-08-28",
- "total": 231,
+ "evaluated_at": "2026-08-29",
+ "total": 232,
  "cases": [
   {
    "no": 1,
@@ -7622,6 +7622,39 @@
    "tool_type": "웹 서비스",
    "audience": "G2C 공개",
    "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 232,
+   "id": "2863151971658b11",
+   "org": "교육 현장(개인 개발)",
+   "title": "늘봄학교 예산 편성 대시보드 — 실시간 협업으로 본예산·추경을 함께 짜는 도구",
+   "ax_prev": "AI-Ready",
+   "ax": "AI-Ready",
+   "s": "S1",
+   "s_name": "Script/보조",
+   "c": "C2",
+   "c_name": "부분 완결",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Live service",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R1 낮음",
+   "human": "해당 없음",
+   "evidence": "E1 코드·도구 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "예산 편성의 취합·병합 반복을 실시간 동시 협업 한 화면으로 완결(C2)하는 라이브 도구 — 한셀 내보내기 등 교육행정 실무 환경 적합성이 높다. AI 요소는 제한적이라 Ready. 예산 데이터의 공개 범위 관리가 운영 과제.",
+   "feedback": "미확인",
+   "resilience": "미확인—개인 배포(netlify)·클라우드 동기화 의존",
+   "post_url": "",
+   "service_url": "https://profound-starburst-b39e5b.netlify.app",
+   "tool_type": "대시보드·분석",
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }
