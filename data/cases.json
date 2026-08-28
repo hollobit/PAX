@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-28T22:05:53+09:00",
+ "updated_at": "2026-08-28T22:30:55+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -6129,6 +6129,30 @@
    "case_class": "참고",
    "id": "b64e832490a6c814",
    "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-08-28"
+  },
+  {
+   "title": "Archify — 코드베이스·시스템 설명을 검증 가능한 다이어그램으로 바꾸는 에이전트 스킬",
+   "tags": [
+    "다이어그램",
+    "에이전트스킬",
+    "문서화",
+    "해외참고"
+   ],
+   "collected_at": "2026-08-28",
+   "summary": "코드베이스나 시스템 설명을 아키텍처·워크플로·시퀀스·데이터 흐름·수명주기 다이어그램으로 바꿔주는 에이전트 스킬(MIT, 스타 2.5만+). 에이전트가 타입드 JSON 중간표현을 만들면 결정론적으로 자체 완결 HTML/SVG로 컴파일해, 그림이 그때그때 달라지는 생성형 다이어그램의 검증 불가 문제를 푼다. 공공 실무의 업무 구조도·시스템 구성도 문서화(업무구조도 생성기류)에 직접 응용 가능한 참고 사례다.",
+   "link": "https://github.com/tt-a1i/archify",
+   "org_type": "해외(참고)",
+   "date": "2026-08-28",
+   "source": "kakao",
+   "transition_stage": "개인 사용",
+   "org": "해외 오픈소스",
+   "case_class": "참고",
+   "task_category": "문서·기안",
+   "runtime_env": "AI 도구 설정",
+   "id": "4f136eeeea72fe65",
+   "license": "MIT",
    "license_source": "github",
    "license_checked": "2026-08-28"
   }

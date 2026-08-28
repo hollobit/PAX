@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-08-28",
- "total": 227,
+ "total": 228,
  "cases": [
   {
    "no": 1,
@@ -7490,6 +7490,39 @@
    "tool_type": "MCP 서버·도구",
    "audience": "G2E 공직 실무자",
    "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 228,
+   "id": "4f136eeeea72fe65",
+   "org": "해외 오픈소스",
+   "title": "Archify — 코드베이스·시스템 설명을 검증 가능한 다이어그램으로 바꾸는 에이전트 스킬",
+   "ax_prev": "AI-Ready",
+   "ax": "AI-Ready",
+   "s": "S2",
+   "s_name": "Tool bundle",
+   "c": "C2",
+   "c_name": "부분 완결",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Published tool",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R0 최소",
+   "human": "해당 없음",
+   "evidence": "E1 코드·도구 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "생성형 다이어그램의 재현 불가 문제를 '타입드 IR→결정론 컴파일'로 푼 검증된 패턴(스타 2.5만+) — 공공 문서의 구조도·흐름도 자동화 응용 참고. 다이어그램 산출이 스킬 안에서 완결(C2).",
+   "feedback": "부분확인(대규모 커뮤니티 사용)",
+   "resilience": "부분확인(활발 유지보수·MIT)",
+   "post_url": "",
+   "service_url": "https://github.com/tt-a1i/archify",
+   "tool_type": "AI 스킬·에이전트",
+   "audience": "G2E 공직 실무자",
+   "p": "P1 산출물 생성(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }

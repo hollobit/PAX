@@ -2836,6 +2836,12 @@
    "title": "MCP Inspector — MCP 서버를 눈으로 검사하는 공식 테스트 도구",
    "org": "Model Context Protocol(공식)",
    "url": "https://github.com/modelcontextprotocol/inspector"
+  },
+  {
+   "id": "4f136eeeea72fe65",
+   "title": "Archify — 코드베이스·시스템 설명을 검증 가능한 다이어그램으로 바꾸는 에이전트 스킬",
+   "org": "해외 오픈소스",
+   "url": "https://github.com/tt-a1i/archify"
   }
  ]
 }
