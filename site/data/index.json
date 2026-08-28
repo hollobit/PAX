@@ -36,103 +36,336 @@
  "model_stats": {
   "models_top": [
    {
-    "name": "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
-    "n": 12,
+    "name": "Claude/Codex(상용 에이전트)",
+    "n": 13,
+    "variants": [
+     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
+     "상용 API 모드(Claude 등)"
+    ],
+    "cases": [
+     {
+      "id": "7acf5f25369c1401",
+      "title": "시연 영상 제작 자동화 스킬 공유"
+     },
+     {
+      "id": "112bf7dc576ed8aa",
+      "title": "공공행정 리서치 스킬 — 공식 근거를 검토용 보고서로 정리"
+     },
+     {
+      "id": "2f4ed1e68a6464c5",
+      "title": "K-Skill — 한국인을 위한 AI 스킬 모음집"
+     },
+     {
+      "id": "f0c21de2b0af63b3",
+      "title": "업무구조도 생성기 korea100studio 오픈소스 공개"
+     },
+     {
+      "id": "ac09bd2e1c0fbb29",
+      "title": "온AI Work — 공무원 보고서 AI 작성 도구"
+     },
+     {
+      "id": "17ed2d7a88c03119",
+      "title": "Rekian — HWPX 공문서 재기안 에이전트 스킬셋"
+     },
+     {
+      "id": "acd684108227b9c2",
+      "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
+     },
+     {
+      "id": "cb0abc29707cc710",
+      "title": "수정 가능한 PPTX·피그마 슬라이드 스킬 — 공공 카드뉴스 스타일"
+     },
+     {
+      "id": "539f90471f451d80",
+      "title": "hwpx-skill — AI 에이전트가 한글(HWPX) 문서를 만들고 고치는 Claude 스킬"
+     },
+     {
+      "id": "4032cd7b445543e6",
+      "title": "바이브코드 하네스 — 기획부터 보안 점검까지 같은 순서로 만드는 실행형 개발 하네스"
+     },
+     {
+      "id": "c54ee4b5fb3ee4c5",
+      "title": "Orca — 병렬 에이전트 플릿을 부리는 에이전트 개발 환경(ADE)"
+     },
+     {
+      "id": "f108979f0d8b2009",
+      "title": "book-to-skill — 기술 서적 PDF를 Claude Code 스킬로 바꾸는 도구"
+     },
+     {
+      "id": "4f136eeeea72fe65",
+      "title": "Archify — 코드베이스·시스템 설명을 검증 가능한 다이어그램으로 바꾸는 에이전트 스킬"
+     }
+    ],
     "domestic": false
    },
    {
-    "name": "HCX-GOV-THINK-V1-32B(범정부 AI 공통기반)",
+    "name": "GPT(OpenAI)",
+    "n": 9,
+    "variants": [
+     "ChatGPT/Claude/Codex(승인 문서 조회)",
+     "GPT(OpenAI API)",
+     "GPT-5.6 Luna",
+     "GPT-5.6 Luna(OpenRouter, 동의 시)",
+     "GPT-5.6 Terra",
+     "LM Studio 로컬 모델(OpenAI 호환)",
+     "OpenAI GPT-5(Responses API)",
+     "OpenAI/Anthropic(사용자 키)",
+     "OpenAI/Claude(제공자 전환형)",
+     "vLLM/Ollama/LiteLLM 로컬(OpenAI 호환)"
+    ],
+    "cases": [
+     {
+      "id": "de4b2dab339d69b7",
+      "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
+     },
+     {
+      "id": "ea2bce110972762e",
+      "title": "공공기관 규정 MCP 생성기"
+     },
+     {
+      "id": "92d5147e02f7ae36",
+      "title": "NCS 기반 구조화 면접 질문 생성기 NCScope"
+     },
+     {
+      "id": "00411127055c4a07",
+      "title": "공무원 필수교육 이수 관리 시스템 공개"
+     },
+     {
+      "id": "a7abbaedd53db684",
+      "title": "국회 법안·회의록 탐색 MCP — 공식 기록 검증"
+     },
+     {
+      "id": "e18d5e018e0cd10d",
+      "title": "오토한글 — 브라우저·터미널용 HWP 편집 엔진"
+     },
+     {
+      "id": "8c5458af8f13435d",
+      "title": "한글 AI 도우미 — 로컬 LLM 웹한글 보고서 확장"
+     },
+     {
+      "id": "d6c35b2999da8ca0",
+      "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱"
+     },
+     {
+      "id": "b3294bcc65e7f2e7",
+      "title": "소방기술민원 답변생성기 — 법령·유사민원 검색과 참고 답변 초안"
+     }
+    ],
+    "domestic": false
+   },
+   {
+    "name": "로컬 서빙(Ollama·vLLM 등)",
+    "n": 6,
+    "variants": [
+     "Ollama 로컬 모델",
+     "Ollama 로컬 모델(Spring AI)",
+     "Ollama 로컬 모델(멀티 호스트)",
+     "Ollama 오픈웨이트 모드(로컬 완결)",
+     "Ollama(로컬 실행)",
+     "Ollama/vLLM 로컬(기본)",
+     "WebGPU 브라우저 모델"
+    ],
+    "cases": [
+     {
+      "id": "ea2bce110972762e",
+      "title": "공공기관 규정 MCP 생성기"
+     },
+     {
+      "id": "1502d338e8e99382",
+      "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
+     },
+     {
+      "id": "fe3bb0d913e27677",
+      "title": "로컬 Ollama 기반 MCP 멀티 호스트"
+     },
+     {
+      "id": "edf9a8632ff74a99",
+      "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연"
+     },
+     {
+      "id": "e7949c7bc45ca8e6",
+      "title": "출장 여비 서류 자동화 오픈소스 — 신청서·명세서·복명서 일괄 생성"
+     },
+     {
+      "id": "acd684108227b9c2",
+      "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
+     }
+    ],
+    "domestic": false
+   },
+   {
+    "name": "Gemma",
+    "n": 5,
+    "variants": [
+     "Gemma 4 E2B(Ollama 번들)",
+     "Gemma 4 E2B(Ollama, 선택형 요약)",
+     "Gemma 4 E4B(Ollama 권장)",
+     "Gemma 4 E4B(Ollama)",
+     "LLM42-Gemma4(멀티모달 전환)"
+    ],
+    "cases": [
+     {
+      "id": "2c14f2adaa83a00e",
+      "title": "로컬 인수인계 도구 MVP 공개 — 공공 AX 로컬 시리즈 3"
+     },
+     {
+      "id": "9d115930495a1e65",
+      "title": "공무원용 로컬 AI 에이전트 워크플레이스 개발"
+     },
+     {
+      "id": "ec17e6cd86e7aaa1",
+      "title": "PDF 번역·검토 작업장 — 공공 AX 로컬 시리즈 6"
+     },
+     {
+      "id": "50ab356bb2ee3f4d",
+      "title": "범정부 내부망 AI 브라우저 사이드바 어시스턴트"
+     },
+     {
+      "id": "75b6a86d91aea955",
+      "title": "AI지원담당 — 공공 실무용 로컬 AI 메신저 MVP (공공 AX 로컬 시리즈 1)"
+     }
+    ],
+    "domestic": false
+   },
+   {
+    "name": "Gemini",
+    "n": 5,
+    "variants": [
+     "Claude/Codex/Gemini(어댑터)",
+     "Gemini 3.5 Flash",
+     "Gemini(옵션 전환)",
+     "Gemini(옵션)",
+     "OpenAI/Gemini/Claude(사용자 선택)"
+    ],
+    "cases": [
+     {
+      "id": "de4b2dab339d69b7",
+      "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
+     },
+     {
+      "id": "48e33f2318bdffae",
+      "title": "클릭 과정을 PDF 가이드로 만드는 ClickGuide Local"
+     },
+     {
+      "id": "1502d338e8e99382",
+      "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
+     },
+     {
+      "id": "c5aa260668941b92",
+      "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커"
+     },
+     {
+      "id": "539d5aacb03635db",
+      "title": "민원 신고 스크리너 — 신고 7유형·근거법령·소관부서 자동 판별 모듈"
+     }
+    ],
+    "domestic": false
+   },
+   {
+    "name": "HyperCLOVA X",
     "n": 2,
+    "variants": [
+     "HCX-GOV-THINK-V1-32B(범정부 AI 공통기반)"
+    ],
+    "cases": [
+     {
+      "id": "50ab356bb2ee3f4d",
+      "title": "범정부 내부망 AI 브라우저 사이드바 어시스턴트"
+     },
+     {
+      "id": "0dd22d6d0375bc39",
+      "title": "온나라 AI 문서 분배기 — 접수대기 문서를 범정부 AI 공통기반으로 분석해 담당 배분"
+     }
+    ],
     "domestic": true
    },
    {
-    "name": "Gemma 4 E2B(Ollama, 선택형 요약)",
+    "name": "schift(자체 학습)",
+    "n": 2,
+    "variants": [
+     "schift-ko-pii(자체 학습)",
+     "schift-ko-pii-v6(자체 학습)"
+    ],
+    "cases": [
+     {
+      "id": "8f7e23fec614657c",
+      "title": "한국어 개인정보 탐지 모델 schift-ko-pii 오픈소스 공개"
+     },
+     {
+      "id": "dcba0f654467bdc9",
+      "title": "schift-ko-pii-v6 — 한국어 개인정보 검출·마스킹 경량 모델"
+     }
+    ],
+    "domestic": true
+   },
+   {
+    "name": "Qwen",
     "n": 1,
+    "variants": [
+     "Qwen(로컬 RAG 챗)"
+    ],
+    "cases": [
+     {
+      "id": "ea2bce110972762e",
+      "title": "공공기관 규정 MCP 생성기"
+     }
+    ],
     "domestic": false
    },
    {
-    "name": "Gemini(옵션)",
+    "name": "Whisper",
     "n": 1,
+    "variants": [
+     "Whisper(STT)"
+    ],
+    "cases": [
+     {
+      "id": "edf9a8632ff74a99",
+      "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연"
+     }
+    ],
     "domestic": false
    },
    {
-    "name": "vLLM/Ollama/LiteLLM 로컬(OpenAI 호환)",
+    "name": "GLM",
     "n": 1,
+    "variants": [
+     "GLM-5.3(에이전트 레지스트리)"
+    ],
+    "cases": [
+     {
+      "id": "c5aa260668941b92",
+      "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커"
+     }
+    ],
     "domestic": false
    },
    {
-    "name": "Qwen(로컬 RAG 챗)",
+    "name": "로컬 분석(기본)",
     "n": 1,
+    "variants": [
+     "로컬 분석(기본)"
+    ],
+    "cases": [
+     {
+      "id": "c7e0862df664bbe5",
+      "title": "AI Survey Insight — 설문 주관식 수백 건을 주제·감정별로 정리하는 분석 도구"
+     }
+    ],
     "domestic": false
    },
    {
-    "name": "ChatGPT/Claude/Codex(승인 문서 조회)",
+    "name": "외부 AI(선택 연결)",
     "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "Ollama(로컬 실행)",
-    "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "OpenAI/Gemini/Claude(사용자 선택)",
-    "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "GPT-5.6 Terra",
-    "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "GPT-5.6 Luna",
-    "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "Gemma 4 E2B(Ollama 번들)",
-    "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "Ollama/vLLM 로컬(기본)",
-    "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "Gemini(옵션 전환)",
-    "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "Gemma 4 E4B(Ollama)",
-    "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "Ollama 로컬 모델(멀티 호스트)",
-    "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "Ollama 로컬 모델(Spring AI)",
-    "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "Whisper(STT)",
-    "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "OpenAI/Claude(제공자 전환형)",
-    "n": 1,
-    "domestic": false
-   },
-   {
-    "name": "Ollama 로컬 모델",
-    "n": 1,
+    "variants": [
+     "외부 AI(선택 연결)"
+    ],
+    "cases": [
+     {
+      "id": "c7e0862df664bbe5",
+      "title": "AI Survey Insight — 설문 주관식 수백 건을 주제·감정별로 정리하는 분석 도구"
+     }
+    ],
     "domestic": false
    }
   ],

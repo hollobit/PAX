@@ -170,16 +170,44 @@ DOMESTIC_MODEL_RE = None  # 아래 함수에서 지연 컴파일
 
 
 def model_stats(cases: list) -> dict:
-    """관측소 모델 현황 섹션용 — 구체 모델 사용 집계와 국산 채택 사례."""
+    """관측소 모델 현황 섹션용 — 모델 패밀리로 정규화해 집계하고 사례를 연결한다."""
     import re
-    from collections import Counter
     dom_re = re.compile(r"HyperCLOVA|하이퍼클로바|CLOVA|HCX|schift|EXAONE|엑사원|Solar|가우스|믿:?음|Kanana|A\.X")
-    model_count = Counter()
+    # 표기 변형을 패밀리로 묶는 정규화 — 순서 중요(구체 패턴 먼저)
+    FAMILY_RULES = [
+        (re.compile(r"HCX|HyperCLOVA|하이퍼클로바", re.I), "HyperCLOVA X"),
+        (re.compile(r"schift", re.I), "schift(자체 학습)"),
+        (re.compile(r"Gemma", re.I), "Gemma"),
+        (re.compile(r"Gemini|제미나이", re.I), "Gemini"),
+        (re.compile(r"GPT|OpenAI", re.I), "GPT(OpenAI)"),
+        (re.compile(r"Claude|Codex|Anthropic|상용 코딩 에이전트", re.I), "Claude/Codex(상용 에이전트)"),
+        (re.compile(r"Qwen", re.I), "Qwen"),
+        (re.compile(r"GLM", re.I), "GLM"),
+        (re.compile(r"Whisper", re.I), "Whisper"),
+        (re.compile(r"Ollama|vLLM|LiteLLM|LM Studio|WebGPU", re.I), "로컬 서빙(Ollama·vLLM 등)"),
+    ]
+
+    def family_of(name: str) -> str:
+        for pat, fam in FAMILY_RULES:
+            if pat.search(name):
+                return fam
+        return name  # 미분류는 원문 유지
+
+    fams: dict[str, dict] = {}
     for c in cases:
+        seen_fams = set()  # 한 사례가 같은 패밀리를 여러 표기로 써도 1회만 센다
         for m in c.get("models_used") or []:
-            model_count[m] += 1
-    models_top = [{"name": name, "n": n, "domestic": bool(dom_re.search(name))}
-                  for name, n in model_count.most_common(20)]
+            fam = family_of(m)
+            entry = fams.setdefault(fam, {"name": fam, "n": 0, "variants": set(),
+                                          "cases": [], "domestic": bool(dom_re.search(fam))})
+            entry["variants"].add(m)
+            if fam not in seen_fams:
+                entry["n"] += 1
+                entry["cases"].append({"id": c["id"], "title": c["title"]})
+                seen_fams.add(fam)
+    models_top = sorted(fams.values(), key=lambda e: -e["n"])[:20]
+    for e in models_top:
+        e["variants"] = sorted(e["variants"])
     domestic_cases = [{"id": c["id"], "title": c["title"],
                        "models": c.get("models_used") or []}
                       for c in cases
