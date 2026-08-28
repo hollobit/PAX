@@ -34,7 +34,7 @@ TASK_CATEGORIES = frozenset(["인사·복무", "회계·정산", "계약·조달
 TRANSITION_STAGES = frozenset(["개인 사용", "부서 공유", "기관 공식", "타 기관 재사용", "범정부 탑재"])
 BLOCKERS = frozenset(["보안검토", "예산", "담당자 이동", "레거시 미연동", "법적 근거", "조직 저항"])
 MODEL_DEPS = frozenset(["국산 독자모델", "국산 오픈웨이트", "해외 상용 API",
-                        "해외 오픈웨이트(로컬)", "혼합", "없음(비LLM)", "미상"])
+                        "해외 오픈웨이트(로컬)", "혼합", "모델 중립(BYO)", "없음(비LLM)", "미상"])
 DEPLOYMENT_ENVS = frozenset(["인터넷망", "행정망", "폐쇄망", "로컬 PC", "클라우드(CSAP)", "혼합"])
 N2SF_CLASSES = frozenset(["O(공개)", "S(민감)", "C(기밀)"])
 

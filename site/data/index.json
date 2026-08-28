@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-08-28",
+ "generated_at": "2026-08-29",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
  "total_cases": 231,
  "total_champions": 109,
  "community": {
-  "members": 1422,
-  "kakao_week": 4460,
-  "kakao_total_observed": 17825,
+  "members": 1426,
+  "kakao_week": 4822,
+  "kakao_total_observed": 18187,
   "threads_observed": 177
  },
  "certified_champions": 2,
@@ -25,14 +25,17 @@
   "P2": 5
  },
  "model_dependency": {
-  "미확인": 205,
-  "해외 상용 API": 18,
-  "혼합": 1,
-  "해외 오픈웨이트(로컬)": 7
+  "미확인": 66,
+  "없음(비LLM)": 63,
+  "해외 오픈웨이트(로컬)": 10,
+  "혼합": 4,
+  "해외 상용 API": 38,
+  "모델 중립(BYO)": 47,
+  "국산 독자모델": 3
  },
- "domestic_model_rate": 0.0,
- "local_model_rate": 0.269,
- "model_known": 26,
+ "domestic_model_rate": 0.055,
+ "local_model_rate": 0.182,
+ "model_known": 55,
  "license_tagged": 151,
  "license_stated_rate": 0.609,
  "gitlab_cases": 44,

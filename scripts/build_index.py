@@ -41,7 +41,8 @@ def build() -> dict:
     p_dist = Counter((e.get("p") or "미확인").split(" ")[0] for e in evals)
 
     model_dist = Counter(c.get("model_dependency") or "미확인" for c in cases)
-    known_model = sum(n for k, n in model_dist.items() if k != "미확인")
+    llm_deps = {"국산 독자모델", "국산 오픈웨이트", "해외 상용 API", "해외 오픈웨이트(로컬)", "혼합"}
+    known_model = sum(v for k, v in model_dist.items() if k in llm_deps)  # 채택률 분모 = LLM 런타임 보유 사례
     domestic = model_dist.get("국산 독자모델", 0) + model_dist.get("국산 오픈웨이트", 0)
     local = model_dist.get("해외 오픈웨이트(로컬)", 0)
 

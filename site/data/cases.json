@@ -102,6 +102,7 @@
    "maintenance": "활발",
    "stars": 3,
    "stars_gitlab": 3,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786883721
   },
   {
@@ -131,6 +132,7 @@
    "maintenance": "활발",
    "stars": 3,
    "stars_github": 3,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
   {
@@ -159,6 +161,10 @@
    "maintenance": "활발",
    "stars": 10,
    "stars_github": 10,
+   "model_dependency": "해외 오픈웨이트(로컬)",
+   "models_used": [
+    "Gemma(Ollama)"
+   ],
    "thumb_v": 1786110275
   },
   {
@@ -212,6 +218,11 @@
    "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/Docufinder",
    "stars_github": 639,
    "stars_gitlab": 6,
+   "model_dependency": "혼합",
+   "models_used": [
+    "Gemini",
+    "OpenAI 호환 로컬(vLLM/Ollama)"
+   ],
    "thumb_v": 1786110277
   },
   {
@@ -310,6 +321,7 @@
    "link_ok": true,
    "health_checked": "2026-08-24",
    "transition_stage": "기관 공식",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
   {
@@ -341,6 +353,7 @@
    "stars_github": 0,
    "stars": 0,
    "maintenance": "활발",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
   {
@@ -362,6 +375,7 @@
    "task_category": "기획·정책",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110277
   },
   {
@@ -390,6 +404,7 @@
    "maintenance": "정체",
    "stars": 40,
    "stars_github": 40,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786110276
   },
   {
@@ -418,6 +433,10 @@
    "maintenance": "활발",
    "stars": 16,
    "stars_github": 16,
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1786110276
   },
   {
@@ -485,6 +504,7 @@
    "runtime_env": "브라우저만",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
   {
@@ -516,6 +536,7 @@
    "stars": 14,
    "stars_github": 14,
    "stars_gitlab": 5,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110277
   },
   {
@@ -538,6 +559,7 @@
    "runtime_env": "설치 필요",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110277
   },
   {
@@ -566,6 +588,7 @@
    "maintenance": "활발",
    "stars": 9,
    "stars_github": 9,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110275
   },
   {
@@ -611,6 +634,7 @@
    "task_category": "회계·정산",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
   {
@@ -671,6 +695,11 @@
    "mcp_official": false,
    "stars": 33,
    "stars_github": 33,
+   "model_dependency": "혼합",
+   "models_used": [
+    "ChatGPT/Claude/Codex(조회)",
+    "Ollama(로컬 옵션)"
+   ],
    "thumb_v": 1786110277
   },
   {
@@ -696,6 +725,7 @@
    "runtime_env": "브라우저만",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
   {
@@ -752,6 +782,10 @@
    "maintenance": "활발",
    "stars": 42,
    "stars_github": 42,
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "OpenAI/Gemini/Claude(사용자 선택)"
+   ],
    "thumb_v": 1786110276
   },
   {
@@ -782,6 +816,7 @@
    "mcp_official": false,
    "stars": 6,
    "stars_github": 6,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110275
   },
   {
@@ -805,6 +840,7 @@
    "runtime_env": "설치 필요",
    "link_ok": false,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110275
   },
   {
@@ -833,6 +869,11 @@
    "maintenance": "활발",
    "stars": 5,
    "stars_github": 5,
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "GPT-5.6 Terra",
+    "GPT-5.6 Luna"
+   ],
    "thumb_v": 1786110276
   },
   {
@@ -857,6 +898,7 @@
    "runtime_env": "브라우저만",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1787241264
   },
   {
@@ -879,6 +921,7 @@
    "runtime_env": "브라우저만",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110277
   },
   {
@@ -902,6 +945,7 @@
    "runtime_env": "설치 필요",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
   {
@@ -931,6 +975,7 @@
    "maintenance": "활발",
    "stars": 1,
    "stars_github": 1,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
   {
@@ -953,6 +998,7 @@
    "runtime_env": "브라우저만",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
   {
@@ -1029,6 +1075,7 @@
    "link_ok": true,
    "health_checked": "2026-08-24",
    "mcp_official": false,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
   {
@@ -1248,6 +1295,7 @@
    "task_category": "데이터·통계",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110275
   },
   {
@@ -1270,6 +1318,7 @@
    "task_category": "시설·안전",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
   {
@@ -1292,6 +1341,7 @@
    "task_category": "데이터·통계",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
   {
@@ -1314,6 +1364,7 @@
    "task_category": "시설·안전",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110277
   },
   {
@@ -1344,6 +1395,7 @@
    "stars_github": 81,
    "case_url": "https://service.datahub.kr/projects/public-data-lens/",
    "runtime_env": "MCP·CLI 설정",
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786110275
   },
   {
@@ -1470,6 +1522,7 @@
    "task_category": "기획·정책",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
   {
@@ -1498,6 +1551,10 @@
    "maintenance": "활발",
    "stars": 1,
    "stars_github": 1,
+   "model_dependency": "해외 오픈웨이트(로컬)",
+   "models_used": [
+    "Gemma 4 E4B(Ollama)"
+   ],
    "thumb_v": 1786110277
   },
   {
@@ -1561,6 +1618,7 @@
    "maintenance": "활발",
    "stars_github": 2,
    "stars": 2,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
   {
@@ -1589,6 +1647,7 @@
    "maintenance": "활발",
    "stars": 1,
    "stars_github": 1,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
   {
@@ -1702,6 +1761,7 @@
    "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/kordoc",
    "stars_github": 1765,
    "stars_gitlab": 6,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786110276
   },
   {
@@ -1891,6 +1951,11 @@
    "mcp_official": false,
    "stars": 136,
    "stars_github": 136,
+   "model_dependency": "해외 오픈웨이트(로컬)",
+   "models_used": [
+    "Ollama 로컬 모델",
+    "Whisper(STT)"
+   ],
    "thumb_v": 1786150115
   },
   {
@@ -1982,6 +2047,7 @@
    "mcp_official": false,
    "stars": 288,
    "stars_github": 288,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786155309
   },
   {
@@ -2006,6 +2072,7 @@
    "link_ok": false,
    "health_checked": "2026-08-24",
    "transition_stage": "기관 공식",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786156367
   },
   {
@@ -2035,6 +2102,10 @@
    "maintenance": "활발",
    "stars": 5,
    "stars_gitlab": 5,
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "OpenAI/Claude(제공자 전환형)"
+   ],
    "thumb_v": 1786192587
   },
   {
@@ -2063,6 +2134,7 @@
    "runtime_env": "브라우저만",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786279979
   },
   {
@@ -2189,6 +2261,7 @@
    "runtime_env": "브라우저만",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786439862
   },
   {
@@ -2219,6 +2292,7 @@
    "maintenance": "활발",
    "stars": 3,
    "stars_github": 3,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786439867
   },
   {
@@ -2279,6 +2353,10 @@
    "stars": 4,
    "stars_github": 4,
    "stars_gitlab": 3,
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1786439877
   },
   {
@@ -2385,6 +2463,7 @@
    "runtime_env": "브라우저만",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786494961
   },
   {
@@ -2450,6 +2529,7 @@
    "mcp_official": false,
    "stars": 0,
    "stars_github": 0,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786538215
   },
   {
@@ -2482,6 +2562,7 @@
    "mcp_official": false,
    "stars": 2,
    "stars_github": 2,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786538218
   },
   {
@@ -2549,6 +2630,7 @@
    "case_url": "https://gitlab.aigov.go.kr/chrisryugj/korean-law-mcp",
    "stars_github": 2509,
    "stars_gitlab": 13,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546245
   },
   {
@@ -2582,6 +2664,7 @@
    "mcp_official": false,
    "stars": 130,
    "stars_github": 130,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546248
   },
   {
@@ -2613,6 +2696,7 @@
    "mcp_official": false,
    "stars": 73,
    "stars_github": 73,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546251
   },
   {
@@ -2676,6 +2760,7 @@
    "mcp_official": false,
    "stars": 9,
    "stars_github": 9,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786546257
   },
   {
@@ -2708,6 +2793,7 @@
    "mcp_official": false,
    "stars": 9,
    "stars_github": 9,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546260
   },
   {
@@ -2739,6 +2825,7 @@
    "mcp_official": false,
    "stars": 2,
    "stars_github": 2,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546263
   },
   {
@@ -2769,6 +2856,7 @@
    "mcp_official": false,
    "stars": 5,
    "stars_github": 5,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546266
   },
   {
@@ -2801,6 +2889,7 @@
    "mcp_official": false,
    "stars": 5,
    "stars_github": 5,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546269
   },
   {
@@ -2831,6 +2920,7 @@
    "mcp_official": false,
    "stars": 4,
    "stars_github": 4,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546272
   },
   {
@@ -2861,6 +2951,7 @@
    "mcp_official": false,
    "stars": 2,
    "stars_github": 2,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546275
   },
   {
@@ -2892,6 +2983,7 @@
    "mcp_official": false,
    "stars": 173,
    "stars_github": 173,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546278
   },
   {
@@ -2923,6 +3015,7 @@
    "mcp_official": false,
    "stars": 128,
    "stars_github": 128,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546281
   },
   {
@@ -2954,6 +3047,7 @@
    "mcp_official": false,
    "stars": 94,
    "stars_github": 94,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546285
   },
   {
@@ -2984,6 +3078,7 @@
    "mcp_official": false,
    "stars": 55,
    "stars_github": 55,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546288
   },
   {
@@ -3046,6 +3141,7 @@
    "mcp_official": false,
    "stars": 11,
    "stars_github": 11,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546294
   },
   {
@@ -3076,6 +3172,7 @@
    "mcp_official": false,
    "stars": 3,
    "stars_github": 3,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546297
   },
   {
@@ -3106,6 +3203,7 @@
    "mcp_official": false,
    "stars": 2,
    "stars_github": 2,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546300
   },
   {
@@ -3137,6 +3235,7 @@
    "mcp_official": false,
    "stars": 371,
    "stars_github": 371,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546303
   },
   {
@@ -3167,6 +3266,7 @@
    "mcp_official": false,
    "stars": 15,
    "stars_github": 15,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546306
   },
   {
@@ -3197,6 +3297,7 @@
    "mcp_official": false,
    "stars": 15,
    "stars_github": 15,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546309
   },
   {
@@ -3227,6 +3328,7 @@
    "mcp_official": false,
    "stars": 2,
    "stars_github": 2,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546312
   },
   {
@@ -3257,6 +3359,7 @@
    "mcp_official": false,
    "stars": 1,
    "stars_github": 1,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546315
   },
   {
@@ -3289,6 +3392,10 @@
    "mcp_official": false,
    "stars": 7289,
    "stars_github": 7289,
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1786546318
   },
   {
@@ -3319,6 +3426,7 @@
    "mcp_official": false,
    "stars": 63,
    "stars_github": 63,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546321
   },
   {
@@ -3349,6 +3457,7 @@
    "mcp_official": false,
    "stars": 25,
    "stars_github": 25,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546324
   },
   {
@@ -3379,6 +3488,7 @@
    "mcp_official": false,
    "stars": 12,
    "stars_github": 12,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546327
   },
   {
@@ -3410,6 +3520,7 @@
    "mcp_official": false,
    "stars": 88,
    "stars_github": 88,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546330
   },
   {
@@ -3440,6 +3551,7 @@
    "mcp_official": false,
    "stars": 41,
    "stars_github": 41,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546333
   },
   {
@@ -3470,6 +3582,7 @@
    "mcp_official": false,
    "stars": 9,
    "stars_github": 9,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546336
   },
   {
@@ -3500,6 +3613,7 @@
    "mcp_official": false,
    "stars": 5,
    "stars_github": 5,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546339
   },
   {
@@ -3530,6 +3644,7 @@
    "mcp_official": false,
    "stars": 2,
    "stars_github": 2,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546342
   },
   {
@@ -3592,6 +3707,7 @@
    "maintenance": "활발",
    "stars": 45,
    "stars_github": 45,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546348
   },
   {
@@ -3623,6 +3739,7 @@
    "mcp_official": false,
    "stars": 0,
    "stars_github": 0,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546538
   },
   {
@@ -3653,6 +3770,7 @@
    "mcp_official": false,
    "stars": 1,
    "stars_github": 1,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546541
   },
   {
@@ -3684,6 +3802,10 @@
    "mcp_official": false,
    "stars": 25,
    "stars_github": 25,
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "OpenAI/Anthropic(사용자 키)"
+   ],
    "thumb_v": 1786546544
   },
   {
@@ -3715,6 +3837,7 @@
    "mcp_official": false,
    "stars": 11,
    "stars_github": 11,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546547
   },
   {
@@ -3746,6 +3869,7 @@
    "mcp_official": false,
    "stars": 0,
    "stars_github": 0,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546550
   },
   {
@@ -3777,6 +3901,7 @@
    "mcp_official": false,
    "stars": 3,
    "stars_github": 3,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546735
   },
   {
@@ -3808,6 +3933,7 @@
    "mcp_official": false,
    "stars": 0,
    "stars_github": 0,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546738
   },
   {
@@ -3870,6 +3996,7 @@
    "mcp_official": false,
    "stars": 0,
    "stars_github": 0,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786546744
   },
   {
@@ -3901,6 +4028,7 @@
    "mcp_official": false,
    "stars": 0,
    "stars_github": 0,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546747
   },
   {
@@ -3932,6 +4060,7 @@
    "mcp_official": false,
    "stars": 4,
    "stars_github": 4,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546874
   },
   {
@@ -3986,6 +4115,10 @@
    "maintenance": "활발",
    "stars": 14,
    "stars_github": 14,
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1786715187
   },
   {
@@ -4044,6 +4177,7 @@
    "link_ok": true,
    "health_checked": "2026-08-24",
    "transition_stage": "기관 공식",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786715193
   },
   {
@@ -4069,6 +4203,7 @@
    "link_ok": false,
    "health_checked": "2026-08-24",
    "transition_stage": "기관 공식",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786715195
   },
   {
@@ -4093,6 +4228,7 @@
    "runtime_env": "설치 필요",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786715200
   },
   {
@@ -4140,6 +4276,7 @@
    "task_category": "데이터·통계",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786716351
   },
   {
@@ -4194,6 +4331,7 @@
    "task_category": "감사·법무",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786716357
   },
   {
@@ -4226,6 +4364,10 @@
    "mcp_official": false,
    "stars": 38,
    "stars_github": 38,
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "GPT-5.6 Luna(OpenRouter, 동의 시)"
+   ],
    "thumb_v": 1786716360
   },
   {
@@ -4277,6 +4419,7 @@
    "health_checked": "2026-08-24",
    "transition_stage": "기관 공식",
    "deployment_env": "행정망",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786716714
   },
   {
@@ -4304,6 +4447,7 @@
    "runtime_env": "브라우저만",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786716717
   },
   {
@@ -4411,6 +4555,10 @@
    "maintenance": "활발",
    "stars": 15,
    "stars_gitlab": 15,
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1786799800
   },
   {
@@ -4442,6 +4590,7 @@
    "deployment_env": "폐쇄망",
    "stars": 9,
    "stars_gitlab": 9,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786799803
   },
   {
@@ -4473,6 +4622,7 @@
    "transition_stage": "기관 공식",
    "stars": 8,
    "stars_gitlab": 8,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786799805
   },
   {
@@ -4503,6 +4653,10 @@
    "maintenance": "활발",
    "stars": 7,
    "stars_gitlab": 7,
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1786799808
   },
   {
@@ -4565,6 +4719,10 @@
    "maintenance": "활발",
    "stars": 6,
    "stars_gitlab": 6,
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "OpenAI GPT-5(Responses API)"
+   ],
    "thumb_v": 1786799813
   },
   {
@@ -4594,6 +4752,7 @@
    "maintenance": "활발",
    "stars": 3,
    "stars_gitlab": 3,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786799815
   },
   {
@@ -4658,6 +4817,12 @@
    "deployment_env": "행정망",
    "stars": 3,
    "stars_gitlab": 3,
+   "model_dependency": "혼합",
+   "models_used": [
+    "HyperCLOVA X",
+    "Gemma",
+    "Whisper"
+   ],
    "thumb_v": 1786799820
   },
   {
@@ -4688,6 +4853,7 @@
    "transition_stage": "기관 공식",
    "stars": 1,
    "stars_gitlab": 1,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786799823
   },
   {
@@ -4751,6 +4917,7 @@
    "maintenance": "활발",
    "stars": 4,
    "stars_gitlab": 4,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786799830
   },
   {
@@ -4932,6 +5099,10 @@
    "cost_req": "무료",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "국산 독자모델",
+   "models_used": [
+    "schift-ko-pii(자체 학습)"
+   ],
    "thumb_v": 1786926957
   },
   {
@@ -4960,6 +5131,7 @@
    "runtime_env": "브라우저만",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1786970111
   },
   {
@@ -4991,6 +5163,10 @@
    "mcp_official": false,
    "stars": 3,
    "stars_github": 3,
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1787013299
   },
   {
@@ -5073,6 +5249,7 @@
    "deployment_env": "폐쇄망",
    "stars": 4,
    "stars_gitlab": 4,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1787147300
   },
   {
@@ -5103,6 +5280,10 @@
    "maintenance": "활발",
    "stars": 4,
    "stars_gitlab": 4,
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "Gemini 3.5 Flash"
+   ],
    "thumb_v": 1787147302
   },
   {
@@ -5133,6 +5314,7 @@
    "maintenance": "활발",
    "stars": 2,
    "stars_gitlab": 2,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1787147305
   },
   {
@@ -5194,6 +5376,7 @@
    "maintenance": "활발",
    "stars": 2,
    "stars_gitlab": 2,
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1787147310
   },
   {
@@ -5289,6 +5472,7 @@
    "health_checked": "2026-08-24",
    "maintenance": "활발",
    "stars_github": 13,
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1787186191
   },
   {
@@ -5376,6 +5560,7 @@
    "link_ok": true,
    "health_checked": "2026-08-24",
    "maintenance": "활발",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1787268715
   },
   {
@@ -5406,6 +5591,10 @@
    "link_ok": true,
    "health_checked": "2026-08-24",
    "maintenance": "활발",
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "GPT(OpenAI API)"
+   ],
    "thumb_v": 1787268718
   },
   {
@@ -5467,6 +5656,7 @@
    "link_ok": true,
    "health_checked": "2026-08-24",
    "maintenance": "활발",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1787268723
   },
   {
@@ -5560,6 +5750,7 @@
    "link_ok": true,
    "health_checked": "2026-08-24",
    "maintenance": "활발",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1787317345
   },
   {
@@ -5593,6 +5784,7 @@
    "link_ok": true,
    "health_checked": "2026-08-24",
    "maintenance": "활발",
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1787401380
   },
   {
@@ -5624,6 +5816,7 @@
    "link_ok": true,
    "health_checked": "2026-08-24",
    "maintenance": "정체",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1787401383
   },
   {
@@ -5650,6 +5843,7 @@
    "id": "6c44153f6db7d61c",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1787401385
   },
   {
@@ -5752,6 +5946,7 @@
    "id": "1488ff8944c8de22",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1787488731
   },
   {
@@ -5777,6 +5972,10 @@
    "id": "dcba0f654467bdc9",
    "link_ok": true,
    "health_checked": "2026-08-24",
+   "model_dependency": "국산 독자모델",
+   "models_used": [
+    "schift-ko-pii-v6(자체 학습)"
+   ],
    "thumb_v": 1787488734
   },
   {
@@ -5803,6 +6002,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1787532003
   },
   {
@@ -5830,6 +6030,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-08-24",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1787532151
   },
   {
@@ -5932,6 +6133,7 @@
    "maintenance": "활발",
    "link_ok": true,
    "health_checked": "2026-08-25",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1787619612
   },
   {
@@ -5959,6 +6161,7 @@
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-08-25",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1787619615
   },
   {
@@ -6007,6 +6210,10 @@
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-08-25",
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1787668443
   },
   {
@@ -6126,6 +6333,7 @@
     "바이브코딩"
    ],
    "id": "4f5ffee21b8bc19c",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1787812434
   },
   {
@@ -6246,6 +6454,7 @@
    "license": "Other",
    "license_source": "github",
    "license_checked": "2026-08-28",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1787921827
   },
   {
@@ -6271,6 +6480,10 @@
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-08-28",
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1787921830
   },
   {
@@ -6296,6 +6509,10 @@
    "license": "MIT",
    "license_source": "github",
    "license_checked": "2026-08-28",
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1787922360
   },
   {
@@ -6321,6 +6538,10 @@
    "license": "MIT",
    "license_source": "github",
    "license_checked": "2026-08-28",
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1787922363
   },
   {
@@ -6346,6 +6567,7 @@
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-08-28",
+   "model_dependency": "없음(비LLM)",
    "thumb_v": 1787922366
   },
   {
@@ -6371,6 +6593,10 @@
    "license": "MIT",
    "license_source": "github",
    "license_checked": "2026-08-28",
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+   ],
    "thumb_v": 1787923861
   },
   {
@@ -6394,7 +6620,9 @@
    "id": "81e87c38477c4016",
    "license": "GNU AGPLv3",
    "license_source": "gitlab",
-   "license_checked": "2026-08-28"
+   "license_checked": "2026-08-28",
+   "model_dependency": "없음(비LLM)",
+   "thumb_v": 1787924733
   },
   {
    "summary": "온나라 접수대기 문서의 메타데이터를 범정부 AI 공통기반의 RAG와 생성형 AI로 분석해 업무 담당자를 찾아 배분하는 도구(스타 4). 문서 접수·배분이라는 전 기관 공통 병목을 정부 공식 AI 인프라 위에서 푸는 접근으로, 온나라 연계 수요와 범정부 AI 공통기반 활용이 결합된 드문 실측 사례다.",
@@ -6418,7 +6646,12 @@
    "id": "0dd22d6d0375bc39",
    "license": "명시 없음",
    "license_source": "gitlab",
-   "license_checked": "2026-08-28"
+   "license_checked": "2026-08-28",
+   "model_dependency": "국산 독자모델",
+   "models_used": [
+    "HyperCLOVA X(범정부 AI 공통기반)"
+   ],
+   "thumb_v": 1787924736
   },
   {
    "network_req": "로컬 완결",
@@ -6443,7 +6676,9 @@
    "id": "d00d45bbe02f222b",
    "license": "명시 없음",
    "license_source": "gitlab",
-   "license_checked": "2026-08-28"
+   "license_checked": "2026-08-28",
+   "model_dependency": "없음(비LLM)",
+   "thumb_v": 1787924738
   }
  ]
 }
