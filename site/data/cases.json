@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-29T08:34:58+09:00",
+ "updated_at": "2026-08-29T08:36:19+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -6759,6 +6759,33 @@
    ],
    "id": "c7e0862df664bbe5",
    "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-08-29",
+   "thumb_v": 1787960106
+  },
+  {
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "task_category": "인사·복무",
+   "tags": [
+    "근태점검",
+    "인사복무",
+    "로컬완결",
+    "선별보조"
+   ],
+   "source": "kakao",
+   "case_class": "개인 개발",
+   "network_req": "로컬 완결",
+   "summary": "ERP에서 내려받은 엑셀 근태 자료를 분석해 지각·조퇴 가능성, 출퇴근 기록 누락, 비근무일 출퇴근 등 담당자가 우선 확인할 기록을 사유와 함께 선별해 주는 도구. 최종 판단은 사람이 하는 선별 보조로 설계됐고, 기관별 ERP·복무규정에 맞게 수정할 수 있으며 자료는 PC 안에서만 처리한다. 시차출퇴근·반차·육아시간 등 복합 조건을 다루는 인사·복무 실무 밀착형이다.",
+   "transition_stage": "개인 사용",
+   "link": "https://github.com/koul777/attendance-checker",
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-08-29",
+   "runtime_env": "설치 필요",
+   "title": "Attendance Checker — 근태 기록에서 확인할 대상을 먼저 찾아주는 점검 도구",
+   "date": "2026-07-29",
+   "id": "1d90d7ec74b027d1",
+   "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-08-29"
   }
