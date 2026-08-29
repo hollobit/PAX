@@ -14,11 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
     a.setAttribute('aria-label', `${h.textContent.trim()} 섹션 링크`);
     h.appendChild(a);
   }
-  // 동적 렌더 페이지에서 해시 진입 시 렌더 후 재스크롤
+  // 동적 렌더 페이지에서 해시 진입 시 — 렌더로 레이아웃이 밀리므로 여러 번 재스크롤
   if (location.hash) {
-    setTimeout(() => {
-      const target = document.querySelector(location.hash);
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 600);
+    const scrollToHash = () => {
+      let target;
+      try { target = document.querySelector(location.hash); } catch { return; }
+      if (target) target.scrollIntoView({ block: 'start' });
+    };
+    for (const delay of [400, 1200, 2500]) setTimeout(scrollToHash, delay);
   }
 });
