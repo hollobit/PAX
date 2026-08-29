@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-29T08:36:19+09:00",
+ "updated_at": "2026-08-29T15:33:02+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -6832,6 +6832,33 @@
    "license_source": "github",
    "license_checked": "2026-08-29",
    "thumb_v": 1787960185
+  },
+  {
+   "case_url": "https://school-mcp.fly.dev/",
+   "title": "학교정보 MCP — 학교 이름 하나로 급식·수행평가·학사일정을 모아 보는 도구",
+   "org_type": "공직 개인",
+   "runtime_env": "브라우저만",
+   "link": "https://www.threads.com/@chris_gomdori/post/DZwc6oCiQj0",
+   "region": "서울",
+   "mirror_url": "https://github.com/chrisryugj/schoolinfo-mcp",
+   "summary": "학교 이름만 입력하면 학교알리미 공시정보와 급식·학사일정·수행평가 계획을 한 화면에 모아 보여주는 웹앱 겸 MCP 서버(MIT, 스타 42). 학교알리미 OpenAPI에 kordoc HWP 파싱을 결합해 흩어진 학교 정보를 학부모 관점으로 재구성했고, PC·모바일 웹과 MCP·CLI를 모두 제공한다. 개발자가 '학부모의 진짜 답답함'에 대한 피드백을 공개 요청하며 수요자 검증을 진행 중인, 대민 정보 접근성 사례다.",
+   "model_dependency": "모델 중립(BYO)",
+   "org": "서울특별시 광진구(개인 개발)",
+   "tags": [
+    "학교알리미",
+    "학부모",
+    "MCP",
+    "공공데이터",
+    "정보접근성"
+   ],
+   "source": "threads",
+   "date": "2026-08-29",
+   "task_category": "민원",
+   "network_req": "인터넷 필수",
+   "case_class": "개인 개발",
+   "collected_at": "2026-08-29",
+   "transition_stage": "개인 사용",
+   "id": "fa5ac519aca439f4"
   }
  ]
 }
