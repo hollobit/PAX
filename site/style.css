@@ -2122,3 +2122,9 @@ main {
 .model-case-list li { margin: 0.15rem 0; }
 .model-group-row td { background: #eef2f7; padding: 0.35rem 0.7rem; border-top: 2px solid #c9d4e2; }
 .model-family-cell { padding-left: 1.6rem; }
+
+/* 섹션 딥링크 앵커 */
+section[id] { scroll-margin-top: 5.5rem; }
+.anchor-link { margin-left: 0.4rem; font-size: 0.8em; color: #b8c4d4; text-decoration: none; opacity: 0; transition: opacity 0.15s; }
+h1:hover .anchor-link, h2:hover .anchor-link, h3:hover .anchor-link, .anchor-link:focus { opacity: 1; }
+.anchor-link:hover { color: #234a72; }
