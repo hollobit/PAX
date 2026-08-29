@@ -10,7 +10,7 @@
   <meta property="og:title" content="관측소 — 공공 AX 지수">
   <meta property="og:description" content="AX 성숙도 분포, 국산·로컬 모델 채택률, 데이터 AI 접근성, 공공 깃랩 개방율의 분기 관측">
   <meta property="og:url" content="https://hollobit.github.io/PAX/observatory.html">
-  <link rel="stylesheet" href="style.css?v=eacc43c5">
+  <link rel="stylesheet" href="style.css?v=a94aca7c">
 </head>
 <body>
   <header class="site-header">
@@ -39,14 +39,14 @@
     <p class="sample-note">모든 지표는 오픈채팅·Threads 자기선택 표본에 기반하며 전국 공공부문 전체를 대표하지 않습니다.</p>
   </header>
   <main>
-    <section class="obs-section" aria-label="공공 AX 지수">
+    <section class="obs-section" aria-label="공공 AX 지수" id="ax-index">
       <h2 class="obs-heading">분기 지수 <span id="obs-quarter" class="obs-quarter"></span></h2>
       <div id="index-cards" class="obs-cards"></div>
       <p class="obs-note">분기 말 데이터 버전은 <a href="https://github.com/hollobit/PAX/tree/main/snapshots">snapshots/</a>에 고정됩니다.
         세 분기가 쌓이면 추이 차트가 이 자리에 표시됩니다.</p>
     </section>
 
-    <section class="obs-section" aria-label="커뮤니티 활력">
+    <section class="obs-section" aria-label="커뮤니티 활력" id="community">
       <h2 class="obs-heading">커뮤니티 활력</h2>
       <p class="obs-desc">사례를 만들어내는 생태계 자체의 활동량 — 오픈채팅 대화, 오픈톡방 가입자, Threads 게시물의 관측치입니다.</p>
       <div id="community-cards" class="obs-cards"></div>
@@ -63,7 +63,7 @@
         Threads는 태그 검색으로 관측된 누적 게시물 수(전체 게시물 수 아님)입니다.</p>
     </section>
 
-    <section class="obs-section" aria-label="데이터 AI 접근성">
+    <section class="obs-section" aria-label="데이터 AI 접근성" id="data-access">
       <h2 class="obs-heading">공공데이터 AI 접근성 매트릭스</h2>
       <p class="obs-desc">고가치 공공데이터 도메인별로 커뮤니티·공식 MCP가 존재하는지의 관측 —
         풀뿌리 MCP는 "AI가 쓰고 싶은 데이터"의 수요 순위표입니다.</p>
@@ -76,7 +76,7 @@
         알려주시면 기관별 분기 리포트로 환류합니다. 해결 실적이 확인된 기관은 우선 표시합니다.</p>
     </section>
 
-    <section class="obs-section" aria-label="모델 현황">
+    <section class="obs-section" aria-label="모델 현황" id="models">
       <h2>모델 현황 — 무엇으로 돌아가는가</h2>
       <p class="obs-lead">사례가 런타임에 어떤 AI 모델에 의존하는지의 실측입니다.
         판정은 저장소 README·설정 파일의 명시 근거 기준이며, 개발에만 AI를 쓴 경우(바이브 코딩)는
@@ -102,7 +102,7 @@
         국산 전환의 실질 관건이 모델이 아니라 클라이언트 생태계임을 보여줍니다.</p>
     </section>
 
-    <section class="obs-section" aria-label="MCP 현황">
+    <section class="obs-section" aria-label="MCP 현황" id="mcp">
       <h2 class="obs-heading">MCP 현황과 이슈</h2>
       <div id="mcp-cards" class="obs-cards"></div>
       <h3 class="obs-subheading">관측된 구조적 이슈</h3>
@@ -111,7 +111,7 @@
 
 
 
-    <section class="obs-section" aria-label="저장소 지표">
+    <section class="obs-section" aria-label="저장소 지표" id="repos">
       <h2 class="obs-heading">저장소 지표 — 스타·유지보수</h2>
       <h3 class="obs-subheading">GitHub</h3>
       <div id="repo-cards-github" class="obs-cards"></div>
@@ -129,7 +129,7 @@
         스타는 커뮤니티 검증의 대리 지표일 뿐 품질 순위가 아닙니다.</p>
     </section>
 
-    <section class="obs-section" aria-label="라이선스 현황">
+    <section class="obs-section" aria-label="라이선스 현황" id="licenses">
       <h2 class="obs-heading">라이선스 현황</h2>
       <div id="license-cards" class="obs-cards"></div>
       <div class="table-wrap"><table class="obs-table" id="license-table">
@@ -140,7 +140,7 @@
         타 기관 재사용(전이 경로 ③)의 첫 관문이 여기서 막힙니다. <a href="playbook.html">전이 플레이북</a>의 개방 경로 참고.</p>
     </section>
 
-    <section class="obs-section" aria-label="공공 깃랩 브릿지">
+    <section class="obs-section" aria-label="공공 깃랩 브릿지" id="bridge">
       <h2 class="obs-heading">공공 깃랩 ↔ GitHub 브릿지</h2>
       <p class="obs-desc">내부망에서 만들어진 도구가 외부 생태계로 공개되는 비율 —
         정부가 스스로 집계하기 어려운 개방성 지표입니다.</p>
@@ -155,5 +155,6 @@
     <p>모두의 공공AX 사례 아카이브 · <a href="./">아카이브로 돌아가기</a></p>
   </footer>
   <script src="observatory.js?v=3bafd91a"></script>
+  <script src="anchors.js?v=163c4e5f"></script>
 </body>
 </html>

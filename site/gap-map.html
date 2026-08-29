@@ -10,7 +10,7 @@
   <meta property="og:title" content="격차 지도 — 데이터의 침묵이 곧 격차다">
   <meta property="og:description" content="226개 기초지자체 중 관측된 곳은 몇인가 — 미관측 지역을 회색으로 드러내는 관측 현황판">
   <meta property="og:url" content="https://hollobit.github.io/PAX/gap-map.html">
-  <link rel="stylesheet" href="style.css?v=eacc43c5">
+  <link rel="stylesheet" href="style.css?v=a94aca7c">
 </head>
 <body>
   <header class="site-header">
@@ -39,14 +39,14 @@
     <p class="sample-note">자기선택 표본의 관측 현황입니다 — 회색은 "사례가 없다"가 아니라 <strong>"관측망이 닿지 않았다"</strong>는 뜻일 수 있습니다. 어느 쪽이든 지원과 발굴이 필요한 지역입니다.</p>
   </header>
   <main>
-    <section class="obs-section" aria-label="중앙행정부처 관측 현황">
+    <section class="obs-section" aria-label="중앙행정부처 관측 현황" id="ministries">
       <h2 class="obs-heading">중앙행정기관별 관측 현황 (2026 정부조직 기준)</h2>
       <p class="obs-desc">19부·총리 소속 처·장관급 위원회·청을 2026년 개편 조직 기준으로 전수 나열한 집계 — 기관 표기와 챔피언 소속에서 식별하며, 기관 공식 사례와 소속 실무자 개인 사례를 모두 포함합니다.</p>
       <div id="ministry-grid" class="region-grid"></div>
       <p class="obs-note" id="ministry-note"></p>
     </section>
 
-    <section class="obs-section" aria-label="지역 관측 현황">
+    <section class="obs-section" aria-label="지역 관측 현황" id="regions">
       <h2 class="obs-heading">광역시도별 관측 현황</h2>
       <div id="region-grid" class="region-grid"></div>
       <p class="obs-note" id="region-note"></p>
@@ -58,7 +58,7 @@
       <p class="obs-note" id="region-unknown-note"></p>
     </section>
 
-    <section class="obs-section" aria-label="기관유형 분포">
+    <section class="obs-section" aria-label="기관유형 분포" id="org-types">
       <h2 class="obs-heading">기관유형 분포</h2>
       <div class="table-wrap"><table class="obs-table" id="orgtype-table">
         <thead><tr><th scope="col">기관유형</th><th scope="col">사례</th><th scope="col">비중</th></tr></thead>
@@ -69,7 +69,7 @@
         <a href="https://github.com/hollobit/PAX/issues/new?labels=case&title=%5B%EC%82%AC%EB%A1%80%20%EC%A0%9C%EB%B3%B4%5D%20">사례 제보하기</a></p>
     </section>
 
-    <section class="obs-section" aria-label="레거시 연동 수요">
+    <section class="obs-section" aria-label="레거시 연동 수요" id="legacy">
       <h2 class="obs-heading">레거시 시스템 연동 수요 보드</h2>
       <p class="obs-desc">"API가 있다면 만들 것" — 커뮤니티에서 반복 관측된 행정 시스템별 연동 수요입니다.
         중앙(공통기반·온나라)과 지방(새올·이호조)의 인프라 격차가 그대로 도구 격차로 이어집니다.</p>
@@ -84,5 +84,6 @@
   </footer>
   <script src="ministries.js?v=fd66200d"></script>
   <script src="gap-map.js?v=12efadaf"></script>
+  <script src="anchors.js?v=163c4e5f"></script>
 </body>
 </html>

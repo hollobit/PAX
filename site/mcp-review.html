@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MCP 검증 — 모두의 공공AX 사례 아카이브</title>
   <meta name="description" content="등재된 MCP 사례의 보안·안전 검증 결과 — 6축 프레임(권한 표면·시크릿·공급망·인젝션·데이터 흐름·운영 위생)과 책임 있는 공개 원칙">
-  <link rel="stylesheet" href="style.css?v=eacc43c5">
+  <link rel="stylesheet" href="style.css?v=a94aca7c">
 </head>
 <body>
   <header class="site-header">
@@ -32,7 +32,7 @@
   </header>
 
   <main class="obs-main">
-    <section class="obs-section">
+    <section class="obs-section" id="overview">
       <h2>MCP 보안·안전 검증</h2>
       <p class="obs-lead">등재된 MCP 사례를 6개 축의 공통 프레임으로 검증한 결과입니다.
         정적 검사(권한 표면·시크릿·공급망)는 자동으로, 입력 검증·데이터 흐름은 코드 감사로
@@ -46,7 +46,7 @@
         기관 도입 시에는 반드시 기관 자체의 보안성 검토 절차를 거치시기 바랍니다.</p>
     </section>
 
-    <section class="obs-section">
+    <section class="obs-section" id="matrix">
       <h3 class="obs-subheading">검증 매트릭스</h3>
       <div class="table-wrap"><table class="obs-table" id="mcp-matrix">
         <thead><tr>
@@ -65,7 +65,7 @@
       <p class="obs-note" id="mcp-meta"></p>
     </section>
 
-    <section class="obs-section">
+    <section class="obs-section" id="axes">
       <h3 class="obs-subheading">검사 축 설명</h3>
       <div class="table-wrap"><table class="obs-table">
         <thead><tr><th scope="col">축</th><th scope="col">무엇을 보나</th><th scope="col">방법</th></tr></thead>
@@ -88,5 +88,6 @@
   </footer>
 
   <script src="mcp-review.js?v=2e1b37cc"></script>
+  <script src="anchors.js?v=163c4e5f"></script>
 </body>
 </html>

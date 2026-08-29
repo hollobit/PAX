@@ -11,7 +11,7 @@
   <meta property="og:description" content="공공AX 도구를 만든 공무원·시민 개발자 챔피언 디렉토리">
   <meta property="og:url" content="https://hollobit.github.io/PAX/champions.html">
   <meta property="og:site_name" content="모두의 공공AX 사례 아카이브">
-  <link rel="stylesheet" href="style.css?v=eacc43c5">
+  <link rel="stylesheet" href="style.css?v=a94aca7c">
 </head>
 <body>
   <header class="site-header">
@@ -56,7 +56,7 @@
     <section id="champion-list" class="champ-grid" aria-label="챔피언 목록"></section>
     <p id="error-state" class="empty-state" hidden>챔피언 데이터를 불러오지 못했습니다.</p>
 
-    <section class="guide__section champ-unattributed">
+    <section class="guide__section champ-unattributed" id="sec-1">
       <h2 id="unattributed-heading">챔피언 미확인 사례</h2>
       <p>아래 사례들은 공개 저장소·프로필 계정이 확인되지 않아 아직 개발자에게 귀속하지 못했습니다.
       본인이 만든 사례라면 <a href="mailto:hollobit@etri.re.kr">알려주세요</a> — GitHub·공공 GitLab
@@ -64,7 +64,7 @@
       <ul id="unattributed-list" class="champ-unattributed__list" aria-labelledby="unattributed-heading"></ul>
     </section>
 
-    <section class="guide__section champ-notes">
+    <section class="guide__section champ-notes" id="sec-2">
       <h2>이 목록에 대하여</h2>
       <p>이 디렉토리는 사례 아카이브에 등재된 개발 산출물의 <strong>GitHub·정부 공공 GitLab 공개
       프로필</strong>과 게시물 속 저장소 링크만을 근거로 만들어집니다. 공개 프로필에 본인이 게시하지
@@ -91,5 +91,6 @@
   </footer>
 
   <script src="champions.js?v=e4fa2f19"></script>
+  <script src="anchors.js?v=163c4e5f"></script>
 </body>
 </html>
