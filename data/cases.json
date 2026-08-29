@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-29T21:27:10+09:00",
+ "updated_at": "2026-08-30T04:54:44+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -6635,7 +6635,10 @@
    "case_class": "개인 개발",
    "collected_at": "2026-08-29",
    "transition_stage": "개인 사용",
-   "id": "fa5ac519aca439f4"
+   "id": "fa5ac519aca439f4",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-08-30"
   },
   {
    "org": "SECHAK-AG(오픈소스)",
@@ -6672,10 +6675,86 @@
    "task_category": "계약·조달",
    "tags": [
     "조달",
+    "AI검색",
     "참고서비스"
    ],
-   "summary": "나라장터(정부조달)와 국방전자조달의 입찰 공고를 한 화면에서 통합 검색하는 민간 웹 서비스. AI 활용 여부와 운영 주체는 미확인이나, 공공 조달 정보의 접근성을 높이는 조달 생태계 참고 사례로 등재한다.",
-   "id": "d74a4f0d2a187720"
+   "summary": "나라장터(정부조달)와 국방전자조달의 입찰 공고를 통합 검색하고, 사업계획서·과업지시서·공고문 파일을 AI가 분석해 핵심 키워드를 추출한 뒤 맞춤 공고를 찾아 주는 민간 웹 서비스. 공고 금액·마감일·지역과 첨부파일을 한 화면에서 확인한다. 운영자가 커뮤니티에 무료 이용을 알리며 HWP 파싱 논의에서 도움을 받았다고 밝혀, 커뮤니티 지식이 민간 서비스로 이어진 사례이기도 하다.",
+   "id": "d74a4f0d2a187720",
+   "model_dependency": "미상"
+  },
+  {
+   "summary": "NCS 데이터를 온톨로지로 재구성(개념 53만·관계 323만)해 직무기술서 작성, 구조화 면접 질문 설계, 교육훈련 추천을 지원하는 원격 HTTP MCP 서버. ChatGPT 플러그인·Claude 커넥터로 연결하며 SQLite 경량화로 Vercel에 배포됐다. 규정 MCP 생성기·NCScope를 만든 개발자의 인사조직 분야 연작으로, 전처리에 1개월이 걸린 온톨로지 DB를 공개 테스트 중이다.",
+   "source": "kakao",
+   "model_dependency": "모델 중립(BYO)",
+   "tags": [
+    "MCP",
+    "인사",
+    "NCS",
+    "온톨로지"
+   ],
+   "title": "HRMCP — NCS 온톨로지 기반 HR 실무 MCP 서버",
+   "org": "공직 현장(공공기관)",
+   "task_category": "인사·복무",
+   "network_req": "인터넷 필수",
+   "collected_at": "2026-08-30",
+   "region": null,
+   "date": "2026-08-29",
+   "org_type": "공직 개인",
+   "runtime_env": "MCP·CLI 설정",
+   "link": "https://github.com/koul777/HRMCP",
+   "case_class": "개인 개발",
+   "id": "655d61608d54c98a",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-08-30"
+  },
+  {
+   "summary": "인사발령 엑셀 파일을 올리면 부서명·직렬·급수별로 필터링해 조회하고 결과를 새 엑셀로 내려받는 도구. 파일이 서버로 전송되지 않고 브라우저 안에서만 처리돼 인사 자료의 민감성에 대응했다. 초실행관의 로컬 엑셀 도구 연작(마스킹·취합에 이은 인사 편)이며 회원가입·설치가 필요 없다.",
+   "source": "kakao",
+   "model_dependency": "없음(비LLM)",
+   "tags": [
+    "인사",
+    "엑셀자동화",
+    "로컬처리"
+   ],
+   "title": "인사스캔 — 인사발령 엑셀을 브라우저에서 조회·필터·재저장",
+   "org": "공직 커뮤니티",
+   "task_category": "인사·복무",
+   "network_req": "로컬 완결",
+   "collected_at": "2026-08-30",
+   "region": null,
+   "date": "2026-08-29",
+   "org_type": "커뮤니티",
+   "runtime_env": "브라우저만",
+   "link": "https://insa.choshg.com/promo/",
+   "case_class": "커뮤니티",
+   "id": "29a4620d8090789b"
+  },
+  {
+   "summary": "법제처가 실제 의견을 낸 조례 사안 16건을 정답지로 삼아, 사무용 PC급 환경에서 HyperCLOVA X SEED 1.5B·Kanana 2.1B·Mi:dm 2.0 Mini 2.3B(Q4 양자화)에게 상위법령 저촉 여부를 각 3회씩 판정시킨 실측. 세 모델 모두 정답지에 못 미쳤고 실패 양상이 제각각이며, 3회 응답 일치율이 최고 69%·최저 19%로 일관성이 핵심 병목으로 확인됐다. 내부망 무료 배치 후보 체급의 경량 모델을 법령 판단에 검증 계층 없이 쓸 수 없다는 결론으로, 정답지 구성과 측정 방법은 공개 예정이다.",
+   "source": "kakao",
+   "model_dependency": "국산 오픈웨이트",
+   "tags": [
+    "국산모델",
+    "SLM",
+    "벤치마크",
+    "조례심사"
+   ],
+   "title": "국산 경량 오픈모델 3종 조례 심사 실측 — 전패, 그리고 답이 흔들린다",
+   "org": "공직 현장(개인 개발)",
+   "task_category": "감사·법무",
+   "collected_at": "2026-08-30",
+   "region": null,
+   "date": "2026-08-29",
+   "models_used": [
+    "HyperCLOVA X SEED 1.5B(Q4 로컬)",
+    "Kanana 2.1B(Q4 로컬)",
+    "Mi:dm 2.0 Mini 2.3B(Q4 로컬)"
+   ],
+   "org_type": "공직 개인",
+   "link": null,
+   "case_class": "개인 개발",
+   "id": "95635604261b7867"
   }
  ]
 }
