@@ -27,6 +27,7 @@ PAX = Threads `공공AX` 태그 + 카카오톡 오픈채팅 "공공AX 네트워�
 | `docs/superpowers/specs/`, `plans/` | 설계서·구현 계획 | |
 | `docs/reports/` | 정책 보고서(공공 깃랩 전략, AI 모델 사용 실태 등) | |
 | `HISTORY.md` | 공개 연혁 — 주요 기능·운영 변경 시 갱신 | 공개 |
+| `.claude/skills/pax-register/` | **사례 단건 등재·보강 스킬**(중복 검사 `preflight.py`·평가 항목·MCP 검증·썸네일·커밋 체크리스트) — 사용자가 URL을 주며 등재를 청하면 이 스킬을 쓴다 | 비공개(로컬) |
 
 ## 3. 절대 규칙
 

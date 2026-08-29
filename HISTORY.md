@@ -75,3 +75,4 @@
 - 정기 수집: HRMCP·인사스캔·국산 경량모델 조례 실측(첫 국산 오픈웨이트 관측) 등 3건, HRMCP MCP 6축 검증 (240건)
 - 저장소 문서 정비: `AGENTS.md`(에이전트 작업 지침)·`HISTORY.md`(이 파일)·`CLAUDE.md` 신설, README 현행화(하루 3회·카카오 가동·페이지 안내)
 - 운영: 커뮤니티 지표 원장(`data/community_stats.json`)을 정기 수집 커밋 경로에 편입, `.DS_Store` ignore
+- 운영: 사례 단건 등재·보강 스킬 `pax-register` 신설(로컬 `.claude/skills`, 평가 항목 추가 등 절차서 밖 단계를 체크리스트화)
