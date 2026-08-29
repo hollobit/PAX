@@ -1757,6 +1757,7 @@
     "evidence": "운영자 확인(2026-08-16)"
    },
    "cases": [
+    "655d61608d54c98a",
     "ea2bce110972762e",
     "f5abed24ff6bdd4a",
     "48e33f2318bdffae",
@@ -1766,7 +1767,7 @@
     "e52e2378641903f4"
    ],
    "stats": {
-    "case_count": 7,
+    "case_count": 8,
     "top_ax": 2,
     "stars": 0
    }
@@ -2908,6 +2909,18 @@
    "title": "G2B Masters — 나라장터·국방전자조달 입찰정보 통합 검색",
    "org": "G2B Masters(운영 주체 미상)",
    "url": "https://electerior.co.kr/"
+  },
+  {
+   "id": "29a4620d8090789b",
+   "title": "인사스캔 — 인사발령 엑셀을 브라우저에서 조회·필터·재저장",
+   "org": "공직 커뮤니티",
+   "url": "https://insa.choshg.com/promo/"
+  },
+  {
+   "id": "95635604261b7867",
+   "title": "국산 경량 오픈모델 3종 조례 심사 실측 — 전패, 그리고 답이 흔들린다",
+   "org": "공직 현장(개인 개발)",
+   "url": null
   }
  ]
 }

@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-08-29",
+ "generated_at": "2026-08-30",
  "summary": {
-  "total": 69,
+  "total": 70,
   "counts": {
-   "주의": 58,
+   "주의": 59,
    "양호": 11
   },
   "top_warn_axis": "hygiene"
@@ -1976,6 +1976,40 @@
     "data_flow": {
      "verdict": "통과",
      "note": "학교알리미 공식 API 중심 — 웹앱 프런트의 CDN 자산과 방문 카운터(hitscounter.dev, 개인정보 아님) 외 제3자 전송 없음 (근거: 소스 URL 전수 추출)"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "655d61608d54c98a",
+   "title": "HRMCP — NCS 온톨로지 기반 HR 실무 MCP 서버",
+   "stars": null,
+   "checked_at": "2026-08-30",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 162건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "SQL은 ? 플레이스홀더+params 리스트로 파라미터화(src/ncs_mcp/server.py:611-620 like_filter/exact_filter, :2060 execute(sql, params)). f-string SQL 1건은 내부 상수 테이블명(readiness 검사)에만 사용. 서빙 경로에 셸 호출·외부 콘텐츠 무가공 삽입 없음 (근거: api/mcp.py, src/ncs_mcp/server.py 전수 확인)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "서빙 경로(server.py·db.py)에 외부 네트워크 호출·텔레메트리 없음 — 응답은 번들 SQLite(NCS 온톨로지)에서만 생성. 원격 DB 교체는 운영자가 env로 명시 허용한 경우만(api/mcp.py:134-143 기본 비활성 가드). 원격 MCP 특성상 질의가 개발자 운영 Vercel 서버로 전송됨은 README 아키텍처와 일치 (근거: api/mcp.py:134, grep 전수)"
     }
    },
    "dynamic": null,

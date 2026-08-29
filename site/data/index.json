@@ -1,37 +1,39 @@
 {
- "generated_at": "2026-08-29",
+ "generated_at": "2026-08-30",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 237,
+ "total_cases": 240,
  "total_champions": 109,
  "community": {
-  "members": 1427,
+  "members": 1428,
   "kakao_week": 4358,
   "kakao_total_observed": 18266,
-  "threads_observed": 187
+  "threads_observed": 193
  },
  "certified_champions": 2,
- "unattributed_cases": 64,
+ "unattributed_cases": 66,
  "ax_distribution": {
-  "AI-Ready": 157,
-  "AI-Enabled": 68,
-  "AX 단계 외": 11,
+  "AI-Ready": 159,
+  "AI-Enabled": 70,
+  "AX 단계 외": 10,
   "AI-First": 1
  },
  "c_axis_mean": 0.7,
  "p_distribution": {
-  "P0": 97,
-  "P1": 135,
+  "P0": 99,
+  "P1": 136,
   "P2": 5
  },
  "model_dependency": {
-  "미확인": 67,
-  "없음(비LLM)": 66,
+  "미확인": 66,
+  "없음(비LLM)": 67,
   "해외 오픈웨이트(로컬)": 9,
   "혼합": 7,
   "해외 상용 API": 33,
-  "모델 중립(BYO)": 52,
-  "국산 독자모델": 3
+  "모델 중립(BYO)": 53,
+  "국산 독자모델": 3,
+  "미상": 1,
+  "국산 오픈웨이트": 1
  },
  "model_stats": {
   "models_top": [
@@ -312,9 +314,10 @@
    },
    {
     "name": "HyperCLOVA X",
-    "n": 2,
+    "n": 3,
     "variants": [
-     "HCX-GOV-THINK-V1-32B(범정부 AI 공통기반)"
+     "HCX-GOV-THINK-V1-32B(범정부 AI 공통기반)",
+     "HyperCLOVA X SEED 1.5B(Q4 로컬)"
     ],
     "cases": [
      {
@@ -324,6 +327,10 @@
      {
       "id": "0dd22d6d0375bc39",
       "title": "온나라 AI 문서 분배기 — 접수대기 문서를 범정부 AI 공통기반으로 분석해 담당 배분"
+     },
+     {
+      "id": "95635604261b7867",
+      "title": "국산 경량 오픈모델 3종 조례 심사 실측 — 전패, 그리고 답이 흔들린다"
      }
     ],
     "domestic": true
@@ -472,6 +479,34 @@
      }
     ],
     "domestic": false
+   },
+   {
+    "name": "Kanana 2.1B(Q4 로컬)",
+    "n": 1,
+    "variants": [
+     "Kanana 2.1B(Q4 로컬)"
+    ],
+    "cases": [
+     {
+      "id": "95635604261b7867",
+      "title": "국산 경량 오픈모델 3종 조례 심사 실측 — 전패, 그리고 답이 흔들린다"
+     }
+    ],
+    "domestic": true
+   },
+   {
+    "name": "Mi:dm 2.0 Mini 2.3B(Q4 로컬)",
+    "n": 1,
+    "variants": [
+     "Mi:dm 2.0 Mini 2.3B(Q4 로컬)"
+    ],
+    "cases": [
+     {
+      "id": "95635604261b7867",
+      "title": "국산 경량 오픈모델 3종 조례 심사 실측 — 전패, 그리고 답이 흔들린다"
+     }
+    ],
+    "domestic": false
    }
   ],
   "domestic_cases": [
@@ -511,15 +546,24 @@
     "models": [
      "HCX-GOV-THINK-V1-32B(범정부 AI 공통기반)"
     ]
+   },
+   {
+    "id": "95635604261b7867",
+    "title": "국산 경량 오픈모델 3종 조례 심사 실측 — 전패, 그리고 답이 흔들린다",
+    "models": [
+     "HyperCLOVA X SEED 1.5B(Q4 로컬)",
+     "Kanana 2.1B(Q4 로컬)",
+     "Mi:dm 2.0 Mini 2.3B(Q4 로컬)"
+    ]
    }
   ],
   "dist_detail": {
    "미확인": {
-    "n": 67,
+    "n": 66,
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 66,
+    "n": 67,
     "specified": 0
    },
    "해외 오픈웨이트(로컬)": {
@@ -535,12 +579,20 @@
     "specified": 33
    },
    "모델 중립(BYO)": {
-    "n": 52,
+    "n": 53,
     "specified": 0
    },
    "국산 독자모델": {
     "n": 3,
     "specified": 3
+   },
+   "미상": {
+    "n": 1,
+    "specified": 0
+   },
+   "국산 오픈웨이트": {
+    "n": 1,
+    "specified": 1
    }
   },
   "models_by_dep": [
@@ -579,6 +631,54 @@
       "domestic": true,
       "variants": [
        "HCX-GOV-THINK-V1-32B(범정부 AI 공통기반)"
+      ]
+     }
+    ]
+   },
+   {
+    "dep": "국산 오픈웨이트",
+    "n": 1,
+    "families": [
+     {
+      "name": "HyperCLOVA X",
+      "n": 1,
+      "cases": [
+       {
+        "id": "95635604261b7867",
+        "title": "국산 경량 오픈모델 3종 조례 심사 실측 — 전패, 그리고 답이 흔들린다"
+       }
+      ],
+      "domestic": true,
+      "variants": [
+       "HyperCLOVA X SEED 1.5B(Q4 로컬)"
+      ]
+     },
+     {
+      "name": "Kanana 2.1B(Q4 로컬)",
+      "n": 1,
+      "cases": [
+       {
+        "id": "95635604261b7867",
+        "title": "국산 경량 오픈모델 3종 조례 심사 실측 — 전패, 그리고 답이 흔들린다"
+       }
+      ],
+      "domestic": true,
+      "variants": [
+       "Kanana 2.1B(Q4 로컬)"
+      ]
+     },
+     {
+      "name": "Mi:dm 2.0 Mini 2.3B(Q4 로컬)",
+      "n": 1,
+      "cases": [
+       {
+        "id": "95635604261b7867",
+        "title": "국산 경량 오픈모델 3종 조례 심사 실측 — 전패, 그리고 답이 흔들린다"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Mi:dm 2.0 Mini 2.3B(Q4 로컬)"
       ]
      }
     ]
@@ -1063,18 +1163,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.058,
- "local_model_rate": 0.173,
- "model_known": 52,
- "license_tagged": 154,
- "license_stated_rate": 0.61,
+ "domestic_model_rate": 0.075,
+ "local_model_rate": 0.17,
+ "model_known": 53,
+ "license_tagged": 156,
+ "license_stated_rate": 0.615,
  "gitlab_cases": 44,
  "gitlab_mirror_pairs": 8,
  "gitlab_open_rate": 0.182,
- "mcp_cases": 70,
+ "mcp_cases": 71,
  "transition_funnel": {
   "기관 공식": 32,
-  "미확인": 162,
+  "미확인": 165,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1082,7 +1182,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.498
+  "feedback": 0.496
  },
  "maintenance_distribution": {
   "활발": 98,
@@ -1182,7 +1282,7 @@
    ]
   },
   "github": {
-   "count": 109,
+   "count": 110,
    "starred": 96,
    "stars_sum": 18960,
    "maintenance": {
@@ -1275,7 +1375,7 @@
   }
  },
  "license_distribution": {
-  "MIT": 62,
+  "MIT": 64,
   "명시 없음": 60,
   "Other": 15,
   "Apache-2.0": 10,
@@ -1286,7 +1386,7 @@
  },
  "license_matrix": {
   "MIT": {
-   "github": 57,
+   "github": 59,
    "gitlab": 5
   },
   "명시 없음": {
@@ -1320,8 +1420,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 106,
-   "stated": 79
+   "total": 108,
+   "stated": 81
   },
   "github-pages": {
    "total": 14,
@@ -1333,19 +1433,20 @@
   }
  },
  "mcp_stats": {
-  "total": 70,
+  "total": 71,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
-   "Server": 61,
+   "Server": 62,
    "Client/Host": 6,
    "Unknown/None": 2
   },
   "c_grades": {
    "C0": 63,
    "C2": 6,
-   "C3": 1
+   "C3": 1,
+   "C1": 1
   },
   "maintenance": {
    "활발": 31,
