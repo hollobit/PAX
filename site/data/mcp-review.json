@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-08-28",
+ "generated_at": "2026-08-29",
  "summary": {
-  "total": 68,
+  "total": 69,
   "counts": {
-   "주의": 57,
+   "주의": 58,
    "양호": 11
   },
   "top_warn_axis": "hygiene"
@@ -1942,6 +1942,40 @@
     "data_flow": {
      "verdict": "해당 없음",
      "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "fa5ac519aca439f4",
+   "title": "학교정보 MCP — 학교 이름 하나로 급식·수행평가·학사일정을 모아 보는 도구",
+   "stars": null,
+   "checked_at": "2026-08-29",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 1건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 7건"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "외부 프로세스 호출은 execFile(셸 미경유·리스트 인자) 방식 (근거: src/cli.ts:13) — 사용자 입력 셸 조합 없음"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "학교알리미 공식 API 중심 — 웹앱 프런트의 CDN 자산과 방문 카운터(hitscounter.dev, 개인정보 아님) 외 제3자 전송 없음 (근거: 소스 URL 전수 추출)"
     }
    },
    "dynamic": null,

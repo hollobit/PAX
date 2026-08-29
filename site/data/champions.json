@@ -1797,6 +1797,7 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "fa5ac519aca439f4",
     "43dc7f4ab2500260",
     "83bb0ac0ed9f576d",
     "76f07692203606ad",
@@ -1812,7 +1813,7 @@
     "d40cc4a9cf6e29b6"
    ],
    "stats": {
-    "case_count": 13,
+    "case_count": 14,
     "top_ax": 2,
     "stars": 4468
    },

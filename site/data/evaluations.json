@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-08-29",
- "total": 234,
+ "total": 235,
  "cases": [
   {
    "no": 1,
@@ -7721,6 +7721,39 @@
    "tool_type": "오픈소스 도구",
    "audience": "G2E 공직 실무자",
    "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 235,
+   "id": "fa5ac519aca439f4",
+   "org": "서울특별시 광진구(개인 개발)",
+   "title": "학교정보 MCP — 학교 이름 하나로 급식·수행평가·학사일정을 모아 보는 도구",
+   "ax_prev": "AI-Ready",
+   "ax": "AI-Ready",
+   "s": "S2",
+   "s_name": "Tool bundle",
+   "c": "C2",
+   "c_name": "부분 완결",
+   "m": "M2",
+   "m_name": "재사용형",
+   "native_scope": "해당 없음",
+   "status": "Live service",
+   "scope": "External",
+   "mcp_role": "Server",
+   "risk": "R0 최소",
+   "human": "해당 없음",
+   "evidence": "E1 코드·도구 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "학교알리미 OpenAPI+HWP 파싱(kordoc 재사용)으로 학교 정보 탐색을 한 화면에 완결(C2)하고 웹·MCP·CLI 3경로로 공개(스타 42) — 자기 도구(kordoc)를 부품으로 쓴 계보형 개발이자, 수요자(학부모) 피드백을 공개 모집하는 검증 지향 사례. 공직자의 대민 정보 접근성 개선 방향.",
+   "feedback": "부분확인(학부모 피드백 공개 모집 중)",
+   "resilience": "부분확인(MIT·활발, 학교알리미 API 의존)",
+   "post_url": "https://www.threads.com/@chris_gomdori/post/DZwc6oCiQj0",
+   "service_url": "https://school-mcp.fly.dev/",
+   "tool_type": "MCP 서버·도구",
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }
