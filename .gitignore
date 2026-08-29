@@ -11,3 +11,6 @@ log.md
 .gstack/
 data/champion_profiles.json
 data/private/
+
+# macOS
+.DS_Store

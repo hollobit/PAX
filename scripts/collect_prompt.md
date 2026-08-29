@@ -124,7 +124,7 @@ PYTHONPATH=scripts python3 scripts/build_mcp_review.py  # MCP 검증 공개본 (
 
 ## 6. 커밋·푸시
 ```bash
-git add data/cases.json site/data site/thumbs site/case
+git add data/cases.json data/community_stats.json site/data site/thumbs site/case
 git commit -m "chore: 사례 데이터 갱신 (TODAY)"
 git push
 ```
