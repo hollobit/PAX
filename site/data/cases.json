@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-29T15:33:02+09:00",
+ "updated_at": "2026-08-29T21:27:10+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -6859,6 +6859,48 @@
    "collected_at": "2026-08-29",
    "transition_stage": "개인 사용",
    "id": "fa5ac519aca439f4"
+  },
+  {
+   "org": "SECHAK-AG(오픈소스)",
+   "title": "Capptivo — 오픈소스 화면 녹화·자동 줌 도구(온디바이스 자막)",
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-08-29",
+   "stars_github": 863,
+   "org_type": "해외(참고)",
+   "case_class": "참고",
+   "date": "2026-08-29",
+   "link": "https://github.com/SECHAK-AG/capptivo",
+   "source": "kakao",
+   "task_category": "공통·범용",
+   "tags": [
+    "참고도구",
+    "영상제작",
+    "오픈소스"
+   ],
+   "summary": "Screen Studio의 오픈소스 대안을 표방하는 화면 녹화 도구(Rust·Tauri, MIT, 스타 863). 클릭 기반 자동 줌·실시간 주석·프리셋을 제공하고, 자막은 Whisper.cpp 온디바이스 처리라 음성 데이터가 PC 밖으로 나가지 않는다. 공공 도구 확산에 필요한 시연 영상·교육 자료 제작용 참고 도구로 등재한다.",
+   "id": "efe52d0b0f115f47",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-08-29",
+   "thumb_v": 1788006530
+  },
+  {
+   "org": "G2B Masters(운영 주체 미상)",
+   "title": "G2B Masters — 나라장터·국방전자조달 입찰정보 통합 검색",
+   "collected_at": "2026-08-29",
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "date": "2026-08-29",
+   "link": "https://electerior.co.kr/",
+   "source": "kakao",
+   "task_category": "계약·조달",
+   "tags": [
+    "조달",
+    "참고서비스"
+   ],
+   "summary": "나라장터(정부조달)와 국방전자조달의 입찰 공고를 한 화면에서 통합 검색하는 민간 웹 서비스. AI 활용 여부와 운영 주체는 미확인이나, 공공 조달 정보의 접근성을 높이는 조달 생태계 참고 사례로 등재한다.",
+   "id": "d74a4f0d2a187720",
+   "thumb_v": 1788006533
   }
  ]
 }

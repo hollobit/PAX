@@ -2,31 +2,31 @@
  "generated_at": "2026-08-29",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 235,
+ "total_cases": 237,
  "total_champions": 109,
  "community": {
   "members": 1427,
-  "kakao_week": 4283,
-  "kakao_total_observed": 18191,
-  "threads_observed": 178
+  "kakao_week": 4358,
+  "kakao_total_observed": 18266,
+  "threads_observed": 187
  },
  "certified_champions": 2,
- "unattributed_cases": 62,
+ "unattributed_cases": 64,
  "ax_distribution": {
-  "AI-Ready": 156,
+  "AI-Ready": 157,
   "AI-Enabled": 68,
-  "AX 단계 외": 10,
+  "AX 단계 외": 11,
   "AI-First": 1
  },
  "c_axis_mean": 0.7,
  "p_distribution": {
-  "P0": 96,
-  "P1": 134,
+  "P0": 97,
+  "P1": 135,
   "P2": 5
  },
  "model_dependency": {
-  "미확인": 66,
-  "없음(비LLM)": 65,
+  "미확인": 67,
+  "없음(비LLM)": 66,
   "해외 오픈웨이트(로컬)": 9,
   "혼합": 7,
   "해외 상용 API": 33,
@@ -515,11 +515,11 @@
   ],
   "dist_detail": {
    "미확인": {
-    "n": 66,
+    "n": 67,
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 65,
+    "n": 66,
     "specified": 0
    },
    "해외 오픈웨이트(로컬)": {
@@ -1066,15 +1066,15 @@
  "domestic_model_rate": 0.058,
  "local_model_rate": 0.173,
  "model_known": 52,
- "license_tagged": 153,
- "license_stated_rate": 0.608,
+ "license_tagged": 154,
+ "license_stated_rate": 0.61,
  "gitlab_cases": 44,
  "gitlab_mirror_pairs": 8,
  "gitlab_open_rate": 0.182,
  "mcp_cases": 70,
  "transition_funnel": {
   "기관 공식": 32,
-  "미확인": 160,
+  "미확인": 162,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1182,9 +1182,9 @@
    ]
   },
   "github": {
-   "count": 108,
-   "starred": 95,
-   "stars_sum": 18097,
+   "count": 109,
+   "starred": 96,
+   "stars_sum": 18960,
    "maintenance": {
     "활발": 68,
     "정체": 14,
@@ -1222,6 +1222,14 @@
      "maintenance": "활발",
      "license": "MIT",
      "developer": "Jin Kim"
+    },
+    {
+     "id": "efe52d0b0f115f47",
+     "title": "Capptivo — 오픈소스 화면 녹화·자동 줌 도구(온디바이스 자막)",
+     "stars": 863,
+     "maintenance": null,
+     "license": "MIT",
+     "developer": "SECHAK-AG"
     },
     {
      "id": "de4b2dab339d69b7",
@@ -1262,20 +1270,12 @@
      "maintenance": "활발",
      "license": "Apache-2.0",
      "developer": "모두의AI"
-    },
-    {
-     "id": "1f5e21b854f0aa3a",
-     "title": "공공데이터포털 API를 MCP 서버 모음으로 공개",
-     "stars": 288,
-     "maintenance": "방치",
-     "license": "Apache-2.0",
-     "developer": "Dave Goobong Jeong"
     }
    ]
   }
  },
  "license_distribution": {
-  "MIT": 61,
+  "MIT": 62,
   "명시 없음": 60,
   "Other": 15,
   "Apache-2.0": 10,
@@ -1286,7 +1286,7 @@
  },
  "license_matrix": {
   "MIT": {
-   "github": 56,
+   "github": 57,
    "gitlab": 5
   },
   "명시 없음": {
@@ -1320,8 +1320,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 105,
-   "stated": 78
+   "total": 106,
+   "stated": 79
   },
   "github-pages": {
    "total": 14,

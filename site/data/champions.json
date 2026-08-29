@@ -2896,6 +2896,18 @@
    "title": "늘봄학교 예산 편성 대시보드 — 실시간 협업으로 본예산·추경을 함께 짜는 도구",
    "org": "교육 현장(개인 개발)",
    "url": "https://profound-starburst-b39e5b.netlify.app"
+  },
+  {
+   "id": "efe52d0b0f115f47",
+   "title": "Capptivo — 오픈소스 화면 녹화·자동 줌 도구(온디바이스 자막)",
+   "org": "SECHAK-AG(오픈소스)",
+   "url": "https://github.com/SECHAK-AG/capptivo"
+  },
+  {
+   "id": "d74a4f0d2a187720",
+   "title": "G2B Masters — 나라장터·국방전자조달 입찰정보 통합 검색",
+   "org": "G2B Masters(운영 주체 미상)",
+   "url": "https://electerior.co.kr/"
   }
  ]
 }
