@@ -8,7 +8,7 @@
 
 PAX = Threads `공공AX` 태그 + 카카오톡 오픈채팅 "공공AX 네트워크"에서 공공부문 AI 전환 사례를
 하루 3회 수집 → AI가 선별·재작성 → 결정적 스크립트가 검증·병합 → GitHub Pages로 공개하는 아카이브.
-사이트: https://hollobit.github.io/PAX/ (2026-08-30 기준 사례 240건, 챔피언 107명).
+사이트: https://hollobit.github.io/PAX/ (2026-08-30 기준 사례 240건, 챔피언 109명).
 
 ## 2. 저장소 지도
 
@@ -46,7 +46,7 @@ PAX = Threads `공공AX` 태그 + 카카오톡 오픈채팅 "공공AX 네트워�
    새 세션에서는 `data/state.json`의 `cron.registered_at`보다 **`CronList` 실측**을 먼저 보고,
    비어 있으면 07:00/15:00/23:00 세 건을 즉시 재등록하고 state·log에 기록한다.
 7. **커밋 규칙**: `<type>: <한국어 설명>` (feat/fix/docs/chore/perf/ci/test). 사례 추가 커밋은 끝에 `(총 N건)`.
-   정기 수집 커밋은 `data/cases.json site/data site/thumbs site/case`만 담고 변경 없으면 커밋하지 않는다.
+   정기 수집 커밋은 `data/cases.json data/community_stats.json site/data site/thumbs site/case`만 담고 변경 없으면 커밋하지 않는다.
    푸시 대상은 `main`(Pages 워크플로가 `site/**` 변경 시 배포).
 8. **챔피언 데이터**: 공개 프로필 기반. 참고 분류(민간·해외) 계정은 챔피언 추출에서 제외한다.
    프로필 원장(`data/champion_profiles.json`)은 비공개다.

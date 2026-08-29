@@ -61,7 +61,7 @@ def test_cli_error_missing_source(tmp_path):
 def test_thumb_version_stamped(tmp_path):
     """site 사본의 사례에 썸네일 mtime이 thumb_v로 찍힌다 — 캐시 무효화용."""
     import json, os
-    from publish import sync_site_data
+    from pax.publish import sync_site_data
     src = tmp_path / "cases.json"
     thumbs = tmp_path / "thumbs"; thumbs.mkdir()
     src.write_text(json.dumps({"cases": [{"id": "abc"}, {"id": "nothumb"}]}), encoding="utf-8")
