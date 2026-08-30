@@ -17,15 +17,10 @@ PAX = Threads `공공AX` 태그 + 카카오톡 오픈채팅 "공공AX 네트워�
 | `data/cases.json` | 사례 원장(append-only, `{updated_at, cases[]}`) | 공개 |
 | `data/community_stats.json` | 커뮤니티 활력 지표 원장 | 공개 |
 | `data/raw/`, `data/incoming/`, `data/rejected/`, `data/state.json`, `log.md`, `data/private/`, `data/champion_profiles.json`, `.claude/` | 수집 원문·중간 산출·세션 상태·운영 로그 | **비공개(.gitignore)** |
-| `scripts/pax/` | 결정적 파이프라인: `schema.py`(검증) `privacy.py`(익명화 게이트) `merge.py`(중복 제거·병합) `publish.py`(site 사본) `mcp_review.py` | |
-| `scripts/*.py`, `make_thumbs.sh` | 빌드·점검: champions·index·case_pages·community_stats·mcp_review·check_health·check_mcp·tag_licenses·썸네일 | |
 | `scripts/collect_prompt.md` | **일일 수집 절차서(크론 세션이 그대로 따름)** | |
 | `scripts/mcp_audit_prompt.md` | MCP 사례 LLM 감사 절차(축 4·5) | |
 | `config/rooms.json` | 수집 대상(Threads 태그·카카오 방 이름) | |
 | `site/` | 정적 사이트(index·dashboard·observatory·gap-map·playbook·champions·mcp-review·guidelines·changelog·case/) | 공개 |
-| `tests/` | pytest (`PYTHONPATH=scripts python3 -m pytest tests/`) | |
-| `docs/superpowers/specs/`, `plans/` | 설계서·구현 계획 | |
-| `docs/reports/` | 정책 보고서(공공 깃랩 전략, AI 모델 사용 실태 등) | |
 | `HISTORY.md` | 공개 연혁 — 주요 기능·운영 변경 시 갱신 | 공개 |
 | `.claude/skills/pax-register/` | **사례 단건 등재·보강 스킬**(중복 검사 `preflight.py`·평가 항목·MCP 검증·썸네일·커밋 체크리스트) — 사용자가 URL을 주며 등재를 청하면 이 스킬을 쓴다 | 비공개(로컬) |
 
@@ -52,42 +47,20 @@ PAX = Threads `공공AX` 태그 + 카카오톡 오픈채팅 "공공AX 네트워�
 8. **챔피언 데이터**: 공개 프로필 기반. 참고 분류(민간·해외) 계정은 챔피언 추출에서 제외한다.
    프로필 원장(`data/champion_profiles.json`)은 비공개다.
 
-## 4. 파이프라인 명령 (순서대로)
+## 4. 파이프라인 명령
 
-```bash
-PYTHONPATH=scripts python3 -m pax.merge data/incoming/TODAY.json
-python3 scripts/tag_licenses.py
-PYTHONPATH=scripts python3 -m pax.publish
-python3 scripts/build_champions.py
-python3 scripts/build_index.py            # 분기 말 --snapshot
-python3 scripts/build_case_pages.py
-python3 scripts/build_community_stats.py
-PYTHONPATH=scripts python3 scripts/build_mcp_review.py
-bash scripts/make_thumbs.sh
-```
-주간(월요일 아침): `check_health.py`, 카카오 8일 백필, `check_mcp.py --audit-only`, 공공 깃랩 스타 3+ 조사.
-신규 MCP 사례: `check_mcp.py --case <id>` + `mcp_audit_prompt.md` 감사.
+순서·명령·주간 점검·MCP 검증은 `scripts/collect_prompt.md` §4~§5가 정본이다(크론 세션이 그대로 따르며,
+이 파일과 중복 유지하지 않는다). 테스트: `PYTHONPATH=scripts python3 -m pytest tests/`.
 
-## 5. 사례 스키마 요점 (`scripts/pax/schema.py`가 정본)
+## 5. 사례 스키마
 
-- 분류축: `org_type` 10분류(중앙행정기관|광역지자체|기초지자체|지방의회|공공기관|교육기관|공직 개인|커뮤니티|민간(참고)|해외(참고)),
-  `task_category` 10종, `case_class`, `region`, `runtime_env`, `network_req`.
-- 주소 3슬롯: `link`(게시물 또는 공유 URL) / `case_url`(사례 대상, 썸네일 기준) / `mirror_url`(GitHub↔공공 깃랩 미러 병기).
-- 모델 정보: `models_used`(국산·BYO·비LLM 등), 평가·MCP 검증은 별도 원장에서 id로 결합.
-- `popularity`는 100 이상 확인된 경우에만.
+`scripts/pax/schema.py`가 정본(필수·선택 필드, 10분류 어휘). 코드로 알 수 없는 것 하나: `model_dependency`는
+관측소 모델 채택률의 분모라서, LLM을 직접 호출하지 않는 도구는 반드시 `없음(비LLM)` 또는 `모델 중립(BYO)`으로 둔다.
 
-## 6. 수집 요령 (실측으로 확인된 것)
+## 6. 수집 요령
 
-- **Threads**: 검색 페이지는 DOM 가상화 때문에 스크롤 누적 수집이 불안정 — 로드 직후 첫 배치(~20건)를 즉시 추출.
-  확장 출력에 긴 따옴표·콤마 배열을 섞으면 `[BLOCKED: Cookie/query string data]`로 차단됨 → ID만 공백 구분으로 반환하고
-  본문은 ID별로 나눠 개행을 `§`로 치환해 반환. 외부 링크는 `l.threads.com/?u=` 디코드 후 `split('?')[0]`.
-  Chrome 확장 미연결이면 건너뛰고 log에 기록한다.
-- **카카오톡**: `kakaocli`가 Mac 앱의 로컬 DB를 읽는다. 앱이 꺼져 있으면 새 메시지가 없다 —
-  DB 최신 timestamp가 `last_read`와 같으면 "0건"이 아니라 **"동기화 중단"**으로 기록한다.
-  반환 메시지의 최소 timestamp가 `last_read`보다 뒤면 창이 잘린 것 → `--since 2d --limit 5000`으로 재수집.
-  봇 메시지("Cronjob Response")·120자 미만 잡담은 제외.
-  카카오 원본은 kakaocli 리스트 그대로 `data/raw/TODAY-kakao[-pm].json`에 저장 — 커뮤니티 지표가 `*kakao*.json` 리스트만 집계한다.
-- **썸네일**: 실패 URL은 무시(사이트가 설명문 폴백). 404가 캐시되면 `site/thumbs/<id>.jpg` 삭제 후 재생성.
+Threads·카카오톡 실측 요령(DOM 가상화, 확장 출력 차단 우회, 동기화 중단 판별, 원본 저장 형식)은
+`scripts/collect_prompt.md` §1~§3에 있다 — 수집 작업을 할 때만 읽으면 된다.
 
 ## 7. 기록 규칙 (무엇을 어디에)
 
