@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>민원 답변 작성 스킬 팩 — Codex·Claude Code·Gemini CLI 겸용 — 모두의 공공AX</title>
-  <meta name="description" content="민원 답변서 작성을 돕는 한국어 스킬 팩이 오픈소스로 공개됐다. Codex, Claude Code, Gemini CLI 세 가지 AI 도구에서 동일하게 동작하도록 만들어져, 실무자가 쓰는 도구와 무관하게 민원 답변 초안 작성 규칙을 재사용할 수 있다.">
+  <meta name="description" content="민원·고충민원·제안·예산낭비신고·국민생각함 답변 초안 작성을 돕는 한국어 스킬 팩이 오픈소스로 공개됐다. 벤더 중립 핵심 지침과 Codex·Claude Code·Gemini CLI 래퍼를 분리해 실무자가 쓰는 도구와 무관하게 같은 규칙을 재사용한다. v1.2에서 민원인">
   <link rel="canonical" href="https://hollobit.github.io/PAX/case/4c918008fd4eff60.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="민원 답변 작성 스킬 팩 — Codex·Claude Code·Gemini CLI 겸용">
-  <meta property="og:description" content="민원 답변서 작성을 돕는 한국어 스킬 팩이 오픈소스로 공개됐다. Codex, Claude Code, Gemini CLI 세 가지 AI 도구에서 동일하게 동작하도록 만들어져, 실무자가 쓰는 도구와 무관하게 민원 답변 초안 작성 규칙을 재사용할 수 있다.">
+  <meta property="og:description" content="민원·고충민원·제안·예산낭비신고·국민생각함 답변 초안 작성을 돕는 한국어 스킬 팩이 오픈소스로 공개됐다. 벤더 중립 핵심 지침과 Codex·Claude Code·Gemini CLI 래퍼를 분리해 실무자가 쓰는 도구와 무관하게 같은 규칙을 재사용한다. v1.2에서 민원인">
   <meta property="og:url" content="https://hollobit.github.io/PAX/case/4c918008fd4eff60.html">
   <meta property="og:site_name" content="모두의 공공AX 사례 아카이브">
   <link rel="stylesheet" href="../style.css">
@@ -40,20 +40,20 @@
   <main class="case-page">
     <section class="obs-section">
       <p class="case-page__meta">공직 현장(개인 개발) · 공직 개인 · 인천 · 민원 · 2026-08-17 게시</p>
-      <p class="case-page__summary">민원 답변서 작성을 돕는 한국어 스킬 팩이 오픈소스로 공개됐다. Codex, Claude Code, Gemini CLI 세 가지 AI 도구에서 동일하게 동작하도록 만들어져, 실무자가 쓰는 도구와 무관하게 민원 답변 초안 작성 규칙을 재사용할 수 있다.</p>
+      <p class="case-page__summary">민원·고충민원·제안·예산낭비신고·국민생각함 답변 초안 작성을 돕는 한국어 스킬 팩이 오픈소스로 공개됐다. 벤더 중립 핵심 지침과 Codex·Claude Code·Gemini CLI 래퍼를 분리해 실무자가 쓰는 도구와 무관하게 같은 규칙을 재사용한다. v1.2에서 민원인 측 스킬(minwon-draft) 방법론을 분석해 법령 인용 검증 프로토콜과 적대적 자기검토를 넣었고, v1.3(2026-08-18)에서는 민원 본문·첨부를 비신뢰 입력으로 취급해 AI 대상 지시문을 실행하지 않도록 하는 원문 정제 단계(sanitize.py)와 차단 체크리스트를 추가했다 — 대민 업무 AI 도구의 간접 프롬프트 인젝션 대응을 명시한 첫 관측 사례다.</p>
       <p class="case-page__links"><a href="https://github.com/newskool4d-sketch/minwon-answer-skill-pack" target="_blank" rel="noopener">공유 링크</a> · <a href="../?case=4c918008fd4eff60">아카이브에서 보기</a></p>
     </section>
     <section class="obs-section">
       <h2 class="obs-heading">4축 평가</h2>
       <div class="table-wrap"><table class="obs-table"><tr><th scope="row">AX 단계</th><td>AI-Enabled</td></tr><tr><th scope="row">업무 범위</th><td>S1 Primitive tool</td></tr><tr><th scope="row">업무 완결성</th><td>C1 결과 제공</td></tr><tr><th scope="row">권한(P축)</th><td>P1 산출물 생성(잠정)</td></tr><tr><th scope="row">위험도</th><td>R1 낮음</td></tr><tr><th scope="row">인간 통제</th><td>H2 Human-in-the-loop</td></tr><tr><th scope="row">증거 등급</th><td>E1 코드·도구 확인</td></tr><tr><th scope="row">신뢰도</th><td>중간</td></tr></table></div>
-      <p class="obs-note">민원 답변 초안이라는 검증 가능한 업무 산출물을 AI가 작성하고 실무자가 확인 — Enabled. 3개 AI 도구 겸용 스킬로 공개돼 재사용성 높음. 대민 답변 맥락의 정확성 유의로 위험도 낮음.</p>
+      <p class="obs-note">민원 답변 초안이라는 검증 가능한 업무 산출물을 AI가 작성하고 실무자가 확인 — Enabled. 3개 AI 도구 겸용 스킬로 공개돼 재사용성 높음. 대민 답변 맥락의 정확성 유의로 위험도 낮음. (08-30 보강) v1.2 인용 검증 프로토콜·적대적 자기검토, v1.3 비신뢰 입력 원칙·원문 정제 스크립트·차단 체크리스트로 대민 답변의 환각 인용과 간접 프롬프트 인젝션을 설계 단계에서 다룬다 — 안전 장치가 문서화된 점에서 같은 S1·C1 안에서 완성도가 높다.</p>
     </section>
     <section class="obs-section">
       <h2 class="obs-heading">실무 도입 카드</h2>
       <div class="obs-cards">
         <div class="obs-card"><p class="obs-card__label">필요한 것</p><p class="obs-card__note">실행환경: AI 도구 설정 · 비용·권한: 무료 · 라이선스: 명시 없음</p></div>
         <div class="obs-card"><p class="obs-card__label">첫 3단계</p><p class="obs-card__note">① 스킬·GEM 파일 확보 → ② 내 AI 도구에 등록 → ③ 실제 업무 문서로 출력 품질 검증</p></div>
-        <div class="obs-card"><p class="obs-card__label">주의사항</p><p class="obs-card__note">실사용 피드백이 미확인입니다 — 도입 전 소규모 검증을 권합니다 · 성과 수치는 출처가 확인된 것만 신뢰하세요</p></div>
+        <div class="obs-card"><p class="obs-card__label">주의사항</p><p class="obs-card__note">성과 수치는 출처가 확인된 것만 신뢰하세요</p></div>
       </div>
       <p class="obs-note">전이 절차(보안검토→품의→배포)는 <a href="../playbook.html">전이 플레이북</a>을 참고하세요.</p>
     </section>
