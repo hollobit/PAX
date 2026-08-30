@@ -4786,5 +4786,33 @@
   "resilience": "미확인(Manus 호스팅 초안 — 저장소·운영 주체 미공개)",
   "post_url": "",
   "service_url": "https://camcdash-k6ha4jmb.manus.space/"
+ },
+ {
+  "no": 242,
+  "id": "6c0fa4c0c3508ff0",
+  "org": "공직 현장(개인 개발)",
+  "title": "인물사진분류 AI — 행사 사진에서 등록 인물만 골라 폴더로 정리하는 로컬 CNN 도구",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C2",
+  "c_name": "부분 완결",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Published tool",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R1 낮음",
+  "human": "해당 없음",
+  "evidence": "E1 코드·도구 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "얼굴 인식 CNN이 사진 분류·폴더 정리라는 업무 산출물을 끝까지 만들어내는 단일 도구(S1·C2) — LLM이 아닌 온디바이스 비전 AI로 AI-Enabled를 달성한 드문 관측이다. 폐쇄망 동작·사진 비전송·비상업 라이선스 동의 게이트·처리 시간 정직 고지 등 공공 배포 요건을 스스로 갖췄다. README·코드 구조로 확인(E1)했고 실행 검증은 하지 않아 중간 신뢰도로 둔다.",
+  "feedback": "미확인",
+  "resilience": "미확인(2026-08-13 등록 직후, 공공 깃랩 ★3)",
+  "post_url": "",
+  "service_url": ""
  }
 ]

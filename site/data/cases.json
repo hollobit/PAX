@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-30T16:31:54+09:00",
+ "updated_at": "2026-08-31T07:38:08+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -7130,6 +7130,32 @@
    "link_ok": true,
    "health_checked": "2026-08-31",
    "thumb_v": 1788075169
+  },
+  {
+   "runtime_env": "설치 필요",
+   "title": "인물사진분류 AI — 행사 사진에서 등록 인물만 골라 폴더로 정리하는 로컬 CNN 도구",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "task_category": "공통·범용",
+   "date": "2026-08-13",
+   "source": "kakao",
+   "link": "https://gitlab.aigov.go.kr/popous/insightface",
+   "org": "공직 현장(개인 개발)",
+   "case_class": "개인 개발",
+   "network_req": "폐쇄망 가능",
+   "collected_at": "2026-08-31",
+   "tags": [
+    "사진분류",
+    "얼굴인식",
+    "폐쇄망",
+    "온디바이스AI"
+   ],
+   "summary": "행사 후 수백 장의 사진에서 등록해 둔 인물이 찍힌 것만 골라 인물별 폴더로 자동 정리하는 도구가 공공 깃랩에 공개됐다. 외부 AI API 대신 PC에서 직접 도는 얼굴 인식 CNN을 써서 최초 1회 모델 다운로드 후에는 폐쇄망에서도 동작하고 사진이 외부로 전송되지 않는다. CPU 전용에 1,000장 약 40분이라는 처리 시간까지 정직하게 고지하며, 얼굴 정보를 다루는 만큼 비상업 라이선스 동의 절차를 내장했다.",
+   "id": "6c0fa4c0c3508ff0",
+   "license": "POLYFORM-NONCOMMERCIAL-1.0.0",
+   "license_source": "gitlab",
+   "license_checked": "2026-08-31",
+   "thumb_v": 1788129496
   }
  ]
 }
