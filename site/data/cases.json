@@ -6411,9 +6411,9 @@
   {
    "org_type": "커뮤니티",
    "collected_at": "2026-08-27",
-   "link": "https://seoul-raphael.github.io/assembly-minutes/",
+   "link": "https://github.com/seoul-raphael/assembly-minutes",
    "task_category": "문서·기안",
-   "case_url": "https://github.com/seoul-raphael/assembly-minutes",
+   "case_url": "https://seoul-raphael.github.io/assembly-minutes/",
    "transition_stage": "개인 사용",
    "network_req": "인터넷 필수",
    "source": "kakao",
@@ -6430,7 +6430,7 @@
    ],
    "runtime_env": "브라우저만",
    "id": "32eccfe07448d060",
-   "thumb_v": 1787812439
+   "thumb_v": 1788077410
   },
   {
    "org_type": "민간(참고)",
