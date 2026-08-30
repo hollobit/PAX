@@ -132,7 +132,9 @@ git add data/cases.json data/community_stats.json site/data site/thumbs site/cas
 git commit -m "chore: 사례 데이터 갱신 (TODAY)"
 git push
 ```
-- 변경이 없으면 커밋하지 않는다.
+- 변경이 없으면 커밋하지 않는다. 변경이 있으면 **푸시까지 반드시 완료**한다 — 사용자 지시(2026-08-30):
+  회차를 미커밋·미푸시 상태로 끝내지 않는다. 절차서·스크립트를 고쳤으면 같은 회차에 함께 커밋한다.
+  `main`도 동기화한다: `git push origin feat/pax-archive:main` (두 브랜치 동일 유지 관행).
 
 ## 7. 상태·로그 기록
 - data/state.json 갱신: threads.seen_ids에 새로 처리한 링크 추가(500개 초과분은
