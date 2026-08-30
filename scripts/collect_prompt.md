@@ -131,7 +131,10 @@ PYTHONPATH=scripts python3 scripts/build_mcp_review.py  # MCP 검증 공개본 (
   build_mcp_review·build_case_pages 재실행 — 주의 항목 변화는 log에 기록.
 - 공공 깃랩 스타 조사: `https://gitlab.aigov.go.kr/api/v4/projects?order_by=star_count&sort=desc&per_page=100`
   을 curl로 조회해 스타 3+ 중 미등재(전체 사례의 link/case_url/mirror_url과 대조)를 찾는다.
-  기등재 사례의 미러면 mirror_url로 병기하고, 순수 신규는 사용자에게 후보 목록으로 보고한다.
+  기등재 사례의 미러면 mirror_url로 병기하고, **순수 신규는 자동 등재한다**(사용자 지시 2026-08-31 —
+  이전의 '후보 보고 후 대기' 규칙 폐지): `.claude/skills/pax-register/SKILL.md` §1 절차대로 README 실체 확인 →
+  분류 → incoming·merge → 평가 항목 → 썸네일 → changelog까지 같은 회차에 수행하고, 등재 내역을 log에 남긴다.
+  포함 기준(§4)에 미달하는 저장소(실체 없는 테스트·포크 등)만 제외 사유와 함께 log에 기록한다.
 
 ## 6. 커밋·푸시
 ```bash
