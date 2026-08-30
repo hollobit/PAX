@@ -86,6 +86,7 @@ bash scripts/make_thumbs.sh
   DB 최신 timestamp가 `last_read`와 같으면 "0건"이 아니라 **"동기화 중단"**으로 기록한다.
   반환 메시지의 최소 timestamp가 `last_read`보다 뒤면 창이 잘린 것 → `--since 2d --limit 5000`으로 재수집.
   봇 메시지("Cronjob Response")·120자 미만 잡담은 제외.
+  카카오 원본은 kakaocli 리스트 그대로 `data/raw/TODAY-kakao[-pm].json`에 저장 — 커뮤니티 지표가 `*kakao*.json` 리스트만 집계한다.
 - **썸네일**: 실패 URL은 무시(사이트가 설명문 폴백). 404가 캐시되면 `site/thumbs/<id>.jpg` 삭제 후 재생성.
 
 ## 7. 기록 규칙 (무엇을 어디에)
