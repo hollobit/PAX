@@ -44,6 +44,10 @@
 
 ## 3. 원본 저장
 - 수집한 raw 목록을 data/raw/TODAY.json에 저장한다 (커밋 금지 경로).
+- **카카오 원본은 반드시 kakaocli 출력 리스트 그대로** `data/raw/TODAY-kakao.json`(오전) /
+  `TODAY-kakao-pm.json`(오후·야간)에 저장한다 — `build_community_stats.py`가 `data/raw/*kakao*.json`
+  중 리스트 형식 파일만 읽어 일별 대화량·가입자 추이를 집계하므로, 이름에 kakao가 없거나 dict로
+  감싸면 그 회차 대화량이 통째로 빠진다(2026-08-30 실제 발생).
 - 수집 0건이면 4~6단계를 건너뛰고 7단계로 간다.
 
 ## 4. 사례 선별·구조화 (AI 판단)
