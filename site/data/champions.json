@@ -1,5 +1,5 @@
 {
- "total": 109,
+ "total": 110,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -2254,6 +2254,30 @@
    },
    "cases": [
     "c6a58cb9146d0694"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:popous",
+   "name": "이상행",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "popous",
+     "url": "https://gitlab.aigov.go.kr/popous"
+    }
+   ],
+   "affiliation": {
+    "value": "한국회계기준원",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "6c0fa4c0c3508ff0"
    ],
    "stats": {
     "case_count": 1,

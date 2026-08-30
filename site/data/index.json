@@ -1,20 +1,20 @@
 {
- "generated_at": "2026-08-30",
+ "generated_at": "2026-08-31",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 241,
- "total_champions": 109,
+ "total_cases": 242,
+ "total_champions": 110,
  "community": {
-  "members": 1431,
-  "kakao_week": 4227,
-  "kakao_total_observed": 18475,
-  "threads_observed": 202
+  "members": 1436,
+  "kakao_week": 3340,
+  "kakao_total_observed": 18566,
+  "threads_observed": 205
  },
  "certified_champions": 2,
  "unattributed_cases": 67,
  "ax_distribution": {
   "AI-Ready": 160,
-  "AI-Enabled": 70,
+  "AI-Enabled": 71,
   "AX 단계 외": 10,
   "AI-First": 1
  },
@@ -22,11 +22,11 @@
  "p_distribution": {
   "P0": 99,
   "P1": 137,
-  "P2": 5
+  "P2": 6
  },
  "model_dependency": {
   "미확인": 66,
-  "없음(비LLM)": 68,
+  "없음(비LLM)": 69,
   "해외 오픈웨이트(로컬)": 9,
   "혼합": 7,
   "해외 상용 API": 33,
@@ -563,7 +563,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 68,
+    "n": 69,
     "specified": 0
    },
    "해외 오픈웨이트(로컬)": {
@@ -1166,15 +1166,15 @@
  "domestic_model_rate": 0.075,
  "local_model_rate": 0.17,
  "model_known": 53,
- "license_tagged": 156,
- "license_stated_rate": 0.615,
- "gitlab_cases": 44,
+ "license_tagged": 157,
+ "license_stated_rate": 0.618,
+ "gitlab_cases": 45,
  "gitlab_mirror_pairs": 8,
- "gitlab_open_rate": 0.182,
+ "gitlab_open_rate": 0.178,
  "mcp_cases": 71,
  "transition_funnel": {
   "기관 공식": 32,
-  "미확인": 166,
+  "미확인": 167,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1182,21 +1182,22 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.494
+  "feedback": 0.492
  },
  "maintenance_distribution": {
-  "활발": 98,
-  "정체": 14,
+  "활발": 117,
+  "정체": 13,
   "방치": 13
  },
- "stars_collected": 125,
+ "stars_collected": 143,
  "repo_stats": {
   "gitlab": {
-   "count": 44,
-   "starred": 38,
-   "stars_sum": 171,
+   "count": 45,
+   "starred": 43,
+   "stars_sum": 194,
    "maintenance": {
-    "활발": 38
+    "활발": 42,
+    "정체": 1
    },
    "top": [
     {
@@ -1234,10 +1235,18 @@
     {
      "id": "17ed2d7a88c03119",
      "title": "Rekian — HWPX 공문서 재기안 에이전트 스킬셋",
-     "stars": 7,
+     "stars": 8,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "정솔현"
+    },
+    {
+     "id": "8c5458af8f13435d",
+     "title": "한글 AI 도우미 — 로컬 LLM 웹한글 보고서 확장",
+     "stars": 7,
+     "maintenance": "활발",
+     "license": "명시 없음",
+     "developer": "정재경"
     },
     {
      "id": "de4b2dab339d69b7",
@@ -1248,20 +1257,20 @@
      "developer": "류승인"
     },
     {
+     "id": "d08bc7e9a69190af",
+     "title": "내부망용 빠른 메모·구조화 앱",
+     "stars": 6,
+     "maintenance": "활발",
+     "license": "AGPL-3.0",
+     "developer": "우성균"
+    },
+    {
      "id": "8ff758ac1d5e40eb",
      "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
      "stars": 6,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "류승인"
-    },
-    {
-     "id": "8c5458af8f13435d",
-     "title": "한글 AI 도우미 — 로컬 LLM 웹한글 보고서 확장",
-     "stars": 6,
-     "maintenance": "활발",
-     "license": "명시 없음",
-     "developer": "정재경"
     },
     {
      "id": "d6c35b2999da8ca0",
@@ -1270,31 +1279,55 @@
      "maintenance": "활발",
      "license": "명시 없음",
      "developer": "한종훈"
-    },
-    {
-     "id": "10f18583c9e56e12",
-     "title": "화성특례시 신규자 지식창고 — 규정 검증 카드 130장 웹앱 (원본)",
-     "stars": 6,
-     "maintenance": "활발",
-     "license": "명시 없음",
-     "developer": "신환철"
     }
    ]
   },
   "github": {
    "count": 110,
-   "starred": 96,
-   "stars_sum": 18960,
+   "starred": 108,
+   "stars_sum": 149236,
    "maintenance": {
-    "활발": 68,
-    "정체": 14,
+    "활발": 82,
+    "정체": 13,
     "방치": 13
    },
    "top": [
     {
+     "id": "c54ee4b5fb3ee4c5",
+     "title": "Orca — 병렬 에이전트 플릿을 부리는 에이전트 개발 환경(ADE)",
+     "stars": 57337,
+     "maintenance": "활발",
+     "license": "MIT",
+     "developer": "stablyai"
+    },
+    {
+     "id": "4f136eeeea72fe65",
+     "title": "Archify — 코드베이스·시스템 설명을 검증 가능한 다이어그램으로 바꾸는 에이전트 스킬",
+     "stars": 34318,
+     "maintenance": "활발",
+     "license": "MIT",
+     "developer": "tt-a1i"
+    },
+    {
+     "id": "f108979f0d8b2009",
+     "title": "book-to-skill — 기술 서적 PDF를 Claude Code 스킬로 바꾸는 도구",
+     "stars": 27301,
+     "maintenance": "활발",
+     "license": "MIT",
+     "developer": "virgiliojr94"
+    },
+    {
+     "id": "b64e832490a6c814",
+     "title": "MCP Inspector — MCP 서버를 눈으로 검사하는 공식 테스트 도구",
+     "stars": 10792,
+     "maintenance": "활발",
+     "license": "명시 없음",
+     "developer": "modelcontextprotocol"
+    },
+    {
      "id": "2f4ed1e68a6464c5",
      "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
-     "stars": 7289,
+     "stars": 7372,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "NomaDamas"
@@ -1302,7 +1335,7 @@
     {
      "id": "43dc7f4ab2500260",
      "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
-     "stars": 2509,
+     "stars": 2534,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "류승인"
@@ -1310,7 +1343,7 @@
     {
      "id": "8ff758ac1d5e40eb",
      "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
-     "stars": 1765,
+     "stars": 1781,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "류승인"
@@ -1318,7 +1351,7 @@
     {
      "id": "847dfef5759dbcac",
      "title": "HOP is Open HWP — HWP·HWPX를 여는 크로스플랫폼 오픈소스 편집기",
-     "stars": 1759,
+     "stars": 1774,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "Jin Kim"
@@ -1326,50 +1359,18 @@
     {
      "id": "efe52d0b0f115f47",
      "title": "Capptivo — 오픈소스 화면 녹화·자동 줌 도구(온디바이스 자막)",
-     "stars": 863,
-     "maintenance": null,
+     "stars": 872,
+     "maintenance": "활발",
      "license": "MIT",
      "developer": "SECHAK-AG"
     },
     {
      "id": "de4b2dab339d69b7",
      "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
-     "stars": 639,
+     "stars": 645,
      "maintenance": "활발",
      "license": "Other",
      "developer": "류승인"
-    },
-    {
-     "id": "75b9815de6b6dcf5",
-     "title": "아파트 실거래가 MCP — 국토교통부 공개 API 기반",
-     "stars": 371,
-     "maintenance": "활발",
-     "license": "MIT",
-     "developer": "ParkTaeYoung"
-    },
-    {
-     "id": "54d599932088897f",
-     "title": "정부 지원사업 전수조사 에이전트 스킬 ir-search",
-     "stars": 361,
-     "maintenance": "활발",
-     "license": "MIT",
-     "developer": "Danny"
-    },
-    {
-     "id": "1c54d608228e0845",
-     "title": "이미지 생성 프롬프트 컴파일 스킬 — 공냥이 프롬프트 킷",
-     "stars": 316,
-     "maintenance": "활발",
-     "license": "MIT",
-     "developer": "kongnyng"
-    },
-    {
-     "id": "c5aa260668941b92",
-     "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커",
-     "stars": 295,
-     "maintenance": "활발",
-     "license": "Apache-2.0",
-     "developer": "모두의AI"
     }
    ]
   }
@@ -1382,7 +1383,8 @@
   "AGPL-3.0": 3,
   "기타(비표준)": 2,
   "ISC": 1,
-  "GNU AGPLv3": 1
+  "GNU AGPLv3": 1,
+  "POLYFORM-NONCOMMERCIAL-1.0.0": 1
  },
  "license_matrix": {
   "MIT": {
@@ -1416,6 +1418,10 @@
   "GNU AGPLv3": {
    "github": 0,
    "gitlab": 1
+  },
+  "POLYFORM-NONCOMMERCIAL-1.0.0": {
+   "github": 0,
+   "gitlab": 1
   }
  },
  "license_by_source": {
@@ -1428,8 +1434,8 @@
    "stated": 4
   },
   "gitlab": {
-   "total": 34,
-   "stated": 11
+   "total": 35,
+   "stated": 12
   }
  },
  "mcp_stats": {
@@ -1449,9 +1455,9 @@
    "C1": 1
   },
   "maintenance": {
-   "활발": 31,
-   "방치": 13,
-   "정체": 12
+   "활발": 35,
+   "정체": 12,
+   "방치": 13
   }
  },
  "mirror_pair_cases": [
