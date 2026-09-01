@@ -2543,6 +2543,87 @@
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
    }
+  },
+  {
+   "case_id": "7af52cadb55f2391",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 3건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-09-02",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "e996c18ebe1f7413",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 3건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 1건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·유지보수 미상"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-09-02",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "e627c2ca4ea8e5a1",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 5건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 3건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·유지보수 미상"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-09-02",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-01T23:49:41+09:00",
+ "updated_at": "2026-09-01T23:59:32+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -1151,6 +1151,7 @@
    "models_used": [
     "Gemma 4 E2B(Ollama 번들)"
    ],
+   "mirror_url": "https://gitlab.aigov.go.kr/Kminer2053/gongmuwon",
    "thumb_v": 1786110276
   },
   {
@@ -1647,6 +1648,7 @@
    "stars_github": 2,
    "stars": 2,
    "model_dependency": "없음(비LLM)",
+   "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/gjdong",
    "thumb_v": 1786110276
   },
   {
@@ -2041,6 +2043,7 @@
    "mcp_official": false,
    "stars": 52,
    "stars_github": 52,
+   "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/korean-patent-mcp",
    "thumb_v": 1786155305
   },
   {
@@ -2321,6 +2324,7 @@
    "stars": 3,
    "stars_github": 3,
    "model_dependency": "없음(비LLM)",
+   "mirror_url": "https://gitlab.aigov.go.kr/rhamasel3/how-did-they-do-all-that-procurement",
    "thumb_v": 1786439867
   },
   {
@@ -3459,6 +3463,7 @@
    "stars": 64,
    "stars_github": 64,
    "model_dependency": "모델 중립(BYO)",
+   "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/archhub-mcp",
    "thumb_v": 1786546321
   },
   {
@@ -4574,7 +4579,7 @@
    "thumb_v": 1786798862
   },
   {
-   "link": "https://gitlab.aigov.go.kr/wavelen/govwork",
+   "link": "https://gitlab.aigov.go.kr/wavelen/onai-work",
    "title": "온AI Work — 공무원 보고서 AI 작성 도구",
    "org": "공직 현장(개인 개발)",
    "tags": [
@@ -4604,7 +4609,8 @@
    "models_used": [
     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
    ],
-   "thumb_v": 1786799800
+   "mirror_url": "https://gitlab.aigov.go.kr/wavelen/govwork",
+   "thumb_v": 1788274866
   },
   {
    "link": "https://gitlab.aigov.go.kr/y2kthr/koda",
@@ -4968,6 +4974,7 @@
    "stars": 4,
    "stars_gitlab": 4,
    "model_dependency": "없음(비LLM)",
+   "mirror_url": "https://gitlab.aigov.go.kr/leejm/modu-minwon-call",
    "thumb_v": 1786799830
   },
   {
@@ -5857,6 +5864,7 @@
    "health_checked": "2026-08-31",
    "maintenance": "활발",
    "model_dependency": "모델 중립(BYO)",
+   "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/korean-stats-mcp",
    "thumb_v": 1787401380
   },
   {
@@ -6164,6 +6172,7 @@
    "id": "0de42ad232a72d2c",
    "link_ok": true,
    "health_checked": "2026-08-31",
+   "mirror_url": "https://gitlab.aigov.go.kr/lx/dongdongs",
    "thumb_v": 1787613691
   },
   {
@@ -7210,6 +7219,767 @@
    "license_source": "github",
    "license_checked": "2026-09-01",
    "thumb_v": 1788274196
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "공직자 책상 위에 투명 플로팅 창으로 떠 있는 AI 반려식물 다마고치 위젯. 업무 피로와 스트레스 케어를 겨냥한 정서 지원 도구로, 공공 깃랩에 공개돼 별 3개를 받았다. 업무 도구 일색인 공공 깃랩에서 드문 웰빙 방향의 실험이다.",
+   "tags": [
+    "웰빙",
+    "위젯",
+    "데스크톱"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "공통·범용",
+   "date": "2026-08-31",
+   "title": "데스크톱 AI 반려화분 — 책상 위 투명 플로팅 다마고치형 스트레스 케어 위젯",
+   "link": "https://gitlab.aigov.go.kr/westock/flower",
+   "id": "f101dfca65b4144b",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274868
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "폐쇄망용 로컬 LLM 채팅, RAG·청킹 비교 실습 4종, AI 안전비서·현장조사 등 실행형 PoC 7종을 Python ASGI 앱 하나에 묶은 실습·포트폴리오 저장소. AI 챔피언 실습 산출물을 공개 아카이브로 유지하며 minslab.kr로 서비스한다.",
+   "tags": [
+    "로컬LLM",
+    "RAG",
+    "PoC"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "해외 오픈웨이트(로컬)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "공통·범용",
+   "date": "2026-08-31",
+   "runtime_env": "서버 구축",
+   "title": "MinsLab — 폐쇄망 로컬 LLM 채팅·RAG 실습·PoC 7종 묶음 저장소",
+   "link": "https://gitlab.aigov.go.kr/acesharp/minslab",
+   "id": "aea43d543a0244e1",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274871
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "전임자가 남긴 정리 안 된 파일 더미를 분석해 후임자가 무슨 업무를 맡았고 언제 해야 하며 지난번엔 어떻게 했는지를 찾아 주는 도구. 인수인계 문서가 부실한 공직 현실에서 자료 더미 자체를 지식으로 바꾸는 접근이다.",
+   "tags": [
+    "인수인계",
+    "문서분석",
+    "로컬"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "문서·기안",
+   "date": "2026-08-31",
+   "title": "눈치코치 — 전임자 파일 더미에서 업무·일정·전례를 찾아 주는 인수인계 분석 도구",
+   "link": "https://gitlab.aigov.go.kr/Ubermensch/docs_mate",
+   "id": "eebec2ebc85768d7",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274874
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "내 파일 안의 개인정보를 인터넷 연결 없이 로컬 처리로 비식별화하는 프로그램. 외부 전송이 없어 보안 우려 없이 자료 공유 전 정제 작업에 쓸 수 있다. 같은 개발 계정의 규정 검토·인수인계 도구와 함께 로컬 완결 3부작을 이룬다.",
+   "tags": [
+    "개인정보",
+    "비식별화",
+    "로컬"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "network_req": "로컬 완결",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "감사·법무",
+   "date": "2026-08-31",
+   "title": "safeDoc — 인터넷 없이 로컬에서 파일 속 개인정보를 비식별화하는 도구",
+   "link": "https://gitlab.aigov.go.kr/Ubermensch/safeDoc",
+   "id": "253dd6b9ef7a7166",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274876
+  },
+  {
+   "collected_at": "2026-09-02",
+   "models_used": [
+    "Ollama(로컬)"
+   ],
+   "summary": "기준 문서와 검토 대상 문서를 로컬 Ollama 모델로 비교해 규정 충돌 가능성과 보완 필요 사항을 짚어 주는 적합성 검토 도구. 법령·지침 대비 검토라는 반복 업무를 폐쇄망에서도 가능한 로컬 AI로 처리한다.",
+   "tags": [
+    "규정검토",
+    "Ollama",
+    "로컬LLM"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "해외 오픈웨이트(로컬)",
+   "network_req": "로컬 완결",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "감사·법무",
+   "date": "2026-08-31",
+   "title": "RuleLens AI — 기준 법령·지침과 내 자료를 로컬 Ollama로 대조하는 적합성 검토 도구",
+   "link": "https://gitlab.aigov.go.kr/Ubermensch/ruleCheck_AI",
+   "id": "e65b0800852d5e5f",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274879
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "첨부한 파일 내용을 로컬 LLM으로 요약해 이미지와 텍스트 카드뉴스로 만들어 주는 도구. 보도·홍보 자료 제작의 반복 작업을 외부 API 없이 처리한다.",
+   "tags": [
+    "카드뉴스",
+    "홍보",
+    "로컬LLM"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "해외 오픈웨이트(로컬)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "기획·정책",
+   "date": "2026-08-31",
+   "title": "AI 카드뉴스 생성기 — 첨부 파일을 로컬 LLM으로 이미지·텍스트 카드뉴스로",
+   "link": "https://gitlab.aigov.go.kr/y2kthr/ai-card-news",
+   "id": "1f962fbf41a13407",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274881
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "공공기관 업무망 PC에서 쓰도록 만든 캘린더·일정·스티키 노트 통합 앱. 설치 제약이 많은 업무망 환경을 전제로 한 일정 관리 도구다.",
+   "tags": [
+    "일정관리",
+    "업무망",
+    "데스크톱"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "network_req": "폐쇄망 가능",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "공통·범용",
+   "date": "2026-08-31",
+   "title": "기후노트 — 업무망 PC 전용 캘린더·일정·스티키 노트 앱",
+   "link": "https://gitlab.aigov.go.kr/whrhkdrh/climate-note",
+   "id": "c1f58364f2c8c930",
+   "license": "GPL-3.0+",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274884
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "행정 업무의 다중 복사·붙여넣기와 여러 창 오가기를 위해 클립보드 히스토리와 윈도우 스위처를 묶은 유틸리티. 서식 입력 반복 작업의 손목을 덜어 주는 작은 도구다.",
+   "tags": [
+    "클립보드",
+    "유틸리티",
+    "데스크톱"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "공통·범용",
+   "date": "2026-08-31",
+   "title": "스마트 클립보드 매니저 — 다중 복사·붙여넣기와 창 전환을 묶은 업무 유틸리티",
+   "link": "https://gitlab.aigov.go.kr/westock/clipboardmanager",
+   "id": "a388a43362f33468",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274886
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "키보드 중심 탐색에 즐겨찾기·핀·메모·검색과 2·4패널 전환을 얹은 Windows 업무형 파일 탐색기. 공유폴더와 결재 파일을 오가는 행정 파일 작업 흐름에 맞춘 설계다.",
+   "tags": [
+    "파일관리",
+    "탐색기",
+    "데스크톱"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "공통·범용",
+   "date": "2026-08-31",
+   "title": "K-탐색기 — 즐겨찾기·핀·메모·다중 패널을 갖춘 업무형 파일 탐색기",
+   "link": "https://gitlab.aigov.go.kr/westock/K-Explorer",
+   "id": "14f7cad4dc158248",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274889
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "법령·지침 개정 업무의 신구대비표를 HWP·HWPX·PDF에서 뽑아 로컬에서 초안으로 만들어 주는 Windows 도구. 개정 대비표 수작업을 문서 파싱으로 대체한다.",
+   "tags": [
+    "신구대비표",
+    "HWP",
+    "문서자동화"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "network_req": "로컬 완결",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "문서·기안",
+   "date": "2026-08-31",
+   "title": "korean-munseo-diff — HWP·HWPX·PDF 개정 신구대비표를 로컬에서 초안 생성",
+   "link": "https://gitlab.aigov.go.kr/tyui22/korean-munseo-diff",
+   "id": "7ad16f34cfb6cca7",
+   "license": "MIT",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274891
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "국립국어원 온라인가나다에 올라올 법한 질문에 사전과 어문 규범 원문을 직접 조회한 근거로 답하는 도구. 상담원이 창 여러 개를 오가며 되풀이하던 근거 찾기를 한 번의 조회로 줄이고 검토용 답변 초안까지 만든다.",
+   "tags": [
+    "국어규범",
+    "상담",
+    "근거조회"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "민원",
+   "date": "2026-08-31",
+   "title": "어문 규범 조언 도구 — 온라인가나다 상담의 근거 찾기를 사전·규범 직접 조회로 자동화",
+   "link": "https://gitlab.aigov.go.kr/sophie_kim/korean-norm-advisor",
+   "id": "75e003a20b698c53",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274894
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "공문 텍스트를 입력하거나 통째로 붙여넣으면 1·2·3, 가·나·다 순번 체계를 자동으로 정리해 주는 공문 작성 보조 도구. 항목 번호 어긋남이라는 사소하지만 잦은 실수를 없앤다.",
+   "tags": [
+    "공문",
+    "서식",
+    "문서자동화"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "문서·기안",
+   "date": "2026-08-31",
+   "runtime_env": "브라우저만",
+   "title": "공문핏 — 공문을 붙여넣으면 순번 체계를 자동 정리하는 작성 도구",
+   "link": "https://gitlab.aigov.go.kr/senvip/gongmunfit",
+   "id": "720ad1356346730c",
+   "license": "MIT",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274896
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "경력대장 엑셀을 불러와 경력증명서를 자동으로 작성하고 출력까지 이어 주는 웹 도구. 교육행정의 반복 증명 발급 업무를 서식 매핑으로 처리한다.",
+   "tags": [
+    "증명발급",
+    "엑셀",
+    "교육행정"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "인사·복무",
+   "date": "2026-08-31",
+   "runtime_env": "브라우저만",
+   "title": "경력증명 자동화 — 경력대장 엑셀에서 경력증명서를 자동 작성·출력",
+   "link": "https://gitlab.aigov.go.kr/senvip/career-certificate",
+   "id": "94030c5fb139bce4",
+   "license": "MIT",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274899
+  },
+  {
+   "collected_at": "2026-09-02",
+   "region": "경기",
+   "summary": "성남시 드론관제실 회의실의 예약·변경·취소와 현황 공유를 위한 웹서비스. 화면과 예약 기능을 Lovable로 제작·고도화했고 공유 예약과 중복 시간대 차단을 갖췄다 — 바이브 코딩으로 만든 기관 시설 운영 도구가 실제 대관 업무에 쓰이는 사례다.",
+   "tags": [
+    "시설예약",
+    "바이브코딩",
+    "웹서비스"
+   ],
+   "org": "성남시",
+   "org_type": "기초지자체",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "시설·안전",
+   "date": "2026-08-31",
+   "runtime_env": "브라우저만",
+   "title": "성남시 드론관제실 대관 시스템 — 예약·변경·현황 공유 웹서비스",
+   "link": "https://gitlab.aigov.go.kr/sajw1994/SNdronecenterapply",
+   "id": "2da44c532cd48ea4",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274901
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "만들고자 하는 문서의 샘플 파일(보고서·기획안·문서갑지 등)과 작성 재료(텍스트·스크린샷)를 입력하면 서식에 맞춰 문서를 만들어 주는 도구. 서식 모방이라는 공문서 작성의 실제 관행을 그대로 도구화했다.",
+   "tags": [
+    "공문서",
+    "서식",
+    "문서자동화"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "해외 상용 API",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "문서·기안",
+   "date": "2026-08-31",
+   "title": "공문서작성기 — 샘플 서식과 재료를 주면 문서를 채워 주는 도구",
+   "link": "https://gitlab.aigov.go.kr/redgon99/docmaker_Cld",
+   "id": "6c94a4ce57e81fee",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274904
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "부서별로 따로 검색해야 하는 온나라 문서등록대장을 한 번에 검색하게 해 주는 Edge 브라우저 확장. 행정망 표준 시스템의 불편을 브라우저 확장으로 우회한 실무 도구다.",
+   "tags": [
+    "온나라",
+    "검색",
+    "브라우저확장"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "network_req": "폐쇄망 가능",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "문서·기안",
+   "date": "2026-08-31",
+   "runtime_env": "브라우저만",
+   "title": "온나라 문서 검색 서포터 — 부서별 문서등록대장을 한 번에 검색하는 엣지 확장",
+   "link": "https://gitlab.aigov.go.kr/publicpeasant/onnara-document-search",
+   "id": "6e89aaf95f6ffbd9",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274906
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "행정 문서의 숫자 금액을 한글 금액 표기와 문서용 표기로 변환하는 Windows 경량 유틸리티. 콤마 자동 삽입, 문장 속 숫자 추출, 괄호 안 숫자 우선 처리까지 계약·지출 서류 작성의 세부 관행을 반영했다.",
+   "tags": [
+    "금액표기",
+    "회계",
+    "유틸리티"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "network_req": "로컬 완결",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "회계·정산",
+   "date": "2026-08-31",
+   "title": "한글 금액 변환기 — 숫자 금액을 문서용 한글 표기로 바꾸는 경량 유틸리티",
+   "link": "https://gitlab.aigov.go.kr/lovepc/duseo-money",
+   "id": "977a72eb576ddd84",
+   "license": "MIT",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274909
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "엑셀 데이터를 한글 서식의 예약어에 연결해 자동 입력하고, 기준에 따라 문서를 나누거나 합치는 Windows 문서 자동화 도구. 1:1 문장 입력, 표 행 반복, 쪽 나누기를 지원해 통지문·개별 안내문 대량 생산에 쓰인다.",
+   "tags": [
+    "메일머지",
+    "엑셀",
+    "HWP"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "network_req": "로컬 완결",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "문서·기안",
+   "date": "2026-08-31",
+   "title": "어썸 메일 머지 — 엑셀 데이터를 한글 서식에 흘려 넣는 문서 자동화 도구",
+   "link": "https://gitlab.aigov.go.kr/levis7251/test",
+   "id": "b1650b0206b8342c",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274911
+  },
+  {
+   "collected_at": "2026-09-02",
+   "region": "전북",
+   "summary": "보고서·계획서·기안문 작성에 자주 쓰는 한글(HWP) 서식 작업을 빠르게 적용하는 Windows 퀵패널. 교육행정 문서 작성의 반복 서식 조작을 단축키화했다.",
+   "tags": [
+    "HWP",
+    "서식",
+    "교육행정"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "문서·기안",
+   "date": "2026-08-31",
+   "title": "전북교육 한글 서식도우미 — 보고서·기안문에 자주 쓰는 서식 작업 퀵패널",
+   "link": "https://gitlab.aigov.go.kr/kain9012/jb_quickpanel",
+   "id": "475ae4a2e200aa27",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274914
+  },
+  {
+   "collected_at": "2026-09-02",
+   "region": "전북",
+   "summary": "학교·기관의 엑셀 정리, PDF 편집, 파일 정리 같은 반복 행정업무를 자동화하는 32종 도구 모음. 낱개 자동화를 묶어 배포하는 스위트 접근으로 교육행정 현장에 맞췄다.",
+   "tags": [
+    "자동화",
+    "엑셀",
+    "교육행정"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "공통·범용",
+   "date": "2026-08-31",
+   "title": "JB업무ON — 학교·기관 반복 행정업무 자동화 32종 모음",
+   "link": "https://gitlab.aigov.go.kr/kain9012/automation_suite",
+   "id": "0ab90cf5d003b12d",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274917
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "여러 국회 요구자료 HWP·HWPX 파일을 파일명 기준으로 정리하고 의원별·날짜별 문서로 병합하는 Windows 도구. 질의순서 파일 정렬과 표지·목차·속지 추가까지 지원해, 창구가 흩어져 매번 재가공하는 요구자료 대응 부담을 줄인다.",
+   "tags": [
+    "국회요구자료",
+    "HWP",
+    "병합"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "network_req": "로컬 완결",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "문서·기안",
+   "date": "2026-08-31",
+   "title": "국회요구자료 HWP 병합기 — 요구자료 파일을 의원별·날짜별로 정리·병합",
+   "link": "https://gitlab.aigov.go.kr/jinskysung/assembly-data-merger",
+   "id": "0aaafa00490adad0",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274919
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "업무용 Windows PC에서 자주 필요한 설정 변경, 자료 백업·복원, 문서 최적화를 한 화면에서 고르고 상황 설명을 확인한 뒤 실행하는 도구. PC 관리 민원을 셀프서비스로 돌리는 시도다.",
+   "tags": [
+    "PC관리",
+    "백업",
+    "데스크톱"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "공통·범용",
+   "date": "2026-08-31",
+   "title": "AI PC 닥터 — 업무 PC 설정·백업·문서 최적화를 한 화면에서 실행",
+   "link": "https://gitlab.aigov.go.kr/jinskysung/aipcdoctor",
+   "id": "0bbe8416a0aabb2f",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274922
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "HWP·HWPX·PDF·DOCX·XLSX를 마크다운으로 변환하되 외부 API나 네트워크 호출 없이 완전 오프라인으로 처리하는 도구. AI에 문서를 먹이기 위한 전처리를 폐쇄망 안에서 끝내게 한다.",
+   "tags": [
+    "마크다운",
+    "문서변환",
+    "폐쇄망"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "network_req": "로컬 완결",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "문서·기안",
+   "date": "2026-08-31",
+   "title": "마크다운 변환기 — HWP·PDF·오피스 문서를 완전 오프라인으로 변환",
+   "link": "https://gitlab.aigov.go.kr/jaekyeong/markdown-converter",
+   "id": "e0bead338374d31a",
+   "license": "MIT",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274924
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "공공데이터포털의 데이터 목록을 조회하는 MCP 서버에 AI가 쓸 데이터를 찾아 주는 디스커버리 레이어를 얹은 도구. 어떤 공공데이터가 있는지부터 AI에게 묻게 만드는 접근으로, 모두의 민원콜 개발자의 후속작이다.",
+   "tags": [
+    "MCP",
+    "공공데이터",
+    "디스커버리"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "모델 중립(BYO)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "데이터·통계",
+   "date": "2026-08-31",
+   "runtime_env": "MCP·CLI 설정",
+   "title": "pubdatamcp — 공공데이터 목록 조회 MCP와 AI 디스커버리 레이어",
+   "link": "https://gitlab.aigov.go.kr/inchangpark/pubdatamcp",
+   "id": "7af52cadb55f2391",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274927
+  },
+  {
+   "collected_at": "2026-09-02",
+   "region": "서울",
+   "summary": "서울 약국의 운영시간 데이터를 분석해 심야·휴일 의약품 접근 공백 지역을 찾는 분석 프로젝트. 하루 하나씩 공공데이터 도구를 만드는 ai-gov 100일 챌린지의 첫 산출물이다.",
+   "tags": [
+    "공공데이터",
+    "분석",
+    "보건"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "데이터·통계",
+   "date": "2026-08-31",
+   "title": "서울 약국 운영시간 공백 분석 — ai-gov 100일 챌린지 Day 1",
+   "link": "https://gitlab.aigov.go.kr/emergency/pharmacy-hours-coverage",
+   "id": "3228747115808243",
+   "license": "MIT",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274929
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "지하철 역별 엘리베이터 정보로 교통약자의 환승 가능 여부를 조회하는 MCP 서버. 100일 챌린지 Day 2 산출물로, 접근성 데이터를 AI 대화로 바로 묻게 한다.",
+   "tags": [
+    "MCP",
+    "교통약자",
+    "접근성"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "모델 중립(BYO)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "데이터·통계",
+   "date": "2026-08-31",
+   "runtime_env": "MCP·CLI 설정",
+   "title": "지하철 엘리베이터 환승 MCP — 교통약자 환승 가능 여부 조회",
+   "link": "https://gitlab.aigov.go.kr/emergency/subway-elevator-mcp",
+   "id": "e996c18ebe1f7413",
+   "license": "MIT",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274932
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "이주민 지원 시설의 위치와 지원 언어를 지도로 정리한 프로젝트. 흩어져 있는 지원 정보를 접근성 관점으로 묶은 100일 챌린지 Day 3 산출물이다.",
+   "tags": [
+    "이주민",
+    "지도",
+    "공공데이터"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "데이터·통계",
+   "date": "2026-08-31",
+   "title": "이주민 지원 시설·언어 지도 — ai-gov 챌린지 Day 3",
+   "link": "https://gitlab.aigov.go.kr/emergency/migrant-access-map",
+   "id": "ef3a050410d18dc5",
+   "license": "MIT",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274934
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "공공데이터 CSV의 고질적인 EUC-KR·UTF-8 인코딩 깨짐을 감지해 바로잡는 도구. 공공데이터 활용의 첫 관문에서 모두가 겪는 문제를 낱개 도구로 만든 Day 4 산출물이다.",
+   "tags": [
+    "CSV",
+    "인코딩",
+    "공공데이터"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "network_req": "로컬 완결",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "데이터·통계",
+   "date": "2026-08-31",
+   "title": "공공 CSV 인코딩 정리기 — 깨진 한글 CSV를 바로잡는 도구",
+   "link": "https://gitlab.aigov.go.kr/emergency/csv-encoding-fixer",
+   "id": "00d13e0b1ba148be",
+   "license": "MIT",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274937
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "지자체마다 다른 분리배출 기준을 모아 지역 간 차이를 비교하는 프로젝트. 이사할 때마다 새로 배우는 생활 규정을 데이터로 정리한 Day 5 산출물이다.",
+   "tags": [
+    "분리배출",
+    "생활정보",
+    "비교"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "데이터·통계",
+   "date": "2026-08-31",
+   "title": "분리배출 기준 지역 비교 — 지자체별 규정 차이를 한눈에",
+   "link": "https://gitlab.aigov.go.kr/emergency/waste-sort-compare",
+   "id": "e8b1d5c18fe542fe",
+   "license": "MIT",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274939
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "조달 공고를 지역·업종으로 검색하는 MCP 서버. 나라장터 공고 탐색을 AI 대화로 옮긴 100일 챌린지 Day 6 산출물이다.",
+   "tags": [
+    "MCP",
+    "조달",
+    "검색"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "모델 중립(BYO)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "계약·조달",
+   "date": "2026-08-31",
+   "runtime_env": "MCP·CLI 설정",
+   "title": "조달 공고 지역·업종 검색 MCP — ai-gov 챌린지 Day 6",
+   "link": "https://gitlab.aigov.go.kr/emergency/gov-notice-mcp",
+   "id": "e627c2ca4ea8e5a1",
+   "license": "MIT",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274942
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "기초지자체 읍면동 단위 소규모 공사의 내역 산출을 도와 적정 사업비를 뽑는 대시보드. 표준품셈 기반 수작업 견적의 편차를 줄여 담당자의 예산 협의를 뒷받침한다.",
+   "tags": [
+    "공사내역",
+    "예산",
+    "대시보드"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "계약·조달",
+   "date": "2026-08-31",
+   "title": "소규모 공사 내역서 대시보드 — 읍면동 소규모 공사비 적정 산출 도구",
+   "link": "https://gitlab.aigov.go.kr/elf97214/Gongsa_project",
+   "id": "eccb4bca5ea5776c",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274944
+  },
+  {
+   "collected_at": "2026-09-02",
+   "summary": "기획예산처 열린재정(openfiscaldata.go.kr)의 연도별·부처별 예산·사업 데이터를 일괄 다운로드하는 자동화 도구. 나라예산 한눈에 서비스의 데이터 수집 계층을 이루는 저장소다.",
+   "tags": [
+    "예산",
+    "데이터수집",
+    "자동화"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "task_category": "데이터·통계",
+   "date": "2026-08-31",
+   "title": "열린재정 예산 데이터 다운로드 자동화 — 연도·부처별 일괄 수집 도구",
+   "link": "https://gitlab.aigov.go.kr/AILab_Manager/budget",
+   "id": "29af2304c37b658b",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-02",
+   "thumb_v": 1788274947
   }
  ]
 }
