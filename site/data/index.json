@@ -2,18 +2,18 @@
  "generated_at": "2026-09-01",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 243,
- "total_champions": 111,
+ "total_cases": 244,
+ "total_champions": 112,
  "community": {
-  "members": 1435,
+  "members": 1455,
   "kakao_week": 1974,
   "kakao_total_observed": 18595,
-  "threads_observed": 206
+  "threads_observed": 210
  },
  "certified_champions": 2,
  "unattributed_cases": 67,
  "ax_distribution": {
-  "AI-Ready": 160,
+  "AI-Ready": 161,
   "AI-Enabled": 72,
   "AX 단계 외": 10,
   "AI-First": 1
@@ -21,12 +21,12 @@
  "c_axis_mean": 0.71,
  "p_distribution": {
   "P0": 99,
-  "P1": 138,
+  "P1": 139,
   "P2": 6
  },
  "model_dependency": {
   "미확인": 66,
-  "없음(비LLM)": 69,
+  "없음(비LLM)": 70,
   "해외 오픈웨이트(로컬)": 9,
   "혼합": 7,
   "해외 상용 API": 34,
@@ -568,7 +568,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 69,
+    "n": 70,
     "specified": 0
    },
    "해외 오픈웨이트(로컬)": {
@@ -1176,15 +1176,15 @@
  "domestic_model_rate": 0.074,
  "local_model_rate": 0.167,
  "model_known": 54,
- "license_tagged": 158,
- "license_stated_rate": 0.62,
+ "license_tagged": 159,
+ "license_stated_rate": 0.623,
  "gitlab_cases": 45,
  "gitlab_mirror_pairs": 8,
  "gitlab_open_rate": 0.178,
  "mcp_cases": 71,
  "transition_funnel": {
   "기관 공식": 32,
-  "미확인": 168,
+  "미확인": 169,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1192,7 +1192,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.494
+  "feedback": 0.496
  },
  "maintenance_distribution": {
   "활발": 117,
@@ -1293,7 +1293,7 @@
    ]
   },
   "github": {
-   "count": 111,
+   "count": 112,
    "starred": 108,
    "stars_sum": 149236,
    "maintenance": {
@@ -1386,7 +1386,7 @@
   }
  },
  "license_distribution": {
-  "MIT": 65,
+  "MIT": 66,
   "명시 없음": 60,
   "Other": 15,
   "Apache-2.0": 10,
@@ -1398,7 +1398,7 @@
  },
  "license_matrix": {
   "MIT": {
-   "github": 60,
+   "github": 61,
    "gitlab": 5
   },
   "명시 없음": {
@@ -1436,8 +1436,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 109,
-   "stated": 82
+   "total": 110,
+   "stated": 83
   },
   "github-pages": {
    "total": 14,

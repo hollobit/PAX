@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-01T15:49:02+09:00",
+ "updated_at": "2026-09-01T23:49:41+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -6951,6 +6951,30 @@
    "model_dependency": "해외 상용 API",
    "org": "개발 커뮤니티",
    "id": "3a211aec27b69d0a",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-09-01"
+  },
+  {
+   "date": "2026-08-31",
+   "org_type": "커뮤니티",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "tags": [
+    "공공데이터",
+    "API",
+    "큐레이션",
+    "오픈소스"
+   ],
+   "title": "public-apis-4Kr — 한국 공개 API 300+ 커뮤니티 큐레이션 목록",
+   "summary": "한국 서비스 개발에 쓸 수 있는 공개 API 300여 개를 분야별로 정리한 커뮤니티 큐레이션 저장소. 공공데이터포털과 기관별 API를 아우르고 글로벌 API 780여 개도 별도 문서로 관리하며, CI 링크 헬스체크로 목록의 생존을 자동 점검해 신선도를 유지한다. MIT 라이선스로 스타 2,900을 넘겨 공공데이터 활용 개발의 출발점 역할을 한다.",
+   "runtime_env": "브라우저만",
+   "task_category": "데이터·통계",
+   "case_class": "커뮤니티",
+   "collected_at": "2026-09-02",
+   "model_dependency": "없음(비LLM)",
+   "link": "https://github.com/yybmion/public-apis-4Kr",
+   "id": "0292062a6328545a",
    "license": "MIT",
    "license_source": "github",
    "license_checked": "2026-09-01"
