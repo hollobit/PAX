@@ -1,5 +1,5 @@
 {
- "total": 110,
+ "total": 111,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -107,6 +107,30 @@
     "case_count": 1,
     "top_ax": 1,
     "stars": 858
+   }
+  },
+  {
+   "id": "github:DoHyun468",
+   "name": "DoHyun Kim",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "DoHyun468",
+     "url": "https://github.com/DoHyun468"
+    }
+   ],
+   "affiliation": {
+    "value": "ReconLabs",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "3a211aec27b69d0a"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
    }
   },
   {

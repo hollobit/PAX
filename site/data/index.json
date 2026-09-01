@@ -2,8 +2,8 @@
  "generated_at": "2026-09-01",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 242,
- "total_champions": 110,
+ "total_cases": 243,
+ "total_champions": 111,
  "community": {
   "members": 1435,
   "kakao_week": 1974,
@@ -29,7 +29,7 @@
   "없음(비LLM)": 69,
   "해외 오픈웨이트(로컬)": 9,
   "혼합": 7,
-  "해외 상용 API": 33,
+  "해외 상용 API": 34,
   "모델 중립(BYO)": 53,
   "국산 독자모델": 3,
   "미상": 1,
@@ -39,9 +39,10 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 19,
+    "n": 20,
     "variants": [
      "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
+     "Claude Code/Codex(플러그인)",
      "상용 API 모드(Claude 등)"
     ],
     "cases": [
@@ -120,6 +121,10 @@
      {
       "id": "4f136eeeea72fe65",
       "title": "Archify — 코드베이스·시스템 설명을 검증 가능한 다이어그램으로 바꾸는 에이전트 스킬"
+     },
+     {
+      "id": "3a211aec27b69d0a",
+      "title": "claw-hwp — 한컴 없이 Claude·Codex가 HWP/HWPX를 그대로 읽고 만들고 고치는 플러그인"
      }
     ],
     "domestic": false
@@ -575,8 +580,8 @@
     "specified": 7
    },
    "해외 상용 API": {
-    "n": 33,
-    "specified": 33
+    "n": 34,
+    "specified": 34
    },
    "모델 중립(BYO)": {
     "n": 53,
@@ -856,11 +861,11 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 33,
+    "n": 34,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
-      "n": 18,
+      "n": 19,
       "cases": [
        {
         "id": "7acf5f25369c1401",
@@ -933,11 +938,16 @@
        {
         "id": "4f136eeeea72fe65",
         "title": "Archify — 코드베이스·시스템 설명을 검증 가능한 다이어그램으로 바꾸는 에이전트 스킬"
+       },
+       {
+        "id": "3a211aec27b69d0a",
+        "title": "claw-hwp — 한컴 없이 Claude·Codex가 HWP/HWPX를 그대로 읽고 만들고 고치는 플러그인"
        }
       ],
       "domestic": false,
       "variants": [
-       "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+       "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
+       "Claude Code/Codex(플러그인)"
       ]
      },
      {
@@ -1163,18 +1173,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.075,
- "local_model_rate": 0.17,
- "model_known": 53,
- "license_tagged": 157,
- "license_stated_rate": 0.618,
+ "domestic_model_rate": 0.074,
+ "local_model_rate": 0.167,
+ "model_known": 54,
+ "license_tagged": 158,
+ "license_stated_rate": 0.62,
  "gitlab_cases": 45,
  "gitlab_mirror_pairs": 8,
  "gitlab_open_rate": 0.178,
  "mcp_cases": 71,
  "transition_funnel": {
   "기관 공식": 32,
-  "미확인": 167,
+  "미확인": 168,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1283,7 +1293,7 @@
    ]
   },
   "github": {
-   "count": 110,
+   "count": 111,
    "starred": 108,
    "stars_sum": 149236,
    "maintenance": {
@@ -1376,7 +1386,7 @@
   }
  },
  "license_distribution": {
-  "MIT": 64,
+  "MIT": 65,
   "명시 없음": 60,
   "Other": 15,
   "Apache-2.0": 10,
@@ -1388,7 +1398,7 @@
  },
  "license_matrix": {
   "MIT": {
-   "github": 59,
+   "github": 60,
    "gitlab": 5
   },
   "명시 없음": {
@@ -1426,8 +1436,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 108,
-   "stated": 81
+   "total": 109,
+   "stated": 82
   },
   "github-pages": {
    "total": 14,
