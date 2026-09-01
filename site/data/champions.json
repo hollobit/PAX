@@ -1,5 +1,5 @@
 {
- "total": 111,
+ "total": 112,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -1447,6 +1447,30 @@
    "affiliation": null,
    "cases": [
     "ca5651ea46caa07f"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:yybmion",
+   "name": "yoobin_mion",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "yybmion",
+     "url": "https://github.com/yybmion"
+    }
+   ],
+   "affiliation": {
+    "value": "hypercape",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "0292062a6328545a"
    ],
    "stats": {
     "case_count": 1,
