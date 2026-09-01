@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-01T15:38:42+09:00",
+ "updated_at": "2026-09-01T15:49:02+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -6926,6 +6926,34 @@
    "license": "POLYFORM-NONCOMMERCIAL-1.0.0",
    "license_source": "gitlab",
    "license_checked": "2026-08-31"
+  },
+  {
+   "summary": "한글 문서를 한컴오피스 설치나 형식 변환 없이 AI가 직접 읽고·만들고·고치는 오픈소스 플러그인. Claude Code와 Codex에 설치해 표의 특정 칸 수정이나 서식 변경 같은 작업을 말로 시키면 되고, 고친 파일이 한컴에서 깨지지 않고 열리는지 매번 검증하는 것이 특징이다. 표 셀 편집·글자 서식·다단·쪽번호까지 지원하며 MIT 라이선스로 공개돼 스타 150을 넘겼다.",
+   "models_used": [
+    "Claude Code/Codex(플러그인)"
+   ],
+   "date": "2026-08-05",
+   "case_class": "커뮤니티",
+   "case_url": "https://github.com/DoHyun468/claw-hwp",
+   "runtime_env": "AI 도구 설정",
+   "task_category": "문서·기안",
+   "source": "threads",
+   "collected_at": "2026-09-01",
+   "link": "https://www.threads.com/@dohyun_kim468/post/Dbpd3oXidrF",
+   "org_type": "커뮤니티",
+   "title": "claw-hwp — 한컴 없이 Claude·Codex가 HWP/HWPX를 그대로 읽고 만들고 고치는 플러그인",
+   "tags": [
+    "HWP",
+    "문서자동화",
+    "AI스킬",
+    "오픈소스"
+   ],
+   "model_dependency": "해외 상용 API",
+   "org": "개발 커뮤니티",
+   "id": "3a211aec27b69d0a",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-09-01"
   }
  ]
 }
