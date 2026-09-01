@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-08-31",
+ "generated_at": "2026-09-02",
  "summary": {
-  "total": 71,
+  "total": 74,
   "counts": {
-   "주의": 59,
+   "주의": 62,
    "양호": 12
   },
   "top_warn_axis": "hygiene"
@@ -2010,6 +2010,84 @@
     "data_flow": {
      "verdict": "해당 없음",
      "note": "해당 없음(코드 비공개 — 원격/발표 사례)"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "7af52cadb55f2391",
+   "title": "pubdatamcp — 공공데이터 목록 조회 MCP와 AI 디스커버리 레이어",
+   "stars": null,
+   "checked_at": "2026-09-02",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 3건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "e996c18ebe1f7413",
+   "title": "지하철 엘리베이터 환승 MCP — 교통약자 환승 가능 여부 조회",
+   "stars": null,
+   "checked_at": "2026-09-02",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 3건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 1건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·유지보수 미상"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "e627c2ca4ea8e5a1",
+   "title": "조달 공고 지역·업종 검색 MCP — ai-gov 챌린지 Day 6",
+   "stars": null,
+   "checked_at": "2026-09-02",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 패턴 5건 — 쓰기 범위 확인 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 3건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·유지보수 미상"
     }
    },
    "dynamic": null,

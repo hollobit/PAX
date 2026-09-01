@@ -1,36 +1,36 @@
 {
- "generated_at": "2026-09-01",
+ "generated_at": "2026-09-02",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 244,
- "total_champions": 112,
+ "total_cases": 276,
+ "total_champions": 123,
  "community": {
   "members": 1455,
-  "kakao_week": 1974,
-  "kakao_total_observed": 18595,
+  "kakao_week": 2562,
+  "kakao_total_observed": 19183,
   "threads_observed": 210
  },
  "certified_champions": 2,
  "unattributed_cases": 67,
  "ax_distribution": {
-  "AI-Ready": 161,
-  "AI-Enabled": 72,
+  "AI-Ready": 187,
+  "AI-Enabled": 78,
   "AX 단계 외": 10,
   "AI-First": 1
  },
- "c_axis_mean": 0.71,
+ "c_axis_mean": 0.74,
  "p_distribution": {
-  "P0": 99,
-  "P1": 139,
-  "P2": 6
+  "P0": 108,
+  "P1": 161,
+  "P2": 7
  },
  "model_dependency": {
   "미확인": 66,
-  "없음(비LLM)": 70,
-  "해외 오픈웨이트(로컬)": 9,
+  "없음(비LLM)": 95,
+  "해외 오픈웨이트(로컬)": 12,
   "혼합": 7,
-  "해외 상용 API": 34,
-  "모델 중립(BYO)": 53,
+  "해외 상용 API": 35,
+  "모델 중립(BYO)": 56,
   "국산 독자모델": 3,
   "미상": 1,
   "국산 오픈웨이트": 1
@@ -130,6 +130,61 @@
     "domestic": false
    },
    {
+    "name": "로컬 서빙(Ollama·vLLM 등)",
+    "n": 9,
+    "variants": [
+     "LM Studio 로컬 모델(OpenAI 호환)",
+     "Ollama 로컬 모델",
+     "Ollama 로컬 모델(Spring AI)",
+     "Ollama 로컬 모델(멀티 호스트)",
+     "Ollama 오픈웨이트 모드(로컬 완결)",
+     "Ollama(로컬 실행)",
+     "Ollama(로컬)",
+     "Ollama/vLLM 로컬(기본)",
+     "WebGPU 브라우저 모델",
+     "vLLM/Ollama/LiteLLM 로컬(OpenAI 호환)"
+    ],
+    "cases": [
+     {
+      "id": "de4b2dab339d69b7",
+      "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
+     },
+     {
+      "id": "ea2bce110972762e",
+      "title": "공공기관 규정 MCP 생성기"
+     },
+     {
+      "id": "1502d338e8e99382",
+      "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
+     },
+     {
+      "id": "fe3bb0d913e27677",
+      "title": "로컬 Ollama 기반 MCP 멀티 호스트"
+     },
+     {
+      "id": "edf9a8632ff74a99",
+      "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연"
+     },
+     {
+      "id": "e7949c7bc45ca8e6",
+      "title": "출장 여비 서류 자동화 오픈소스 — 신청서·명세서·복명서 일괄 생성"
+     },
+     {
+      "id": "8c5458af8f13435d",
+      "title": "한글 AI 도우미 — 로컬 LLM 웹한글 보고서 확장"
+     },
+     {
+      "id": "acd684108227b9c2",
+      "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
+     },
+     {
+      "id": "e65b0800852d5e5f",
+      "title": "RuleLens AI — 기준 법령·지침과 내 자료를 로컬 Ollama로 대조하는 적합성 검토 도구"
+     }
+    ],
+    "domestic": false
+   },
+   {
     "name": "GPT(OpenAI)",
     "n": 9,
     "variants": [
@@ -180,56 +235,6 @@
      {
       "id": "b3294bcc65e7f2e7",
       "title": "소방기술민원 답변생성기 — 법령·유사민원 검색과 참고 답변 초안"
-     }
-    ],
-    "domestic": false
-   },
-   {
-    "name": "로컬 서빙(Ollama·vLLM 등)",
-    "n": 8,
-    "variants": [
-     "LM Studio 로컬 모델(OpenAI 호환)",
-     "Ollama 로컬 모델",
-     "Ollama 로컬 모델(Spring AI)",
-     "Ollama 로컬 모델(멀티 호스트)",
-     "Ollama 오픈웨이트 모드(로컬 완결)",
-     "Ollama(로컬 실행)",
-     "Ollama/vLLM 로컬(기본)",
-     "WebGPU 브라우저 모델",
-     "vLLM/Ollama/LiteLLM 로컬(OpenAI 호환)"
-    ],
-    "cases": [
-     {
-      "id": "de4b2dab339d69b7",
-      "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
-     },
-     {
-      "id": "ea2bce110972762e",
-      "title": "공공기관 규정 MCP 생성기"
-     },
-     {
-      "id": "1502d338e8e99382",
-      "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
-     },
-     {
-      "id": "fe3bb0d913e27677",
-      "title": "로컬 Ollama 기반 MCP 멀티 호스트"
-     },
-     {
-      "id": "edf9a8632ff74a99",
-      "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연"
-     },
-     {
-      "id": "e7949c7bc45ca8e6",
-      "title": "출장 여비 서류 자동화 오픈소스 — 신청서·명세서·복명서 일괄 생성"
-     },
-     {
-      "id": "8c5458af8f13435d",
-      "title": "한글 AI 도우미 — 로컬 LLM 웹한글 보고서 확장"
-     },
-     {
-      "id": "acd684108227b9c2",
-      "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
      }
     ],
     "domestic": false
@@ -568,23 +573,23 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 70,
+    "n": 95,
     "specified": 0
    },
    "해외 오픈웨이트(로컬)": {
-    "n": 9,
-    "specified": 9
+    "n": 12,
+    "specified": 10
    },
    "혼합": {
     "n": 7,
     "specified": 7
    },
    "해외 상용 API": {
-    "n": 34,
+    "n": 35,
     "specified": 34
    },
    "모델 중립(BYO)": {
-    "n": 53,
+    "n": 56,
     "specified": 0
    },
    "국산 독자모델": {
@@ -861,7 +866,7 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 34,
+    "n": 35,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
@@ -1080,8 +1085,43 @@
    },
    {
     "dep": "해외 오픈웨이트(로컬)",
-    "n": 9,
+    "n": 12,
     "families": [
+     {
+      "name": "로컬 서빙(Ollama·vLLM 등)",
+      "n": 5,
+      "cases": [
+       {
+        "id": "fe3bb0d913e27677",
+        "title": "로컬 Ollama 기반 MCP 멀티 호스트"
+       },
+       {
+        "id": "edf9a8632ff74a99",
+        "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연"
+       },
+       {
+        "id": "e7949c7bc45ca8e6",
+        "title": "출장 여비 서류 자동화 오픈소스 — 신청서·명세서·복명서 일괄 생성"
+       },
+       {
+        "id": "8c5458af8f13435d",
+        "title": "한글 AI 도우미 — 로컬 LLM 웹한글 보고서 확장"
+       },
+       {
+        "id": "e65b0800852d5e5f",
+        "title": "RuleLens AI — 기준 법령·지침과 내 자료를 로컬 Ollama로 대조하는 적합성 검토 도구"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "LM Studio 로컬 모델(OpenAI 호환)",
+       "Ollama 로컬 모델",
+       "Ollama 로컬 모델(Spring AI)",
+       "Ollama 로컬 모델(멀티 호스트)",
+       "Ollama(로컬)",
+       "WebGPU 브라우저 모델"
+      ]
+     },
      {
       "name": "Gemma",
       "n": 4,
@@ -1109,36 +1149,6 @@
        "Gemma 4 E2B(Ollama, 선택형 요약)",
        "Gemma 4 E4B(Ollama 권장)",
        "Gemma 4 E4B(Ollama)"
-      ]
-     },
-     {
-      "name": "로컬 서빙(Ollama·vLLM 등)",
-      "n": 4,
-      "cases": [
-       {
-        "id": "fe3bb0d913e27677",
-        "title": "로컬 Ollama 기반 MCP 멀티 호스트"
-       },
-       {
-        "id": "edf9a8632ff74a99",
-        "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연"
-       },
-       {
-        "id": "e7949c7bc45ca8e6",
-        "title": "출장 여비 서류 자동화 오픈소스 — 신청서·명세서·복명서 일괄 생성"
-       },
-       {
-        "id": "8c5458af8f13435d",
-        "title": "한글 AI 도우미 — 로컬 LLM 웹한글 보고서 확장"
-       }
-      ],
-      "domestic": false,
-      "variants": [
-       "LM Studio 로컬 모델(OpenAI 호환)",
-       "Ollama 로컬 모델",
-       "Ollama 로컬 모델(Spring AI)",
-       "Ollama 로컬 모델(멀티 호스트)",
-       "WebGPU 브라우저 모델"
       ]
      },
      {
@@ -1173,18 +1183,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.074,
- "local_model_rate": 0.167,
- "model_known": 54,
- "license_tagged": 159,
- "license_stated_rate": 0.623,
- "gitlab_cases": 45,
- "gitlab_mirror_pairs": 8,
- "gitlab_open_rate": 0.178,
- "mcp_cases": 71,
+ "domestic_model_rate": 0.069,
+ "local_model_rate": 0.207,
+ "model_known": 58,
+ "license_tagged": 191,
+ "license_stated_rate": 0.581,
+ "gitlab_cases": 84,
+ "gitlab_mirror_pairs": 14,
+ "gitlab_open_rate": 0.167,
+ "mcp_cases": 74,
  "transition_funnel": {
   "기관 공식": 32,
-  "미확인": 169,
+  "미확인": 201,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1192,7 +1202,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.496
+  "feedback": 0.554
  },
  "maintenance_distribution": {
   "활발": 117,
@@ -1202,11 +1212,11 @@
  "stars_collected": 143,
  "repo_stats": {
   "gitlab": {
-   "count": 45,
+   "count": 84,
    "starred": 43,
    "stars_sum": 194,
    "maintenance": {
-    "활발": 42,
+    "활발": 48,
     "정체": 1
    },
    "top": [
@@ -1386,24 +1396,25 @@
   }
  },
  "license_distribution": {
-  "MIT": 66,
-  "명시 없음": 60,
+  "명시 없음": 80,
+  "MIT": 77,
   "Other": 15,
   "Apache-2.0": 10,
   "AGPL-3.0": 3,
   "기타(비표준)": 2,
   "ISC": 1,
   "GNU AGPLv3": 1,
-  "POLYFORM-NONCOMMERCIAL-1.0.0": 1
+  "POLYFORM-NONCOMMERCIAL-1.0.0": 1,
+  "GPL-3.0+": 1
  },
  "license_matrix": {
-  "MIT": {
-   "github": 61,
-   "gitlab": 5
-  },
   "명시 없음": {
    "github": 37,
-   "gitlab": 23
+   "gitlab": 43
+  },
+  "MIT": {
+   "github": 61,
+   "gitlab": 16
   },
   "Other": {
    "github": 15,
@@ -1432,6 +1443,10 @@
   "POLYFORM-NONCOMMERCIAL-1.0.0": {
    "github": 0,
    "gitlab": 1
+  },
+  "GPL-3.0+": {
+   "github": 0,
+   "gitlab": 1
   }
  },
  "license_by_source": {
@@ -1444,22 +1459,22 @@
    "stated": 4
   },
   "gitlab": {
-   "total": 35,
-   "stated": 12
+   "total": 67,
+   "stated": 24
   }
  },
  "mcp_stats": {
-  "total": 71,
+  "total": 74,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
-   "Server": 62,
+   "Server": 65,
    "Client/Host": 6,
    "Unknown/None": 2
   },
   "c_grades": {
-   "C0": 63,
+   "C0": 66,
    "C2": 6,
    "C3": 1,
    "C1": 1
@@ -1484,6 +1499,12 @@
    "gitlab": "https://gitlab.aigov.go.kr/rhamasel3/What-I-have-to-do"
   },
   {
+   "id": "9d115930495a1e65",
+   "title": "공무원용 로컬 AI 에이전트 워크플레이스 개발",
+   "github": "https://github.com/Kminer2053/gongmuwon",
+   "gitlab": "https://gitlab.aigov.go.kr/Kminer2053/gongmuwon"
+  },
+  {
    "id": "1502d338e8e99382",
    "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구",
    "github": "https://github.com/chrisryugj/edoc-summarizer",
@@ -1496,10 +1517,28 @@
    "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/ollama-mcp-host"
   },
   {
+   "id": "cba450dfb5c8fadf",
+   "title": "표준주소실록 — 주소 표준화 정리 도구",
+   "github": "https://github.com/chrisryugj/gjdong",
+   "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/gjdong"
+  },
+  {
    "id": "8ff758ac1d5e40eb",
    "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
    "github": "https://github.com/chrisryugj/kordoc",
    "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/kordoc"
+  },
+  {
+   "id": "f76a328f43c0766f",
+   "title": "KIPRIS 특허 검색 MCP 공개",
+   "github": "https://github.com/chrisryugj/korean-patent-mcp",
+   "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/korean-patent-mcp"
+  },
+  {
+   "id": "798f4e6bef72fc13",
+   "title": "한 장으로 끝내는 조달제도 100",
+   "github": "https://github.com/Milkbuttercheese2/procurement-system-100",
+   "gitlab": "https://gitlab.aigov.go.kr/rhamasel3/how-did-they-do-all-that-procurement"
   },
   {
    "id": "112bf7dc576ed8aa",
@@ -1514,10 +1553,22 @@
    "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/korean-law-mcp"
   },
   {
+   "id": "76f07692203606ad",
+   "title": "건축HUB MCP — 건축물대장·인허가·필지 종합카드",
+   "github": "https://github.com/chrisryugj/archhub-mcp",
+   "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/archhub-mcp"
+  },
+  {
    "id": "9c850ff3e7429a24",
    "title": "소방 장비서무 인수인계 대시보드 — 3교대 공용 PC용 로컬 관제판",
    "github": "https://github.com/MuyeongKim/equipment-handover-releases",
    "gitlab": "https://gitlab.aigov.go.kr/tenmoo/sobang-EMD"
+  },
+  {
+   "id": "33c36cc77c4bfc5c",
+   "title": "Korean Stats MCP — KOSIS 통계를 자연어로, 출처 자동 인용",
+   "github": "https://github.com/chrisryugj/korean-stats-mcp",
+   "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/korean-stats-mcp"
   }
  ]
 }
