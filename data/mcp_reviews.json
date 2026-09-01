@@ -2562,6 +2562,14 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "사용자 조건이 httpx params dict로 전달(src/pubdata_mcp/client.py:51-72) — 문자열 URL 조합 없음. subprocess는 dev 스크립트 check_secrets.py:32의 고정 인자 git ls-files로 런타임 경로 아님"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "호출 대상 api.odcloud.kr(공식 게이트웨이)·data.go.kr 한정 — 외부 상용 엔드포인트 전송 없음"
     }
    },
    "disclosure": null,
@@ -2569,7 +2577,8 @@
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
-   }
+   },
+   "llm_audited_at": "2026-09-02"
   },
   {
    "case_id": "e996c18ebe1f7413",
@@ -2589,6 +2598,14 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·유지보수 미상"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "로컬 데이터셋 격리 — no-realtime-api·dataset-isolation·env-path-override 테스트로 보증, execSync는 tests/mcp-stdio.test.ts:1 테스트 전용"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "런타임 외부 네트워크 호출 없음(로컬 데이터셋 완결)"
     }
    },
    "disclosure": null,
@@ -2596,7 +2613,8 @@
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
-   }
+   },
+   "llm_audited_at": "2026-09-02"
   },
   {
    "case_id": "e627c2ca4ea8e5a1",
@@ -2616,6 +2634,14 @@
     "hygiene": {
      "verdict": "통과",
      "note": "MIT·유지보수 미상"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "파라미터가 g2b 링크 생성 시 encodeURIComponent 처리(src/adapters/opnstd.ts:36), rate-limit·safety 테스트 존재"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "apis.data.go.kr 공식 조달 API만 호출, fixtures는 example.invalid 더미 — 파일 쓰기 5건은 스냅샷 캐시(src/snapshot.ts·cache.ts) 목적 부합"
     }
    },
    "disclosure": null,
@@ -2623,7 +2649,8 @@
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
-   }
+   },
+   "llm_audited_at": "2026-09-02"
   }
  ]
 }
