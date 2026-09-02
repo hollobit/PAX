@@ -5766,5 +5766,33 @@
   "resilience": "공공 깃랩 ★2, 배치 등재 시점 활동 확인",
   "post_url": "",
   "service_url": ""
+ },
+ {
+  "no": 277,
+  "id": "f5f24469d5ca281f",
+  "org": "개발 커뮤니티",
+  "title": "소담 패밀리 — 비개발자가 만든 Claude Code 안전벨트 플러그인 7종 묶음",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S2",
+  "s_name": "Tool bundle",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Published tool",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R0 최소",
+  "human": "해당 없음",
+  "evidence": "E1 코드·도구 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "위험 차단·루프 제어·계획 검토 등 AI 코딩의 거버넌스 장치 7종을 묶은 번들(S2·C1)로, vibecode-checker·하네스 계열의 자생 안전 스택 흐름에 비개발자 제작이라는 지점을 더한다. 왕초보 대상 개념 설명형 한국어 README가 확산 장치로 눈에 띈다. README·저장소 구조 확인(E1), 실행 검증은 하지 않았다.",
+  "feedback": "미확인",
+  "resilience": "활발(06-29 시작, 09-01 커밋)",
+  "post_url": "",
+  "service_url": ""
  }
 ]

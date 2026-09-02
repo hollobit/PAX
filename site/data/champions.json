@@ -1,5 +1,5 @@
 {
- "total": 123,
+ "total": 124,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -466,6 +466,30 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:sodam-ai",
+   "name": "SoDam AI Studio",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "sodam-ai",
+     "url": "https://github.com/sodam-ai"
+    }
+   ],
+   "affiliation": {
+    "value": "SoDam AI Studio",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "f5f24469d5ca281f"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },
