@@ -2,11 +2,11 @@
  "generated_at": "2026-09-02",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 276,
- "total_champions": 123,
+ "total_cases": 277,
+ "total_champions": 124,
  "community": {
   "members": 1455,
-  "kakao_week": 2562,
+  "kakao_week": 2186,
   "kakao_total_observed": 19183,
   "threads_observed": 210
  },
@@ -14,14 +14,14 @@
  "unattributed_cases": 67,
  "ax_distribution": {
   "AI-Ready": 187,
-  "AI-Enabled": 78,
+  "AI-Enabled": 79,
   "AX 단계 외": 10,
   "AI-First": 1
  },
  "c_axis_mean": 0.74,
  "p_distribution": {
   "P0": 108,
-  "P1": 161,
+  "P1": 162,
   "P2": 7
  },
  "model_dependency": {
@@ -29,7 +29,7 @@
   "없음(비LLM)": 95,
   "해외 오픈웨이트(로컬)": 12,
   "혼합": 7,
-  "해외 상용 API": 35,
+  "해외 상용 API": 36,
   "모델 중립(BYO)": 56,
   "국산 독자모델": 3,
   "미상": 1,
@@ -39,8 +39,9 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 20,
+    "n": 21,
     "variants": [
+     "Claude Code(플러그인)",
      "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
      "Claude Code/Codex(플러그인)",
      "상용 API 모드(Claude 등)"
@@ -125,6 +126,10 @@
      {
       "id": "3a211aec27b69d0a",
       "title": "claw-hwp — 한컴 없이 Claude·Codex가 HWP/HWPX를 그대로 읽고 만들고 고치는 플러그인"
+     },
+     {
+      "id": "f5f24469d5ca281f",
+      "title": "소담 패밀리 — 비개발자가 만든 Claude Code 안전벨트 플러그인 7종 묶음"
      }
     ],
     "domestic": false
@@ -449,6 +454,20 @@
     "domestic": false
    },
    {
+    "name": "Solar Open 2(온AI 서빙 탑재 — 09-02 실무자 관측)",
+    "n": 1,
+    "variants": [
+     "Solar Open 2(온AI 서빙 탑재 — 09-02 실무자 관측)"
+    ],
+    "cases": [
+     {
+      "id": "ac09bd2e1c0fbb29",
+      "title": "온AI Work — 공무원 보고서 AI 작성 도구"
+     }
+    ],
+    "domestic": true
+   },
+   {
     "name": "상용 AI(내부망 도입, 세부 미상)",
     "n": 1,
     "variants": [
@@ -529,6 +548,14 @@
     ]
    },
    {
+    "id": "ac09bd2e1c0fbb29",
+    "title": "온AI Work — 공무원 보고서 AI 작성 도구",
+    "models": [
+     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
+     "Solar Open 2(온AI 서빙 탑재 — 09-02 실무자 관측)"
+    ]
+   },
+   {
     "id": "50ab356bb2ee3f4d",
     "title": "범정부 내부망 AI 브라우저 사이드바 어시스턴트",
     "models": [
@@ -585,8 +612,8 @@
     "specified": 7
    },
    "해외 상용 API": {
-    "n": 35,
-    "specified": 34
+    "n": 36,
+    "specified": 35
    },
    "모델 중립(BYO)": {
     "n": 56,
@@ -866,11 +893,11 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 35,
+    "n": 36,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
-      "n": 19,
+      "n": 20,
       "cases": [
        {
         "id": "7acf5f25369c1401",
@@ -947,10 +974,15 @@
        {
         "id": "3a211aec27b69d0a",
         "title": "claw-hwp — 한컴 없이 Claude·Codex가 HWP/HWPX를 그대로 읽고 만들고 고치는 플러그인"
+       },
+       {
+        "id": "f5f24469d5ca281f",
+        "title": "소담 패밀리 — 비개발자가 만든 Claude Code 안전벨트 플러그인 7종 묶음"
        }
       ],
       "domestic": false,
       "variants": [
+       "Claude Code(플러그인)",
        "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
        "Claude Code/Codex(플러그인)"
       ]
@@ -1065,6 +1097,20 @@
       "domestic": false,
       "variants": [
        "GLM-5.3(에이전트 레지스트리)"
+      ]
+     },
+     {
+      "name": "Solar Open 2(온AI 서빙 탑재 — 09-02 실무자 관측)",
+      "n": 1,
+      "cases": [
+       {
+        "id": "ac09bd2e1c0fbb29",
+        "title": "온AI Work — 공무원 보고서 AI 작성 도구"
+       }
+      ],
+      "domestic": true,
+      "variants": [
+       "Solar Open 2(온AI 서빙 탑재 — 09-02 실무자 관측)"
       ]
      },
      {
@@ -1183,18 +1229,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.069,
- "local_model_rate": 0.207,
- "model_known": 58,
- "license_tagged": 191,
- "license_stated_rate": 0.581,
+ "domestic_model_rate": 0.068,
+ "local_model_rate": 0.203,
+ "model_known": 59,
+ "license_tagged": 192,
+ "license_stated_rate": 0.578,
  "gitlab_cases": 84,
  "gitlab_mirror_pairs": 14,
  "gitlab_open_rate": 0.167,
  "mcp_cases": 74,
  "transition_funnel": {
   "기관 공식": 32,
-  "미확인": 201,
+  "미확인": 202,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1202,7 +1248,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.554
+  "feedback": 0.556
  },
  "maintenance_distribution": {
   "활발": 117,
@@ -1303,7 +1349,7 @@
    ]
   },
   "github": {
-   "count": 112,
+   "count": 113,
    "starred": 108,
    "stars_sum": 149236,
    "maintenance": {
@@ -1396,7 +1442,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 80,
+  "명시 없음": 81,
   "MIT": 77,
   "Other": 15,
   "Apache-2.0": 10,
@@ -1409,7 +1455,7 @@
  },
  "license_matrix": {
   "명시 없음": {
-   "github": 37,
+   "github": 38,
    "gitlab": 43
   },
   "MIT": {
@@ -1451,7 +1497,7 @@
  },
  "license_by_source": {
   "github": {
-   "total": 110,
+   "total": 111,
    "stated": 83
   },
   "github-pages": {

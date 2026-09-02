@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-01T23:59:32+09:00",
+ "updated_at": "2026-09-02T15:39:22+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -4460,7 +4460,8 @@
    "stars_gitlab": 15,
    "model_dependency": "해외 상용 API",
    "models_used": [
-    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
+    "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
+    "Solar Open 2(온AI 서빙 탑재 — 09-02 실무자 관측)"
    ],
    "mirror_url": "https://gitlab.aigov.go.kr/wavelen/govwork"
   },
@@ -7715,6 +7716,33 @@
    "id": "29af2304c37b658b",
    "license": "명시 없음",
    "license_source": "gitlab",
+   "license_checked": "2026-09-02"
+  },
+  {
+   "tags": [
+    "Claude Code",
+    "플러그인",
+    "AI거버넌스",
+    "바이브코딩"
+   ],
+   "org": "개발 커뮤니티",
+   "task_category": "공통·범용",
+   "title": "소담 패밀리 — 비개발자가 만든 Claude Code 안전벨트 플러그인 7종 묶음",
+   "source": "kakao",
+   "link": "https://github.com/sodam-ai/SoDam-Family",
+   "models_used": [
+    "Claude Code(플러그인)"
+   ],
+   "org_type": "커뮤니티",
+   "runtime_env": "AI 도구 설정",
+   "collected_at": "2026-09-02",
+   "date": "2026-09-01",
+   "model_dependency": "해외 상용 API",
+   "case_class": "커뮤니티",
+   "summary": "디자이너 출신 비개발자가 바이브 코딩을 하며 필요해진 안전장치를 직접 만든 Claude Code 플러그인 7종 묶음. 위험 작업 차단(하네스), 반복 루프 자동화, 계획·실행·검토, 한국어 프롬프트, 역공학 차단, 진행상황 그래프까지 AI 코딩의 안전벨트 역할을 나눠 맡는다. AI를 처음 쓰는 사람을 위해 개념 설명부터 담은 한국어 README로 배포된다.",
+   "id": "f5f24469d5ca281f",
+   "license": "명시 없음",
+   "license_source": "github",
    "license_checked": "2026-09-02"
   }
  ]
