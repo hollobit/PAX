@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-02T15:39:22+09:00",
+ "updated_at": "2026-09-03T15:50:29+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -7744,6 +7744,28 @@
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-09-02"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "runtime_env": "브라우저만",
+   "title": "GAI 허브 — 교육행정인의 바이브코딩 앱·강의·지식을 모으는 공유 플랫폼",
+   "tags": [
+    "교육행정",
+    "플랫폼",
+    "바이브코딩",
+    "지식공유"
+   ],
+   "summary": "교육행정 공무원들이 AI 바이브코딩으로 만든 급여·예산·계약·복무 업무효율화 앱을 무료로 나누고, 강의(배움터)와 익명 질의응답(교행IN)까지 묶은 커뮤니티 플랫폼이 문을 열었다. 단톡방과 카페에 흩어져 증발하던 프로그램과 업무 지식을 한곳에 아카이빙하는 기획으로, 아래로부터의 AI 업무 혁신을 내걸고 교원·교육전문직·교육공무직 누구에게나 열려 있다.",
+   "org_type": "커뮤니티",
+   "link": "https://www.threads.com/@iambrojun/post/DcziceWEzUd",
+   "collected_at": "2026-09-03",
+   "task_category": "공통·범용",
+   "date": "2026-09-03",
+   "case_url": "https://gaihub.net/",
+   "case_class": "커뮤니티",
+   "org": "공직 커뮤니티",
+   "source": "threads",
+   "id": "c39ae1dfd84a207a"
   }
  ]
 }

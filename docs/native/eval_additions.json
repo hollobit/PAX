@@ -5794,5 +5794,33 @@
   "resilience": "활발(06-29 시작, 09-01 커밋)",
   "post_url": "",
   "service_url": ""
+ },
+ {
+  "no": 278,
+  "id": "c39ae1dfd84a207a",
+  "org": "공직 커뮤니티",
+  "title": "GAI 허브 — 교육행정인의 바이브코딩 앱·강의·지식을 모으는 공유 플랫폼",
+  "ax_prev": "AI-Ready",
+  "ax": "AI-Ready",
+  "s": "S2",
+  "s_name": "Tool bundle",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Live service",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R0 최소",
+  "human": "해당 없음",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "개별 도구가 아니라 교육행정 도메인의 바이브코딩 산출물·강의·질의응답을 모으는 확산 인프라(S2) — AKwiki·공공 깃랩과 같은 '지식이 증발하지 않게 하는 층'을 교행 분야에 세운 사례다. 오픈 당일 서비스 화면과 등재 앱 목록을 직접 확인했다(E2). 플랫폼 자체는 LLM을 쓰지 않아 AI-Ready로 둔다.",
+  "feedback": "미확인",
+  "resilience": "미확인(2026-09-03 오픈 당일 등재)",
+  "post_url": "https://www.threads.com/@iambrojun/post/DcziceWEzUd",
+  "service_url": "https://gaihub.net/"
  }
 ]
