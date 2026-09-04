@@ -5,6 +5,7 @@
 # - 로그: data/private/watchdog.log (비공개 경로)
 # 사용법: bash scripts/kakao_watchdog.sh [--check-only]
 set -u
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"   # launchd 최소 PATH 대비
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 LOG_DIR="$ROOT/data/private"; mkdir -p "$LOG_DIR"
 LOG="$LOG_DIR/watchdog.log"
