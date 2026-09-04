@@ -1,5 +1,5 @@
 {
- "total": 125,
+ "total": 129,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -1567,6 +1567,27 @@
    }
   },
   {
+   "id": "gitlab:odw0902",
+   "name": "경남 양산시 오대웅",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "odw0902",
+     "url": "https://gitlab.aigov.go.kr/odw0902"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "01963ce2b093182c",
+    "6c86b53c5323b10e"
+   ],
+   "stats": {
+    "case_count": 2,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
    "id": "github:kwakseongjae",
    "name": "곽성재",
    "accounts": [
@@ -1729,6 +1750,30 @@
    "stats": {
     "case_count": 3,
     "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:cadnehwan",
+   "name": "김명환",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "cadnehwan",
+     "url": "https://gitlab.aigov.go.kr/cadnehwan"
+    }
+   ],
+   "affiliation": {
+    "value": "중소벤처기업진흥공단",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "fe2ce0f01fcc8bb0"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -1939,6 +1984,26 @@
    }
   },
   {
+   "id": "github:dochungpikachu",
+   "name": "도청피카츄",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "dochungpikachu",
+     "url": "https://github.com/dochungpikachu"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "fd81aa1b889ada2e"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
    "id": "chrisryugj",
    "name": "류승인",
    "accounts": [
@@ -2067,6 +2132,30 @@
     "case_count": 5,
     "top_ax": 2,
     "stars": 100
+   }
+  },
+  {
+   "id": "gitlab:beaver21c",
+   "name": "박성준",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "beaver21c",
+     "url": "https://gitlab.aigov.go.kr/beaver21c"
+    }
+   ],
+   "affiliation": {
+    "value": "한국보건사회연구원",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "30c55330885db6d6"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
    }
   },
   {
@@ -3316,6 +3405,30 @@
    "title": "충남 공공의료 안전정보 허브 — 천안의료원 중심 응급실 병상·119 현황 통합 상황판(초안)",
    "org": "천안의료원",
    "url": "https://camcdash-k6ha4jmb.manus.space/"
+  },
+  {
+   "id": "b6b0a466c74ec485",
+   "title": "바빠(BAPA) — 공직자 업무자동화 도구를 모아 나누는 커뮤니티 플랫폼",
+   "org": "공직 커뮤니티",
+   "url": "https://bapa.kr/"
+  },
+  {
+   "id": "636db1bb955d73ae",
+   "title": "경기도의회 AI 주간업무보고 목업 — 취합·검토·조판을 한 흐름으로 묶은 시제품",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://weekly-report-mockup.workspace-823014.chatgpt.site/"
+  },
+  {
+   "id": "73bb12bf461ceb4c",
+   "title": "가짜일 킬러 — 엑셀 10종·한글 5종 반복 작업을 브라우저에서 끝내는 도구 모음",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://fake.choshg.com/"
+  },
+  {
+   "id": "9ba78e3c1e469185",
+   "title": "조직관리와 혁신 영향 분석 — 한국행정연구원 데이터로 민간·공공, 중앙·지자체 비교",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://pp-ten-plum.vercel.app/"
   }
  ]
 }
