@@ -1,21 +1,28 @@
 {
-  "source": {
-    "name": "AI 챔피언 기록 저장소 (공공 AI 챔피언 명예의 전당)",
-    "url": "https://public-ax.kr/channels/L2NoYW5uZWxzLzIxNTI3/pages/aichampionhonorship",
-    "checked_at": "2026-08-17"
+ "source": {
+  "name": "AI 챔피언 기록 저장소 (공공 AI 챔피언 명예의 전당)",
+  "url": "https://public-ax.kr/channels/L2NoYW5uZWxzLzIxNTI3/pages/aichampionhonorship",
+  "checked_at": "2026-09-05",
+  "note": "명예의 전당 페이지가 2026-09-05 확인 시 비공개(로그인 게이트)로 전환 — 이후 갱신은 기명 보도·공식 발표 근거로 수행"
+ },
+ "certified": [
+  {
+   "champion": "chrisryugj",
+   "tier": "BLUE",
+   "listed_as": "서울특별시 광진구 류승인 — 주무관 / 구 소식지 제작 발행",
+   "evidence": "기록 저장소 명단의 성명·기관이 공공 GitLab 프로필(서울특별시 광진구 류승인)과 일치 (2026-08-17 확인)"
   },
-  "certified": [
-    {
-      "champion": "chrisryugj",
-      "tier": "BLUE",
-      "listed_as": "서울특별시 광진구 류승인 — 주무관 / 구 소식지 제작 발행",
-      "evidence": "기록 저장소 명단의 성명·기관이 공공 GitLab 프로필(서울특별시 광진구 류승인)과 일치 (2026-08-17 확인)"
-    },
-    {
-      "champion": "gitlab:pro9dan",
-      "tier": "BLUE",
-      "listed_as": "소방청 한종훈 — 분석관",
-      "evidence": "기록 저장소 명단의 성명·기관이 공공 GitLab 프로필(소방청 한종훈)과 일치 (2026-08-17 확인)"
-    }
-  ]
+  {
+   "champion": "gitlab:pro9dan",
+   "tier": "BLUE",
+   "listed_as": "소방청 한종훈 — 분석관",
+   "evidence": "기록 저장소 명단의 성명·기관이 공공 GitLab 프로필(소방청 한종훈)과 일치 (2026-08-17 확인)"
+  },
+  {
+   "champion": "gitlab:sajw1994",
+   "tier": "BLUE",
+   "listed_as": "성남시 AI반도체과 사진우 주무관 — 공문 자동화 도구, 성남시 AI 경진대회 대상",
+   "evidence": "ZDNet Korea 2026-09-04 기명 보도(no=20260904110842): 'AI 챔피언 그린·블루 인증을 획득' 명시 — PAX 챔피언 gitlab:sajw1994(성남시청 사진우)와 성명·기관 일치"
+  }
+ ]
 }
