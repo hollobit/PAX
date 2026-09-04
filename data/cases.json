@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-03T15:50:29+09:00",
+ "updated_at": "2026-09-04T23:16:07+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -1164,7 +1164,11 @@
    "network_req": "폐쇄망 가능",
    "link_ok": true,
    "health_checked": "2026-08-31",
-   "deployment_env": "행정망"
+   "deployment_env": "행정망",
+   "case_url": "https://gitlab.aigov.go.kr/Kminer2053/ax-playground-public",
+   "license": "MIT",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-04"
   },
   {
    "link": "https://www.threads.com/@chris_gomdori/post/DbaDIR3DZWE",
@@ -7766,6 +7770,198 @@
    "org": "공직 커뮤니티",
    "source": "threads",
    "id": "c39ae1dfd84a207a"
+  },
+  {
+   "date": "2026-09-03",
+   "collected_at": "2026-09-04",
+   "link": "https://dochungpikachu.github.io/NOMISS/",
+   "tags": [
+    "업무점검",
+    "체크리스트",
+    "워크플로"
+   ],
+   "title": "노미스(No-Miss) — 실수를 없애는 개인 업무비서, 업무 대장·점검 이력·절차 구조도",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "summary": "반복 업무의 빠뜨림을 막는 개인 업무비서 웹앱. 업무 대장을 유형·부서별로 관리하고 점검 이력을 남기며, 업무별 절차를 노드 구조도로 펼쳐 어느 단계에서 무엇을 확인해야 하는지 보여준다. 빗물시설 점검 같은 실제 업무 유형이 샘플로 들어 있는 실무자 자작 도구다.",
+   "runtime_env": "브라우저만",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "task_category": "공통·범용",
+   "org": "공직 현장(개인 개발)",
+   "id": "fd81aa1b889ada2e"
+  },
+  {
+   "date": "2026-09-03",
+   "collected_at": "2026-09-04",
+   "link": "https://bapa.kr/",
+   "tags": [
+    "업무자동화",
+    "플랫폼",
+    "커뮤니티"
+   ],
+   "title": "바빠(BAPA) — 공직자 업무자동화 도구를 모아 나누는 커뮤니티 플랫폼",
+   "case_class": "커뮤니티",
+   "source": "kakao",
+   "summary": "공직자 업무자동화 도구를 모아 공유하는 커뮤니티 플랫폼. 흩어진 자작 도구들을 한곳에서 찾게 하려는 기획으로, 커뮤니티 모임 안내 같은 부대 기능도 함께 운영한다. 방에서 함께하자는 초대와 함께 공유됐다.",
+   "runtime_env": "브라우저만",
+   "org_type": "커뮤니티",
+   "model_dependency": "없음(비LLM)",
+   "task_category": "공통·범용",
+   "org": "공직 커뮤니티",
+   "id": "b6b0a466c74ec485"
+  },
+  {
+   "date": "2026-09-03",
+   "collected_at": "2026-09-04",
+   "link": "https://weekly-report-mockup.workspace-823014.chatgpt.site/",
+   "tags": [
+    "주간업무보고",
+    "목업",
+    "의회"
+   ],
+   "title": "경기도의회 AI 주간업무보고 목업 — 취합·검토·조판을 한 흐름으로 묶은 시제품",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "summary": "22개 부서의 주간업무보고 작성·취합·부서 검토·최종 조판을 한 화면 흐름으로 묶은 목업. DID 간편인증과 모바일 의정지원 연동까지 설계에 넣어, 서무가 메신저로 파일을 걷어 다시 붙이는 현행 취합 관행을 시스템으로 대체하는 그림을 보여준다. 커뮤니티의 주간업무 자동화 논의 중 공유된 시제품이다.",
+   "runtime_env": "브라우저만",
+   "org_type": "공직 개인",
+   "model_dependency": "해외 상용 API",
+   "task_category": "문서·기안",
+   "region": "경기",
+   "org": "공직 현장(개인 개발)",
+   "id": "636db1bb955d73ae"
+  },
+  {
+   "date": "2026-09-03",
+   "collected_at": "2026-09-04",
+   "link": "https://fake.choshg.com/",
+   "tags": [
+    "반복업무",
+    "엑셀",
+    "HWPX"
+   ],
+   "title": "가짜일 킬러 — 엑셀 10종·한글 5종 반복 작업을 브라우저에서 끝내는 도구 모음",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "summary": "자료 취합·양식 변경·반복 입력 같은 영혼 없는 반복 작업을 가짜일로 규정하고 이를 없애는 공무원 업무 도구 모음. 엑셀 작업 10종, HWPX 작업 5종에 인사발령 조회(인사스캔)까지 묶었고 파일은 브라우저 안에서만 처리돼 외부로 나가지 않는다. 인사스캔 개발자의 도구 포털이다.",
+   "runtime_env": "브라우저만",
+   "org_type": "공직 개인",
+   "network_req": "로컬 완결",
+   "model_dependency": "없음(비LLM)",
+   "task_category": "공통·범용",
+   "org": "공직 현장(개인 개발)",
+   "id": "73bb12bf461ceb4c"
+  },
+  {
+   "date": "2026-09-04",
+   "collected_at": "2026-09-04",
+   "link": "https://pp-ten-plum.vercel.app/",
+   "tags": [
+    "조직관리",
+    "데이터분석",
+    "행정연구"
+   ],
+   "title": "조직관리와 혁신 영향 분석 — 한국행정연구원 데이터로 민간·공공, 중앙·지자체 비교",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "summary": "한국행정연구원 조사 데이터를 돌려 민간-공공, 중앙정부-지자체의 조직관리 특성이 혁신에 미치는 영향을 비교한 분석 시각화. AX 확산 논의가 조직문화 문제로 수렴하던 커뮤니티 대화 속에서 실무자가 하룻저녁에 만들어 공유한 데이터 기반 참고 자료다.",
+   "runtime_env": "브라우저만",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "task_category": "데이터·통계",
+   "org": "공직 현장(개인 개발)",
+   "id": "9ba78e3c1e469185"
+  },
+  {
+   "date": "2026-09-04",
+   "collected_at": "2026-09-04",
+   "link": "https://gitlab.aigov.go.kr/odw0902/reportai",
+   "tags": [
+    "보고서",
+    "문서자동화",
+    "AI"
+   ],
+   "title": "ReportAI — 막연한 보고서 지시를 구조화해 초안을 잡아 주는 도구",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "summary": "내년도 업무 보고서를 알아서 짜 오라는 막연한 지시 앞에서 흰 화면만 보며 썼다 지웠다 반복하는 상황을 겨냥한 보고서 작성 AI 도구. 공공 깃랩에 공개돼 스타 2를 받았다.",
+   "org_type": "공직 개인",
+   "model_dependency": "해외 상용 API",
+   "task_category": "문서·기안",
+   "org": "공직 현장(개인 개발)",
+   "id": "01963ce2b093182c",
+   "license": "MIT",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-04"
+  },
+  {
+   "date": "2026-09-04",
+   "collected_at": "2026-09-04",
+   "link": "https://gitlab.aigov.go.kr/odw0902/memomindai",
+   "tags": [
+    "메모",
+    "인수인계",
+    "로컬AI"
+   ],
+   "title": "MemoMindAI — 실무자의 핵심 메모를 로컬에서 자산화하는 인수인계 대응 도구",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "summary": "한글 파일로 주고받는 인수인계 관행을 겨냥해 실무자의 핵심 메모를 로컬 AI로 관리·자산화하는 도구. 같은 개발 계정의 ReportAI와 짝을 이뤄 공공 깃랩에 공개됐다.",
+   "org_type": "공직 개인",
+   "model_dependency": "해외 오픈웨이트(로컬)",
+   "task_category": "공통·범용",
+   "org": "공직 현장(개인 개발)",
+   "id": "6c86b53c5323b10e",
+   "license": "MIT",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-04"
+  },
+  {
+   "date": "2026-09-04",
+   "collected_at": "2026-09-04",
+   "link": "https://gitlab.aigov.go.kr/cadnehwan/docuauto",
+   "tags": [
+    "메일머지",
+    "HWPX",
+    "대량생성"
+   ],
+   "title": "DocuAuto — 엑셀 데이터로 한글·파워포인트 문서를 대량 생성하는 웹·크롬 확장",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "summary": "엑셀 데이터를 HWPX·PPTX 양식에 흘려 넣어 맞춤형 문서를 대량으로 일괄 생성하고 로컬 폴더에 저장하는 웹·크롬 확장 도구. 통지문·개별 자료 대량 생산이라는 메일 머지 계열 수요를 브라우저 확장으로 푼다.",
+   "runtime_env": "브라우저만",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "task_category": "문서·기안",
+   "org": "공직 현장(개인 개발)",
+   "id": "fe2ce0f01fcc8bb0",
+   "license": "MIT",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-04"
+  },
+  {
+   "date": "2026-08-14",
+   "collected_at": "2026-09-04",
+   "link": "https://gitlab.aigov.go.kr/beaver21c/kihasa-indicator",
+   "tags": [
+    "보건복지",
+    "대시보드",
+    "데이터분석"
+   ],
+   "title": "지역사회보장정책 데이터 분석 대시보드 — 정책 수립 지원 지표 시각화",
+   "case_class": "개인 개발",
+   "source": "kakao",
+   "summary": "지역사회보장정책 수립을 지원하는 데이터 분석 대시보드. 지역별 보장 지표를 모아 시각화해 정책 담당자의 근거 기반 판단을 돕는다. 공공 깃랩 스타 2를 받은 보건복지 분야 산출물이다.",
+   "runtime_env": "브라우저만",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "task_category": "데이터·통계",
+   "org": "공직 현장(개인 개발)",
+   "id": "30c55330885db6d6",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-04"
   }
  ]
 }
