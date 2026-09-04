@@ -1,9 +1,9 @@
 {
  "source": {
   "name": "AI 챔피언 기록 저장소 (공공 AI 챔피언 명예의 전당)",
-  "url": "https://public-ax.kr/channels/L2NoYW5uZWxzLzIxNTI3/pages/aichampionhonorship",
+  "url": "https://aichampion.site/",
   "checked_at": "2026-09-05",
-  "note": "명예의 전당 페이지가 2026-09-05 확인 시 비공개(로그인 게이트)로 전환 — 이후 갱신은 기명 보도·공식 발표 근거로 수행"
+  "note": "정본 사이트 aichampion.site (사용자 제공 2026-09-05) — 자발 등록형 프로필 명부. public-ax.kr 구주소는 비공개 전환"
  },
  "certified": [
   {
@@ -23,6 +23,12 @@
    "tier": "BLUE",
    "listed_as": "성남시 AI반도체과 사진우 주무관 — 공문 자동화 도구, 성남시 AI 경진대회 대상",
    "evidence": "ZDNet Korea 2026-09-04 기명 보도(no=20260904110842): 'AI 챔피언 그린·블루 인증을 획득' 명시 — PAX 챔피언 gitlab:sajw1994(성남시청 사진우)와 성명·기관 일치"
+  },
+  {
+   "champion": "gitlab:jinn",
+   "tier": "BLUE",
+   "listed_as": "국민권익위원회 안진희 — 사무관",
+   "evidence": "명예의 전당(aichampion.site, 2026-09-05 확인) BLUE 명단의 성명이 공공 GitLab jinn(안진희)과 일치하고, 등재 사례 '민원 신고 스크리너'(신고 유형·소관부서 판별)가 권익위 민원 소관 업무와 정합 — 기관 표기는 프로필에 없어 정황 근거 포함"
   }
  ]
 }
