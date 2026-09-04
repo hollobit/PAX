@@ -1182,10 +1182,10 @@
   },
   {
    "link": "https://www.threads.com/@koyou_ax/post/DaLJpOljpV6",
-   "org_type": "공직 개인",
-   "org": "기관 미상(공공)",
+   "org_type": "공공기관",
+   "org": "코레일유통",
    "date": "2026-06-30",
-   "summary": "내부망 LLM으로 보안 걱정 없이 사내 데이터를 활용하는 놀이공원 콘셉트의 AI 체험 플랫폼을 팀 단위 바이브 코딩으로 구축한 사례가 공유됐다. AI 리터러시 퀴즈, 그래프 RAG 사내지식 검색, 민원 데이터 AI 답변, 비전 인식 안전 분석, AI 광고 도안 심의 등을 담았다.",
+   "summary": "내부망 LLM으로 보안 걱정 없이 사내 데이터를 활용하는 놀이공원 콘셉트의 AI 체험 플랫폼을 팀 단위 바이브 코딩으로 구축한 사례가 공유됐다. AI 리터러시 퀴즈, 그래프 RAG 사내지식 검색, 민원 데이터 AI 답변, 비전 인식 안전 분석, AI 광고 도안 심의 등을 담았다. 2026년 8월 코레일유통이 이를 사내 AI 업무혁신 플랫폼 \"AX Playground\"로 공식 출시했다고 보도돼, 개인·팀 실험이 기관 공식 플랫폼으로 전이된 사례가 됐다.",
    "source": "threads",
    "collected_at": "2026-08-07",
    "tags": [
@@ -1207,6 +1207,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-04",
+   "transition_stage": "기관 공식",
    "thumb_v": 1788531437
   },
   {
