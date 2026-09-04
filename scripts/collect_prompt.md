@@ -52,6 +52,8 @@
   --since 2d --limit 5000으로 확장 재수집해 공백을 보정한다(2026-08-24 실제 발생).
 - **동기화 중단 판별**: kakaocli는 Mac 카카오톡 앱의 로컬 DB를 읽으므로 앱이 꺼져 있으면 새 메시지가 없다.
   DB 최신 timestamp가 last_read와 같으면 "0건"이 아니라 "동기화 중단(앱 실행 필요)"으로 log에 기록한다.
+  워치독(`scripts/kakao_watchdog.sh`, launchd 30분 주기)이 전 방 정체 45분+ 시 앱 재실행·사용자 알림으로
+  자가복구를 시도한다 — 중단이 관측되면 `data/private/watchdog.log`를 함께 확인해 조치 이력을 로그에 남긴다.
 - 봇 메시지(예: "Cronjob Response" 시작)와 120자 미만 잡담은 후보에서 제외해도 된다.
 - 메시지의 (텍스트, timestamp)를 raw 목록에 담는다. sender_id·닉네임은 raw에만 저장한다.
 
