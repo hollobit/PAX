@@ -127,5 +127,13 @@
    "evidence": "본인 서비스 4종 푸터 명시 — 'IP-AX 추진단 / Designed by Buyong JEONG', 개인 프로젝트 시범 운영 고지"
   },
   "evidence": "ipax-news·ipax-lawmonitor·ipax-support·ipax-govnews 저장소 소유 계정"
+ },
+ {
+  "champion": "scout202",
+  "accounts": [
+   "gitlab:scout202",
+   "github:emdeo"
+  ],
+  "evidence": "헬로라이트하우스 동일 도구의 깃랩 미러(scout202, 2026-08-14)와 GitHub 원본(emdeo, 2026-06-04 선행·비포크)·라이브 서비스(emdeo.github.io) 구성 — 2026-09-06 계보 판정(포항지방해양수산청 채종국)"
  }
 ]
