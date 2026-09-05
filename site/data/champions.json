@@ -1,5 +1,5 @@
 {
- "total": 155,
+ "total": 154,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -737,26 +737,6 @@
    "affiliation": null,
    "cases": [
     "4925d016e9377a50"
-   ],
-   "stats": {
-    "case_count": 1,
-    "top_ax": 1,
-    "stars": 0
-   }
-  },
-  {
-   "id": "github:emdeo",
-   "name": "emdeo",
-   "accounts": [
-    {
-     "platform": "github",
-     "id": "emdeo",
-     "url": "https://github.com/emdeo"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "2dabf0fbae5c557b"
    ],
    "stats": {
     "case_count": 1,
@@ -3452,13 +3432,18 @@
    }
   },
   {
-   "id": "gitlab:scout202",
+   "id": "scout202",
    "name": "채종국",
    "accounts": [
     {
      "platform": "gitlab",
      "id": "scout202",
      "url": "https://gitlab.aigov.go.kr/scout202"
+    },
+    {
+     "platform": "github",
+     "id": "emdeo",
+     "url": "https://github.com/emdeo"
     }
    ],
    "affiliation": {
