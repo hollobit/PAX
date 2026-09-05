@@ -1,5 +1,5 @@
 {
- "total": 154,
+ "total": 155,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -737,6 +737,26 @@
    "affiliation": null,
    "cases": [
     "4925d016e9377a50"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:emdeo",
+   "name": "emdeo",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "emdeo",
+     "url": "https://github.com/emdeo"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "2dabf0fbae5c557b"
    ],
    "stats": {
     "case_count": 1,
@@ -1651,49 +1671,6 @@
    }
   },
   {
-   "id": "gitlab:dovakin",
-   "name": "경기도교육청 현암고등학교 손민성",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "dovakin",
-     "url": "https://gitlab.aigov.go.kr/dovakin"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "1e145932fab1b1f5",
-    "d8da49c9dd6db753",
-    "42bbbb4b6af435b3"
-   ],
-   "stats": {
-    "case_count": 3,
-    "top_ax": 2,
-    "stars": 0
-   }
-  },
-  {
-   "id": "gitlab:odw0902",
-   "name": "경남 양산시 오대웅",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "odw0902",
-     "url": "https://gitlab.aigov.go.kr/odw0902"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "01963ce2b093182c",
-    "6c86b53c5323b10e"
-   ],
-   "stats": {
-    "case_count": 2,
-    "top_ax": 2,
-    "stars": 0
-   }
-  },
-  {
    "id": "github:kwakseongjae",
    "name": "곽성재",
    "accounts": [
@@ -1710,26 +1687,6 @@
    },
    "cases": [
     "e18d5e018e0cd10d"
-   ],
-   "stats": {
-    "case_count": 1,
-    "top_ax": 1,
-    "stars": 0
-   }
-  },
-  {
-   "id": "gitlab:realosh2",
-   "name": "국가독성과학연구소 오성호",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "realosh2",
-     "url": "https://gitlab.aigov.go.kr/realosh2"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "f6dc8da32adbe5dc"
    ],
    "stats": {
     "case_count": 1,
@@ -2187,6 +2144,30 @@
    }
   },
   {
+   "id": "gitlab:ikemanairing",
+   "name": "김현수",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "ikemanairing",
+     "url": "https://gitlab.aigov.go.kr/ikemanairing"
+    }
+   ],
+   "affiliation": {
+    "value": "대성일고등학교",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "5e4dca70708a1262"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:vli318",
    "name": "남근우",
    "accounts": [
@@ -2207,26 +2188,6 @@
    ],
    "stats": {
     "case_count": 2,
-    "top_ax": 1,
-    "stars": 0
-   }
-  },
-  {
-   "id": "gitlab:ikemanairing",
-   "name": "대성일고등학교 김현수",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "ikemanairing",
-     "url": "https://gitlab.aigov.go.kr/ikemanairing"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "5e4dca70708a1262"
-   ],
-   "stats": {
-    "case_count": 1,
     "top_ax": 1,
     "stars": 0
    }
@@ -2531,26 +2492,6 @@
    }
   },
   {
-   "id": "gitlab:dandaro",
-   "name": "부산광역시교육청 교육정책연구소 서명호",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "dandaro",
-     "url": "https://gitlab.aigov.go.kr/dandaro"
-    }
-   ],
-   "affiliation": null,
-   "cases": [
-    "81e87c38477c4016"
-   ],
-   "stats": {
-    "case_count": 1,
-    "top_ax": 1,
-    "stars": 0
-   }
-  },
-  {
    "id": "gitlab:sajw1994",
    "name": "사진우",
    "accounts": [
@@ -2582,22 +2523,25 @@
    }
   },
   {
-   "id": "gitlab:senvip",
-   "name": "서울시교육청 대청중학교 손승희",
+   "id": "gitlab:dandaro",
+   "name": "서명호",
    "accounts": [
     {
      "platform": "gitlab",
-     "id": "senvip",
-     "url": "https://gitlab.aigov.go.kr/senvip"
+     "id": "dandaro",
+     "url": "https://gitlab.aigov.go.kr/dandaro"
     }
    ],
-   "affiliation": null,
+   "affiliation": {
+    "value": "부산광역시교육청 교육정책연구소",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
    "cases": [
-    "720ad1356346730c",
-    "94030c5fb139bce4"
+    "81e87c38477c4016"
    ],
    "stats": {
-    "case_count": 2,
+    "case_count": 1,
     "top_ax": 1,
     "stars": 0
    }
@@ -2683,6 +2627,57 @@
    ],
    "stats": {
     "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:dovakin",
+   "name": "손민성",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "dovakin",
+     "url": "https://gitlab.aigov.go.kr/dovakin"
+    }
+   ],
+   "affiliation": {
+    "value": "경기도교육청 현암고등학교",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "1e145932fab1b1f5",
+    "d8da49c9dd6db753",
+    "42bbbb4b6af435b3"
+   ],
+   "stats": {
+    "case_count": 3,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:senvip",
+   "name": "손승희",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "senvip",
+     "url": "https://gitlab.aigov.go.kr/senvip"
+    }
+   ],
+   "affiliation": {
+    "value": "서울시교육청 대청중학교",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "720ad1356346730c",
+    "94030c5fb139bce4"
+   ],
+   "stats": {
+    "case_count": 2,
     "top_ax": 1,
     "stars": 0
    }
@@ -2830,6 +2825,55 @@
    "stats": {
     "case_count": 1,
     "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:odw0902",
+   "name": "오대웅",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "odw0902",
+     "url": "https://gitlab.aigov.go.kr/odw0902"
+    }
+   ],
+   "affiliation": {
+    "value": "경남 양산시",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "01963ce2b093182c",
+    "6c86b53c5323b10e"
+   ],
+   "stats": {
+    "case_count": 2,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:realosh2",
+   "name": "오성호",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "realosh2",
+     "url": "https://gitlab.aigov.go.kr/realosh2"
+    }
+   ],
+   "affiliation": {
+    "value": "국가독성과학연구소",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "f6dc8da32adbe5dc"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -3361,7 +3405,7 @@
   },
   {
    "id": "gitlab:lovepc",
-   "name": "주무관",
+   "name": "조재원",
    "accounts": [
     {
      "platform": "gitlab",
@@ -3370,7 +3414,7 @@
     }
    ],
    "affiliation": {
-    "value": "광양시 조재원",
+    "value": "광양시",
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
