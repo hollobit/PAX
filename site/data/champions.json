@@ -1,5 +1,5 @@
 {
- "total": 155,
+ "total": 154,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -2680,30 +2680,6 @@
    },
    "cases": [
     "4d94bba36c1b16df"
-   ],
-   "stats": {
-    "case_count": 1,
-    "top_ax": 1,
-    "stars": 0
-   }
-  },
-  {
-   "id": "gitlab:archimin",
-   "name": "승민",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "archimin",
-     "url": "https://gitlab.aigov.go.kr/archimin"
-    }
-   ],
-   "affiliation": {
-    "value": "전남광주통합특별시교육청",
-    "inferred": false,
-    "evidence": "공공 GitLab 공개 프로필 표시명"
-   },
-   "cases": [
-    "e420755d77f8f4a5"
    ],
    "stats": {
     "case_count": 1,

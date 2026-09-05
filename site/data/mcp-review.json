@@ -1,9 +1,9 @@
 {
  "generated_at": "2026-09-06",
  "summary": {
-  "total": 77,
+  "total": 76,
   "counts": {
-   "주의": 65,
+   "주의": 64,
    "양호": 12
   },
   "top_warn_axis": "hygiene"
@@ -2112,32 +2112,6 @@
     "data_flow": {
      "verdict": "통과",
      "note": "apis.data.go.kr 공식 조달 API만 호출, fixtures는 example.invalid 더미 — 파일 쓰기 5건은 스냅샷 캐시(src/snapshot.ts·cache.ts) 목적 부합"
-    }
-   },
-   "dynamic": null,
-   "overall": "주의"
-  },
-  {
-   "case_id": "e420755d77f8f4a5",
-   "title": "2026 표준품셈 원격 MCP — 5개 부문 1,092항목을 AI 대화로 검색",
-   "stars": null,
-   "checked_at": "2026-09-06",
-   "axes": {
-    "permission_surface": {
-     "verdict": "통과",
-     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
-    },
-    "secrets": {
-     "verdict": "통과",
-     "note": "하드코딩 자격증명 패턴 없음"
-    },
-    "supply_chain": {
-     "verdict": "해당 없음",
-     "note": "npm·python 의존성 선언 없음"
-    },
-    "hygiene": {
-     "verdict": "주의",
-     "note": "라이선스 명시 없음"
     }
    },
    "dynamic": null,

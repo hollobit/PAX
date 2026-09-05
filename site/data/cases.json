@@ -2609,6 +2609,7 @@
    "stars": 2,
    "stars_github": 2,
    "model_dependency": "모델 중립(BYO)",
+   "mirror_url": "https://gitlab.aigov.go.kr/archimin/pumsem",
    "thumb_v": 1786538218
   },
   {
@@ -8269,30 +8270,6 @@
    "runtime_env": "브라우저만",
    "id": "ef389de4efadc258",
    "thumb_v": 1788589919
-  },
-  {
-   "case_class": "개인 개발",
-   "task_category": "계약·조달",
-   "link": "https://gitlab.aigov.go.kr/archimin/pumsem",
-   "date": "2026-09-06",
-   "summary": "2026년 건설공사 표준품셈 전 부문(공통·토목·건축·기계설비·유지관리) 1,092개 항목을 원격 MCP로 검색·조회하게 만든 서버. 기존 표준품셈 검색 MCP와 별개 구현으로, 설계·심사 실무의 품셈 확인을 AI 대화 안으로 끌어들인다.",
-   "tags": [
-    "MCP",
-    "표준품셈",
-    "조달"
-   ],
-   "title": "2026 표준품셈 원격 MCP — 5개 부문 1,092항목을 AI 대화로 검색",
-   "model_dependency": "모델 중립(BYO)",
-   "org_type": "공직 개인",
-   "runtime_env": "MCP·CLI 설정",
-   "org": "공직 현장(개인 개발)",
-   "source": "kakao",
-   "collected_at": "2026-09-06",
-   "id": "e420755d77f8f4a5",
-   "license": "명시 없음",
-   "license_source": "gitlab",
-   "license_checked": "2026-09-06",
-   "thumb_v": 1788648320
   },
   {
    "case_class": "개인 개발",
