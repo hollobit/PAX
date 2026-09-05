@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-04T23:16:07+09:00",
+ "updated_at": "2026-09-05T15:31:48+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -8239,6 +8239,29 @@
    "license_source": "gitlab",
    "license_checked": "2026-09-04",
    "thumb_v": 1788531466
+  },
+  {
+   "network_req": "인터넷 필수",
+   "link": "https://procurement-law-system.milkbuttercheese.chatgpt.site/",
+   "model_dependency": "없음(비LLM)",
+   "org_type": "공직 개인",
+   "summary": "내부망에서 쓰던 조달법령 검색을 외부망 공용 버전으로 다시 만든 서비스. 법제처 API로 법령 최신성을 매일 검토하고 조달청 행정규칙을 전수 확보하며, 조문마다 인용·피인용 관계와 별표·별지를 한 화면에서 보여 준다. 몇 조항이었는지 뒤지는 반복 검색을 없애려는 조달 실무자의 연작으로, RAG 기반 AI 검색이 후속 개발 중이다.",
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-09-04",
+   "task_category": "계약·조달",
+   "title": "조달법령 관리시스템 — 매일 최신성을 검증하는 조달 법령·행정규칙 통합 검색",
+   "source": "kakao",
+   "collected_at": "2026-09-05",
+   "tags": [
+    "조달",
+    "법령검색",
+    "법제처API",
+    "행정규칙"
+   ],
+   "case_class": "개인 개발",
+   "runtime_env": "브라우저만",
+   "id": "ef389de4efadc258",
+   "thumb_v": 1788589919
   }
  ]
 }
