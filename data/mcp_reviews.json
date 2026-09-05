@@ -2651,6 +2651,87 @@
     "pip_audit": "2.9.0"
    },
    "llm_audited_at": "2026-09-02"
+  },
+  {
+   "case_id": "e420755d77f8f4a5",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-09-06",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "4093246b3f316bd8",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 5건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-09-06",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "6751e5911661a481",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-09-06",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
   }
  ]
 }
