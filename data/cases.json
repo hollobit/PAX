@@ -8706,7 +8706,7 @@
       "task_category": "공통·범용",
       "link": "https://gitlab.aigov.go.kr/scout202/hellolighthouse",
       "date": "2026-09-06",
-      "summary": "전국 1,480개 등대 정보에 기상·조석·여객선·AI·AR 기능을 묶은 국민 체감형 해양관광 플랫폼. 흩어진 해양 공공데이터를 하나의 대민 서비스로 연결했다.",
+      "summary": "전국 1,480개 등대 정보에 기상·조석·여객선·AI·AR 기능을 묶은 국민 체감형 해양관광 플랫폼. 흩어진 해양 공공데이터를 하나의 대민 서비스로 연결했다. 라이브 서비스 \"안녕, 등대\"가 등대 지도·유형별 스탬프투어·선박 예약·등대 관사 체험숙소 신청까지 운영 중이며, GitHub 원본(6월 시작)과 공공 깃랩 미러로 함께 공개돼 있다.",
       "tags": [
         "해양",
         "관광",
@@ -8722,7 +8722,9 @@
       "id": "2dabf0fbae5c557b",
       "license": "명시 없음",
       "license_source": "gitlab",
-      "license_checked": "2026-09-06"
+      "license_checked": "2026-09-06",
+      "case_url": "https://emdeo.github.io/hellolighthouse/",
+      "mirror_url": "https://github.com/emdeo/hellolighthouse"
     },
     {
       "case_class": "개인 개발",
