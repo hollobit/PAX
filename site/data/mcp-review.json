@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-09-02",
+ "generated_at": "2026-09-06",
  "summary": {
-  "total": 74,
+  "total": 77,
   "counts": {
-   "주의": 62,
+   "주의": 65,
    "양호": 12
   },
   "top_warn_axis": "hygiene"
@@ -2112,6 +2112,84 @@
     "data_flow": {
      "verdict": "통과",
      "note": "apis.data.go.kr 공식 조달 API만 호출, fixtures는 example.invalid 더미 — 파일 쓰기 5건은 스냅샷 캐시(src/snapshot.ts·cache.ts) 목적 부합"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "e420755d77f8f4a5",
+   "title": "2026 표준품셈 원격 MCP — 5개 부문 1,092항목을 AI 대화로 검색",
+   "stars": null,
+   "checked_at": "2026-09-06",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "4093246b3f316bd8",
+   "title": "119 빅데이터 MCP — 소방안전 빅데이터 플랫폼을 자연어로 조회",
+   "stars": null,
+   "checked_at": "2026-09-06",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 5건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "6751e5911661a481",
+   "title": "KTL 레드마인 MCP — 프로젝트 관리를 AI 대화로",
+   "stars": null,
+   "checked_at": "2026-09-06",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
     }
    },
    "dynamic": null,

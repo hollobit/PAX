@@ -1,38 +1,38 @@
 {
- "generated_at": "2026-09-05",
+ "generated_at": "2026-09-06",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 288,
- "total_champions": 129,
+ "total_cases": 333,
+ "total_champions": 155,
  "community": {
-  "members": 1559,
-  "kakao_week": 3961,
-  "kakao_total_observed": 22289,
-  "threads_observed": 221
+  "members": 1572,
+  "kakao_week": 4136,
+  "kakao_total_observed": 22730,
+  "threads_observed": 222
  },
  "certified_champions": 5,
  "unattributed_cases": 72,
  "ax_distribution": {
-  "AI-Ready": 195,
-  "AI-Enabled": 82,
+  "AI-Ready": 230,
+  "AI-Enabled": 92,
   "AX 단계 외": 10,
   "AI-First": 1
  },
- "c_axis_mean": 0.75,
+ "c_axis_mean": 0.79,
  "p_distribution": {
-  "P0": 112,
-  "P1": 169,
-  "P2": 7
+  "P0": 117,
+  "P1": 207,
+  "P2": 9
  },
  "model_dependency": {
   "미확인": 66,
-  "없음(비LLM)": 103,
-  "해외 오픈웨이트(로컬)": 13,
+  "없음(비LLM)": 134,
+  "해외 오픈웨이트(로컬)": 17,
   "혼합": 7,
-  "해외 상용 API": 38,
-  "모델 중립(BYO)": 56,
+  "해외 상용 API": 44,
+  "모델 중립(BYO)": 59,
   "국산 독자모델": 3,
-  "미상": 1,
+  "미상": 2,
   "국산 오픈웨이트": 1
  },
  "model_stats": {
@@ -600,11 +600,11 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 103,
+    "n": 134,
     "specified": 0
    },
    "해외 오픈웨이트(로컬)": {
-    "n": 13,
+    "n": 17,
     "specified": 10
    },
    "혼합": {
@@ -612,11 +612,11 @@
     "specified": 7
    },
    "해외 상용 API": {
-    "n": 38,
+    "n": 44,
     "specified": 35
    },
    "모델 중립(BYO)": {
-    "n": 56,
+    "n": 59,
     "specified": 0
    },
    "국산 독자모델": {
@@ -624,7 +624,7 @@
     "specified": 3
    },
    "미상": {
-    "n": 1,
+    "n": 2,
     "specified": 0
    },
    "국산 오픈웨이트": {
@@ -893,7 +893,7 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 38,
+    "n": 44,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
@@ -1131,7 +1131,7 @@
    },
    {
     "dep": "해외 오픈웨이트(로컬)",
-    "n": 13,
+    "n": 17,
     "families": [
      {
       "name": "로컬 서빙(Ollama·vLLM 등)",
@@ -1229,18 +1229,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.065,
- "local_model_rate": 0.21,
- "model_known": 62,
- "license_tagged": 197,
- "license_stated_rate": 0.584,
- "gitlab_cases": 89,
- "gitlab_mirror_pairs": 14,
- "gitlab_open_rate": 0.157,
- "mcp_cases": 74,
+ "domestic_model_rate": 0.056,
+ "local_model_rate": 0.236,
+ "model_known": 72,
+ "license_tagged": 241,
+ "license_stated_rate": 0.515,
+ "gitlab_cases": 141,
+ "gitlab_mirror_pairs": 21,
+ "gitlab_open_rate": 0.149,
+ "mcp_cases": 78,
  "transition_funnel": {
   "기관 공식": 33,
-  "미확인": 212,
+  "미확인": 257,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1248,7 +1248,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.573
+  "feedback": 0.631
  },
  "maintenance_distribution": {
   "활발": 117,
@@ -1258,11 +1258,11 @@
  "stars_collected": 143,
  "repo_stats": {
   "gitlab": {
-   "count": 89,
+   "count": 141,
    "starred": 43,
    "stars_sum": 194,
    "maintenance": {
-    "활발": 48,
+    "활발": 55,
     "정체": 1
    },
    "top": [
@@ -1442,25 +1442,25 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 82,
-  "MIT": 81,
+  "명시 없음": 117,
+  "MIT": 86,
   "Other": 15,
-  "Apache-2.0": 10,
+  "Apache-2.0": 11,
+  "기타(비표준)": 4,
   "AGPL-3.0": 3,
-  "기타(비표준)": 2,
+  "GNU AGPLv3": 2,
   "ISC": 1,
-  "GNU AGPLv3": 1,
   "POLYFORM-NONCOMMERCIAL-1.0.0": 1,
   "GPL-3.0+": 1
  },
  "license_matrix": {
   "명시 없음": {
    "github": 38,
-   "gitlab": 44
+   "gitlab": 79
   },
   "MIT": {
    "github": 61,
-   "gitlab": 20
+   "gitlab": 25
   },
   "Other": {
    "github": 15,
@@ -1468,23 +1468,23 @@
   },
   "Apache-2.0": {
    "github": 8,
-   "gitlab": 2
+   "gitlab": 3
+  },
+  "기타(비표준)": {
+   "github": 0,
+   "gitlab": 4
   },
   "AGPL-3.0": {
    "github": 2,
    "gitlab": 1
   },
-  "기타(비표준)": {
+  "GNU AGPLv3": {
    "github": 0,
    "gitlab": 2
   },
   "ISC": {
    "github": 1,
    "gitlab": 0
-  },
-  "GNU AGPLv3": {
-   "github": 0,
-   "gitlab": 1
   },
   "POLYFORM-NONCOMMERCIAL-1.0.0": {
    "github": 0,
@@ -1505,25 +1505,25 @@
    "stated": 4
   },
   "gitlab": {
-   "total": 72,
-   "stated": 28
+   "total": 116,
+   "stated": 37
   }
  },
  "mcp_stats": {
-  "total": 74,
+  "total": 78,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
-   "Server": 65,
+   "Server": 68,
    "Client/Host": 6,
-   "Unknown/None": 2
+   "Unknown/None": 3
   },
   "c_grades": {
    "C0": 66,
    "C2": 6,
    "C3": 1,
-   "C1": 1
+   "C1": 5
   },
   "maintenance": {
    "활발": 35,
@@ -1543,6 +1543,30 @@
    "title": "내부망용 빠른 메모·구조화 앱",
    "github": "https://github.com/Milkbuttercheese2/What-I-have-to-do",
    "gitlab": "https://gitlab.aigov.go.kr/rhamasel3/What-I-have-to-do"
+  },
+  {
+   "id": "ea2bce110972762e",
+   "title": "공공기관 규정 MCP 생성기",
+   "github": "https://github.com/koul777/Public-Regulation-MCP-Builder",
+   "gitlab": "https://gitlab.aigov.go.kr/kyci/public-regulation-mcp-builder"
+  },
+  {
+   "id": "f5abed24ff6bdd4a",
+   "title": "엑셀 업무 자동화 도구 VHLookup",
+   "github": "https://github.com/koul777/VHLookup",
+   "gitlab": "https://gitlab.aigov.go.kr/kyci/vhlookup"
+  },
+  {
+   "id": "48e33f2318bdffae",
+   "title": "클릭 과정을 PDF 가이드로 만드는 ClickGuide Local",
+   "github": "https://github.com/koul777/clickguide-local-private",
+   "gitlab": "https://gitlab.aigov.go.kr/kyci/clickguide-local-private"
+  },
+  {
+   "id": "92d5147e02f7ae36",
+   "title": "NCS 기반 구조화 면접 질문 생성기 NCScope",
+   "github": "https://github.com/koul777/NCScope",
+   "gitlab": "https://gitlab.aigov.go.kr/kyci/ncscope"
   },
   {
    "id": "9d115930495a1e65",
@@ -1615,6 +1639,24 @@
    "title": "Korean Stats MCP — KOSIS 통계를 자연어로, 출처 자동 인용",
    "github": "https://github.com/chrisryugj/korean-stats-mcp",
    "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/korean-stats-mcp"
+  },
+  {
+   "id": "c7e0862df664bbe5",
+   "title": "AI Survey Insight — 설문 주관식 수백 건을 주제·감정별로 정리하는 분석 도구",
+   "github": "https://github.com/koul777/AI-Survey-Insight",
+   "gitlab": "https://gitlab.aigov.go.kr/kyci/ai-survey-insight"
+  },
+  {
+   "id": "1d90d7ec74b027d1",
+   "title": "Attendance Checker — 근태 기록에서 확인할 대상을 먼저 찾아주는 점검 도구",
+   "github": "https://github.com/koul777/attendance-checker",
+   "gitlab": "https://gitlab.aigov.go.kr/kyci/attendance-checker"
+  },
+  {
+   "id": "655d61608d54c98a",
+   "title": "HRMCP — NCS 온톨로지 기반 HR 실무 MCP 서버",
+   "github": "https://github.com/koul777/HRMCP",
+   "gitlab": "https://gitlab.aigov.go.kr/kyci/hrmcp"
   }
  ]
 }
