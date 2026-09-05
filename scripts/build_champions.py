@@ -93,7 +93,14 @@ def fetch_profile(acct: str) -> dict | None:
 # 조직 토큰 판별: 마지막 어절이 이 접미사로 끝나면 소속 경로의 일부로 본다
 ORG_TOKEN = re.compile(
     r"(?:시|군|구|도|청|처|부|원|공사|공단|협력단|사업단|유통|의회|재단|진흥원|연구원|교육청|"
-    r"위원회|대학교?|소방서|경찰서|세관|우체국|보건소|본부|지청|지사|센터|실|과|팀|단|관)$")
+    r"위원회|대학교?|소방서|경찰서|세관|우체국|보건소|본부|지청|지사|센터|실|과|팀|단|관|"
+    r"학교|연구소)$")
+# 광역시도 축약형('경남 양산시 …')도 조직 경로 토큰으로 인정
+REGION_TOKEN = re.compile(r"^(서울|부산|대구|인천|광주|대전|울산|세종|경기|강원|충북|충남|전북|전남|경북|경남|제주)$")
+# 표시명 말미의 직급은 이름이 아니다 — 분리 전에 떼어낸다
+TITLE_TOKEN = re.compile(
+    r"^(주무관|사무관|서기관|행정관|연구사|연구관|장학사|장학관|주사보?|서기|주임|팀장|과장|계장|"
+    r"실장|소장|센터장|부장|차장|대리|사원|교사|교감|교장|분석관|전산\w*)$")
 KOREAN_NAME = re.compile(r"[가-힣]{2,4}$")
 
 
@@ -104,9 +111,12 @@ def split_gitlab_name(full: str) -> tuple[str | None, str]:
     - first/last name 역순 표기('진희 안')는 성+이름으로 재결합
     """
     tokens = full.strip().split()
+    # 말미 직급 제거 ('광양시 조재원 주무관' → '광양시 조재원')
+    while len(tokens) >= 2 and TITLE_TOKEN.fullmatch(tokens[-1]):
+        tokens = tokens[:-1]
     if len(tokens) >= 2 and KOREAN_NAME.fullmatch(tokens[-1]):
         org_tokens = tokens[:-1]
-        if all(ORG_TOKEN.search(tok) for tok in org_tokens):
+        if all(ORG_TOKEN.search(tok) or REGION_TOKEN.fullmatch(tok) for tok in org_tokens):
             return " ".join(org_tokens), tokens[-1]
     if (len(tokens) == 2 and re.fullmatch(r"[가-힣]", tokens[1])
             and re.fullmatch(r"[가-힣]{1,2}", tokens[0])):
