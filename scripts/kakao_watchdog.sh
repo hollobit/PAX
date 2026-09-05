@@ -29,8 +29,20 @@ import datetime
 t=datetime.datetime.fromisoformat('$latest_iso'.replace('Z','+00:00'))
 print(int((datetime.datetime.now(datetime.timezone.utc)-t).total_seconds()//60))")
 
+CHAT_ID=18487372050628026
 if [ "$age_min" -lt "$STALL_MIN" ]; then
-  log "정상: DB 최신 ${age_min}분 전 ($latest_iso)"
+  # 상시 수집: 최근 2일 창을 일자별 파일로 원자적 덤프 (커뮤니티 지표·정기 수집의 안전망)
+  TODAY=$(date '+%F')
+  OUT="$ROOT/data/raw/${TODAY}-kakao-auto.json"
+  TMP=$(mktemp "$ROOT/data/raw/.kakao-auto.XXXXXX")
+  if kakaocli messages --chat-id "$CHAT_ID" --since 2d --limit 8000 --json > "$TMP" 2>/dev/null      && python3 -c "import json,sys;json.load(open(sys.argv[1]))" "$TMP" 2>/dev/null; then
+    mv "$TMP" "$OUT"
+    N=$(python3 -c "import json,sys;print(len(json.load(open(sys.argv[1]))))" "$OUT")
+    log "정상: DB 최신 ${age_min}분 전 · 자동 수집 ${N}건 → $(basename "$OUT")"
+  else
+    rm -f "$TMP"
+    log "정상: DB 최신 ${age_min}분 전 · 자동 수집 실패(다음 주기 재시도)"
+  fi
   exit 0
 fi
 
