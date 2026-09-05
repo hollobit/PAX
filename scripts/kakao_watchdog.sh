@@ -10,6 +10,9 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 LOG_DIR="$ROOT/data/private"; mkdir -p "$LOG_DIR"
 LOG="$LOG_DIR/watchdog.log"
 STALL_MIN=45
+# 심야·새벽(01~08시 KST)엔 전 방 정적을 정체로 오탐하기 쉬움 — 임계 완화·알림 억제
+HOUR=$(date '+%H')
+if [ "$HOUR" -ge 1 ] && [ "$HOUR" -lt 8 ]; then STALL_MIN=240; NIGHT=1; else NIGHT=0; fi
 STATE="$LOG_DIR/watchdog_state"   # 마지막 재실행 시각 기록(연속 재실행 방지)
 
 now() { date '+%F %T'; }
@@ -59,6 +62,7 @@ if [ $((now_epoch - last_restart)) -gt 5400 ]; then
   open -a KakaoTalk 2>/dev/null && log "조치: 앱 기동 완료" || log "조치 실패: 앱 기동 불가"
   echo "$now_epoch" > "$STATE"
 else
+  if [ "$NIGHT" = "1" ]; then log "경고: 정체 지속 — 심야라 알림 보류(주간 재확인)"; exit 0; fi
   log "경고: 재실행 후에도 정체 지속 → 사용자 알림"
   osascript -e 'display notification "카카오톡 수신이 '"$age_min"'분째 멈춰 있습니다. 로그인 상태와 방 열람을 확인해 주세요. (PAX 수집 영향)" with title "PAX 카카오 워치독" sound name "Basso"' 2>/dev/null || true
 fi
