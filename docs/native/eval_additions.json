@@ -7334,5 +7334,33 @@
   "resilience": "미확인(★1층 — 검증 폭 좁음)",
   "post_url": "",
   "service_url": ""
+ },
+ {
+  "no": 334,
+  "id": "a6834b493c566013",
+  "org": "재정경제부",
+  "title": "릴리즈픽(ReleasePick) — 보도자료를 15분 만에 카드뉴스·인포그래픽으로 만드는 정책홍보 자동제작 시스템",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S2",
+  "s_name": "Workflow",
+  "c": "C2",
+  "c_name": "부분 완결",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Published tool",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R1 낮음",
+  "human": "검토 후 사용(발행 전 확인 전제)",
+  "evidence": "E1 코드·도구 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "크롤링→요약→디자인 제작→SNS 발행까지 홍보 업무 한 흐름을 잇는 워크플로형(S2·C2)으로, 발행이라는 대외 산출까지 자동화 범위에 넣은 점이 단일 도구들과 구별된다. 중앙부처 담당관실 실무자 팀 개발이 README에 실명 명기돼 있고 부처 디자인 규격화를 내세운다. 저장소·README 확인(E1), 실행 검증은 하지 않았다.",
+  "feedback": "미확인",
+  "resilience": "미확인(등재 시점 활동 확인)",
+  "post_url": "",
+  "service_url": ""
  }
 ]
