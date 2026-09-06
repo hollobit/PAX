@@ -24,7 +24,7 @@
    "runtime_env": "브라우저만",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "thumb_v": 1786110276
   },
@@ -49,7 +49,7 @@
    "task_category": "문서·기안",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "mcp_official": true,
    "mcp_provider_agency": "서울특별시",
@@ -74,7 +74,7 @@
    "task_category": "회계·정산",
    "runtime_env": "설치 필요",
    "link_ok": true,
-   "health_checked": "2026-08-31"
+   "health_checked": "2026-09-07"
   },
   {
    "date": "2026-08-03",
@@ -98,7 +98,7 @@
    "region": null,
    "task_category": "공통·범용",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 3,
    "stars_gitlab": 3,
@@ -128,7 +128,7 @@
    "task_category": "문서·기안",
    "runtime_env": "설치 필요",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 3,
    "stars_github": 3,
@@ -157,10 +157,10 @@
    "region": null,
    "task_category": "인사·복무",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "stars": 10,
-   "stars_github": 10,
+   "stars": 11,
+   "stars_github": 11,
    "model_dependency": "해외 오픈웨이트(로컬)",
    "models_used": [
     "Gemma 4 E2B(Ollama, 선택형 요약)"
@@ -185,7 +185,7 @@
    "region": null,
    "task_category": "문서·기안",
    "link_ok": true,
-   "health_checked": "2026-08-31"
+   "health_checked": "2026-09-07"
   },
   {
    "date": "2026-06-22",
@@ -211,12 +211,12 @@
    "task_category": "문서·기안",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "deployment_env": "행정망",
-   "stars": 645,
+   "stars": 647,
    "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/Docufinder",
-   "stars_github": 645,
+   "stars_github": 647,
    "stars_gitlab": 6,
    "model_dependency": "혼합",
    "models_used": [
@@ -245,7 +245,7 @@
    "task_category": "감사·법무",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "mcp_official": false,
    "case_url": null
   },
@@ -273,7 +273,7 @@
    "task_category": "기획·정책",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "mirror_url": "https://gitlab.aigov.go.kr/hosung.seo/korea100_MOIS",
    "stars_gitlab": 4,
    "stars": 4,
@@ -322,7 +322,7 @@
    "region": "서울",
    "task_category": "회계·정산",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
@@ -347,7 +347,7 @@
    "task_category": "감사·법무",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "mcp_official": false,
    "case_url": "https://github.com/moon9239-lgtm/privacy-law-reader",
    "license": "MIT",
@@ -377,7 +377,7 @@
    "region": null,
    "task_category": "기획·정책",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110277
   },
@@ -403,7 +403,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "정체",
    "stars": 40,
    "stars_github": 40,
@@ -432,10 +432,10 @@
    "task_category": "공통·범용",
    "runtime_env": "설치 필요",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "stars": 19,
-   "stars_github": 19,
+   "stars": 20,
+   "stars_github": 20,
    "model_dependency": "해외 상용 API",
    "models_used": [
     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
@@ -462,7 +462,7 @@
    "task_category": "감사·법무",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "mcp_official": false,
    "thumb_v": 1786110276
   },
@@ -484,7 +484,7 @@
    "region": null,
    "task_category": "문서·기안",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1786110276
   },
   {
@@ -506,7 +506,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
@@ -533,12 +533,12 @@
    "task_category": "문서·기안",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "deployment_env": "행정망",
    "stars": 14,
    "stars_github": 14,
-   "stars_gitlab": 6,
+   "stars_gitlab": 7,
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110277
   },
@@ -561,7 +561,7 @@
    "task_category": "문서·기안",
    "runtime_env": "설치 필요",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110277
   },
@@ -587,10 +587,10 @@
    "region": null,
    "task_category": "문서·기안",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "stars": 9,
-   "stars_github": 9,
+   "stars": 10,
+   "stars_github": 10,
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110275
   },
@@ -613,7 +613,7 @@
    "task_category": "공통·범용",
    "runtime_env": "AI 도구 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "부서 공유",
    "model_dependency": "해외 상용 API",
    "models_used": [
@@ -639,7 +639,7 @@
    "region": null,
    "task_category": "회계·정산",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
@@ -666,7 +666,7 @@
    "task_category": "민원",
    "runtime_env": "AI 도구 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "해외 상용 API",
    "stars": 7,
@@ -699,11 +699,11 @@
    "task_category": "문서·기안",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
-   "stars": 37,
-   "stars_github": 37,
+   "stars": 43,
+   "stars_github": 43,
    "model_dependency": "혼합",
    "models_used": [
     "Qwen(로컬 RAG 챗)",
@@ -711,6 +711,7 @@
     "Ollama(로컬 실행)"
    ],
    "mirror_url": "https://gitlab.aigov.go.kr/kyci/public-regulation-mcp-builder",
+   "stars_gitlab": 1,
    "thumb_v": 1786110277
   },
   {
@@ -735,7 +736,7 @@
    "task_category": "공통·범용",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
@@ -761,12 +762,13 @@
    "region": null,
    "task_category": "감사·법무",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "stars": 39,
-   "stars_github": 39,
+   "stars": 40,
+   "stars_github": 40,
    "model_dependency": "없음(비LLM)",
    "mirror_url": "https://gitlab.aigov.go.kr/kyci/vhlookup",
+   "stars_gitlab": 1,
    "thumb_v": 1786110277
   },
   {
@@ -791,15 +793,16 @@
    "task_category": "공통·범용",
    "runtime_env": "설치 필요",
    "link_ok": true,
-   "health_checked": "2026-08-31",
-   "maintenance": "활발",
-   "stars": 47,
-   "stars_github": 47,
+   "health_checked": "2026-09-07",
+   "maintenance": "정체",
+   "stars": 48,
+   "stars_github": 48,
    "model_dependency": "해외 상용 API",
    "models_used": [
     "OpenAI/Gemini/Claude(사용자 선택)"
    ],
    "mirror_url": "https://gitlab.aigov.go.kr/kyci/clickguide-local-private",
+   "stars_gitlab": 1,
    "thumb_v": 1786110276
   },
   {
@@ -825,7 +828,7 @@
    "task_category": "문서·기안",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 6,
@@ -853,7 +856,7 @@
    "task_category": "인사·복무",
    "runtime_env": "설치 필요",
    "link_ok": false,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110275
   },
@@ -879,16 +882,17 @@
    "task_category": "인사·복무",
    "runtime_env": "AI 도구 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "stars": 5,
-   "stars_github": 5,
+   "stars": 6,
+   "stars_github": 6,
    "model_dependency": "해외 상용 API",
    "models_used": [
     "GPT-5.6 Terra",
     "GPT-5.6 Luna"
    ],
    "mirror_url": "https://gitlab.aigov.go.kr/kyci/ncscope",
+   "stars_gitlab": 1,
    "thumb_v": 1786110276
   },
   {
@@ -912,7 +916,7 @@
    "task_category": "기획·정책",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1787241264
   },
@@ -935,7 +939,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110277
   },
@@ -959,7 +963,7 @@
    "task_category": "감사·법무",
    "runtime_env": "설치 필요",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
@@ -986,7 +990,7 @@
    "task_category": "계약·조달",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 1,
    "stars_github": 1,
@@ -1012,7 +1016,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
@@ -1035,7 +1039,7 @@
    "task_category": "공통·범용",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1786110276
   },
   {
@@ -1061,7 +1065,7 @@
    "runtime_env": "AI 도구 설정",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "model_dependency": "혼합",
    "deployment_env": "행정망",
@@ -1092,7 +1096,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "mcp_official": false,
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
@@ -1118,7 +1122,7 @@
    "runtime_env": "서버 구축",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "부서 공유",
    "deployment_env": "행정망"
   },
@@ -1146,7 +1150,7 @@
    "task_category": "문서·기안",
    "runtime_env": "설치 필요",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "해외 오픈웨이트(로컬)",
    "stars": 10,
@@ -1156,6 +1160,7 @@
     "Gemma 4 E2B(Ollama 번들)"
    ],
    "mirror_url": "https://gitlab.aigov.go.kr/Kminer2053/gongmuwon",
+   "stars_gitlab": 3,
    "thumb_v": 1786110276
   },
   {
@@ -1180,7 +1185,7 @@
    "task_category": "감사·법무",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "thumb_v": 1786110276
   },
@@ -1205,13 +1210,16 @@
    "runtime_env": "서버 구축",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "deployment_env": "행정망",
    "case_url": "https://gitlab.aigov.go.kr/Kminer2053/ax-playground-public",
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-04",
    "transition_stage": "기관 공식",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "maintenance": "활발",
    "thumb_v": 1788531437
   },
   {
@@ -1239,13 +1247,13 @@
    "task_category": "문서·기안",
    "network_req": "로컬 완결",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "혼합",
    "deployment_env": "로컬 PC",
-   "stars": 14,
+   "stars": 15,
    "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/edoc-summarizer",
-   "stars_github": 14,
+   "stars_github": 15,
    "stars_gitlab": 5,
    "models_used": [
     "Ollama/vLLM 로컬(기본)",
@@ -1274,7 +1282,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "thumb_v": 1786110277
   },
@@ -1301,11 +1309,11 @@
    "task_category": "데이터·통계",
    "runtime_env": "AI 도구 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "해외 상용 API",
-   "stars": 365,
-   "stars_github": 365,
+   "stars": 375,
+   "stars_github": 375,
    "models_used": [
     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
    ],
@@ -1330,7 +1338,7 @@
    "region": null,
    "task_category": "데이터·통계",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110275
   },
@@ -1353,7 +1361,7 @@
    "region": "서울",
    "task_category": "시설·안전",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
@@ -1376,7 +1384,7 @@
    "region": "부산",
    "task_category": "데이터·통계",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
@@ -1399,7 +1407,7 @@
    "region": "제주",
    "task_category": "시설·안전",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110277
   },
@@ -1425,10 +1433,10 @@
    "region": "서울",
    "task_category": "데이터·통계",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "stars": 81,
-   "stars_github": 81,
+   "stars": 84,
+   "stars_github": 84,
    "case_url": "https://service.datahub.kr/projects/public-data-lens/",
    "runtime_env": "MCP·CLI 설정",
    "model_dependency": "모델 중립(BYO)",
@@ -1457,7 +1465,7 @@
    "task_category": "기획·정책",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1786110277
   },
   {
@@ -1483,7 +1491,7 @@
    "task_category": "회계·정산",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1786110276
   },
   {
@@ -1509,7 +1517,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1786110276
   },
   {
@@ -1535,7 +1543,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1786110276
   },
   {
@@ -1557,7 +1565,7 @@
    "region": null,
    "task_category": "기획·정책",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786110276
   },
@@ -1583,7 +1591,7 @@
    "region": null,
    "task_category": "문서·기안",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 3,
    "stars_github": 3,
@@ -1617,7 +1625,7 @@
    "runtime_env": "MCP·CLI 설정",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "정체",
    "model_dependency": "해외 오픈웨이트(로컬)",
    "deployment_env": "행정망",
@@ -1653,12 +1661,13 @@
    "region": "서울",
    "task_category": "시설·안전",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "stars_github": 2,
-   "stars": 2,
+   "stars_github": 3,
+   "stars": 3,
    "model_dependency": "없음(비LLM)",
    "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/gjdong",
+   "stars_gitlab": 2,
    "thumb_v": 1786110276
   },
   {
@@ -1683,7 +1692,7 @@
    "task_category": "문서·기안",
    "runtime_env": "설치 필요",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 1,
    "stars_github": 1,
@@ -1710,7 +1719,7 @@
    "task_category": "공통·범용",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "thumb_v": 1786110276
   },
@@ -1734,7 +1743,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "model_dependency": "모델 중립(BYO)",
    "mcp_official": true,
@@ -1763,7 +1772,7 @@
    "region": null,
    "task_category": "문서·기안",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 4,
    "stars_github": 4,
@@ -1795,12 +1804,12 @@
    "runtime_env": "설치 필요",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "stars": 1781,
+   "stars": 1795,
    "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/kordoc",
-   "stars_github": 1781,
-   "stars_gitlab": 6,
+   "stars_github": 1795,
+   "stars_gitlab": 7,
    "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786110276
   },
@@ -1828,7 +1837,7 @@
    "task_category": "감사·법무",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "mcp_official": true,
    "mcp_provider_agency": "과학기술혁신본부",
@@ -1852,7 +1861,7 @@
    "region": null,
    "task_category": "기획·정책",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1786110276
   },
   {
@@ -1878,7 +1887,7 @@
    "region": null,
    "task_category": "시설·안전",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "transition_stage": "기관 공식",
    "stars": 4,
@@ -1905,7 +1914,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1786110275
   },
   {
@@ -1928,7 +1937,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1786110275
   },
   {
@@ -1956,7 +1965,7 @@
    "network_req": "폐쇄망 가능",
    "cost_req": "무료",
    "link_ok": false,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "deployment_env": "행정망",
    "thumb_v": 1786192582
   },
@@ -1986,7 +1995,7 @@
    "runtime_env": "MCP·CLI 설정",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 137,
@@ -2047,13 +2056,14 @@
    "runtime_env": "MCP·CLI 설정",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "모델 중립(BYO)",
    "mcp_official": false,
    "stars": 52,
    "stars_github": 52,
    "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/korean-patent-mcp",
+   "stars_gitlab": 2,
    "thumb_v": 1786155305
   },
   {
@@ -2083,11 +2093,11 @@
    "runtime_env": "MCP·CLI 설정",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "방치",
    "mcp_official": false,
-   "stars": 288,
-   "stars_github": 288,
+   "stars": 299,
+   "stars_github": 299,
    "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786155309
   },
@@ -2111,7 +2121,7 @@
    "region": "울산",
    "task_category": "문서·기안",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786156367
@@ -2139,7 +2149,7 @@
    "region": "전북",
    "task_category": "인사·복무",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 5,
    "stars_gitlab": 5,
@@ -2174,7 +2184,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786279979
   },
@@ -2202,7 +2212,7 @@
    "runtime_env": "서버 구축",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "thumb_v": 1786409022
   },
@@ -2226,7 +2236,7 @@
    "region": null,
    "task_category": "문서·기안",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1786439854
   },
   {
@@ -2250,7 +2260,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1786439856
   },
   {
@@ -2277,7 +2287,7 @@
    "task_category": "공통·범용",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1786439859
   },
   {
@@ -2301,7 +2311,7 @@
    "task_category": "계약·조달",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786439862
   },
@@ -2329,10 +2339,10 @@
    "task_category": "기획·정책",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "stars": 3,
-   "stars_github": 3,
+   "stars": 4,
+   "stars_github": 4,
    "model_dependency": "없음(비LLM)",
    "mirror_url": "https://gitlab.aigov.go.kr/rhamasel3/how-did-they-do-all-that-procurement",
    "thumb_v": 1786439867
@@ -2361,7 +2371,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1786439874
   },
   {
@@ -2390,7 +2400,7 @@
    "runtime_env": "AI 도구 설정",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 4,
    "stars_github": 4,
@@ -2422,7 +2432,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "설치 필요",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1786440498
   },
   {
@@ -2447,7 +2457,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "mcp_official": true,
    "mcp_provider_agency": "광진구",
@@ -2475,7 +2485,7 @@
    "task_category": "감사·법무",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "deployment_env": "행정망",
    "thumb_v": 1786451355
@@ -2504,7 +2514,7 @@
    "task_category": "시설·안전",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786494961
   },
@@ -2533,12 +2543,12 @@
    "network_req": "로컬 완결",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "해외 오픈웨이트(로컬)",
    "deployment_env": "로컬 PC",
-   "stars": 4,
-   "stars_github": 4,
+   "stars": 5,
+   "stars_github": 5,
    "models_used": [
     "Ollama 로컬 모델",
     "WebGPU 브라우저 모델"
@@ -2570,7 +2580,7 @@
    "runtime_env": "MCP·CLI 설정",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 0,
@@ -2602,12 +2612,12 @@
    "task_category": "시설·안전",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "funding_source": "개인 사비",
    "mcp_official": false,
-   "stars": 2,
-   "stars_github": 2,
+   "stars": 5,
+   "stars_github": 5,
    "model_dependency": "모델 중립(BYO)",
    "mirror_url": "https://gitlab.aigov.go.kr/archimin/pumsem",
    "thumb_v": 1786538218
@@ -2636,7 +2646,7 @@
    "region": null,
    "task_category": "시설·안전",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 0,
    "stars_github": 0,
@@ -2669,13 +2679,13 @@
    "network_req": "폐쇄망 가능",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "deployment_env": "행정망",
    "mcp_official": false,
-   "stars": 2534,
+   "stars": 2558,
    "case_url": "https://gitlab.aigov.go.kr/chrisryugj/korean-law-mcp",
-   "stars_github": 2534,
+   "stars_github": 2558,
    "stars_gitlab": 13,
    "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546245
@@ -2706,7 +2716,7 @@
    "runtime_env": "MCP·CLI 설정",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 130,
@@ -2738,7 +2748,7 @@
    "runtime_env": "MCP·CLI 설정",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "방치",
    "mcp_official": false,
    "stars": 73,
@@ -2770,7 +2780,7 @@
    "runtime_env": "MCP·CLI 설정",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "방치",
    "model_dependency": "모델 중립(BYO)",
    "mcp_official": false,
@@ -2802,7 +2812,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 9,
@@ -2835,7 +2845,7 @@
    "runtime_env": "MCP·CLI 설정",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "정체",
    "mcp_official": false,
    "stars": 9,
@@ -2867,7 +2877,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "방치",
    "mcp_official": false,
    "stars": 2,
@@ -2898,7 +2908,7 @@
    "task_category": "계약·조달",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "정체",
    "mcp_official": false,
    "stars": 5,
@@ -2931,7 +2941,7 @@
    "runtime_env": "MCP·CLI 설정",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "방치",
    "mcp_official": false,
    "stars": 5,
@@ -2962,7 +2972,7 @@
    "task_category": "계약·조달",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "방치",
    "mcp_official": false,
    "stars": 4,
@@ -2993,11 +3003,11 @@
    "task_category": "계약·조달",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
-   "stars": 2,
-   "stars_github": 2,
+   "stars": 3,
+   "stars_github": 3,
    "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546275
   },
@@ -3025,7 +3035,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 175,
@@ -3057,7 +3067,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "방치",
    "mcp_official": false,
    "stars": 128,
@@ -3089,11 +3099,11 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
-   "stars": 95,
-   "stars_github": 95,
+   "stars": 98,
+   "stars_github": 98,
    "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546285
   },
@@ -3120,8 +3130,8 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
-   "maintenance": "활발",
+   "health_checked": "2026-09-07",
+   "maintenance": "정체",
    "mcp_official": false,
    "stars": 55,
    "stars_github": 55,
@@ -3152,7 +3162,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "모델 중립(BYO)",
    "mcp_official": false,
@@ -3183,7 +3193,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "방치",
    "mcp_official": false,
    "stars": 11,
@@ -3214,7 +3224,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "방치",
    "mcp_official": false,
    "stars": 3,
@@ -3245,7 +3255,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "정체",
    "mcp_official": false,
    "stars": 2,
@@ -3277,11 +3287,11 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
-   "stars": 373,
-   "stars_github": 373,
+   "stars": 375,
+   "stars_github": 375,
    "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546303
   },
@@ -3308,7 +3318,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 15,
@@ -3339,11 +3349,11 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
-   "stars": 15,
-   "stars_github": 15,
+   "stars": 16,
+   "stars_github": 16,
    "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546309
   },
@@ -3370,7 +3380,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 2,
@@ -3401,8 +3411,8 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
-   "maintenance": "정체",
+   "health_checked": "2026-09-07",
+   "maintenance": "방치",
    "mcp_official": false,
    "stars": 1,
    "stars_github": 1,
@@ -3434,11 +3444,11 @@
    "runtime_env": "설치 필요",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
-   "stars": 7372,
-   "stars_github": 7372,
+   "stars": 7431,
+   "stars_github": 7431,
    "model_dependency": "해외 상용 API",
    "models_used": [
     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
@@ -3468,13 +3478,14 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
-   "stars": 64,
-   "stars_github": 64,
+   "stars": 65,
+   "stars_github": 65,
    "model_dependency": "모델 중립(BYO)",
    "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/archhub-mcp",
+   "stars_gitlab": 2,
    "thumb_v": 1786546321
   },
   {
@@ -3500,7 +3511,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 27,
@@ -3531,7 +3542,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "방치",
    "mcp_official": false,
    "stars": 12,
@@ -3563,7 +3574,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "정체",
    "mcp_official": false,
    "stars": 89,
@@ -3594,7 +3605,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "정체",
    "mcp_official": false,
    "stars": 41,
@@ -3625,11 +3636,11 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
-   "maintenance": "방치",
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "mcp_official": false,
-   "stars": 11,
-   "stars_github": 11,
+   "stars": 0,
+   "stars_github": 0,
    "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1786546336
   },
@@ -3656,7 +3667,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "방치",
    "mcp_official": false,
    "stars": 6,
@@ -3687,7 +3698,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 3,
@@ -3720,11 +3731,11 @@
    "runtime_env": "AI 도구 설정",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "해외 상용 API",
-   "stars": 297,
-   "stars_github": 297,
+   "stars": 298,
+   "stars_github": 298,
    "models_used": [
     "Claude/Codex/Gemini(어댑터)",
     "GLM-5.3(에이전트 레지스트리)"
@@ -3755,7 +3766,7 @@
    "task_category": "시설·안전",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 45,
    "stars_github": 45,
@@ -3786,7 +3797,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 0,
@@ -3817,7 +3828,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "정체",
    "mcp_official": false,
    "stars": 2,
@@ -3849,7 +3860,7 @@
    "task_category": "문서·기안",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 26,
@@ -3884,7 +3895,7 @@
    "task_category": "감사·법무",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 11,
@@ -3916,7 +3927,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "정체",
    "mcp_official": false,
    "stars": 0,
@@ -3948,7 +3959,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 3,
@@ -3980,7 +3991,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 0,
@@ -4012,7 +4023,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "방치",
    "mcp_official": false,
    "stars": 0,
@@ -4043,7 +4054,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "정체",
    "mcp_official": false,
    "stars": 0,
@@ -4075,7 +4086,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 0,
@@ -4107,7 +4118,7 @@
    "task_category": "감사·법무",
    "runtime_env": "MCP·CLI 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "정체",
    "mcp_official": false,
    "stars": 4,
@@ -4136,7 +4147,7 @@
    "task_category": "인사·복무",
    "runtime_env": "설치 필요",
    "link_ok": true,
-   "health_checked": "2026-08-31"
+   "health_checked": "2026-09-07"
   },
   {
    "date": "2026-07-21",
@@ -4163,7 +4174,7 @@
    "task_category": "기획·정책",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 14,
    "stars_github": 14,
@@ -4198,7 +4209,7 @@
    "network_req": "로컬 완결",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "해외 오픈웨이트(로컬)",
    "deployment_env": "로컬 PC",
@@ -4230,7 +4241,7 @@
    "task_category": "감사·법무",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786715193
@@ -4256,7 +4267,7 @@
    "task_category": "회계·정산",
    "runtime_env": "브라우저만",
    "link_ok": false,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786715195
@@ -4282,7 +4293,7 @@
    "task_category": "문서·기안",
    "runtime_env": "설치 필요",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786715200
   },
@@ -4306,7 +4317,7 @@
    "region": "경기",
    "task_category": "감사·법무",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "thumb_v": 1786716344
   },
@@ -4330,7 +4341,7 @@
    "region": null,
    "task_category": "데이터·통계",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786716351
   },
@@ -4358,7 +4369,7 @@
    "task_category": "문서·기안",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "해외 상용 API",
    "stars": 83,
@@ -4388,7 +4399,7 @@
    "region": null,
    "task_category": "감사·법무",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786716357
   },
@@ -4417,7 +4428,7 @@
    "runtime_env": "MCP·CLI 설정",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
    "stars": 38,
@@ -4448,7 +4459,7 @@
    "region": null,
    "task_category": "기획·정책",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "thumb_v": 1786716363
   },
@@ -4474,7 +4485,7 @@
    "runtime_env": "브라우저만",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "기관 공식",
    "deployment_env": "행정망",
    "model_dependency": "없음(비LLM)",
@@ -4504,7 +4515,7 @@
    "task_category": "공통·범용",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786716717
   },
@@ -4528,7 +4539,7 @@
    "region": null,
    "task_category": "데이터·통계",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "범정부 탑재"
   },
   {
@@ -4551,7 +4562,7 @@
    "region": null,
    "task_category": "문서·기안",
    "link_ok": true,
-   "health_checked": "2026-08-31"
+   "health_checked": "2026-09-07"
   },
   {
    "org": "공직 커뮤니티",
@@ -4579,11 +4590,11 @@
    "runtime_env": "AI 도구 설정",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "해외 상용 API",
-   "stars": 318,
-   "stars_github": 318,
+   "stars": 321,
+   "stars_github": 321,
    "models_used": [
     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
    ],
@@ -4612,10 +4623,10 @@
    "region": null,
    "task_category": "문서·기안",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "stars": 15,
-   "stars_gitlab": 15,
+   "stars": 3,
+   "stars_gitlab": 3,
    "model_dependency": "해외 상용 API",
    "models_used": [
     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
@@ -4648,7 +4659,7 @@
    "task_category": "감사·법무",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "deployment_env": "폐쇄망",
    "stars": 9,
@@ -4680,11 +4691,11 @@
    "task_category": "회계·정산",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "transition_stage": "기관 공식",
-   "stars": 8,
-   "stars_gitlab": 8,
+   "stars": 9,
+   "stars_gitlab": 9,
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786799805
   },
@@ -4712,10 +4723,10 @@
    "task_category": "문서·기안",
    "runtime_env": "AI 도구 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "stars": 8,
-   "stars_gitlab": 8,
+   "stars": 9,
+   "stars_gitlab": 9,
    "model_dependency": "해외 상용 API",
    "models_used": [
     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
@@ -4746,7 +4757,7 @@
    "task_category": "문서·기안",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "해외 오픈웨이트(로컬)",
    "deployment_env": "행정망",
@@ -4781,10 +4792,10 @@
    "task_category": "시설·안전",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "stars": 6,
-   "stars_gitlab": 6,
+   "stars": 7,
+   "stars_gitlab": 7,
    "model_dependency": "해외 상용 API",
    "models_used": [
     "OpenAI GPT-5(Responses API)"
@@ -4814,7 +4825,7 @@
    "region": null,
    "task_category": "문서·기안",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 4,
    "stars_gitlab": 4,
@@ -4846,7 +4857,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "transition_stage": "기관 공식",
    "stars": 5,
@@ -4878,7 +4889,7 @@
    "runtime_env": "브라우저만",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "deployment_env": "행정망",
    "stars": 4,
@@ -4913,7 +4924,7 @@
    "region": null,
    "task_category": "감사·법무",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "transition_stage": "기관 공식",
    "stars": 1,
@@ -4946,7 +4957,7 @@
    "runtime_env": "AI 도구 설정",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "transition_stage": "기관 공식",
    "model_dependency": "해외 상용 API",
@@ -4981,7 +4992,7 @@
    "region": null,
    "task_category": "민원",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 4,
    "stars_gitlab": 4,
@@ -5014,11 +5025,11 @@
    "task_category": "문서·기안",
    "runtime_env": "AI 도구 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "해외 상용 API",
-   "stars": 296,
-   "stars_github": 296,
+   "stars": 301,
+   "stars_github": 301,
    "models_used": [
     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
    ],
@@ -5048,7 +5059,7 @@
    "task_category": "시설·안전",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1786883724
   },
   {
@@ -5075,7 +5086,7 @@
    "task_category": "감사·법무",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "transition_stage": "기관 공식",
    "model_dependency": "혼합",
@@ -5112,7 +5123,7 @@
    "runtime_env": "AI 도구 설정",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "해외 상용 API",
    "stars": 9,
@@ -5147,7 +5158,7 @@
    "task_category": "문서·기안",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "transition_stage": "기관 공식",
    "model_dependency": "해외 오픈웨이트(로컬)",
@@ -5180,7 +5191,7 @@
    "task_category": "감사·법무",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "국산 독자모델",
    "models_used": [
     "schift-ko-pii(자체 학습)"
@@ -5212,7 +5223,7 @@
    "task_category": "기획·정책",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1786970111
   },
@@ -5240,11 +5251,11 @@
    "task_category": "문서·기안",
    "runtime_env": "AI 도구 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mcp_official": false,
-   "stars": 4,
-   "stars_github": 4,
+   "stars": 5,
+   "stars_github": 5,
    "model_dependency": "해외 상용 API",
    "models_used": [
     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
@@ -5272,7 +5283,7 @@
    "task_category": "시설·안전",
    "runtime_env": "AI 도구 설정",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "transition_stage": "부서 공유",
    "model_dependency": "해외 상용 API",
    "models_used": [
@@ -5301,7 +5312,7 @@
    "runtime_env": "AI 도구 설정",
    "cost_req": "무료",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "해외 상용 API",
    "models_used": [
     "Gemini GEM"
@@ -5332,11 +5343,11 @@
    "task_category": "데이터·통계",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "deployment_env": "폐쇄망",
-   "stars": 4,
-   "stars_gitlab": 4,
+   "stars": 5,
+   "stars_gitlab": 5,
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1787147300
   },
@@ -5364,7 +5375,7 @@
    "task_category": "민원",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 4,
    "stars_gitlab": 4,
@@ -5398,7 +5409,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "설치 필요",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 2,
    "stars_gitlab": 2,
@@ -5430,7 +5441,7 @@
    "runtime_env": "설치 필요",
    "cost_req": "API 키 필요",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 2,
    "stars_gitlab": 2,
@@ -5460,7 +5471,7 @@
    "task_category": "데이터·통계",
    "runtime_env": "브라우저만",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 2,
    "stars_gitlab": 2,
@@ -5492,7 +5503,7 @@
    "runtime_env": "브라우저만",
    "network_req": "폐쇄망 가능",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "deployment_env": "폐쇄망",
    "stars": 2,
@@ -5524,11 +5535,11 @@
    "license_source": "github",
    "license_checked": "2026-08-20",
    "model_dependency": "해외 상용 API",
-   "stars": 51,
+   "stars": 53,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "stars_github": 51,
+   "stars_github": 53,
    "models_used": [
     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
    ],
@@ -5558,11 +5569,11 @@
    "license_source": "github",
    "license_checked": "2026-08-20",
    "mcp_official": false,
-   "stars": 14,
+   "stars": 15,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "stars_github": 14,
+   "stars_github": 15,
    "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1787186191
   },
@@ -5588,7 +5599,7 @@
    "id": "baebbc7b8aa4c952",
    "transition_stage": "기관 공식",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1787229340
   },
   {
@@ -5619,7 +5630,7 @@
    "stars_gitlab": 6,
    "stars": 6,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1787268712
   },
@@ -5649,7 +5660,7 @@
    "stars_gitlab": 3,
    "stars": 3,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1787268715
@@ -5680,7 +5691,7 @@
    "stars_gitlab": 3,
    "stars": 3,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "해외 상용 API",
    "models_used": [
@@ -5715,7 +5726,7 @@
    "stars_gitlab": 3,
    "stars": 3,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1787268720
   },
@@ -5745,7 +5756,7 @@
    "stars_gitlab": 3,
    "stars": 3,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1787268723
@@ -5775,7 +5786,7 @@
    "stars_gitlab": 3,
    "stars": 3,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "region": "전남",
    "thumb_v": 1787268725
@@ -5806,8 +5817,8 @@
    "stars_gitlab": 3,
    "stars": 3,
    "link_ok": true,
-   "health_checked": "2026-08-31",
-   "maintenance": "활발",
+   "health_checked": "2026-09-07",
+   "maintenance": "정체",
    "thumb_v": 1787268728
   },
   {
@@ -5839,7 +5850,7 @@
    "stars_gitlab": 3,
    "stars": 0,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1787317345
@@ -5870,13 +5881,14 @@
    "license_source": "github",
    "license_checked": "2026-08-22",
    "region": "서울",
-   "stars_github": 92,
-   "stars": 92,
+   "stars_github": 93,
+   "stars": 93,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "model_dependency": "모델 중립(BYO)",
    "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/korean-stats-mcp",
+   "stars_gitlab": 2,
    "thumb_v": 1787401380
   },
   {
@@ -5903,10 +5915,10 @@
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-08-22",
-   "stars_github": 238,
-   "stars": 238,
+   "stars_github": 239,
+   "stars": 239,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "정체",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1787401383
@@ -5934,7 +5946,7 @@
    "runtime_env": "MCP·CLI 설정",
    "id": "6c44153f6db7d61c",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "모델 중립(BYO)",
    "thumb_v": 1787401385
   },
@@ -5960,7 +5972,7 @@
    "runtime_env": "MCP·CLI 설정",
    "id": "e6b6f2b13b9ea1aa",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1787401387
   },
   {
@@ -5985,7 +5997,7 @@
    "date": "2026-08-21",
    "id": "fe06420a5b17251f",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1787611120
   },
   {
@@ -6012,7 +6024,7 @@
    "link": "https://ggc-lexdiff.vercel.app/",
    "id": "2808aea47c52b21c",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1787445485
   },
   {
@@ -6037,7 +6049,7 @@
    "title": "TechPartners — 싱가포르 공공데이터로 만든 연구협력 파트너 탐색 사이트",
    "id": "1488ff8944c8de22",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1787488731
   },
@@ -6063,7 +6075,7 @@
    "title": "schift-ko-pii-v6 — 한국어 개인정보 검출·마스킹 경량 모델",
    "id": "dcba0f654467bdc9",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "국산 독자모델",
    "models_used": [
     "schift-ko-pii-v6(자체 학습)"
@@ -6098,8 +6110,8 @@
    "stars_gitlab": 3,
    "stars": 3,
    "link_ok": true,
-   "health_checked": "2026-08-31",
-   "maintenance": "활발",
+   "health_checked": "2026-09-07",
+   "maintenance": "정체",
    "thumb_v": 1787532003
   },
   {
@@ -6128,10 +6140,10 @@
    "license_source": "gitlab",
    "license_checked": "2026-08-24",
    "model_dependency": "없음(비LLM)",
-   "stars_gitlab": 3,
-   "stars": 3,
+   "stars_gitlab": 1,
+   "stars": 1,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1788648318
   },
@@ -6157,7 +6169,7 @@
    "task_category": "데이터·통계",
    "id": "d9d7249fcb949e9a",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1787611123
   },
   {
@@ -6183,8 +6195,11 @@
    "org": "LX 한국국토정보공사(AI 챔피언 해커톤 결선)",
    "id": "0de42ad232a72d2c",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "mirror_url": "https://gitlab.aigov.go.kr/lx/dongdongs",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "maintenance": "활발",
    "thumb_v": 1787613691
   },
   {
@@ -6209,7 +6224,7 @@
    "org": "행정안전부(운영지원 NIA)",
    "id": "1e20470325db3ee6",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1787613695
   },
   {
@@ -6237,11 +6252,11 @@
    "license": "MIT",
    "license_source": "github",
    "license_checked": "2026-08-25",
-   "stars_github": 1774,
-   "stars": 1774,
+   "stars_github": 1789,
+   "stars": 1789,
    "maintenance": "활발",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
    "thumb_v": 1787619612
   },
@@ -6271,10 +6286,10 @@
    "license_source": "github",
    "license_checked": "2026-08-25",
    "model_dependency": "없음(비LLM)",
-   "stars_github": 0,
-   "stars": 0,
+   "stars_github": 1,
+   "stars": 1,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1787619615
   },
@@ -6300,7 +6315,7 @@
    "transition_stage": "개인 사용",
    "id": "4559d150e4eddb0a",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1787619618
   },
   {
@@ -6330,10 +6345,10 @@
    "models_used": [
     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
    ],
-   "stars_github": 228,
-   "stars": 228,
+   "stars_github": 240,
+   "stars": 240,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1787668443
   },
@@ -6361,7 +6376,7 @@
    "transition_stage": "개인 사용",
    "id": "4ccc2c692aed50aa",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1787753547
   },
   {
@@ -6387,7 +6402,7 @@
    "title": "IP-AX 글로벌 뉴스 아카이브 — 해외 IP·AI 뉴스 자동 수집·분기 AI 리포트",
    "id": "cd965d88ba23849c",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1787753550
   },
   {
@@ -6413,7 +6428,7 @@
    "title": "IP-AX Law Monitor — 입법 동향을 감시하고 검토의견 초안까지 쓰는 법령 에이전트",
    "id": "cc9ad59a95da1241",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1787753552
   },
   {
@@ -6439,7 +6454,7 @@
    "title": "지식재산처 지원사업 한눈에 — 분야별 조망과 AI 매칭 상담",
    "id": "36b1148d2ee2caea",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1787753555
   },
   {
@@ -6464,7 +6479,7 @@
    "id": "4f5ffee21b8bc19c",
    "model_dependency": "없음(비LLM)",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1787812434
   },
   {
@@ -6490,7 +6505,7 @@
    "runtime_env": "브라우저만",
    "id": "32eccfe07448d060",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1788077410
   },
   {
@@ -6515,7 +6530,7 @@
    "runtime_env": "브라우저만",
    "id": "a6cf409b9ccc336c",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1787812443
   },
   {
@@ -6540,7 +6555,7 @@
    ],
    "id": "9e0778df3c0ad630",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1787845098
   },
   {
@@ -6565,7 +6580,7 @@
    "task_category": "민원",
    "id": "11f22180ed7f62b8",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1787898752
   },
   {
@@ -6594,10 +6609,10 @@
    "license_source": "github",
    "license_checked": "2026-08-28",
    "model_dependency": "없음(비LLM)",
-   "stars_github": 6,
-   "stars": 6,
+   "stars_github": 8,
+   "stars": 8,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1787921827
   },
@@ -6631,7 +6646,7 @@
    "stars_github": 1,
    "stars": 1,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1787921830
   },
@@ -6662,10 +6677,10 @@
    "models_used": [
     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
    ],
-   "stars_github": 57337,
-   "stars": 57337,
+   "stars_github": 62743,
+   "stars": 62743,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1787922360
   },
@@ -6696,10 +6711,10 @@
    "models_used": [
     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
    ],
-   "stars_github": 27301,
-   "stars": 27301,
+   "stars_github": 28790,
+   "stars": 28790,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1787922363
   },
@@ -6727,10 +6742,10 @@
    "license_source": "github",
    "license_checked": "2026-08-28",
    "model_dependency": "없음(비LLM)",
-   "stars_github": 10792,
-   "stars": 10792,
+   "stars_github": 10834,
+   "stars": 10834,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1787922366
   },
@@ -6761,10 +6776,10 @@
    "models_used": [
     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)"
    ],
-   "stars_github": 34318,
-   "stars": 34318,
+   "stars_github": 50700,
+   "stars": 50700,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1787923861
   },
@@ -6794,7 +6809,7 @@
    "stars_gitlab": 4,
    "stars": 4,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1787924733
   },
@@ -6828,7 +6843,7 @@
    "stars_gitlab": 4,
    "stars": 4,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1787924736
   },
@@ -6860,7 +6875,7 @@
    "stars_gitlab": 3,
    "stars": 3,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1787924738
   },
@@ -6886,7 +6901,7 @@
    "summary": "늘봄학교 운영 사업의 2026년 본예산·추가경정예산 현황과 2027년 편성을 실시간 클라우드 동시 협업으로 작성하는 대시보드. 세부사업 추가·저장과 Excel(xlsx/xls)·한셀(cell)·인쇄/PDF 내보내기를 지원해 교육행정 예산 편성의 취합·병합 반복을 줄인다. 한셀 내보내기까지 갖춘 점이 교육행정 실무 환경(한컴 오피스)을 정확히 겨냥한다.",
    "id": "2863151971658b11",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1787958307
   },
   {
@@ -6918,12 +6933,13 @@
    "license": "MIT",
    "license_source": "github",
    "license_checked": "2026-08-29",
-   "stars_github": 3,
-   "stars": 3,
+   "stars_github": 5,
+   "stars": 5,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mirror_url": "https://gitlab.aigov.go.kr/kyci/ai-survey-insight",
+   "stars_gitlab": 1,
    "thumb_v": 1787960106
   },
   {
@@ -6951,12 +6967,13 @@
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-08-29",
-   "stars_github": 3,
-   "stars": 3,
+   "stars_github": 4,
+   "stars": 4,
    "link_ok": true,
-   "health_checked": "2026-08-31",
-   "maintenance": "활발",
+   "health_checked": "2026-09-07",
+   "maintenance": "정체",
    "mirror_url": "https://gitlab.aigov.go.kr/kyci/attendance-checker",
+   "stars_gitlab": 1,
    "thumb_v": 1787960185
   },
   {
@@ -6991,7 +7008,7 @@
    "stars_github": 42,
    "stars": 42,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1788008113
   },
@@ -7000,7 +7017,7 @@
    "title": "Capptivo — 오픈소스 화면 녹화·자동 줌 도구(온디바이스 자막)",
    "model_dependency": "없음(비LLM)",
    "collected_at": "2026-08-29",
-   "stars_github": 872,
+   "stars_github": 924,
    "org_type": "해외(참고)",
    "case_class": "참고",
    "date": "2026-08-29",
@@ -7017,9 +7034,9 @@
    "license": "MIT",
    "license_source": "github",
    "license_checked": "2026-08-29",
-   "stars": 872,
+   "stars": 924,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1788006530
   },
@@ -7042,7 +7059,7 @@
    "id": "d74a4f0d2a187720",
    "model_dependency": "미상",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1788006533
   },
   {
@@ -7070,12 +7087,13 @@
    "license": "MIT",
    "license_source": "github",
    "license_checked": "2026-08-30",
-   "stars_github": 7,
-   "stars": 7,
+   "stars_github": 9,
+   "stars": 9,
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "maintenance": "활발",
    "mirror_url": "https://gitlab.aigov.go.kr/kyci/hrmcp",
+   "stars_gitlab": 1,
    "thumb_v": 1788033537
   },
   {
@@ -7100,7 +7118,7 @@
    "case_class": "커뮤니티",
    "id": "29a4620d8090789b",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1788033540
   },
   {
@@ -7152,7 +7170,7 @@
    "date": "2026-08-30",
    "id": "4ef5fe3f290f3df3",
    "link_ok": true,
-   "health_checked": "2026-08-31",
+   "health_checked": "2026-09-07",
    "thumb_v": 1788075169
   },
   {
@@ -7179,6 +7197,11 @@
    "license": "POLYFORM-NONCOMMERCIAL-1.0.0",
    "license_source": "gitlab",
    "license_checked": "2026-08-31",
+   "stars_gitlab": 3,
+   "stars": 3,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788129496
   },
   {
@@ -7208,6 +7231,11 @@
    "license": "MIT",
    "license_source": "github",
    "license_checked": "2026-09-01",
+   "stars_github": 159,
+   "stars": 159,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788245352
   },
   {
@@ -7233,6 +7261,11 @@
    "license": "MIT",
    "license_source": "github",
    "license_checked": "2026-09-01",
+   "stars_github": 3172,
+   "stars": 3172,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274196
   },
   {
@@ -7256,6 +7289,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 3,
+   "stars": 3,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274868
   },
   {
@@ -7280,6 +7318,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 3,
+   "stars": 3,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274871
   },
   {
@@ -7303,6 +7346,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 3,
+   "stars": 3,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274874
   },
   {
@@ -7327,6 +7375,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274876
   },
   {
@@ -7354,6 +7407,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274879
   },
   {
@@ -7377,6 +7435,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274881
   },
   {
@@ -7401,6 +7464,11 @@
    "license": "GPL-3.0+",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274884
   },
   {
@@ -7424,6 +7492,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274886
   },
   {
@@ -7447,6 +7520,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274889
   },
   {
@@ -7471,6 +7549,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274891
   },
   {
@@ -7494,6 +7577,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274894
   },
   {
@@ -7518,6 +7606,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 3,
+   "stars": 3,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274896
   },
   {
@@ -7542,6 +7635,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274899
   },
   {
@@ -7567,6 +7665,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274901
   },
   {
@@ -7590,6 +7693,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274904
   },
   {
@@ -7615,6 +7723,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274906
   },
   {
@@ -7639,6 +7752,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274909
   },
   {
@@ -7663,6 +7781,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274911
   },
   {
@@ -7687,6 +7810,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274914
   },
   {
@@ -7711,6 +7839,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274917
   },
   {
@@ -7735,6 +7868,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274919
   },
   {
@@ -7758,6 +7896,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274922
   },
   {
@@ -7782,6 +7925,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274924
   },
   {
@@ -7806,6 +7954,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274927
   },
   {
@@ -7830,6 +7983,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274929
   },
   {
@@ -7854,6 +8012,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274932
   },
   {
@@ -7877,6 +8040,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274934
   },
   {
@@ -7901,6 +8069,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274937
   },
   {
@@ -7924,6 +8097,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274939
   },
   {
@@ -7948,6 +8126,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274942
   },
   {
@@ -7971,6 +8154,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788274944
   },
   {
@@ -7994,6 +8182,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-02",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "정체",
    "thumb_v": 1788274947
   },
   {
@@ -8022,6 +8215,11 @@
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-09-02",
+   "stars_github": 6,
+   "stars": 6,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788331186
   },
   {
@@ -8045,6 +8243,8 @@
    "org": "공직 커뮤니티",
    "source": "threads",
    "id": "c39ae1dfd84a207a",
+   "link_ok": true,
+   "health_checked": "2026-09-07",
    "thumb_v": 1788418242
   },
   {
@@ -8066,6 +8266,8 @@
    "task_category": "공통·범용",
    "org": "공직 현장(개인 개발)",
    "id": "fd81aa1b889ada2e",
+   "link_ok": true,
+   "health_checked": "2026-09-07",
    "thumb_v": 1788531440
   },
   {
@@ -8087,6 +8289,8 @@
    "task_category": "공통·범용",
    "org": "공직 커뮤니티",
    "id": "b6b0a466c74ec485",
+   "link_ok": true,
+   "health_checked": "2026-09-07",
    "thumb_v": 1788531443
   },
   {
@@ -8109,6 +8313,8 @@
    "region": "경기",
    "org": "공직 현장(개인 개발)",
    "id": "636db1bb955d73ae",
+   "link_ok": true,
+   "health_checked": "2026-09-07",
    "thumb_v": 1788531450
   },
   {
@@ -8131,6 +8337,8 @@
    "task_category": "공통·범용",
    "org": "공직 현장(개인 개발)",
    "id": "73bb12bf461ceb4c",
+   "link_ok": true,
+   "health_checked": "2026-09-07",
    "thumb_v": 1788531453
   },
   {
@@ -8152,6 +8360,8 @@
    "task_category": "데이터·통계",
    "org": "공직 현장(개인 개발)",
    "id": "9ba78e3c1e469185",
+   "link_ok": true,
+   "health_checked": "2026-09-07",
    "thumb_v": 1788531455
   },
   {
@@ -8175,6 +8385,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-04",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788531458
   },
   {
@@ -8198,6 +8413,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-04",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788531461
   },
   {
@@ -8222,6 +8442,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-04",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788531464
   },
   {
@@ -8246,6 +8471,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-04",
+   "stars_gitlab": 2,
+   "stars": 2,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788531466
   },
   {
@@ -8269,6 +8499,8 @@
    "case_class": "개인 개발",
    "runtime_env": "브라우저만",
    "id": "ef389de4efadc258",
+   "link_ok": true,
+   "health_checked": "2026-09-07",
    "thumb_v": 1788589919
   },
   {
@@ -8293,6 +8525,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648323
   },
   {
@@ -8316,6 +8553,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648326
   },
   {
@@ -8340,6 +8582,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648328
   },
   {
@@ -8363,6 +8610,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648331
   },
   {
@@ -8387,6 +8639,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648333
   },
   {
@@ -8413,6 +8670,11 @@
    "license": "Apache-2.0",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648336
   },
   {
@@ -8437,6 +8699,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648338
   },
   {
@@ -8461,6 +8728,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648341
   },
   {
@@ -8484,6 +8756,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648344
   },
   {
@@ -8508,6 +8785,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648346
   },
   {
@@ -8532,6 +8814,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648349
   },
   {
@@ -8556,6 +8843,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648351
   },
   {
@@ -8580,6 +8872,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648354
   },
   {
@@ -8605,6 +8902,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648356
   },
   {
@@ -8629,6 +8931,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648359
   },
   {
@@ -8654,6 +8961,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648361
   },
   {
@@ -8677,6 +8989,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648364
   },
   {
@@ -8700,6 +9017,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648366
   },
   {
@@ -8724,6 +9046,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648369
   },
   {
@@ -8747,6 +9074,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648371
   },
   {
@@ -8771,6 +9103,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648374
   },
   {
@@ -8795,6 +9132,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648376
   },
   {
@@ -8818,6 +9160,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648379
   },
   {
@@ -8842,6 +9189,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648381
   },
   {
@@ -8865,6 +9217,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648384
   },
   {
@@ -8886,6 +9243,8 @@
    "source": "kakao",
    "collected_at": "2026-09-06",
    "id": "01d9a1954eb55f32",
+   "link_ok": true,
+   "health_checked": "2026-09-07",
    "thumb_v": 1788648386
   },
   {
@@ -8910,6 +9269,11 @@
    "license": "GNU AGPLv3",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648389
   },
   {
@@ -8934,6 +9298,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648391
   },
   {
@@ -8958,6 +9327,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648394
   },
   {
@@ -8982,6 +9356,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648396
   },
   {
@@ -9007,6 +9386,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648399
   },
   {
@@ -9033,6 +9417,12 @@
    "license_checked": "2026-09-06",
    "case_url": "https://emdeo.github.io/hellolighthouse/",
    "mirror_url": "https://github.com/emdeo/hellolighthouse",
+   "stars_github": 0,
+   "stars_gitlab": 1,
+   "stars": 0,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788649350
   },
   {
@@ -9057,6 +9447,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648404
   },
   {
@@ -9081,6 +9476,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648406
   },
   {
@@ -9105,6 +9505,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648409
   },
   {
@@ -9129,6 +9534,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648411
   },
   {
@@ -9154,6 +9564,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648427
   },
   {
@@ -9177,6 +9592,11 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648430
   },
   {
@@ -9200,6 +9620,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648432
   },
   {
@@ -9224,6 +9649,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648435
   },
   {
@@ -9248,6 +9678,11 @@
    "license": "기타(비표준)",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648437
   },
   {
@@ -9272,6 +9707,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648440
   },
   {
@@ -9295,6 +9735,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648442
   },
   {
@@ -9321,6 +9766,11 @@
    "license": "기타(비표준)",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 1,
+   "stars": 1,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788648445
   },
   {
@@ -9346,6 +9796,11 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
+   "stars_gitlab": 0,
+   "stars": 0,
+   "link_ok": true,
+   "health_checked": "2026-09-07",
+   "maintenance": "활발",
    "thumb_v": 1788676338
   }
  ]
