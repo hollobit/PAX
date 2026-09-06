@@ -2138,6 +2138,14 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "런타임 API 호출은 httpx params dict 전달(src/fire_safety_mcp/client.py:245-262) — 문자열 URL 조합 없음. subprocess는 dev/E2E 스크립트의 고정 인자 npm run test:e2e(scripts/run_e2e_via_ssh.py:70)로 런타임 경로 아님"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "호출 대상 www.bigdata-119.kr 공식 소방안전 빅데이터 API·localhost·example 더미뿐 — 외부 상용 전송 없음"
     }
    },
    "dynamic": null,
@@ -2164,6 +2172,14 @@
     "hygiene": {
      "verdict": "주의",
      "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "해당 없음",
+     "note": "자체 도구 코드 없음 — 오픈소스 onozaty/redmine-mcp-server의 기관 내 배포·연결 가이드 저장소(README+PowerShell 설치 스크립트)"
+    },
+    "data_flow": {
+     "verdict": "해당 없음",
+     "note": "가이드 문서 저장소 — 런타임 데이터 흐름은 안내 대상 오픈소스 서버 측 사안"
     }
    },
    "dynamic": null,
