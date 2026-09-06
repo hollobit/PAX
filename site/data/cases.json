@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-06T07:43:57+09:00",
+ "updated_at": "2026-09-06T15:32:05+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -9322,6 +9322,31 @@
    "license_source": "gitlab",
    "license_checked": "2026-09-06",
    "thumb_v": 1788648445
+  },
+  {
+   "case_class": "개인 개발",
+   "collected_at": "2026-09-06",
+   "summary": "보도자료 PDF·HWPX 한 건을 올리면 AI가 핵심 문구 추출과 기획안 작성을 거쳐 정부 디자인 가이드를 준수한 카드뉴스(한국어·영어)를 만들고 SNS 캡션 작성과 인스타그램 발행까지 15분 안에 끝내는 웹서비스. 재정경제부 담당관실 실무자 3인 팀이 개발해 공공 깃랩에 공개했으며, 커뮤니티의 카드뉴스 제작 고민에 대한 답으로 공유됐다.",
+   "model_dependency": "미상",
+   "date": "2026-09-06",
+   "source": "kakao",
+   "title": "릴리즈픽(ReleasePick) — 보도자료를 15분 만에 카드뉴스·인포그래픽으로 만드는 정책홍보 자동제작 시스템",
+   "tags": [
+    "카드뉴스",
+    "정책홍보",
+    "보도자료",
+    "자동제작"
+   ],
+   "task_category": "기획·정책",
+   "runtime_env": "브라우저만",
+   "org": "재정경제부",
+   "link": "https://gitlab.aigov.go.kr/chaeun74/Releasepick",
+   "org_type": "중앙행정기관",
+   "id": "a6834b493c566013",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-06",
+   "thumb_v": 1788676338
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
- "total": 154,
+ "total": 155,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -636,6 +636,26 @@
    "stats": {
     "case_count": 2,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:chaeun74",
+   "name": "chaeun74",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "chaeun74",
+     "url": "https://gitlab.aigov.go.kr/chaeun74"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "a6834b493c566013"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },

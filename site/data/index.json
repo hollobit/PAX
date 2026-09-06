@@ -2,8 +2,8 @@
  "generated_at": "2026-09-06",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 332,
- "total_champions": 154,
+ "total_cases": 333,
+ "total_champions": 155,
  "community": {
   "members": 1572,
   "kakao_week": 4136,
@@ -14,14 +14,14 @@
  "unattributed_cases": 72,
  "ax_distribution": {
   "AI-Ready": 229,
-  "AI-Enabled": 92,
+  "AI-Enabled": 93,
   "AX 단계 외": 10,
   "AI-First": 1
  },
  "c_axis_mean": 0.79,
  "p_distribution": {
   "P0": 116,
-  "P1": 207,
+  "P1": 208,
   "P2": 9
  },
  "model_dependency": {
@@ -32,7 +32,7 @@
   "해외 상용 API": 44,
   "모델 중립(BYO)": 58,
   "국산 독자모델": 3,
-  "미상": 2,
+  "미상": 3,
   "국산 오픈웨이트": 1
  },
  "model_stats": {
@@ -624,7 +624,7 @@
     "specified": 3
    },
    "미상": {
-    "n": 2,
+    "n": 3,
     "specified": 0
    },
    "국산 오픈웨이트": {
@@ -1232,15 +1232,15 @@
  "domestic_model_rate": 0.056,
  "local_model_rate": 0.236,
  "model_known": 72,
- "license_tagged": 240,
- "license_stated_rate": 0.517,
- "gitlab_cases": 141,
- "gitlab_mirror_pairs": 22,
- "gitlab_open_rate": 0.156,
+ "license_tagged": 241,
+ "license_stated_rate": 0.515,
+ "gitlab_cases": 142,
+ "gitlab_mirror_pairs": 23,
+ "gitlab_open_rate": 0.162,
  "mcp_cases": 77,
  "transition_funnel": {
   "기관 공식": 33,
-  "미확인": 256,
+  "미확인": 257,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1248,7 +1248,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.63
+  "feedback": 0.631
  },
  "maintenance_distribution": {
   "활발": 117,
@@ -1258,7 +1258,7 @@
  "stars_collected": 143,
  "repo_stats": {
   "gitlab": {
-   "count": 141,
+   "count": 142,
    "starred": 43,
    "stars_sum": 194,
    "maintenance": {
@@ -1349,7 +1349,7 @@
    ]
   },
   "github": {
-   "count": 113,
+   "count": 114,
    "starred": 108,
    "stars_sum": 149236,
    "maintenance": {
@@ -1442,7 +1442,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 116,
+  "명시 없음": 117,
   "MIT": 86,
   "Other": 15,
   "Apache-2.0": 11,
@@ -1456,7 +1456,7 @@
  "license_matrix": {
   "명시 없음": {
    "github": 38,
-   "gitlab": 78
+   "gitlab": 79
   },
   "MIT": {
    "github": 61,
@@ -1505,7 +1505,7 @@
    "stated": 4
   },
   "gitlab": {
-   "total": 115,
+   "total": 116,
    "stated": 37
   }
  },
@@ -1663,6 +1663,12 @@
    "title": "HRMCP — NCS 온톨로지 기반 HR 실무 MCP 서버",
    "github": "https://github.com/koul777/HRMCP",
    "gitlab": "https://gitlab.aigov.go.kr/kyci/hrmcp"
+  },
+  {
+   "id": "2dabf0fbae5c557b",
+   "title": "헬로라이트하우스 — 등대 1,480개를 잇는 원스톱 해양관광 서비스",
+   "github": "https://github.com/emdeo/hellolighthouse",
+   "gitlab": "https://gitlab.aigov.go.kr/scout202/hellolighthouse"
   }
  ]
 }
