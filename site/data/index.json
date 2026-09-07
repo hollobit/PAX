@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-09-07",
+ "generated_at": "2026-09-08",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
  "total_cases": 334,
- "total_champions": 156,
+ "total_champions": 157,
  "community": {
-  "members": 1623,
-  "kakao_week": 4219,
-  "kakao_total_observed": 23098,
-  "threads_observed": 222
+  "members": 1636,
+  "kakao_week": 6714,
+  "kakao_total_observed": 25593,
+  "threads_observed": 224
  },
  "certified_champions": 5,
  "unattributed_cases": 72,
@@ -27,9 +27,9 @@
  "model_dependency": {
   "미확인": 66,
   "없음(비LLM)": 135,
-  "해외 오픈웨이트(로컬)": 17,
+  "해외 오픈웨이트(로컬)": 18,
   "혼합": 7,
-  "해외 상용 API": 44,
+  "해외 상용 API": 43,
   "모델 중립(BYO)": 58,
   "국산 독자모델": 3,
   "미상": 3,
@@ -604,7 +604,7 @@
     "specified": 0
    },
    "해외 오픈웨이트(로컬)": {
-    "n": 17,
+    "n": 18,
     "specified": 10
    },
    "혼합": {
@@ -612,7 +612,7 @@
     "specified": 7
    },
    "해외 상용 API": {
-    "n": 44,
+    "n": 43,
     "specified": 35
    },
    "모델 중립(BYO)": {
@@ -893,7 +893,7 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 44,
+    "n": 43,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
@@ -1131,7 +1131,7 @@
    },
    {
     "dep": "해외 오픈웨이트(로컬)",
-    "n": 17,
+    "n": 18,
     "families": [
      {
       "name": "로컬 서빙(Ollama·vLLM 등)",
@@ -1230,13 +1230,13 @@
   ]
  },
  "domestic_model_rate": 0.056,
- "local_model_rate": 0.236,
+ "local_model_rate": 0.25,
  "model_known": 72,
  "license_tagged": 241,
  "license_stated_rate": 0.515,
  "gitlab_cases": 142,
- "gitlab_mirror_pairs": 23,
- "gitlab_open_rate": 0.162,
+ "gitlab_mirror_pairs": 24,
+ "gitlab_open_rate": 0.169,
  "mcp_cases": 77,
  "transition_funnel": {
   "기관 공식": 33,
@@ -1349,11 +1349,11 @@
    ]
   },
   "github": {
-   "count": 115,
+   "count": 116,
    "starred": 112,
    "stars_sum": 176133,
    "maintenance": {
-    "활발": 84,
+    "활발": 85,
     "정체": 15,
     "방치": 13
    },
@@ -1663,6 +1663,12 @@
    "title": "HRMCP — NCS 온톨로지 기반 HR 실무 MCP 서버",
    "github": "https://github.com/koul777/HRMCP",
    "gitlab": "https://gitlab.aigov.go.kr/kyci/hrmcp"
+  },
+  {
+   "id": "01963ce2b093182c",
+   "title": "ReportAI — 내부망 로컬 LLM으로 보고서 초안·보충자료·월간계획을 잇는 온프레미스 에이전트",
+   "github": "https://github.com/DaeUng79/ReportAI",
+   "gitlab": "https://gitlab.aigov.go.kr/odw0902/reportai"
   },
   {
    "id": "2dabf0fbae5c557b",

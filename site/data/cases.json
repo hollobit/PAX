@@ -8374,14 +8374,14 @@
     "문서자동화",
     "AI"
    ],
-   "title": "ReportAI — 막연한 보고서 지시를 구조화해 초안을 잡아 주는 도구",
+   "title": "ReportAI — 내부망 로컬 LLM으로 보고서 초안·보충자료·월간계획을 잇는 온프레미스 에이전트",
    "case_class": "개인 개발",
    "source": "kakao",
-   "summary": "내년도 업무 보고서를 알아서 짜 오라는 막연한 지시 앞에서 흰 화면만 보며 썼다 지웠다 반복하는 상황을 겨냥한 보고서 작성 AI 도구. 공공 깃랩에 공개돼 스타 2를 받았다.",
-   "org_type": "공직 개인",
-   "model_dependency": "해외 상용 API",
+   "summary": "\"내년도 업무 보고서 알아서 짜와\"라는 막연한 지시 앞의 실무자를 위해, 목적·현황·추진방향을 단계적으로 정리하도록 돕는 지방정부용 온프레미스 AX 서비스. 보고서 초안·재작성·검토·보충자료·월간업무계획을 하나의 흐름으로 연결하고, 내부망 로컬 LLM에 연결해 내부정보와 기관 작성 스타일을 외부 AI로 내보내지 않는다. 저사양 온프레미스를 표방하며 업무 간소화와 직무 리스킬링을 함께 목표로 내걸었다.",
+   "org_type": "기초지자체",
+   "model_dependency": "해외 오픈웨이트(로컬)",
    "task_category": "문서·기안",
-   "org": "공직 현장(개인 개발)",
+   "org": "경남 양산시",
    "id": "01963ce2b093182c",
    "license": "MIT",
    "license_source": "gitlab",
@@ -8391,7 +8391,12 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788531458
+   "case_url": "https://daeung79.github.io/ReportAI/",
+   "mirror_url": "https://github.com/DaeUng79/ReportAI",
+   "region": "경남",
+   "runtime_env": "서버 구축",
+   "network_req": "폐쇄망 가능",
+   "thumb_v": 1788820314
   },
   {
    "date": "2026-09-04",
