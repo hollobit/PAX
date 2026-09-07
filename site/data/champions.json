@@ -1,5 +1,5 @@
 {
- "total": 156,
+ "total": 157,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -721,6 +721,26 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:daeung79",
+   "name": "daeung79",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "daeung79",
+     "url": "https://github.com/daeung79"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "01963ce2b093182c"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },
