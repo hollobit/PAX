@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-06T15:32:05+09:00",
+ "updated_at": "2026-09-07T15:32:19+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -8350,10 +8350,10 @@
     "데이터분석",
     "행정연구"
    ],
-   "title": "조직관리와 혁신 영향 분석 — 한국행정연구원 데이터로 민간·공공, 중앙·지자체 비교",
+   "title": "AX 조직관리 레이더 — 공공·민간 조직관리와 혁신행동을 데이터로 비교",
    "case_class": "개인 개발",
    "source": "kakao",
-   "summary": "한국행정연구원 조사 데이터를 돌려 민간-공공, 중앙정부-지자체의 조직관리 특성이 혁신에 미치는 영향을 비교한 분석 시각화. AX 확산 논의가 조직문화 문제로 수렴하던 커뮤니티 대화 속에서 실무자가 하룻저녁에 만들어 공유한 데이터 기반 참고 자료다.",
+   "summary": "한국행정연구원·공직생활실태조사·사업체패널·KLIPS·KISDI 등 다수 조사 데이터를 묶어 공공과 민간, 중앙과 지방의 조직관리와 혁신행동을 비교하는 대시보드. 인사·데이터·AI 활용, 시민의 AI 이용 경험까지 층위별로 배치해 AX가 조직문화 문제라는 커뮤니티 논의에 실증 근거를 대려는 시도다. 하룻저녁 분석에서 출발해 상시 대시보드로 확장됐다.",
    "runtime_env": "브라우저만",
    "org_type": "공직 개인",
    "model_dependency": "없음(비LLM)",
@@ -8362,7 +8362,8 @@
    "id": "9ba78e3c1e469185",
    "link_ok": true,
    "health_checked": "2026-09-07",
-   "thumb_v": 1788531455
+   "case_url": "https://public-private-innovation-dashboard.vercel.app/",
+   "thumb_v": 1788762751
   },
   {
    "date": "2026-09-04",
@@ -9802,6 +9803,30 @@
    "health_checked": "2026-09-07",
    "maintenance": "활발",
    "thumb_v": 1788676338
+  },
+  {
+   "runtime_env": "브라우저만",
+   "date": "2026-09-06",
+   "link": "https://www.threads.com/@yh0717/post/Dc8JyutnaCy",
+   "org_type": "공직 개인",
+   "mirror_url": "https://github.com/dyd5862-lang/grasshopper-privacy-risk-check",
+   "source": "threads",
+   "collected_at": "2026-09-07",
+   "task_category": "감사·법무",
+   "tags": [
+    "개인정보",
+    "자가점검",
+    "위험도분석",
+    "법령"
+   ],
+   "title": "개인정보 위험도 자가점검 도구 — 법령·안내서·처분사례를 묶어 보호조치 수준을 스스로 진단",
+   "model_dependency": "없음(비LLM)",
+   "org": "공직 현장(개인 개발)",
+   "case_url": "https://grasshopper-privacy-risk-check.vercel.app/",
+   "case_class": "개인 개발",
+   "summary": "개인정보 보호 실무자가 기관의 보호조치 수준을 스스로 점검하도록 만든 웹 도구. 업무에서 반복 확인하는 법령과 안내서, 점검항목, 처분사례를 한곳에 묶어 위험도를 진단한다. 전문 개발자가 아닌 실무자가 현장 요구를 반영해 AI로 기능을 하나씩 구현했으며, 개인 제작 비공식 도구로 공식 해석·처분에는 쓸 수 없다는 한계를 스스로 명시했다.",
+   "id": "9998aba2d1f55c24",
+   "thumb_v": 1788762754
   }
  ]
 }

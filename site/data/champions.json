@@ -1,5 +1,5 @@
 {
- "total": 155,
+ "total": 156,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -1571,6 +1571,26 @@
    "affiliation": null,
    "cases": [
     "ca5651ea46caa07f"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "threads:yh0717",
+   "name": "yh0717",
+   "accounts": [
+    {
+     "platform": "threads",
+     "id": "yh0717",
+     "url": "https://www.threads.com/@yh0717"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "9998aba2d1f55c24"
    ],
    "stats": {
     "case_count": 1,
@@ -4084,9 +4104,9 @@
   },
   {
    "id": "9ba78e3c1e469185",
-   "title": "조직관리와 혁신 영향 분석 — 한국행정연구원 데이터로 민간·공공, 중앙·지자체 비교",
+   "title": "AX 조직관리 레이더 — 공공·민간 조직관리와 혁신행동을 데이터로 비교",
    "org": "공직 현장(개인 개발)",
-   "url": "https://pp-ten-plum.vercel.app/"
+   "url": "https://public-private-innovation-dashboard.vercel.app/"
   },
   {
    "id": "ef389de4efadc258",
