@@ -2869,13 +2869,18 @@
    }
   },
   {
-   "id": "gitlab:odw0902",
+   "id": "odw0902",
    "name": "오대웅",
    "accounts": [
     {
      "platform": "gitlab",
      "id": "odw0902",
      "url": "https://gitlab.aigov.go.kr/odw0902"
+    },
+    {
+     "platform": "github",
+     "id": "DaeUng79",
+     "url": "https://github.com/DaeUng79"
     }
    ],
    "affiliation": {
