@@ -57,6 +57,48 @@ async function main() {
   ]);
   const idx = await idxRes.json();
 
+  // ── 종합 계기판 (2026-09-09) — 각 절 핵심 지표를 상단에 모아 표시 ──
+  (async function renderDashboard() {
+    const grid = document.getElementById('dash-grid');
+    if (!grid) return;
+    let members = null;
+    try {
+      const r = await fetch('./data/community.json', { cache: 'no-cache' });
+      members = (await r.json()).members;
+    } catch (e) { /* 커뮤니티 데이터 없으면 해당 칸만 비운다 */ }
+    const repo = idx.repo_stats || {};
+    const gh = repo.github || {}; const gl = repo.gitlab || {};
+    const byS = idx.license_by_source || {};
+    const glLic = byS.gitlab || { total: 0, stated: 0 };
+    const glNone = glLic.total ? (glLic.total - glLic.stated) / glLic.total : null;
+    const mcpRate = idx.total_cases ? idx.mcp_cases / idx.total_cases : null;
+    const num = (v) => (v == null ? '—' : v.toLocaleString('ko-KR'));
+    const rate = (v) => (v == null ? '—' : `${(v * 100).toFixed(1)}%`);
+    const ITEMS = [
+      { v: num(idx.total_cases), u: '건', l: '관측 사례', s: '아카이브 총계', href: null, tone: 'key' },
+      { v: num(idx.mcp_cases), u: '건', l: 'MCP 사례', s: `전체의 ${rate(mcpRate)}`, href: '#mcp' },
+      { v: num(idx.total_champions), u: '명', l: '챔피언', s: '프로젝트 식별 인원', href: 'champions.html' },
+      { v: members ? num(members.latest) : '—', u: '명', l: '오픈톡 가입자', s: members ? `${members.latest_date} 기준` : '—', href: '#community' },
+      { v: rate(idx.domestic_model_rate), u: '', l: '국산 모델 채택률', s: `LLM 런타임 ${idx.model_known || 0}건 기준`, href: '#models', tone: 'watch' },
+      { v: rate(idx.local_model_rate), u: '', l: '로컬 오픈웨이트 실행률', s: '데이터 미유출 실행', href: '#models' },
+      { v: num(gh.count), u: '개', l: 'GitHub 저장소', s: `스타 합계 ${num(gh.stars_sum)}`, href: '#repos' },
+      { v: num(gl.count), u: '개', l: '공공 깃랩 저장소', s: `스타 합계 ${num(gl.stars_sum)}`, href: '#repos' },
+      { v: rate(glNone), u: '', l: '깃랩 라이선스 미표시', s: `${glLic.total}건 중 ${glLic.total - glLic.stated}건`, href: '#licenses', tone: 'watch' },
+    ];
+    ITEMS.forEach((it) => {
+      const box = el(it.href ? 'a' : 'div', 'dash-card' + (it.tone ? ` dash-card--${it.tone}` : ''));
+      if (it.href) { box.href = it.href; }
+      const v = el('p', 'dash-card__value', it.v);
+      if (it.u) { const u = el('span', 'dash-card__unit', it.u); v.appendChild(u); }
+      box.appendChild(v);
+      box.appendChild(el('p', 'dash-card__label', it.l));
+      box.appendChild(el('p', 'dash-card__sub', it.s));
+      grid.appendChild(box);
+    });
+    const asof = document.getElementById('dash-asof');
+    if (asof && idx.generated_at) asof.textContent = `${idx.generated_at} 기준`;
+  }());
+
   // ── 모델 현황 — 의존 분포·구체 모델·국산 채택 (2026-08-29) ──
   (function renderModelStatus() {
     const dist = idx.model_dependency || {};
