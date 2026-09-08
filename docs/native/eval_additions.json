@@ -7390,5 +7390,33 @@
   "resilience": "미확인(2026-09-06 공개)",
   "post_url": "https://www.threads.com/@yh0717/post/Dc8JyutnaCy",
   "service_url": "https://grasshopper-privacy-risk-check.vercel.app/"
+ },
+ {
+  "no": 336,
+  "id": "2ebfec74844ad120",
+  "org": "개발 커뮤니티",
+  "title": "rhwp — 한컴 없이 브라우저에서 HWP를 열고 고치는 크롬 확장",
+  "ax_prev": "AX 단계 외",
+  "ax": "AX 단계 외",
+  "s": "S1",
+  "s_name": "Primitive tool",
+  "c": "C0",
+  "c_name": "기능 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Published tool",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R0 최소",
+  "human": "해당 없음",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "AI를 쓰지 않는 문서 접근성 도구(S1·C0)라 AX 단계 외로 두되, HWP를 브라우저에서 열고 고치게 해 공공문서를 받는 시민·학부모와 비윈도우 사용자의 장벽을 없앤다는 점에서 공공 문서 생태계의 기반 도구다. 웹스토어 실측(평점 4.9·332평가, E2), MIT 무료 배포.",
+  "feedback": "미확인",
+  "resilience": "미확인(웹스토어 게시 중)",
+  "post_url": "https://www.threads.com/@do.aiworks/post/DXMxS_mD6tq",
+  "service_url": "https://chromewebstore.google.com/detail/pgakpjflombjmehnebnbpnalhegaanag"
  }
 ]

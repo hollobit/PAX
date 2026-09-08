@@ -1,5 +1,5 @@
 {
- "total": 157,
+ "total": 158,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -762,6 +762,26 @@
     "case_count": 1,
     "top_ax": 1,
     "stars": 118
+   }
+  },
+  {
+   "id": "threads:do.aiworks",
+   "name": "do.aiworks",
+   "accounts": [
+    {
+     "platform": "threads",
+     "id": "do.aiworks",
+     "url": "https://www.threads.com/@do.aiworks"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "2ebfec74844ad120"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
+    "stars": 0
    }
   },
   {
