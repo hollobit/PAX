@@ -2129,7 +2129,7 @@ section[id] { scroll-margin-top: 5.5rem; }
 h1:hover .anchor-link, h2:hover .anchor-link, h3:hover .anchor-link, .anchor-link:focus { opacity: 1; }
 .anchor-link:hover { color: #234a72; }
 
-/* 관측소 종합 계기판 (2026-09-09) — 링 게이지·스파크라인·쌍 막대.
+/* 관측소 PAX 현황판 (2026-09-09) — 링 게이지·스파크라인·쌍 막대.
    색: 카테고리 색 없음(지표마다 독립) · 단일 강조색 + 상태색은 라벨과 함께. 전부 토큰이라 다크모드 자동. */
 .obs-section--dash { border-top: 2px solid var(--rule-strong); }
 .dash-grid {
