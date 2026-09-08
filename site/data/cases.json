@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-09T00:06:33+09:00",
+ "updated_at": "2026-09-09T07:33:35+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -1220,7 +1220,7 @@
    "stars_gitlab": 2,
    "stars": 2,
    "maintenance": "활발",
-   "thumb_v": 1788531437
+   "thumb_v": 1788881679
   },
   {
    "link": "https://www.threads.com/@chris_gomdori/post/DbaDIR3DZWE",
@@ -1669,7 +1669,7 @@
    "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/gjdong",
    "stars_gitlab": 2,
    "case_url": "https://gjdong.vercel.app",
-   "thumb_v": 1788879496
+   "thumb_v": 1788881679
   },
   {
    "summary": "선택한 Windows 폴더의 새 저장본을 다른 물리 디스크에 자동 보관해 파일 유실을 막는 로컬 트레이 앱이 공개됐다. 문서 사고가 잦은 공공 업무 환경을 위한 로컬 도구 시리즈의 일곱 번째 결과물이다.",
@@ -4634,7 +4634,7 @@
     "Solar Open 2(온AI 서빙 탑재 — 09-02 실무자 관측)"
    ],
    "mirror_url": "https://gitlab.aigov.go.kr/wavelen/govwork",
-   "thumb_v": 1788274866
+   "thumb_v": 1788881679
   },
   {
    "link": "https://gitlab.aigov.go.kr/y2kthr/koda",
@@ -6146,7 +6146,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648318
+   "thumb_v": 1788881679
   },
   {
    "collected_at": "2026-08-25",
@@ -6507,7 +6507,7 @@
    "id": "32eccfe07448d060",
    "link_ok": true,
    "health_checked": "2026-09-07",
-   "thumb_v": 1788077410
+   "thumb_v": 1788881678
   },
   {
    "org_type": "민간(참고)",
@@ -6978,7 +6978,7 @@
    "thumb_v": 1787960185
   },
   {
-   "case_url": "https://github.com/chrisryugj/schoolinfo-mcp",
+   "case_url": "https://school.gomdori.app/",
    "title": "학교정보 MCP — 학교 이름 하나로 급식·수행평가·학사일정을 모아 보는 도구",
    "org_type": "공직 개인",
    "runtime_env": "브라우저만",
@@ -7011,7 +7011,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788008113
+   "thumb_v": 1788906891
   },
   {
    "org": "SECHAK-AG(오픈소스)",
@@ -7172,7 +7172,7 @@
    "id": "4ef5fe3f290f3df3",
    "link_ok": true,
    "health_checked": "2026-09-07",
-   "thumb_v": 1788075169
+   "thumb_v": 1788881678
   },
   {
    "runtime_env": "설치 필요",
@@ -7203,7 +7203,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788129496
+   "thumb_v": 1788881678
   },
   {
    "summary": "한글 문서를 한컴오피스 설치나 형식 변환 없이 AI가 직접 읽고·만들고·고치는 오픈소스 플러그인. Claude Code와 Codex에 설치해 표의 특정 칸 수정이나 서식 변경 같은 작업을 말로 시키면 되고, 고친 파일이 한컴에서 깨지지 않고 열리는지 매번 검증하는 것이 특징이다. 표 셀 편집·글자 서식·다단·쪽번호까지 지원하며 MIT 라이선스로 공개돼 스타 150을 넘겼다.",
@@ -7237,7 +7237,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788245352
+   "thumb_v": 1788881678
   },
   {
    "date": "2026-08-31",
@@ -7267,7 +7267,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274196
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7295,7 +7295,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274868
+   "thumb_v": 1788881679
   },
   {
    "collected_at": "2026-09-02",
@@ -7324,7 +7324,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274871
+   "thumb_v": 1788881679
   },
   {
    "collected_at": "2026-09-02",
@@ -7352,7 +7352,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274874
+   "thumb_v": 1788881679
   },
   {
    "collected_at": "2026-09-02",
@@ -7381,7 +7381,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274876
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7413,7 +7413,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274879
+   "thumb_v": 1788881679
   },
   {
    "collected_at": "2026-09-02",
@@ -7441,7 +7441,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274881
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7470,7 +7470,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274884
+   "thumb_v": 1788881679
   },
   {
    "collected_at": "2026-09-02",
@@ -7498,7 +7498,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274886
+   "thumb_v": 1788881679
   },
   {
    "collected_at": "2026-09-02",
@@ -7526,7 +7526,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274889
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7555,7 +7555,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274891
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7583,7 +7583,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274894
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7612,7 +7612,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274896
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7641,7 +7641,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274899
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7671,7 +7671,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274901
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7699,7 +7699,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274904
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7729,7 +7729,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274906
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7758,7 +7758,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274909
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7787,7 +7787,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274911
+   "thumb_v": 1788881679
   },
   {
    "collected_at": "2026-09-02",
@@ -7816,7 +7816,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274914
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7845,7 +7845,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274917
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7874,7 +7874,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274919
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7902,7 +7902,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274922
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7931,7 +7931,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274924
+   "thumb_v": 1788881679
   },
   {
    "collected_at": "2026-09-02",
@@ -7960,7 +7960,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274927
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -7989,7 +7989,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274929
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -8018,7 +8018,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274932
+   "thumb_v": 1788881679
   },
   {
    "collected_at": "2026-09-02",
@@ -8046,7 +8046,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274934
+   "thumb_v": 1788881679
   },
   {
    "collected_at": "2026-09-02",
@@ -8075,7 +8075,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274937
+   "thumb_v": 1788881678
   },
   {
    "collected_at": "2026-09-02",
@@ -8103,7 +8103,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274939
+   "thumb_v": 1788881679
   },
   {
    "collected_at": "2026-09-02",
@@ -8132,7 +8132,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274942
+   "thumb_v": 1788881679
   },
   {
    "collected_at": "2026-09-02",
@@ -8160,7 +8160,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788274944
+   "thumb_v": 1788881679
   },
   {
    "collected_at": "2026-09-02",
@@ -8188,7 +8188,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "정체",
-   "thumb_v": 1788274947
+   "thumb_v": 1788881678
   },
   {
    "tags": [
@@ -8221,7 +8221,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788331186
+   "thumb_v": 1788881679
   },
   {
    "model_dependency": "없음(비LLM)",
@@ -8246,7 +8246,7 @@
    "id": "c39ae1dfd84a207a",
    "link_ok": true,
    "health_checked": "2026-09-07",
-   "thumb_v": 1788418242
+   "thumb_v": 1788881679
   },
   {
    "date": "2026-09-03",
@@ -8269,7 +8269,7 @@
    "id": "fd81aa1b889ada2e",
    "link_ok": true,
    "health_checked": "2026-09-07",
-   "thumb_v": 1788531440
+   "thumb_v": 1788881679
   },
   {
    "date": "2026-09-03",
@@ -8292,7 +8292,7 @@
    "id": "b6b0a466c74ec485",
    "link_ok": true,
    "health_checked": "2026-09-07",
-   "thumb_v": 1788531443
+   "thumb_v": 1788881679
   },
   {
    "date": "2026-09-03",
@@ -8316,7 +8316,7 @@
    "id": "636db1bb955d73ae",
    "link_ok": true,
    "health_checked": "2026-09-07",
-   "thumb_v": 1788531450
+   "thumb_v": 1788881678
   },
   {
    "date": "2026-09-03",
@@ -8340,7 +8340,7 @@
    "id": "73bb12bf461ceb4c",
    "link_ok": true,
    "health_checked": "2026-09-07",
-   "thumb_v": 1788531453
+   "thumb_v": 1788881678
   },
   {
    "date": "2026-09-04",
@@ -8364,7 +8364,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "case_url": "https://public-private-innovation-dashboard.vercel.app/",
-   "thumb_v": 1788762751
+   "thumb_v": 1788881678
   },
   {
    "date": "2026-09-04",
@@ -8397,7 +8397,7 @@
    "region": "경남",
    "runtime_env": "서버 구축",
    "network_req": "폐쇄망 가능",
-   "thumb_v": 1788820314
+   "thumb_v": 1788881678
   },
   {
    "date": "2026-09-04",
@@ -8425,7 +8425,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788531461
+   "thumb_v": 1788881678
   },
   {
    "date": "2026-09-04",
@@ -8454,7 +8454,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788531464
+   "thumb_v": 1788881679
   },
   {
    "date": "2026-08-14",
@@ -8483,7 +8483,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788531466
+   "thumb_v": 1788881678
   },
   {
    "network_req": "인터넷 필수",
@@ -8508,7 +8508,7 @@
    "id": "ef389de4efadc258",
    "link_ok": true,
    "health_checked": "2026-09-07",
-   "thumb_v": 1788589919
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -8537,7 +8537,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648323
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -8565,7 +8565,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648326
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -8594,7 +8594,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648328
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -8622,7 +8622,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648331
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -8651,7 +8651,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648333
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -8682,7 +8682,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648336
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -8711,7 +8711,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648338
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -8740,7 +8740,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648341
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -8768,7 +8768,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648344
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -8797,7 +8797,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648346
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -8826,7 +8826,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648349
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -8855,7 +8855,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648351
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -8884,7 +8884,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648354
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -8914,7 +8914,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648356
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -8943,7 +8943,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648359
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -8973,7 +8973,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648361
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -9001,7 +9001,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648364
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9029,7 +9029,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648366
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9058,7 +9058,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648369
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9086,7 +9086,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648371
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9115,7 +9115,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648374
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9144,7 +9144,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648376
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9172,7 +9172,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648379
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9201,7 +9201,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648381
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -9229,7 +9229,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648384
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -9252,7 +9252,7 @@
    "id": "01d9a1954eb55f32",
    "link_ok": true,
    "health_checked": "2026-09-07",
-   "thumb_v": 1788648386
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9281,7 +9281,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648389
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9310,7 +9310,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648391
+   "thumb_v": 1788881679
   },
   {
    "case_class": "기관 공식",
@@ -9339,7 +9339,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648394
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -9368,7 +9368,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648396
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9398,7 +9398,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648399
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9430,7 +9430,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788649350
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9459,7 +9459,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648404
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -9488,7 +9488,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648406
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9517,7 +9517,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648409
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9546,7 +9546,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648411
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9576,7 +9576,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648427
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -9604,7 +9604,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648430
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9632,7 +9632,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648432
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9661,7 +9661,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648435
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9690,7 +9690,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648437
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -9719,7 +9719,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648440
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9747,7 +9747,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648442
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9778,7 +9778,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788648445
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9808,7 +9808,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788676338
+   "thumb_v": 1788881679
   },
   {
    "runtime_env": "브라우저만",
@@ -9832,7 +9832,7 @@
    "case_class": "개인 개발",
    "summary": "개인정보 보호 실무자가 기관의 보호조치 수준을 스스로 점검하도록 만든 웹 도구. 업무에서 반복 확인하는 법령과 안내서, 점검항목, 처분사례를 한곳에 묶어 위험도를 진단한다. 전문 개발자가 아닌 실무자가 현장 요구를 반영해 AI로 기능을 하나씩 구현했으며, 개인 제작 비공식 도구로 공식 해석·처분에는 쓸 수 없다는 한계를 스스로 명시했다.",
    "id": "9998aba2d1f55c24",
-   "thumb_v": 1788762754
+   "thumb_v": 1788881678
   },
   {
    "tags": [
@@ -9856,7 +9856,7 @@
    "task_category": "문서·기안",
    "summary": "한컴오피스 설치 없이 크롬 브라우저에서 HWP 문서를 열람하고 수정하는 확장 프로그램. 공공기관 문서를 받아 보는 시민과 학부모, macOS·리눅스 사용자처럼 한글 파일 앞에서 막히던 사람들을 겨냥했고 MIT 라이선스로 무료 배포된다. 웹스토어 평점 4.9에 330여 개 평가가 쌓여 한글 문서 접근성의 실수요를 보여준다.",
    "id": "2ebfec74844ad120",
-   "thumb_v": 1788878856
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9881,7 +9881,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880045
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9906,7 +9906,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880048
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9930,7 +9930,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880051
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9954,7 +9954,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880053
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -9979,7 +9979,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880055
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10004,7 +10004,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880058
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10029,7 +10029,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880060
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10053,7 +10053,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880063
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10078,7 +10078,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880065
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10101,7 +10101,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880068
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10124,7 +10124,7 @@
    "license": "Apache-2.0",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880070
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -10147,7 +10147,7 @@
    "license": "Apache-2.0",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880073
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10171,7 +10171,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880075
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10195,7 +10195,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880078
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -10219,7 +10219,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880080
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -10244,7 +10244,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880083
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10269,7 +10269,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880085
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10293,7 +10293,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880088
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10316,7 +10316,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880090
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10339,7 +10339,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880092
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10363,7 +10363,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880095
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -10387,7 +10387,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880097
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10411,7 +10411,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880100
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -10434,7 +10434,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880103
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10459,7 +10459,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880105
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10484,7 +10484,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880107
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10509,7 +10509,7 @@
    "license": "CC0-1.0",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880110
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -10532,7 +10532,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880112
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10556,7 +10556,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880115
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10580,7 +10580,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880117
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10604,7 +10604,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880120
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10629,7 +10629,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880122
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10653,7 +10653,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880125
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -10677,7 +10677,7 @@
    "license": "MIT",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880127
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10701,7 +10701,7 @@
    "license": "GNU AGPLv3",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880129
+   "thumb_v": 1788881678
   },
   {
    "case_class": "개인 개발",
@@ -10726,7 +10726,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880132
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -10751,7 +10751,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880134
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -10774,7 +10774,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880137
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -10799,7 +10799,7 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880139
+   "thumb_v": 1788881679
   },
   {
    "case_class": "개인 개발",
@@ -10823,7 +10823,34 @@
    "license": "Apache-2.0",
    "license_source": "gitlab",
    "license_checked": "2026-09-09",
-   "thumb_v": 1788880142
+   "thumb_v": 1788881679
+  },
+  {
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "date": "2026-09-08",
+   "model_dependency": "해외 상용 API",
+   "case_class": "커뮤니티",
+   "source": "kakao",
+   "collected_at": "2026-09-09",
+   "runtime_env": "브라우저만",
+   "task_category": "공통·범용",
+   "link": "https://image-fieldnotes-20260909.vercel.app/",
+   "title": "이미지 비교 실험실 — 이미지 생성 모델 세대 간 20종 대조 공개",
+   "summary": "같은 의도를 두 세대의 이미지 생성 모델에 똑같이 주고 결과가 어떻게 갈리는지 20개 실험으로 대조한 공개 실험실이다. 시네마틱·타이포·투명 배경·고밀도 한국어 문서·반복 편집 등 범주별로 나누고, 실험마다 의도와 판정 근거는 물론 실제 사용한 프롬프트를 함께 공개해 재현할 수 있게 했다. 개인 부담으로 API를 호출해 만든 결과를 무료로 개방했다.",
+   "tags": [
+    "이미지생성",
+    "모델비교",
+    "프롬프트",
+    "실험"
+   ],
+   "models_used": [
+    "GPT Image 2",
+    "GPT Image 2.5 Sunburst"
+   ],
+   "network_req": "인터넷 필수",
+   "id": "8c461c4901e30775",
+   "thumb_v": 1788906894
   }
  ]
 }
