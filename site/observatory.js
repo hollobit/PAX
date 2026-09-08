@@ -57,44 +57,157 @@ async function main() {
   ]);
   const idx = await idxRes.json();
 
-  // ── 종합 계기판 (2026-09-09) — 각 절 핵심 지표를 상단에 모아 표시 ──
+  // ── 종합 계기판 (2026-09-09, 그래픽 개편 09-09) ──
+  // 형태 배정: 비율=링 게이지, 추세 있는 규모=스파크라인, 비교 가능한 규모=쌍 막대.
+  // 색: 카테고리 색 없음(각 지표는 독립) — 단일 강조색 + 상태색(라벨 병기).
+  //     별 합계는 규모 차가 커(17만 vs 330) 같은 축에 올리지 않고 값으로 병기한다.
   (async function renderDashboard() {
     const grid = document.getElementById('dash-grid');
     if (!grid) return;
-    let members = null;
+    const NS = 'http://www.w3.org/2000/svg';
+    const svgEl = (tag, attrs) => {
+      const n = document.createElementNS(NS, tag);
+      Object.entries(attrs || {}).forEach(([k, v]) => n.setAttribute(k, v));
+      return n;
+    };
+    const num = (v) => (v == null ? '—' : Number(v).toLocaleString('ko-KR'));
+    const rate = (v) => (v == null ? '—' : `${(v * 100).toFixed(1)}%`);
+
+    let community = null;
     try {
       const r = await fetch('./data/community.json', { cache: 'no-cache' });
-      members = (await r.json()).members;
-    } catch (e) { /* 커뮤니티 데이터 없으면 해당 칸만 비운다 */ }
+      community = await r.json();
+    } catch (e) { /* 없으면 해당 타일만 값 생략 */ }
+
+    // 타일 골격
+    function tile(label, opts) {
+      const box = document.createElement(opts && opts.href ? 'a' : 'div');
+      box.className = 'dash-tile' + (opts && opts.tone ? ` dash-tile--${opts.tone}` : '');
+      if (opts && opts.href) box.href = opts.href;
+      const head = el('p', 'dash-tile__label', label);
+      box.appendChild(head);
+      return box;
+    }
+    function sub(box, text) { box.appendChild(el('p', 'dash-tile__sub', text)); }
+
+    // ① 링 게이지 — 0~100% 비율
+    function gauge(label, value, subText, opts) {
+      const o = opts || {};
+      const box = tile(label, o);
+      const size = 104, r = 42, cx = size / 2, cy = size / 2;
+      const circ = 2 * Math.PI * r;
+      const pctv = value == null ? 0 : Math.max(0, Math.min(1, value));
+      const svg = svgEl('svg', { viewBox: `0 0 ${size} ${size}`, class: 'dash-gauge', role: 'img',
+        'aria-label': `${label} ${rate(value)}` });
+      svg.appendChild(svgEl('title', {})).textContent = `${label} — ${rate(value)} (${subText})`;
+      svg.appendChild(svgEl('circle', { cx, cy, r, fill: 'none', class: 'dash-gauge__track', 'stroke-width': 9 }));
+      const arc = svgEl('circle', { cx, cy, r, fill: 'none', 'stroke-width': 9, 'stroke-linecap': 'round',
+        class: 'dash-gauge__value', transform: `rotate(-90 ${cx} ${cy})`,
+        'stroke-dasharray': `${(circ * pctv).toFixed(2)} ${circ.toFixed(2)}` });
+      svg.appendChild(arc);
+      const t = svgEl('text', { x: cx, y: cy + 1, class: 'dash-gauge__text', 'text-anchor': 'middle',
+        'dominant-baseline': 'middle' });
+      t.textContent = rate(value);
+      svg.appendChild(t);
+      box.appendChild(svg);
+      sub(box, subText);
+      if (o.flag) box.appendChild(el('p', 'dash-flag', o.flag));
+      return box;
+    }
+
+    // ② 스파크라인 — 추세가 있는 규모
+    function spark(label, value, unit, series, subText, opts) {
+      const box = tile(label, opts);
+      const v = el('p', 'dash-tile__value', num(value));
+      if (unit) v.appendChild(el('span', 'dash-tile__unit', unit));
+      box.appendChild(v);
+      if (series && series.length > 1) {
+        const w = 132, h = 34, pad = 2;
+        const ys = series.map((d) => d[1]);
+        const min = Math.min(...ys), max = Math.max(...ys), span = (max - min) || 1;
+        const pt = (d, i) => [
+          pad + (i * (w - pad * 2)) / (series.length - 1),
+          h - pad - ((d[1] - min) / span) * (h - pad * 2),
+        ];
+        const pts = series.map(pt);
+        const svg = svgEl('svg', { viewBox: `0 0 ${w} ${h}`, class: 'dash-spark', role: 'img',
+          'aria-label': `${label} 추이 — ${series[0][0]} ${num(series[0][1])} → ${series[series.length - 1][0]} ${num(value)}` });
+        svg.appendChild(svgEl('title', {})).textContent =
+          `${series[0][0]} ${num(series[0][1])} → ${series[series.length - 1][0]} ${num(value)}`;
+        svg.appendChild(svgEl('path', { class: 'dash-spark__area',
+          d: `M ${pts.map((p) => p.join(' ')).join(' L ')} L ${pts[pts.length - 1][0]} ${h} L ${pts[0][0]} ${h} Z` }));
+        svg.appendChild(svgEl('path', { class: 'dash-spark__line', fill: 'none', 'stroke-width': 2,
+          'stroke-linejoin': 'round', 'stroke-linecap': 'round',
+          d: `M ${pts.map((p) => p.join(' ')).join(' L ')}` }));
+        const last = pts[pts.length - 1];
+        svg.appendChild(svgEl('circle', { cx: last[0], cy: last[1], r: 3, class: 'dash-spark__dot' }));
+        box.appendChild(svg);
+      }
+      sub(box, subText);
+      return box;
+    }
+
+    // ③ 쌍 막대 — 같은 척도로 비교 가능한 두 값 (별 합계는 축 밖 값으로 병기)
+    function pairBars(label, rows, subText, opts) {
+      const box = tile(label, opts);
+      const max = Math.max(...rows.map((r) => r.v)) || 1;
+      const wrap = el('div', 'dash-bars');
+      rows.forEach((r) => {
+        const row = el('div', 'dash-bars__row');
+        row.appendChild(el('span', 'dash-bars__name', r.name));
+        const track = el('span', 'dash-bars__track');
+        const fill = el('span', 'dash-bars__fill');
+        fill.style.width = `${Math.max(4, (r.v / max) * 100)}%`;
+        track.appendChild(fill);
+        track.title = `${r.name} ${num(r.v)}개 · 스타 ${num(r.stars)}`;
+        row.appendChild(track);
+        row.appendChild(el('span', 'dash-bars__val', `${num(r.v)}개`));
+        row.appendChild(el('span', 'dash-bars__star', `★${num(r.stars)}`));
+        wrap.appendChild(row);
+      });
+      box.appendChild(wrap);
+      sub(box, subText);
+      return box;
+    }
+
     const repo = idx.repo_stats || {};
     const gh = repo.github || {}; const gl = repo.gitlab || {};
-    const byS = idx.license_by_source || {};
-    const glLic = byS.gitlab || { total: 0, stated: 0 };
+    const glLic = (idx.license_by_source || {}).gitlab || { total: 0, stated: 0 };
     const glNone = glLic.total ? (glLic.total - glLic.stated) / glLic.total : null;
     const mcpRate = idx.total_cases ? idx.mcp_cases / idx.total_cases : null;
-    const num = (v) => (v == null ? '—' : v.toLocaleString('ko-KR'));
-    const rate = (v) => (v == null ? '—' : `${(v * 100).toFixed(1)}%`);
-    const ITEMS = [
-      { v: num(idx.total_cases), u: '건', l: '관측 사례', s: '아카이브 총계', href: null, tone: 'key' },
-      { v: num(idx.mcp_cases), u: '건', l: 'MCP 사례', s: `전체의 ${rate(mcpRate)}`, href: '#mcp' },
-      { v: num(idx.total_champions), u: '명', l: '챔피언', s: '프로젝트 식별 인원', href: 'champions.html' },
-      { v: members ? num(members.latest) : '—', u: '명', l: '오픈톡 가입자', s: members ? `${members.latest_date} 기준` : '—', href: '#community' },
-      { v: rate(idx.domestic_model_rate), u: '', l: '국산 모델 채택률', s: `LLM 런타임 ${idx.model_known || 0}건 기준`, href: '#models', tone: 'watch' },
-      { v: rate(idx.local_model_rate), u: '', l: '로컬 오픈웨이트 실행률', s: '데이터 미유출 실행', href: '#models' },
-      { v: num(gh.count), u: '개', l: 'GitHub 저장소', s: `스타 합계 ${num(gh.stars_sum)}`, href: '#repos' },
-      { v: num(gl.count), u: '개', l: '공공 깃랩 저장소', s: `스타 합계 ${num(gl.stars_sum)}`, href: '#repos' },
-      { v: rate(glNone), u: '', l: '깃랩 라이선스 미표시', s: `${glLic.total}건 중 ${glLic.total - glLic.stated}건`, href: '#licenses', tone: 'watch' },
-    ];
-    ITEMS.forEach((it) => {
-      const box = el(it.href ? 'a' : 'div', 'dash-card' + (it.tone ? ` dash-card--${it.tone}` : ''));
-      if (it.href) { box.href = it.href; }
-      const v = el('p', 'dash-card__value', it.v);
-      if (it.u) { const u = el('span', 'dash-card__unit', it.u); v.appendChild(u); }
-      box.appendChild(v);
-      box.appendChild(el('p', 'dash-card__label', it.l));
-      box.appendChild(el('p', 'dash-card__sub', it.s));
-      grid.appendChild(box);
-    });
+    const members = community && community.members;
+
+    // 사례 누적 추이 — collected_at 기준 (cases는 아래에서 다시 쓰므로 여기선 별도 조회)
+    let caseSeries = null;
+    try {
+      const cr = await fetch('./data/cases.json', { cache: 'no-cache' });
+      const list = (await cr.json()).cases || [];
+      const byDay = {};
+      list.forEach((c) => { const d = (c.collected_at || '').slice(0, 10); if (d) byDay[d] = (byDay[d] || 0) + 1; });
+      let cum = 0;
+      caseSeries = Object.keys(byDay).sort().map((d) => { cum += byDay[d]; return [d, cum]; });
+    } catch (e) { /* 스파크라인만 생략 */ }
+
+    grid.appendChild(spark('관측 사례', idx.total_cases, '건', caseSeries,
+      caseSeries ? `${caseSeries[0][0]}부터 누적` : '아카이브 총계', { tone: 'key' }));
+    grid.appendChild(gauge('MCP 사례 비율', mcpRate, `${num(idx.mcp_cases)}건 / 전체 ${num(idx.total_cases)}건`,
+      { href: '#mcp' }));
+    grid.appendChild(spark('챔피언', idx.total_champions, '명', null, '프로젝트가 식별된 인원', { href: 'champions.html' }));
+    grid.appendChild(spark('오픈톡 가입자', members ? members.latest : null, '명',
+      members ? members.series : null, members ? `${members.first_date} ${num(members.first)}명에서 관측 시작` : '—',
+      { href: '#community' }));
+    grid.appendChild(gauge('국산 모델 채택률', idx.domestic_model_rate,
+      `LLM 런타임 ${num(idx.model_known)}건 기준`, { href: '#models', tone: 'watch', flag: '낮음' }));
+    grid.appendChild(gauge('로컬 오픈웨이트 실행률', idx.local_model_rate,
+      '데이터를 내보내지 않는 실행', { href: '#models' }));
+    grid.appendChild(pairBars('저장소 규모', [
+      { name: 'GitHub', v: gh.count || 0, stars: gh.stars_sum || 0 },
+      { name: '공공 깃랩', v: gl.count || 0, stars: gl.stars_sum || 0 },
+    ], '막대는 저장소 수 · ★는 스타 합계(척도가 달라 같은 축에 두지 않음)', { href: '#repos' }));
+    grid.appendChild(gauge('깃랩 라이선스 미표시', glNone,
+      `${num(glLic.total)}건 중 ${num(glLic.total - glLic.stated)}건 미표시`,
+      { href: '#licenses', tone: 'watch', flag: '주의' }));
+
     const asof = document.getElementById('dash-asof');
     if (asof && idx.generated_at) asof.textContent = `${idx.generated_at} 기준`;
   }());

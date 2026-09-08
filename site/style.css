@@ -2129,48 +2129,111 @@ section[id] { scroll-margin-top: 5.5rem; }
 h1:hover .anchor-link, h2:hover .anchor-link, h3:hover .anchor-link, .anchor-link:focus { opacity: 1; }
 .anchor-link:hover { color: #234a72; }
 
-/* 관측소 종합 계기판 (2026-09-09) — 사이트 팔레트(한지·먹·주묵) 준수 */
+/* 관측소 종합 계기판 (2026-09-09) — 링 게이지·스파크라인·쌍 막대.
+   색: 카테고리 색 없음(지표마다 독립) · 단일 강조색 + 상태색은 라벨과 함께. 전부 토큰이라 다크모드 자동. */
 .obs-section--dash { border-top: 2px solid var(--rule-strong); }
 .dash-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr));
-  gap: 0.7rem;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 0.75rem;
   margin: 1rem 0 0.6rem;
 }
-.dash-card {
-  display: block;
-  padding: 0.85rem 0.9rem;
+.dash-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.9rem 0.8rem 0.75rem;
   background: var(--bg-elevated);
   border: 1px solid var(--rule);
   border-radius: 2px;
+  text-align: center;
   text-decoration: none;
   color: inherit;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
-a.dash-card:hover, a.dash-card:focus-visible {
+a.dash-tile:hover, a.dash-tile:focus-visible {
   border-color: var(--rule-strong);
   box-shadow: 0 1px 0 var(--rule-strong);
 }
-.dash-card--key { border-left: 3px solid var(--accent); }
-.dash-card--watch { border-left: 3px solid var(--accent-gold); }
-.dash-card__value {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.1;
-  color: var(--ink);
-}
-.dash-card__unit { margin-left: 0.12rem; font-size: 0.8rem; font-weight: 600; color: var(--ink-soft); }
-.dash-card__label {
-  margin: 0.35rem 0 0;
+.dash-tile--key { border-left: 3px solid var(--accent); }
+.dash-tile--watch { border-left: 3px solid var(--accent-gold); }
+.dash-tile__label {
+  margin: 0 0 0.4rem;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
   color: var(--ink-faint);
 }
-.dash-card__sub { margin: 0.2rem 0 0; font-size: 0.76rem; color: var(--ink-soft); line-height: 1.4; }
-@media (max-width: 640px) {
-  .dash-grid { grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr)); }
-  .dash-card__value { font-size: 1.35rem; }
+.dash-tile__value {
+  margin: 0.1rem 0 0.15rem;
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--ink);
 }
+.dash-tile__unit { margin-left: 0.12rem; font-size: 0.8rem; font-weight: 600; color: var(--ink-soft); }
+.dash-tile__sub { margin: 0.35rem 0 0; font-size: 0.74rem; line-height: 1.4; color: var(--ink-soft); }
+.dash-flag {
+  margin: 0.3rem 0 0;
+  padding: 0.05rem 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+  border-radius: 999px;
+}
+
+/* 링 게이지 */
+.dash-gauge { width: 6.5rem; height: 6.5rem; }
+.dash-gauge__track { stroke: var(--rule); }
+.dash-gauge__value { stroke: var(--accent); }
+.dash-tile--watch .dash-gauge__value { stroke: var(--accent-gold); }
+.dash-gauge__text {
+  font-family: var(--font-display);
+  font-size: 1.32rem;
+  font-weight: 700;
+  fill: var(--ink);
+}
+
+/* 스파크라인 */
+.dash-spark { width: 100%; max-width: 8.5rem; height: 2.2rem; margin-top: 0.1rem; }
+.dash-spark__line { stroke: var(--accent); }
+.dash-spark__area { fill: var(--accent); opacity: 0.12; }
+.dash-spark__dot { fill: var(--accent); }
+
+/* 쌍 막대 */
+.dash-bars { width: 100%; display: flex; flex-direction: column; gap: 0.45rem; margin-top: 0.2rem; }
+.dash-bars__row {
+  display: grid;
+  grid-template-columns: 4.2rem 1fr auto;
+  grid-template-areas: "name track val" ". star star";
+  align-items: center;
+  gap: 0.1rem 0.4rem;
+}
+.dash-bars__name { grid-area: name; font-size: 0.74rem; color: var(--ink-soft); text-align: left; }
+.dash-bars__track {
+  grid-area: track;
+  height: 0.55rem;
+  background: var(--bg-inset);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.dash-bars__fill { display: block; height: 100%; background: var(--accent); border-radius: 2px; }
+.dash-bars__val { grid-area: val; font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink); }
+.dash-bars__star {
+  grid-area: star;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--ink-faint);
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .dash-grid { grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr)); }
+  .dash-tile__value { font-size: 1.5rem; }
+  .dash-gauge { width: 5.4rem; height: 5.4rem; }
+}
+@media (prefers-reduced-motion: reduce) { .dash-tile { transition: none; } }
