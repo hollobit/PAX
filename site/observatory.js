@@ -188,8 +188,8 @@ async function main() {
       caseSeries = Object.keys(byDay).sort().map((d) => { cum += byDay[d]; return [d, cum]; });
     } catch (e) { /* 스파크라인만 생략 */ }
 
-    grid.appendChild(spark('관측 사례', idx.total_cases, '건', caseSeries,
-      caseSeries ? `${caseSeries[0][0]}부터 누적` : '아카이브 총계', { tone: 'key' }));
+    grid.appendChild(spark('공공AX 아카이브 누적', idx.total_cases, '건', caseSeries,
+      caseSeries ? `${caseSeries[0][0]} 관측 시작` : '아카이브 총계', { tone: 'key' }));
     grid.appendChild(gauge('MCP 사례 비율', mcpRate, `${num(idx.mcp_cases)}건 / 전체 ${num(idx.total_cases)}건`,
       { href: '#mcp' }));
     grid.appendChild(spark('챔피언', idx.total_champions, '명', null, '프로젝트가 식별된 인원', { href: 'champions.html' }));
