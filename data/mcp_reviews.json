@@ -2738,6 +2738,60 @@
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
    }
+  },
+  {
+   "case_id": "9643d5dfecbb5d79",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 3건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·유지보수 미상"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-09-09",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "7f8dfb1eb051abe9",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 4건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·유지보수 미상"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-09-09",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
   }
  ]
 }
