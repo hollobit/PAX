@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-07T15:32:19+09:00",
+ "updated_at": "2026-09-08T23:47:23+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -9509,6 +9509,29 @@
    "case_class": "개인 개발",
    "summary": "개인정보 보호 실무자가 기관의 보호조치 수준을 스스로 점검하도록 만든 웹 도구. 업무에서 반복 확인하는 법령과 안내서, 점검항목, 처분사례를 한곳에 묶어 위험도를 진단한다. 전문 개발자가 아닌 실무자가 현장 요구를 반영해 AI로 기능을 하나씩 구현했으며, 개인 제작 비공식 도구로 공식 해석·처분에는 쓸 수 없다는 한계를 스스로 명시했다.",
    "id": "9998aba2d1f55c24"
+  },
+  {
+   "tags": [
+    "HWP",
+    "브라우저확장",
+    "문서접근성",
+    "오픈소스"
+   ],
+   "model_dependency": "없음(비LLM)",
+   "case_class": "커뮤니티",
+   "date": "2026-04-17",
+   "source": "threads",
+   "case_url": "https://chromewebstore.google.com/detail/pgakpjflombjmehnebnbpnalhegaanag",
+   "title": "rhwp — 한컴 없이 브라우저에서 HWP를 열고 고치는 크롬 확장",
+   "org_type": "커뮤니티",
+   "runtime_env": "브라우저만",
+   "collected_at": "2026-09-08",
+   "org": "개발 커뮤니티",
+   "network_req": "로컬 완결",
+   "link": "https://www.threads.com/@do.aiworks/post/DXMxS_mD6tq",
+   "task_category": "문서·기안",
+   "summary": "한컴오피스 설치 없이 크롬 브라우저에서 HWP 문서를 열람하고 수정하는 확장 프로그램. 공공기관 문서를 받아 보는 시민과 학부모, macOS·리눅스 사용자처럼 한글 파일 앞에서 막히던 사람들을 겨냥했고 MIT 라이선스로 무료 배포된다. 웹스토어 평점 4.9에 330여 개 평가가 쌓여 한글 문서 접근성의 실수요를 보여준다.",
+   "id": "2ebfec74844ad120"
   }
  ]
 }
