@@ -4493,6 +4493,12 @@
    "title": "조달법령 관리시스템 — 매일 최신성을 검증하는 조달 법령·행정규칙 통합 검색",
    "org": "공직 현장(개인 개발)",
    "url": "https://procurement-law-system.milkbuttercheese.chatgpt.site/"
+  },
+  {
+   "id": "8c461c4901e30775",
+   "title": "이미지 비교 실험실 — 이미지 생성 모델 세대 간 20종 대조 공개",
+   "org": "공직 커뮤니티",
+   "url": "https://image-fieldnotes-20260909.vercel.app/"
   }
  ]
 }

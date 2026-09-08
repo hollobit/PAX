@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-09T00:06:33+09:00",
+ "updated_at": "2026-09-09T07:33:35+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -6754,7 +6754,7 @@
    "stars_gitlab": 1
   },
   {
-   "case_url": "https://github.com/chrisryugj/schoolinfo-mcp",
+   "case_url": "https://school.gomdori.app/",
    "title": "학교정보 MCP — 학교 이름 하나로 급식·수행평가·학사일정을 모아 보는 도구",
    "org_type": "공직 개인",
    "runtime_env": "브라우저만",
@@ -10460,6 +10460,32 @@
    "license": "Apache-2.0",
    "license_source": "gitlab",
    "license_checked": "2026-09-09"
+  },
+  {
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "date": "2026-09-08",
+   "model_dependency": "해외 상용 API",
+   "case_class": "커뮤니티",
+   "source": "kakao",
+   "collected_at": "2026-09-09",
+   "runtime_env": "브라우저만",
+   "task_category": "공통·범용",
+   "link": "https://image-fieldnotes-20260909.vercel.app/",
+   "title": "이미지 비교 실험실 — 이미지 생성 모델 세대 간 20종 대조 공개",
+   "summary": "같은 의도를 두 세대의 이미지 생성 모델에 똑같이 주고 결과가 어떻게 갈리는지 20개 실험으로 대조한 공개 실험실이다. 시네마틱·타이포·투명 배경·고밀도 한국어 문서·반복 편집 등 범주별로 나누고, 실험마다 의도와 판정 근거는 물론 실제 사용한 프롬프트를 함께 공개해 재현할 수 있게 했다. 개인 부담으로 API를 호출해 만든 결과를 무료로 개방했다.",
+   "tags": [
+    "이미지생성",
+    "모델비교",
+    "프롬프트",
+    "실험"
+   ],
+   "models_used": [
+    "GPT Image 2",
+    "GPT Image 2.5 Sunburst"
+   ],
+   "network_req": "인터넷 필수",
+   "id": "8c461c4901e30775"
   }
  ]
 }
