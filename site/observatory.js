@@ -31,6 +31,16 @@ const DATA_DOMAINS = [
   { name: '인구·행정구역', keywords: ['인구', '주민등록'] },
 ];
 
+// MCP 사례 판별과 도메인 매칭 — 매트릭스 표와 현황판이 같은 규칙을 쓰도록 한 곳에 둔다.
+// 한 사례가 여러 도메인에 걸릴 수 있어(예: 법령+공시 통합 MCP) 도메인 건수 합은 MCP 총계를 넘는다.
+function isMcpCase(c) {
+  return c.title.includes('MCP') || (c.tags || []).includes('MCP');
+}
+function matchesDomain(c, domain) {
+  const text = (c.title + ' ' + c.summary + ' ' + (c.tags || []).join(' ')).toLowerCase();
+  return domain.keywords.some((k) => text.includes(k));
+}
+
 function el(tag, cls, text) {
   const node = document.createElement(tag);
   if (cls) node.className = cls;
@@ -179,9 +189,11 @@ async function main() {
 
     // 사례 누적 추이 — collected_at 기준 (cases는 아래에서 다시 쓰므로 여기선 별도 조회)
     let caseSeries = null;
+    let allCases = [];
     try {
       const cr = await fetch('./data/cases.json', { cache: 'no-cache' });
       const list = (await cr.json()).cases || [];
+      allCases = list;
       const byDay = {};
       list.forEach((c) => { const d = (c.collected_at || '').slice(0, 10); if (d) byDay[d] = (byDay[d] || 0) + 1; });
       let cum = 0;
@@ -207,6 +219,74 @@ async function main() {
     grid.appendChild(gauge('깃랩 라이선스 미표시', glNone,
       `${num(glLic.total)}건 중 ${num(glLic.total - glLic.stated)}건 미표시`,
       { href: '#licenses', tone: 'watch', flag: '주의' }));
+
+    // ── 분류 구성 패널 ──
+    // 형태: 순위 막대. 10~20개 항목에 카테고리 색을 쓰면 팔레트가 무너지므로
+    // 색은 크기 한 가지 뜻만 담고, 구분은 각 행의 이름표가 맡는다.
+    const panelsBox = document.getElementById('dash-panels');
+    if (panelsBox && allCases.length) {
+      function tally(key) {
+        const m = new Map();
+        allCases.forEach((c) => {
+          const v = c[key];
+          if (v) m.set(v, (m.get(v) || 0) + 1);
+        });
+        return [...m.entries()].sort((a, b) => b[1] - a[1]);
+      }
+
+      function panel(title, rows, total, note, opts) {
+        const o = opts || {};
+        const box = el('div', 'dash-panel');
+        const h = el('p', 'dash-panel__title', title);
+        if (o.href) {
+          const a = el('a', 'dash-panel__more', '자세히 ↓');
+          a.href = o.href;
+          h.appendChild(a);
+        }
+        box.appendChild(h);
+        const max = Math.max(...rows.map((r) => r[1]), 1);
+        const list = el('div', 'dash-rank');
+        rows.forEach(([name, n]) => {
+          const share = total ? (n / total) * 100 : 0;
+          const row = el('div', 'dash-rank__row');
+          row.appendChild(el('span', 'dash-rank__name', name));
+          const track = el('span', 'dash-rank__track');
+          const fill = el('span', 'dash-rank__fill');
+          fill.style.width = `${Math.max(2, (n / max) * 100)}%`;
+          track.appendChild(fill);
+          track.title = `${name} — ${n}건 (${share.toFixed(1)}%)`;
+          row.appendChild(track);
+          row.appendChild(el('span', 'dash-rank__val', `${n}`));
+          row.appendChild(el('span', 'dash-rank__pct', `${share.toFixed(1)}%`));
+          list.appendChild(row);
+        });
+        box.appendChild(list);
+        box.appendChild(el('p', 'dash-panel__note', note));
+        return box;
+      }
+
+      const totalC = allCases.length;
+      panelsBox.appendChild(panel('기관 유형별 구성', tally('org_type'), totalC,
+        `전체 ${num(totalC)}건 기준 · 사례마다 한 가지 유형`, { href: '#ax-index' }));
+      panelsBox.appendChild(panel('업무 분류별 구성', tally('task_category'), totalC,
+        `전체 ${num(totalC)}건 기준 · 도구가 없애는 업무 기준`, { href: 'index.html' }));
+
+      // 공공데이터 도메인별 MCP — 접근성 매트릭스와 같은 도메인 정의·매칭 규칙을 쓴다
+      const mcpList = allCases.filter(isMcpCase);
+      const domainRows = DATA_DOMAINS
+        .map((d) => [d.name, mcpList.filter((c) => matchesDomain(c, d)).length])
+        .filter(([, n]) => n > 0)
+        .sort((a, b) => b[1] - a[1]);
+      const covered = domainRows.length;
+      const uncovered = DATA_DOMAINS
+        .filter((d) => !mcpList.some((c) => matchesDomain(c, d)))
+        .map((d) => d.name);
+      panelsBox.appendChild(panel('공공데이터 도메인별 MCP', domainRows, mcpList.length,
+        `MCP ${num(mcpList.length)}건 기준 · 도메인 ${covered}/${DATA_DOMAINS.length} 관측 · ` +
+        '한 사례가 여러 도메인에 걸칠 수 있어 비율 합은 100%를 넘습니다' +
+        (uncovered.length ? ` · 미관측: ${uncovered.join('·')}` : ''),
+        { href: '#data-access' }));
+    }
 
     const asof = document.getElementById('dash-asof');
     if (asof && idx.generated_at) asof.textContent = `${idx.generated_at} 기준`;
@@ -438,14 +518,10 @@ async function main() {
   }
 
   // ── 데이터 매트릭스 ──
-  const mcpCases = cases.filter((c) =>
-    c.title.includes('MCP') || c.tags.includes('MCP'));
+  const mcpCases = cases.filter(isMcpCase);
   const tbody = document.querySelector('#data-matrix tbody');
   for (const domain of DATA_DOMAINS) {
-    const hits = mcpCases.filter((c) => {
-      const text = (c.title + ' ' + c.summary + ' ' + c.tags.join(' ')).toLowerCase();
-      return domain.keywords.some((k) => text.includes(k));
-    });
+    const hits = mcpCases.filter((c) => matchesDomain(c, domain));
     const tr = document.createElement('tr');
     tr.appendChild(el('td', null, domain.name));
     const covered = el('td', hits.length ? 'obs-covered' : 'obs-uncovered',
