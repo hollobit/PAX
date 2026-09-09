@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-09-09",
+ "generated_at": "2026-09-10",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 377,
+ "total_cases": 378,
  "total_champions": 172,
  "community": {
   "members": 1652,
@@ -11,7 +11,7 @@
   "threads_observed": 232
  },
  "certified_champions": 5,
- "unattributed_cases": 73,
+ "unattributed_cases": 74,
  "ax_distribution": {
   "AI-Ready": 265,
   "AI-Enabled": 100,
@@ -32,7 +32,7 @@
   "해외 상용 API": 53,
   "모델 중립(BYO)": 60,
   "국산 독자모델": 3,
-  "미상": 3,
+  "미상": 4,
   "국산 오픈웨이트": 1
  },
  "model_stats": {
@@ -639,7 +639,7 @@
     "specified": 3
    },
    "미상": {
-    "n": 3,
+    "n": 4,
     "specified": 0
    },
    "국산 오픈웨이트": {
@@ -1270,7 +1270,7 @@
  "mcp_cases": 79,
  "transition_funnel": {
   "기관 공식": 33,
-  "미확인": 301,
+  "미확인": 302,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,

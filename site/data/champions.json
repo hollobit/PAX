@@ -41,7 +41,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -4523,6 +4523,12 @@
    "title": "이미지 비교 실험실 — 이미지 생성 모델 세대 간 20종 대조 공개",
    "org": "공직 커뮤니티",
    "url": "https://image-fieldnotes-20260909.vercel.app/"
+  },
+  {
+   "id": "9e0d7d42f0a21b44",
+   "title": "새집고고 — 건축물대장·실거래가로 전국 단지의 재건축 사업성을 등급화한 참고 서비스",
+   "org": "새집고고(운영 주체 미상)",
+   "url": "https://sezipgogo.com/"
   }
  ]
 }
