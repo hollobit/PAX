@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-09T07:33:35+09:00",
+ "updated_at": "2026-09-09T20:58:32+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -5038,7 +5038,7 @@
   },
   {
    "source": "kakao",
-   "summary": "AI 데이터센터(AIDC) 입지를 전력망, 용수, SOC 시설, 배후도시 등 다중 조건으로 검토하는 입지 시뮬레이터가 공개됐다. 2035년까지 18.4GW 규모로 확장이 예고된 AIDC 유치를 검토하는 지자체가 고려 요소를 한 화면에서 시뮬레이션할 수 있게 한다.",
+   "summary": "AI 데이터센터(AIDC) 입지를 전력망, 용수, SOC 시설, 배후도시 등 다중 조건으로 검토하는 입지 시뮬레이터다. 2035년까지 18.4GW 규모로 확장이 예고된 AIDC 유치를 검토하는 지자체가 고려 요소를 한 화면에서 시뮬레이션할 수 있게 한다. 2026년 9월 3D 입지 뷰가 추가돼 AIDC 규모와 GPU 종류·건물 층수에 맞춰 건물과 용지 크기를 자동 생성하고 지도 위에 배치해 각도를 바꿔가며 확인할 수 있다.",
    "org": "공공기관 연구자(개인 개발)",
    "link": "https://hollobit.github.io/grid-siting-lab/",
    "title": "AIDC 입지 시뮬레이터 — 전력망·용수·SOC 종합 검토",
@@ -5048,7 +5048,8 @@
     "AIDC",
     "입지분석",
     "시뮬레이터",
-    "지역정책"
+    "지역정책",
+    "3D시각화"
    ],
    "org_type": "공직 개인",
    "id": "aef95509b7611c96",
@@ -5061,7 +5062,12 @@
    "runtime_env": "브라우저만",
    "link_ok": true,
    "health_checked": "2026-09-07",
-   "thumb_v": 1786883724
+   "case_url": "https://hollobit.github.io/grid-siting-lab/#siting-3d",
+   "model_dependency": "해외 상용 API",
+   "models_used": [
+    "GPT-6 Astra"
+   ],
+   "thumb_v": 1788955153
   },
   {
    "org": "한국국제협력단(KOICA)",
@@ -7011,7 +7017,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788906891
+   "thumb_v": 1788906949
   },
   {
    "org": "SECHAK-AG(오픈소스)",
@@ -10850,7 +10856,36 @@
    ],
    "network_req": "인터넷 필수",
    "id": "8c461c4901e30775",
-   "thumb_v": 1788906894
+   "thumb_v": 1788906949
+  },
+  {
+   "network_req": "인터넷 필수",
+   "runtime_env": "브라우저만",
+   "case_class": "개인 개발",
+   "collected_at": "2026-09-09",
+   "task_category": "기획·정책",
+   "link": "https://deep-diver.github.io/korea-ai-in-motion/",
+   "model_dependency": "해외 상용 API",
+   "title": "국가AI전략위원회 1년 타임라인 — 분과별 정책 기록을 근거와 함께 따라가는 아카이브",
+   "org": "공공기관 연구자(개인 개발)",
+   "summary": "대통령 직속 국가인공지능전략위원회의 첫 1년을 10개 분과별로 재구성한 정책 아카이브가 공개됐다. 53개 사건을 시간순으로 잇고 분과를 고르면 해당 논의와 현장 활동만 따라갈 수 있으며, 각 사건마다 근거 자료를 자동으로 표시해 출처를 확인하게 했다. 인물 설명은 실제 발언이 아니라 활동 요약임을 명시해 재구성물의 한계를 드러낸 점이 특징이다.",
+   "source": "kakao",
+   "date": "2026-09-09",
+   "models_used": [
+    "GPT-6 Astra"
+   ],
+   "tags": [
+    "정책아카이브",
+    "타임라인",
+    "국가AI전략",
+    "데이터시각화"
+   ],
+   "org_type": "공직 개인",
+   "id": "3615205d53567c32",
+   "license": "명시 없음",
+   "license_source": "github-pages",
+   "license_checked": "2026-09-09",
+   "thumb_v": 1788955155
   }
  ]
 }

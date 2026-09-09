@@ -2,8 +2,8 @@
  "generated_at": "2026-09-09",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 376,
- "total_champions": 171,
+ "total_cases": 377,
+ "total_champions": 172,
  "community": {
   "members": 1647,
   "kakao_week": 6892,
@@ -25,11 +25,11 @@
   "P2": 10
  },
  "model_dependency": {
-  "미확인": 66,
+  "미확인": 65,
   "없음(비LLM)": 164,
   "해외 오픈웨이트(로컬)": 21,
   "혼합": 7,
-  "해외 상용 API": 51,
+  "해외 상용 API": 53,
   "모델 중립(BYO)": 60,
   "국산 독자모델": 3,
   "미상": 3,
@@ -136,7 +136,7 @@
    },
    {
     "name": "GPT(OpenAI)",
-    "n": 10,
+    "n": 12,
     "variants": [
      "ChatGPT GPTs",
      "ChatGPT(팀계정)",
@@ -147,6 +147,7 @@
      "GPT-5.6 Luna",
      "GPT-5.6 Luna(OpenRouter, 동의 시)",
      "GPT-5.6 Terra",
+     "GPT-6 Astra",
      "OpenAI GPT-5(Responses API)",
      "OpenAI/Anthropic(사용자 키)",
      "OpenAI/Claude(제공자 전환형)"
@@ -181,6 +182,10 @@
       "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱"
      },
      {
+      "id": "aef95509b7611c96",
+      "title": "AIDC 입지 시뮬레이터 — 전력망·용수·SOC 종합 검토"
+     },
+     {
       "id": "ccee126dc9e23cf6",
       "title": "경북 면사무소 토목직의 AX — 토목 전용 GPTs와 횡단면도 작성 앱"
      },
@@ -191,6 +196,10 @@
      {
       "id": "8c461c4901e30775",
       "title": "이미지 비교 실험실 — 이미지 생성 모델 세대 간 20종 대조 공개"
+     },
+     {
+      "id": "3615205d53567c32",
+      "title": "국가AI전략위원회 1년 타임라인 — 분과별 정책 기록을 근거와 함께 따라가는 아카이브"
      }
     ],
     "domestic": false
@@ -602,7 +611,7 @@
   ],
   "dist_detail": {
    "미확인": {
-    "n": 66,
+    "n": 65,
     "specified": 0
    },
    "없음(비LLM)": {
@@ -618,8 +627,8 @@
     "specified": 7
    },
    "해외 상용 API": {
-    "n": 51,
-    "specified": 36
+    "n": 53,
+    "specified": 38
    },
    "모델 중립(BYO)": {
     "n": 60,
@@ -899,7 +908,7 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 51,
+    "n": 53,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
@@ -995,7 +1004,7 @@
      },
      {
       "name": "GPT(OpenAI)",
-      "n": 9,
+      "n": 11,
       "cases": [
        {
         "id": "6a2d1fa6e385ef2b",
@@ -1022,6 +1031,10 @@
         "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱"
        },
        {
+        "id": "aef95509b7611c96",
+        "title": "AIDC 입지 시뮬레이터 — 전력망·용수·SOC 종합 검토"
+       },
+       {
         "id": "ccee126dc9e23cf6",
         "title": "경북 면사무소 토목직의 AX — 토목 전용 GPTs와 횡단면도 작성 앱"
        },
@@ -1032,6 +1045,10 @@
        {
         "id": "8c461c4901e30775",
         "title": "이미지 비교 실험실 — 이미지 생성 모델 세대 간 20종 대조 공개"
+       },
+       {
+        "id": "3615205d53567c32",
+        "title": "국가AI전략위원회 1년 타임라인 — 분과별 정책 기록을 근거와 함께 따라가는 아카이브"
        }
       ],
       "domestic": false,
@@ -1044,6 +1061,7 @@
        "GPT-5.6 Luna",
        "GPT-5.6 Luna(OpenRouter, 동의 시)",
        "GPT-5.6 Terra",
+       "GPT-6 Astra",
        "OpenAI GPT-5(Responses API)",
        "OpenAI/Anthropic(사용자 키)",
        "OpenAI/Claude(제공자 전환형)"
@@ -1241,18 +1259,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.048,
- "local_model_rate": 0.253,
- "model_known": 83,
- "license_tagged": 281,
- "license_stated_rate": 0.527,
+ "domestic_model_rate": 0.047,
+ "local_model_rate": 0.247,
+ "model_known": 85,
+ "license_tagged": 282,
+ "license_stated_rate": 0.525,
  "gitlab_cases": 182,
  "gitlab_mirror_pairs": 24,
  "gitlab_open_rate": 0.132,
  "mcp_cases": 79,
  "transition_funnel": {
   "기관 공식": 33,
-  "미확인": 300,
+  "미확인": 301,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1454,7 +1472,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 133,
+  "명시 없음": 134,
   "MIT": 105,
   "Other": 15,
   "Apache-2.0": 14,
@@ -1468,7 +1486,7 @@
  },
  "license_matrix": {
   "명시 없음": {
-   "github": 38,
+   "github": 39,
    "gitlab": 95
   },
   "MIT": {
@@ -1518,7 +1536,7 @@
    "stated": 83
   },
   "github-pages": {
-   "total": 14,
+   "total": 15,
    "stated": 4
   },
   "gitlab": {

@@ -1,5 +1,5 @@
 {
- "total": 171,
+ "total": 172,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -18,6 +18,30 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:deep-diver",
+   "name": "Chansung Park",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "deep-diver",
+     "url": "https://github.com/deep-diver"
+    }
+   ],
+   "affiliation": {
+    "value": "Electronics Telecommunications Research Institute (ETRI)",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "3615205d53567c32"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },
