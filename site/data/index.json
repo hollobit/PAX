@@ -2,7 +2,7 @@
  "generated_at": "2026-09-10",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 378,
+ "total_cases": 380,
  "total_champions": 172,
  "community": {
   "members": 1652,
@@ -11,25 +11,25 @@
   "threads_observed": 232
  },
  "certified_champions": 5,
- "unattributed_cases": 74,
+ "unattributed_cases": 76,
  "ax_distribution": {
   "AI-Ready": 265,
   "AI-Enabled": 100,
-  "AX 단계 외": 11,
+  "AX 단계 외": 12,
   "AI-First": 1
  },
  "c_axis_mean": 0.81,
  "p_distribution": {
   "P0": 126,
-  "P1": 241,
+  "P1": 242,
   "P2": 10
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 164,
+  "없음(비LLM)": 168,
   "해외 오픈웨이트(로컬)": 21,
-  "혼합": 7,
-  "해외 상용 API": 53,
+  "혼합": 8,
+  "해외 상용 API": 50,
   "모델 중립(BYO)": 60,
   "국산 독자모델": 3,
   "미상": 4,
@@ -135,76 +135,6 @@
     "domestic": false
    },
    {
-    "name": "GPT(OpenAI)",
-    "n": 12,
-    "variants": [
-     "ChatGPT GPTs",
-     "ChatGPT(팀계정)",
-     "ChatGPT/Claude/Codex(승인 문서 조회)",
-     "GPT Image 2",
-     "GPT Image 2.5 Sunburst",
-     "GPT(OpenAI API)",
-     "GPT-5.6 Luna",
-     "GPT-5.6 Luna(OpenRouter, 동의 시)",
-     "GPT-5.6 Terra",
-     "GPT-6 Astra",
-     "OpenAI GPT-5(Responses API)",
-     "OpenAI/Anthropic(사용자 키)",
-     "OpenAI/Claude(제공자 전환형)"
-    ],
-    "cases": [
-     {
-      "id": "6a2d1fa6e385ef2b",
-      "title": "부서 수요 기반 ChatGPT 팀계정 지원 후 보안형 AI SaaS 도입"
-     },
-     {
-      "id": "ea2bce110972762e",
-      "title": "공공기관 규정 MCP 생성기"
-     },
-     {
-      "id": "92d5147e02f7ae36",
-      "title": "NCS 기반 구조화 면접 질문 생성기 NCScope"
-     },
-     {
-      "id": "00411127055c4a07",
-      "title": "공무원 필수교육 이수 관리 시스템 공개"
-     },
-     {
-      "id": "a7abbaedd53db684",
-      "title": "국회 법안·회의록 탐색 MCP — 공식 기록 검증"
-     },
-     {
-      "id": "e18d5e018e0cd10d",
-      "title": "오토한글 — 브라우저·터미널용 HWP 편집 엔진"
-     },
-     {
-      "id": "d6c35b2999da8ca0",
-      "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱"
-     },
-     {
-      "id": "aef95509b7611c96",
-      "title": "AIDC 입지 시뮬레이터 — 전력망·용수·SOC 종합 검토"
-     },
-     {
-      "id": "ccee126dc9e23cf6",
-      "title": "경북 면사무소 토목직의 AX — 토목 전용 GPTs와 횡단면도 작성 앱"
-     },
-     {
-      "id": "b3294bcc65e7f2e7",
-      "title": "소방기술민원 답변생성기 — 법령·유사민원 검색과 참고 답변 초안"
-     },
-     {
-      "id": "8c461c4901e30775",
-      "title": "이미지 비교 실험실 — 이미지 생성 모델 세대 간 20종 대조 공개"
-     },
-     {
-      "id": "3615205d53567c32",
-      "title": "국가AI전략위원회 1년 타임라인 — 분과별 정책 기록을 근거와 함께 따라가는 아카이브"
-     }
-    ],
-    "domestic": false
-   },
-   {
     "name": "로컬 서빙(Ollama·vLLM 등)",
     "n": 9,
     "variants": [
@@ -260,8 +190,63 @@
     "domestic": false
    },
    {
+    "name": "GPT(OpenAI)",
+    "n": 9,
+    "variants": [
+     "ChatGPT GPTs",
+     "ChatGPT(팀계정)",
+     "ChatGPT/Claude/Codex(승인 문서 조회)",
+     "GPT(OpenAI API)",
+     "GPT-5.6 Luna",
+     "GPT-5.6 Luna(OpenRouter, 동의 시)",
+     "GPT-5.6 Terra",
+     "OpenAI GPT-5(Responses API)",
+     "OpenAI/Anthropic(사용자 키)",
+     "OpenAI/Claude(제공자 전환형)"
+    ],
+    "cases": [
+     {
+      "id": "6a2d1fa6e385ef2b",
+      "title": "부서 수요 기반 ChatGPT 팀계정 지원 후 보안형 AI SaaS 도입"
+     },
+     {
+      "id": "ea2bce110972762e",
+      "title": "공공기관 규정 MCP 생성기"
+     },
+     {
+      "id": "92d5147e02f7ae36",
+      "title": "NCS 기반 구조화 면접 질문 생성기 NCScope"
+     },
+     {
+      "id": "00411127055c4a07",
+      "title": "공무원 필수교육 이수 관리 시스템 공개"
+     },
+     {
+      "id": "a7abbaedd53db684",
+      "title": "국회 법안·회의록 탐색 MCP — 공식 기록 검증"
+     },
+     {
+      "id": "e18d5e018e0cd10d",
+      "title": "오토한글 — 브라우저·터미널용 HWP 편집 엔진"
+     },
+     {
+      "id": "d6c35b2999da8ca0",
+      "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱"
+     },
+     {
+      "id": "ccee126dc9e23cf6",
+      "title": "경북 면사무소 토목직의 AX — 토목 전용 GPTs와 횡단면도 작성 앱"
+     },
+     {
+      "id": "b3294bcc65e7f2e7",
+      "title": "소방기술민원 답변생성기 — 법령·유사민원 검색과 참고 답변 초안"
+     }
+    ],
+    "domestic": false
+   },
+   {
     "name": "Gemini",
-    "n": 7,
+    "n": 8,
     "variants": [
      "Claude Code/Codex/Gemini(스킬 팩)",
      "Claude/Codex/Gemini(어댑터)",
@@ -269,7 +254,8 @@
      "Gemini GEM",
      "Gemini(옵션 전환)",
      "Gemini(옵션)",
-     "OpenAI/Gemini/Claude(사용자 선택)"
+     "OpenAI/Gemini/Claude(사용자 선택)",
+     "구글 제미나이(외부 연계)"
     ],
     "cases": [
      {
@@ -299,6 +285,10 @@
      {
       "id": "539d5aacb03635db",
       "title": "민원 신고 스크리너 — 신고 7유형·근거법령·소관부서 자동 판별 모듈"
+     },
+     {
+      "id": "fcfac85b15998dee",
+      "title": "한국서부발전 위피봇 — 발전 현장 안전·설비 업무에 붙인 사내 생성형 AI 에이전트"
      }
     ],
     "domestic": false
@@ -551,6 +541,20 @@
      }
     ],
     "domestic": false
+   },
+   {
+    "name": "사내 모델(비공개)",
+    "n": 1,
+    "variants": [
+     "사내 모델(비공개)"
+    ],
+    "cases": [
+     {
+      "id": "fcfac85b15998dee",
+      "title": "한국서부발전 위피봇 — 발전 현장 안전·설비 업무에 붙인 사내 생성형 AI 에이전트"
+     }
+    ],
+    "domestic": false
    }
   ],
   "domestic_cases": [
@@ -615,7 +619,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 164,
+    "n": 168,
     "specified": 0
    },
    "해외 오픈웨이트(로컬)": {
@@ -623,12 +627,12 @@
     "specified": 10
    },
    "혼합": {
-    "n": 7,
-    "specified": 7
+    "n": 8,
+    "specified": 8
    },
    "해외 상용 API": {
-    "n": 53,
-    "specified": 38
+    "n": 50,
+    "specified": 35
    },
    "모델 중립(BYO)": {
     "n": 60,
@@ -737,7 +741,7 @@
    },
    {
     "dep": "혼합",
-    "n": 7,
+    "n": 8,
     "families": [
      {
       "name": "로컬 서빙(Ollama·vLLM 등)",
@@ -770,7 +774,7 @@
      },
      {
       "name": "Gemini",
-      "n": 2,
+      "n": 3,
       "cases": [
        {
         "id": "de4b2dab339d69b7",
@@ -779,12 +783,17 @@
        {
         "id": "1502d338e8e99382",
         "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
+       },
+       {
+        "id": "fcfac85b15998dee",
+        "title": "한국서부발전 위피봇 — 발전 현장 안전·설비 업무에 붙인 사내 생성형 AI 에이전트"
        }
       ],
       "domestic": false,
       "variants": [
        "Gemini(옵션 전환)",
-       "Gemini(옵션)"
+       "Gemini(옵션)",
+       "구글 제미나이(외부 연계)"
       ]
      },
      {
@@ -903,12 +912,26 @@
       "variants": [
        "외부 AI(선택 연결)"
       ]
+     },
+     {
+      "name": "사내 모델(비공개)",
+      "n": 1,
+      "cases": [
+       {
+        "id": "fcfac85b15998dee",
+        "title": "한국서부발전 위피봇 — 발전 현장 안전·설비 업무에 붙인 사내 생성형 AI 에이전트"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "사내 모델(비공개)"
+      ]
      }
     ]
    },
    {
     "dep": "해외 상용 API",
-    "n": 53,
+    "n": 50,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
@@ -1004,7 +1027,7 @@
      },
      {
       "name": "GPT(OpenAI)",
-      "n": 11,
+      "n": 8,
       "cases": [
        {
         "id": "6a2d1fa6e385ef2b",
@@ -1031,37 +1054,22 @@
         "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱"
        },
        {
-        "id": "aef95509b7611c96",
-        "title": "AIDC 입지 시뮬레이터 — 전력망·용수·SOC 종합 검토"
-       },
-       {
         "id": "ccee126dc9e23cf6",
         "title": "경북 면사무소 토목직의 AX — 토목 전용 GPTs와 횡단면도 작성 앱"
        },
        {
         "id": "b3294bcc65e7f2e7",
         "title": "소방기술민원 답변생성기 — 법령·유사민원 검색과 참고 답변 초안"
-       },
-       {
-        "id": "8c461c4901e30775",
-        "title": "이미지 비교 실험실 — 이미지 생성 모델 세대 간 20종 대조 공개"
-       },
-       {
-        "id": "3615205d53567c32",
-        "title": "국가AI전략위원회 1년 타임라인 — 분과별 정책 기록을 근거와 함께 따라가는 아카이브"
        }
       ],
       "domestic": false,
       "variants": [
        "ChatGPT GPTs",
        "ChatGPT(팀계정)",
-       "GPT Image 2",
-       "GPT Image 2.5 Sunburst",
        "GPT(OpenAI API)",
        "GPT-5.6 Luna",
        "GPT-5.6 Luna(OpenRouter, 동의 시)",
        "GPT-5.6 Terra",
-       "GPT-6 Astra",
        "OpenAI GPT-5(Responses API)",
        "OpenAI/Anthropic(사용자 키)",
        "OpenAI/Claude(제공자 전환형)"
@@ -1259,9 +1267,9 @@
    }
   ]
  },
- "domestic_model_rate": 0.047,
- "local_model_rate": 0.247,
- "model_known": 85,
+ "domestic_model_rate": 0.048,
+ "local_model_rate": 0.253,
+ "model_known": 83,
  "license_tagged": 282,
  "license_stated_rate": 0.525,
  "gitlab_cases": 182,
@@ -1270,7 +1278,7 @@
  "mcp_cases": 79,
  "transition_funnel": {
   "기관 공식": 33,
-  "미확인": 302,
+  "미확인": 304,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1278,7 +1286,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.674
+  "feedback": 0.675
  },
  "maintenance_distribution": {
   "활발": 198,
