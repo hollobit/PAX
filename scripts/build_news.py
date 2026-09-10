@@ -113,6 +113,33 @@ META = {
 }
 TITLE_TAG = re.compile(r"<title[^>]*>(.*?)</title>", re.I | re.S)
 
+# og:type도 발행시각도 달지 않는 매체가 있다(헬스조선 등). 그때는 '매체 이름이 있고
+# 주소가 기사 모양인가'로 받는다 — 매체명은 발행물이라는 표시이고, 아래 경로 모양은
+# 목록·소개 화면이 아니라 개별 기사에 붙는다.
+# 기사가 내려간 자리에 안내 문구만 남은 화면이 있다 — 제목이 그 문구이면 목록에 두지 않는다.
+DEAD_TITLE = re.compile(
+    r"삭제된 기사|삭제되었습니다|존재하지 않는|찾을 수 없|서비스가 종료|권한이 없|로그인이 필요"
+    r"|page not found|not found|access denied|error", re.I)
+
+ARTICLE_PATH = re.compile(
+    r"articleView|idxno=|/news/|/article/|/articles/|html_dir|/view/|[?&]no=\d|/\d{6,}", re.I)
+
+
+CHARSET = re.compile(rb"""charset=["']?\s*([\w-]+)""", re.I)
+
+
+def decode_body(raw: bytes) -> str:
+    """문서가 선언한 인코딩을 따른다 — 국내 매체 중에 아직 EUC-KR로 내보내는 곳이 있어,
+    UTF-8로만 읽으면 제목이 깨진 채로 목록에 실린다."""
+    m = CHARSET.search(raw[:4096])
+    enc = (m.group(1).decode("ascii", "ignore").lower() if m else "utf-8")
+    if enc in ("euc-kr", "ks_c_5601-1987", "ksc5601", "cp949"):
+        enc = "cp949"
+    try:
+        return raw.decode(enc, "replace")
+    except LookupError:
+        return raw.decode("utf-8", "replace")
+
 
 def probe(url: str) -> dict | None:
     """페이지를 열어 기사 표지를 확인한다. 기사가 아니거나 못 열면 None."""
@@ -124,7 +151,7 @@ def probe(url: str) -> dict | None:
         )
     except Exception:
         return None
-    body = res.stdout.decode("utf-8", "replace")
+    body = decode_body(res.stdout)
     if not body:
         return None
     def grab(key: str) -> str:
@@ -132,8 +159,9 @@ def probe(url: str) -> dict | None:
         return m.group(2).strip() if m else ""
 
     host = (urlparse(url).hostname or "").replace("www.", "").lower()
-    og_type, pub = grab("type"), grab("pub")
-    is_article = og_type.lower() == "article" or bool(pub)
+    og_type, pub, site = grab("type"), grab("pub"), grab("site")
+    is_article = (og_type.lower() == "article" or bool(pub)
+                  or (bool(site) and bool(ARTICLE_PATH.search(url))))
 
     if not is_article and GOV_HOST.search(host):
         m = TITLE_TAG.search(body)
@@ -154,7 +182,8 @@ def probe(url: str) -> dict | None:
         m = TITLE_TAG.search(body)
         title = re.sub(r"\s+", " ", m.group(1)).strip() if m else ""
     title = html.unescape(title).strip()
-    if not title:
+    # 인코딩을 잘못 짚었으면 대체문자가 섞인다 — 깨진 제목은 목록에 두지 않는다.
+    if not title or title.count("\ufffd") > 2 or DEAD_TITLE.search(title):
         return None
     outlet = html.unescape(grab("site")).strip()
     if not outlet:
@@ -228,7 +257,8 @@ def tidy(title: str, outlet: str, host: str = "") -> tuple[str, str]:
     outlet = HOST_NAME.get(outlet, outlet) or HOST_NAME.get(host, host)
     if outlet:
         # "제목 - 매체명", "제목 | 매체명" 꼴을 제거한다(매체명이 그대로 붙은 경우만).
-        tail = re.compile(r"\s*[|\-–—]\s*" + re.escape(outlet) + r"\s*$", re.I)
+        # 구분자는 매체마다 다르고(ㅣ·|·-·:) 아예 없이 띄어쓰기만 두는 곳도 있다.
+        tail = re.compile(r"\s*[|\-–—:·ㅣ]?\s*" + re.escape(outlet) + r"\s*$", re.I)
         title = tail.sub("", title)
     title = SEP.sub("", title).strip()
     return title, outlet
@@ -241,16 +271,24 @@ def main() -> int:
     except Exception:
         cache = {}
 
-    todo = [u for u in found if u not in cache]
+    # 실패를 영영 기억하면 그때 막혔던 곳이 되살아나도 다시 못 본다 — 이레 지나면 다시 두드린다.
+    stale = (datetime.date.today() - datetime.timedelta(days=7)).isoformat()
+    todo = [u for u in found
+            if u not in cache
+            or (cache[u] is None)
+            or (isinstance(cache[u], dict) and cache[u].get("failed_at", "9999") < stale
+                and not cache[u].get("title"))]
     if todo:
         with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
+            today_iso = datetime.date.today().isoformat()
             for url, meta in zip(todo, ex.map(probe, todo)):
-                cache[url] = meta  # 실패도 기록해 다음 회차에 다시 두드리지 않는다
+                # 실패도 날짜와 함께 기록해 매 회차 다시 두드리지 않되, 영영 묻어 두지도 않는다.
+                cache[url] = meta if meta else {"failed_at": today_iso}
 
     items = []
     for url, rec in found.items():
         meta = cache.get(url)
-        if not meta:
+        if not meta or not meta.get("title"):
             continue
         host = (urlparse(url).hostname or "").replace("www.", "")
         title, outlet = tidy(meta["title"], meta.get("outlet", ""), host)
