@@ -1875,6 +1875,30 @@ main {
   font-weight: 600;
 }
 
+/* 정렬 줄 — .task-chips의 음수 상단 여백은 첫 화면에서 controls 상자 바로 밑에 붙일 때
+   쓰려고 둔 값이라, control 안에 넣으면 라벨 밑으로 딸려 올라가고 아래가 벌어진다. */
+.task-chips--inline {
+  margin: 0;
+  align-items: center;
+}
+
+.control--row {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.controls--inline {
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .controls--inline {
+    grid-template-columns: 1fr;
+  }
+}
+
 .video-meta {
   margin: 0;
   color: var(--ink-faint);
