@@ -1899,6 +1899,26 @@ main {
   }
 }
 
+/* 증감 배지 — 지표 이름 옆에 붙는다. 오름/내림은 색만이 아니라 기호(▲▼)로도 구분한다. */
+.dash-delta {
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.32rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* 오름이 곧 좋음은 아니다(예: 라이선스 미표시율). 색으로 잘잘못을 말하지 않고
+   방향은 기호(▲▼)로만 알린다 — 지표마다 좋은 방향이 달라서다. */
+.dash-delta--up,
+.dash-delta--down {
+  background: var(--bg-inset);
+  color: var(--ink-soft);
+}
+
 .news-list {
   display: flex;
   flex-direction: column;

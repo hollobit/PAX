@@ -72,6 +72,23 @@ async function main() {
   // 색: 카테고리 색 없음(각 지표는 독립) — 단일 강조색 + 상태색(라벨 병기).
   //     별 합계는 규모 차가 커(17만 vs 330) 같은 축에 올리지 않고 값으로 병기한다.
   (async function renderDashboard() {
+    // 증감 표시용 일자별 원장(scripts/build_dashboard_history.py). 없으면 배지만 빠지고 나머지는 그대로 뜬다.
+    let hist = null, histPrev = null, histPrevDate = '';
+    try {
+      const hres = await fetch('./data/dashboard-history.json', { cache: 'no-cache' });
+      if (hres.ok) {
+        const hdoc = await hres.json();
+        const ds = Object.keys(hdoc.days || {}).sort();
+        if (ds.length) {
+          hist = hdoc.days[ds[ds.length - 1]];
+          for (let i = ds.length - 2; i >= 0; i -= 1) {
+            const row = hdoc.days[ds[i]];
+            if (row && Object.keys(row).length > 1) { histPrev = row; histPrevDate = ds[i]; break; }
+          }
+        }
+      }
+    } catch (e) { /* 이력이 없어도 현황판은 떠야 한다 */ }
+
     const grid = document.getElementById('dash-grid');
     if (!grid) return;
     const NS = 'http://www.w3.org/2000/svg';
@@ -99,6 +116,29 @@ async function main() {
       return box;
     }
     function sub(box, text) { box.appendChild(el('p', 'dash-tile__sub', text)); }
+
+    // 직전 기록일 대비 증감. 값이 같거나 비교할 이전 값이 없으면 아무것도 붙이지 않는다 —
+    // '0'이나 '—'를 채워 넣으면 변화가 없다는 뜻인지 자료가 없다는 뜻인지 구분되지 않는다.
+    function delta2(box, key, opts) { delta(box, key, opts); return box; }
+
+    function delta(box, key, opts) {
+      const o = opts || {};
+      if (!hist || !histPrev) return;
+      const now = hist[key];
+      const was = histPrev[key];
+      if (now == null || was == null) return;
+      const diff = now - was;
+      if (!diff) return;
+      const up = diff > 0;
+      const txt = o.pct
+        ? `${up ? '▲' : '▼'}${Math.abs(diff * 100).toFixed(1)}%p`
+        : `${up ? '▲' : '▼'}${num(Math.abs(diff))}`;
+      const badge = el('span', `dash-delta ${up ? 'dash-delta--up' : 'dash-delta--down'}`, txt);
+      badge.title = `직전 기록(${histPrevDate}) 대비 ${up ? '증가' : '감소'}`
+        + (hist.source === '복원' || (histPrev.source === '복원') ? ' · 복원값 포함' : '');
+      const head = box.querySelector('.dash-tile__label');
+      if (head) head.appendChild(badge);
+    }
 
     // ① 링 게이지 — 0~100% 비율
     function gauge(label, value, subText, opts) {
@@ -200,25 +240,25 @@ async function main() {
       caseSeries = Object.keys(byDay).sort().map((d) => { cum += byDay[d]; return [d, cum]; });
     } catch (e) { /* 스파크라인만 생략 */ }
 
-    grid.appendChild(spark('공공AX 아카이브 누적', idx.total_cases, '건', caseSeries,
-      caseSeries ? `${caseSeries[0][0]} 관측 시작` : '아카이브 총계', { tone: 'key' }));
-    grid.appendChild(gauge('MCP 사례 비율', mcpRate, `${num(idx.mcp_cases)}건 / 전체 ${num(idx.total_cases)}건`,
-      { href: '#mcp' }));
-    grid.appendChild(spark('챔피언', idx.total_champions, '명', null, '프로젝트가 식별된 인원', { href: 'champions.html' }));
-    grid.appendChild(spark('오픈톡 가입자', members ? members.latest : null, '명',
+    grid.appendChild(delta2(spark('공공AX 아카이브 누적', idx.total_cases, '건', caseSeries,
+      caseSeries ? `${caseSeries[0][0]} 관측 시작` : '아카이브 총계', { tone: 'key' }), 'total_cases', null));
+    grid.appendChild(delta2(gauge('MCP 사례 비율', mcpRate, `${num(idx.mcp_cases)}건 / 전체 ${num(idx.total_cases)}건`,
+      { href: '#mcp' }), 'mcp_rate', { pct: true }));
+    grid.appendChild(delta2(spark('챔피언', idx.total_champions, '명', null, '프로젝트가 식별된 인원', { href: 'champions.html' }), 'total_champions', null));
+    grid.appendChild(delta2(spark('오픈톡 가입자', members ? members.latest : null, '명',
       members ? members.series : null, members ? `${members.first_date} ${num(members.first)}명에서 관측 시작` : '—',
-      { href: '#community' }));
-    grid.appendChild(gauge('국산 모델 채택률', idx.domestic_model_rate,
-      `LLM 런타임 ${num(idx.model_known)}건 기준`, { href: '#models', tone: 'watch', flag: '낮음' }));
-    grid.appendChild(gauge('로컬 오픈웨이트 실행률', idx.local_model_rate,
-      '데이터를 내보내지 않는 실행', { href: '#models' }));
+      { href: '#community' }), 'members', null));
+    grid.appendChild(delta2(gauge('국산 모델 채택률', idx.domestic_model_rate,
+      `LLM 런타임 ${num(idx.model_known)}건 기준`, { href: '#models', tone: 'watch', flag: '낮음' }), 'domestic_model_rate', { pct: true }));
+    grid.appendChild(delta2(gauge('로컬 오픈웨이트 실행률', idx.local_model_rate,
+      '데이터를 내보내지 않는 실행', { href: '#models' }), 'local_model_rate', { pct: true }));
     grid.appendChild(pairBars('저장소 규모', [
       { name: 'GitHub', v: gh.count || 0, stars: gh.stars_sum || 0 },
       { name: '공공 깃랩', v: gl.count || 0, stars: gl.stars_sum || 0 },
     ], '막대는 저장소 수 · ★는 스타 합계(척도가 달라 같은 축에 두지 않음)', { href: '#repos' }));
-    grid.appendChild(gauge('깃랩 라이선스 미표시', glNone,
+    grid.appendChild(delta2(gauge('깃랩 라이선스 미표시', glNone,
       `${num(glLic.total)}건 중 ${num(glLic.total - glLic.stated)}건 미표시`,
-      { href: '#licenses', tone: 'watch', flag: '주의' }));
+      { href: '#licenses', tone: 'watch', flag: '주의' }), 'gitlab_license_none_rate', { pct: true }));
 
     // ── 분류 구성 패널 ──
     // 형태: 순위 막대. 10~20개 항목에 카테고리 색을 쓰면 팔레트가 무너지므로
