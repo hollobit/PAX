@@ -89,6 +89,13 @@ async function main() {
       }
     } catch (e) { /* 이력이 없어도 현황판은 떠야 한다 */ }
 
+    // 분야 판정에 만든 사람의 소속을 함께 넣는다 — 첫 화면과 같은 방식으로 엮어야 숫자가 맞는다.
+    let champAff = new Map();
+    try {
+      const cres = await fetch('./data/champions.json', { cache: 'no-cache' });
+      if (cres.ok) champAff = buildChampAffMap(await cres.json());
+    } catch (e) { /* 소속을 못 얻어도 제목·요약·기관명만으로 판정한다 */ }
+
     const grid = document.getElementById('dash-grid');
     if (!grid) return;
     const NS = 'http://www.w3.org/2000/svg';
@@ -314,13 +321,15 @@ async function main() {
       // 분야별 구성 — 첫 화면 분야 칩과 같은 정의(site/case-domains.js)를 쓴다.
       // 업무 축과 달리 한 사례가 여러 분야에 걸치고 어느 분야에도 안 걸리는 사례도 많아,
       // 합이 100%를 넘는다는 것과 미분류 수를 함께 밝힌다.
+      const affOf = (c) => champAff.get(c.id) || '';
       const domainCaseRows = CASE_DOMAINS
-        .map((d) => [d.name, allCases.filter((c) => matchesCaseDomain(c, d.name)).length])
+        .map((d) => [d.name, allCases.filter((c) => matchesCaseDomain(c, d.name, affOf(c))).length])
         .filter(([, n]) => n > 0)
         .sort((a, b) => b[1] - a[1]);
-      const unclassified = allCases.filter((c) => caseDomainCount(c) === 0).length;
+      const unclassified = allCases.filter((c) => caseDomainCount(c, affOf(c)) === 0).length;
       panelsBox.appendChild(panel('분야별 구성', domainCaseRows, totalC,
-        `전체 ${num(totalC)}건 기준 · 한 사례가 여러 분야에 걸칠 수 있어 비율 합은 100%를 넘습니다 · ` +
+        `전체 ${num(totalC)}건 기준 · 도구가 다루는 내용과 기관·만든 사람의 소속을 함께 봅니다 · ` +
+        '한 사례가 여러 분야에 걸칠 수 있어 비율 합은 100%를 넘습니다 · ' +
         `어느 분야에도 걸리지 않은 사례 ${num(unclassified)}건`,
         { href: 'index.html' }));
 
