@@ -533,7 +533,7 @@ function matches(c, f) {
   if (f.source !== '전체' && c.source !== (f.source === 'Threads' ? 'threads' : 'kakao')) return false;
   if (f.tag && !c.tags.includes(f.tag)) return false;
   if (f.taskCat !== '전체' && c.task_category !== f.taskCat) return false;
-  if (f.domain !== '전체' && !matchesDomain(c, f.domain)) return false;
+  if (f.domain !== '전체' && !matchesDomain(c, f.domain, state.champAffOfCase.get(c.id) || '')) return false;
   if (f.noInstallOnly && c.runtime_env !== '브라우저만') return false;
   if (f.region) {
     if (f.region === '미상') {
@@ -686,7 +686,7 @@ function renderDomainChips() {
   for (const name of ['전체', ...DOMAIN_NAMES]) {
     const n = name === '전체'
       ? state.cases.length
-      : state.cases.filter((c) => matchesDomain(c, name)).length;
+      : state.cases.filter((c) => matchesDomain(c, name, state.champAffOfCase.get(c.id) || '')).length;
     if (name !== '전체' && n === 0) continue;
     const btn = document.createElement('button');
     btn.type = 'button';
