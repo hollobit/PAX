@@ -48,6 +48,7 @@
       </div>
       <p id="news-meta" class="video-meta"></p>
     </section>
+    <nav id="news-kind" class="task-chips task-chips--domain" aria-label="분류"></nav>
     <section id="news-list" class="news-list" aria-label="기사 목록"></section>
     <p id="error-state" class="empty-state" hidden>기사 목록을 불러오지 못했습니다</p>
   </main>
@@ -67,6 +68,7 @@
       ];
       const PAGE_SIZE = 100;
       let sort = 'recent';
+      let kind = '전체';
       let page = 1;
       let articles = [];
 
@@ -75,7 +77,7 @@
       const sortEl = document.getElementById('news-sort');
 
       function sorted() {
-        const rows = [...articles];
+        const rows = articles.filter((x) => kind === '전체' || x.kind === kind);
         const byDate = (a, b, k) => (b[k] > a[k] ? 1 : b[k] < a[k] ? -1 : 0);
         if (sort === 'shares') rows.sort((a, b) => (b.shares - a.shares) || byDate(a, b, 'last_shared'));
         else if (sort === 'published') rows.sort((a, b) => byDate(a, b, 'published'));
@@ -98,6 +100,8 @@
         const meta = document.createElement('p');
         meta.className = 'news-item__meta';
         const bits = [];
+        // 기관 게시물은 기사와 성격이 달라 무엇인지 함께 적는다.
+        if (x.kind && x.kind !== '기사') bits.push(x.kind);
         if (x.outlet) bits.push(x.outlet);
         if (x.published) bits.push(x.published + ' 보도');
         bits.push(x.last_shared + ' 공유');
@@ -131,6 +135,28 @@
         return nav;
       }
 
+      function renderKinds() {
+        const el = document.getElementById('news-kind');
+        el.replaceChildren();
+        const label = document.createElement('span');
+        label.className = 'chip-row-label';
+        label.textContent = '분류';
+        el.appendChild(label);
+        const counts = new Map();
+        for (const x of articles) counts.set(x.kind, (counts.get(x.kind) || 0) + 1);
+        for (const k of ['전체', '기사', '보도자료', '공고·안내']) {
+          const n = k === '전체' ? articles.length : (counts.get(k) || 0);
+          if (k !== '전체' && n === 0) continue;
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'task-chip';
+          btn.textContent = `${k} ${n}`;
+          btn.setAttribute('aria-pressed', String(kind === k));
+          btn.addEventListener('click', () => { kind = k; page = 1; render(); });
+          el.appendChild(btn);
+        }
+      }
+
       function render() {
         const rows = sorted();
         const pages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
@@ -138,6 +164,7 @@
         listEl.replaceChildren();
         for (const x of rows.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)) listEl.appendChild(row(x));
         if (pages > 1) listEl.appendChild(pager(rows.length, pages));
+        renderKinds();
         sortEl.replaceChildren();
         for (const s of SORTS) {
           const btn = document.createElement('button');
