@@ -147,6 +147,7 @@ python3 scripts/build_champions.py
 python3 scripts/build_index.py            # 공공 AX 지수 갱신 (분기 말에는 --snapshot 추가)
 python3 scripts/build_case_pages.py       # 사례별 정적 상세 페이지 재생성
 python3 scripts/build_community_stats.py  # 커뮤니티 활력 지표(대화량·가입자·Threads 관측) 갱신
+python3 scripts/build_videos.py           # 공유된 동영상 목록 갱신 (raw 전체 재스캔, 제목은 캐시)
 PYTHONPATH=scripts python3 scripts/build_mcp_review.py  # MCP 검증 공개본 (원장 변경 시)
 python3 scripts/stamp_assets.py            # site의 JS·CSS를 고쳤을 때만 (캐시 무효화)
 ```
