@@ -11,7 +11,7 @@
   <meta property="og:description" content="오픈채팅과 Threads에서 공유된 동영상 모음">
   <meta property="og:url" content="https://hollobit.github.io/PAX/videos.html">
   <meta property="og:site_name" content="모두의 공공AX 사례 아카이브">
-  <link rel="stylesheet" href="style.css?v=ad15fa87">
+  <link rel="stylesheet" href="style.css?v=33c7901c">
 </head>
 <body>
   <header class="site-header">
@@ -81,12 +81,47 @@
         return rows;
       }
 
+      // 커서가 머문 카드만 미리보기를 켠다. 목록을 가로지르는 커서에 영상이 줄줄이 뜨면
+      // 카드 수만큼 유튜브 플레이어가 붙으므로, 잠깐 머문 뒤에야 띄우고 한 번에 하나만 남긴다.
+      const HOVER_DELAY = 450;
+      const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const previewOn = canHover && !reduceMotion;
+      let hoverTimer = null;
+      let playing = null;
+
+      function stopPreview() {
+        clearTimeout(hoverTimer);
+        if (playing) {
+          playing.querySelector('.video-card__frame')?.remove();
+          playing.classList.remove('is-previewing');
+          playing = null;
+        }
+      }
+
+      function startPreview(media, v) {
+        stopPreview();
+        const frame = document.createElement('iframe');
+        // 쿠키를 덜 남기는 도메인을 쓰고, 소리는 끈 채로만 자동재생한다(브라우저가 허용하는 유일한 형태).
+        frame.className = 'video-card__frame';
+        frame.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(v.id)}`
+          + '?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&playsinline=1&loop=1'
+          + `&playlist=${encodeURIComponent(v.id)}`;
+        frame.title = `${v.title} 미리보기`;
+        frame.setAttribute('allow', 'autoplay; encrypted-media');
+        frame.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+        frame.tabIndex = -1;
+        media.appendChild(frame);
+        media.closest('.video-card').classList.add('is-previewing');
+        playing = media.closest('.video-card');
+      }
+
       function card(v) {
-        const a = document.createElement('a');
-        a.className = 'video-card';
-        a.href = v.url;
-        a.target = '_blank';
-        a.rel = 'noopener';
+        const art = document.createElement('article');
+        art.className = 'video-card';
+
+        const media = document.createElement('div');
+        media.className = 'video-card__media';
 
         const img = document.createElement('img');
         // src보다 먼저 정해야 지연 로딩이 실제로 걸린다.
@@ -97,14 +132,37 @@
         img.className = 'video-card__thumb';
         img.alt = '';
         img.src = v.thumb;
-        a.appendChild(img);
+        media.appendChild(img);
+
+        // 재생 중에도 클릭은 유튜브로 가야 하므로, 링크를 미리보기 위에 덮어 둔다.
+        const hit = document.createElement('a');
+        hit.className = 'video-card__hit';
+        hit.href = v.url;
+        hit.target = '_blank';
+        hit.rel = 'noopener';
+        hit.setAttribute('aria-label', `${v.title} — 유튜브에서 열기`);
+        media.appendChild(hit);
+        art.appendChild(media);
+
+        if (previewOn) {
+          media.addEventListener('mouseenter', () => {
+            clearTimeout(hoverTimer);
+            hoverTimer = setTimeout(() => startPreview(media, v), HOVER_DELAY);
+          });
+          media.addEventListener('mouseleave', stopPreview);
+        }
 
         const body = document.createElement('div');
         body.className = 'video-card__body';
 
         const h = document.createElement('h2');
         h.className = 'video-card__title';
-        h.textContent = v.title;
+        const link = document.createElement('a');
+        link.href = v.url;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.textContent = v.title;
+        h.appendChild(link);
         body.appendChild(h);
 
         if (v.channel) {
@@ -121,11 +179,12 @@
         foot.textContent = bits.join(' · ');
         body.appendChild(foot);
 
-        a.appendChild(body);
-        return a;
+        art.appendChild(body);
+        return art;
       }
 
       function render() {
+        stopPreview();   // 다시 그리면 재생 중이던 카드가 사라지므로 타이머·상태를 먼저 끊는다
         listEl.replaceChildren();
         for (const v of sorted()) listEl.appendChild(card(v));
         sortEl.replaceChildren();
