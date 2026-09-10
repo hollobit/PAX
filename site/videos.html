@@ -11,7 +11,7 @@
   <meta property="og:description" content="오픈채팅과 Threads에서 공유된 동영상 모음">
   <meta property="og:url" content="https://hollobit.github.io/PAX/videos.html">
   <meta property="og:site_name" content="모두의 공공AX 사례 아카이브">
-  <link rel="stylesheet" href="style.css?v=392fd45c">
+  <link rel="stylesheet" href="style.css?v=674e5b53">
 </head>
 <body>
   <header class="site-header">
@@ -41,14 +41,20 @@
     </nav>
   </header>
   <main>
-    <section class="controls controls--inline" aria-label="정렬">
+    <section class="controls controls--inline" aria-label="검색 및 정렬">
+      <label class="control control--search">
+        <span class="control-label">검색</span>
+        <input type="search" id="video-search" placeholder="제목·채널 검색">
+      </label>
       <div class="control control--row">
         <span class="control-label">정렬</span>
         <nav id="video-sort" class="task-chips task-chips--inline" aria-label="정렬 기준"></nav>
       </div>
       <p id="video-meta" class="video-meta"></p>
+      <p id="video-count" class="search-count" hidden></p>
     </section>
     <section id="video-list" class="video-grid" aria-label="동영상 목록"></section>
+    <p id="empty-state" class="empty-state" hidden>검색어에 맞는 동영상이 없습니다</p>
     <p id="error-state" class="empty-state" hidden>동영상 목록을 불러오지 못했습니다</p>
   </main>
   <footer class="site-footer">
@@ -65,14 +71,25 @@
         { key: 'shares', label: '많이 공유된 순' },
       ];
       let sort = 'recent';
+      let q = '';
       let videos = [];
 
       const listEl = document.getElementById('video-list');
+      const emptyEl = document.getElementById('empty-state');
+      const countEl = document.getElementById('video-count');
+      const searchEl = document.getElementById('video-search');
       const metaEl = document.getElementById('video-meta');
       const sortEl = document.getElementById('video-sort');
 
+      // 검색은 제목과 채널만 본다 — 공유 시점·횟수는 정렬로 다루는 편이 낫다.
+      function hit(v) {
+        if (!q) return true;
+        const hay = `${v.title} ${v.channel || ''}`.toLowerCase();
+        return q.split(/\s+/).filter(Boolean).every((w) => hay.includes(w));
+      }
+
       function sorted() {
-        const rows = [...videos];
+        const rows = videos.filter(hit);
         if (sort === 'shares') {
           rows.sort((a, b) => (b.shares - a.shares) || (b.last_shared > a.last_shared ? 1 : -1));
         } else {
@@ -185,8 +202,12 @@
 
       function render() {
         stopPreview();   // 다시 그리면 재생 중이던 카드가 사라지므로 타이머·상태를 먼저 끊는다
+        const rows = sorted();
         listEl.replaceChildren();
-        for (const v of sorted()) listEl.appendChild(card(v));
+        for (const v of rows) listEl.appendChild(card(v));
+        emptyEl.hidden = rows.length !== 0;
+        countEl.textContent = q ? `검색 결과 ${rows.length}편` : '';
+        countEl.hidden = !q;
         sortEl.replaceChildren();
         for (const s of SORTS) {
           const btn = document.createElement('button');
@@ -207,6 +228,17 @@
         const repeats = videos.filter((v) => v.shares >= 2).length;
         const first = videos.reduce((m, v) => (!m || v.first_shared < m ? v.first_shared : m), '');
         metaEl.textContent = `${videos.length}편 · 두 번 이상 공유된 영상 ${repeats}편 · ${first} 이후 관측`;
+        const p = new URLSearchParams(location.search);
+        q = (p.get('q') || '').trim().toLowerCase();
+        if (q) searchEl.value = p.get('q');
+        searchEl.addEventListener('input', () => {
+          q = searchEl.value.trim().toLowerCase();
+          const u = new URLSearchParams();
+          if (searchEl.value.trim()) u.set('q', searchEl.value.trim());
+          const qs = u.toString();
+          history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+          render();
+        });
         render();
       } catch (err) {
         console.error('videos.json 로드 실패:', err);
