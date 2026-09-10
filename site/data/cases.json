@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-10T07:43:44+09:00",
+ "updated_at": "2026-09-10T23:42:32+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -10921,7 +10921,7 @@
    "date": "2026-09-09",
    "task_category": "회계·정산",
    "id": "017deb488964980d",
-   "thumb_v": 1788994049
+   "thumb_v": 1788994741
   },
   {
    "models_used": [
@@ -10948,7 +10948,56 @@
    "date": "2026-09-09",
    "task_category": "시설·안전",
    "id": "fcfac85b15998dee",
-   "thumb_v": 1788994052
+   "thumb_v": 1788994741
+  },
+  {
+   "summary": "적산 프로그램이 넘긴 학교시설 설계내역서 엑셀 여섯 시트를 브라우저에서 그대로 열고, 일위대가 호표와 단가를 고치면 내역서·집계표·원가계산서까지 다시 계산하는 도구다. 표준 일위대가(건축·기계설비·토목)를 넣은 단독 HTML 본이 따로 있어 외부 접속이 막힌 업무망에서도 파일 하나로 쓴다. 공사 내용을 문장으로 적으면 맞는 호표를 골라 주는 도우미는 올라마나 LM 스튜디오로 띄운 로컬 모델에만 묻고 바깥으로 나가는 통신이 없다.",
+   "runtime_env": "브라우저만",
+   "collected_at": "2026-09-10",
+   "model_dependency": "모델 중립(BYO)",
+   "link": "https://seum8660.github.io/educost/",
+   "tags": [
+    "공사내역",
+    "적산",
+    "대시보드",
+    "로컬LLM"
+   ],
+   "case_class": "개인 개발",
+   "org_type": "공직 개인",
+   "network_req": "로컬 완결",
+   "task_category": "계약·조달",
+   "org": "공직 현장(개인 개발)",
+   "source": "kakao",
+   "date": "2026-09-10",
+   "title": "에듀코스트 — 학교시설 설계내역서 대시보드",
+   "case_url": "https://github.com/seum8660/educost",
+   "id": "2f27c87e6f7c7614",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-09-10"
+  },
+  {
+   "summary": "담당 중인 시설사업의 설계도면을 생성형 AI로 3차원 모델로 바꿔 기업 입주 현황과 주차장 실제 동선, 인근 건물까지 재현한 실무 적용기다. 수작업으로 오래 걸리던 모델링을 짧은 시간에 대체해 부서 내부 검토 자료로 썼다. 도면을 다루는 공공 시설·토목 업무에서 2차원 산출물을 곧바로 3차원 검토로 넘기는 사용법을 보여 준다.",
+   "collected_at": "2026-09-10",
+   "model_dependency": "해외 상용 API",
+   "link": "https://www.threads.com/@g.nu.das/post/DdGc9WvElt_",
+   "tags": [
+    "3D모델링",
+    "시설사업",
+    "설계도면",
+    "생성형AI"
+   ],
+   "case_class": "개인 개발",
+   "org_type": "공직 개인",
+   "task_category": "시설·안전",
+   "models_used": [
+    "GPT-6 Astra"
+   ],
+   "org": "공직 현장(개인 개발)",
+   "source": "threads",
+   "date": "2026-09-10",
+   "title": "설계도면을 3차원으로 — 공공 시설사업 검토에 생성형 3D 모델링 적용",
+   "id": "a3b9afb1d17d15a0"
   }
  ]
 }
