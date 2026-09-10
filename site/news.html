@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>공유 뉴스 — 모두의 공공AX 사례 아카이브</title>
+  <meta name="description" content="공공AX 커뮤니티에서 공유된 뉴스 기사 모음">
+  <link rel="canonical" href="https://hollobit.github.io/PAX/news.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="공유 뉴스 — 모두의 공공AX">
+  <meta property="og:description" content="오픈채팅과 Threads에서 공유된 뉴스 기사 모음">
+  <meta property="og:url" content="https://hollobit.github.io/PAX/news.html">
+  <meta property="og:site_name" content="모두의 공공AX 사례 아카이브">
+  <link rel="stylesheet" href="style.css?v=ad15fa87">
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">PUBLIC SECTOR AX RECORD · 공유 뉴스</p>
+    <h1>공유 뉴스</h1>
+    <p class="tagline">오픈채팅과 Threads에서 공유된 뉴스 기사를 모았습니다</p>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="./">사례 아카이브</a>
+      <a href="dashboard.html">AX 평가</a>
+      <a href="champions.html">챔피언</a>
+      <a href="ax-maturity-infographic.html">AX 성숙도 개념</a>
+      <a href="observatory.html">관측소</a>
+      <a href="gap-map.html">격차 지도</a>
+      <a href="mcp-review.html">MCP 검증</a>
+      <a href="playbook.html">전이 플레이북</a>
+      <a href="guidelines.html">안내서·가이드라인</a>
+      <a href="videos.html">공유 동영상</a>
+      <a href="news.html" aria-current="page">공유 뉴스</a>
+      <a href="changelog.html">변경 기록</a>
+    </nav>
+    <nav class="site-nav site-nav--external" aria-label="관련 사이트">
+      <a href="https://hollobit.github.io/GAPI2/ecosystem.html" target="_blank" rel="noopener">MCP·AI 도구 ↗</a>
+      <a href="https://ax360.kr/national-ax-project/card" target="_blank" rel="noopener">AX 사업 찾기 ↗</a>
+      <a href="https://ax360.kr/national-ai-resource/model" target="_blank" rel="noopener">AX 자원 찾기 ↗</a>
+      <a href="https://ax360.kr/private-ai-company/heatmap" target="_blank" rel="noopener">AI 기업 찾기 ↗</a>
+      <a href="https://axboard.aigov.go.kr/" target="_blank" rel="noopener">AI 정부실험실 ↗</a>
+    </nav>
+  </header>
+  <main>
+    <section class="controls controls--inline" aria-label="정렬">
+      <div class="control control--row">
+        <span class="control-label">정렬</span>
+        <nav id="news-sort" class="task-chips task-chips--inline" aria-label="정렬 기준"></nav>
+      </div>
+      <p id="news-meta" class="video-meta"></p>
+    </section>
+    <section id="news-list" class="news-list" aria-label="기사 목록"></section>
+    <p id="error-state" class="empty-state" hidden>기사 목록을 불러오지 못했습니다</p>
+  </main>
+  <footer class="site-footer">
+    <p class="site-footer__contribute">공유하고 싶은 기사가 있으면 아래 링크의 threads 또는 오픈채팅에 올려주세요. 다음 수집 때 이 목록에 반영됩니다.</p>
+    <p class="site-footer__curator">Curated by Jonghong Jeon, <a href="mailto:hollobit@etri.re.kr">hollobit@etri.re.kr</a></p>
+  </footer>
+  <script>
+    'use strict';
+    (async function () {
+      // 기사 자체의 정보만 담는다 — 누가 어떤 말과 함께 올렸는지는 데이터에 없다
+      // (scripts/build_news.py에서 걸러 낸다).
+      const SORTS = [
+        { key: 'recent', label: '최근 공유순' },
+        { key: 'shares', label: '많이 공유된 순' },
+        { key: 'published', label: '기사 발행순' },
+      ];
+      const PAGE_SIZE = 100;
+      let sort = 'recent';
+      let page = 1;
+      let articles = [];
+
+      const listEl = document.getElementById('news-list');
+      const metaEl = document.getElementById('news-meta');
+      const sortEl = document.getElementById('news-sort');
+
+      function sorted() {
+        const rows = [...articles];
+        const byDate = (a, b, k) => (b[k] > a[k] ? 1 : b[k] < a[k] ? -1 : 0);
+        if (sort === 'shares') rows.sort((a, b) => (b.shares - a.shares) || byDate(a, b, 'last_shared'));
+        else if (sort === 'published') rows.sort((a, b) => byDate(a, b, 'published'));
+        else rows.sort((a, b) => byDate(a, b, 'last_shared') || (b.shares - a.shares));
+        return rows;
+      }
+
+      function row(x) {
+        const a = document.createElement('a');
+        a.className = 'news-item';
+        a.href = x.url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+
+        const h = document.createElement('h2');
+        h.className = 'news-item__title';
+        h.textContent = x.title;
+        a.appendChild(h);
+
+        const meta = document.createElement('p');
+        meta.className = 'news-item__meta';
+        const bits = [];
+        if (x.outlet) bits.push(x.outlet);
+        if (x.published) bits.push(x.published + ' 보도');
+        bits.push(x.last_shared + ' 공유');
+        if (x.shares >= 2) bits.push('재공유 ' + x.shares + '회');
+        meta.textContent = bits.join(' · ');
+        a.appendChild(meta);
+        return a;
+      }
+
+      function pager(total, pages) {
+        const nav = document.createElement('nav');
+        nav.className = 'pager';
+        nav.setAttribute('aria-label', '쪽 이동');
+        const range = document.createElement('span');
+        range.className = 'pager__range';
+        range.textContent = `${(page - 1) * PAGE_SIZE + 1}–${Math.min(page * PAGE_SIZE, total)} / ${total}건`;
+        nav.appendChild(range);
+        const go = (n, label, opts = {}) => {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'pager__btn';
+          b.textContent = label;
+          if (opts.current) b.setAttribute('aria-current', 'page');
+          if (opts.disabled) b.disabled = true;
+          else b.addEventListener('click', () => { page = n; render(); listEl.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+          nav.appendChild(b);
+        };
+        go(page - 1, '‹ 이전', { disabled: page === 1 });
+        for (let n = 1; n <= pages; n += 1) go(n, String(n), { current: n === page });
+        go(page + 1, '다음 ›', { disabled: page === pages });
+        return nav;
+      }
+
+      function render() {
+        const rows = sorted();
+        const pages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
+        page = Math.min(Math.max(1, page), pages);
+        listEl.replaceChildren();
+        for (const x of rows.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)) listEl.appendChild(row(x));
+        if (pages > 1) listEl.appendChild(pager(rows.length, pages));
+        sortEl.replaceChildren();
+        for (const s of SORTS) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'task-chip';
+          btn.textContent = s.label;
+          btn.setAttribute('aria-pressed', String(sort === s.key));
+          btn.addEventListener('click', () => { sort = s.key; page = 1; render(); });
+          sortEl.appendChild(btn);
+        }
+      }
+
+      try {
+        const res = await fetch('./data/news.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const doc = await res.json();
+        articles = doc.articles || [];
+        const outlets = new Set(articles.map((x) => x.outlet).filter(Boolean)).size;
+        const repeats = articles.filter((x) => x.shares >= 2).length;
+        const first = articles.reduce((m, x) => (!m || x.first_shared < m ? x.first_shared : m), '');
+        metaEl.textContent = `${articles.length}건 · 매체 ${outlets}곳 · 두 번 이상 공유된 기사 ${repeats}건 · ${first} 이후 관측`;
+        render();
+      } catch (err) {
+        console.error('news.json 로드 실패:', err);
+        document.getElementById('error-state').hidden = false;
+      }
+    })();
+  </script>
+  <script src="anchors.js?v=206e78f5"></script>
+</body>
+</html>
