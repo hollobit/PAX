@@ -271,6 +271,19 @@ async function main() {
       panelsBox.appendChild(panel('업무 분류별 구성', tally('task_category'), totalC,
         `전체 ${num(totalC)}건 기준 · 도구가 없애는 업무 기준`, { href: 'index.html' }));
 
+      // 분야별 구성 — 첫 화면 분야 칩과 같은 정의(site/case-domains.js)를 쓴다.
+      // 업무 축과 달리 한 사례가 여러 분야에 걸치고 어느 분야에도 안 걸리는 사례도 많아,
+      // 합이 100%를 넘는다는 것과 미분류 수를 함께 밝힌다.
+      const domainCaseRows = CASE_DOMAINS
+        .map((d) => [d.name, allCases.filter((c) => matchesCaseDomain(c, d.name)).length])
+        .filter(([, n]) => n > 0)
+        .sort((a, b) => b[1] - a[1]);
+      const unclassified = allCases.filter((c) => caseDomainCount(c) === 0).length;
+      panelsBox.appendChild(panel('분야별 구성', domainCaseRows, totalC,
+        `전체 ${num(totalC)}건 기준 · 한 사례가 여러 분야에 걸칠 수 있어 비율 합은 100%를 넘습니다 · ` +
+        `어느 분야에도 걸리지 않은 사례 ${num(unclassified)}건`,
+        { href: 'index.html' }));
+
       // 공공데이터 도메인별 MCP — 접근성 매트릭스와 같은 도메인 정의·매칭 규칙을 쓴다
       const mcpList = allCases.filter(isMcpCase);
       const domainRows = DATA_DOMAINS
