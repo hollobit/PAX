@@ -27,28 +27,9 @@ const ORG_TYPE_BADGE_CLASS = {
 const TASK_CATEGORIES = ['인사·복무', '회계·정산', '계약·조달', '민원', '문서·기안',
   '감사·법무', '시설·안전', '데이터·통계', '기획·정책', '공통·범용'];
 
-// 분야(도메인) 분류 — 업무(기능) 축과 독립한 두 번째 축이다.
-// task_category는 단일값이라 분야를 담을 수 없고(예: 소방 민원 답변기는 '민원'이면서 '소방·재난'),
-// 한 사례가 여러 분야에 걸치는 일이 흔해 별도 축으로 두고 키워드로 판정한다.
-// 원장에 필드를 더하지 않으므로 스키마·병합 경로는 그대로다 — 키워드만 고치면 분류가 갱신된다.
-const DOMAIN_CATEGORIES = [
-  { name: '국방·병무', keywords: ['병무', '국방', '병역', '예비군', '장병'] },
-  { name: '교육·학교', keywords: ['학교', '교육청', '교육지원청', '교사', '학생', '급식', '유치원', '교원', '학사', '교무'] },
-  { name: '개인정보', keywords: ['개인정보', '가명정보', '비식별', '프라이버시', '마스킹', '정보주체'] },
-  { name: '보안', keywords: ['보안', '취약점', '침해사고', '암호화', '랜섬', 'SBOM'] },
-  { name: '소방·재난', keywords: ['소방', '재난', '119', '대피', '산불', '침수', '지진', '구조요청'] },
-  { name: '의료·복지', keywords: ['의료', '보건소', '보건의료', '복지', '병원', '돌봄', '기초생활', '장애인', '의약품', '요양', '건강보험'] },
-  { name: '특허', keywords: ['특허', '상표', '지식재산', '디자인권', '저작권', '실용신안', 'KIPRIS'] },
-  { name: '제도', keywords: ['법령', '조례', '규정', '규칙', '지침', '제도', '입법', '규제'] },
-];
-const DOMAIN_NAMES = DOMAIN_CATEGORIES.map((d) => d.name);
-
-function matchesDomain(c, name) {
-  const d = DOMAIN_CATEGORIES.find((x) => x.name === name);
-  if (!d) return true;
-  const text = `${c.title} ${(c.tags || []).join(' ')} ${c.summary}`;
-  return d.keywords.some((k) => text.includes(k));
-}
+// 분야(도메인) 분류는 site/case-domains.js가 정본이다 — 관측소 현황판과 같은 정의를 쓴다.
+const DOMAIN_NAMES = CASE_DOMAIN_NAMES;
+const matchesDomain = matchesCaseDomain;
 
 // 검색 동의어 사전 (로드맵 1-1): 실무 어휘 ↔ 사례 표기의 간극을 메운다
 const SYNONYMS = {
