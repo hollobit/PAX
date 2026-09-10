@@ -91,7 +91,8 @@
   `TODAY-kakao-pm.json`(오후·야간)에 저장한다 — `build_community_stats.py`가 `data/raw/*kakao*.json`
   중 리스트 형식 파일만 읽어 일별 대화량·가입자 추이를 집계하므로, 이름에 kakao가 없거나 dict로
   감싸면 그 회차 대화량이 통째로 빠진다(2026-08-30 실제 발생).
-- 수집 0건이면 4~6단계를 건너뛰고 7단계로 간다.
+- 메시지·게시물 수집이 0건이면 4단계와 5-A를 건너뛴다. **5-B는 그래도 실행한다** —
+  raw 아카이브 전체를 다시 훑는 집계라 이전 회차 누락분이 여기서 메워진다.
 
 ## 4. 사례 선별·구조화 (AI 판단)
 raw 항목마다 판단한다 — **실제 공공AX 사례인가?** 아래 두 카테고리 중 하나에
@@ -139,27 +140,42 @@ JSON 리스트로 저장한다:
   100 이상 확인된 경우에만 넣는다 — 사이트가 인기 배지와 인기순 상단 배치에 사용.
 
 ## 5. 병합·배포 데이터 갱신
+
+**두 갈래로 나뉜다.** 5-A는 신규 사례가 있을 때만, 5-B는 **신규 사례가 0건이어도 매 회차 반드시**
+실행한다. 5-B는 사례 원장이 아니라 수집 원문(`data/raw/`)과 커뮤니티 활동에서 나오므로,
+사례가 한 건도 안 늘어난 회차에도 공유 동영상·뉴스·대화량은 늘어 있다.
+
+### 5-A. 신규 사례가 있을 때만
 ```bash
 PYTHONPATH=scripts python3 -m pax.merge data/incoming/TODAY.json
 python3 scripts/tag_licenses.py   # 신규 사례의 저장소 라이선스 확인·태깅 (기존 태깅은 건너뜀)
 PYTHONPATH=scripts python3 -m pax.publish
 python3 scripts/build_champions.py
-python3 scripts/build_index.py            # 공공 AX 지수 갱신 (분기 말에는 --snapshot 추가)
 python3 scripts/build_case_pages.py       # 사례별 정적 상세 페이지 재생성
-python3 scripts/build_community_stats.py  # 커뮤니티 활력 지표(대화량·가입자·Threads 관측) 갱신
-python3 scripts/build_videos.py           # 공유된 동영상 목록 갱신 (raw 전체 재스캔, 제목은 캐시)
-python3 scripts/build_news.py             # 공유된 뉴스 기사 목록 갱신 (기사 판별·제목은 캐시)
-python3 scripts/build_dashboard_history.py # 현황판 증감 표시용 일자별 원장 갱신 (index·champions 뒤에 실행)
-PYTHONPATH=scripts python3 scripts/build_mcp_review.py  # MCP 검증 공개본 (원장 변경 시)
-python3 scripts/stamp_assets.py            # site의 JS·CSS를 고쳤을 때만 (캐시 무효화)
+PYTHONPATH=scripts python3 scripts/build_mcp_review.py  # MCP 사례가 포함됐을 때
+bash scripts/make_thumbs.sh               # case_url/kakao link 대상, 기존 것은 건너뜀
 ```
 - merge가 거부 건을 출력하면 data/rejected/TODAY.json을 열어 원인(주로 익명화)을
   수정한 새 incoming 파일로 1회 재시도한다.
-- 썸네일 생성: `bash scripts/make_thumbs.sh` (case_url/kakao link 대상, 기존 것은
-  건너뜀). 실패한 URL은 무시해도 된다 — 사이트가 설명문으로 폴백한다.
+- 썸네일 실패한 URL은 무시해도 된다 — 사이트가 설명문으로 폴백한다.
+- 평가 항목(`docs/native/eval_additions.json`)을 같은 회차에 늘리고 `build_eval_data.py`를 돌린다.
+  빠뜨리면 대시보드에서 새 사례가 '미평가'로 남는다.
+
+### 5-B. 매 회차 (신규 사례 0건이어도)
+```bash
+python3 scripts/build_community_stats.py  # 대화량·가입자·Threads 관측
+python3 scripts/build_videos.py           # 공유된 동영상 목록 (raw 전체 재스캔, 제목은 캐시)
+python3 scripts/build_news.py             # 공유된 뉴스·기관 보도자료 (기사 판별·제목은 캐시)
+python3 scripts/build_index.py            # 공공 AX 지수 (분기 말에는 --snapshot 추가)
+python3 scripts/build_dashboard_history.py # 현황판 증감용 일자별 원장 — index·champions 뒤에 실행
+python3 scripts/stamp_assets.py           # site의 JS·CSS를 고쳤을 때만 (캐시 무효화)
+```
+- 순서를 지킨다: `build_dashboard_history.py`는 `build_index.py`·`build_champions.py`가
+  만든 값을 읽어 그날 관측값으로 적는다. 먼저 돌리면 어제 값이 오늘로 기록된다.
 - 변경 기록: 신규 사례가 1건 이상 병합됐으면 site/data/changelog.json의 entries
   맨 앞에 오늘 날짜 항목을 추가한다(같은 날짜가 이미 있으면 그 items에 덧붙임).
   형식: "OO 사례 N건 추가 — 대표 사례 2~3개 제목 (총 M건)". 닉네임 금지.
+  기능 변경도 같은 자리에 적는다(사용자 지시 2026-09-11).
 
 ### 주간 점검 (월요일 오전 실행분에서만)
 - `python3 scripts/check_health.py` — 전체 사례 링크 생존·유지보수 상태 재점검 (약 3분).
