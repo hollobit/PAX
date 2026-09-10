@@ -6,14 +6,14 @@
  "total_champions": 186,
  "community": {
   "members": 1672,
-  "kakao_week": 6314,
-  "kakao_total_observed": 28132,
+  "kakao_week": 5828,
+  "kakao_total_observed": 28139,
   "threads_observed": 235
  },
  "certified_champions": 5,
  "unattributed_cases": 76,
  "ax_distribution": {
-  "AI-Ready": 276,
+  "AI-Ready": 275,
   "AI-Enabled": 112,
   "AX 단계 외": 12,
   "AI-First": 1
@@ -21,7 +21,7 @@
  "c_axis_mean": 0.85,
  "p_distribution": {
   "P0": 133,
-  "P1": 257,
+  "P1": 256,
   "P2": 11
  },
  "model_dependency": {
