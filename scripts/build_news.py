@@ -131,8 +131,23 @@ def probe(url: str) -> dict | None:
         m = META[key].search(body)
         return m.group(2).strip() if m else ""
 
+    host = (urlparse(url).hostname or "").replace("www.", "").lower()
     og_type, pub = grab("type"), grab("pub")
-    if og_type.lower() != "article" and not pub:
+    is_article = og_type.lower() == "article" or bool(pub)
+
+    if not is_article and GOV_HOST.search(host):
+        m = TITLE_TAG.search(body)
+        raw = html.unescape(re.sub(r"\s+", " ", m.group(1))).strip() if m else ""
+        kind = ("보도자료" if GOV_RELEASE.search(raw)
+                else "공고·안내" if GOV_NOTICE.search(raw) else "")
+        head = gov_headline(raw)
+        # 게시판 표지가 없으면 포털·데이터셋 화면이고, 머리기사가 짧으면 목록 화면이다.
+        if not kind or len(head) < 10 or GOV_NAV_ONLY.search(head):
+            return None
+        return {"title": head[:160], "outlet": HOST_NAME.get(host, host)[:40],
+                "published": "", "kind": kind}
+
+    if not is_article:
         return None  # 기사 표지가 없으면 기사로 세지 않는다
     title = grab("title")
     if not title:
@@ -144,7 +159,7 @@ def probe(url: str) -> dict | None:
     outlet = html.unescape(grab("site")).strip()
     if not outlet:
         outlet = (urlparse(url).hostname or "").replace("www.", "")
-    return {"title": title[:160], "outlet": outlet[:40], "published": pub[:40]}
+    return {"title": title[:160], "outlet": outlet[:40], "published": pub[:40], "kind": "기사"}
 
 
 def norm_date(raw: str) -> str:
@@ -170,7 +185,33 @@ HOST_NAME = {
     "korea.kr": "정책브리핑",
     "m.korea.kr": "정책브리핑",
     "news.seoul.go.kr": "서울시 뉴스",
+    "mois.go.kr": "행정안전부",
+    "msit.go.kr": "과학기술정보통신부",
+    "mof.go.kr": "해양수산부",
+    "sotong.go.kr": "소통혁신24",
+    "nia.or.kr": "한국지능정보사회진흥원",
 }
+
+# 기관 게시물 판별 — 정부 페이지는 og:type을 달지 않아 기사 표지로는 걸러지지 않는다.
+# 대신 제목에 남는 게시판 이름으로 가른다. 포털 메인·데이터셋 화면에는 이 표지가 없어
+# 자연히 빠지고, 목록 화면은 표지만 있고 머리기사가 없어 길이에서 걸린다.
+GOV_HOST = re.compile(r"\.go\.kr$|\.or\.kr$|^korea\.kr$", re.I)
+GOV_RELEASE = re.compile(r"보도자료|정책뉴스|브리핑|참고자료|설명자료", re.I)
+# 제목이 빵부스러기뿐인 기관 페이지가 있다(예: "HOME > 알림마당 > 공지사항 | 기관명").
+# 이때 남는 것은 머리기사가 아니라 메뉴 이름이므로 게시물로 세지 않는다.
+GOV_NAV_ONLY = re.compile(r"(공지사항|알림마당|주요사업|사업소개|게시판|자료실|목록|메인|홈|브리핑룸|뉴스·소식)$")
+GOV_NOTICE = re.compile(r"공모|공고|알림|새소식|수상작|안내|신청|접수|자료실|다운로드|운영 ?자료", re.I)
+CRUMB = re.compile(r"\s*[|>›»]\s*|\s+-\s+")
+
+
+def gov_headline(raw_title: str) -> str:
+    """빵부스러기(사이트명 · 게시판 이름)를 걷어 내고 머리기사만 남긴다."""
+    parts = [p.strip(" -|>") for p in CRUMB.split(raw_title) if p.strip()]
+    if not parts:
+        return ""
+    head = max(parts, key=len)
+    head = GOV_RELEASE.sub("", head).strip(" -|")
+    return head
 
 SEP = re.compile(r"[\s|·\-–—:>]+$")
 
@@ -222,11 +263,29 @@ def main() -> int:
             "title": title,
             "outlet": outlet,
             "published": norm_date(meta.get("published", "")),
+            "kind": meta.get("kind", "기사"),
             "shares": rec["shares"],
             "first_shared": dates[0] if dates else "",
             "last_shared": dates[-1] if dates else "",
             "sources": sorted(rec["sources"]),
         })
+    # 같은 글이 모바일 주소·단축 주소·게시판 파라미터 차이로 여러 건이 되는 일이 잦다.
+    # 제목과 매체가 같으면 한 글로 보고 합친다(공유 횟수는 더하고, 기간은 넓게 잡는다).
+    merged: dict[tuple, dict] = {}
+    for it in items:
+        key = (it["title"], it["outlet"])
+        prev = merged.get(key)
+        if not prev:
+            merged[key] = it
+            continue
+        prev["shares"] += it["shares"]
+        prev["first_shared"] = min(x for x in (prev["first_shared"], it["first_shared"]) if x) \
+            if (prev["first_shared"] or it["first_shared"]) else ""
+        prev["last_shared"] = max(prev["last_shared"], it["last_shared"])
+        prev["sources"] = sorted(set(prev["sources"]) | set(it["sources"]))
+        if not prev["published"]:
+            prev["published"] = it["published"]
+    items = list(merged.values())
     items.sort(key=lambda x: (x["last_shared"], x["shares"]), reverse=True)
 
     os.makedirs(os.path.dirname(CACHE), exist_ok=True)
