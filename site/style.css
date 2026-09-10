@@ -1842,6 +1842,18 @@ main {
   margin: -0.9rem 0 1.5rem;
 }
 
+.task-chips--domain {
+  margin-top: -1.15rem;
+}
+
+.chip-row-label {
+  align-self: center;
+  padding-right: 0.15rem;
+  color: var(--ink-faint);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+}
+
 .task-chips .task-chip {
   padding: 0.3rem 0.7rem;
   background: var(--bg-elevated);
@@ -1861,6 +1873,57 @@ main {
   border-color: var(--accent-2);
   color: var(--bg-elevated);
   font-weight: 600;
+}
+
+.pager {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 1.6rem 0 0.4rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+}
+
+.pager__range {
+  margin-right: auto;
+  color: var(--ink-faint);
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.pager__btn {
+  min-width: 2.1rem;
+  padding: 0.3rem 0.6rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+
+.pager__btn:hover:not(:disabled) {
+  border-color: var(--rule-strong);
+}
+
+.pager__btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.pager__btn[aria-current="page"] {
+  background: var(--accent-2);
+  border-color: var(--accent-2);
+  color: var(--bg-elevated);
+  font-weight: 600;
+}
+
+.pager__gap {
+  color: var(--ink-faint);
+  font-size: 0.82rem;
 }
 
 /* ---- 미니 배지 (로드맵 1-2·1-3·1-6) ---- */

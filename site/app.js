@@ -27,6 +27,29 @@ const ORG_TYPE_BADGE_CLASS = {
 const TASK_CATEGORIES = ['인사·복무', '회계·정산', '계약·조달', '민원', '문서·기안',
   '감사·법무', '시설·안전', '데이터·통계', '기획·정책', '공통·범용'];
 
+// 분야(도메인) 분류 — 업무(기능) 축과 독립한 두 번째 축이다.
+// task_category는 단일값이라 분야를 담을 수 없고(예: 소방 민원 답변기는 '민원'이면서 '소방·재난'),
+// 한 사례가 여러 분야에 걸치는 일이 흔해 별도 축으로 두고 키워드로 판정한다.
+// 원장에 필드를 더하지 않으므로 스키마·병합 경로는 그대로다 — 키워드만 고치면 분류가 갱신된다.
+const DOMAIN_CATEGORIES = [
+  { name: '국방·병무', keywords: ['병무', '국방', '병역', '예비군', '장병'] },
+  { name: '교육·학교', keywords: ['학교', '교육청', '교육지원청', '교사', '학생', '급식', '유치원', '교원', '학사', '교무'] },
+  { name: '개인정보', keywords: ['개인정보', '가명정보', '비식별', '프라이버시', '마스킹', '정보주체'] },
+  { name: '보안', keywords: ['보안', '취약점', '침해사고', '암호화', '랜섬', 'SBOM'] },
+  { name: '소방·재난', keywords: ['소방', '재난', '119', '대피', '산불', '침수', '지진', '구조요청'] },
+  { name: '의료·복지', keywords: ['의료', '보건소', '보건의료', '복지', '병원', '돌봄', '기초생활', '장애인', '의약품', '요양', '건강보험'] },
+  { name: '특허', keywords: ['특허', '상표', '지식재산', '디자인권', '저작권', '실용신안', 'KIPRIS'] },
+  { name: '제도', keywords: ['법령', '조례', '규정', '규칙', '지침', '제도', '입법', '규제'] },
+];
+const DOMAIN_NAMES = DOMAIN_CATEGORIES.map((d) => d.name);
+
+function matchesDomain(c, name) {
+  const d = DOMAIN_CATEGORIES.find((x) => x.name === name);
+  if (!d) return true;
+  const text = `${c.title} ${(c.tags || []).join(' ')} ${c.summary}`;
+  return d.keywords.some((k) => text.includes(k));
+}
+
 // 검색 동의어 사전 (로드맵 1-1): 실무 어휘 ↔ 사례 표기의 간극을 메운다
 const SYNONYMS = {
   여비: ['출장', '정산', '경비', '출장비'],
@@ -156,7 +179,8 @@ function siteHostname(c) {
 
 const state = {
   cases: [],
-  filter: { q: '', orgType: '전체', source: '전체', tag: null, bookmarkedOnly: false, taskCat: '전체', noInstallOnly: false, region: null, ministry: null },
+  filter: { q: '', orgType: '전체', source: '전체', tag: null, bookmarkedOnly: false, taskCat: '전체', domain: '전체', noInstallOnly: false, region: null, ministry: null },
+  page: 1,
   view: loadSavedView(), // 'cards' | 'list'
   sort: { key: 'popularity', dir: 'desc' }, // 기본: 인기 우선, 이후 최신순
   bookmarks: loadBookmarks(), // Set<caseId> — localStorage에 보존
@@ -249,12 +273,15 @@ function applyUrlToState() {
     tag: p.get('tag') || null,
     bookmarkedOnly: p.get('bm') === '1',
     taskCat: TASK_CATEGORIES.includes(p.get('task')) ? p.get('task') : '전체',
+    domain: DOMAIN_NAMES.includes(p.get('domain')) ? p.get('domain') : '전체',
     noInstallOnly: p.get('ni') === '1',
     region: p.get('region') || null,
     ministry: (typeof MINISTRY_BY_NAME !== 'undefined' && MINISTRY_BY_NAME.has(p.get('ministry')))
       ? p.get('ministry') : null,
   };
   state.focusCaseId = p.get('case') || null;
+  const page = Number.parseInt(p.get('page') || '1', 10);
+  state.page = Number.isFinite(page) && page > 0 ? page : 1;
   if (VIEWS.includes(view)) state.view = view;
   state.sort = sort;
 }
@@ -268,6 +295,7 @@ function syncUrl() {
   if (f.tag) p.set('tag', f.tag);
   if (f.bookmarkedOnly) p.set('bm', '1');
   if (f.taskCat !== '전체') p.set('task', f.taskCat);
+  if (f.domain !== '전체') p.set('domain', f.domain);
   if (f.noInstallOnly) p.set('ni', '1');
   if (f.region) p.set('region', f.region);
   if (f.ministry) p.set('ministry', f.ministry);
@@ -276,6 +304,7 @@ function syncUrl() {
     p.set('sort', `${state.sort.key}.${state.sort.dir}`);
   }
   if (state.focusCaseId) p.set('case', state.focusCaseId);
+  if (state.page > 1) p.set('page', String(state.page));
   const qs = p.toString();
   history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
 }
@@ -293,6 +322,7 @@ const els = {
   viewCards: document.getElementById('view-cards'),
   viewList: document.getElementById('view-list'),
   bookmarkFilter: document.getElementById('bookmark-filter'),
+  domainChips: document.getElementById('domain-chips'),
   emptyState: document.getElementById('empty-state'),
   errorState: document.getElementById('error-state'),
 };
@@ -522,6 +552,7 @@ function matches(c, f) {
   if (f.source !== '전체' && c.source !== (f.source === 'Threads' ? 'threads' : 'kakao')) return false;
   if (f.tag && !c.tags.includes(f.tag)) return false;
   if (f.taskCat !== '전체' && c.task_category !== f.taskCat) return false;
+  if (f.domain !== '전체' && !matchesDomain(c, f.domain)) return false;
   if (f.noInstallOnly && c.runtime_env !== '브라우저만') return false;
   if (f.region) {
     if (f.region === '미상') {
@@ -547,6 +578,87 @@ function setTag(tag) {
   render();
 }
 
+// ── 쪽 나누기 ── 사례가 늘면서 카드 보기가 매 렌더마다 수백 장을 DOM으로 만들어
+// 첫 화면과 필터 반응이 느려졌다. 결과를 100건씩 끊어 그린다.
+const PAGE_SIZE = 100;
+
+// 필터·정렬·보기가 바뀌면 1쪽으로 돌아가야 한다. 필터를 건드리는 곳이 여러 군데라
+// 호출부마다 초기화를 넣으면 언젠가 빠뜨리므로, 렌더 한 곳에서 서명 변화로 판정한다.
+let lastPageKey = null;
+
+function pageKeyOf() {
+  const f = state.filter;
+  return JSON.stringify([f.q, f.orgType, f.source, f.tag, f.bookmarkedOnly, f.taskCat,
+    f.domain, f.noInstallOnly, f.region, f.ministry, state.view, state.sort.key, state.sort.dir]);
+}
+
+function resolvePage(total, results) {
+  const key = pageKeyOf();
+  // 첫 렌더(lastPageKey === null)는 URL로 들어온 page를 살린다.
+  if (lastPageKey !== null && key !== lastPageKey) state.page = 1;
+  lastPageKey = key;
+  const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+  // 깊은 링크로 들어온 사례가 다른 쪽에 있으면 그 쪽으로 옮겨 준다 — 아니면 스크롤할 대상이 없다.
+  if (state.focusCaseId && results) {
+    const idx = results.findIndex((c) => c.id === state.focusCaseId);
+    if (idx >= 0) state.page = Math.floor(idx / PAGE_SIZE) + 1;
+  }
+  state.page = Math.min(Math.max(1, state.page), pages);
+  // render()가 맨 앞에서 URL을 쓰는데 쪽은 여기서 확정된다 — 다시 맞춰야 주소가 화면과 어긋나지 않는다.
+  syncUrl();
+  return { pages, start: (state.page - 1) * PAGE_SIZE };
+}
+
+function createPager(total, pages) {
+  const nav = document.createElement('nav');
+  nav.className = 'pager';
+  nav.setAttribute('aria-label', '쪽 이동');
+  const from = (state.page - 1) * PAGE_SIZE + 1;
+  const to = Math.min(state.page * PAGE_SIZE, total);
+  const range = document.createElement('span');
+  range.className = 'pager__range';
+  range.textContent = `${from}–${to} / ${total}건`;
+  nav.appendChild(range);
+
+  const go = (n, label, opts = {}) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'pager__btn';
+    btn.textContent = label;
+    if (opts.current) btn.setAttribute('aria-current', 'page');
+    if (opts.disabled) btn.disabled = true;
+    else {
+      btn.addEventListener('click', () => {
+        state.page = n;
+        render();
+        // 쪽을 넘기면 목록 위로 — 넘긴 자리에서 이어 읽게 한다.
+        els.caseList.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+    nav.appendChild(btn);
+  };
+
+  go(state.page - 1, '‹ 이전', { disabled: state.page === 1 });
+  // 쪽 수가 많아도 버튼은 현재 쪽 둘레만 — 나머지는 생략 표시로 줄인다.
+  const win = [];
+  for (let n = 1; n <= pages; n += 1) {
+    if (n === 1 || n === pages || Math.abs(n - state.page) <= 1) win.push(n);
+  }
+  let prev = 0;
+  for (const n of win) {
+    if (n - prev > 1) {
+      const gap = document.createElement('span');
+      gap.className = 'pager__gap';
+      gap.textContent = '…';
+      nav.appendChild(gap);
+    }
+    go(n, String(n), { current: n === state.page });
+    prev = n;
+  }
+  go(state.page + 1, '다음 ›', { disabled: state.page === pages });
+  return nav;
+}
+
 function focusDeepLinkedCase() {
   if (!state.focusCaseId) return;
   const el = document.querySelector(`[data-case-id="${CSS.escape(state.focusCaseId)}"]`);
@@ -559,6 +671,10 @@ function focusDeepLinkedCase() {
 function renderTaskChips() {
   if (!els.taskChips) return;
   els.taskChips.replaceChildren();
+  const label = document.createElement('span');
+  label.className = 'chip-row-label';
+  label.textContent = '업무';
+  els.taskChips.appendChild(label);
   for (const cat of ['전체', ...TASK_CATEGORIES]) {
     const n = cat === '전체'
       ? state.cases.length
@@ -577,9 +693,37 @@ function renderTaskChips() {
   }
 }
 
+// 분야 칩 — 업무 칩과 같은 모양이되 독립 축이다. 두 줄이 나란히 서므로
+// 각 줄 앞에 무슨 축인지 이름을 붙인다(이름이 없으면 한 줄로 읽힌다).
+function renderDomainChips() {
+  if (!els.domainChips) return;
+  els.domainChips.replaceChildren();
+  const label = document.createElement('span');
+  label.className = 'chip-row-label';
+  label.textContent = '분야';
+  els.domainChips.appendChild(label);
+  for (const name of ['전체', ...DOMAIN_NAMES]) {
+    const n = name === '전체'
+      ? state.cases.length
+      : state.cases.filter((c) => matchesDomain(c, name)).length;
+    if (name !== '전체' && n === 0) continue;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'task-chip';
+    btn.textContent = `${name} ${n}`;
+    btn.setAttribute('aria-pressed', String(state.filter.domain === name));
+    btn.addEventListener('click', () => {
+      state.filter = { ...state.filter, domain: name };
+      render();
+    });
+    els.domainChips.appendChild(btn);
+  }
+}
+
 function render() {
   syncUrl();
   renderTaskChips();
+  renderDomainChips();
   renderRegionFilter();
   if (els.noInstallFilter) {
     els.noInstallFilter.setAttribute('aria-pressed', String(state.filter.noInstallOnly));
@@ -600,8 +744,11 @@ function render() {
   if (state.view === 'list') {
     if (results.length > 0) {
       const sorted = sortForList(results);
+      const { pages, start } = resolvePage(sorted.length, sorted);
+      // 내려받기는 보이는 쪽이 아니라 걸러진 전체를 담는다 — 쪽 나누기는 표시 방식일 뿐이다.
       els.caseList.appendChild(createExportToolbar(sorted));
-      els.caseList.appendChild(createCaseTable(sorted));
+      els.caseList.appendChild(createCaseTable(sorted.slice(start, start + PAGE_SIZE)));
+      if (pages > 1) els.caseList.appendChild(createPager(sorted.length, pages));
     }
     return;
   }
@@ -629,11 +776,13 @@ function render() {
     return;
   }
 
-  results.forEach((c, i) => {
+  const { pages, start } = resolvePage(results.length, results);
+  results.slice(start, start + PAGE_SIZE).forEach((c, i) => {
     const card = createCaseCard(c);
     card.style.setProperty('--i', String(i));
     els.caseList.appendChild(card);
   });
+  if (pages > 1) els.caseList.appendChild(createPager(results.length, pages));
   focusDeepLinkedCase();
 }
 
@@ -1161,13 +1310,15 @@ function createThumbElement(c, targetUrl) {
   anchor.title = c.summary;
 
   const img = document.createElement('img');
-  img.src = `thumbs/${encodeURIComponent(c.id)}.jpg${c.thumb_v ? `?v=${c.thumb_v}` : ''}`;
-  img.alt = `사례 미리보기: ${c.title}`;
+  // src보다 먼저 정해야 한다 — src를 대입하는 순간 로딩 방식이 확정되므로,
+  // 뒤늦게 lazy를 붙이면 무시되고 화면 밖 썸네일까지 전부 즉시 내려받는다.
   img.loading = 'lazy';
   img.decoding = 'async';
   // 표시 크기를 미리 알려 레이아웃 시프트(CLS)를 방지 (CSS aspect-ratio 16/10과 일치)
   img.width = 640;
   img.height = 400;
+  img.alt = `사례 미리보기: ${c.title}`;
+  img.src = `thumbs/${encodeURIComponent(c.id)}.jpg${c.thumb_v ? `?v=${c.thumb_v}` : ''}`;
   img.addEventListener('error', () => {
     // 썸네일이 없으면 설명문으로 폴백 (링크는 유지)
     const fallback = document.createElement('p');
