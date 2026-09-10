@@ -1919,6 +1919,24 @@ main {
   color: var(--ink-soft);
 }
 
+.search-count {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 검색 칸이 들어가면 한 줄에 다 못 담기므로, 좁은 화면에서는 세로로 쌓는다. */
+.controls--inline .control--search {
+  min-width: 12rem;
+}
+
+@media (min-width: 641px) {
+  .controls--inline {
+    grid-template-columns: minmax(12rem, 20rem) 1fr auto;
+  }
+}
+
 .news-list {
   display: flex;
   flex-direction: column;

@@ -11,7 +11,7 @@
   <meta property="og:description" content="오픈채팅과 Threads에서 공유된 뉴스 기사 모음">
   <meta property="og:url" content="https://hollobit.github.io/PAX/news.html">
   <meta property="og:site_name" content="모두의 공공AX 사례 아카이브">
-  <link rel="stylesheet" href="style.css?v=392fd45c">
+  <link rel="stylesheet" href="style.css?v=674e5b53">
 </head>
 <body>
   <header class="site-header">
@@ -41,15 +41,21 @@
     </nav>
   </header>
   <main>
-    <section class="controls controls--inline" aria-label="정렬">
+    <section class="controls controls--inline" aria-label="검색 및 정렬">
+      <label class="control control--search">
+        <span class="control-label">검색</span>
+        <input type="search" id="news-search" placeholder="제목·매체 검색">
+      </label>
       <div class="control control--row">
         <span class="control-label">정렬</span>
         <nav id="news-sort" class="task-chips task-chips--inline" aria-label="정렬 기준"></nav>
       </div>
       <p id="news-meta" class="video-meta"></p>
+      <p id="news-count" class="search-count" hidden></p>
     </section>
     <nav id="news-kind" class="task-chips task-chips--domain" aria-label="분류"></nav>
     <section id="news-list" class="news-list" aria-label="기사 목록"></section>
+    <p id="empty-state" class="empty-state" hidden>검색어에 맞는 기사가 없습니다</p>
     <p id="error-state" class="empty-state" hidden>기사 목록을 불러오지 못했습니다</p>
   </main>
   <footer class="site-footer">
@@ -68,16 +74,27 @@
       ];
       const PAGE_SIZE = 100;
       let sort = 'recent';
+      let q = '';
       let kind = '전체';
       let page = 1;
       let articles = [];
 
       const listEl = document.getElementById('news-list');
+      const emptyEl = document.getElementById('empty-state');
+      const countEl = document.getElementById('news-count');
+      const searchEl = document.getElementById('news-search');
       const metaEl = document.getElementById('news-meta');
       const sortEl = document.getElementById('news-sort');
 
+      // 검색은 제목과 매체만 본다. 띄어쓴 낱말은 모두 들어 있어야 걸린다(좁혀 가며 찾기).
+      function hit(x) {
+        if (!q) return true;
+        const hay = `${x.title} ${x.outlet || ''}`.toLowerCase();
+        return q.split(/\s+/).filter(Boolean).every((w) => hay.includes(w));
+      }
+
       function sorted() {
-        const rows = articles.filter((x) => kind === '전체' || x.kind === kind);
+        const rows = articles.filter((x) => (kind === '전체' || x.kind === kind) && hit(x));
         const byDate = (a, b, k) => (b[k] > a[k] ? 1 : b[k] < a[k] ? -1 : 0);
         if (sort === 'shares') rows.sort((a, b) => (b.shares - a.shares) || byDate(a, b, 'last_shared'));
         else if (sort === 'published') rows.sort((a, b) => byDate(a, b, 'published'));
@@ -142,10 +159,12 @@
         label.className = 'chip-row-label';
         label.textContent = '분류';
         el.appendChild(label);
+        // 칩 수는 검색 결과 안에서 센다 — 검색으로 3건만 남았는데 칩이 5를 가리키면 어긋나 보인다.
+        const pool = articles.filter(hit);
         const counts = new Map();
-        for (const x of articles) counts.set(x.kind, (counts.get(x.kind) || 0) + 1);
+        for (const x of pool) counts.set(x.kind, (counts.get(x.kind) || 0) + 1);
         for (const k of ['전체', '기사', '보도자료', '공고·안내']) {
-          const n = k === '전체' ? articles.length : (counts.get(k) || 0);
+          const n = k === '전체' ? pool.length : (counts.get(k) || 0);
           if (k !== '전체' && n === 0) continue;
           const btn = document.createElement('button');
           btn.type = 'button';
@@ -164,6 +183,9 @@
         listEl.replaceChildren();
         for (const x of rows.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)) listEl.appendChild(row(x));
         if (pages > 1) listEl.appendChild(pager(rows.length, pages));
+        emptyEl.hidden = rows.length !== 0;
+        countEl.textContent = q ? `검색 결과 ${rows.length}건` : '';
+        countEl.hidden = !q;
         renderKinds();
         sortEl.replaceChildren();
         for (const s of SORTS) {
@@ -186,6 +208,18 @@
         const repeats = articles.filter((x) => x.shares >= 2).length;
         const first = articles.reduce((m, x) => (!m || x.first_shared < m ? x.first_shared : m), '');
         metaEl.textContent = `${articles.length}건 · 매체 ${outlets}곳 · 두 번 이상 공유된 기사 ${repeats}건 · ${first} 이후 관측`;
+        const p = new URLSearchParams(location.search);
+        q = (p.get('q') || '').trim().toLowerCase();
+        if (q) searchEl.value = p.get('q');
+        searchEl.addEventListener('input', () => {
+          q = searchEl.value.trim().toLowerCase();
+          page = 1;   // 검색을 좁히면 보던 쪽이 사라지므로 첫 쪽으로 돌아간다
+          const u = new URLSearchParams();
+          if (searchEl.value.trim()) u.set('q', searchEl.value.trim());
+          const qs = u.toString();
+          history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+          render();
+        });
         render();
       } catch (err) {
         console.error('news.json 로드 실패:', err);
