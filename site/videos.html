@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>동영상 추천 — 모두의 공공AX 사례 아카이브</title>
+  <meta name="description" content="공공AX 커뮤니티에서 공유된 동영상 모음">
+  <link rel="canonical" href="https://hollobit.github.io/PAX/videos.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="동영상 추천 — 모두의 공공AX">
+  <meta property="og:description" content="오픈채팅과 Threads에서 공유된 동영상 모음">
+  <meta property="og:url" content="https://hollobit.github.io/PAX/videos.html">
+  <meta property="og:site_name" content="모두의 공공AX 사례 아카이브">
+  <link rel="stylesheet" href="style.css?v=d1f631a4">
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">PUBLIC SECTOR AX RECORD · 동영상 추천</p>
+    <h1>동영상 추천</h1>
+    <p class="tagline">오픈채팅과 Threads에서 공유된 동영상을 모았습니다</p>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="./">사례 아카이브</a>
+      <a href="dashboard.html">AX 평가</a>
+      <a href="champions.html">챔피언</a>
+      <a href="ax-maturity-infographic.html">AX 성숙도 개념</a>
+      <a href="observatory.html">관측소</a>
+      <a href="gap-map.html">격차 지도</a>
+      <a href="mcp-review.html">MCP 검증</a>
+      <a href="playbook.html">전이 플레이북</a>
+      <a href="guidelines.html">안내서·가이드라인</a>
+      <a href="videos.html" aria-current="page">동영상 추천</a>
+      <a href="changelog.html">변경 기록</a>
+    </nav>
+    <nav class="site-nav site-nav--external" aria-label="관련 사이트">
+      <a href="https://hollobit.github.io/GAPI2/ecosystem.html" target="_blank" rel="noopener">MCP·AI 도구 ↗</a>
+      <a href="https://ax360.kr/national-ax-project/card" target="_blank" rel="noopener">AX 사업 찾기 ↗</a>
+      <a href="https://ax360.kr/national-ai-resource/model" target="_blank" rel="noopener">AX 자원 찾기 ↗</a>
+      <a href="https://ax360.kr/private-ai-company/heatmap" target="_blank" rel="noopener">AI 기업 찾기 ↗</a>
+      <a href="https://axboard.aigov.go.kr/" target="_blank" rel="noopener">AI 정부실험실 ↗</a>
+    </nav>
+  </header>
+  <main>
+    <section class="controls" aria-label="정렬">
+      <div class="control">
+        <span class="control-label">정렬</span>
+        <nav id="video-sort" class="task-chips" aria-label="정렬 기준"></nav>
+      </div>
+      <p id="video-meta" class="video-meta"></p>
+    </section>
+    <section id="video-list" class="video-grid" aria-label="동영상 목록"></section>
+    <p id="error-state" class="empty-state" hidden>동영상 목록을 불러오지 못했습니다</p>
+  </main>
+  <footer class="site-footer">
+    <p class="site-footer__contribute">추천하고 싶은 동영상이 있으면 아래 링크의 threads 또는 오픈채팅에 올려주세요. 다음 수집 때 이 목록에 반영됩니다.</p>
+    <p class="site-footer__curator">Curated by Jonghong Jeon, <a href="mailto:hollobit@etri.re.kr">hollobit@etri.re.kr</a></p>
+  </footer>
+  <script>
+    'use strict';
+    (async function () {
+      // 목록은 공유된 영상 자체의 정보만 담는다 — 누가 올렸는지, 어떤 말과 함께 올렸는지는
+      // 데이터에 없다(scripts/build_videos.py에서 걸러 낸다).
+      const SORTS = [
+        { key: 'recent', label: '최근 공유순' },
+        { key: 'shares', label: '많이 공유된 순' },
+      ];
+      let sort = 'recent';
+      let videos = [];
+
+      const listEl = document.getElementById('video-list');
+      const metaEl = document.getElementById('video-meta');
+      const sortEl = document.getElementById('video-sort');
+
+      function sorted() {
+        const rows = [...videos];
+        if (sort === 'shares') {
+          rows.sort((a, b) => (b.shares - a.shares) || (b.last_shared > a.last_shared ? 1 : -1));
+        } else {
+          rows.sort((a, b) => (b.last_shared > a.last_shared ? 1 : b.last_shared < a.last_shared ? -1 : b.shares - a.shares));
+        }
+        return rows;
+      }
+
+      function card(v) {
+        const a = document.createElement('a');
+        a.className = 'video-card';
+        a.href = v.url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+
+        const img = document.createElement('img');
+        // src보다 먼저 정해야 지연 로딩이 실제로 걸린다.
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        img.width = 320;
+        img.height = 180;
+        img.className = 'video-card__thumb';
+        img.alt = '';
+        img.src = v.thumb;
+        a.appendChild(img);
+
+        const body = document.createElement('div');
+        body.className = 'video-card__body';
+
+        const h = document.createElement('h2');
+        h.className = 'video-card__title';
+        h.textContent = v.title;
+        body.appendChild(h);
+
+        if (v.channel) {
+          const ch = document.createElement('p');
+          ch.className = 'video-card__channel';
+          ch.textContent = v.channel;
+          body.appendChild(ch);
+        }
+
+        const foot = document.createElement('p');
+        foot.className = 'video-card__meta';
+        const bits = [v.last_shared + ' 공유'];
+        if (v.shares >= 2) bits.push('재공유 ' + v.shares + '회');
+        foot.textContent = bits.join(' · ');
+        body.appendChild(foot);
+
+        a.appendChild(body);
+        return a;
+      }
+
+      function render() {
+        listEl.replaceChildren();
+        for (const v of sorted()) listEl.appendChild(card(v));
+        sortEl.replaceChildren();
+        for (const s of SORTS) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'task-chip';
+          btn.textContent = s.label;
+          btn.setAttribute('aria-pressed', String(sort === s.key));
+          btn.addEventListener('click', () => { sort = s.key; render(); });
+          sortEl.appendChild(btn);
+        }
+      }
+
+      try {
+        const res = await fetch('./data/videos.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const doc = await res.json();
+        videos = doc.videos || [];
+        const repeats = videos.filter((v) => v.shares >= 2).length;
+        const first = videos.reduce((m, v) => (!m || v.first_shared < m ? v.first_shared : m), '');
+        metaEl.textContent = `${videos.length}편 · 두 번 이상 공유된 영상 ${repeats}편 · ${first} 이후 관측`;
+        render();
+      } catch (err) {
+        console.error('videos.json 로드 실패:', err);
+        document.getElementById('error-state').hidden = false;
+      }
+    })();
+  </script>
+  <script src="anchors.js?v=206e78f5"></script>
+</body>
+</html>
