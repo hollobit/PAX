@@ -324,7 +324,9 @@ def main() -> int:
         if not prev["published"]:
             prev["published"] = it["published"]
     items = list(merged.values())
-    items.sort(key=lambda x: (x["last_shared"], x["shares"]), reverse=True)
+    # 동점일 때 순서가 실행마다 달라지면 내용이 같아도 파일이 통째로 다시 쓰여 매 회차 커밋에
+    # 수백 줄 잡음이 남는다 — 주소를 마지막 기준으로 두어 순서를 고정한다.
+    items.sort(key=lambda x: (x["last_shared"], x["shares"], x["url"]), reverse=True)
 
     os.makedirs(os.path.dirname(CACHE), exist_ok=True)
     json.dump(cache, open(CACHE, "w", encoding="utf-8"), ensure_ascii=False, indent=1)

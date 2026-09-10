@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-10T23:06:37Z",
+ "updated_at": "2026-09-10T23:13:45Z",
  "count": 52,
  "videos": [
   {
@@ -29,6 +29,19 @@
    ]
   },
   {
+   "id": "ox1mAObaUHw",
+   "title": "[자막뉴스] 48단계 뚫고 '인간 인증'.. \"내년 말 통제 불능\" 경고 (2026.09.09/MBC뉴스)",
+   "channel": "MBCNEWS",
+   "url": "https://www.youtube.com/watch?v=ox1mAObaUHw",
+   "thumb": "https://i.ytimg.com/vi/ox1mAObaUHw/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-09",
+   "last_shared": "2026-09-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "id": "IvJgOnC_f4Y",
    "title": "요즘 점점 많아지는 새로운 인간 유형",
    "channel": "상향평준화 프로젝트",
@@ -47,19 +60,6 @@
    "channel": "Google Korea",
    "url": "https://www.youtube.com/watch?v=GC7RW7nDzgU",
    "thumb": "https://i.ytimg.com/vi/GC7RW7nDzgU/mqdefault.jpg",
-   "shares": 1,
-   "first_shared": "2026-09-09",
-   "last_shared": "2026-09-09",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "id": "ox1mAObaUHw",
-   "title": "[자막뉴스] 48단계 뚫고 '인간 인증'.. \"내년 말 통제 불능\" 경고 (2026.09.09/MBC뉴스)",
-   "channel": "MBCNEWS",
-   "url": "https://www.youtube.com/watch?v=ox1mAObaUHw",
-   "thumb": "https://i.ytimg.com/vi/ox1mAObaUHw/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-09-09",
    "last_shared": "2026-09-09",
@@ -107,11 +107,11 @@
    ]
   },
   {
-   "id": "eKKpqMowytA",
-   "title": "GPT-6 Astra Can Now Build Architectural 3D Models",
-   "channel": "Salmaan Mohamed",
-   "url": "https://www.youtube.com/watch?v=eKKpqMowytA",
-   "thumb": "https://i.ytimg.com/vi/eKKpqMowytA/mqdefault.jpg",
+   "id": "ztkLrj2PITI",
+   "title": "AI의 진짜 핵심은 온톨로지? 전문가에게 직접 물어봤습니다",
+   "channel": "Alex AI",
+   "url": "https://www.youtube.com/watch?v=ztkLrj2PITI",
+   "thumb": "https://i.ytimg.com/vi/ztkLrj2PITI/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-09-08",
    "last_shared": "2026-09-08",
@@ -120,11 +120,11 @@
    ]
   },
   {
-   "id": "ztkLrj2PITI",
-   "title": "AI의 진짜 핵심은 온톨로지? 전문가에게 직접 물어봤습니다",
-   "channel": "Alex AI",
-   "url": "https://www.youtube.com/watch?v=ztkLrj2PITI",
-   "thumb": "https://i.ytimg.com/vi/ztkLrj2PITI/mqdefault.jpg",
+   "id": "eKKpqMowytA",
+   "title": "GPT-6 Astra Can Now Build Architectural 3D Models",
+   "channel": "Salmaan Mohamed",
+   "url": "https://www.youtube.com/watch?v=eKKpqMowytA",
+   "thumb": "https://i.ytimg.com/vi/eKKpqMowytA/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-09-08",
    "last_shared": "2026-09-08",
@@ -185,19 +185,6 @@
    ]
   },
   {
-   "id": "1QNsdr-Qx_I",
-   "title": "Introducing GPT-6 Astra: the most intelligent and aligned model in the world.",
-   "channel": "OpenAI",
-   "url": "https://www.youtube.com/watch?v=1QNsdr-Qx_I",
-   "thumb": "https://i.ytimg.com/vi/1QNsdr-Qx_I/mqdefault.jpg",
-   "shares": 1,
-   "first_shared": "2026-09-03",
-   "last_shared": "2026-09-03",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
    "id": "duiMS7vSycw",
    "title": "진상민원과 족발 뼈다구 과장 | 계속 역주행 하는 전설의 영상",
    "channel": "울산남구 고래방송국",
@@ -216,6 +203,19 @@
    "channel": "공무원코딩",
    "url": "https://www.youtube.com/watch?v=4GA64_rb5VU",
    "thumb": "https://i.ytimg.com/vi/4GA64_rb5VU/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-03",
+   "last_shared": "2026-09-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "1QNsdr-Qx_I",
+   "title": "Introducing GPT-6 Astra: the most intelligent and aligned model in the world.",
+   "channel": "OpenAI",
+   "url": "https://www.youtube.com/watch?v=1QNsdr-Qx_I",
+   "thumb": "https://i.ytimg.com/vi/1QNsdr-Qx_I/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-09-03",
    "last_shared": "2026-09-03",
@@ -432,6 +432,19 @@
    ]
   },
   {
+   "id": "vM2ADaSZcMc",
+   "title": "우리의 대화가 미묘하게 어긋나는 이유(Feat. 리처드 파인만)",
+   "channel": "연구원 최C",
+   "url": "https://www.youtube.com/watch?v=vM2ADaSZcMc",
+   "thumb": "https://i.ytimg.com/vi/vM2ADaSZcMc/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-08-15",
+   "last_shared": "2026-08-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "id": "Ly_YHLSrKI0",
    "title": "미국 과학판을 갈아엎는 트럼프의 진짜 목표는?",
    "channel": "안될과학 Unrealscience",
@@ -458,19 +471,6 @@
    ]
   },
   {
-   "id": "vM2ADaSZcMc",
-   "title": "우리의 대화가 미묘하게 어긋나는 이유(Feat. 리처드 파인만)",
-   "channel": "연구원 최C",
-   "url": "https://www.youtube.com/watch?v=vM2ADaSZcMc",
-   "thumb": "https://i.ytimg.com/vi/vM2ADaSZcMc/mqdefault.jpg",
-   "shares": 1,
-   "first_shared": "2026-08-15",
-   "last_shared": "2026-08-15",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
    "id": "e5ltUQbRDAo",
    "title": "간호직 공무원 혼자서 1200일 동안 만든 프로그램 #범정부오피스 #충청남도",
    "channel": "공무원코딩",
@@ -484,11 +484,11 @@
    ]
   },
   {
-   "id": "8m3e2DEFf34",
-   "title": "문도! 파이썬 한컴자동화! 001화 Hello World!",
-   "channel": "공무원코딩",
-   "url": "https://www.youtube.com/watch?v=8m3e2DEFf34",
-   "thumb": "https://i.ytimg.com/vi/8m3e2DEFf34/mqdefault.jpg",
+   "id": "jyEsssrGtX8",
+   "title": "점프하는 순간 \"여기가 달인가?\" 개발 중인 착용형 드론 장치 '화제' / KNN",
+   "channel": "KNN NEWS",
+   "url": "https://www.youtube.com/watch?v=jyEsssrGtX8",
+   "thumb": "https://i.ytimg.com/vi/jyEsssrGtX8/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-08-14",
    "last_shared": "2026-08-14",
@@ -497,11 +497,11 @@
    ]
   },
   {
-   "id": "jyEsssrGtX8",
-   "title": "점프하는 순간 \"여기가 달인가?\" 개발 중인 착용형 드론 장치 '화제' / KNN",
-   "channel": "KNN NEWS",
-   "url": "https://www.youtube.com/watch?v=jyEsssrGtX8",
-   "thumb": "https://i.ytimg.com/vi/jyEsssrGtX8/mqdefault.jpg",
+   "id": "8m3e2DEFf34",
+   "title": "문도! 파이썬 한컴자동화! 001화 Hello World!",
+   "channel": "공무원코딩",
+   "url": "https://www.youtube.com/watch?v=8m3e2DEFf34",
+   "thumb": "https://i.ytimg.com/vi/8m3e2DEFf34/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-08-14",
    "last_shared": "2026-08-14",
@@ -627,11 +627,11 @@
    ]
   },
   {
-   "id": "gmkuOqIV3dc",
-   "title": "국가법령정보 MCP(Korean-law-mcp) 활용하기",
-   "channel": "딴짓하는 류주임",
-   "url": "https://www.youtube.com/watch?v=gmkuOqIV3dc",
-   "thumb": "https://i.ytimg.com/vi/gmkuOqIV3dc/mqdefault.jpg",
+   "id": "oSBCKnIq-aY",
+   "title": "'태양을 피하고 싶어서~' 천재 서울대생이 일 냈다 / SBS 8뉴스",
+   "channel": "SBS 뉴스",
+   "url": "https://www.youtube.com/watch?v=oSBCKnIq-aY",
+   "thumb": "https://i.ytimg.com/vi/oSBCKnIq-aY/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-08-06",
    "last_shared": "2026-08-06",
@@ -640,11 +640,11 @@
    ]
   },
   {
-   "id": "oSBCKnIq-aY",
-   "title": "'태양을 피하고 싶어서~' 천재 서울대생이 일 냈다 / SBS 8뉴스",
-   "channel": "SBS 뉴스",
-   "url": "https://www.youtube.com/watch?v=oSBCKnIq-aY",
-   "thumb": "https://i.ytimg.com/vi/oSBCKnIq-aY/mqdefault.jpg",
+   "id": "gmkuOqIV3dc",
+   "title": "국가법령정보 MCP(Korean-law-mcp) 활용하기",
+   "channel": "딴짓하는 류주임",
+   "url": "https://www.youtube.com/watch?v=gmkuOqIV3dc",
+   "thumb": "https://i.ytimg.com/vi/gmkuOqIV3dc/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-08-06",
    "last_shared": "2026-08-06",
