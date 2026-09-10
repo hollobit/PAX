@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-10T23:42:32+09:00",
+ "updated_at": "2026-09-11T02:11:48+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -2563,7 +2563,8 @@
    "health_checked": "2026-09-07",
    "maintenance": "활발",
    "stars": 0,
-   "stars_github": 0
+   "stars_github": 0,
+   "mirror_url": "https://gitlab.aigov.go.kr/tyui22/gonggong-disaster-series-rescue79"
   },
   {
    "collected_at": "2026-08-12",
@@ -5007,7 +5008,8 @@
    "stars_github": 3,
    "models_used": [
     "Gemma 4 E4B(Ollama 권장)"
-   ]
+   ],
+   "mirror_url": "https://gitlab.aigov.go.kr/tyui22/gonggong-ax-local-series-1-AISupportMessnger"
   },
   {
    "source": "kakao",
@@ -8934,28 +8936,6 @@
   },
   {
    "case_class": "개인 개발",
-   "task_category": "공통·범용",
-   "link": "https://gitlab.aigov.go.kr/tyui22/gonggong-ax-local-series-1-AISupp",
-   "date": "2026-09-06",
-   "summary": "AI지원담당을 위한 로컬 우선 공공업무 메신저 MVP. 문서 번역·리소스 추출 등으로 이어진 공공 AX 로컬 시리즈의 1편으로, 시리즈의 출발점을 채우는 등재다.",
-   "tags": [
-    "메신저",
-    "로컬",
-    "시리즈"
-   ],
-   "network_req": "로컬 완결",
-   "title": "공공 AX 로컬 시리즈 1 — AI지원담당 로컬 우선 업무 메신저 MVP",
-   "model_dependency": "없음(비LLM)",
-   "org_type": "공직 개인",
-   "org": "공직 현장(개인 개발)",
-   "source": "kakao",
-   "collected_at": "2026-09-06",
-   "id": "01d9a1954eb55f32",
-   "link_ok": true,
-   "health_checked": "2026-09-07"
-  },
-  {
-   "case_class": "개인 개발",
    "task_category": "문서·기안",
    "link": "https://gitlab.aigov.go.kr/shaimi/DnS_Auto",
    "date": "2026-09-06",
@@ -10629,6 +10609,477 @@
    "date": "2026-09-10",
    "title": "설계도면을 3차원으로 — 공공 시설사업 검토에 생성형 3D 모델링 적용",
    "id": "a3b9afb1d17d15a0"
+  },
+  {
+   "collected_at": "2026-09-11",
+   "model_dependency": "없음(비LLM)",
+   "region": "서울",
+   "org_type": "공직 개인",
+   "summary": "서울 주소를 넣으면 배정 초등학교와 중학교 학교군, 배정교까지의 보행 통학로, 운전자용 스쿨존 회피 후보를 함께 보여 주는 공개 지도다. 학교·학구·경로에 안전 점수를 붙여 견주고, 모든 출처에 갱신 시각과 이용 조건을 함께 저장해 오래된 자료를 현재로 오인하지 않게 했다. 학교 주변 공사정보 표시는 구현과 자동검증을 마쳤으나 공식 원본 승인 전이라 운영에는 아직 켜지 않았다.",
+   "link": "https://gitlab.aigov.go.kr/h19h19/ansim-school-map",
+   "source": "kakao",
+   "org": "공직 현장(개인 개발)",
+   "title": "안심학교 MAP — 통학구역·보행 통학로와 학교 주변 공사정보",
+   "case_class": "개인 개발",
+   "date": "2026-08-10",
+   "case_url": "https://map.h19h19.com",
+   "task_category": "시설·안전",
+   "tags": [
+    "통학안전",
+    "지도",
+    "학교",
+    "공공데이터"
+   ],
+   "id": "224e2d82d9369735",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "collected_at": "2026-09-11",
+   "model_dependency": "없음(비LLM)",
+   "region": "서울",
+   "org_type": "공직 개인",
+   "summary": "서울 소재 교육기관을 출발지로 골라 출장지까지 여러 경로와 예상 이동시간·거리·비용을 견주고, 근무지 안팎 여비 판단까지 한 화면에서 확인하는 공개 지도다. 교육청 소속기관과 국공사립 학교·유치원을 출발지로 지원하며 최단시간·최단거리·최저비용 경로를 나란히 놓는다. 로그인 없이 쓰는 공개 시범본이다.",
+   "link": "https://gitlab.aigov.go.kr/h19h19/seoul-education-travel-map",
+   "source": "kakao",
+   "org": "공직 현장(개인 개발)",
+   "title": "서울교육 출장 경로·여비 판단 지도",
+   "case_class": "개인 개발",
+   "date": "2026-08-12",
+   "case_url": "https://travel.h19h19.com",
+   "task_category": "회계·정산",
+   "tags": [
+    "여비",
+    "출장",
+    "지도",
+    "경로"
+   ],
+   "id": "4ff3227e6ec30331",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "collected_at": "2026-09-11",
+   "model_dependency": "없음(비LLM)",
+   "org_type": "공직 개인",
+   "summary": "교육행정 PDF 문서를 인터넷 없이 텍스트로 뽑아 코퍼스로 만들고 벡터 색인까지 세우는 검색 기반 저장소다. 문서 파싱과 선택형 광학 문자 인식, 색인 단계를 따로 떼어 두어 기관이 자기 문서 묶음으로 같은 절차를 되풀이할 수 있다. 답변을 짓는 모델은 부르지 않고 색인과 검색 층만 맡는다.",
+   "link": "https://gitlab.aigov.go.kr/h19h19/education-admin-rag",
+   "source": "kakao",
+   "org": "공직 현장(개인 개발)",
+   "title": "교육행정 문서 오프라인 코퍼스·검색 기반",
+   "network_req": "로컬 완결",
+   "case_class": "개인 개발",
+   "date": "2026-08-09",
+   "task_category": "데이터·통계",
+   "tags": [
+    "문서검색",
+    "교육행정",
+    "오프라인",
+    "벡터색인"
+   ],
+   "id": "7283ffe2096fa4ee",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "collected_at": "2026-09-11",
+   "model_dependency": "없음(비LLM)",
+   "org_type": "공직 개인",
+   "summary": "병합·분할·변환부터 비밀키와 인증서 노출 점검까지 스물세 가지 PDF 작업을 브라우저 안에서 끝내는 행정·공공기관용 도구 모음이다. 파일을 서버로 보내지 않고, 전자정부 표준 디자인을 따르며 한국어와 영어를 함께 지원한다. MIT 라이선스로 공개했다.",
+   "link": "https://gitlab.aigov.go.kr/cathode/pdf-dokkaebi-bangmang-i",
+   "runtime_env": "브라우저만",
+   "source": "kakao",
+   "org": "공직 현장(개인 개발)",
+   "title": "PDF 도깨비 방망이 — 행정용 23종 PDF 도구 모음",
+   "network_req": "로컬 완결",
+   "case_class": "개인 개발",
+   "date": "2026-08-26",
+   "task_category": "문서·기안",
+   "tags": [
+    "PDF",
+    "문서처리",
+    "오프라인",
+    "보안점검"
+   ],
+   "id": "43e5292fa9a441b7",
+   "license": "Apache-2.0",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "collected_at": "2026-09-11",
+   "model_dependency": "모델 중립(BYO)",
+   "org_type": "공직 개인",
+   "summary": "국가법령정보센터 공개 API와 판례·유권해석, 모법에서 시행규칙까지 이어지는 3단 법령 체계를 엮어 법령 검토를 돕고 결과를 한글서식·PDF·워드 보고서로 내는 도구다. 인용한 조문이 실제로 있는지 전수 교차 검증해 잘못된 인용을 자동으로 잡는 단계를 따로 두었다. 추론에 쓸 모델은 이용자가 로컬 실행과 상용 서비스 가운데 고른다.",
+   "link": "https://gitlab.aigov.go.kr/sojuy/legal_review",
+   "source": "kakao",
+   "org": "공직 현장(개인 개발)",
+   "title": "Legal Reviewer — 법령 검토와 공공서식 보고서 생성 워크벤치",
+   "case_class": "개인 개발",
+   "date": "2026-08-18",
+   "task_category": "감사·법무",
+   "tags": [
+    "법령",
+    "법무",
+    "문서생성",
+    "LLM"
+   ],
+   "id": "d2679e3d6555700c",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "mirror_url": "https://github.com/pinkshark1/kspo_data_explorer",
+   "collected_at": "2026-09-11",
+   "model_dependency": "없음(비LLM)",
+   "org_type": "공직 개인",
+   "summary": "공단이 어떤 데이터를 갖고 있는지 알아보려고 여러 사이트를 돌아다니지 않도록, 한 화면에서 검색하고 확인한 뒤 실제 공개 데이터까지 이어 주는 서비스다. 처음 쓰는 사람을 위해 찾는 방법을 영상으로 함께 안내한다.",
+   "link": "https://gitlab.aigov.go.kr/doongju1/kspo_data_explorer",
+   "runtime_env": "브라우저만",
+   "source": "kakao",
+   "org": "공직 현장(공공기관)",
+   "title": "KSPO 데이터 지도 — 공단 보유 데이터 한 화면 검색",
+   "case_class": "개인 개발",
+   "date": "2026-08-10",
+   "case_url": "https://pinkshark1.github.io/kspo_data_explorer/",
+   "task_category": "데이터·통계",
+   "tags": [
+    "공공데이터",
+    "데이터목록",
+    "검색"
+   ],
+   "id": "1128dadf532a4f06",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "collected_at": "2026-09-11",
+   "model_dependency": "없음(비LLM)",
+   "org_type": "공직 개인",
+   "summary": "텍스트와 오피스 문서를 훑어 원본과 분리된 비식별 결과물을 만드는 윈도우 데스크톱 프로그램이다. 주민등록번호·전화번호·이메일·계좌번호 같은 형식은 규칙으로 잡고, 이름과 주소는 사천만 매개변수 규모의 한국어 전용 탐지 모형을 안에 넣어 처리한다. 실행 중 모형을 내려받지 못하도록 오프라인 모드를 강제하며, 자체 코드는 Apache-2.0으로 공개했다.",
+   "link": "https://gitlab.aigov.go.kr/y2kthr/PII-Cleaner",
+   "runtime_env": "설치 필요",
+   "source": "kakao",
+   "org": "공직 현장(개인 개발)",
+   "title": "PII Cleaner — 오프라인 개인정보 비식별 도구",
+   "network_req": "로컬 완결",
+   "case_class": "개인 개발",
+   "date": "2026-08-26",
+   "task_category": "감사·법무",
+   "tags": [
+    "개인정보",
+    "비식별",
+    "오프라인",
+    "보안"
+   ],
+   "id": "d33ebcfc0adca9f8",
+   "license": "Apache-2.0",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "collected_at": "2026-09-11",
+   "model_dependency": "해외 상용 API",
+   "org_type": "공직 개인",
+   "summary": "세차 영수증 사진에서 날짜와 차량번호, 금액을 여러 줄까지 뽑아내고 보유 차량 대장과 표기를 맞춘 뒤 결과 엑셀의 차종 칸을 자동으로 채우는 도구다. 손글씨 판독에는 상용 시각 인식 모델을 쓴다. 대조에 실패했거나 인식이 미덥지 않은 줄은 비고에 남겨 담당자가 직접 확인하게 한다.",
+   "link": "https://gitlab.aigov.go.kr/sj4929/commonvechicle_project",
+   "models_used": [
+    "OpenAI Vision"
+   ],
+   "source": "kakao",
+   "org": "공직 현장(개인 개발)",
+   "title": "영수증 사진으로 공용차량 세차내역 자동 입력",
+   "case_class": "개인 개발",
+   "date": "2026-08-06",
+   "task_category": "회계·정산",
+   "tags": [
+    "영수증",
+    "문자인식",
+    "차량관리",
+    "자동화"
+   ],
+   "id": "90f8afce65c6f327",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "collected_at": "2026-09-11",
+   "model_dependency": "해외 상용 API",
+   "org_type": "공직 개인",
+   "summary": "학교회계·인사·시설처럼 자주 되풀이되는 교육행정 질의응답 사례를 검색하고, 원가통계비목 분류 같은 보조 판단을 곁들인 한 장짜리 도구다. 질의응답 자료를 화면 안에 담아 배포한다. 생성형 기능에 쓰는 열쇠값은 소스에 넣지 않고 쓰는 사람 브라우저에만 저장한다.",
+   "link": "https://gitlab.aigov.go.kr/sen/qna",
+   "models_used": [
+    "Gemini"
+   ],
+   "runtime_env": "브라우저만",
+   "source": "kakao",
+   "org": "공직 현장(개인 개발)",
+   "title": "교육행정 질의응답 사례 검색 도구",
+   "case_class": "개인 개발",
+   "date": "2026-08-07",
+   "task_category": "공통·범용",
+   "tags": [
+    "교육행정",
+    "질의응답",
+    "검색"
+   ],
+   "id": "7df3c5d297166cb2",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "collected_at": "2026-09-11",
+   "model_dependency": "없음(비LLM)",
+   "region": "경기",
+   "org_type": "공직 개인",
+   "summary": "자치법규를 훑어 정비가 필요한 조례를 담당과별로 모아 보여 주는 대시보드다. 정비 대상만 추리거나 시행일이 오래된 순으로 세워 우선순위를 잡을 수 있고, 어떤 근거로 그렇게 판정했는지 따로 열어 확인한다. 자동 분석이라 빠짐과 오류가 있을 수 있음을 화면에 못 박고, 최종 판단은 담당자가 조례 원문과 현행 법령을 직접 보고 하도록 안내한다.",
+   "link": "https://gitlab.aigov.go.kr/sura1212/gunpolaw-view",
+   "source": "kakao",
+   "org": "공직 현장(개인 개발)",
+   "title": "자치법규 정비 총괄 대시보드",
+   "case_class": "개인 개발",
+   "date": "2026-08-18",
+   "task_category": "감사·법무",
+   "tags": [
+    "자치법규",
+    "조례",
+    "대시보드"
+   ],
+   "id": "3b195a5faf820769",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "runtime_env": "설치 필요",
+   "task_category": "인사·복무",
+   "org_type": "공직 개인",
+   "org": "공직 현장(공공기관)",
+   "date": "2026-08-17",
+   "source": "kakao",
+   "tags": [
+    "채용",
+    "NCS",
+    "인사",
+    "HWPX"
+   ],
+   "collected_at": "2026-09-11",
+   "summary": "공고문을 넣으면 국가직무능력표준에서 근거를 찾아 맞추고 출처를 검토한 뒤 한글서식 직무기술서 초안까지 만드는 윈도우 실행 도구다. 기본값인 로컬 전용은 로그인도 열쇠값도 없이 돌며 같은 입력에 같은 결과를 낸다. 규칙 검색이 얕은 근거만 찾을 때에만 선택형 정밀 탐색을 켜고, 이때는 쓰는 사람이 이미 로그인해 둔 코딩 도구를 불러 쓴다.",
+   "link": "https://gitlab.aigov.go.kr/kyci/ncs_jd",
+   "case_class": "개인 개발",
+   "model_dependency": "모델 중립(BYO)",
+   "title": "NCS JD — 채용 공고문 근거 매칭과 직무기술서 초안",
+   "id": "7c989a8fe8dda878",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "task_category": "문서·기안",
+   "org_type": "공직 개인",
+   "case_url": "https://github.com/koul777/slideforge",
+   "org": "공직 현장(공공기관)",
+   "date": "2026-08-17",
+   "source": "kakao",
+   "tags": [
+    "발표자료",
+    "문서생성",
+    "로컬실행"
+   ],
+   "collected_at": "2026-09-11",
+   "summary": "주제나 원문을 넣어 슬라이드 초안을 만들고 브라우저에서 고친 뒤 발표자료나 PDF로 내보내는 공개 도구다. 별도 열쇠값을 받지 않고 쓰는 사람이 이미 로그인해 둔 코딩 도구를 불러 쓰며, 계정 정보는 화면에 입력하지도 프로젝트에 저장하지도 않는다. 실행은 내 컴퓨터 주소에서만 이뤄진다.",
+   "network_req": "로컬 완결",
+   "link": "https://gitlab.aigov.go.kr/kyci/slideforge",
+   "case_class": "개인 개발",
+   "model_dependency": "모델 중립(BYO)",
+   "title": "SlideForge — 로컬에서 도는 발표자료 초안 생성 도구",
+   "id": "6e2574c0914f8813",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "runtime_env": "AI 도구 설정",
+   "task_category": "공통·범용",
+   "org_type": "공직 개인",
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-08-13",
+   "source": "kakao",
+   "models_used": [
+    "Gemma4 e2b",
+    "bge-m3"
+   ],
+   "tags": [
+    "로컬LLM",
+    "업무비서",
+    "문서분석"
+   ],
+   "collected_at": "2026-09-11",
+   "summary": "이 컴퓨터에서 돌리는 로컬 모델에 붙여 대화, 문서와 이미지 풀이, 표 자료 시각화, 부서 자료 검색, 법령 확인을 한 화면에서 처리하는 업무 비서 웹앱이다. 오른쪽에 작업 공간을 따로 두어 분석 결과를 바로 이어 쓰게 하고, 일정 명령도 로컬에서 처리한다.",
+   "network_req": "로컬 완결",
+   "link": "https://gitlab.aigov.go.kr/Ubermensch/myAI",
+   "case_class": "개인 개발",
+   "model_dependency": "해외 오픈웨이트(로컬)",
+   "title": "myAI — 로컬 모델로 도는 업무 비서 웹앱",
+   "id": "204ab9b684be3cca",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "task_category": "공통·범용",
+   "org_type": "공직 개인",
+   "case_url": "https://github.com/Ubermensch216/deskNote_petAI",
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-09-03",
+   "source": "kakao",
+   "models_used": [
+    "Gemma4 e2b"
+   ],
+   "tags": [
+    "메모",
+    "로컬LLM",
+    "검색"
+   ],
+   "collected_at": "2026-09-11",
+   "summary": "단축키로 곧바로 적는 바탕화면 메모에 비슷한 메모 찾기와 요약·재작성을 붙인 도구다. 유사 메모 찾기는 벡터를 견주기만 해서 모델을 부르지 않고 즉시 끝나고, 요약과 질문만 이 컴퓨터의 로컬 모델에서 돈다. 모델을 받지 않아도 메모·검색·알림은 그대로 동작해 도입 문턱을 낮췄다.",
+   "network_req": "로컬 완결",
+   "link": "https://gitlab.aigov.go.kr/Ubermensch/deskNote_petAI",
+   "case_class": "개인 개발",
+   "model_dependency": "해외 오픈웨이트(로컬)",
+   "title": "DeskNote — 바탕화면 메모에 붙인 로컬 요약·유사 검색",
+   "id": "dee1a1ceb4432cd3",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "runtime_env": "설치 필요",
+   "task_category": "공통·범용",
+   "org_type": "공직 개인",
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-08-18",
+   "source": "kakao",
+   "tags": [
+    "알림",
+    "일정",
+    "업무관리"
+   ],
+   "collected_at": "2026-09-11",
+   "summary": "문서나 그룹웨어, 메일을 보다가 발견한 기한과 회의, 확인할 사항을 그 자리에서 등록해 두고 때가 되면 알려 주는 윈도우 도구다. 알림에서 한 번 누르면 관련 문서나 웹페이지가 다시 열려 하던 자리로 곧장 돌아간다.",
+   "link": "https://gitlab.aigov.go.kr/mkmoon/alarm",
+   "case_class": "개인 개발",
+   "model_dependency": "없음(비LLM)",
+   "title": "Alarm — 업무 중 발견한 할 일 등록·복귀 알림",
+   "id": "e10607b74d8ffff6",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "task_category": "인사·복무",
+   "org_type": "공직 개인",
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-08-10",
+   "source": "kakao",
+   "models_used": [
+    "Upstage Solar"
+   ],
+   "tags": [
+    "연수",
+    "교육청",
+    "프로토타입",
+    "국산모델"
+   ],
+   "collected_at": "2026-09-11",
+   "summary": "교육청 연수 과정에서 연수생이 한 번 쓴 내용이 수합과 양식, 사례집으로 그대로 이어지도록 묶은 화면 시안이다. 여러 도구에 흩어 놓고 사람이 다시 편집하던 흐름을 하나로 잇는 것을 목표로 했다. 초안 생성은 국산 언어모델을 서버 쪽 함수에서만 부르고 브라우저에는 열쇠값이 드러나지 않게 경계를 두었다.",
+   "region": "서울",
+   "link": "https://gitlab.aigov.go.kr/greenguyhh/hackathon_expansion",
+   "case_class": "개인 개발",
+   "model_dependency": "국산 독자모델",
+   "title": "교사 개발자 연수 플랫폼 시안 — 수합·양식·사례집을 한 흐름으로",
+   "id": "42ac1d043a40db1b",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "task_category": "감사·법무",
+   "org_type": "공직 개인",
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-08-08",
+   "source": "kakao",
+   "tags": [
+    "개인정보",
+    "동의",
+    "행사",
+    "KRDS"
+   ],
+   "collected_at": "2026-09-11",
+   "summary": "행사 운영 정보를 넣으면 개인정보 수집·이용 동의서를 자동으로 짜 주고, 만 열네 살 미만 참여자는 법정대리인이 웹에서 직접 동의한 뒤 짧은 확인 문자를 받도록 만든 시안이다. 기획과 법적 설계 기준, 전자정부 표준 디자인 전환 범위, 시험 절차를 문서로 나눠 두어 따라 만들 수 있게 했다.",
+   "link": "https://gitlab.aigov.go.kr/hibm98/vibecode-event",
+   "case_class": "개인 개발",
+   "model_dependency": "없음(비LLM)",
+   "title": "행사 개인정보 수집·이용 동의 서비스 시안",
+   "id": "65f9634aacca2170",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "runtime_env": "브라우저만",
+   "task_category": "공통·범용",
+   "org_type": "커뮤니티",
+   "case_url": "https://github.com/obundh/Hassle-Reduction-series-2-Gwangju-Place-Name-Filter",
+   "org": "공직 커뮤니티",
+   "date": "2026-08-14",
+   "source": "kakao",
+   "tags": [
+    "행정구역",
+    "브라우저확장",
+    "지명"
+   ],
+   "collected_at": "2026-09-11",
+   "summary": "하나로 합쳐진 전남광주통합특별시 지역 목록을 광주권 다섯 개 구와 전남권 스물두 개 시·군으로 다시 갈라 보여 주는 브라우저 확장이다. 행정구역이 통합되면서 목록만으로는 어느 권역인지 가려내기 어려워진 화면을 쓰는 쪽에서 되돌린다. MIT 라이선스로 공개했다.",
+   "link": "https://gitlab.aigov.go.kr/tyui22/Hassle-Reduction-series-2-Gwangju-Place-Name-Filter",
+   "case_class": "커뮤니티",
+   "model_dependency": "없음(비LLM)",
+   "title": "광주지명필터 — 통합 특별시 지명을 옛 권역으로 나눠 보기",
+   "id": "0d6b2a5a76072edf",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "runtime_env": "설치 필요",
+   "task_category": "문서·기안",
+   "org_type": "공직 개인",
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-08-10",
+   "source": "kakao",
+   "tags": [
+    "PDF",
+    "마크다운",
+    "문서변환"
+   ],
+   "collected_at": "2026-09-11",
+   "summary": "PDF 문서를 텍스트와 마크다운으로 자동 변환해 주는 윈도우 데스크톱 프로그램이다. 파일을 고르면 마크다운 파일로 저장한다. 언어모델을 부르지 않고 내 컴퓨터 안에서 끝난다.",
+   "network_req": "로컬 완결",
+   "link": "https://gitlab.aigov.go.kr/wsk1214/pdftomdconverter",
+   "case_class": "개인 개발",
+   "model_dependency": "없음(비LLM)",
+   "title": "PDF를 마크다운으로 바꾸는 윈도우 변환기",
+   "id": "ce77601a3fa41786",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-11"
   }
  ]
 }

@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-09-10",
+ "generated_at": "2026-09-11",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 382,
- "total_champions": 173,
+ "total_cases": 400,
+ "total_champions": 186,
  "community": {
   "members": 1672,
   "kakao_week": 6314,
@@ -13,25 +13,25 @@
  "certified_champions": 5,
  "unattributed_cases": 76,
  "ax_distribution": {
-  "AI-Ready": 265,
-  "AI-Enabled": 104,
+  "AI-Ready": 276,
+  "AI-Enabled": 112,
   "AX 단계 외": 12,
   "AI-First": 1
  },
- "c_axis_mean": 0.82,
+ "c_axis_mean": 0.85,
  "p_distribution": {
-  "P0": 127,
-  "P1": 245,
-  "P2": 10
+  "P0": 133,
+  "P1": 257,
+  "P2": 11
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 168,
-  "해외 오픈웨이트(로컬)": 21,
+  "없음(비LLM)": 178,
+  "해외 오픈웨이트(로컬)": 23,
   "혼합": 8,
-  "해외 상용 API": 51,
-  "모델 중립(BYO)": 61,
-  "국산 독자모델": 3,
+  "해외 상용 API": 53,
+  "모델 중립(BYO)": 64,
+  "국산 독자모델": 4,
   "미상": 4,
   "국산 오픈웨이트": 1
  },
@@ -136,7 +136,7 @@
    },
    {
     "name": "GPT(OpenAI)",
-    "n": 10,
+    "n": 11,
     "variants": [
      "ChatGPT GPTs",
      "ChatGPT(팀계정)",
@@ -147,6 +147,7 @@
      "GPT-5.6 Terra",
      "GPT-6 Astra",
      "OpenAI GPT-5(Responses API)",
+     "OpenAI Vision",
      "OpenAI/Anthropic(사용자 키)",
      "OpenAI/Claude(제공자 전환형)"
     ],
@@ -190,6 +191,64 @@
      {
       "id": "a3b9afb1d17d15a0",
       "title": "설계도면을 3차원으로 — 공공 시설사업 검토에 생성형 3D 모델링 적용"
+     },
+     {
+      "id": "90f8afce65c6f327",
+      "title": "영수증 사진으로 공용차량 세차내역 자동 입력"
+     }
+    ],
+    "domestic": false
+   },
+   {
+    "name": "Gemini",
+    "n": 9,
+    "variants": [
+     "Claude Code/Codex/Gemini(스킬 팩)",
+     "Claude/Codex/Gemini(어댑터)",
+     "Gemini",
+     "Gemini 3.5 Flash",
+     "Gemini GEM",
+     "Gemini(옵션 전환)",
+     "Gemini(옵션)",
+     "OpenAI/Gemini/Claude(사용자 선택)",
+     "구글 제미나이(외부 연계)"
+    ],
+    "cases": [
+     {
+      "id": "de4b2dab339d69b7",
+      "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
+     },
+     {
+      "id": "48e33f2318bdffae",
+      "title": "클릭 과정을 PDF 가이드로 만드는 ClickGuide Local"
+     },
+     {
+      "id": "1502d338e8e99382",
+      "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
+     },
+     {
+      "id": "c5aa260668941b92",
+      "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커"
+     },
+     {
+      "id": "4c918008fd4eff60",
+      "title": "민원 답변 작성 스킬 팩 — Codex·Claude Code·Gemini CLI 겸용"
+     },
+     {
+      "id": "a384b647830b2bf7",
+      "title": "쉽다공문 — 제미나이 GEM 공문서 초안 생성기 무료 배포"
+     },
+     {
+      "id": "539d5aacb03635db",
+      "title": "민원 신고 스크리너 — 신고 7유형·근거법령·소관부서 자동 판별 모듈"
+     },
+     {
+      "id": "fcfac85b15998dee",
+      "title": "한국서부발전 위피봇 — 발전 현장 안전·설비 업무에 붙인 사내 생성형 AI 에이전트"
+     },
+     {
+      "id": "7df3c5d297166cb2",
+      "title": "교육행정 질의응답 사례 검색 도구"
      }
     ],
     "domestic": false
@@ -250,63 +309,15 @@
     "domestic": false
    },
    {
-    "name": "Gemini",
-    "n": 8,
-    "variants": [
-     "Claude Code/Codex/Gemini(스킬 팩)",
-     "Claude/Codex/Gemini(어댑터)",
-     "Gemini 3.5 Flash",
-     "Gemini GEM",
-     "Gemini(옵션 전환)",
-     "Gemini(옵션)",
-     "OpenAI/Gemini/Claude(사용자 선택)",
-     "구글 제미나이(외부 연계)"
-    ],
-    "cases": [
-     {
-      "id": "de4b2dab339d69b7",
-      "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
-     },
-     {
-      "id": "48e33f2318bdffae",
-      "title": "클릭 과정을 PDF 가이드로 만드는 ClickGuide Local"
-     },
-     {
-      "id": "1502d338e8e99382",
-      "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
-     },
-     {
-      "id": "c5aa260668941b92",
-      "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커"
-     },
-     {
-      "id": "4c918008fd4eff60",
-      "title": "민원 답변 작성 스킬 팩 — Codex·Claude Code·Gemini CLI 겸용"
-     },
-     {
-      "id": "a384b647830b2bf7",
-      "title": "쉽다공문 — 제미나이 GEM 공문서 초안 생성기 무료 배포"
-     },
-     {
-      "id": "539d5aacb03635db",
-      "title": "민원 신고 스크리너 — 신고 7유형·근거법령·소관부서 자동 판별 모듈"
-     },
-     {
-      "id": "fcfac85b15998dee",
-      "title": "한국서부발전 위피봇 — 발전 현장 안전·설비 업무에 붙인 사내 생성형 AI 에이전트"
-     }
-    ],
-    "domestic": false
-   },
-   {
     "name": "Gemma",
-    "n": 6,
+    "n": 8,
     "variants": [
      "Gemma 4",
      "Gemma 4 E2B(Ollama 번들)",
      "Gemma 4 E2B(Ollama, 선택형 요약)",
      "Gemma 4 E4B(Ollama 권장)",
      "Gemma 4 E4B(Ollama)",
+     "Gemma4 e2b",
      "LLM42-Gemma4(멀티모달 전환)"
     ],
     "cases": [
@@ -333,6 +344,14 @@
      {
       "id": "75b6a86d91aea955",
       "title": "AI지원담당 — 공공 실무용 로컬 AI 메신저 MVP (공공 AX 로컬 시리즈 1)"
+     },
+     {
+      "id": "204ab9b684be3cca",
+      "title": "myAI — 로컬 모델로 도는 업무 비서 웹앱"
+     },
+     {
+      "id": "dee1a1ceb4432cd3",
+      "title": "DeskNote — 바탕화면 메모에 붙인 로컬 요약·유사 검색"
      }
     ],
     "domestic": false
@@ -616,6 +635,13 @@
      "Kanana 2.1B(Q4 로컬)",
      "Mi:dm 2.0 Mini 2.3B(Q4 로컬)"
     ]
+   },
+   {
+    "id": "42ac1d043a40db1b",
+    "title": "교사 개발자 연수 플랫폼 시안 — 수합·양식·사례집을 한 흐름으로",
+    "models": [
+     "Upstage Solar"
+    ]
    }
   ],
   "dist_detail": {
@@ -624,28 +650,28 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 168,
+    "n": 178,
     "specified": 0
    },
    "해외 오픈웨이트(로컬)": {
-    "n": 21,
-    "specified": 10
+    "n": 23,
+    "specified": 12
    },
    "혼합": {
     "n": 8,
     "specified": 8
    },
    "해외 상용 API": {
-    "n": 51,
-    "specified": 36
+    "n": 53,
+    "specified": 38
    },
    "모델 중립(BYO)": {
-    "n": 61,
+    "n": 64,
     "specified": 0
    },
    "국산 독자모델": {
-    "n": 3,
-    "specified": 3
+    "n": 4,
+    "specified": 4
    },
    "미상": {
     "n": 4,
@@ -659,7 +685,7 @@
   "models_by_dep": [
    {
     "dep": "국산 독자모델",
-    "n": 3,
+    "n": 4,
     "families": [
      {
       "name": "schift(자체 학습)",
@@ -692,6 +718,20 @@
       "domestic": true,
       "variants": [
        "HCX-GOV-THINK-V1-32B(범정부 AI 공통기반)"
+      ]
+     },
+     {
+      "name": "Upstage Solar",
+      "n": 1,
+      "cases": [
+       {
+        "id": "42ac1d043a40db1b",
+        "title": "교사 개발자 연수 플랫폼 시안 — 수합·양식·사례집을 한 흐름으로"
+       }
+      ],
+      "domestic": true,
+      "variants": [
+       "Upstage Solar"
       ]
      }
     ]
@@ -936,7 +976,7 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 51,
+    "n": 53,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
@@ -1032,7 +1072,7 @@
      },
      {
       "name": "GPT(OpenAI)",
-      "n": 9,
+      "n": 10,
       "cases": [
        {
         "id": "6a2d1fa6e385ef2b",
@@ -1069,6 +1109,10 @@
        {
         "id": "a3b9afb1d17d15a0",
         "title": "설계도면을 3차원으로 — 공공 시설사업 검토에 생성형 3D 모델링 적용"
+       },
+       {
+        "id": "90f8afce65c6f327",
+        "title": "영수증 사진으로 공용차량 세차내역 자동 입력"
        }
       ],
       "domestic": false,
@@ -1081,13 +1125,14 @@
        "GPT-5.6 Terra",
        "GPT-6 Astra",
        "OpenAI GPT-5(Responses API)",
+       "OpenAI Vision",
        "OpenAI/Anthropic(사용자 키)",
        "OpenAI/Claude(제공자 전환형)"
       ]
      },
      {
       "name": "Gemini",
-      "n": 5,
+      "n": 6,
       "cases": [
        {
         "id": "48e33f2318bdffae",
@@ -1108,12 +1153,17 @@
        {
         "id": "539d5aacb03635db",
         "title": "민원 신고 스크리너 — 신고 7유형·근거법령·소관부서 자동 판별 모듈"
+       },
+       {
+        "id": "7df3c5d297166cb2",
+        "title": "교육행정 질의응답 사례 검색 도구"
        }
       ],
       "domestic": false,
       "variants": [
        "Claude Code/Codex/Gemini(스킬 팩)",
        "Claude/Codex/Gemini(어댑터)",
+       "Gemini",
        "Gemini 3.5 Flash",
        "Gemini GEM",
        "OpenAI/Gemini/Claude(사용자 선택)"
@@ -1179,8 +1229,46 @@
    },
    {
     "dep": "해외 오픈웨이트(로컬)",
-    "n": 21,
+    "n": 23,
     "families": [
+     {
+      "name": "Gemma",
+      "n": 6,
+      "cases": [
+       {
+        "id": "2c14f2adaa83a00e",
+        "title": "로컬 인수인계 도구 MVP 공개 — 공공 AX 로컬 시리즈 3"
+       },
+       {
+        "id": "9d115930495a1e65",
+        "title": "공무원용 로컬 AI 에이전트 워크플레이스 개발"
+       },
+       {
+        "id": "ec17e6cd86e7aaa1",
+        "title": "PDF 번역·검토 작업장 — 공공 AX 로컬 시리즈 6"
+       },
+       {
+        "id": "75b6a86d91aea955",
+        "title": "AI지원담당 — 공공 실무용 로컬 AI 메신저 MVP (공공 AX 로컬 시리즈 1)"
+       },
+       {
+        "id": "204ab9b684be3cca",
+        "title": "myAI — 로컬 모델로 도는 업무 비서 웹앱"
+       },
+       {
+        "id": "dee1a1ceb4432cd3",
+        "title": "DeskNote — 바탕화면 메모에 붙인 로컬 요약·유사 검색"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Gemma 4 E2B(Ollama 번들)",
+       "Gemma 4 E2B(Ollama, 선택형 요약)",
+       "Gemma 4 E4B(Ollama 권장)",
+       "Gemma 4 E4B(Ollama)",
+       "Gemma4 e2b"
+      ]
+     },
      {
       "name": "로컬 서빙(Ollama·vLLM 등)",
       "n": 5,
@@ -1217,35 +1305,6 @@
       ]
      },
      {
-      "name": "Gemma",
-      "n": 4,
-      "cases": [
-       {
-        "id": "2c14f2adaa83a00e",
-        "title": "로컬 인수인계 도구 MVP 공개 — 공공 AX 로컬 시리즈 3"
-       },
-       {
-        "id": "9d115930495a1e65",
-        "title": "공무원용 로컬 AI 에이전트 워크플레이스 개발"
-       },
-       {
-        "id": "ec17e6cd86e7aaa1",
-        "title": "PDF 번역·검토 작업장 — 공공 AX 로컬 시리즈 6"
-       },
-       {
-        "id": "75b6a86d91aea955",
-        "title": "AI지원담당 — 공공 실무용 로컬 AI 메신저 MVP (공공 AX 로컬 시리즈 1)"
-       }
-      ],
-      "domestic": false,
-      "variants": [
-       "Gemma 4 E2B(Ollama 번들)",
-       "Gemma 4 E2B(Ollama, 선택형 요약)",
-       "Gemma 4 E4B(Ollama 권장)",
-       "Gemma 4 E4B(Ollama)"
-      ]
-     },
-     {
       "name": "Whisper",
       "n": 1,
       "cases": [
@@ -1272,23 +1331,37 @@
       "variants": [
        "로컬 음성인식 모델(세부 미상)"
       ]
+     },
+     {
+      "name": "bge-m3",
+      "n": 1,
+      "cases": [
+       {
+        "id": "204ab9b684be3cca",
+        "title": "myAI — 로컬 모델로 도는 업무 비서 웹앱"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "bge-m3"
+      ]
      }
     ]
    }
   ]
  },
- "domestic_model_rate": 0.048,
- "local_model_rate": 0.25,
- "model_known": 84,
- "license_tagged": 283,
- "license_stated_rate": 0.523,
- "gitlab_cases": 182,
- "gitlab_mirror_pairs": 24,
- "gitlab_open_rate": 0.132,
+ "domestic_model_rate": 0.056,
+ "local_model_rate": 0.258,
+ "model_known": 89,
+ "license_tagged": 302,
+ "license_stated_rate": 0.503,
+ "gitlab_cases": 202,
+ "gitlab_mirror_pairs": 30,
+ "gitlab_open_rate": 0.149,
  "mcp_cases": 79,
  "transition_funnel": {
   "기관 공식": 33,
-  "미확인": 306,
+  "미확인": 324,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1296,7 +1369,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.678
+  "feedback": 0.693
  },
  "maintenance_distribution": {
   "활발": 198,
@@ -1306,11 +1379,11 @@
  "stars_collected": 229,
  "repo_stats": {
   "gitlab": {
-   "count": 182,
+   "count": 202,
    "starred": 138,
    "stars_sum": 330,
    "maintenance": {
-    "활발": 134,
+    "활발": 136,
     "정체": 6
    },
    "top": [
@@ -1397,7 +1470,7 @@
    ]
   },
   "github": {
-   "count": 117,
+   "count": 121,
    "starred": 112,
    "stars_sum": 176133,
    "maintenance": {
@@ -1490,10 +1563,10 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 135,
-  "MIT": 105,
+  "명시 없음": 150,
+  "MIT": 107,
+  "Apache-2.0": 16,
   "Other": 15,
-  "Apache-2.0": 14,
   "기타(비표준)": 4,
   "AGPL-3.0": 3,
   "GNU AGPLv3": 3,
@@ -1504,20 +1577,20 @@
  },
  "license_matrix": {
   "명시 없음": {
-   "github": 40,
-   "gitlab": 95
+   "github": 41,
+   "gitlab": 109
   },
   "MIT": {
-   "github": 61,
+   "github": 63,
    "gitlab": 44
+  },
+  "Apache-2.0": {
+   "github": 8,
+   "gitlab": 8
   },
   "Other": {
    "github": 15,
    "gitlab": 0
-  },
-  "Apache-2.0": {
-   "github": 8,
-   "gitlab": 6
   },
   "기타(비표준)": {
    "github": 0,
@@ -1550,16 +1623,16 @@
  },
  "license_by_source": {
   "github": {
-   "total": 112,
-   "stated": 83
+   "total": 115,
+   "stated": 85
   },
   "github-pages": {
    "total": 15,
    "stated": 4
   },
   "gitlab": {
-   "total": 156,
-   "stated": 61
+   "total": 172,
+   "stated": 63
   }
  },
  "mcp_stats": {
@@ -1676,6 +1749,12 @@
    "gitlab": "https://gitlab.aigov.go.kr/archimin/pumsem"
   },
   {
+   "id": "759835514b4b7ca4",
+   "title": "레스큐79 — CCTV 팔 동작 인식 구조요청 감지 PoC",
+   "github": "https://github.com/obundh/gonggong-disaster-series-rescue79",
+   "gitlab": "https://gitlab.aigov.go.kr/tyui22/gonggong-disaster-series-rescue79"
+  },
+  {
    "id": "43dc7f4ab2500260",
    "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
    "github": "https://github.com/chrisryugj/korean-law-mcp",
@@ -1686,6 +1765,12 @@
    "title": "건축HUB MCP — 건축물대장·인허가·필지 종합카드",
    "github": "https://github.com/chrisryugj/archhub-mcp",
    "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/archhub-mcp"
+  },
+  {
+   "id": "75b6a86d91aea955",
+   "title": "AI지원담당 — 공공 실무용 로컬 AI 메신저 MVP (공공 AX 로컬 시리즈 1)",
+   "github": "https://github.com/obundh/gonggong-ax-local-series-1-AISupportMessnger",
+   "gitlab": "https://gitlab.aigov.go.kr/tyui22/gonggong-ax-local-series-1-AISupportMessnger"
   },
   {
    "id": "9c850ff3e7429a24",
@@ -1728,6 +1813,30 @@
    "title": "헬로라이트하우스 — 등대 1,480개를 잇는 원스톱 해양관광 서비스",
    "github": "https://github.com/emdeo/hellolighthouse",
    "gitlab": "https://gitlab.aigov.go.kr/scout202/hellolighthouse"
+  },
+  {
+   "id": "1128dadf532a4f06",
+   "title": "KSPO 데이터 지도 — 공단 보유 데이터 한 화면 검색",
+   "github": "https://github.com/pinkshark1/kspo_data_explorer",
+   "gitlab": "https://gitlab.aigov.go.kr/doongju1/kspo_data_explorer"
+  },
+  {
+   "id": "6e2574c0914f8813",
+   "title": "SlideForge — 로컬에서 도는 발표자료 초안 생성 도구",
+   "github": "https://github.com/koul777/slideforge",
+   "gitlab": "https://gitlab.aigov.go.kr/kyci/slideforge"
+  },
+  {
+   "id": "dee1a1ceb4432cd3",
+   "title": "DeskNote — 바탕화면 메모에 붙인 로컬 요약·유사 검색",
+   "github": "https://github.com/Ubermensch216/deskNote_petAI",
+   "gitlab": "https://gitlab.aigov.go.kr/Ubermensch/deskNote_petAI"
+  },
+  {
+   "id": "0d6b2a5a76072edf",
+   "title": "광주지명필터 — 통합 특별시 지명을 옛 권역으로 나눠 보기",
+   "github": "https://github.com/obundh/Hassle-Reduction-series-2-Gwangju-Place-Name-Filter",
+   "gitlab": "https://gitlab.aigov.go.kr/tyui22/Hassle-Reduction-series-2-Gwangju-Place-Name-Filter"
   }
  ]
 }
