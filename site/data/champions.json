@@ -1,5 +1,5 @@
 {
- "total": 172,
+ "total": 173,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -833,6 +833,26 @@
    }
   },
   {
+   "id": "threads:g.nu.das",
+   "name": "g.nu.das",
+   "accounts": [
+    {
+     "platform": "threads",
+     "id": "g.nu.das",
+     "url": "https://www.threads.com/@g.nu.das"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "a3b9afb1d17d15a0"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
+    "stars": 0
+   }
+  },
+  {
    "id": "github:galvaomica396",
    "name": "galvaomica396",
    "accounts": [
@@ -1421,11 +1441,12 @@
    ],
    "affiliation": null,
    "cases": [
+    "2f27c87e6f7c7614",
     "578e4da94db0682d",
     "def97ef350fe7cae"
    ],
    "stats": {
-    "case_count": 2,
+    "case_count": 3,
     "top_ax": 1,
     "stars": 0
    }

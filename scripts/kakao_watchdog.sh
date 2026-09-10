@@ -56,20 +56,54 @@ if not ts: print(99999); raise SystemExit
 t=datetime.datetime.fromisoformat(max(ts).replace('Z','+00:00'))
 print(int((datetime.datetime.now(datetime.timezone.utc)-t).total_seconds()//60))"
 }
+# 앱을 '실제로' 내린다. quit는 앱이 굳어 있으면 애플 이벤트 타임아웃까지 매달리고,
+# 종료가 끝나기 전에 open을 던지면 LaunchServices가 죽어 가는 인스턴스를 붙잡아
+# 기동이 통째로 흘러간다(2026-09-10 실측: 11시간 정체 — 재실행 로그는 남고 앱은 죽어 있었다).
+# 그래서 종료를 프로세스 소멸로 확인하고, 안 내려가면 신호로 마무리한다.
+quit_kakao() {
+  osascript -e 'tell application "KakaoTalk" to quit' >/dev/null 2>&1 &
+  local osa=$!
+  for _ in 1 2 3 4 5 6 7 8 9 10; do
+    pgrep -x KakaoTalk >/dev/null 2>&1 || { kill "$osa" 2>/dev/null; wait "$osa" 2>/dev/null; return 0; }
+    sleep 2
+  done
+  kill "$osa" 2>/dev/null; wait "$osa" 2>/dev/null
+  log "조치: 정상 종료 실패 — 신호로 종료"
+  pkill -x KakaoTalk 2>/dev/null || true
+  for _ in 1 2 3 4 5; do
+    pgrep -x KakaoTalk >/dev/null 2>&1 || return 0
+    sleep 2
+  done
+  pkill -9 -x KakaoTalk 2>/dev/null || true
+  sleep 3
+  pgrep -x KakaoTalk >/dev/null 2>&1 && return 1 || return 0
+}
+
+# 앱을 백그라운드로 띄우고 프로세스가 실제로 떴는지 확인한다.
+# open의 종료코드는 LaunchServices가 요청을 받았다는 뜻일 뿐 기동 성공이 아니다.
+launch_kakao() {
+  open -g -a KakaoTalk 2>/dev/null || return 1
+  for _ in 1 2 3 4 5 6 7 8 9 10; do
+    pgrep -x KakaoTalk >/dev/null 2>&1 && return 0
+    sleep 2
+  done
+  return 1
+}
+
 # 기동 후 동기화가 실제로 붙었는지 확인한다. 안 붙으면 창을 앞으로 가져와 기동을 마무리시킨다
 # (감춰 둔 앱은 기동이 완료되지 않는다 — 눈에 안 보이는 것보다 수집이 우선).
 wait_sync_ready() {
   local age
-  for _ in 1 2 3 4 5 6 7 8 9 10; do
-    sleep 6
+  for _ in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15; do
+    sleep 8
     age=$(db_age_min)
     [ "$age" -lt 20 ] 2>/dev/null && { log "조치: 동기화 확인(DB 최신 ${age}분 전)"; return 0; }
   done
   log "조치: 동기화 미확인(DB 최신 ${age}분 전) → 창 활성화로 기동 마무리"
   osascript -e 'tell application "System Events" to set visible of process "KakaoTalk" to true' >/dev/null 2>&1
   osascript -e 'tell application "KakaoTalk" to activate' >/dev/null 2>&1
-  for _ in 1 2 3 4 5; do
-    sleep 12
+  for _ in 1 2 3 4 5 6 7 8; do
+    sleep 15
     age=$(db_age_min)
     [ "$age" -lt 20 ] 2>/dev/null && { log "조치: 활성화 후 동기화 확인(${age}분 전)"; return 0; }
   done
@@ -163,17 +197,16 @@ fi
 log "정체 감지: DB 최신 ${age_min}분 전 ($latest_iso)"
 [ "${1:-}" = "--check-only" ] && { echo "STALL ${age_min}min"; exit 1; }
 
-# 최근 90분 내 이미 재실행했으면 알림 단계로 (재실행 루프 방지)
+# 최근 45분 내 이미 재실행했으면 알림 단계로 (재실행 루프 방지)
 last_restart=$(cat "$STATE" 2>/dev/null || echo 0)
 now_epoch=$(date +%s)
-if [ $((now_epoch - last_restart)) -gt 5400 ]; then
+if [ $((now_epoch - last_restart)) -gt 2700 ]; then
   log "조치: 카카오톡 재실행"
-  osascript -e 'tell application "KakaoTalk" to quit' 2>/dev/null || true
-  sleep 5
-  if open -g -a KakaoTalk 2>/dev/null; then
-    log "조치: 앱 기동 완료"; wait_sync_ready
+  if ! quit_kakao; then log "조치 실패: 앱이 내려가지 않음 — 이번 주기는 재실행 보류"; echo "$now_epoch" > "$STATE"; exit 0; fi
+  if launch_kakao; then
+    log "조치: 앱 기동 확인(프로세스 생성)"; wait_sync_ready
   else
-    log "조치 실패: 앱 기동 불가"
+    log "조치 실패: 앱 기동 불가(프로세스가 뜨지 않음)"
   fi
   echo "$now_epoch" > "$STATE"
 else
