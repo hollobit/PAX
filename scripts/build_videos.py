@@ -121,7 +121,8 @@ def main() -> int:
         })
 
     # 최근 공유순 — 방에서 지금 도는 것이 위로 온다. 같은 날이면 재공유가 많은 쪽이 먼저.
-    items.sort(key=lambda x: (x["last_shared"], x["shares"]), reverse=True)
+    # 동점 순서를 id로 고정한다(순서가 흔들리면 내용이 같아도 파일이 다시 쓰인다).
+    items.sort(key=lambda x: (x["last_shared"], x["shares"], x["id"]), reverse=True)
 
     os.makedirs(os.path.dirname(CACHE), exist_ok=True)
     json.dump(cache, open(CACHE, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
