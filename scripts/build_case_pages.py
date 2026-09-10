@@ -43,6 +43,7 @@ TEMPLATE = """<!DOCTYPE html>
       <a href="../playbook.html">전이 플레이북</a>
       <a href="../guidelines.html">안내서·가이드라인</a>
       <a href="../videos.html">공유 동영상</a>
+      <a href="../news.html">공유 뉴스</a>
       <a href="../changelog.html">변경 기록</a>
     </nav>
     <nav class="site-nav site-nav--external" aria-label="관련 사이트">
