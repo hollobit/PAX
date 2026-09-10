@@ -149,6 +149,7 @@ python3 scripts/build_case_pages.py       # 사례별 정적 상세 페이지 �
 python3 scripts/build_community_stats.py  # 커뮤니티 활력 지표(대화량·가입자·Threads 관측) 갱신
 python3 scripts/build_videos.py           # 공유된 동영상 목록 갱신 (raw 전체 재스캔, 제목은 캐시)
 python3 scripts/build_news.py             # 공유된 뉴스 기사 목록 갱신 (기사 판별·제목은 캐시)
+python3 scripts/build_dashboard_history.py # 현황판 증감 표시용 일자별 원장 갱신 (index·champions 뒤에 실행)
 PYTHONPATH=scripts python3 scripts/build_mcp_review.py  # MCP 검증 공개본 (원장 변경 시)
 python3 scripts/stamp_assets.py            # site의 JS·CSS를 고쳤을 때만 (캐시 무효화)
 ```
