@@ -38,7 +38,10 @@ URL_RE = re.compile(r"https?://[^\s\)\]\>\"'`]+")
 SKIP_HOST = re.compile(
     r"youtube\.com|youtu\.be|kakao\.com|github\.com|github\.io|gitlab\.aigov"
     r"|threads\.com|facebook\.com|instagram\.com|linkedin\.com|^x\.com|twitter\.com"
-    r"|vercel\.app|pages\.dev|netlify\.app|\.go\.kr|korea\.kr"
+    # 정부 도메인을 통째로 막지 않는다 — 정책브리핑은 article:published_time을 제대로 달아
+    # 기사로 판별되고, 데이터 포털·업무 시스템은 그 표지가 없어 어차피 걸러진다.
+    # 예전에 `korea\.kr`를 앵커 없이 두어 `thekorea.kr`(언론사)까지 함께 배제되기도 했다.
+    r"|vercel\.app|pages\.dev|netlify\.app|gitlab\.aigov\.go\.kr"
     r"|claude\.ai|chatgpt\.com|openai\.com|anthropic\.com|huggingface\.co"
     r"|notion\.|docs\.google|drive\.google|forms\.gle|google\.com"
     r"|wikidocs\.net|kyobobook|arca\.live|status\.|localhost|^\d+\.\d+\.\d+\.\d+"
@@ -162,6 +165,13 @@ def norm_date(raw: str) -> str:
     return ""
 
 
+# og:site_name을 안 다는 곳 몇 곳만 사람이 읽는 이름으로 바꾼다(호스트가 그대로 노출되면 뭔지 모른다).
+HOST_NAME = {
+    "korea.kr": "정책브리핑",
+    "m.korea.kr": "정책브리핑",
+    "news.seoul.go.kr": "서울시 뉴스",
+}
+
 SEP = re.compile(r"[\s|·\-–—:>]+$")
 
 
@@ -174,6 +184,7 @@ def tidy(title: str, outlet: str, host: str = "") -> tuple[str, str]:
     title = title.strip()
     if outlet and (len(outlet) > 24 or (title and title.startswith(outlet[:12]))):
         outlet = host
+    outlet = HOST_NAME.get(outlet, outlet) or HOST_NAME.get(host, host)
     if outlet:
         # "제목 - 매체명", "제목 | 매체명" 꼴을 제거한다(매체명이 그대로 붙은 경우만).
         tail = re.compile(r"\s*[|\-–—]\s*" + re.escape(outlet) + r"\s*$", re.I)
