@@ -1,4 +1,13 @@
 {
-  "threads": [{ "type": "tag_search", "query": "공공AX" }],
-  "kakao_rooms": ["공공AX 네트워크"]
+  "threads": [
+    {
+      "type": "tag_search",
+      "query": "공공AX",
+      "search_url": "https://www.threads.com/search?q=%23%EA%B3%B5%EA%B3%B5AX",
+      "note": "태그 탭이 2026-09-11 사라져 해시태그 검색으로 전환. /tag/ 경로는 무관한 추천 피드라 쓰지 않는다."
+    }
+  ],
+  "kakao_rooms": [
+    "공공AX 네트워크"
+  ]
 }
