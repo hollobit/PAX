@@ -52,6 +52,7 @@ TEMPLATE = """<!DOCTYPE html>
       <a href="https://ax360.kr/national-ai-resource/model" target="_blank" rel="noopener">AX 자원 찾기 ↗</a>
       <a href="https://ax360.kr/private-ai-company/heatmap" target="_blank" rel="noopener">AI 기업 찾기 ↗</a>
       <a href="https://axboard.aigov.go.kr/" target="_blank" rel="noopener">AI 정부실험실 ↗</a>
+      <a href="https://aitestbed.kr/main-page" target="_blank" rel="noopener">모두의 AI 실험실 ↗</a>
     </nav>
   </header>
   <main class="case-page">
