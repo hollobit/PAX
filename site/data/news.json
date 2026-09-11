@@ -1,12 +1,77 @@
 {
- "updated_at": "2026-09-11T14:57:06Z",
- "count": 419,
+ "updated_at": "2026-09-11T22:56:20Z",
+ "count": 424,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20260911154129",
+   "title": "AI 에이전트 표준 선점 나선 중국…NIA \"한국도 대응 필요\"",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-09-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-11",
+   "last_shared": "2026-09-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://yellow.com/ko/news/%EC%88%98%EC%9A%94%EA%B0%80-%EA%B3%B5%EA%B8%89%EC%9D%84-%EC%95%9E%EC%A7%80%EB%A5%B4%EC%9E%90-%EA%B5%AC%EA%B8%80-%EB%A9%94%ED%83%80%EC%97%90-%EC%A0%9C%EA%B3%B5%ED%95%98%EB%8D%98-gemini%EB%A5%BC-%EB%B0%B0%EA%B8%89%EC%A0%9C%EB%A1%9C-%EC%A0%84%ED%99%98",
+   "title": "암호화폐 뉴스·분석·리서치·지갑 도구 | Yellow",
+   "outlet": "yellow.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-11",
+   "last_shared": "2026-09-11",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.mjjnews.net/mobile/article.html?no=57464",
    "title": "[무진장인터넷뉴스] 전북도 공무원이 직접 GPU 서버 구축... 최신형 전북AI 운영",
    "outlet": "mjjnews.net",
    "published": "2026-06-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-11",
+   "last_shared": "2026-09-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.issueon.co.kr/news/articleView.html?idxno=13866",
+   "title": "OpenAI, 금융서비스 전용 ChatGPT 출시",
+   "outlet": "ISSUE ON (이슈온)",
+   "published": "2026-09-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-11",
+   "last_shared": "2026-09-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.discoverynews.kr/news/articleView.html?idxno=1101282",
+   "title": "인천시, AI 재난 골든타임으로 행안부 장관상 수상",
+   "outlet": "디스커버리뉴스(DISCOVERYNEWS)",
+   "published": "2026-09-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-11",
+   "last_shared": "2026-09-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215177",
+   "title": "[게시판] 사이냅소프트, ‘지자체 정보화전략 IT 전시’ 참가 등 단신",
+   "outlet": "AI타임스",
+   "published": "2026-09-11",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-11",

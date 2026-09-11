@@ -106,8 +106,12 @@ def main() -> int:
                 if k in ("total_champions", "gitlab_stars_total", "github_stars_total", "members")}
         if not keep:
             continue
-        days.setdefault(d, {"source": row.get("source", "관측")}).update(
-            {k: v for k, v in keep.items() if k not in days.get(d, {})})
+        cur = days.setdefault(d, {"source": row.get("source", "관측")})
+        cur.update({k: v for k, v in keep.items() if k not in cur})
+        # 한 번 '관측'으로 적은 날은 계속 관측이다. 복원 계산이 매 회차 덮어써 어제 실측이
+        # 복원으로 둔갑하면, 나중에 값을 되짚을 때 어디까지가 실제로 본 값인지 알 수 없다.
+        if row.get("source") == "관측":
+            cur["source"] = "관측"
 
     payload = {
         "updated_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
