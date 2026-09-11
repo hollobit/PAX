@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-11T02:11:48+09:00",
+ "updated_at": "2026-09-11T11:02:07+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -11079,6 +11079,31 @@
    "id": "ce77601a3fa41786",
    "license": "명시 없음",
    "license_source": "gitlab",
+   "license_checked": "2026-09-11"
+  },
+  {
+   "date": "2026-05-05",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "case_class": "커뮤니티",
+   "tags": [
+    "통합돌봄",
+    "공공데이터",
+    "대시보드",
+    "보건복지"
+   ],
+   "title": "전국 통합돌봄서비스 대시보드 — 시·군·구 12,104개 사업 검색·비교",
+   "runtime_env": "브라우저만",
+   "collected_at": "2026-09-11",
+   "model_dependency": "없음(비LLM)",
+   "link": "https://at-korea.github.io/intergrated_care/",
+   "task_category": "데이터·통계",
+   "summary": "보건복지부 지역사회 통합돌봄 누리집에 시·군·구별 PDF 메뉴판으로 흩어져 있던 사업 정보를 자동으로 읽어 들여 1만 2천여 건으로 구조화한 대시보드다. 지도에서 지역을 고르면 전국 평균 대비 강약과 인구 1만 명당 환산 위치를 보여 주고, 두세 지역을 나란히 놓아 공통 사업과 특이 사업을 갈라 보거나 결과를 표와 보고서로 내보낼 수 있다. 뒷단 서버 없이 한 장짜리 화면으로 돌며, 만든 쪽에서 연구·기획 참고용 비공식 시각화임을 밝히고 있다.",
+   "case_url": "https://github.com/at-korea/intergrated_care",
+   "source": "kakao",
+   "id": "664112a0d4b58f20",
+   "license": "명시 없음",
+   "license_source": "github",
    "license_checked": "2026-09-11"
   }
  ]
