@@ -1,6 +1,6 @@
 #!/bin/bash
 # 사례 대상 URL의 썸네일(site/thumbs/<id>.png)을 headless 브라우저로 생성한다.
-# 대상: case_url이 있는 사례 + link가 서비스 URL인 kakao 사례. 이미 있는 썸네일은 건너뜀.
+# 대상: 사례의 대표 주소(scripts/pax/urls.py — 운영 사이트 우선). 이미 있는 썸네일은 건너뜀.
 # 사용법: repo 루트에서 bash scripts/make_thumbs.sh
 set -u
 
@@ -13,14 +13,13 @@ fi
 ROOT="$(pwd)"
 mkdir -p "$ROOT/site/thumbs"
 
-TARGETS=$(python3 - <<'PY'
+TARGETS=$(PYTHONPATH=scripts python3 - <<'PY'
 import json
+from pax.urls import preferred_url
 doc = json.load(open('data/cases.json'))
 for c in doc['cases']:
-    url = c.get('case_url')
-    if not url and c['source'] == 'kakao':
-        url = c.get('link')
-    if url and url.startswith('https://'):
+    url = preferred_url(c)
+    if url:
         print(f"{c['id']}\t{url}")
 PY
 )

@@ -9,6 +9,7 @@ site/case/<id>.html — og 태그를 갖춘 고정 페이지. "결재에 이 URL
 import html
 import json
 from pathlib import Path
+from pax.urls import preferred_url
 
 BASE = "https://hollobit.github.io/PAX"
 OUT_DIR = Path("site/case")
@@ -162,8 +163,9 @@ def main():
             f'<li><a href="{esc(r["id"])}.html">{esc(r["title"])}</a></li>' for r in related
         ) or "<li>같은 분류의 다른 사례가 아직 없습니다</li>"
         links = []
-        if c.get("case_url"):
-            links.append(f'<a href="{esc(c["case_url"])}" target="_blank" rel="noopener">사례 대상 바로가기</a>')
+        target = preferred_url(c)
+        if target:
+            links.append(f'<a href="{esc(target)}" target="_blank" rel="noopener">사례 대상 바로가기</a>')
         if c.get("link"):
             label = "원문 게시물" if "threads.com" in c["link"] else "공유 링크"
             links.append(f'<a href="{esc(c["link"])}" target="_blank" rel="noopener">{label}</a>')

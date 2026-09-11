@@ -357,7 +357,7 @@
    "stars": 0,
    "maintenance": "활발",
    "model_dependency": "없음(비LLM)",
-   "thumb_v": 1786110276
+   "thumb_v": 1789093413
   },
   {
    "date": "2026-08-06",
@@ -1893,7 +1893,7 @@
    "transition_stage": "기관 공식",
    "stars": 4,
    "stars_gitlab": 4,
-   "thumb_v": 1786110276
+   "thumb_v": 1789093415
   },
   {
    "source": "kakao",
@@ -6151,7 +6151,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1788881679
+   "thumb_v": 1789093418
   },
   {
    "collected_at": "2026-08-25",
@@ -6264,7 +6264,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "model_dependency": "없음(비LLM)",
-   "thumb_v": 1787619612
+   "thumb_v": 1789093420
   },
   {
    "date": "2026-08-25",
@@ -6297,7 +6297,7 @@
    "link_ok": true,
    "health_checked": "2026-09-07",
    "maintenance": "활발",
-   "thumb_v": 1787619615
+   "thumb_v": 1789093423
   },
   {
    "date": "2026-08-25",
@@ -10954,7 +10954,7 @@
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-09-10",
-   "thumb_v": 1789051503
+   "thumb_v": 1789093426
   },
   {
    "summary": "담당 중인 시설사업의 설계도면을 생성형 AI로 3차원 모델로 바꿔 기업 입주 현황과 주차장 실제 동선, 인근 건물까지 재현한 실무 적용기다. 수작업으로 오래 걸리던 모델링을 짧은 시간에 대체해 부서 내부 검토 자료로 썼다. 도면을 다루는 공공 시설·토목 업무에서 2차원 산출물을 곧바로 3차원 검토로 넘기는 사용법을 보여 준다.",
@@ -11492,7 +11492,8 @@
    "id": "664112a0d4b58f20",
    "license": "명시 없음",
    "license_source": "github",
-   "license_checked": "2026-09-11"
+   "license_checked": "2026-09-11",
+   "thumb_v": 1789093428
   }
  ]
 }
