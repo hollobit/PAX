@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-09-10T23:13:45Z",
- "count": 52,
+ "updated_at": "2026-09-11T14:49:26Z",
+ "count": 54,
  "videos": [
+  {
+   "id": "cBhtR7C1lUg",
+   "title": "공무원 복장",
+   "channel": "침착맨",
+   "url": "https://www.youtube.com/watch?v=cBhtR7C1lUg",
+   "thumb": "https://i.ytimg.com/vi/cBhtR7C1lUg/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-11",
+   "last_shared": "2026-09-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "PhZy9vhnl9w",
+   "title": "\"신고자 누구?\" \"서류에 있어요\" 신고자 정보 노출한 공무원 '징역형' 선고 20260910",
+   "channel": "MBC강원영동NEWS",
+   "url": "https://www.youtube.com/watch?v=PhZy9vhnl9w",
+   "thumb": "https://i.ytimg.com/vi/PhZy9vhnl9w/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-11",
+   "last_shared": "2026-09-11",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "5q6B1c0AzTE",
    "title": "AI 시대, 건축가에게 더 중요해지는 것 | 현업 AI 건축가 2인과의 토크",

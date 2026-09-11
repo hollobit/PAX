@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-09-10T23:13:46Z",
- "count": 417,
+ "updated_at": "2026-09-11T14:49:27Z",
+ "count": 419,
  "articles": [
+  {
+   "url": "https://www.mjjnews.net/mobile/article.html?no=57464",
+   "title": "[무진장인터넷뉴스] 전북도 공무원이 직접 GPU 서버 구축... 최신형 전북AI 운영",
+   "outlet": "mjjnews.net",
+   "published": "2026-06-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-11",
+   "last_shared": "2026-09-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.hada.io/topic?id=33504",
+   "title": "문장의 의미를 지키며 줄바꿈하는 오픈소스 JavaScript 라이브러리",
+   "outlet": "GeekNews",
+   "published": "2026-09-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-11",
+   "last_shared": "2026-09-11",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=699454",
    "title": "제미나이, 싱가포르 주요결제기관 인가 획득…송금·결제 서비스 확대",

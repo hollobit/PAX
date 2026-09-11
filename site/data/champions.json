@@ -698,7 +698,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -4890,6 +4890,12 @@
    "title": "한국서부발전 위피봇 — 발전 현장 안전·설비 업무에 붙인 사내 생성형 AI 에이전트",
    "org": "한국서부발전",
    "url": "https://zdnet.co.kr/view/?no=20260909125245"
+  },
+  {
+   "id": "55f606c2835337ba",
+   "title": "전북AI — 전북특별자치도 자체 구축 생성형 AI 행정 시스템",
+   "org": "전북특별자치도",
+   "url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=72283"
   }
  ]
 }
