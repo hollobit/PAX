@@ -9238,5 +9238,33 @@
     "resilience": "미확인(변환 품질·표·이미지 처리 범위 미확인)",
     "post_url": "",
     "service_url": ""
+  },
+  {
+    "no": 403,
+    "id": "664112a0d4b58f20",
+    "org": "개발 커뮤니티",
+    "title": "전국 통합돌봄서비스 대시보드 — 시·군·구 12,104개 사업 검색·비교",
+    "ax_prev": "AI-Ready",
+    "ax": "AI-Ready",
+    "s": "S2",
+    "s_name": "Tool bundle",
+    "c": "C1",
+    "c_name": "결과 제공",
+    "m": "해당 없음",
+    "m_name": "비-MCP 사례",
+    "native_scope": "해당 없음",
+    "status": "Published tool",
+    "scope": "External",
+    "mcp_role": "Unknown/None",
+    "risk": "R1 낮음",
+    "human": "검토 후 사용(비공식 시각화 명시 — 신청·이용은 관할 부서 문의 안내)",
+    "evidence": "E2 화면·서비스 확인",
+    "confidence": "중간",
+    "gate": "상위 관문 미충족/해당 없음",
+    "rationale": "배포된 화면과 저장소 문서를 함께 확인해 E2로 둔다. 지도·검색·지역 프로필·비교·인구 보정·보고서 출력이 한 도구에 묶여 S2이고, 판단 재료를 제시하고 결정은 사람이 하므로 C1이다. 기관이 시·군·구별 PDF로만 내놓아 사실상 비교가 불가능하던 자료를 읽어 들여 한 자리에서 견줄 수 있게 만든 점이 공공데이터 접근성 축에서 갖는 의미다. 언어모델을 부르지 않으므로 채택률 분모에는 들어가지 않는다.",
+    "feedback": "미확인",
+    "resilience": "미확인(제작 주체의 기관 소속 미확인 — 학술 연구 목적 비공식 시각화로 자기 표기, 데이터 기준 2026.03~04로 갱신 주기 불명)",
+    "post_url": "",
+    "service_url": "https://at-korea.github.io/intergrated_care/"
   }
 ]
