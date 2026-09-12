@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-09-11T22:56:19Z",
- "count": 54,
+ "updated_at": "2026-09-12T11:28:05Z",
+ "count": 56,
  "videos": [
+  {
+   "id": "tRsuIO8V55U",
+   "title": "AI 때문에 영상 업계, 진짜 망하고 있을까? 현업자 11명에게 물었습니다",
+   "channel": "JohnKOBA Design",
+   "url": "https://www.youtube.com/watch?v=tRsuIO8V55U",
+   "thumb": "https://i.ytimg.com/vi/tRsuIO8V55U/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-12",
+   "last_shared": "2026-09-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "OBat3OIIfgQ",
+   "title": "[2026년 9월 11일 생중계] 22026 제주AX 대전환 비전 선포식",
+   "channel": "제주도TV·Jeju",
+   "url": "https://www.youtube.com/watch?v=OBat3OIIfgQ",
+   "thumb": "https://i.ytimg.com/vi/OBat3OIIfgQ/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-12",
+   "last_shared": "2026-09-12",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "cBhtR7C1lUg",
    "title": "공무원 복장",

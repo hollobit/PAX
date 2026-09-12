@@ -1,7 +1,46 @@
 {
- "updated_at": "2026-09-11T22:56:20Z",
- "count": 424,
+ "updated_at": "2026-09-12T11:28:07Z",
+ "count": 427,
  "articles": [
+  {
+   "url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=72283",
+   "title": "전북자치도, 생성형 AI 행정 안착…3개월 만에 10만 건 돌파",
+   "outlet": "더페어",
+   "published": "2026-03-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-12",
+   "last_shared": "2026-09-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/030/0003466094?lfrom=facebook",
+   "title": "공무원이 직접 만든 AI로 행정 혁신…전북 대통령상·광진구 총리상",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-12",
+   "last_shared": "2026-09-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.fmkorea.com/10324686879",
+   "title": "오늘자 발생한 클로드 레전드 사건 중요)3줄요약 있음",
+   "outlet": "에펨코리아",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-12",
+   "last_shared": "2026-09-12",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20260911154129",
    "title": "AI 에이전트 표준 선점 나선 중국…NIA \"한국도 대응 필요\"",

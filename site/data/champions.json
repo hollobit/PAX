@@ -1,5 +1,5 @@
 {
- "total": 187,
+ "total": 188,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -2303,6 +2303,26 @@
    "stats": {
     "case_count": 4,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:kimjae1995",
+   "name": "김제영",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "kimjae1995",
+     "url": "https://gitlab.aigov.go.kr/kimjae1995"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "a3a18230c371b196"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },
@@ -4902,6 +4922,12 @@
    "title": "신재생 계통 지도 — 변전소 여유용량·사업성 분석·AI 투자 보고서(민간 참고)",
    "org": "(주)인코어드테크놀로지스",
    "url": "https://re100market.com/"
+  },
+  {
+   "id": "4bea357dc245a257",
+   "title": "바로맵 — 주소 엑셀을 올리면 주민 안내용 공개 지도가 되는 도구",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://map.choshg.com/"
   }
  ]
 }
