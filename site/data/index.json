@@ -2,31 +2,31 @@
  "generated_at": "2026-09-12",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 403,
- "total_champions": 187,
+ "total_cases": 405,
+ "total_champions": 188,
  "community": {
-  "members": 1675,
-  "kakao_week": 6383,
-  "kakao_total_observed": 29128,
-  "threads_observed": 258
+  "members": 1692,
+  "kakao_week": 6640,
+  "kakao_total_observed": 29385,
+  "threads_observed": 265
  },
  "certified_champions": 5,
- "unattributed_cases": 78,
+ "unattributed_cases": 79,
  "ax_distribution": {
-  "AI-Ready": 276,
+  "AI-Ready": 278,
   "AI-Enabled": 114,
   "AX 단계 외": 12,
   "AI-First": 1
  },
- "c_axis_mean": 0.85,
+ "c_axis_mean": 0.86,
  "p_distribution": {
-  "P0": 134,
+  "P0": 135,
   "P1": 258,
-  "P2": 11
+  "P2": 12
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 179,
+  "없음(비LLM)": 181,
   "해외 오픈웨이트(로컬)": 23,
   "혼합": 8,
   "해외 상용 API": 53,
@@ -650,7 +650,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 179,
+    "n": 181,
     "specified": 0
    },
    "해외 오픈웨이트(로컬)": {
@@ -1353,15 +1353,15 @@
  "domestic_model_rate": 0.056,
  "local_model_rate": 0.258,
  "model_known": 89,
- "license_tagged": 303,
- "license_stated_rate": 0.502,
- "gitlab_cases": 202,
+ "license_tagged": 304,
+ "license_stated_rate": 0.5,
+ "gitlab_cases": 203,
  "gitlab_mirror_pairs": 30,
- "gitlab_open_rate": 0.149,
+ "gitlab_open_rate": 0.148,
  "mcp_cases": 79,
  "transition_funnel": {
   "기관 공식": 33,
-  "미확인": 327,
+  "미확인": 329,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1369,7 +1369,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.695
+  "feedback": 0.696
  },
  "maintenance_distribution": {
   "활발": 198,
@@ -1379,7 +1379,7 @@
  "stars_collected": 229,
  "repo_stats": {
   "gitlab": {
-   "count": 202,
+   "count": 203,
    "starred": 138,
    "stars_sum": 330,
    "maintenance": {
@@ -1563,7 +1563,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 151,
+  "명시 없음": 152,
   "MIT": 107,
   "Apache-2.0": 16,
   "Other": 15,
@@ -1578,7 +1578,7 @@
  "license_matrix": {
   "명시 없음": {
    "github": 42,
-   "gitlab": 109
+   "gitlab": 110
   },
   "MIT": {
    "github": 63,
@@ -1631,7 +1631,7 @@
    "stated": 4
   },
   "gitlab": {
-   "total": 172,
+   "total": 173,
    "stated": 63
   }
  },
