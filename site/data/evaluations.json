@@ -1,6 +1,6 @@
 {
- "evaluated_at": "2026-09-12",
- "total": 405,
+ "evaluated_at": "2026-09-13",
+ "total": 406,
  "cases": [
   {
    "no": 1,
@@ -13364,6 +13364,39 @@
    "tool_type": "대시보드·분석",
    "audience": "G2E 공직 내부",
    "p": "P2 시스템 쓰기(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 408,
+   "id": "dd784289395c2afb",
+   "org": "경기도의회(공직 개인 개발)",
+   "title": "경기도의회사무처 신규자 지식창고 — 업무플랫폼 통합서비스의 한 모듈",
+   "ax_prev": "AI-Ready",
+   "ax": "AI-Ready",
+   "s": "S2",
+   "s_name": "Tool bundle",
+   "c": "C1",
+   "c_name": "결과 제공",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "In service",
+   "scope": "Internal",
+   "mcp_role": "Unknown/None",
+   "risk": "R1 낮음",
+   "human": "해당 없음",
+   "evidence": "E2 화면·서비스 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "기관 도메인에서 도는 화면을 직접 열어 확인해 E2로 둔다. 지식창고 자체는 자료를 찾아 주는 자리라 C1이지만, 문서 허브·자막·인사·예산·조례·의안처리까지 열다섯 갈래가 한 업무플랫폼으로 묶인 구조 안에 놓여 있어 S2로 본다. 화성특례시·병무청에 이어 같은 결의 신규자 지식창고가 지방의회로 넘어간 세 번째 관측이라, 한 기관에서 만든 틀이 다른 층위로 옮겨 가는 경로를 보여 준다.",
+   "feedback": "미확인",
+   "resilience": "미확인(로그인 뒤 내용은 확인 불가 — 수록 자료 규모·갱신 주기 미확인. 일부 모듈은 내부망 전용으로 표기)",
+   "post_url": "",
+   "service_url": "https://works.ggc.go.kr/kb/",
+   "tool_type": "플랫폼·포털",
+   "audience": "G2E 공직 내부",
+   "p": "P1 산출물 생성(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }
