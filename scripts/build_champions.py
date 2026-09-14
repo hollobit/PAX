@@ -110,6 +110,9 @@ def split_gitlab_name(full: str) -> tuple[str | None, str]:
     - '고용노동부 강기륜', '완주소방서 김무영', 다중 어절 조직 경로+이름을 분리
     - first/last name 역순 표기('진희 안')는 성+이름으로 재결합
     """
+    # '지식재산처 IP-AX 추진단 (정부용)' — 소속 뒤 괄호에 이름을 적는 표기
+    if m := re.fullmatch(r"(.+?)\s*\(([가-힣]{2,4})\)", full.strip()):
+        return m.group(1).strip(), m.group(2)
     tokens = full.strip().split()
     # 말미 직급 제거 ('광양시 조재원 주무관' → '광양시 조재원')
     while len(tokens) >= 2 and TITLE_TOKEN.fullmatch(tokens[-1]):

@@ -359,7 +359,11 @@
      "url": "https://github.com/Dayoooun"
     }
    ],
-   "affiliation": null,
+   "affiliation": {
+    "value": "VIRON",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
    "cases": [
     "09f079e1424f6992"
    ],
@@ -755,11 +759,12 @@
    ],
    "affiliation": null,
    "cases": [
+    "3c5015d6c385a815",
     "539f90471f451d80",
     "cbda9aefec586c48"
    ],
    "stats": {
-    "case_count": 2,
+    "case_count": 3,
     "top_ax": 2,
     "stars": 0
    }
@@ -2607,6 +2612,7 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "ada7cb6b9fabac8f",
     "fa5ac519aca439f4",
     "43dc7f4ab2500260",
     "83bb0ac0ed9f576d",
@@ -2623,8 +2629,8 @@
     "d40cc4a9cf6e29b6"
    ],
    "stats": {
-    "case_count": 14,
-    "top_ax": 2,
+    "case_count": 15,
+    "top_ax": 3,
     "stars": 4468
    },
    "certification": {

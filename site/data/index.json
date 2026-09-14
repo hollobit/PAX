@@ -1,35 +1,35 @@
 {
- "generated_at": "2026-09-13",
+ "generated_at": "2026-09-15",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 406,
+ "total_cases": 408,
  "total_champions": 188,
  "community": {
-  "members": 1725,
-  "kakao_week": 6421,
-  "kakao_total_observed": 29530,
+  "members": 1857,
+  "kakao_week": 5355,
+  "kakao_total_observed": 31883,
   "threads_observed": 266
  },
  "certified_champions": 5,
  "unattributed_cases": 80,
  "ax_distribution": {
   "AI-Ready": 279,
-  "AI-Enabled": 114,
+  "AI-Enabled": 115,
   "AX 단계 외": 12,
-  "AI-First": 1
+  "AI-First": 2
  },
- "c_axis_mean": 0.86,
+ "c_axis_mean": 0.87,
  "p_distribution": {
   "P0": 135,
-  "P1": 259,
+  "P1": 261,
   "P2": 12
  },
  "model_dependency": {
   "미확인": 65,
   "없음(비LLM)": 182,
-  "해외 오픈웨이트(로컬)": 23,
+  "해외 오픈웨이트(로컬)": 24,
   "혼합": 8,
-  "해외 상용 API": 53,
+  "해외 상용 API": 54,
   "모델 중립(BYO)": 64,
   "국산 독자모델": 4,
   "미상": 6,
@@ -39,8 +39,9 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 21,
+    "n": 22,
     "variants": [
+     "Claude Code(BYO 구독)",
      "Claude Code(플러그인)",
      "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
      "Claude Code/Codex(플러그인)",
@@ -130,6 +131,10 @@
      {
       "id": "f5f24469d5ca281f",
       "title": "소담 패밀리 — 비개발자가 만든 Claude Code 안전벨트 플러그인 7종 묶음"
+     },
+     {
+      "id": "ada7cb6b9fabac8f",
+      "title": "paper-verify — 보고서·논문의 법령·판례·문헌 인용을 원본과 대조하는 Claude Code 스킬"
      }
     ],
     "domestic": false
@@ -380,6 +385,25 @@
     "domestic": true
    },
    {
+    "name": "Qwen",
+    "n": 2,
+    "variants": [
+     "Qwen(로컬 RAG 챗)",
+     "Qwen3.5 2B(로컬 CPU)"
+    ],
+    "cases": [
+     {
+      "id": "ea2bce110972762e",
+      "title": "공공기관 규정 MCP 생성기"
+     },
+     {
+      "id": "3c5015d6c385a815",
+      "title": "KLEF 공람문서 요약 — K-에듀파인 공람 목록에 핵심·조치·기한을 붙이는 로컬 AI 도우미"
+     }
+    ],
+    "domestic": false
+   },
+   {
     "name": "schift(자체 학습)",
     "n": 2,
     "variants": [
@@ -408,20 +432,6 @@
      {
       "id": "cbe008b504b9dd18",
       "title": "의학 연구 동료 AI 플러그인 ResearchFellow"
-     }
-    ],
-    "domestic": false
-   },
-   {
-    "name": "Qwen",
-    "n": 1,
-    "variants": [
-     "Qwen(로컬 RAG 챗)"
-    ],
-    "cases": [
-     {
-      "id": "ea2bce110972762e",
-      "title": "공공기관 규정 MCP 생성기"
      }
     ],
     "domestic": false
@@ -654,16 +664,16 @@
     "specified": 0
    },
    "해외 오픈웨이트(로컬)": {
-    "n": 23,
-    "specified": 12
+    "n": 24,
+    "specified": 13
    },
    "혼합": {
     "n": 8,
     "specified": 8
    },
    "해외 상용 API": {
-    "n": 53,
-    "specified": 38
+    "n": 54,
+    "specified": 39
    },
    "모델 중립(BYO)": {
     "n": 64,
@@ -976,11 +986,11 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 53,
+    "n": 54,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
-      "n": 20,
+      "n": 21,
       "cases": [
        {
         "id": "7acf5f25369c1401",
@@ -1061,10 +1071,15 @@
        {
         "id": "f5f24469d5ca281f",
         "title": "소담 패밀리 — 비개발자가 만든 Claude Code 안전벨트 플러그인 7종 묶음"
+       },
+       {
+        "id": "ada7cb6b9fabac8f",
+        "title": "paper-verify — 보고서·논문의 법령·판례·문헌 인용을 원본과 대조하는 Claude Code 스킬"
        }
       ],
       "domestic": false,
       "variants": [
+       "Claude Code(BYO 구독)",
        "Claude Code(플러그인)",
        "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
        "Claude Code/Codex(플러그인)"
@@ -1229,7 +1244,7 @@
    },
    {
     "dep": "해외 오픈웨이트(로컬)",
-    "n": 23,
+    "n": 24,
     "families": [
      {
       "name": "Gemma",
@@ -1345,16 +1360,44 @@
       "variants": [
        "bge-m3"
       ]
+     },
+     {
+      "name": "Qwen",
+      "n": 1,
+      "cases": [
+       {
+        "id": "3c5015d6c385a815",
+        "title": "KLEF 공람문서 요약 — K-에듀파인 공람 목록에 핵심·조치·기한을 붙이는 로컬 AI 도우미"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Qwen3.5 2B(로컬 CPU)"
+      ]
+     },
+     {
+      "name": "LFM2.5 230M/1.2B(로컬)",
+      "n": 1,
+      "cases": [
+       {
+        "id": "3c5015d6c385a815",
+        "title": "KLEF 공람문서 요약 — K-에듀파인 공람 목록에 핵심·조치·기한을 붙이는 로컬 AI 도우미"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "LFM2.5 230M/1.2B(로컬)"
+      ]
      }
     ]
    }
   ]
  },
- "domestic_model_rate": 0.056,
- "local_model_rate": 0.258,
- "model_known": 89,
- "license_tagged": 304,
- "license_stated_rate": 0.5,
+ "domestic_model_rate": 0.055,
+ "local_model_rate": 0.264,
+ "model_known": 91,
+ "license_tagged": 306,
+ "license_stated_rate": 0.497,
  "gitlab_cases": 203,
  "gitlab_mirror_pairs": 30,
  "gitlab_open_rate": 0.148,
@@ -1365,11 +1408,11 @@
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
-  "개인 사용": 32
+  "개인 사용": 34
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.697
+  "feedback": 0.699
  },
  "maintenance_distribution": {
   "활발": 198,
@@ -1470,7 +1513,7 @@
    ]
   },
   "github": {
-   "count": 122,
+   "count": 124,
    "starred": 112,
    "stars_sum": 176133,
    "maintenance": {
@@ -1563,7 +1606,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 152,
+  "명시 없음": 154,
   "MIT": 107,
   "Apache-2.0": 16,
   "Other": 15,
@@ -1577,7 +1620,7 @@
  },
  "license_matrix": {
   "명시 없음": {
-   "github": 42,
+   "github": 44,
    "gitlab": 110
   },
   "MIT": {
@@ -1623,7 +1666,7 @@
  },
  "license_by_source": {
   "github": {
-   "total": 116,
+   "total": 118,
    "stated": 85
   },
   "github-pages": {

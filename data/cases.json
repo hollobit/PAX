@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-13T00:16:05+09:00",
+ "updated_at": "2026-09-15T08:52:44+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -11218,6 +11218,67 @@
    "title": "경기도의회사무처 신규자 지식창고 — 업무플랫폼 통합서비스의 한 모듈",
    "org": "경기도의회(공직 개인 개발)",
    "id": "dd784289395c2afb"
+  },
+  {
+   "network_req": "로컬 완결",
+   "date": "2026-09-14",
+   "models_used": [
+    "Qwen3.5 2B(로컬 CPU)",
+    "LFM2.5 230M/1.2B(로컬)"
+   ],
+   "model_dependency": "해외 오픈웨이트(로컬)",
+   "org_type": "공직 개인",
+   "org": "교육행정 현장(공직 개인 개발)",
+   "task_category": "문서·기안",
+   "source": "kakao",
+   "summary": "K-에듀파인에서 접근권한이 있는 공문을 정상 저장 기능으로 받은 뒤, PC의 로컬 도우미가 내용·대상·조치·기한을 요약해 Chrome 공람 목록에 바로 표시하는 확장 프로그램이 배포판(1.2.3)으로 공개됐다. 기본은 Qwen3.5 2B CPU 로컬 모델이며 소형 LFM 모델과 Chrome 내장 AI, 동의한 외부 API를 선택할 수 있다. 설치 ZIP과 SHA256 해시, 개인정보처리방침, 웹스토어 등록 준비 문서까지 갖춘 배포 형태로 공유됐다.",
+   "case_class": "개인 개발",
+   "deployment_env": "로컬 PC",
+   "runtime_env": "설치 필요",
+   "title": "KLEF 공람문서 요약 — K-에듀파인 공람 목록에 핵심·조치·기한을 붙이는 로컬 AI 도우미",
+   "transition_stage": "개인 사용",
+   "link": "https://github.com/jkf87/klef-collector-releases",
+   "collected_at": "2026-09-15",
+   "tags": [
+    "공람문서",
+    "K-에듀파인",
+    "로컬모델",
+    "Chrome확장"
+   ],
+   "id": "3c5015d6c385a815",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-09-15"
+  },
+  {
+   "network_req": "인터넷 필수",
+   "date": "2026-09-14",
+   "models_used": [
+    "Claude Code(BYO 구독)"
+   ],
+   "model_dependency": "해외 상용 API",
+   "org_type": "공직 개인",
+   "org": "공직 현장(개인 개발)",
+   "task_category": "감사·법무",
+   "source": "kakao",
+   "summary": "AI로 쓴 보고서나 논문에 달린 인용이 실제로 존재하는지, 표기가 맞는지, 개정으로 내용이 달라지지 않았는지를 원본과 대조하는 Claude Code 스킬이 공유됐다. 법령·판례는 국가법령정보센터, 영문 논문은 CrossRef·OpenAlex, 국문 논문은 KCI, 학위논문은 RISS, 웹 출처는 Wayback Machine으로 자동 확인하고, 참고문헌 PDF를 넣으면 지목한 페이지의 내용까지 뒷받침·과장·부재 5단계로 판정한다. 환각 인용을 사람이 일일이 찾아 대조하던 수고를 덜기 위해 만들어졌다.",
+   "region": "서울",
+   "case_class": "개인 개발",
+   "runtime_env": "AI 도구 설정",
+   "title": "paper-verify — 보고서·논문의 법령·판례·문헌 인용을 원본과 대조하는 Claude Code 스킬",
+   "transition_stage": "개인 사용",
+   "link": "https://github.com/chrisryugj/paper-verify",
+   "collected_at": "2026-09-15",
+   "tags": [
+    "인용검증",
+    "Claude스킬",
+    "법령",
+    "환각방지"
+   ],
+   "id": "ada7cb6b9fabac8f",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-09-15"
   }
  ]
 }
