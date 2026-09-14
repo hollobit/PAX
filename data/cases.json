@@ -1546,7 +1546,8 @@
    "model_dependency": "해외 오픈웨이트(로컬)",
    "models_used": [
     "Gemma 4 E4B(Ollama)"
-   ]
+   ],
+   "case_url": "https://www.threads.com/@chobu62/post/DcdecgVDcaB"
   },
   {
    "summary": "로컬 Ollama의 Gemma 등 모델로 법령 MCP, 문서 파싱 MCP 같은 여러 MCP 서버를 동시에 돌리는 호스트가 공개됐다. 클라우드 API 없이 내부망과 오프라인 환경에서 AI 도구 호출을 쓸 수 있게 해준다.",
