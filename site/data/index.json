@@ -2,12 +2,12 @@
  "generated_at": "2026-09-15",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 408,
- "total_champions": 188,
+ "total_cases": 409,
+ "total_champions": 189,
  "community": {
   "members": 1857,
-  "kakao_week": 5417,
-  "kakao_total_observed": 31945,
+  "kakao_week": 5488,
+  "kakao_total_observed": 32016,
   "threads_observed": 266
  },
  "certified_champions": 5,
@@ -16,19 +16,19 @@
   "AI-Ready": 279,
   "AI-Enabled": 115,
   "AX 단계 외": 12,
-  "AI-First": 2
+  "AI-First": 3
  },
  "c_axis_mean": 0.87,
  "p_distribution": {
   "P0": 135,
-  "P1": 261,
+  "P1": 262,
   "P2": 12
  },
  "model_dependency": {
   "미확인": 65,
   "없음(비LLM)": 182,
   "해외 오픈웨이트(로컬)": 24,
-  "혼합": 8,
+  "혼합": 9,
   "해외 상용 API": 54,
   "모델 중립(BYO)": 64,
   "국산 독자모델": 4,
@@ -39,12 +39,13 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 22,
+    "n": 23,
     "variants": [
      "Claude Code(BYO 구독)",
      "Claude Code(플러그인)",
      "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
      "Claude Code/Codex(플러그인)",
+     "Codex CLI/Claude CLI(BYO 구독)",
      "상용 API 모드(Claude 등)"
     ],
     "cases": [
@@ -135,6 +136,10 @@
      {
       "id": "ada7cb6b9fabac8f",
       "title": "paper-verify — 보고서·논문의 법령·판례·문헌 인용을 원본과 대조하는 Claude Code 스킬"
+     },
+     {
+      "id": "9d19e64aa30f5332",
+      "title": "MiroFish-Ko 개인 수정판 — 로컬 LLM·Codex CLI로 돌리는 정책 여론 시뮬레이터"
      }
     ],
     "domestic": false
@@ -668,8 +673,8 @@
     "specified": 13
    },
    "혼합": {
-    "n": 8,
-    "specified": 8
+    "n": 9,
+    "specified": 9
    },
    "해외 상용 API": {
     "n": 54,
@@ -796,7 +801,7 @@
    },
    {
     "dep": "혼합",
-    "n": 8,
+    "n": 9,
     "families": [
      {
       "name": "로컬 서빙(Ollama·vLLM 등)",
@@ -871,6 +876,25 @@
       ]
      },
      {
+      "name": "Claude/Codex(상용 에이전트)",
+      "n": 2,
+      "cases": [
+       {
+        "id": "acd684108227b9c2",
+        "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
+       },
+       {
+        "id": "9d19e64aa30f5332",
+        "title": "MiroFish-Ko 개인 수정판 — 로컬 LLM·Codex CLI로 돌리는 정책 여론 시뮬레이터"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Codex CLI/Claude CLI(BYO 구독)",
+       "상용 API 모드(Claude 등)"
+      ]
+     },
+     {
       "name": "Qwen",
       "n": 1,
       "cases": [
@@ -927,20 +951,6 @@
       ]
      },
      {
-      "name": "Claude/Codex(상용 에이전트)",
-      "n": 1,
-      "cases": [
-       {
-        "id": "acd684108227b9c2",
-        "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
-       }
-      ],
-      "domestic": false,
-      "variants": [
-       "상용 API 모드(Claude 등)"
-      ]
-     },
-     {
       "name": "로컬 분석(기본)",
       "n": 1,
       "cases": [
@@ -980,6 +990,20 @@
       "domestic": false,
       "variants": [
        "사내 모델(비공개)"
+      ]
+     },
+     {
+      "name": "로컬 LLM(세부 미상)",
+      "n": 1,
+      "cases": [
+       {
+        "id": "9d19e64aa30f5332",
+        "title": "MiroFish-Ko 개인 수정판 — 로컬 LLM·Codex CLI로 돌리는 정책 여론 시뮬레이터"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "로컬 LLM(세부 미상)"
       ]
      }
     ]
@@ -1393,11 +1417,11 @@
    }
   ]
  },
- "domestic_model_rate": 0.055,
- "local_model_rate": 0.264,
- "model_known": 91,
- "license_tagged": 306,
- "license_stated_rate": 0.497,
+ "domestic_model_rate": 0.054,
+ "local_model_rate": 0.261,
+ "model_known": 92,
+ "license_tagged": 307,
+ "license_stated_rate": 0.498,
  "gitlab_cases": 203,
  "gitlab_mirror_pairs": 30,
  "gitlab_open_rate": 0.148,
@@ -1408,7 +1432,7 @@
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
-  "개인 사용": 34
+  "개인 사용": 35
  },
  "unknown_rates": {
   "approval_gate": 1.0,
@@ -1513,7 +1537,7 @@
    ]
   },
   "github": {
-   "count": 124,
+   "count": 125,
    "starred": 112,
    "stars_sum": 176133,
    "maintenance": {
@@ -1610,8 +1634,8 @@
   "MIT": 107,
   "Apache-2.0": 16,
   "Other": 15,
+  "AGPL-3.0": 4,
   "기타(비표준)": 4,
-  "AGPL-3.0": 3,
   "GNU AGPLv3": 3,
   "ISC": 1,
   "POLYFORM-NONCOMMERCIAL-1.0.0": 1,
@@ -1635,13 +1659,13 @@
    "github": 15,
    "gitlab": 0
   },
+  "AGPL-3.0": {
+   "github": 3,
+   "gitlab": 1
+  },
   "기타(비표준)": {
    "github": 0,
    "gitlab": 4
-  },
-  "AGPL-3.0": {
-   "github": 2,
-   "gitlab": 1
   },
   "GNU AGPLv3": {
    "github": 0,
@@ -1666,8 +1690,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 118,
-   "stated": 85
+   "total": 119,
+   "stated": 86
   },
   "github-pages": {
    "total": 15,
