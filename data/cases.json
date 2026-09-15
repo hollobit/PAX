@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-16T04:45:20+09:00",
+ "updated_at": "2026-09-16T04:52:37+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -11367,6 +11367,36 @@
    "org": "공직 커뮤니티",
    "id": "fe0d33cc718246d6",
    "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-09-15"
+  },
+  {
+   "case_url": "https://maptheworld.ai/",
+   "runtime_env": "설치 필요",
+   "models_used": [
+    "OpenAI Realtime API(음성 에이전트, 선택)"
+   ],
+   "tags": [
+    "참고도구",
+    "공간정보",
+    "상황관제",
+    "오픈소스"
+   ],
+   "link": "https://github.com/bilawalsidhu/gods-eye-view",
+   "summary": "항공기 트랜스폰더·선박 비콘·위성 궤도·지진계·공개 CCTV 같은 공개 신호를 사실적 3D 지구본에 실시간으로 올리는 브라우저 앱(CesiumJS, 스타 3만 4천). 대상을 클릭하면 추적 궤적과 메타데이터를 보여 주고 OpenAI Realtime 음성 에이전트로 지도 조작을 말로 처리하며, 키 없이 로컬 실행된다. 재난·상황 관제 화면을 공개 데이터로 구성하는 방식의 참고 사례이며 제작자는 안전 목적 사용을 금한다.",
+   "source": "kakao",
+   "org": "Halfpixel(오픈소스)",
+   "model_dependency": "해외 상용 API",
+   "network_req": "인터넷 필수",
+   "org_type": "해외(참고)",
+   "title": "God's Eye View — 항공기·선박·위성·지진·공개 카메라를 한 3D 지구본에 띄우는 오픈소스 공간정보 관제 참고 도구",
+   "date": "2026-09-15",
+   "deployment_env": "로컬 PC",
+   "task_category": "시설·안전",
+   "collected_at": "2026-09-15",
+   "case_class": "참고",
+   "id": "2085370092f99007",
+   "license": "Other",
    "license_source": "github",
    "license_checked": "2026-09-15"
   }
