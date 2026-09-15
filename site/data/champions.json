@@ -1,5 +1,5 @@
 {
- "total": 188,
+ "total": 189,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -154,6 +154,26 @@
    "stats": {
     "case_count": 1,
     "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:Dominic-DK",
+   "name": "Dominic Lee",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "Dominic-DK",
+     "url": "https://github.com/Dominic-DK"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "9d19e64aa30f5332"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 3,
     "stars": 0
    }
   },
