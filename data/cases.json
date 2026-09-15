@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-15T22:32:00+09:00",
+ "updated_at": "2026-09-16T04:45:20+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -11340,6 +11340,35 @@
    "title": "Liberaflow — 로컬 마크다운 노트 위에 AI 문서 작성·브라우저 자동화를 얹은 데스크톱 작업 공간",
    "transition_stage": "개인 사용",
    "id": "96added28c5e4ec7"
+  },
+  {
+   "org_type": "커뮤니티",
+   "source": "kakao",
+   "link": "https://github.com/mouseco/public-cardnews",
+   "case_class": "커뮤니티",
+   "transition_stage": "개인 사용",
+   "network_req": "인터넷 필수",
+   "collected_at": "2026-09-15",
+   "models_used": [
+    "Codex 이미지 생성(BYO 구독)"
+   ],
+   "model_dependency": "해외 상용 API",
+   "runtime_env": "AI 도구 설정",
+   "date": "2026-09-15",
+   "task_category": "기획·정책",
+   "tags": [
+    "카드뉴스",
+    "이미지생성",
+    "Codex스킬",
+    "정책홍보"
+   ],
+   "title": "Public Cardnews — 정부·공공기관 정책 카드뉴스를 기획부터 이미지까지 만드는 Codex 스킬",
+   "summary": "정책 카드뉴스를 기획하고 표지 디자인을 고른 뒤 장별 프롬프트와 이미지까지 만들어 주는 에이전트 스킬이 공개됐다. 정부·공공기관 카드뉴스 샘플을 파란 입체형·메모지형·폴더형·기술 도해형·평면 정책형·사진형 여섯 가지로 분류해 각 스타일의 생성 프롬프트를 함께 제공하고, 기획 승인에서 첫 장 생성·원고 대조·PNG 검사까지의 작업 흐름을 정해 두었다. 본인 Codex 계정의 이미지 생성 기능을 번들 실행기로 부르며 Windows 중심 베타(v0.5.0-beta.1)다.",
+   "org": "공직 커뮤니티",
+   "id": "fe0d33cc718246d6",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-09-15"
   }
  ]
 }

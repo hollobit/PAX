@@ -2,12 +2,12 @@
  "generated_at": "2026-09-15",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 410,
- "total_champions": 190,
+ "total_cases": 411,
+ "total_champions": 191,
  "community": {
-  "members": 1874,
-  "kakao_week": 6096,
-  "kakao_total_observed": 32624,
+  "members": 1878,
+  "kakao_week": 6123,
+  "kakao_total_observed": 32651,
   "threads_observed": 266
  },
  "certified_champions": 5,
@@ -16,12 +16,12 @@
   "AI-Ready": 279,
   "AI-Enabled": 115,
   "AX 단계 외": 12,
-  "AI-First": 4
+  "AI-First": 5
  },
  "c_axis_mean": 0.87,
  "p_distribution": {
   "P0": 135,
-  "P1": 263,
+  "P1": 264,
   "P2": 12
  },
  "model_dependency": {
@@ -29,7 +29,7 @@
   "없음(비LLM)": 182,
   "해외 오픈웨이트(로컬)": 24,
   "혼합": 9,
-  "해외 상용 API": 54,
+  "해외 상용 API": 55,
   "모델 중립(BYO)": 65,
   "국산 독자모델": 4,
   "미상": 6,
@@ -39,13 +39,14 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 23,
+    "n": 24,
     "variants": [
      "Claude Code(BYO 구독)",
      "Claude Code(플러그인)",
      "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
      "Claude Code/Codex(플러그인)",
      "Codex CLI/Claude CLI(BYO 구독)",
+     "Codex 이미지 생성(BYO 구독)",
      "상용 API 모드(Claude 등)"
     ],
     "cases": [
@@ -140,6 +141,10 @@
      {
       "id": "9d19e64aa30f5332",
       "title": "MiroFish-Ko 개인 수정판 — 로컬 LLM·Codex CLI로 돌리는 정책 여론 시뮬레이터"
+     },
+     {
+      "id": "fe0d33cc718246d6",
+      "title": "Public Cardnews — 정부·공공기관 정책 카드뉴스를 기획부터 이미지까지 만드는 Codex 스킬"
      }
     ],
     "domestic": false
@@ -682,8 +687,8 @@
     "specified": 9
    },
    "해외 상용 API": {
-    "n": 54,
-    "specified": 39
+    "n": 55,
+    "specified": 40
    },
    "모델 중립(BYO)": {
     "n": 65,
@@ -1015,11 +1020,11 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 54,
+    "n": 55,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
-      "n": 21,
+      "n": 22,
       "cases": [
        {
         "id": "7acf5f25369c1401",
@@ -1104,6 +1109,10 @@
        {
         "id": "ada7cb6b9fabac8f",
         "title": "paper-verify — 보고서·논문의 법령·판례·문헌 인용을 원본과 대조하는 Claude Code 스킬"
+       },
+       {
+        "id": "fe0d33cc718246d6",
+        "title": "Public Cardnews — 정부·공공기관 정책 카드뉴스를 기획부터 이미지까지 만드는 Codex 스킬"
        }
       ],
       "domestic": false,
@@ -1111,7 +1120,8 @@
        "Claude Code(BYO 구독)",
        "Claude Code(플러그인)",
        "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
-       "Claude Code/Codex(플러그인)"
+       "Claude Code/Codex(플러그인)",
+       "Codex 이미지 생성(BYO 구독)"
       ]
      },
      {
@@ -1423,10 +1433,10 @@
   ]
  },
  "domestic_model_rate": 0.054,
- "local_model_rate": 0.261,
- "model_known": 92,
- "license_tagged": 308,
- "license_stated_rate": 0.5,
+ "local_model_rate": 0.258,
+ "model_known": 93,
+ "license_tagged": 309,
+ "license_stated_rate": 0.502,
  "gitlab_cases": 204,
  "gitlab_mirror_pairs": 30,
  "gitlab_open_rate": 0.147,
@@ -1437,11 +1447,11 @@
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
-  "개인 사용": 36
+  "개인 사용": 37
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.7
+  "feedback": 0.701
  },
  "maintenance_distribution": {
   "활발": 198,
@@ -1542,7 +1552,7 @@
    ]
   },
   "github": {
-   "count": 125,
+   "count": 126,
    "starred": 112,
    "stars_sum": 176133,
    "maintenance": {
@@ -1636,7 +1646,7 @@
  },
  "license_distribution": {
   "명시 없음": 154,
-  "MIT": 108,
+  "MIT": 109,
   "Apache-2.0": 16,
   "Other": 15,
   "AGPL-3.0": 4,
@@ -1653,7 +1663,7 @@
    "gitlab": 110
   },
   "MIT": {
-   "github": 63,
+   "github": 64,
    "gitlab": 45
   },
   "Apache-2.0": {
@@ -1695,8 +1705,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 119,
-   "stated": 86
+   "total": 120,
+   "stated": 87
   },
   "github-pages": {
    "total": 15,

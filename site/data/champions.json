@@ -1,5 +1,5 @@
 {
- "total": 190,
+ "total": 191,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -2205,6 +2205,35 @@
    "stats": {
     "case_count": 1,
     "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:mouseco",
+   "name": "김성진",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "mouseco",
+     "url": "https://github.com/mouseco"
+    },
+    {
+     "platform": "gitlab",
+     "id": "mouseco",
+     "url": "https://gitlab.aigov.go.kr/mouseco"
+    }
+   ],
+   "affiliation": {
+    "value": "한국장학재단",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "fe0d33cc718246d6"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 3,
     "stars": 0
    }
   },
