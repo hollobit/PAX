@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-15T14:31:22+09:00",
+ "updated_at": "2026-09-15T22:32:00+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -11562,6 +11562,10 @@
    "model_dependency": "없음(비LLM)",
    "summary": "시설명과 주소가 담긴 엑셀을 올리면 주소를 좌표로 바꿔 지도에 얹고 공개 링크까지 만들어 주는 도구다. 연휴에 문 여는 병원·약국처럼 표로만 돌던 안내 자료를 지도로 바꿔 주민에게 바로 내보낼 수 있고, 쉼터·대피소·심장충격기·제설함·충전소 안내에도 같은 방식이 쓰인다. 올린 원본이 그대로 공개된다는 점을 화면에서 먼저 일러 준다.",
    "id": "4bea357dc245a257",
+   "case_url": "https://gitlab.aigov.go.kr/choshg/map",
+   "license": "MIT",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-15",
    "thumb_v": 1789428840
   },
   {
@@ -11705,7 +11709,34 @@
    "id": "9d19e64aa30f5332",
    "license": "AGPL-3.0",
    "license_source": "github",
-   "license_checked": "2026-09-15"
+   "license_checked": "2026-09-15",
+   "thumb_v": 1789450330
+  },
+  {
+   "models_used": [
+    "OpenAI·Claude·OpenRouter 계정 연결(BYO)"
+   ],
+   "task_category": "문서·기안",
+   "case_class": "개인 개발",
+   "org_type": "공직 개인",
+   "summary": "지자체 공무원이 3년째 혼자 개발해 온 로컬 퍼스트 데스크톱 오피스 도구가 공개됐다. 내 폴더의 마크다운 노트를 위키링크·캔버스로 잇고, 그 노트를 근거로 연결한 AI 계정이 Word·Excel·PowerPoint·HWPX 문서 초안을 만들며, 브라우저 클릭과 입력을 녹화해 엑셀 행마다 반복 실행하는 자동화와 일정·할 일 관리까지 한 앱에 담았다. 플러터 기반으로 macOS·Windows를 지원하고 개인 위키를 넘어 조직 단위 위키 협업으로 확장 중이다.",
+   "runtime_env": "설치 필요",
+   "model_dependency": "모델 중립(BYO)",
+   "org": "지자체(공직 개인 개발)",
+   "source": "kakao",
+   "link": "https://liberaflow.com/",
+   "tags": [
+    "로컬퍼스트",
+    "문서자동화",
+    "LLM위키",
+    "브라우저자동화"
+   ],
+   "collected_at": "2026-09-15",
+   "date": "2026-09-15",
+   "deployment_env": "로컬 PC",
+   "title": "Liberaflow — 로컬 마크다운 노트 위에 AI 문서 작성·브라우저 자동화를 얹은 데스크톱 작업 공간",
+   "transition_stage": "개인 사용",
+   "id": "96added28c5e4ec7"
   }
  ]
 }

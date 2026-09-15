@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-15T05:32:55Z",
+ "updated_at": "2026-09-15T13:32:38Z",
  "note": "복원 = 지금 원장으로 되돌아본 값이라 그날 화면의 숫자와 다를 수 있다(나중에 지운 중복·고친 분류가 소급된다). 관측 = 그날 적어 둔 실측값.",
  "days": {
   "2026-08-07": {
@@ -415,9 +415,9 @@
    "mcp_rate": 0.1951,
    "domestic_model_rate": 0.0562,
    "local_model_rate": 0.2697,
-   "gitlab_cases": 203,
+   "gitlab_cases": 204,
    "github_cases": 122,
-   "gitlab_license_none_rate": 0.5862,
+   "gitlab_license_none_rate": 0.5833,
    "source": "관측",
    "members": 1692,
    "total_champions": 188
@@ -428,25 +428,25 @@
    "mcp_rate": 0.1946,
    "domestic_model_rate": 0.0562,
    "local_model_rate": 0.2697,
-   "gitlab_cases": 203,
+   "gitlab_cases": 204,
    "github_cases": 122,
-   "gitlab_license_none_rate": 0.5862,
+   "gitlab_license_none_rate": 0.5833,
    "source": "관측",
    "members": 1725,
    "total_champions": 188
   },
   "2026-09-15": {
-   "total_cases": 409,
+   "total_cases": 410,
    "mcp_cases": 79,
-   "mcp_rate": 0.1932,
+   "mcp_rate": 0.1927,
    "domestic_model_rate": 0.0543,
    "local_model_rate": 0.2717,
-   "gitlab_cases": 203,
+   "gitlab_cases": 204,
    "github_cases": 125,
-   "gitlab_license_none_rate": 0.5862,
+   "gitlab_license_none_rate": 0.5833,
    "source": "관측",
-   "members": 1857,
-   "total_champions": 189
+   "members": 1874,
+   "total_champions": 190
   }
  }
 }
