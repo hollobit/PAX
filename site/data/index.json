@@ -2,12 +2,12 @@
  "generated_at": "2026-09-15",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 409,
- "total_champions": 189,
+ "total_cases": 410,
+ "total_champions": 190,
  "community": {
-  "members": 1857,
-  "kakao_week": 5488,
-  "kakao_total_observed": 32016,
+  "members": 1874,
+  "kakao_week": 6096,
+  "kakao_total_observed": 32624,
   "threads_observed": 266
  },
  "certified_champions": 5,
@@ -16,12 +16,12 @@
   "AI-Ready": 279,
   "AI-Enabled": 115,
   "AX 단계 외": 12,
-  "AI-First": 3
+  "AI-First": 4
  },
  "c_axis_mean": 0.87,
  "p_distribution": {
   "P0": 135,
-  "P1": 262,
+  "P1": 263,
   "P2": 12
  },
  "model_dependency": {
@@ -30,7 +30,7 @@
   "해외 오픈웨이트(로컬)": 24,
   "혼합": 9,
   "해외 상용 API": 54,
-  "모델 중립(BYO)": 64,
+  "모델 중립(BYO)": 65,
   "국산 독자모델": 4,
   "미상": 6,
   "국산 오픈웨이트": 1
@@ -146,7 +146,7 @@
    },
    {
     "name": "GPT(OpenAI)",
-    "n": 11,
+    "n": 12,
     "variants": [
      "ChatGPT GPTs",
      "ChatGPT(팀계정)",
@@ -159,7 +159,8 @@
      "OpenAI GPT-5(Responses API)",
      "OpenAI Vision",
      "OpenAI/Anthropic(사용자 키)",
-     "OpenAI/Claude(제공자 전환형)"
+     "OpenAI/Claude(제공자 전환형)",
+     "OpenAI·Claude·OpenRouter 계정 연결(BYO)"
     ],
     "cases": [
      {
@@ -205,6 +206,10 @@
      {
       "id": "90f8afce65c6f327",
       "title": "영수증 사진으로 공용차량 세차내역 자동 입력"
+     },
+     {
+      "id": "96added28c5e4ec7",
+      "title": "Liberaflow — 로컬 마크다운 노트 위에 AI 문서 작성·브라우저 자동화를 얹은 데스크톱 작업 공간"
      }
     ],
     "domestic": false
@@ -681,8 +686,8 @@
     "specified": 39
    },
    "모델 중립(BYO)": {
-    "n": 64,
-    "specified": 0
+    "n": 65,
+    "specified": 1
    },
    "국산 독자모델": {
     "n": 4,
@@ -1420,11 +1425,11 @@
  "domestic_model_rate": 0.054,
  "local_model_rate": 0.261,
  "model_known": 92,
- "license_tagged": 307,
- "license_stated_rate": 0.498,
- "gitlab_cases": 203,
+ "license_tagged": 308,
+ "license_stated_rate": 0.5,
+ "gitlab_cases": 204,
  "gitlab_mirror_pairs": 30,
- "gitlab_open_rate": 0.148,
+ "gitlab_open_rate": 0.147,
  "mcp_cases": 79,
  "transition_funnel": {
   "기관 공식": 33,
@@ -1432,11 +1437,11 @@
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
-  "개인 사용": 35
+  "개인 사용": 36
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.699
+  "feedback": 0.7
  },
  "maintenance_distribution": {
   "활발": 198,
@@ -1446,7 +1451,7 @@
  "stars_collected": 229,
  "repo_stats": {
   "gitlab": {
-   "count": 203,
+   "count": 204,
    "starred": 138,
    "stars_sum": 330,
    "maintenance": {
@@ -1631,7 +1636,7 @@
  },
  "license_distribution": {
   "명시 없음": 154,
-  "MIT": 107,
+  "MIT": 108,
   "Apache-2.0": 16,
   "Other": 15,
   "AGPL-3.0": 4,
@@ -1649,7 +1654,7 @@
   },
   "MIT": {
    "github": 63,
-   "gitlab": 44
+   "gitlab": 45
   },
   "Apache-2.0": {
    "github": 8,
@@ -1698,8 +1703,8 @@
    "stated": 4
   },
   "gitlab": {
-   "total": 173,
-   "stated": 63
+   "total": 174,
+   "stated": 64
   }
  },
  "mcp_stats": {

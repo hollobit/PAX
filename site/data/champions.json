@@ -1,5 +1,5 @@
 {
- "total": 189,
+ "total": 190,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -4254,6 +4254,26 @@
    }
   },
   {
+   "id": "gitlab:choshg",
+   "name": "초실행관",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "choshg",
+     "url": "https://gitlab.aigov.go.kr/choshg"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "4bea357dc245a257"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:cur0618",
    "name": "최웅렬",
    "accounts": [
@@ -4950,16 +4970,16 @@
    "url": "https://re100market.com/"
   },
   {
-   "id": "4bea357dc245a257",
-   "title": "바로맵 — 주소 엑셀을 올리면 주민 안내용 공개 지도가 되는 도구",
-   "org": "공직 현장(개인 개발)",
-   "url": "https://map.choshg.com/"
-  },
-  {
    "id": "dd784289395c2afb",
    "title": "경기도의회사무처 신규자 지식창고 — 업무플랫폼 통합서비스의 한 모듈",
    "org": "경기도의회(공직 개인 개발)",
    "url": "https://works.ggc.go.kr/kb/"
+  },
+  {
+   "id": "96added28c5e4ec7",
+   "title": "Liberaflow — 로컬 마크다운 노트 위에 AI 문서 작성·브라우저 자동화를 얹은 데스크톱 작업 공간",
+   "org": "지자체(공직 개인 개발)",
+   "url": "https://liberaflow.com/"
   }
  ]
 }
