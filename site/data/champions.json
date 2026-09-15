@@ -5009,6 +5009,12 @@
    "title": "Liberaflow — 로컬 마크다운 노트 위에 AI 문서 작성·브라우저 자동화를 얹은 데스크톱 작업 공간",
    "org": "지자체(공직 개인 개발)",
    "url": "https://liberaflow.com/"
+  },
+  {
+   "id": "2085370092f99007",
+   "title": "God's Eye View — 항공기·선박·위성·지진·공개 카메라를 한 3D 지구본에 띄우는 오픈소스 공간정보 관제 참고 도구",
+   "org": "Halfpixel(오픈소스)",
+   "url": "https://maptheworld.ai/"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "generated_at": "2026-09-15",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 411,
+ "total_cases": 412,
  "total_champions": 191,
  "community": {
   "members": 1878,
@@ -11,17 +11,17 @@
   "threads_observed": 266
  },
  "certified_champions": 5,
- "unattributed_cases": 80,
+ "unattributed_cases": 81,
  "ax_distribution": {
   "AI-Ready": 279,
-  "AI-Enabled": 115,
+  "AI-Enabled": 116,
   "AX 단계 외": 12,
   "AI-First": 5
  },
  "c_axis_mean": 0.87,
  "p_distribution": {
   "P0": 135,
-  "P1": 264,
+  "P1": 265,
   "P2": 12
  },
  "model_dependency": {
@@ -29,7 +29,7 @@
   "없음(비LLM)": 182,
   "해외 오픈웨이트(로컬)": 24,
   "혼합": 9,
-  "해외 상용 API": 55,
+  "해외 상용 API": 56,
   "모델 중립(BYO)": 65,
   "국산 독자모델": 4,
   "미상": 6,
@@ -151,7 +151,7 @@
    },
    {
     "name": "GPT(OpenAI)",
-    "n": 12,
+    "n": 13,
     "variants": [
      "ChatGPT GPTs",
      "ChatGPT(팀계정)",
@@ -162,6 +162,7 @@
      "GPT-5.6 Terra",
      "GPT-6 Astra",
      "OpenAI GPT-5(Responses API)",
+     "OpenAI Realtime API(음성 에이전트, 선택)",
      "OpenAI Vision",
      "OpenAI/Anthropic(사용자 키)",
      "OpenAI/Claude(제공자 전환형)",
@@ -215,6 +216,10 @@
      {
       "id": "96added28c5e4ec7",
       "title": "Liberaflow — 로컬 마크다운 노트 위에 AI 문서 작성·브라우저 자동화를 얹은 데스크톱 작업 공간"
+     },
+     {
+      "id": "2085370092f99007",
+      "title": "God's Eye View — 항공기·선박·위성·지진·공개 카메라를 한 3D 지구본에 띄우는 오픈소스 공간정보 관제 참고 도구"
      }
     ],
     "domestic": false
@@ -687,8 +692,8 @@
     "specified": 9
    },
    "해외 상용 API": {
-    "n": 55,
-    "specified": 40
+    "n": 56,
+    "specified": 41
    },
    "모델 중립(BYO)": {
     "n": 65,
@@ -1020,7 +1025,7 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 55,
+    "n": 56,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
@@ -1126,7 +1131,7 @@
      },
      {
       "name": "GPT(OpenAI)",
-      "n": 10,
+      "n": 11,
       "cases": [
        {
         "id": "6a2d1fa6e385ef2b",
@@ -1167,6 +1172,10 @@
        {
         "id": "90f8afce65c6f327",
         "title": "영수증 사진으로 공용차량 세차내역 자동 입력"
+       },
+       {
+        "id": "2085370092f99007",
+        "title": "God's Eye View — 항공기·선박·위성·지진·공개 카메라를 한 3D 지구본에 띄우는 오픈소스 공간정보 관제 참고 도구"
        }
       ],
       "domestic": false,
@@ -1179,6 +1188,7 @@
        "GPT-5.6 Terra",
        "GPT-6 Astra",
        "OpenAI GPT-5(Responses API)",
+       "OpenAI Realtime API(음성 에이전트, 선택)",
        "OpenAI Vision",
        "OpenAI/Anthropic(사용자 키)",
        "OpenAI/Claude(제공자 전환형)"
@@ -1432,18 +1442,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.054,
- "local_model_rate": 0.258,
- "model_known": 93,
- "license_tagged": 309,
- "license_stated_rate": 0.502,
+ "domestic_model_rate": 0.053,
+ "local_model_rate": 0.255,
+ "model_known": 94,
+ "license_tagged": 310,
+ "license_stated_rate": 0.503,
  "gitlab_cases": 204,
  "gitlab_mirror_pairs": 30,
  "gitlab_open_rate": 0.147,
  "mcp_cases": 79,
  "transition_funnel": {
   "기관 공식": 33,
-  "미확인": 330,
+  "미확인": 331,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1552,7 +1562,7 @@
    ]
   },
   "github": {
-   "count": 126,
+   "count": 127,
    "starred": 112,
    "stars_sum": 176133,
    "maintenance": {
@@ -1647,8 +1657,8 @@
  "license_distribution": {
   "명시 없음": 154,
   "MIT": 109,
+  "Other": 16,
   "Apache-2.0": 16,
-  "Other": 15,
   "AGPL-3.0": 4,
   "기타(비표준)": 4,
   "GNU AGPLv3": 3,
@@ -1666,13 +1676,13 @@
    "github": 64,
    "gitlab": 45
   },
+  "Other": {
+   "github": 16,
+   "gitlab": 0
+  },
   "Apache-2.0": {
    "github": 8,
    "gitlab": 8
-  },
-  "Other": {
-   "github": 15,
-   "gitlab": 0
   },
   "AGPL-3.0": {
    "github": 3,
@@ -1705,8 +1715,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 120,
-   "stated": 87
+   "total": 121,
+   "stated": 88
   },
   "github-pages": {
    "total": 15,

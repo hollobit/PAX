@@ -9546,5 +9546,33 @@
     "resilience": "미확인(2026-09-15 공개 v0.5.0-beta.1, MIT. Windows 중심, Codex 계정 필요)",
     "post_url": "",
     "service_url": "https://github.com/mouseco/public-cardnews"
+  },
+  {
+    "no": 414,
+    "id": "2085370092f99007",
+    "org": "Halfpixel(오픈소스)",
+    "title": "God's Eye View — 항공기·선박·위성·지진·공개 카메라를 한 3D 지구본에 띄우는 오픈소스 공간정보 관제 참고 도구",
+    "ax_prev": "AI-Enabled",
+    "ax": "AI-Enabled",
+    "s": "S2",
+    "s_name": "Tool bundle",
+    "c": "C1",
+    "c_name": "결과 제공",
+    "m": "해당 없음",
+    "m_name": "비-MCP 사례",
+    "native_scope": "해당 없음",
+    "status": "In service",
+    "scope": "Public",
+    "mcp_role": "Unknown/None",
+    "risk": "R2 중간",
+    "human": "결과 확인 후 사용",
+    "evidence": "E1 저장소·문서 확인",
+    "confidence": "중간",
+    "gate": "상위 관문 미충족/해당 없음",
+    "rationale": "저장소 README·데이터 출처·보안 문서를 확인해 E1로 둔다. 실시간 피드 여러 개를 한 지구본에 합치고 추적·HUD·음성 조작을 묶어 S2이며, 핵심은 시각화이고 AI는 음성 조작과 장면 요약 보조라 AI-Enabled·C1로 본다. 공개 카메라·항적을 개인 식별에 쓸 여지와 데이터 지연·추정값을 실측으로 오인할 위험이 있어 R2로 두고, 제작자가 안전 목적 사용을 금한다고 명시한 점을 그대로 적는다. 해외 참고 사례로 국내 도입 실적은 없다.",
+    "feedback": "미확인",
+    "resilience": "미확인(2026-06 공개, 스타 3만 4천·포크 6천 9백, 활발히 갱신 중)",
+    "post_url": "",
+    "service_url": "https://github.com/bilawalsidhu/gods-eye-view"
   }
 ]
