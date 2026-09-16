@@ -6090,6 +6090,7 @@
    "models_used": [
     "schift-ko-pii-v6(자체 학습)"
    ],
+   "case_url": "https://huggingface.co/schift-io/schift-ko-pii-v7",
    "thumb_v": 1789428840
   },
   {

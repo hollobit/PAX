@@ -5,9 +5,9 @@
  "total_cases": 412,
  "total_champions": 191,
  "community": {
-  "members": 1897,
-  "kakao_week": 5637,
-  "kakao_total_observed": 32872,
+  "members": 1900,
+  "kakao_week": 5879,
+  "kakao_total_observed": 33114,
   "threads_observed": 266
  },
  "certified_champions": 5,
@@ -1445,8 +1445,8 @@
  "domestic_model_rate": 0.053,
  "local_model_rate": 0.255,
  "model_known": 94,
- "license_tagged": 310,
- "license_stated_rate": 0.503,
+ "license_tagged": 311,
+ "license_stated_rate": 0.505,
  "gitlab_cases": 204,
  "gitlab_mirror_pairs": 30,
  "gitlab_open_rate": 0.147,
@@ -1656,7 +1656,7 @@
  },
  "license_distribution": {
   "명시 없음": 154,
-  "MIT": 109,
+  "MIT": 110,
   "Other": 16,
   "Apache-2.0": 16,
   "AGPL-3.0": 4,
