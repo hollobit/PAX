@@ -573,10 +573,11 @@
     "evidence": "GitHub 공개 프로필 소속란"
    },
    "cases": [
+    "c483c6ad4ccff0ab",
     "f5f24469d5ca281f"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 2,
     "stars": 0
    }
@@ -4822,7 +4823,7 @@
    "id": "dcba0f654467bdc9",
    "title": "schift-ko-pii-v6 — 한국어 개인정보 검출·마스킹 경량 모델",
    "org": "Schift(민간 개발팀)",
-   "url": "https://huggingface.co/schift-io/schift-ko-pii-v6"
+   "url": "https://huggingface.co/schift-io/schift-ko-pii-v7"
   },
   {
    "id": "d9d7249fcb949e9a",
