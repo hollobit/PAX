@@ -4468,7 +4468,7 @@
    "date": "2026-08-15",
    "source": "kakao",
    "collected_at": "2026-08-15",
-   "summary": "공무원 보고서 작성을 AI로 지원하는 온AI Work가 정부 공공 깃랩에 공개됐다. 보고서 초안 작성 업무를 AI가 보조해 문서 작성 시간을 줄여준다.",
+   "summary": "행정안전부 실무자가 개인적으로 개발한 온AI Work는 문서 검색, AI 한글 보고서 작성, 요약, 서식 맞춤 작성, 공유 링크 생성, 마크다운의 한글문서 변환까지 한 화면에서 처리하는 PoC로, 정부 공공 깃랩에 공개돼 있다. 별도 자료 없이 써 볼 수 있는 체험 공간이 공개됐고, 업무망의 온AI 서비스와 메신저·드라이브 연계도 검토 중이다.",
    "org_type": "공직 개인",
    "id": "ac09bd2e1c0fbb29",
    "license": "MIT",
@@ -4487,7 +4487,10 @@
     "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
     "Solar Open 2(온AI 서빙 탑재 — 09-02 실무자 관측)"
    ],
-   "mirror_url": "https://gitlab.aigov.go.kr/wavelen/govwork"
+   "mirror_url": "https://gitlab.aigov.go.kr/wavelen/govwork",
+   "case_url": "https://work.govpress.cloud",
+   "runtime_env": "브라우저만",
+   "network_req": "인터넷 필수"
   },
   {
    "link": "https://gitlab.aigov.go.kr/y2kthr/koda",
