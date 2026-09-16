@@ -2792,6 +2792,41 @@
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
    }
+  },
+  {
+   "case_id": "c483c6ad4ccff0ab",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "자동 검출 셸 패턴 5건은 SQLite DDL exec(app/src/db.mjs:22-65)와 자가테스트의 spawn(process.execPath)(app/src/server-selftest.mjs:18, hook-selftest.mjs:26)로 런타임 셸 호출이 아님 — 세션 검토 2026-09-16"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Apache-2.0·유지보수 미상"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "MCP 도구 인자는 문자열 길이 제한·숫자 범위·enum 화이트리스트로 정규화되고(app/src/mcp-server.mjs:57-95) SQL은 전부 바인딩 파라미터 사용, FTS 질의는 특수문자 제거 후 MATCH ? 바인딩(app/src/search.mjs:9-24). 경로 파라미터 없음. 외부 콘텐츠를 도구 설명에 삽입하는 경로 없음"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "외부 네트워크 호출은 최초 1회 임베딩 모델(Xenova/all-MiniLM-L6-v2) 다운로드뿐이며 README에 명시(app/src/embed.mjs:10-12). 대시보드 서버는 127.0.0.1 바인딩·실행마다 새 토큰·localhost CORS 제한(app/src/server.mjs:18-52). 훅·MCP 서버에 원격 전송·텔레메트리 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-09-16",
+   "tools": {
+    "npm": "11.11.0",
+    "pip_audit": "없음"
+   }
   }
  ]
 }
