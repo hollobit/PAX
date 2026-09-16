@@ -2,12 +2,12 @@
  "generated_at": "2026-09-16",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 412,
+ "total_cases": 413,
  "total_champions": 191,
  "community": {
-  "members": 1900,
-  "kakao_week": 5879,
-  "kakao_total_observed": 33114,
+  "members": 1915,
+  "kakao_week": 5901,
+  "kakao_total_observed": 33136,
   "threads_observed": 266
  },
  "certified_champions": 5,
@@ -26,7 +26,7 @@
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 182,
+  "없음(비LLM)": 183,
   "해외 오픈웨이트(로컬)": 24,
   "혼합": 9,
   "해외 상용 API": 56,
@@ -680,7 +680,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 182,
+    "n": 183,
     "specified": 0
    },
    "해외 오픈웨이트(로컬)": {
@@ -1445,15 +1445,15 @@
  "domestic_model_rate": 0.053,
  "local_model_rate": 0.255,
  "model_known": 94,
- "license_tagged": 311,
- "license_stated_rate": 0.505,
+ "license_tagged": 312,
+ "license_stated_rate": 0.506,
  "gitlab_cases": 204,
  "gitlab_mirror_pairs": 30,
  "gitlab_open_rate": 0.147,
- "mcp_cases": 79,
+ "mcp_cases": 80,
  "transition_funnel": {
   "기관 공식": 33,
-  "미확인": 331,
+  "미확인": 332,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1562,7 +1562,7 @@
    ]
   },
   "github": {
-   "count": 127,
+   "count": 128,
    "starred": 112,
    "stars_sum": 176133,
    "maintenance": {
@@ -1657,8 +1657,8 @@
  "license_distribution": {
   "명시 없음": 154,
   "MIT": 110,
+  "Apache-2.0": 17,
   "Other": 16,
-  "Apache-2.0": 16,
   "AGPL-3.0": 4,
   "기타(비표준)": 4,
   "GNU AGPLv3": 3,
@@ -1676,13 +1676,13 @@
    "github": 64,
    "gitlab": 45
   },
+  "Apache-2.0": {
+   "github": 9,
+   "gitlab": 8
+  },
   "Other": {
    "github": 16,
    "gitlab": 0
-  },
-  "Apache-2.0": {
-   "github": 8,
-   "gitlab": 8
   },
   "AGPL-3.0": {
    "github": 3,
@@ -1715,8 +1715,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 121,
-   "stated": 88
+   "total": 122,
+   "stated": 89
   },
   "github-pages": {
    "total": 15,
@@ -1728,20 +1728,22 @@
   }
  },
  "mcp_stats": {
-  "total": 79,
+  "total": 80,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
    "Server": 69,
    "Client/Host": 6,
-   "Unknown/None": 3
+   "Unknown/None": 3,
+   "미상": 1
   },
   "c_grades": {
    "C0": 66,
    "C2": 6,
    "C3": 1,
-   "C1": 6
+   "C1": 6,
+   "미상": 1
   },
   "maintenance": {
    "활발": 41,

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-16T04:52:37+09:00",
+ "updated_at": "2026-09-17T02:42:51+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -11405,6 +11405,31 @@
    "license": "Other",
    "license_source": "github",
    "license_checked": "2026-09-15"
+  },
+  {
+   "title": "소담 오브레인 Codex — AI 코딩 대화의 결정·제약을 로컬 SQLite에 기억하는 MCP 메모리 플러그인",
+   "tags": [
+    "Codex",
+    "MCP",
+    "로컬메모리",
+    "AI코딩"
+   ],
+   "date": "2026-09-16",
+   "org": "개발 커뮤니티",
+   "task_category": "공통·범용",
+   "case_class": "커뮤니티",
+   "link": "https://github.com/sodam-ai/SoDam_O-Brain-Codex",
+   "collected_at": "2026-09-16",
+   "source": "kakao",
+   "org_type": "커뮤니티",
+   "model_dependency": "없음(비LLM)",
+   "case_url": "https://github.com/sodam-ai/SoDam_O-Brain",
+   "runtime_env": "MCP·CLI 설정",
+   "summary": "Claude Code용으로 만들었던 로컬 메모리 플러그인 O-Brain을 Codex용으로 포팅해 공개했다. 세션 종료 훅이 대화에서 확정된 결정·제약·선호 문장만 골라 내 컴퓨터의 SQLite에 저장하고, 다음 세션 시작 때 관련 기억을 문맥에 되읽어 준다. 검색·저장·타임라인 등 MCP 도구 7개와 2D·3D 그래프 대시보드를 제공하며, 기억 저장과 검색은 API 키나 과금 없이 로컬에서 처리된다. Apache-2.0으로 공개됐고 원본 Claude Code판 저장소도 병기했다.",
+   "id": "c483c6ad4ccff0ab",
+   "license": "Apache-2.0",
+   "license_source": "github",
+   "license_checked": "2026-09-16"
   }
  ]
 }
