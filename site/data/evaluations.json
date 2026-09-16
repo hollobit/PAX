@@ -1,6 +1,6 @@
 {
- "evaluated_at": "2026-09-15",
- "total": 412,
+ "evaluated_at": "2026-09-16",
+ "total": 413,
  "cases": [
   {
    "no": 1,
@@ -13595,6 +13595,39 @@
    "tool_type": "오픈소스 도구",
    "audience": "미상",
    "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 415,
+   "id": "c483c6ad4ccff0ab",
+   "org": "개발 커뮤니티",
+   "title": "소담 오브레인 Codex — AI 코딩 대화의 결정·제약을 로컬 SQLite에 기억하는 MCP 메모리 플러그인",
+   "ax_prev": "AI-Ready",
+   "ax": "AI-Ready",
+   "s": "S1",
+   "s_name": "Single tool",
+   "c": "C1",
+   "c_name": "결과 제공",
+   "m": "M1",
+   "m_name": "제한적",
+   "native_scope": "AI 코딩 세션 기억 저장·검색",
+   "status": "Published tool",
+   "scope": "External",
+   "mcp_role": "Server",
+   "risk": "R0 최소",
+   "human": "해당 없음",
+   "evidence": "E1 코드·도구 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "Codex 세션 훅과 MCP 도구 7개로 결정·제약 문장을 로컬 SQLite에 저장·되읽는 단일 도구(S1·C1). 런타임 LLM 호출 없이 규칙 선별과 로컬 임베딩만 써 AI-Ready. 저장소 코드로 도구 정의·입력 정규화·로컬 바인딩을 확인했다.",
+   "feedback": "미확인",
+   "resilience": "미확인(신규 공개)",
+   "post_url": "",
+   "service_url": "https://github.com/sodam-ai/SoDam_O-Brain-Codex",
+   "tool_type": "MCP 서버·도구",
+   "audience": "G2E 공직 실무자",
+   "p": "P0 읽기 전용(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }
