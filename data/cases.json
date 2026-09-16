@@ -5896,7 +5896,8 @@
    "model_dependency": "국산 독자모델",
    "models_used": [
     "schift-ko-pii-v6(자체 학습)"
-   ]
+   ],
+   "case_url": "https://huggingface.co/schift-io/schift-ko-pii-v7"
   },
   {
    "collected_at": "2026-08-24",
