@@ -6,21 +6,21 @@
  "total_champions": 191,
  "community": {
   "members": 1915,
-  "kakao_week": 5901,
-  "kakao_total_observed": 33136,
+  "kakao_week": 5902,
+  "kakao_total_observed": 33137,
   "threads_observed": 266
  },
  "certified_champions": 5,
  "unattributed_cases": 81,
  "ax_distribution": {
-  "AI-Ready": 279,
+  "AI-Ready": 280,
   "AI-Enabled": 116,
   "AX 단계 외": 12,
   "AI-First": 5
  },
  "c_axis_mean": 0.87,
  "p_distribution": {
-  "P0": 135,
+  "P0": 136,
   "P1": 265,
   "P2": 12
  },
@@ -1461,7 +1461,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.701
+  "feedback": 0.702
  },
  "maintenance_distribution": {
   "활발": 198,
@@ -1733,17 +1733,15 @@
   "unofficial": 56,
   "roles": {
    "Planned": 1,
-   "Server": 69,
+   "Server": 70,
    "Client/Host": 6,
-   "Unknown/None": 3,
-   "미상": 1
+   "Unknown/None": 3
   },
   "c_grades": {
    "C0": 66,
    "C2": 6,
    "C3": 1,
-   "C1": 6,
-   "미상": 1
+   "C1": 7
   },
   "maintenance": {
    "활발": 41,
