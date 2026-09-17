@@ -44,19 +44,19 @@
     <section class="obs-section">
       <p class="case-page__meta">개발 커뮤니티 · 커뮤니티 · 공통·범용 · 2026-09-16 게시</p>
       <p class="case-page__summary">Claude Code용으로 만들었던 로컬 메모리 플러그인 O-Brain을 Codex용으로 포팅해 공개했다. 세션 종료 훅이 대화에서 확정된 결정·제약·선호 문장만 골라 내 컴퓨터의 SQLite에 저장하고, 다음 세션 시작 때 관련 기억을 문맥에 되읽어 준다. 검색·저장·타임라인 등 MCP 도구 7개와 2D·3D 그래프 대시보드를 제공하며, 기억 저장과 검색은 API 키나 과금 없이 로컬에서 처리된다. Apache-2.0으로 공개됐고 원본 Claude Code판 저장소도 병기했다.</p>
-      <p class="case-page__links"><a href="https://github.com/sodam-ai/SoDam_O-Brain" target="_blank" rel="noopener">사례 대상 바로가기</a> · <a href="https://github.com/sodam-ai/SoDam_O-Brain-Codex" target="_blank" rel="noopener">공유 링크</a> · <a href="../?case=c483c6ad4ccff0ab">아카이브에서 보기</a></p>
+      <p class="case-page__links"><a href="https://github.com/sodam-ai/SoDam_O-Brain" target="_blank" rel="noopener">사례 대상 바로가기</a> · <a href="https://github.com/sodam-ai/SoDam_O-Brain-Codex" target="_blank" rel="noopener">공유 링크</a> · <a href="../?case=c483c6ad4ccff0ab">아카이브에서 보기</a> · <a href="../mcp-review.html">MCP 검증: 양호 (2026-09-16)</a></p>
     </section>
     <section class="obs-section">
       <h2 class="obs-heading">4축 평가</h2>
-      <p>평가 데이터 없음</p>
-      <p class="obs-note"></p>
+      <div class="table-wrap"><table class="obs-table"><tr><th scope="row">AX 단계</th><td>AI-Ready</td></tr><tr><th scope="row">업무 범위</th><td>S1 Single tool</td></tr><tr><th scope="row">업무 완결성</th><td>C1 결과 제공</td></tr><tr><th scope="row">권한(P축)</th><td>P0 읽기 전용(잠정)</td></tr><tr><th scope="row">위험도</th><td>R0 최소</td></tr><tr><th scope="row">인간 통제</th><td>해당 없음</td></tr><tr><th scope="row">증거 등급</th><td>E1 코드·도구 확인</td></tr><tr><th scope="row">신뢰도</th><td>중간</td></tr></table></div>
+      <p class="obs-note">Codex 세션 훅과 MCP 도구 7개로 결정·제약 문장을 로컬 SQLite에 저장·되읽는 단일 도구(S1·C1). 런타임 LLM 호출 없이 규칙 선별과 로컬 임베딩만 써 AI-Ready. 저장소 코드로 도구 정의·입력 정규화·로컬 바인딩을 확인했다.</p>
     </section>
     <section class="obs-section">
       <h2 class="obs-heading">실무 도입 카드</h2>
       <div class="obs-cards">
         <div class="obs-card"><p class="obs-card__label">필요한 것</p><p class="obs-card__note">실행환경: MCP·CLI 설정 · 라이선스: Apache-2.0</p></div>
         <div class="obs-card"><p class="obs-card__label">첫 3단계</p><p class="obs-card__note">① 저장소 README의 설치 절차 확인 → ② 개인 PC에서 시험 연결 → ③ 업무망 반입 전 보안성 검토 문의</p></div>
-        <div class="obs-card"><p class="obs-card__label">주의사항</p><p class="obs-card__note">성과 수치는 출처가 확인된 것만 신뢰하세요</p></div>
+        <div class="obs-card"><p class="obs-card__label">주의사항</p><p class="obs-card__note">실사용 피드백이 미확인입니다 — 도입 전 소규모 검증을 권합니다 · 성과 수치는 출처가 확인된 것만 신뢰하세요</p></div>
       </div>
       <p class="obs-note">전이 절차(보안검토→품의→배포)는 <a href="../playbook.html">전이 플레이북</a>을 참고하세요.</p>
     </section>

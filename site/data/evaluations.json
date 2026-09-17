@@ -1,6 +1,6 @@
 {
- "evaluated_at": "2026-09-16",
- "total": 413,
+ "evaluated_at": "2026-09-17",
+ "total": 414,
  "cases": [
   {
    "no": 1,
@@ -13628,6 +13628,39 @@
    "tool_type": "MCP 서버·도구",
    "audience": "G2E 공직 실무자",
    "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 416,
+   "id": "e57919fda43f59c0",
+   "org": "과학기술정보통신부·NIPA",
+   "title": "모두의 AI — 전 국민 무료 범용 AI 챗봇·행정 지원 에이전트 사업, 3개 컨소시엄 선정",
+   "ax_prev": "AI-Native 계획",
+   "ax": "AI-Native 계획",
+   "s": "S3",
+   "s_name": "Multi-agent",
+   "c": "C2",
+   "c_name": "업무 수행",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "전 국민 범용 AI 챗봇·공공 행정 처리 에이전트",
+   "status": "Planned (베타 10월·정식 12월)",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R2 중간",
+   "human": "미정(정식 서비스 전)",
+   "evidence": "E3 보도·공고 확인",
+   "confidence": "낮음",
+   "gate": "정식 출시 전 — 실측 시 재평가",
+   "rationale": "국산 모델 기반 범용 챗봇과 행정 처리 에이전트를 3개 민간 컨소시엄이 개발해 12월 정식 출시하는 범정부 사업. 사업 공고와 사업자 선정 보도만 확인된 계획 단계라 AI-Native 계획으로 두고 서비스 개시 후 실측한다.",
+   "feedback": "미확인",
+   "resilience": "미확인(계획 단계)",
+   "post_url": "",
+   "service_url": "https://www.nipa.kr/home/2-2/16852",
+   "tool_type": "AI 스킬·에이전트",
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }
