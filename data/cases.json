@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-17T02:42:51+09:00",
+ "updated_at": "2026-09-17T14:32:05+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -11430,6 +11430,28 @@
    "license": "Apache-2.0",
    "license_source": "github",
    "license_checked": "2026-09-16"
+  },
+  {
+   "task_category": "공통·범용",
+   "case_class": "기관 공식",
+   "case_url": "https://www.nipa.kr/home/2-2/16852",
+   "tags": [
+    "국가AI",
+    "범용챗봇",
+    "행정에이전트",
+    "독자모델"
+   ],
+   "summary": "과기정통부와 NIPA가 국산 AI 모델을 바탕으로 전 국민이 비용 부담 없이 쓰는 범용 AI 챗봇과 공공 행정 처리를 돕는 AI 에이전트를 만드는 모두의 AI 사업을 공고하고, SK텔레콤·카카오·KT 세 컨소시엄을 수행기관으로 선정했다. 실행형 AI, 메신저 연동, 전화·문자 접근성 등 컨소시엄별 특색을 살려 10월 베타 운영을 거쳐 12월 정식 서비스를 시작할 계획이며, 연내 월 이용자 500만 명이 목표다.",
+   "org_type": "중앙행정기관",
+   "transition_stage": "기관 공식",
+   "date": "2026-09-17",
+   "source": "kakao",
+   "title": "모두의 AI — 전 국민 무료 범용 AI 챗봇·행정 지원 에이전트 사업, 3개 컨소시엄 선정",
+   "org": "과학기술정보통신부·NIPA",
+   "collected_at": "2026-09-17",
+   "model_dependency": "국산 독자모델",
+   "link": "https://www.newsis.com/view/NISX20260904_0003776405",
+   "id": "e57919fda43f59c0"
   }
  ]
 }
