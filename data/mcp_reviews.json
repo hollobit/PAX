@@ -2827,6 +2827,77 @@
     "npm": "11.11.0",
     "pip_audit": "없음"
    }
+  },
+  {
+   "case_id": "2a1ab7f937e160a1",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "파일 쓰기 1건 — 호출자가 지정한 cache_file 경로에 화이트리스트 없음, 다만 존재하는 파일의 파이프 표 셀만 갱신 (근거: webcheck_mcp/server.py:655-686, 깃허브 미러 기준)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음 (근거: 소스 전수 스캔, 단일 파일 695행)"
+    },
+    "supply_chain": {
+     "verdict": "미검증",
+     "note": "pip-audit 미실행 — 의존성 mcp·requests·beautifulsoup4·python-dateutil (근거: pyproject.toml)"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·유지보수 미상"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·subprocess 없음. 파일 쓰기는 기존 마크다운 표의 URL 일치 행만 헤더 일치 키로 갱신 (근거: server.py:645-687). 페이지 본문 발췌(sample_text)를 도구 응답에 그대로 담아 에이전트가 읽는 구조라 외부 콘텐츠 표면은 도구 목적상 불가피 (근거: server.py:514-540)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "호출 대상은 호출자가 준 URL·같은 도메인 크롤·robots.txt·sitemap뿐이며 하드코딩 외부 도메인·텔레메트리 없음 (근거: server.py:241,276,326,428,535,598). allow_redirects=True라 내부 주소로 튀는 리다이렉트를 막지 않음(로컬 실행 도구 특성)"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-09-18",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-09-18(깃허브 미러 clone)"
+   }
+  },
+  {
+   "case_id": "5af7491b4ca15345",
+   "axes": {
+    "permission_surface": {
+     "verdict": "미검증",
+     "note": "미검증(저장소 접근 불가)"
+    },
+    "secrets": {
+     "verdict": "미검증",
+     "note": "미검증(저장소 접근 불가)"
+    },
+    "supply_chain": {
+     "verdict": "미검증",
+     "note": "미검증(저장소 접근 불가)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "미검증",
+     "note": "미검증(호스트형 대규모 저장소 — 주간 백필 감사 대상, 깃허브 미러 있음)"
+    },
+    "data_flow": {
+     "verdict": "미검증",
+     "note": "미검증(호스트형 — RAG·MCP·모델 등록 구조라 호출 대상이 설정에 따름)"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-09-18",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
   }
  ]
 }
