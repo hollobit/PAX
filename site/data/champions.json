@@ -1,5 +1,5 @@
 {
- "total": 191,
+ "total": 192,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -379,11 +379,7 @@
      "url": "https://github.com/Dayoooun"
     }
    ],
-   "affiliation": {
-    "value": "VIRON",
-    "inferred": false,
-    "evidence": "GitHub 공개 프로필 소속란"
-   },
+   "affiliation": null,
    "cases": [
     "09f079e1424f6992"
    ],
@@ -3334,6 +3330,26 @@
    }
   },
   {
+   "id": "gitlab:safety",
+   "name": "안전관리자 이호진",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "safety",
+     "url": "https://gitlab.aigov.go.kr/safety"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "df836d25474724a0"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:jinn",
    "name": "안진희",
    "accounts": [
@@ -5022,6 +5038,30 @@
    "title": "모두의 AI — 전 국민 무료 범용 AI 챗봇·행정 지원 에이전트 사업, 3개 컨소시엄 선정",
    "org": "과학기술정보통신부·NIPA",
    "url": "https://www.nipa.kr/home/2-2/16852"
+  },
+  {
+   "id": "a1b13e28060a59fd",
+   "title": "통계나침반 — 국가승인통계를 주제별로 큐레이션해 찾고 읽게 돕는 안내 사이트",
+   "org": "개발 커뮤니티",
+   "url": "https://stats-compass.vercel.app/"
+  },
+  {
+   "id": "a5cfce33ba2fe7ba",
+   "title": "충남 특근근무자 급식비 간편산출 — 초과근무 정산 파일을 올리면 지급 대상이 추려지는 기관 도구",
+   "org": "충청남도",
+   "url": "https://alldam.chungnam.go.kr/sp/clcltFodExp.do"
+  },
+  {
+   "id": "b1ef2ba8bb30f689",
+   "title": "공구름 — 나라일터·ALIO·클린아이에 흩어진 공공기관 채용공고를 한 화면에서 거르는 사이트",
+   "org": "개발 커뮤니티",
+   "url": "https://gongcloud.kr/jobs"
+  },
+  {
+   "id": "c7f23951a3543a28",
+   "title": "점심 딸깍 — 업무추진비 공개자료로 공무원 단골집을 짚어 주는 근처 밥집 뽑기",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://chris.gomdori.app/lunch"
   }
  ]
 }
