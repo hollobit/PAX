@@ -92,7 +92,15 @@ def snapshot_members(ledger: dict, today: str):
         chats = json.loads(out.stdout)
         target = next((c for c in chats if str(c.get("id")) == CHAT_ID), None)
         if target and target.get("member_count"):
-            ledger["members"][today] = target["member_count"]
+            count = target["member_count"]
+            # 앱이 정체에서 막 복구된 직후에는 방 정보(activeMembersCount)가 메시지보다 늦게
+            # 갱신돼 며칠 전 값이 찍힌다(09-18 실측: 실제 1,951명인데 1,746으로 기록, 전날 1,923).
+            # 직전 스냅샷보다 3% 넘게 낮으면 그날은 결측으로 두고 다음 실행에서 다시 찍는다.
+            prev = [v for d, v in sorted(ledger["members"].items()) if d < today][-1:]
+            if prev and count < prev[0] * 0.97:
+                print(f"가입자 스냅샷 보류: {count} < 직전 {prev[0]}의 97% (방 정보 미갱신 의심)")
+                return
+            ledger["members"][today] = count
     except Exception:
         pass  # 실패 시 이날 스냅샷만 결측 — 다음 실행에서 재시도
 
