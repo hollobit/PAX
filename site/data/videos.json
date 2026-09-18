@@ -1,7 +1,124 @@
 {
- "updated_at": "2026-09-12T15:16:50Z",
- "count": 56,
+ "updated_at": "2026-09-18T10:25:15Z",
+ "count": 63,
  "videos": [
+  {
+   "id": "BM0oVk0aLAE",
+   "title": "공공 vs 기업 AX 전문가들의 충격적인 경험 공개",
+   "channel": "Alex AI",
+   "url": "https://www.youtube.com/watch?v=BM0oVk0aLAE",
+   "thumb": "https://i.ytimg.com/vi/BM0oVk0aLAE/mqdefault.jpg",
+   "shares": 3,
+   "first_shared": "2026-09-15",
+   "last_shared": "2026-09-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "4GA64_rb5VU",
+   "title": "범정부오피스 홍보용 영상",
+   "channel": "공무원코딩",
+   "url": "https://www.youtube.com/watch?v=4GA64_rb5VU",
+   "thumb": "https://i.ytimg.com/vi/4GA64_rb5VU/mqdefault.jpg",
+   "shares": 2,
+   "first_shared": "2026-09-03",
+   "last_shared": "2026-09-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "75jq_EQxht8",
+   "title": "[MV] OYSTERS - 그때가 좋았어 Those Were The Days",
+   "channel": "오이스터즈🦪",
+   "url": "https://www.youtube.com/watch?v=75jq_EQxht8",
+   "thumb": "https://i.ytimg.com/vi/75jq_EQxht8/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-17",
+   "last_shared": "2026-09-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "vopSo8YHUrc",
+   "title": "EP.1 사용료 0원! 다마고치로 나만의 AI 두뇌 육성하기 (설치부터 실습까지)",
+   "channel": "CONNECT AI LAB",
+   "url": "https://www.youtube.com/watch?v=vopSo8YHUrc",
+   "thumb": "https://i.ytimg.com/vi/vopSo8YHUrc/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-16",
+   "last_shared": "2026-09-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "KQrIUK7jDBw",
+   "title": "AI 도입하고도 직원 수 유지하는 월마트의 비결은",
+   "channel": "티타임즈TV",
+   "url": "https://www.youtube.com/watch?v=KQrIUK7jDBw",
+   "thumb": "https://i.ytimg.com/vi/KQrIUK7jDBw/mqdefault.jpg",
+   "shares": 3,
+   "first_shared": "2026-09-08",
+   "last_shared": "2026-09-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "efaeQK9Wka0",
+   "title": "공무원은 단순 교통사고만 나도 징계 받을 수 있다구요?",
+   "channel": "초실행관",
+   "url": "https://www.youtube.com/watch?v=efaeQK9Wka0",
+   "thumb": "https://i.ytimg.com/vi/efaeQK9Wka0/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-13",
+   "last_shared": "2026-09-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "Jo-LC_QRomQ",
+   "title": "[DSBA Study] Ontology & Knowledge Graph 1주차 S02. 전통 구축 방법론 ① — 온톨로지 설계 원칙",
+   "channel": "서울대학교 산업공학과 DSBA 연구실",
+   "url": "https://www.youtube.com/watch?v=Jo-LC_QRomQ",
+   "thumb": "https://i.ytimg.com/vi/Jo-LC_QRomQ/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-13",
+   "last_shared": "2026-09-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "AG59VsdMbiE",
+   "title": "Will Smith eating spaghetti has somehow become the official benchmark for AI progress - Long Meme",
+   "channel": "DYMABASE",
+   "url": "https://www.youtube.com/watch?v=AG59VsdMbiE",
+   "thumb": "https://i.ytimg.com/vi/AG59VsdMbiE/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-13",
+   "last_shared": "2026-09-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "02jEzPETI8o",
+   "title": "윌 스미스 스파게티  AI의 발전 속도 ㄷㄷ",
+   "channel": "안될공학 - IT 테크 신기술",
+   "url": "https://www.youtube.com/watch?v=02jEzPETI8o",
+   "thumb": "https://i.ytimg.com/vi/02jEzPETI8o/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-13",
+   "last_shared": "2026-09-13",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "tRsuIO8V55U",
    "title": "AI 때문에 영상 업계, 진짜 망하고 있을까? 현업자 11명에게 물었습니다",
@@ -146,19 +263,6 @@
    ]
   },
   {
-   "id": "KQrIUK7jDBw",
-   "title": "AI 도입하고도 직원 수 유지하는 월마트의 비결은",
-   "channel": "티타임즈TV",
-   "url": "https://www.youtube.com/watch?v=KQrIUK7jDBw",
-   "thumb": "https://i.ytimg.com/vi/KQrIUK7jDBw/mqdefault.jpg",
-   "shares": 2,
-   "first_shared": "2026-09-08",
-   "last_shared": "2026-09-08",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
    "id": "ztkLrj2PITI",
    "title": "AI의 진짜 핵심은 온톨로지? 전문가에게 직접 물어봤습니다",
    "channel": "Alex AI",
@@ -242,19 +346,6 @@
    "channel": "울산남구 고래방송국",
    "url": "https://www.youtube.com/watch?v=duiMS7vSycw",
    "thumb": "https://i.ytimg.com/vi/duiMS7vSycw/mqdefault.jpg",
-   "shares": 1,
-   "first_shared": "2026-09-03",
-   "last_shared": "2026-09-03",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "id": "4GA64_rb5VU",
-   "title": "범정부오피스 홍보용 영상",
-   "channel": "공무원코딩",
-   "url": "https://www.youtube.com/watch?v=4GA64_rb5VU",
-   "thumb": "https://i.ytimg.com/vi/4GA64_rb5VU/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-09-03",
    "last_shared": "2026-09-03",
