@@ -10862,5 +10862,33 @@
     "resilience": "미확인(1.5B 모델의 코드 품질·내부 설문 근거)",
     "post_url": "",
     "service_url": ""
+  },
+  {
+    "no": 461,
+    "id": "145008482da81f0a",
+    "org": "경남 양산시(개인 개발)",
+    "title": "외부강의등 신고 가이드 — 청탁금지법 제10조를 지방 공직자 기준으로 판단·신고·상한·초과사례금 순서로 풀어 쓴 안내 사이트",
+    "ax_prev": "AI-Ready",
+    "ax": "AI-Ready",
+    "s": "S1",
+    "s_name": "Script/보조",
+    "c": "C1",
+    "c_name": "결과 제공",
+    "m": "해당 없음",
+    "m_name": "비-MCP 사례",
+    "native_scope": "해당 없음",
+    "status": "Live service",
+    "scope": "Internal",
+    "mcp_role": "Unknown/None",
+    "risk": "R0 최소",
+    "human": "해당 없음",
+    "evidence": "E2 화면·서비스 확인",
+    "confidence": "중간",
+    "gate": "상위 관문 미충족/해당 없음",
+    "rationale": "법령 안내를 정적 페이지로 구조화한 참고 자료라 Script/보조·C1이며 운영 화면 본문을 직접 확인해 E2다. 인수인계·RAG·ReportAI를 낸 같은 계정의 산출물로, 이번에는 도구가 아니라 규정 해설을 사이트로 낸 형태다. 제작에 AI를 썼는지는 게시글에 없어 AI-Ready로 둔다.",
+    "feedback": "미확인",
+    "resilience": "미확인(법령 개정 반영 여부)",
+    "post_url": "https://www.threads.com/@publicai_79/post/DdbPoZmD5Pc",
+    "service_url": "https://daeung79.github.io/lecture"
   }
 ]

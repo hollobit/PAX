@@ -2,18 +2,18 @@
  "generated_at": "2026-09-18",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 458,
+ "total_cases": 459,
  "total_champions": 206,
  "community": {
-  "members": 1951,
-  "kakao_week": 4770,
-  "kakao_total_observed": 33900,
-  "threads_observed": 271
+  "members": 1952,
+  "kakao_week": 4775,
+  "kakao_total_observed": 33905,
+  "threads_observed": 273
  },
  "certified_champions": 5,
  "unattributed_cases": 84,
  "ax_distribution": {
-  "AI-Ready": 311,
+  "AI-Ready": 312,
   "AI-Enabled": 129,
   "AX 단계 외": 12,
   "AI-First": 5,
@@ -22,12 +22,12 @@
  "c_axis_mean": 0.91,
  "p_distribution": {
   "P0": 145,
-  "P1": 298,
+  "P1": 299,
   "P2": 15
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 215,
+  "없음(비LLM)": 216,
   "해외 오픈웨이트(로컬)": 27,
   "혼합": 9,
   "해외 상용 API": 58,
@@ -727,7 +727,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 215,
+    "n": 216,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -1516,15 +1516,15 @@
  "domestic_model_rate": 0.06,
  "local_model_rate": 0.27,
  "model_known": 100,
- "license_tagged": 355,
- "license_stated_rate": 0.499,
+ "license_tagged": 356,
+ "license_stated_rate": 0.497,
  "gitlab_cases": 249,
  "gitlab_mirror_pairs": 36,
  "gitlab_open_rate": 0.145,
  "mcp_cases": 82,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 376,
+  "미확인": 377,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1532,7 +1532,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.731
+  "feedback": 0.732
  },
  "maintenance_distribution": {
   "활발": 198,
@@ -1633,7 +1633,7 @@
    ]
   },
   "github": {
-   "count": 132,
+   "count": 133,
    "starred": 112,
    "stars_sum": 176133,
    "maintenance": {
@@ -1726,7 +1726,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 178,
+  "명시 없음": 179,
   "MIT": 115,
   "Apache-2.0": 28,
   "Other": 16,
@@ -1741,7 +1741,7 @@
  },
  "license_matrix": {
   "명시 없음": {
-   "github": 44,
+   "github": 45,
    "gitlab": 134
   },
   "MIT": {
@@ -1795,7 +1795,7 @@
    "stated": 89
   },
   "github-pages": {
-   "total": 15,
+   "total": 16,
    "stated": 4
   },
   "gitlab": {

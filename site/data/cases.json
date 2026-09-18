@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-18T19:49:41+09:00",
+ "updated_at": "2026-09-18T20:07:40+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -13108,6 +13108,37 @@
    "license_source": "gitlab",
    "license_checked": "2026-09-18",
    "thumb_v": 1789728964
+  },
+  {
+   "source": "threads",
+   "runtime_env": "브라우저만",
+   "model_dependency": "없음(비LLM)",
+   "title": "외부강의등 신고 가이드 — 청탁금지법 제10조를 지방 공직자 기준으로 판단·신고·상한·초과사례금 순서로 풀어 쓴 안내 사이트",
+   "tags": [
+    "청탁금지법",
+    "외부강의",
+    "신고",
+    "감사",
+    "안내사이트"
+   ],
+   "collected_at": "2026-09-18",
+   "summary": "출강하는 지방 공직자가 청탁금지법 외부강의등 규정을 한 화면에서 확인하도록 판단 기준, 신고 기준과 시한, 사례금 상한, 초과사례금 처리, 강사료 산정기준, 자주 묻는 질문 순서로 정리한 정적 안내 사이트다. 국가기관·지자체 요청은 신고 대상에서 빠지는 것처럼 실무에서 헷갈리는 경계를 예시로 풀고 새올 감사 메뉴의 신고 절차까지 잇는다. ReportAI·MemoMindAI를 낸 계정이 공개했다.",
+   "link": "https://www.threads.com/@publicai_79/post/DdbPoZmD5Pc",
+   "date": "2026-09-18",
+   "region": "경남",
+   "task_category": "감사·법무",
+   "case_url": "https://daeung79.github.io/lecture",
+   "org": "경남 양산시(개인 개발)",
+   "case_class": "개인 개발",
+   "mirror_url": "https://github.com/daeung79/lecture",
+   "deployment_env": "인터넷망",
+   "org_type": "공직 개인",
+   "network_req": "인터넷 필수",
+   "id": "145008482da81f0a",
+   "license": "명시 없음",
+   "license_source": "github-pages",
+   "license_checked": "2026-09-18",
+   "thumb_v": 1789729666
   }
  ]
 }
