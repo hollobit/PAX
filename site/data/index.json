@@ -2,38 +2,38 @@
  "generated_at": "2026-09-18",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 419,
- "total_champions": 192,
+ "total_cases": 458,
+ "total_champions": 206,
  "community": {
-  "members": 1744,
-  "kakao_week": 4761,
-  "kakao_total_observed": 33891,
-  "threads_observed": 267
+  "members": 1746,
+  "kakao_week": 4770,
+  "kakao_total_observed": 33900,
+  "threads_observed": 271
  },
  "certified_champions": 5,
- "unattributed_cases": 86,
+ "unattributed_cases": 84,
  "ax_distribution": {
-  "AI-Ready": 285,
-  "AI-Enabled": 116,
+  "AI-Ready": 311,
+  "AI-Enabled": 129,
   "AX 단계 외": 12,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
- "c_axis_mean": 0.88,
+ "c_axis_mean": 0.91,
  "p_distribution": {
-  "P0": 136,
-  "P1": 271,
-  "P2": 12
+  "P0": 145,
+  "P1": 298,
+  "P2": 15
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 188,
-  "해외 오픈웨이트(로컬)": 24,
+  "없음(비LLM)": 215,
+  "해외 오픈웨이트(로컬)": 27,
   "혼합": 9,
-  "해외 상용 API": 56,
-  "모델 중립(BYO)": 65,
+  "해외 상용 API": 58,
+  "모델 중립(BYO)": 71,
   "국산 독자모델": 5,
-  "미상": 6,
+  "미상": 7,
   "국산 오픈웨이트": 1
  },
  "model_stats": {
@@ -152,7 +152,7 @@
    },
    {
     "name": "GPT(OpenAI)",
-    "n": 13,
+    "n": 15,
     "variants": [
      "ChatGPT GPTs",
      "ChatGPT(팀계정)",
@@ -162,12 +162,14 @@
      "GPT-5.6 Luna(OpenRouter, 동의 시)",
      "GPT-5.6 Terra",
      "GPT-6 Astra",
+     "OpenAI GPT 계열(예시 설정)",
      "OpenAI GPT-5(Responses API)",
      "OpenAI Realtime API(음성 에이전트, 선택)",
      "OpenAI Vision",
      "OpenAI/Anthropic(사용자 키)",
      "OpenAI/Claude(제공자 전환형)",
-     "OpenAI·Claude·OpenRouter 계정 연결(BYO)"
+     "OpenAI·Claude·OpenRouter 계정 연결(BYO)",
+     "gpt-5.6-luna(기본 설정)"
     ],
     "cases": [
      {
@@ -221,17 +223,83 @@
      {
       "id": "2085370092f99007",
       "title": "God's Eye View — 항공기·선박·위성·지진·공개 카메라를 한 3D 지구본에 띄우는 오픈소스 공간정보 관제 참고 도구"
+     },
+     {
+      "id": "5af7491b4ca15345",
+      "title": "MOPAN(모판) — RAG·MCP·모델·워크플로우를 직접 등록해 조합하는 에이전트 바탕 시스템"
+     },
+     {
+      "id": "0fbe6800c85c1ae4",
+      "title": "AI 공간개발·공간관리 앱 — 함양군 지적도로 구역선 필지 교차 분석과 산업단지 입주 검증을 하는 두 갈래 도구"
+     }
+    ],
+    "domestic": false
+   },
+   {
+    "name": "Gemma",
+    "n": 10,
+    "variants": [
+     "Gemma 4",
+     "Gemma 4 E2B(Ollama 기본 예시)",
+     "Gemma 4 E2B(Ollama 번들)",
+     "Gemma 4 E2B(Ollama, 선택형 요약)",
+     "Gemma 4 E4B(Ollama 권장)",
+     "Gemma 4 E4B(Ollama)",
+     "Gemma4 e2b",
+     "LLM42-Gemma4(멀티모달 전환)"
+    ],
+    "cases": [
+     {
+      "id": "2c14f2adaa83a00e",
+      "title": "로컬 인수인계 도구 MVP 공개 — 공공 AX 로컬 시리즈 3"
+     },
+     {
+      "id": "58420e002644542c",
+      "title": "행안부, 엑사원·Gemma4를 행정 내부망에 도입"
+     },
+     {
+      "id": "9d115930495a1e65",
+      "title": "공무원용 로컬 AI 에이전트 워크플레이스 개발"
+     },
+     {
+      "id": "ec17e6cd86e7aaa1",
+      "title": "PDF 번역·검토 작업장 — 공공 AX 로컬 시리즈 6"
+     },
+     {
+      "id": "50ab356bb2ee3f4d",
+      "title": "범정부 내부망 AI 브라우저 사이드바 어시스턴트"
+     },
+     {
+      "id": "75b6a86d91aea955",
+      "title": "AI지원담당 — 공공 실무용 로컬 AI 메신저 MVP (공공 AX 로컬 시리즈 1)"
+     },
+     {
+      "id": "204ab9b684be3cca",
+      "title": "myAI — 로컬 모델로 도는 업무 비서 웹앱"
+     },
+     {
+      "id": "dee1a1ceb4432cd3",
+      "title": "DeskNote — 바탕화면 메모에 붙인 로컬 요약·유사 검색"
+     },
+     {
+      "id": "c110733ddf085d0d",
+      "title": "sAIde — 내 PC의 Ollama 모델로 웹페이지를 요약·번역하고 승인 후 조작하는 크롬 사이드패널 확장"
+     },
+     {
+      "id": "c161b0158876229b",
+      "title": "온나라 sAIde — 문서등록대장을 열어 보지 않고 목록에서 공문을 AI로 요약·분석하고 첨부를 일괄 내려받는 엣지 사이드패널"
      }
     ],
     "domestic": false
    },
    {
     "name": "Gemini",
-    "n": 9,
+    "n": 10,
     "variants": [
      "Claude Code/Codex/Gemini(스킬 팩)",
      "Claude/Codex/Gemini(어댑터)",
      "Gemini",
+     "Gemini 2.5 Flash-Lite",
      "Gemini 3.5 Flash",
      "Gemini GEM",
      "Gemini(옵션 전환)",
@@ -275,6 +343,10 @@
      {
       "id": "7df3c5d297166cb2",
       "title": "교육행정 질의응답 사례 검색 도구"
+     },
+     {
+      "id": "2349c4b45eb48e38",
+      "title": "지역사회보장계획 작성지원 플랫폼 — 제6기 시·군·구 계획을 절 단위로 써서 한글 문서로 내는 도구"
      }
     ],
     "domestic": false
@@ -335,49 +407,25 @@
     "domestic": false
    },
    {
-    "name": "Gemma",
-    "n": 8,
+    "name": "Qwen",
+    "n": 3,
     "variants": [
-     "Gemma 4",
-     "Gemma 4 E2B(Ollama 번들)",
-     "Gemma 4 E2B(Ollama, 선택형 요약)",
-     "Gemma 4 E4B(Ollama 권장)",
-     "Gemma 4 E4B(Ollama)",
-     "Gemma4 e2b",
-     "LLM42-Gemma4(멀티모달 전환)"
+     "Qwen(로컬 RAG 챗)",
+     "Qwen2.5-Coder-1.5B-Instruct(GGUF, llama.cpp)",
+     "Qwen3.5 2B(로컬 CPU)"
     ],
     "cases": [
      {
-      "id": "2c14f2adaa83a00e",
-      "title": "로컬 인수인계 도구 MVP 공개 — 공공 AX 로컬 시리즈 3"
+      "id": "ea2bce110972762e",
+      "title": "공공기관 규정 MCP 생성기"
      },
      {
-      "id": "58420e002644542c",
-      "title": "행안부, 엑사원·Gemma4를 행정 내부망에 도입"
+      "id": "3c5015d6c385a815",
+      "title": "KLEF 공람문서 요약 — K-에듀파인 공람 목록에 핵심·조치·기한을 붙이는 로컬 AI 도우미"
      },
      {
-      "id": "9d115930495a1e65",
-      "title": "공무원용 로컬 AI 에이전트 워크플레이스 개발"
-     },
-     {
-      "id": "ec17e6cd86e7aaa1",
-      "title": "PDF 번역·검토 작업장 — 공공 AX 로컬 시리즈 6"
-     },
-     {
-      "id": "50ab356bb2ee3f4d",
-      "title": "범정부 내부망 AI 브라우저 사이드바 어시스턴트"
-     },
-     {
-      "id": "75b6a86d91aea955",
-      "title": "AI지원담당 — 공공 실무용 로컬 AI 메신저 MVP (공공 AX 로컬 시리즈 1)"
-     },
-     {
-      "id": "204ab9b684be3cca",
-      "title": "myAI — 로컬 모델로 도는 업무 비서 웹앱"
-     },
-     {
-      "id": "dee1a1ceb4432cd3",
-      "title": "DeskNote — 바탕화면 메모에 붙인 로컬 요약·유사 검색"
+      "id": "9719b550772ed1b2",
+      "title": "CODERX — 폐쇄망 기관 PC 안에서 한국어 요구사항만으로 코드 생성·개선·보안점검을 하는 온프레미스 AI 코딩 도구"
      }
     ],
     "domestic": false
@@ -406,20 +454,20 @@
     "domestic": true
    },
    {
-    "name": "Qwen",
+    "name": "Whisper",
     "n": 2,
     "variants": [
-     "Qwen(로컬 RAG 챗)",
-     "Qwen3.5 2B(로컬 CPU)"
+     "Whisper(STT)",
+     "whisper.cpp 한국어 모델(번들)"
     ],
     "cases": [
      {
-      "id": "ea2bce110972762e",
-      "title": "공공기관 규정 MCP 생성기"
+      "id": "edf9a8632ff74a99",
+      "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연"
      },
      {
-      "id": "3c5015d6c385a815",
-      "title": "KLEF 공람문서 요약 — K-에듀파인 공람 목록에 핵심·조치·기한을 붙이는 로컬 AI 도우미"
+      "id": "d7422aa63cfaeb0e",
+      "title": "Stream-Record — 의회 중계 영상의 한국어 녹음·전사·회의록 작성을 윈도우 PC에서 끝내는 앱"
      }
     ],
     "domestic": false
@@ -470,20 +518,6 @@
      }
     ],
     "domestic": true
-   },
-   {
-    "name": "Whisper",
-    "n": 1,
-    "variants": [
-     "Whisper(STT)"
-    ],
-    "cases": [
-     {
-      "id": "edf9a8632ff74a99",
-      "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연"
-     }
-    ],
-    "domestic": false
    },
    {
     "name": "GLM",
@@ -678,6 +712,13 @@
     "id": "e57919fda43f59c0",
     "title": "모두의 AI — 전 국민 무료 범용 AI 챗봇·행정 지원 에이전트 사업, 3개 컨소시엄 선정",
     "models": []
+   },
+   {
+    "id": "b0808306ddb06317",
+    "title": "범정부 AI 준실시간 회의 자막 — 겹침 녹음과 CLOVA Studio GOV STT로 내부망 뷰어에 자막을 뿌리는 오프라인 실행형 시스템",
+    "models": [
+     "CLOVA Studio GOV STT(범정부 AI 공통기반)"
+    ]
    }
   ],
   "dist_detail": {
@@ -686,31 +727,31 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 188,
-    "specified": 0
+    "n": 215,
+    "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
-    "n": 24,
-    "specified": 13
+    "n": 27,
+    "specified": 16
    },
    "혼합": {
     "n": 9,
     "specified": 9
    },
    "해외 상용 API": {
-    "n": 56,
-    "specified": 41
+    "n": 58,
+    "specified": 43
    },
    "모델 중립(BYO)": {
-    "n": 65,
-    "specified": 1
+    "n": 71,
+    "specified": 3
    },
    "국산 독자모델": {
     "n": 5,
     "specified": 4
    },
    "미상": {
-    "n": 6,
+    "n": 7,
     "specified": 0
    },
    "국산 오픈웨이트": {
@@ -1031,7 +1072,7 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 56,
+    "n": 58,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
@@ -1137,7 +1178,7 @@
      },
      {
       "name": "GPT(OpenAI)",
-      "n": 11,
+      "n": 12,
       "cases": [
        {
         "id": "6a2d1fa6e385ef2b",
@@ -1182,6 +1223,10 @@
        {
         "id": "2085370092f99007",
         "title": "God's Eye View — 항공기·선박·위성·지진·공개 카메라를 한 3D 지구본에 띄우는 오픈소스 공간정보 관제 참고 도구"
+       },
+       {
+        "id": "0fbe6800c85c1ae4",
+        "title": "AI 공간개발·공간관리 앱 — 함양군 지적도로 구역선 필지 교차 분석과 산업단지 입주 검증을 하는 두 갈래 도구"
        }
       ],
       "domestic": false,
@@ -1197,12 +1242,13 @@
        "OpenAI Realtime API(음성 에이전트, 선택)",
        "OpenAI Vision",
        "OpenAI/Anthropic(사용자 키)",
-       "OpenAI/Claude(제공자 전환형)"
+       "OpenAI/Claude(제공자 전환형)",
+       "gpt-5.6-luna(기본 설정)"
       ]
      },
      {
       "name": "Gemini",
-      "n": 6,
+      "n": 7,
       "cases": [
        {
         "id": "48e33f2318bdffae",
@@ -1227,6 +1273,10 @@
        {
         "id": "7df3c5d297166cb2",
         "title": "교육행정 질의응답 사례 검색 도구"
+       },
+       {
+        "id": "2349c4b45eb48e38",
+        "title": "지역사회보장계획 작성지원 플랫폼 — 제6기 시·군·구 계획을 절 단위로 써서 한글 문서로 내는 도구"
        }
       ],
       "domestic": false,
@@ -1234,6 +1284,7 @@
        "Claude Code/Codex/Gemini(스킬 팩)",
        "Claude/Codex/Gemini(어댑터)",
        "Gemini",
+       "Gemini 2.5 Flash-Lite",
        "Gemini 3.5 Flash",
        "Gemini GEM",
        "OpenAI/Gemini/Claude(사용자 선택)"
@@ -1299,11 +1350,11 @@
    },
    {
     "dep": "해외 오픈웨이트(로컬)",
-    "n": 24,
+    "n": 27,
     "families": [
      {
       "name": "Gemma",
-      "n": 6,
+      "n": 8,
       "cases": [
        {
         "id": "2c14f2adaa83a00e",
@@ -1328,10 +1379,19 @@
        {
         "id": "dee1a1ceb4432cd3",
         "title": "DeskNote — 바탕화면 메모에 붙인 로컬 요약·유사 검색"
+       },
+       {
+        "id": "c110733ddf085d0d",
+        "title": "sAIde — 내 PC의 Ollama 모델로 웹페이지를 요약·번역하고 승인 후 조작하는 크롬 사이드패널 확장"
+       },
+       {
+        "id": "c161b0158876229b",
+        "title": "온나라 sAIde — 문서등록대장을 열어 보지 않고 목록에서 공문을 AI로 요약·분석하고 첨부를 일괄 내려받는 엣지 사이드패널"
        }
       ],
       "domestic": false,
       "variants": [
+       "Gemma 4 E2B(Ollama 기본 예시)",
        "Gemma 4 E2B(Ollama 번들)",
        "Gemma 4 E2B(Ollama, 선택형 요약)",
        "Gemma 4 E4B(Ollama 권장)",
@@ -1372,6 +1432,25 @@
        "Ollama 로컬 모델(멀티 호스트)",
        "Ollama(로컬)",
        "WebGPU 브라우저 모델"
+      ]
+     },
+     {
+      "name": "Qwen",
+      "n": 2,
+      "cases": [
+       {
+        "id": "3c5015d6c385a815",
+        "title": "KLEF 공람문서 요약 — K-에듀파인 공람 목록에 핵심·조치·기한을 붙이는 로컬 AI 도우미"
+       },
+       {
+        "id": "9719b550772ed1b2",
+        "title": "CODERX — 폐쇄망 기관 PC 안에서 한국어 요구사항만으로 코드 생성·개선·보안점검을 하는 온프레미스 AI 코딩 도구"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Qwen2.5-Coder-1.5B-Instruct(GGUF, llama.cpp)",
+       "Qwen3.5 2B(로컬 CPU)"
       ]
      },
      {
@@ -1417,20 +1496,6 @@
       ]
      },
      {
-      "name": "Qwen",
-      "n": 1,
-      "cases": [
-       {
-        "id": "3c5015d6c385a815",
-        "title": "KLEF 공람문서 요약 — K-에듀파인 공람 목록에 핵심·조치·기한을 붙이는 로컬 AI 도우미"
-       }
-      ],
-      "domestic": false,
-      "variants": [
-       "Qwen3.5 2B(로컬 CPU)"
-      ]
-     },
-     {
       "name": "LFM2.5 230M/1.2B(로컬)",
       "n": 1,
       "cases": [
@@ -1448,18 +1513,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.063,
- "local_model_rate": 0.253,
- "model_known": 95,
- "license_tagged": 313,
- "license_stated_rate": 0.505,
- "gitlab_cases": 205,
- "gitlab_mirror_pairs": 30,
- "gitlab_open_rate": 0.146,
- "mcp_cases": 80,
+ "domestic_model_rate": 0.06,
+ "local_model_rate": 0.27,
+ "model_known": 100,
+ "license_tagged": 355,
+ "license_stated_rate": 0.499,
+ "gitlab_cases": 249,
+ "gitlab_mirror_pairs": 36,
+ "gitlab_open_rate": 0.145,
+ "mcp_cases": 82,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 337,
+  "미확인": 376,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1467,7 +1532,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.706
+  "feedback": 0.731
  },
  "maintenance_distribution": {
   "활발": 198,
@@ -1477,11 +1542,11 @@
  "stars_collected": 229,
  "repo_stats": {
   "gitlab": {
-   "count": 205,
+   "count": 249,
    "starred": 138,
    "stars_sum": 330,
    "maintenance": {
-    "활발": 136,
+    "활발": 138,
     "정체": 6
    },
    "top": [
@@ -1568,11 +1633,11 @@
    ]
   },
   "github": {
-   "count": 128,
+   "count": 132,
    "starred": 112,
    "stars_sum": 176133,
    "maintenance": {
-    "활발": 85,
+    "활발": 86,
     "정체": 15,
     "방치": 13
    },
@@ -1661,13 +1726,14 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 155,
-  "MIT": 110,
-  "Apache-2.0": 17,
+  "명시 없음": 178,
+  "MIT": 115,
+  "Apache-2.0": 28,
   "Other": 16,
+  "GNU AGPLv3": 5,
   "AGPL-3.0": 4,
   "기타(비표준)": 4,
-  "GNU AGPLv3": 3,
+  "BUSL-1.1": 1,
   "ISC": 1,
   "POLYFORM-NONCOMMERCIAL-1.0.0": 1,
   "GPL-3.0+": 1,
@@ -1676,19 +1742,23 @@
  "license_matrix": {
   "명시 없음": {
    "github": 44,
-   "gitlab": 111
+   "gitlab": 134
   },
   "MIT": {
    "github": 64,
-   "gitlab": 45
+   "gitlab": 50
   },
   "Apache-2.0": {
    "github": 9,
-   "gitlab": 8
+   "gitlab": 19
   },
   "Other": {
    "github": 16,
    "gitlab": 0
+  },
+  "GNU AGPLv3": {
+   "github": 0,
+   "gitlab": 5
   },
   "AGPL-3.0": {
    "github": 3,
@@ -1698,9 +1768,9 @@
    "github": 0,
    "gitlab": 4
   },
-  "GNU AGPLv3": {
+  "BUSL-1.1": {
    "github": 0,
-   "gitlab": 3
+   "gitlab": 1
   },
   "ISC": {
    "github": 1,
@@ -1729,25 +1799,25 @@
    "stated": 4
   },
   "gitlab": {
-   "total": 175,
-   "stated": 64
+   "total": 217,
+   "stated": 83
   }
  },
  "mcp_stats": {
-  "total": 80,
+  "total": 82,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
-   "Server": 70,
-   "Client/Host": 6,
+   "Server": 71,
+   "Client/Host": 7,
    "Unknown/None": 3
   },
   "c_grades": {
-   "C0": 66,
+   "C0": 67,
    "C2": 6,
    "C3": 1,
-   "C1": 7
+   "C1": 8
   },
   "maintenance": {
    "활발": 41,
@@ -1761,6 +1831,12 @@
    "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
    "github": "https://github.com/chrisryugj/Docufinder",
    "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/Docufinder"
+  },
+  {
+   "id": "7acf5f25369c1401",
+   "title": "시연 영상 제작 자동화 스킬 공유",
+   "github": "https://github.com/Kminer2053/demo-video-skill",
+   "gitlab": "https://gitlab.aigov.go.kr/Kminer2053/demo-video-skill"
   },
   {
    "id": "d08bc7e9a69190af",
@@ -1859,6 +1935,12 @@
    "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/korean-law-mcp"
   },
   {
+   "id": "83bb0ac0ed9f576d",
+   "title": "OpenDART 전자공시 MCP — 83개 API를 15개 도구로",
+   "github": "https://github.com/chrisryugj/korean-dart-mcp",
+   "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/korean-dart-mcp"
+  },
+  {
    "id": "76f07692203606ad",
    "title": "건축HUB MCP — 건축물대장·인허가·필지 종합카드",
    "github": "https://github.com/chrisryugj/archhub-mcp",
@@ -1907,6 +1989,12 @@
    "gitlab": "https://gitlab.aigov.go.kr/odw0902/reportai"
   },
   {
+   "id": "30c55330885db6d6",
+   "title": "지역사회보장정책 데이터 분석 대시보드 — 정책 수립 지원 지표 시각화",
+   "github": "https://github.com/beaver21c/kihasa-indicator-new",
+   "gitlab": "https://gitlab.aigov.go.kr/beaver21c/kihasa-indicator-new"
+  },
+  {
    "id": "2dabf0fbae5c557b",
    "title": "헬로라이트하우스 — 등대 1,480개를 잇는 원스톱 해양관광 서비스",
    "github": "https://github.com/emdeo/hellolighthouse",
@@ -1935,6 +2023,24 @@
    "title": "광주지명필터 — 통합 특별시 지명을 옛 권역으로 나눠 보기",
    "github": "https://github.com/obundh/Hassle-Reduction-series-2-Gwangju-Place-Name-Filter",
    "gitlab": "https://gitlab.aigov.go.kr/tyui22/Hassle-Reduction-series-2-Gwangju-Place-Name-Filter"
+  },
+  {
+   "id": "5af7491b4ca15345",
+   "title": "MOPAN(모판) — RAG·MCP·모델·워크플로우를 직접 등록해 조합하는 에이전트 바탕 시스템",
+   "github": "https://github.com/soonkun/MOPAN",
+   "gitlab": "https://gitlab.aigov.go.kr/soonkun/MOPAN"
+  },
+  {
+   "id": "2a1ab7f937e160a1",
+   "title": "webcheck MCP — 홈페이지 점검처럼 결정적 계산으로 끝나는 URL 확인을 코드에 맡겨 토큰을 아끼는 범용 MCP 서버",
+   "github": "https://github.com/deinteger/webcheck-mcp",
+   "gitlab": "https://gitlab.aigov.go.kr/kwakkh22/webcheck_mcp"
+  },
+  {
+   "id": "25f9560f0a6fa203",
+   "title": "Path Finder — 나이스 학교 목록에서 방문지를 고르고 기간을 정하면 일자별 출장·배달 동선을 짜 주는 웹앱",
+   "github": "https://github.com/soonpyopark/Path-Finder",
+   "gitlab": "https://gitlab.aigov.go.kr/soonpyo/pathfinder"
   }
  ]
 }
