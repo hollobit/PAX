@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-09-18T14:34:16Z",
- "count": 491,
+ "updated_at": "2026-09-18T22:34:16Z",
+ "count": 492,
  "articles": [
   {
    "url": "https://v.daum.net/v/20260918150502592?botref=KN&botevent=e",
@@ -2515,6 +2515,19 @@
    "url": "https://www.kcloudnews.co.kr/news/articleView.html?idxno=16528",
    "title": "정부·공공기관, '생성형 AI' 허용한다… 정보 등급별로 접속 통제",
    "outlet": "한국클라우드신문",
+   "published": "2026-08-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-08-30",
+   "last_shared": "2026-08-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.i-boss.co.kr/ab-6141-71861",
+   "title": "ChatGPT 광고가 열려도, 답변 속 신뢰는 돈으로 살 수 없습니다",
+   "outlet": "아이보스",
    "published": "2026-08-30",
    "kind": "기사",
    "shares": 1,
