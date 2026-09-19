@@ -1,5 +1,5 @@
 {
- "total": 206,
+ "total": 207,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -972,6 +972,26 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:gyeonggi-council",
+   "name": "gyeonggi-council",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "gyeonggi-council",
+     "url": "https://github.com/gyeonggi-council"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "c38b78c5d8370920"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },
@@ -5407,6 +5427,12 @@
    "title": "점심 딸깍 — 업무추진비 공개자료로 공무원 단골집을 짚어 주는 근처 밥집 뽑기",
    "org": "공직 현장(개인 개발)",
    "url": "https://chris.gomdori.app/lunch"
+  },
+  {
+   "id": "a64a56c7a88a4da0",
+   "title": "소원이 갤러리 — 기관 캐릭터 이미지를 감정·행동별로 찾고 공식 CI까지 내려받는 브랜드 자산 창구",
+   "org": "경기도의회(공직 개인 개발)",
+   "url": "https://sowon-gallery-three.vercel.app/"
   }
  ]
 }
