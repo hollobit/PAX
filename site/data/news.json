@@ -1,7 +1,241 @@
 {
- "updated_at": "2026-09-18T22:34:16Z",
- "count": 492,
+ "updated_at": "2026-09-19T08:03:46Z",
+ "count": 509,
  "articles": [
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215455",
+   "title": "화웨이, 차세대 AI 칩 출시 앞당긴다...\"대규모 연결로 엔비디아 추격\"",
+   "outlet": "AI타임스",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-18",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215469",
+   "title": "저커버그·젠슨 황·머스크, 트럼프 직접 설득…백악관 'AI 규제안' 무산",
+   "outlet": "AI타임스",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-19",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215457",
+   "title": "'작지만 강한' 업스테이지 솔라 미니 4, 수능 수학 정답·속도 다 잡아",
+   "outlet": "AI타임스",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-19",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215450",
+   "title": "오픈AI, ‘법률용 아스트라’ 발표...빅 로펌·기술 기업 맞춤 AI 지원",
+   "outlet": "AI타임스",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-19",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai",
+   "title": "Researchers used Anthropic's Claude to hack into OpenAI",
+   "outlet": "TechCrunch",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-19",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://techcrunch.com/2026/09/18/metas-muse-hits-mac-letting-the-ai-take-actions-on-your-computer",
+   "title": "Meta's Muse hits Mac, letting the AI take actions on your computer",
+   "outlet": "TechCrunch",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-19",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://techcrunch.com/2026/09/18/googles-new-cc-is-an-ai-agent-that-helps-families-run-their-households",
+   "title": "Google's new 'CC' is an AI agent that helps families run their households",
+   "outlet": "TechCrunch",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-19",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://techcrunch.com/2026/09/18/anthropics-first-embedded-evaluator-is-accenture",
+   "title": "Anthropic's first embedded evaluator is … Accenture?",
+   "outlet": "TechCrunch",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-19",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://cdsa.kr/blog/system-one-jev.html",
+   "title": "AI에게 말을 시키지 말고, 판단만 시켜라 — System One과 Jev",
+   "outlet": "한국데이터사이언티스트협회",
+   "published": "2026-09-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-19",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://brunch.co.kr/@publichr/12",
+   "title": "03화 역량 기반 인사관리(CBHRM)",
+   "outlet": "브런치",
+   "published": "2023-03-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-19",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kyeongin.com/article/1771014",
+   "title": "인천시정 행정업무 ‘AI 활용 윤리 지침’ 만든다",
+   "outlet": "경인일보",
+   "published": "2026-09-16",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-16",
+   "last_shared": "2026-09-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://yozm.wishket.com/magazine/detail/3951",
+   "title": "10분 만에 온톨로지(Ontology) 이해하기",
+   "outlet": "요즘IT",
+   "published": "2026-09-17",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-18",
+   "last_shared": "2026-09-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.straightnews.co.kr/news/articleView.html?idxno=311563",
+   "title": "직장인 76% 생성형 AI 쓴다…청년 고용 감소 인과관계는 '불분명'",
+   "outlet": "스트레이트뉴스",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-18",
+   "last_shared": "2026-09-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.koreadaily.com/article/20260918010052449",
+   "title": "NIA·행안부, ‘AI 민주정부’ 30대 과제 3분기 성과 점검",
+   "outlet": "미주중앙일보",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-18",
+   "last_shared": "2026-09-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.jejusori.net/news/articleView.html?idxno=506674",
+   "title": "제주도 문승환, ‘AI 행정 자동화’로 행안부 수상",
+   "outlet": "제주의소리",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-18",
+   "last_shared": "2026-09-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.issueon.co.kr/news/articleView.html?idxno=13906",
+   "title": "구글 Gemini 3.8 Live 공개…목소리로 일하고 보는 AI",
+   "outlet": "ISSUE ON (이슈온)",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-18",
+   "last_shared": "2026-09-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.bloter.net/news/articleView.html?idxno=673988",
+   "title": "[SK 인사 시그널]④최태원 'AI·반도체' 올인, 수펙스 C레벨 쇄신",
+   "outlet": "블로터",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-18",
+   "last_shared": "2026-09-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215448",
+   "title": "\"워드 안에서 챗GPT 쓴다\"...오픈AI, MS 워드 통합 기능 확대",
+   "outlet": "AI타임스",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-18",
+   "last_shared": "2026-09-18",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://v.daum.net/v/20260918150502592?botref=KN&botevent=e",
    "title": "경기도교육청 교권보호전담관 운영 조례’본회의 통과",
@@ -214,19 +448,6 @@
    "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4084536",
    "title": "NIA 국민행복 IT 경진대회, 생성형 AI로 생활문제 해결 겨뤄",
    "outlet": "경북일보",
-   "published": "2026-09-16",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-16",
-   "last_shared": "2026-09-16",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.kyeongin.com/article/1771014",
-   "title": "인천시정 행정업무 ‘AI 활용 윤리 지침’ 만든다",
-   "outlet": "경인일보",
    "published": "2026-09-16",
    "kind": "기사",
    "shares": 1,
