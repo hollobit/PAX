@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-19T23:35:26+09:00",
+ "updated_at": "2026-09-20T07:34:46+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -12745,6 +12745,33 @@
    ],
    "date": "2026-09-19",
    "id": "a64a56c7a88a4da0"
+  },
+  {
+   "collected_at": "2026-09-20",
+   "source": "kakao",
+   "summary": "AI 에이전트가 맥의 일정·미리 알림·메모·연락처·클립보드·위치·날씨를 애플 단축어를 거쳐 읽게 하는 MCP 서버다. 권한이 있는 단축어 앱에 일을 넘기고 결과 텍스트만 받아 오며, 쓰기 도구를 아예 두지 않고 읽어 온 내용에는 지시가 아니라 자료라는 표를 붙인다. 애플이 문서로 내지 않는 단축어 동작 539종의 매개변수 키를 함께 공개해 직접 레시피를 만들 수 있게 했다. 화면 잠금 상태 동작은 실측했고 절전에서는 쓸 수 없다고 한계를 적었다.",
+   "deployment_env": "로컬 PC",
+   "network_req": "로컬 완결",
+   "runtime_env": "MCP·CLI 설정",
+   "date": "2026-09-19",
+   "title": "맥 단축어 MCP — 에이전트가 일정·메모·연락처를 화면 조작 없이 읽게 하는 읽기 전용 서버",
+   "task_category": "공통·범용",
+   "case_class": "커뮤니티",
+   "link": "https://github.com/Dominic-DK/mac-shortcuts-mcp",
+   "model_dependency": "모델 중립(BYO)",
+   "org_type": "커뮤니티",
+   "org": "공직 커뮤니티",
+   "tags": [
+    "MCP",
+    "맥",
+    "단축어",
+    "개인생산성",
+    "읽기전용"
+   ],
+   "id": "c6317f20659e8ad1",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-09-20"
   }
  ]
 }

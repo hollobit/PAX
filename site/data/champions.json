@@ -169,10 +169,11 @@
    ],
    "affiliation": null,
    "cases": [
+    "c6317f20659e8ad1",
     "9d19e64aa30f5332"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 3,
     "stars": 0
    }
@@ -991,7 +992,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
