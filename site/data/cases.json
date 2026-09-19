@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-18T20:07:40+09:00",
+ "updated_at": "2026-09-19T23:35:26+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -13139,6 +13139,61 @@
    "license_source": "github-pages",
    "license_checked": "2026-09-18",
    "thumb_v": 1789729666
+  },
+  {
+   "org": "경기도의회",
+   "region": "경기",
+   "title": "경기도의회 공통 디자인 시스템 — 11개 프런트엔드가 한 벌의 토큰·컴포넌트를 나눠 쓰게 만든 기반",
+   "case_class": "기관 공식",
+   "task_category": "공통·범용",
+   "link": "https://github.com/gyeonggi-council/ggc-design-system",
+   "summary": "의정정보시스템의 모든 서비스가 같은 화면 규칙을 쓰도록 디자인 토큰과 컴포넌트, 브랜드 자산, 어긋남 검사기를 한 저장소에 모은 기반이다. 프레임워크가 제각각인 열한 개 프런트엔드가 이 한 벌을 함께 소비하고, 토큰이 바뀌면 미리보기를 다시 생성하며 낡은 값은 검사기가 잡는다. 의안 목록·초안 작성·대시보드 예제와 이관 문서, 발표용 템플릿까지 함께 공개했다.",
+   "org_type": "지방의회",
+   "model_dependency": "없음(비LLM)",
+   "deployment_env": "인터넷망",
+   "runtime_env": "설치 필요",
+   "source": "kakao",
+   "collected_at": "2026-09-19",
+   "network_req": "로컬 완결",
+   "tags": [
+    "디자인시스템",
+    "디자인토큰",
+    "접근성",
+    "지방의회",
+    "공통기반"
+   ],
+   "date": "2026-08-26",
+   "id": "c38b78c5d8370920",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-09-19",
+   "thumb_v": 1789828560
+  },
+  {
+   "org": "경기도의회(공직 개인 개발)",
+   "region": "경기",
+   "title": "소원이 갤러리 — 기관 캐릭터 이미지를 감정·행동별로 찾고 공식 CI까지 내려받는 브랜드 자산 창구",
+   "case_class": "개인 개발",
+   "task_category": "공통·범용",
+   "link": "https://sowon-gallery-three.vercel.app/",
+   "summary": "기관 캐릭터 이미지 102장을 인물과 감정, 행동으로 걸러 찾고 즐겨찾기와 정렬로 관리하는 갤러리다. 홍보물이나 안내문을 만들 때마다 흩어진 파일을 뒤지던 일을 한 화면으로 모았고, 의회 마크와 로고, 슬로건, 브랜드 컬러를 규정 안내와 함께 내려받는 창구를 붙였다. 디자인 시스템 저장소와 짝을 이루는 실무자 산출물이다.",
+   "org_type": "지방의회",
+   "model_dependency": "없음(비LLM)",
+   "deployment_env": "인터넷망",
+   "runtime_env": "브라우저만",
+   "source": "kakao",
+   "collected_at": "2026-09-19",
+   "network_req": "인터넷 필수",
+   "tags": [
+    "브랜드자산",
+    "캐릭터",
+    "CI",
+    "홍보",
+    "지방의회"
+   ],
+   "date": "2026-09-19",
+   "id": "a64a56c7a88a4da0",
+   "thumb_v": 1789828562
   }
  ]
 }

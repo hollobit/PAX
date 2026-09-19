@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-09-19T08:03:46Z",
- "count": 509,
+ "updated_at": "2026-09-19T14:36:08Z",
+ "count": 510,
  "articles": [
   {
    "url": "https://www.aitimes.com/news/articleView.html?idxno=215455",
@@ -98,6 +98,19 @@
    "title": "Anthropic's first embedded evaluator is … Accenture?",
    "outlet": "TechCrunch",
    "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-19",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://naver.me/xuFtD9C3",
+   "title": "모친상인데 \"잠깐 출근해야\" 글 쓴 공무원…항의 댓글에 \"신고\"",
+   "outlet": "네이버 블로그 | 수생투 님의 블로그",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-19",
