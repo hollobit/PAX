@@ -10946,5 +10946,33 @@
     "resilience": "미확인(이미지 갱신·권한 관리 방식)",
     "post_url": "",
     "service_url": "https://sowon-gallery-three.vercel.app/"
+  },
+  {
+    "no": 464,
+    "id": "c6317f20659e8ad1",
+    "org": "공직 커뮤니티",
+    "title": "맥 단축어 MCP — 에이전트가 일정·메모·연락처를 화면 조작 없이 읽게 하는 읽기 전용 서버",
+    "ax_prev": "AI-Ready",
+    "ax": "AI-Ready",
+    "s": "S2",
+    "s_name": "Tool bundle",
+    "c": "C1",
+    "c_name": "결과 제공",
+    "m": "M2",
+    "m_name": "재사용형",
+    "native_scope": "맥 로컬 앱 자료(일정·미리 알림·메모·연락처·클립보드·위치·날씨) — 공공 데이터 아님",
+    "status": "Published tool",
+    "scope": "Internal",
+    "mcp_role": "Server",
+    "risk": "R1 낮음",
+    "human": "검토 후 사용(사용자가 만든 단축어에만 실행 도구 사용하라고 명시)",
+    "evidence": "E1 코드·도구 확인",
+    "confidence": "중간",
+    "gate": "상위 관문 미충족/해당 없음",
+    "rationale": "읽기 도구 여러 벌을 한 서버에 묶었고 결과는 자료 텍스트라 S2·C1이며, 특정 업무에 매이지 않아 M2 재사용형이다. 쓰기 도구를 아예 두지 않고 읽어 온 내용에 지시가 아니라 자료라는 꼬리표를 붙이는 설계가 프롬프트 인젝션을 정면으로 다룬 드문 사례다. 실행은 하지 않고 소스를 읽어 판정했다.",
+    "feedback": "미확인",
+    "resilience": "미확인(공개 직후, macOS 27 이상 전용·절전 시 동작 불가)",
+    "post_url": "",
+    "service_url": ""
   }
 ]

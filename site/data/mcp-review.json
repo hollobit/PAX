@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-09-18",
+ "generated_at": "2026-09-20",
  "summary": {
-  "total": 82,
+  "total": 83,
   "counts": {
    "주의": 70,
-   "양호": 12
+   "양호": 13
   },
   "top_warn_axis": "hygiene"
  },
@@ -2736,6 +2736,40 @@
     "data_flow": {
      "verdict": "통과",
      "note": "외부 네트워크 호출은 최초 1회 임베딩 모델(Xenova/all-MiniLM-L6-v2) 다운로드뿐이며 README에 명시(app/src/embed.mjs:10-12). 대시보드 서버는 127.0.0.1 바인딩·실행마다 새 토큰·localhost CORS 제한(app/src/server.mjs:18-52). 훅·MCP 서버에 원격 전송·텔레메트리 없음"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
+   "case_id": "c6317f20659e8ad1",
+   "title": "맥 단축어 MCP — 에이전트가 일정·메모·연락처를 화면 조작 없이 읽게 하는 읽기 전용 서버",
+   "stars": null,
+   "checked_at": "2026-09-20",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸 호출 3곳 모두 execFile 리스트 인자(셸 미경유) — /usr/bin/shortcuts, 설치 시 /usr/bin/open, --auto일 때만 osascript 고정 문자열 (근거: src/shortcuts.ts:26-28, src/install.ts:57,62)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "pnpm-lock.yaml로 버전 고정(검사기는 package-lock.json만 봄). 런타임 의존성은 @modelcontextprotocol/sdk·zod 둘뿐 (근거: package.json)"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT(LICENSE 파일·package.json license) · 공개 직후라 유지보수 이력 짧음"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "사용자 입력은 zod 스키마로 형·범위 검증 후 execFile 인자로만 전달, 문자열 조합 없음. 읽어 온 내용에는 지시가 아니라 자료라는 꼬리표를 붙여 돌려주고(src/index.ts:28-30), mac_run_shortcut은 사용자가 만든 단축어에만 쓰라고 도구 설명에 못박음 (근거: src/index.ts:91-95)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "소스에 외부 호출 대상이 없다 — 단축어 CLI로 로컬에서만 읽고 결과 텍스트를 MCP 클라이언트에 돌려준다. askew.my는 README의 다른 제품 안내 링크이며 코드에서 호출하지 않는다 (근거: src/*.ts URL 전수 스캔)"
     }
    },
    "dynamic": null,
