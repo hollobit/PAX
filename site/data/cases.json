@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-20T07:34:46+09:00",
+ "updated_at": "2026-09-20T15:47:07+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -13222,6 +13222,37 @@
    "license_source": "github",
    "license_checked": "2026-09-20",
    "thumb_v": 1789857365
+  },
+  {
+   "link": "https://github.com/simonsez9510/jev-cite-check",
+   "network_req": "인터넷 필수",
+   "deployment_env": "인터넷망",
+   "title": "조례 인용 검증 게이트 실험 — AI 답변이 인용한 조문에 실제로 근거하는지 다른 모델로 채점한 재현 패키지",
+   "summary": "조례를 두고 AI가 낸 답변 문장이 인용한 조문에 정말 근거하는지를 판단 전용 모델에게 채점시키는 게이트 한 칸을 시험하고, 데이터셋과 생성 스크립트, 실행기, 원자료, 판정표를 모두 열어 둔 재현 패키지다. 조례 다섯 건의 조문 열일곱 개에 직역·의역·부정문·두 조문 결합·단서 생략·타법 혼입 여섯 유형으로 만든 백 쌍을 돌려 아흔일곱을 맞혔고, 틀린 셋도 통과시키면 안 될 것을 통과시킨 쪽은 없었다고 유형별로 갈라 적었다. 한 번의 관찰이며 성능 주장이 아니라고 스스로 못 박았다.",
+   "collected_at": "2026-09-20",
+   "case_class": "참고",
+   "task_category": "감사·법무",
+   "source": "kakao",
+   "org": "지방자치혁신연구원",
+   "date": "2026-09-20",
+   "org_type": "민간(참고)",
+   "model_dependency": "해외 상용 API",
+   "tags": [
+    "조례",
+    "근거검증",
+    "평가데이터셋",
+    "재현성",
+    "판단모델"
+   ],
+   "models_used": [
+    "Jev(TypeSafe AI System One, Vercel AI Gateway 경유)"
+   ],
+   "runtime_env": "설치 필요",
+   "id": "fdee8ff722146b48",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-09-20",
+   "thumb_v": 1789886857
   }
  ]
 }

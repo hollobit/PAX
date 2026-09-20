@@ -10974,5 +10974,33 @@
     "resilience": "미확인(공개 직후, macOS 27 이상 전용·절전 시 동작 불가)",
     "post_url": "",
     "service_url": ""
+  },
+  {
+    "no": 465,
+    "id": "fdee8ff722146b48",
+    "org": "지방자치혁신연구원",
+    "title": "조례 인용 검증 게이트 실험 — AI 답변이 인용한 조문에 실제로 근거하는지 다른 모델로 채점한 재현 패키지",
+    "ax_prev": "AI-Enabled",
+    "ax": "AI-Enabled",
+    "s": "S1",
+    "s_name": "Script/보조",
+    "c": "C1",
+    "c_name": "결과 제공",
+    "m": "해당 없음",
+    "m_name": "비-MCP 사례",
+    "native_scope": "해당 없음",
+    "status": "PoC",
+    "scope": "External",
+    "mcp_role": "Unknown/None",
+    "risk": "R0 최소",
+    "human": "해당 없음",
+    "evidence": "E1 코드·도구 확인",
+    "confidence": "중간",
+    "gate": "상위 관문 미충족/해당 없음",
+    "rationale": "데이터셋과 실행기로 판정을 재 보는 실험 스크립트라 Script/보조·C1이며 스스로 1회 관찰이라 밝혀 PoC로 둔다. 생성 모델을 대체하는 대신 답의 근거를 다른 모델이 채점하는 게이트를 세우고, 오답 세 건을 유형별로 갈라 정답 라벨 쪽 문제까지 적은 자기비판이 아카이브에서 드물다. 저장소 문서·데이터로 확인했고 직접 돌려 보지는 않았다.",
+    "feedback": "미확인",
+    "resilience": "미확인(Jev 무료 프로모션 종료 후 비용·직접 키 미지원)",
+    "post_url": "",
+    "service_url": ""
   }
 ]

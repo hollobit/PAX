@@ -5434,6 +5434,12 @@
    "title": "소원이 갤러리 — 기관 캐릭터 이미지를 감정·행동별로 찾고 공식 CI까지 내려받는 브랜드 자산 창구",
    "org": "경기도의회(공직 개인 개발)",
    "url": "https://sowon-gallery-three.vercel.app/"
+  },
+  {
+   "id": "fdee8ff722146b48",
+   "title": "조례 인용 검증 게이트 실험 — AI 답변이 인용한 조문에 실제로 근거하는지 다른 모델로 채점한 재현 패키지",
+   "org": "지방자치혁신연구원",
+   "url": "https://github.com/simonsez9510/jev-cite-check"
   }
  ]
 }
