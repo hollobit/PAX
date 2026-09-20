@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-20T15:47:07+09:00",
+ "updated_at": "2026-09-20T23:34:37+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -12800,6 +12800,34 @@
    "runtime_env": "설치 필요",
    "id": "fdee8ff722146b48",
    "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-09-20"
+  },
+  {
+   "title": "공사기간 산정 검토 대시보드 — 고시 기준과 기상청 10년 실측으로 적정 공사기간을 두 갈래로 검토",
+   "runtime_env": "브라우저만",
+   "org": "공직 현장(개인 개발)",
+   "task_category": "계약·조달",
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-09-20",
+   "network_req": "인터넷 필수",
+   "link": "https://seum8660.github.io/gongsagigan/",
+   "date": "2026-09-20",
+   "summary": "공공 건설공사의 적정 공사기간을 국토교통부 고시와 가이드라인에 따라 산정해 표준품셈안과 산정공식안 두 갈래로 견주어 보여 주는 웹 대시보드다. 공사비와 시설물 유형, 연면적, 착수일, 지역을 넣으면 준비·작업·비작업·정리기간 구성이 갈라지고, 비작업일수는 전국 관측지점의 기상청 10년 실측 일자료와 법정공휴일로 계산한다. 강우·강풍·폭염·동절기·강설 기준값을 바꾸면 곧바로 다시 집계되고 검토 결과를 PDF로 낸다. 표준품셈 MCP를 만든 기술직 실무자의 후속 도구다.",
+   "deployment_env": "인터넷망",
+   "source": "kakao",
+   "case_class": "개인 개발",
+   "org_type": "공직 개인",
+   "case_url": "https://github.com/seum8660/gongsagigan",
+   "tags": [
+    "공사기간",
+    "건설",
+    "기상데이터",
+    "적산",
+    "대시보드"
+   ],
+   "id": "136eb067c259c113",
+   "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-09-20"
   }

@@ -2,18 +2,18 @@
  "generated_at": "2026-09-20",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 463,
+ "total_cases": 464,
  "total_champions": 207,
  "community": {
-  "members": 2028,
-  "kakao_week": 3513,
-  "kakao_total_observed": 34821,
+  "members": 2086,
+  "kakao_week": 3952,
+  "kakao_total_observed": 35260,
   "threads_observed": 286
  },
  "certified_champions": 5,
  "unattributed_cases": 86,
  "ax_distribution": {
-  "AI-Ready": 315,
+  "AI-Ready": 316,
   "AI-Enabled": 130,
   "AX 단계 외": 12,
   "AI-First": 5,
@@ -21,13 +21,13 @@
  },
  "c_axis_mean": 0.91,
  "p_distribution": {
-  "P0": 146,
+  "P0": 147,
   "P1": 302,
   "P2": 15
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 218,
+  "없음(비LLM)": 219,
   "해외 오픈웨이트(로컬)": 27,
   "혼합": 9,
   "해외 상용 API": 59,
@@ -727,7 +727,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 218,
+    "n": 219,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -1530,15 +1530,15 @@
  "domestic_model_rate": 0.059,
  "local_model_rate": 0.267,
  "model_known": 101,
- "license_tagged": 359,
- "license_stated_rate": 0.499,
+ "license_tagged": 360,
+ "license_stated_rate": 0.497,
  "gitlab_cases": 249,
  "gitlab_mirror_pairs": 36,
  "gitlab_open_rate": 0.145,
  "mcp_cases": 83,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 381,
+  "미확인": 382,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1546,7 +1546,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.734
+  "feedback": 0.735
  },
  "maintenance_distribution": {
   "활발": 198,
@@ -1647,7 +1647,7 @@
    ]
   },
   "github": {
-   "count": 136,
+   "count": 137,
    "starred": 112,
    "stars_sum": 176133,
    "maintenance": {
@@ -1740,7 +1740,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 180,
+  "명시 없음": 181,
   "MIT": 117,
   "Apache-2.0": 28,
   "Other": 16,
@@ -1755,7 +1755,7 @@
  },
  "license_matrix": {
   "명시 없음": {
-   "github": 46,
+   "github": 47,
    "gitlab": 134
   },
   "MIT": {
@@ -1805,7 +1805,7 @@
  },
  "license_by_source": {
   "github": {
-   "total": 125,
+   "total": 126,
    "stated": 91
   },
   "github-pages": {

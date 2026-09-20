@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-09-20",
- "total": 463,
+ "total": 464,
  "cases": [
   {
    "no": 1,
@@ -15278,6 +15278,39 @@
    "tool_type": "도구·기타",
    "audience": "G2C 공개",
    "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 466,
+   "id": "136eb067c259c113",
+   "org": "공직 현장(개인 개발)",
+   "title": "공사기간 산정 검토 대시보드 — 고시 기준과 기상청 10년 실측으로 적정 공사기간을 두 갈래로 검토",
+   "ax_prev": "AI-Ready",
+   "ax": "AI-Ready",
+   "s": "S2",
+   "s_name": "Workflow",
+   "c": "C2",
+   "c_name": "부분 완결",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Live service",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R1 낮음",
+   "human": "검토 후 사용(검토안 비교 자료이며 발주 판단은 담당자 몫)",
+   "evidence": "E2 화면·서비스 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "입력 → 기상 실측 기반 비작업일 집계 → 두 검토안 비교 → PDF 산출까지 한 흐름으로 끝나 S2 Workflow·C2이며 운영 화면을 직접 열어 입력 항목과 집계 옵션을 확인해 E2다. 고시와 가이드라인 조문을 화면에 근거로 달고 기상청 ASOS 10년 일자료를 기준값 조정과 함께 재집계하게 한 점이, 관례로 정하던 공사기간 산정에 계산 근거를 세운 자리다. 같은 실무자가 낸 표준품셈 MCP의 후속이다.",
+   "feedback": "미확인",
+   "resilience": "미확인(고시·가이드라인 개정과 기상 자료 현행화 방식)",
+   "post_url": "",
+   "service_url": "https://seum8660.github.io/gongsagigan/",
+   "tool_type": "대시보드·분석",
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }

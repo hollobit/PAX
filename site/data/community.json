@@ -2,10 +2,10 @@
  "generated_at": "2026-09-20",
  "note": "카카오 수치는 수집 아카이브 기반 관측치(공백 구간 과소 집계), Threads는 태그 검색 관측 누적",
  "kakao": {
-  "today": 443,
-  "week": 3513,
-  "month": 21456,
-  "total": 34821,
+  "today": 882,
+  "week": 3952,
+  "month": 21895,
+  "total": 35260,
   "observed_days": 49
  },
  "kakao_recent": [
@@ -91,11 +91,11 @@
   ],
   [
    "2026-09-20",
-   443
+   882
   ]
  ],
  "members": {
-  "latest": 2028,
+  "latest": 2086,
   "latest_date": "2026-09-20",
   "first": 1205,
   "first_date": "2026-08-22",
@@ -214,7 +214,7 @@
    ],
    [
     "2026-09-20",
-    2028
+    2086
    ]
   ]
  },
@@ -509,9 +509,9 @@
   },
   {
    "date": "2026-09-20",
-   "joins": 38,
-   "leaves": 3,
-   "cumulative": 2028
+   "joins": 110,
+   "leaves": 17,
+   "cumulative": 2086
   }
  ],
  "threads": {
