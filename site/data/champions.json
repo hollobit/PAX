@@ -5441,6 +5441,18 @@
    "title": "조례 인용 검증 게이트 실험 — AI 답변이 인용한 조문에 실제로 근거하는지 다른 모델로 채점한 재현 패키지",
    "org": "지방자치혁신연구원",
    "url": "https://github.com/simonsez9510/jev-cite-check"
+  },
+  {
+   "id": "8d5d9da284a4f810",
+   "title": "map3d — 오픈스트리트맵으로 도시를 3D 건물·도로 지도로 만들어 GLB로 내보내는 오픈소스",
+   "org": "cartesiancs(오픈소스)",
+   "url": "https://map.fleet.im"
+  },
+  {
+   "id": "3cf9c1cfede2b178",
+   "title": "한양3D — 박물관 소장 옛 지도를 현대 고도 자료에 맞춰 펼친 18세기 한양 입체 지도",
+   "org": "한양3D(개인 오픈소스)",
+   "url": "https://github.com/jikhanjung/hanyang3d"
   }
  ]
 }
