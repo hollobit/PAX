@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-09-20T14:35:14Z",
- "count": 518,
+ "updated_at": "2026-09-20T22:33:41Z",
+ "count": 522,
  "articles": [
   {
    "url": "https://brunch.co.kr/@publichr/191",
@@ -9,6 +9,58 @@
    "published": "2026-09-20",
    "kind": "기사",
    "shares": 2,
+   "first_shared": "2026-09-20",
+   "last_shared": "2026-09-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.cstimes.com/news/articleView.html?idxno=721323",
+   "title": "NIA-행안부, AI 민주정부 실현 30대 핵심과제 3분기 주관기관 협의회 개최",
+   "outlet": "컨슈머타임스(Consumertimes)",
+   "published": "2026-09-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-20",
+   "last_shared": "2026-09-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215505",
+   "title": "과기부, 연구자가 지켜야 할 ‘AI 활용’ 7대 권고사항 제시",
+   "outlet": "AI타임스",
+   "published": "2026-09-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-20",
+   "last_shared": "2026-09-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://note.com/questceo_ai/n/n08c885ff5572?hl=ko",
+   "title": "Windows에서 Claude Code와 Codex를 한 화면에 모아주는 앱을 무료로 공개했습니다｜てんちょー | 非エンジニアがAI開発で週末起業を爆速化",
+   "outlet": "note（ノート）",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-20",
+   "last_shared": "2026-09-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://note.com/hide_works/n/nffcbe0e898ce?hl=ko",
+   "title": "Gemini Omni 1.1 Flash의 새로운 기능 3가지. 10초의 벽을 연장과 보간으로 넘다｜Hide＠ひとり、プロダクション。",
+   "outlet": "note（ノート）",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
    "first_shared": "2026-09-20",
    "last_shared": "2026-09-20",
    "sources": [
