@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-20T23:34:37+09:00",
+ "updated_at": "2026-09-21T00:40:58+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -13282,6 +13282,65 @@
    "license_source": "github",
    "license_checked": "2026-09-20",
    "thumb_v": 1789914908
+  },
+  {
+   "runtime_env": "브라우저만",
+   "case_class": "참고",
+   "title": "map3d — 오픈스트리트맵으로 도시를 3D 건물·도로 지도로 만들어 GLB로 내보내는 오픈소스",
+   "summary": "지도 범위를 고르면 건물과 도로를 입체로 세우고 그대로 3D 모델 파일로 내보내는 웹 오픈소스다. 오픈스트리트맵 자료를 바탕으로 해 별도 구축 없이 도시 단위 모형을 얻을 수 있고, 디지털 트윈이나 드론 측량, 위치 표식 같은 갈래로 이어 붙이는 바탕으로 쓰라고 안내한다. 원자료에 높이가 빠지거나 잘못 적힌 곳이 있어 정확도를 보장하지 않는다고 스스로 못 박았다.",
+   "org": "cartesiancs(오픈소스)",
+   "deployment_env": "인터넷망",
+   "collected_at": "2026-09-21",
+   "source": "kakao",
+   "case_url": "https://map.fleet.im",
+   "org_type": "민간(참고)",
+   "network_req": "인터넷 필수",
+   "model_dependency": "없음(비LLM)",
+   "task_category": "데이터·통계",
+   "link": "https://github.com/cartesiancs/map3d",
+   "date": "2025-02-23",
+   "tags": [
+    "3D지도",
+    "디지털트윈",
+    "오픈스트리트맵",
+    "공간정보",
+    "오픈소스"
+   ],
+   "id": "8d5d9da284a4f810",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-09-21",
+   "thumb_v": 1789918893
+  },
+  {
+   "runtime_env": "브라우저만",
+   "case_class": "참고",
+   "title": "한양3D — 박물관 소장 옛 지도를 현대 고도 자료에 맞춰 펼친 18세기 한양 입체 지도",
+   "summary": "서울역사박물관이 공개한 도성대지도를 현대 지면 고도 자료에 다섯 개 보정점으로 맞춰 펼치고, 지도에서 읽어 낸 길과 물길, 성벽, 궁궐과 시전을 입체로 올린 웹 지도다. 1750년경과 1907년 두 시대를 오가고 높이 강조와 배경 지도를 바꿔 가며 볼 수 있으며, 이름을 적고 다른 접속자와 거리를 함께 걸을 수도 있다. 건물은 개념 모형이고 위치는 수십 미터 어긋날 수 있다는 한계와 자료별 이용 조건을 따로 갈라 적었다.",
+   "org": "한양3D(개인 오픈소스)",
+   "deployment_env": "인터넷망",
+   "collected_at": "2026-09-21",
+   "source": "kakao",
+   "case_url": "https://github.com/jikhanjung/hanyang3d",
+   "org_type": "민간(참고)",
+   "region": "서울",
+   "network_req": "인터넷 필수",
+   "model_dependency": "없음(비LLM)",
+   "task_category": "데이터·통계",
+   "link": "https://hanyang3d.nopeoplestime.info",
+   "date": "2026-09-08",
+   "tags": [
+    "3D지도",
+    "공공데이터",
+    "역사지리",
+    "고도자료",
+    "공공누리"
+   ],
+   "id": "3cf9c1cfede2b178",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-09-21",
+   "thumb_v": 1789918896
   }
  ]
 }
