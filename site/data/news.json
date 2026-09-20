@@ -1,7 +1,98 @@
 {
- "updated_at": "2026-09-19T22:36:13Z",
- "count": 510,
+ "updated_at": "2026-09-20T06:35:27Z",
+ "count": 517,
  "articles": [
+  {
+   "url": "https://m.blog.naver.com/PostView.naver?blogId=kfcman21&logNo=224417509256&proxyReferer=&noTrackingCode=true",
+   "title": "AI 브라우저로 한글문서(HWPX) 만들기 – 네이버 MyBox 한컴오피스 Web까지, 4가지 방법 총정리",
+   "outlet": "네이버 블로그 | 작은불꽃처럼, 처음처럼",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-20",
+   "last_shared": "2026-09-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://interestingengineering.com/innovation/world-first-biological-data-center",
+   "title": "World-first biological data center packs 16 mn living human neurons",
+   "outlet": "Interesting Engineering",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-20",
+   "last_shared": "2026-09-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://brunch.co.kr/@publichr/191",
+   "title": "공공AX, 혼자 고민하고 계신가요?",
+   "outlet": "브런치",
+   "published": "2026-09-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-20",
+   "last_shared": "2026-09-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kyeongin.com/article/1771014",
+   "title": "인천시정 행정업무 ‘AI 활용 윤리 지침’ 만든다",
+   "outlet": "경인일보",
+   "published": "2026-09-16",
+   "kind": "기사",
+   "shares": 3,
+   "first_shared": "2026-09-16",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.koreadaily.com/article/20260918010052449",
+   "title": "NIA·행안부, ‘AI 민주정부’ 30대 과제 3분기 성과 점검",
+   "outlet": "미주중앙일보",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-18",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.jejusori.net/news/articleView.html?idxno=506674",
+   "title": "제주도 문승환, ‘AI 행정 자동화’로 행안부 수상",
+   "outlet": "제주의소리",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-18",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.issueon.co.kr/news/articleView.html?idxno=13906",
+   "title": "구글 Gemini 3.8 Live 공개…목소리로 일하고 보는 AI",
+   "outlet": "ISSUE ON (이슈온)",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-18",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.aitimes.com/news/articleView.html?idxno=215455",
    "title": "화웨이, 차세대 AI 칩 출시 앞당긴다...\"대규모 연결로 엔비디아 추격\"",
@@ -10,6 +101,45 @@
    "kind": "기사",
    "shares": 2,
    "first_shared": "2026-09-18",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215448",
+   "title": "\"워드 안에서 챗GPT 쓴다\"...오픈AI, MS 워드 통합 기능 확대",
+   "outlet": "AI타임스",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-18",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.tokenpost.kr/news/ai/410823",
+   "title": "앤트로픽, GPT-6 Astra 대응 새 AI 모델 출시 검토",
+   "outlet": "토큰포스트",
+   "published": "2026-09-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-19",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.hani.co.kr/arti/economy/biznews/1278617.html",
+   "title": "AI가 판단하고, 로봇이 시술한다, 경희대 뇌혈관 중재로봇 개발 나서",
+   "outlet": "한겨레",
+   "published": "2026-09-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-19",
    "last_shared": "2026-09-19",
    "sources": [
     "kakao"
@@ -107,6 +237,32 @@
    ]
   },
   {
+   "url": "https://note.com/jamsanba/n/ncfc9a0530b7c?hl=ko",
+   "title": "2026년, 일본의 생성형 AI 시장이 본격적인 도입 가속화로｜Jamsan",
+   "outlet": "note（ノート）",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-19",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://note.com/aiyoroz/n/n8565bfd440e5?hl=ko",
+   "title": "생성형 AI로 신상품·신서비스를 기획하는 방법｜아이디어 내기에서 끝내지 않는 '가설·확인·시작'의 5단계｜AIよろず室",
+   "outlet": "note（ノート）",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-19",
+   "last_shared": "2026-09-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://naver.me/xuFtD9C3",
    "title": "모친상인데 \"잠깐 출근해야\" 글 쓴 공무원…항의 댓글에 \"신고\"",
    "outlet": "네이버 블로그 | 수생투 님의 블로그",
@@ -146,19 +302,6 @@
    ]
   },
   {
-   "url": "https://www.kyeongin.com/article/1771014",
-   "title": "인천시정 행정업무 ‘AI 활용 윤리 지침’ 만든다",
-   "outlet": "경인일보",
-   "published": "2026-09-16",
-   "kind": "기사",
-   "shares": 2,
-   "first_shared": "2026-09-16",
-   "last_shared": "2026-09-18",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
    "url": "https://yozm.wishket.com/magazine/detail/3951",
    "title": "10분 만에 온톨로지(Ontology) 이해하기",
    "outlet": "요즘IT",
@@ -185,61 +328,9 @@
    ]
   },
   {
-   "url": "https://www.koreadaily.com/article/20260918010052449",
-   "title": "NIA·행안부, ‘AI 민주정부’ 30대 과제 3분기 성과 점검",
-   "outlet": "미주중앙일보",
-   "published": "2026-09-18",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-18",
-   "last_shared": "2026-09-18",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.jejusori.net/news/articleView.html?idxno=506674",
-   "title": "제주도 문승환, ‘AI 행정 자동화’로 행안부 수상",
-   "outlet": "제주의소리",
-   "published": "2026-09-18",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-18",
-   "last_shared": "2026-09-18",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.issueon.co.kr/news/articleView.html?idxno=13906",
-   "title": "구글 Gemini 3.8 Live 공개…목소리로 일하고 보는 AI",
-   "outlet": "ISSUE ON (이슈온)",
-   "published": "2026-09-18",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-18",
-   "last_shared": "2026-09-18",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
    "url": "https://www.bloter.net/news/articleView.html?idxno=673988",
    "title": "[SK 인사 시그널]④최태원 'AI·반도체' 올인, 수펙스 C레벨 쇄신",
    "outlet": "블로터",
-   "published": "2026-09-18",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-18",
-   "last_shared": "2026-09-18",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=215448",
-   "title": "\"워드 안에서 챗GPT 쓴다\"...오픈AI, MS 워드 통합 기능 확대",
-   "outlet": "AI타임스",
    "published": "2026-09-18",
    "kind": "기사",
    "shares": 1,

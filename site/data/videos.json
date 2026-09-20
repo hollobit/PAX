@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-09-19T22:36:09Z",
- "count": 63,
+ "updated_at": "2026-09-20T06:35:22Z",
+ "count": 64,
  "videos": [
+  {
+   "id": "lx3YkhzM_04",
+   "title": "출시하자마자 난리 난 AI, JEV는 대체 뭐가 다른가",
+   "channel": "코드깎는노인",
+   "url": "https://www.youtube.com/watch?v=lx3YkhzM_04",
+   "thumb": "https://i.ytimg.com/vi/lx3YkhzM_04/mqdefault.jpg",
+   "shares": 2,
+   "first_shared": "2026-09-19",
+   "last_shared": "2026-09-20",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "BM0oVk0aLAE",
    "title": "공공 vs 기업 AX 전문가들의 충격적인 경험 공개",
