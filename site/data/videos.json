@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-09-20T06:47:42Z",
- "count": 64,
+ "updated_at": "2026-09-20T14:35:13Z",
+ "count": 66,
  "videos": [
   {
    "id": "lx3YkhzM_04",
@@ -10,6 +10,32 @@
    "thumb": "https://i.ytimg.com/vi/lx3YkhzM_04/mqdefault.jpg",
    "shares": 2,
    "first_shared": "2026-09-19",
+   "last_shared": "2026-09-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "KCFIzervxtE",
+   "title": "GPT에 법령MCP 연결하기(26.7.10. 업데이트 반영)",
+   "channel": "딴짓하는 류주임",
+   "url": "https://www.youtube.com/watch?v=KCFIzervxtE",
+   "thumb": "https://i.ytimg.com/vi/KCFIzervxtE/mqdefault.jpg",
+   "shares": 2,
+   "first_shared": "2026-09-20",
+   "last_shared": "2026-09-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "HzNdN51foh4",
+   "title": "50대에 AI로 다시 시작했습니다｜닷컴·게임을 거쳐 AI 대표가 된 이유",
+   "channel": "Alex AI",
+   "url": "https://www.youtube.com/watch?v=HzNdN51foh4",
+   "thumb": "https://i.ytimg.com/vi/HzNdN51foh4/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-20",
    "last_shared": "2026-09-20",
    "sources": [
     "kakao"

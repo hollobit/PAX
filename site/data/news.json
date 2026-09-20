@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-09-20T06:47:42Z",
- "count": 517,
+ "updated_at": "2026-09-20T14:35:14Z",
+ "count": 518,
  "articles": [
+  {
+   "url": "https://brunch.co.kr/@publichr/191",
+   "title": "공공AX, 혼자 고민하고 계신가요?",
+   "outlet": "브런치",
+   "published": "2026-09-20",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-20",
+   "last_shared": "2026-09-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/001/0016322930?sid=104",
+   "title": "트럼프 \"우주군처럼 'AI軍' 창설…AI 우위 유지할 것\"",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-20",
+   "last_shared": "2026-09-20",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://m.blog.naver.com/PostView.naver?blogId=kfcman21&logNo=224417509256&proxyReferer=&noTrackingCode=true",
    "title": "AI 브라우저로 한글문서(HWPX) 만들기 – 네이버 MyBox 한컴오피스 Web까지, 4가지 방법 총정리",
@@ -20,19 +46,6 @@
    "title": "World-first biological data center packs 16 mn living human neurons",
    "outlet": "Interesting Engineering",
    "published": "",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-20",
-   "last_shared": "2026-09-20",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://brunch.co.kr/@publichr/191",
-   "title": "공공AX, 혼자 고민하고 계신가요?",
-   "outlet": "브런치",
-   "published": "2026-09-20",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-20",
