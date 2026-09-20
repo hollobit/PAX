@@ -2,19 +2,19 @@
  "generated_at": "2026-09-20",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 462,
+ "total_cases": 463,
  "total_champions": 207,
  "community": {
-  "members": 2003,
-  "kakao_week": 3510,
-  "kakao_total_observed": 34818,
-  "threads_observed": 282
+  "members": 2028,
+  "kakao_week": 3513,
+  "kakao_total_observed": 34821,
+  "threads_observed": 286
  },
  "certified_champions": 5,
- "unattributed_cases": 85,
+ "unattributed_cases": 86,
  "ax_distribution": {
   "AI-Ready": 315,
-  "AI-Enabled": 129,
+  "AI-Enabled": 130,
   "AX 단계 외": 12,
   "AI-First": 5,
   "AI-Native 계획": 1
@@ -22,7 +22,7 @@
  "c_axis_mean": 0.91,
  "p_distribution": {
   "P0": 146,
-  "P1": 301,
+  "P1": 302,
   "P2": 15
  },
  "model_dependency": {
@@ -30,7 +30,7 @@
   "없음(비LLM)": 218,
   "해외 오픈웨이트(로컬)": 27,
   "혼합": 9,
-  "해외 상용 API": 58,
+  "해외 상용 API": 59,
   "모델 중립(BYO)": 72,
   "국산 독자모델": 5,
   "미상": 7,
@@ -739,8 +739,8 @@
     "specified": 9
    },
    "해외 상용 API": {
-    "n": 58,
-    "specified": 43
+    "n": 59,
+    "specified": 44
    },
    "모델 중립(BYO)": {
     "n": 72,
@@ -1072,7 +1072,7 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 58,
+    "n": 59,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
@@ -1345,6 +1345,20 @@
       "variants": [
        "상용 AI(내부망 도입, 세부 미상)"
       ]
+     },
+     {
+      "name": "Jev(TypeSafe AI System One, Vercel AI Gateway 경유)",
+      "n": 1,
+      "cases": [
+       {
+        "id": "fdee8ff722146b48",
+        "title": "조례 인용 검증 게이트 실험 — AI 답변이 인용한 조문에 실제로 근거하는지 다른 모델로 채점한 재현 패키지"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Jev(TypeSafe AI System One, Vercel AI Gateway 경유)"
+      ]
      }
     ]
    },
@@ -1513,18 +1527,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.06,
- "local_model_rate": 0.27,
- "model_known": 100,
- "license_tagged": 358,
- "license_stated_rate": 0.497,
+ "domestic_model_rate": 0.059,
+ "local_model_rate": 0.267,
+ "model_known": 101,
+ "license_tagged": 359,
+ "license_stated_rate": 0.499,
  "gitlab_cases": 249,
  "gitlab_mirror_pairs": 36,
  "gitlab_open_rate": 0.145,
  "mcp_cases": 83,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 380,
+  "미확인": 381,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1633,7 +1647,7 @@
    ]
   },
   "github": {
-   "count": 135,
+   "count": 136,
    "starred": 112,
    "stars_sum": 176133,
    "maintenance": {
@@ -1727,7 +1741,7 @@
  },
  "license_distribution": {
   "명시 없음": 180,
-  "MIT": 116,
+  "MIT": 117,
   "Apache-2.0": 28,
   "Other": 16,
   "GNU AGPLv3": 5,
@@ -1745,7 +1759,7 @@
    "gitlab": 134
   },
   "MIT": {
-   "github": 65,
+   "github": 66,
    "gitlab": 50
   },
   "Apache-2.0": {
@@ -1791,8 +1805,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 124,
-   "stated": 90
+   "total": 125,
+   "stated": 91
   },
   "github-pages": {
    "total": 16,
