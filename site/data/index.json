@@ -2,19 +2,19 @@
  "generated_at": "2026-09-21",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 467,
+ "total_cases": 468,
  "total_champions": 208,
  "community": {
-  "members": 2110,
-  "kakao_week": 3629,
-  "kakao_total_observed": 35574,
-  "threads_observed": 290
+  "members": 2115,
+  "kakao_week": 4007,
+  "kakao_total_observed": 35952,
+  "threads_observed": 293
  },
  "certified_champions": 5,
- "unattributed_cases": 88,
+ "unattributed_cases": 89,
  "ax_distribution": {
   "AI-Ready": 319,
-  "AI-Enabled": 130,
+  "AI-Enabled": 131,
   "AX 단계 외": 12,
   "AI-First": 5,
   "AI-Native 계획": 1
@@ -22,14 +22,14 @@
  "c_axis_mean": 0.91,
  "p_distribution": {
   "P0": 150,
-  "P1": 302,
+  "P1": 303,
   "P2": 15
  },
  "model_dependency": {
   "미확인": 65,
   "없음(비LLM)": 222,
   "해외 오픈웨이트(로컬)": 27,
-  "혼합": 9,
+  "혼합": 10,
   "해외 상용 API": 59,
   "모델 중립(BYO)": 72,
   "국산 독자모델": 5,
@@ -40,12 +40,13 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 24,
+    "n": 25,
     "variants": [
      "Claude Code(BYO 구독)",
      "Claude Code(플러그인)",
      "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
      "Claude Code/Codex(플러그인)",
+     "Claude(대조·근거 작성)",
      "Codex CLI/Claude CLI(BYO 구독)",
      "Codex 이미지 생성(BYO 구독)",
      "상용 API 모드(Claude 등)"
@@ -146,6 +147,10 @@
      {
       "id": "fe0d33cc718246d6",
       "title": "Public Cardnews — 정부·공공기관 정책 카드뉴스를 기획부터 이미지까지 만드는 Codex 스킬"
+     },
+     {
+      "id": "8a47740d405286c4",
+      "title": "자치법규 정합성 실측 — 서울시 조례 942건의 법률 인용 2,996개를 현행 조문과 전수 대조"
      }
     ],
     "domestic": false
@@ -735,8 +740,8 @@
     "specified": 16
    },
    "혼합": {
-    "n": 9,
-    "specified": 9
+    "n": 10,
+    "specified": 10
    },
    "해외 상용 API": {
     "n": 59,
@@ -863,7 +868,7 @@
    },
    {
     "dep": "혼합",
-    "n": 9,
+    "n": 10,
     "families": [
      {
       "name": "로컬 서빙(Ollama·vLLM 등)",
@@ -919,6 +924,30 @@
       ]
      },
      {
+      "name": "Claude/Codex(상용 에이전트)",
+      "n": 3,
+      "cases": [
+       {
+        "id": "acd684108227b9c2",
+        "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
+       },
+       {
+        "id": "9d19e64aa30f5332",
+        "title": "MiroFish-Ko 개인 수정판 — 로컬 LLM·Codex CLI로 돌리는 정책 여론 시뮬레이터"
+       },
+       {
+        "id": "8a47740d405286c4",
+        "title": "자치법규 정합성 실측 — 서울시 조례 942건의 법률 인용 2,996개를 현행 조문과 전수 대조"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Claude(대조·근거 작성)",
+       "Codex CLI/Claude CLI(BYO 구독)",
+       "상용 API 모드(Claude 등)"
+      ]
+     },
+     {
       "name": "Gemma",
       "n": 2,
       "cases": [
@@ -935,25 +964,6 @@
       "variants": [
        "Gemma 4",
        "LLM42-Gemma4(멀티모달 전환)"
-      ]
-     },
-     {
-      "name": "Claude/Codex(상용 에이전트)",
-      "n": 2,
-      "cases": [
-       {
-        "id": "acd684108227b9c2",
-        "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
-       },
-       {
-        "id": "9d19e64aa30f5332",
-        "title": "MiroFish-Ko 개인 수정판 — 로컬 LLM·Codex CLI로 돌리는 정책 여론 시뮬레이터"
-       }
-      ],
-      "domestic": false,
-      "variants": [
-       "Codex CLI/Claude CLI(BYO 구독)",
-       "상용 API 모드(Claude 등)"
       ]
      },
      {
@@ -1066,6 +1076,20 @@
       "domestic": false,
       "variants": [
        "로컬 LLM(세부 미상)"
+      ]
+     },
+     {
+      "name": "Jev(TypeSafe AI 판정 모델)",
+      "n": 1,
+      "cases": [
+       {
+        "id": "8a47740d405286c4",
+        "title": "자치법규 정합성 실측 — 서울시 조례 942건의 법률 인용 2,996개를 현행 조문과 전수 대조"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Jev(TypeSafe AI 판정 모델)"
       ]
      }
     ]
@@ -1528,8 +1552,8 @@
   ]
  },
  "domestic_model_rate": 0.059,
- "local_model_rate": 0.267,
- "model_known": 101,
+ "local_model_rate": 0.265,
+ "model_known": 102,
  "license_tagged": 363,
  "license_stated_rate": 0.496,
  "gitlab_cases": 249,
@@ -1538,7 +1562,7 @@
  "mcp_cases": 84,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 385,
+  "미확인": 386,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,

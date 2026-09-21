@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-09-21T06:36:05Z",
- "count": 66,
+ "updated_at": "2026-09-21T14:36:11Z",
+ "count": 67,
  "videos": [
+  {
+   "id": "3hilsneulfM",
+   "title": "잘할 마음 없는 직원이 ‘AI 슬롭’ 쏟아낸다 (원티드랩 윤명훈 사업 총괄)",
+   "channel": "티타임즈TV",
+   "url": "https://www.youtube.com/watch?v=3hilsneulfM",
+   "thumb": "https://i.ytimg.com/vi/3hilsneulfM/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-21",
+   "last_shared": "2026-09-21",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "lx3YkhzM_04",
    "title": "출시하자마자 난리 난 AI, JEV는 대체 뭐가 다른가",
