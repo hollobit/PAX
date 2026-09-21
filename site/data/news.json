@@ -1,12 +1,38 @@
 {
- "updated_at": "2026-09-21T06:36:07Z",
- "count": 523,
+ "updated_at": "2026-09-21T14:36:12Z",
+ "count": 525,
  "articles": [
   {
    "url": "https://www.mk.co.kr/news/it/12157419",
    "title": "‘난제 뚝딱 해결’ 첨단AI 쓰지말란 韓정부…과학계는 “현실을 모른다”",
    "outlet": "매일경제",
    "published": "2026-09-20",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-21",
+   "last_shared": "2026-09-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215524",
+   "title": "\"바이브 코딩으로 앱은 늘어났지만\"…이용자 외면으로 '앱 슬롭' 확산",
+   "outlet": "AI타임스",
+   "published": "2026-09-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-21",
+   "last_shared": "2026-09-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://naver.me/GKILkAGe",
+   "title": "양양 앞바다서 6·25 美 전투기 발견한 다이버…\"유해 꼭 찾길\"",
+   "outlet": "naver.me",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-21",

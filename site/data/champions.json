@@ -1813,7 +1813,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -5473,6 +5473,12 @@
    "title": "한양3D — 박물관 소장 옛 지도를 현대 고도 자료에 맞춰 펼친 18세기 한양 입체 지도",
    "org": "한양3D(개인 오픈소스)",
    "url": "https://github.com/jikhanjung/hanyang3d"
+  },
+  {
+   "id": "8a47740d405286c4",
+   "title": "자치법규 정합성 실측 — 서울시 조례 942건의 법률 인용 2,996개를 현행 조문과 전수 대조",
+   "org": "지방자치혁신연구원",
+   "url": "https://dead-cite.vercel.app"
   }
  ]
 }
