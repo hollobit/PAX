@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-21T00:40:58+09:00",
+ "updated_at": "2026-09-21T15:34:47+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -12884,6 +12884,33 @@
     "공공누리"
    ],
    "id": "3cf9c1cfede2b178",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-09-21"
+  },
+  {
+   "collected_at": "2026-09-21",
+   "link": "https://github.com/yongkyu4803/GQAI-GovtPress-mcp",
+   "source": "kakao",
+   "date": "2026-08-21",
+   "deployment_env": "인터넷망",
+   "model_dependency": "없음(비LLM)",
+   "case_class": "개인 개발",
+   "org_type": "공직 개인",
+   "tags": [
+    "MCP",
+    "보도자료",
+    "정책동향",
+    "색인",
+    "읽기전용"
+   ],
+   "summary": "열두 개 정부기관이 2025년부터 낸 보도자료 약 1만 7천 건을 제목과 기관, 기간, 부서로 찾게 해 주는 읽기 전용 MCP 서버다. 본문과 요약은 담지 않고 원문 주소로 넘기는 색인이라고 범위를 분명히 했고, 일자별 브리핑과 기관별 발행량 집계, 미수집일 조회까지 도구로 갈라 두었다. 수집 체계가 바뀐 날을 걸친 시계열 비교는 무효라고 도구가 스스로 경고하고 최근 건수는 하한이라고 적은 점이 눈에 띈다.",
+   "runtime_env": "MCP·CLI 설정",
+   "title": "정부 보도자료 MCP — 12개 기관 17,500건을 제목·기관·기간으로 찾는 읽기 전용 색인",
+   "org": "공직 현장(개인 개발)",
+   "task_category": "기획·정책",
+   "network_req": "인터넷 필수",
+   "id": "f0a4485ba99e1417",
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-09-21"

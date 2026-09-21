@@ -2,18 +2,18 @@
  "generated_at": "2026-09-21",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 466,
- "total_champions": 207,
+ "total_cases": 467,
+ "total_champions": 208,
  "community": {
-  "members": 2089,
-  "kakao_week": 3361,
-  "kakao_total_observed": 35306,
-  "threads_observed": 286
+  "members": 2110,
+  "kakao_week": 3629,
+  "kakao_total_observed": 35574,
+  "threads_observed": 290
  },
  "certified_champions": 5,
  "unattributed_cases": 88,
  "ax_distribution": {
-  "AI-Ready": 318,
+  "AI-Ready": 319,
   "AI-Enabled": 130,
   "AX 단계 외": 12,
   "AI-First": 5,
@@ -21,13 +21,13 @@
  },
  "c_axis_mean": 0.91,
  "p_distribution": {
-  "P0": 149,
+  "P0": 150,
   "P1": 302,
   "P2": 15
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 221,
+  "없음(비LLM)": 222,
   "해외 오픈웨이트(로컬)": 27,
   "혼합": 9,
   "해외 상용 API": 59,
@@ -727,7 +727,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 221,
+    "n": 222,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -1530,15 +1530,15 @@
  "domestic_model_rate": 0.059,
  "local_model_rate": 0.267,
  "model_known": 101,
- "license_tagged": 362,
- "license_stated_rate": 0.497,
+ "license_tagged": 363,
+ "license_stated_rate": 0.496,
  "gitlab_cases": 249,
  "gitlab_mirror_pairs": 36,
  "gitlab_open_rate": 0.145,
- "mcp_cases": 83,
+ "mcp_cases": 84,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 384,
+  "미확인": 385,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1546,7 +1546,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.736
+  "feedback": 0.737
  },
  "maintenance_distribution": {
   "활발": 198,
@@ -1647,7 +1647,7 @@
    ]
   },
   "github": {
-   "count": 139,
+   "count": 140,
    "starred": 112,
    "stars_sum": 176133,
    "maintenance": {
@@ -1740,7 +1740,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 182,
+  "명시 없음": 183,
   "MIT": 118,
   "Apache-2.0": 28,
   "Other": 16,
@@ -1755,7 +1755,7 @@
  },
  "license_matrix": {
   "명시 없음": {
-   "github": 48,
+   "github": 49,
    "gitlab": 134
   },
   "MIT": {
@@ -1805,7 +1805,7 @@
  },
  "license_by_source": {
   "github": {
-   "total": 128,
+   "total": 129,
    "stated": 92
   },
   "github-pages": {
@@ -1818,12 +1818,12 @@
   }
  },
  "mcp_stats": {
-  "total": 83,
+  "total": 84,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
-   "Server": 72,
+   "Server": 73,
    "Client/Host": 7,
    "Unknown/None": 3
   },
@@ -1831,7 +1831,7 @@
    "C0": 67,
    "C2": 6,
    "C3": 1,
-   "C1": 9
+   "C1": 10
   },
   "maintenance": {
    "활발": 41,

@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-09-20",
+ "generated_at": "2026-09-21",
  "summary": {
-  "total": 83,
+  "total": 84,
   "counts": {
-   "주의": 70,
+   "주의": 71,
    "양호": 13
   },
   "top_warn_axis": "hygiene"
@@ -2348,6 +2348,40 @@
     "data_flow": {
      "verdict": "미검증",
      "note": "미검증(호스트형 — RAG·MCP·모델 등록 구조라 호출 대상이 설정에 따름)"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "f0a4485ba99e1417",
+   "title": "정부 보도자료 MCP — 12개 기관 17,500건을 제목·기관·기간으로 찾는 읽기 전용 색인",
+   "stars": null,
+   "checked_at": "2026-09-21",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "읽기 전용 도구 7종뿐이며 셸·파일 쓰기 코드 없음. 쓰기 권한은 DB 정책(RLS SELECT)으로도 한 번 더 막혀 있다"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 없음 — 환경변수만 사용(lib/supabase.ts:23-27)"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "package-lock.json으로 버전 고정. 런타임 의존성은 mcp-handler·supabase-js·next·react·zod (근거: package.json)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "모든 도구 입력을 zod 스키마로 형·범위 검증하고, 제목 검색은 PostgREST ilike 와일드카드 문자를 이스케이프해 전체 조회로 바뀌는 경로를 막았다 (근거: lib/queries.ts:23-31,69,74). 셸·파일 쓰기 패턴 없음"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "호출 대상은 자체 Supabase 프로젝트뿐이고 제3자 전송·텔레메트리 없음. anon 키만 쓰며 RLS가 SELECT만 허용한다고 문서·코드에 명시, service_role 키는 배포 환경에 두지 말라고 .env.example에 적었다 (근거: lib/supabase.ts:6-7,23-27, .env.example:1-3)"
     }
    },
    "dynamic": null,

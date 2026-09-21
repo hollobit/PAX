@@ -1,5 +1,5 @@
 {
- "total": 207,
+ "total": 208,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -1794,6 +1794,26 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:yongkyu4803",
+   "name": "yongkyu4803",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "yongkyu4803",
+     "url": "https://github.com/yongkyu4803"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "f0a4485ba99e1417"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },
