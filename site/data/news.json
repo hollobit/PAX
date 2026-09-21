@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-09-21T14:36:12Z",
- "count": 525,
+ "updated_at": "2026-09-21T22:33:47Z",
+ "count": 531,
  "articles": [
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215448",
+   "title": "\"워드 안에서 챗GPT 쓴다\"...오픈AI, MS 워드 통합 기능 확대",
+   "outlet": "AI타임스",
+   "published": "2026-09-18",
+   "kind": "기사",
+   "shares": 3,
+   "first_shared": "2026-09-18",
+   "last_shared": "2026-09-21",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.mk.co.kr/news/it/12157419",
    "title": "‘난제 뚝딱 해결’ 첨단AI 쓰지말란 韓정부…과학계는 “현실을 모른다”",
@@ -9,6 +22,71 @@
    "published": "2026-09-20",
    "kind": "기사",
    "shares": 2,
+   "first_shared": "2026-09-21",
+   "last_shared": "2026-09-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5063908",
+   "title": "광진구, 27일까지 정책 아이디어 공모…AI 활용 제안도 모집",
+   "outlet": "신아일보",
+   "published": "2026-09-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-21",
+   "last_shared": "2026-09-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mt.co.kr/tech/2026/09/21/2026092108421642819",
+   "title": "AI·빅데이터로 공공행정 바꾼다…SKT, 지자체 활용사례 공개",
+   "outlet": "머니투데이",
+   "published": "2026-09-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-21",
+   "last_shared": "2026-09-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mk.co.kr/news/it/12158325",
+   "title": "기업 인력구성, 인간·AI 에이전트 결합으로 재정의될 것",
+   "outlet": "매일경제",
+   "published": "2026-09-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-21",
+   "last_shared": "2026-09-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.etnews.com/20260921000260",
+   "title": "KOSA, 과기정통부·NIA와 손잡고 국민 체감형 에이전틱 AI 서비스 발굴 연구",
+   "outlet": "미래를 보는 창 - 전자신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-21",
+   "last_shared": "2026-09-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.businesskorea.co.kr/news/articleView.html?idxno=277450",
+   "title": "한국중부발전, 생성형 AI 국제표준 인증 획득",
+   "outlet": "Businesskorea",
+   "published": "2026-09-21",
+   "kind": "기사",
+   "shares": 1,
    "first_shared": "2026-09-21",
    "last_shared": "2026-09-21",
    "sources": [
@@ -33,6 +111,19 @@
    "title": "양양 앞바다서 6·25 美 전투기 발견한 다이버…\"유해 꼭 찾길\"",
    "outlet": "naver.me",
    "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-21",
+   "last_shared": "2026-09-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://financefeeds.com/ko/meta-muse-app-store-1wi-10il",
+   "title": "Meta Muse, 10일 만에 73만 다운로드로 앱스토어 1위",
+   "outlet": "FinanceFeeds",
+   "published": "2026-09-21",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-21",
@@ -200,19 +291,6 @@
   {
    "url": "https://www.aitimes.com/news/articleView.html?idxno=215455",
    "title": "화웨이, 차세대 AI 칩 출시 앞당긴다...\"대규모 연결로 엔비디아 추격\"",
-   "outlet": "AI타임스",
-   "published": "2026-09-18",
-   "kind": "기사",
-   "shares": 2,
-   "first_shared": "2026-09-18",
-   "last_shared": "2026-09-19",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=215448",
-   "title": "\"워드 안에서 챗GPT 쓴다\"...오픈AI, MS 워드 통합 기능 확대",
    "outlet": "AI타임스",
    "published": "2026-09-18",
    "kind": "기사",
