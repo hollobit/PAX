@@ -11086,5 +11086,33 @@
     "resilience": "미확인(자료별 이용 조건이 달라 2차 활용 범위 제한)",
     "post_url": "",
     "service_url": "https://hanyang3d.nopeoplestime.info"
+  },
+  {
+    "no": 469,
+    "id": "f0a4485ba99e1417",
+    "org": "공직 현장(개인 개발)",
+    "title": "정부 보도자료 MCP — 12개 기관 17,500건을 제목·기관·기간으로 찾는 읽기 전용 색인",
+    "ax_prev": "AI-Ready",
+    "ax": "AI-Ready",
+    "s": "S2",
+    "s_name": "Tool bundle",
+    "c": "C1",
+    "c_name": "결과 제공",
+    "m": "M2",
+    "m_name": "재사용형",
+    "native_scope": "12개 중앙행정기관·공공기관 보도자료 제목·기관·발행일·원문 URL(2025-01 이후 약 17,500건)",
+    "status": "Published tool",
+    "scope": "External",
+    "mcp_role": "Server",
+    "risk": "R0 최소",
+    "human": "해당 없음",
+    "evidence": "E1 코드·도구 확인",
+    "confidence": "중간",
+    "gate": "상위 관문 미충족/해당 없음",
+    "rationale": "검색·브리핑·집계·수집현황 도구 일곱을 한 서버에 묶었고 결과는 목록과 집계라 S2·C1이며, 특정 업무에 매이지 않아 M2 재사용형이다. 수집 체계가 바뀐 날을 걸친 시계열 비교는 무효라고 도구가 스스로 경고하고 최근 건수는 하한이라 적은 자기 한계 고지가 데이터 도구에서 드물다. 소스를 읽어 판정했고 배포 엔드포인트는 호출하지 않았다.",
+    "feedback": "미확인",
+    "resilience": "미확인(기관 게시판 구조 변경 시 수집 누락률)",
+    "post_url": "",
+    "service_url": ""
   }
 ]
