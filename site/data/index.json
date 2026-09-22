@@ -2,26 +2,26 @@
  "generated_at": "2026-09-22",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 468,
+ "total_cases": 469,
  "total_champions": 208,
  "community": {
-  "members": 2127,
-  "kakao_week": 3224,
-  "kakao_total_observed": 35994,
-  "threads_observed": 293
+  "members": 2135,
+  "kakao_week": 3392,
+  "kakao_total_observed": 36162,
+  "threads_observed": 294
  },
  "certified_champions": 5,
- "unattributed_cases": 89,
+ "unattributed_cases": 90,
  "ax_distribution": {
   "AI-Ready": 319,
-  "AI-Enabled": 131,
+  "AI-Enabled": 132,
   "AX 단계 외": 12,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
- "c_axis_mean": 0.91,
+ "c_axis_mean": 0.92,
  "p_distribution": {
-  "P0": 150,
+  "P0": 151,
   "P1": 303,
   "P2": 15
  },
@@ -29,7 +29,7 @@
   "미확인": 65,
   "없음(비LLM)": 222,
   "해외 오픈웨이트(로컬)": 27,
-  "혼합": 10,
+  "혼합": 11,
   "해외 상용 API": 59,
   "모델 중립(BYO)": 72,
   "국산 독자모델": 5,
@@ -40,7 +40,7 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 25,
+    "n": 26,
     "variants": [
      "Claude Code(BYO 구독)",
      "Claude Code(플러그인)",
@@ -151,6 +151,10 @@
      {
       "id": "8a47740d405286c4",
       "title": "자치법규 정합성 실측 — 서울시 조례 942건의 법률 인용 2,996개를 현행 조문과 전수 대조"
+     },
+     {
+      "id": "133d7e9c594456be",
+      "title": "서울 자치구 조례 정합성 지도 — 본청과 25개 구 조례의 법률 인용을 현행 조문과 대조해 지도로"
      }
     ],
     "domestic": false
@@ -497,6 +501,24 @@
     "domestic": true
    },
    {
+    "name": "Jev(TypeSafe AI 판정 모델)",
+    "n": 2,
+    "variants": [
+     "Jev(TypeSafe AI 판정 모델)"
+    ],
+    "cases": [
+     {
+      "id": "8a47740d405286c4",
+      "title": "자치법규 정합성 실측 — 서울시 조례 942건의 법률 인용 2,996개를 현행 조문과 전수 대조"
+     },
+     {
+      "id": "133d7e9c594456be",
+      "title": "서울 자치구 조례 정합성 지도 — 본청과 25개 구 조례의 법률 인용을 현행 조문과 대조해 지도로"
+     }
+    ],
+    "domestic": false
+   },
+   {
     "name": "상용 API(세부 미상)",
     "n": 1,
     "variants": [
@@ -635,20 +657,6 @@
      }
     ],
     "domestic": false
-   },
-   {
-    "name": "사내 모델(비공개)",
-    "n": 1,
-    "variants": [
-     "사내 모델(비공개)"
-    ],
-    "cases": [
-     {
-      "id": "fcfac85b15998dee",
-      "title": "한국서부발전 위피봇 — 발전 현장 안전·설비 업무에 붙인 사내 생성형 AI 에이전트"
-     }
-    ],
-    "domestic": false
    }
   ],
   "domestic_cases": [
@@ -740,8 +748,8 @@
     "specified": 16
    },
    "혼합": {
-    "n": 10,
-    "specified": 10
+    "n": 11,
+    "specified": 11
    },
    "해외 상용 API": {
     "n": 59,
@@ -868,7 +876,7 @@
    },
    {
     "dep": "혼합",
-    "n": 10,
+    "n": 11,
     "families": [
      {
       "name": "로컬 서빙(Ollama·vLLM 등)",
@@ -900,6 +908,34 @@
       ]
      },
      {
+      "name": "Claude/Codex(상용 에이전트)",
+      "n": 4,
+      "cases": [
+       {
+        "id": "acd684108227b9c2",
+        "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
+       },
+       {
+        "id": "9d19e64aa30f5332",
+        "title": "MiroFish-Ko 개인 수정판 — 로컬 LLM·Codex CLI로 돌리는 정책 여론 시뮬레이터"
+       },
+       {
+        "id": "8a47740d405286c4",
+        "title": "자치법규 정합성 실측 — 서울시 조례 942건의 법률 인용 2,996개를 현행 조문과 전수 대조"
+       },
+       {
+        "id": "133d7e9c594456be",
+        "title": "서울 자치구 조례 정합성 지도 — 본청과 25개 구 조례의 법률 인용을 현행 조문과 대조해 지도로"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Claude(대조·근거 작성)",
+       "Codex CLI/Claude CLI(BYO 구독)",
+       "상용 API 모드(Claude 등)"
+      ]
+     },
+     {
       "name": "Gemini",
       "n": 3,
       "cases": [
@@ -924,30 +960,6 @@
       ]
      },
      {
-      "name": "Claude/Codex(상용 에이전트)",
-      "n": 3,
-      "cases": [
-       {
-        "id": "acd684108227b9c2",
-        "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
-       },
-       {
-        "id": "9d19e64aa30f5332",
-        "title": "MiroFish-Ko 개인 수정판 — 로컬 LLM·Codex CLI로 돌리는 정책 여론 시뮬레이터"
-       },
-       {
-        "id": "8a47740d405286c4",
-        "title": "자치법규 정합성 실측 — 서울시 조례 942건의 법률 인용 2,996개를 현행 조문과 전수 대조"
-       }
-      ],
-      "domestic": false,
-      "variants": [
-       "Claude(대조·근거 작성)",
-       "Codex CLI/Claude CLI(BYO 구독)",
-       "상용 API 모드(Claude 등)"
-      ]
-     },
-     {
       "name": "Gemma",
       "n": 2,
       "cases": [
@@ -964,6 +976,24 @@
       "variants": [
        "Gemma 4",
        "LLM42-Gemma4(멀티모달 전환)"
+      ]
+     },
+     {
+      "name": "Jev(TypeSafe AI 판정 모델)",
+      "n": 2,
+      "cases": [
+       {
+        "id": "8a47740d405286c4",
+        "title": "자치법규 정합성 실측 — 서울시 조례 942건의 법률 인용 2,996개를 현행 조문과 전수 대조"
+       },
+       {
+        "id": "133d7e9c594456be",
+        "title": "서울 자치구 조례 정합성 지도 — 본청과 25개 구 조례의 법률 인용을 현행 조문과 대조해 지도로"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Jev(TypeSafe AI 판정 모델)"
       ]
      },
      {
@@ -1076,20 +1106,6 @@
       "domestic": false,
       "variants": [
        "로컬 LLM(세부 미상)"
-      ]
-     },
-     {
-      "name": "Jev(TypeSafe AI 판정 모델)",
-      "n": 1,
-      "cases": [
-       {
-        "id": "8a47740d405286c4",
-        "title": "자치법규 정합성 실측 — 서울시 조례 942건의 법률 인용 2,996개를 현행 조문과 전수 대조"
-       }
-      ],
-      "domestic": false,
-      "variants": [
-       "Jev(TypeSafe AI 판정 모델)"
       ]
      }
     ]
@@ -1551,9 +1567,9 @@
    }
   ]
  },
- "domestic_model_rate": 0.059,
- "local_model_rate": 0.265,
- "model_known": 102,
+ "domestic_model_rate": 0.058,
+ "local_model_rate": 0.262,
+ "model_known": 103,
  "license_tagged": 363,
  "license_stated_rate": 0.496,
  "gitlab_cases": 249,
@@ -1562,7 +1578,7 @@
  "mcp_cases": 84,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 386,
+  "미확인": 387,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1570,7 +1586,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.737
+  "feedback": 0.738
  },
  "maintenance_distribution": {
   "활발": 198,
