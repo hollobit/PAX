@@ -1,7 +1,85 @@
 {
- "updated_at": "2026-09-22T14:35:17Z",
- "count": 531,
+ "updated_at": "2026-09-22T22:33:52Z",
+ "count": 536,
  "articles": [
+  {
+   "url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5063908",
+   "title": "광진구, 27일까지 정책 아이디어 공모…AI 활용 제안도 모집",
+   "outlet": "신아일보",
+   "published": "2026-09-20",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-21",
+   "last_shared": "2026-09-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.ppss.kr/news/articleView.html?idxno=312127",
+   "title": "'지역 제조현장을 피지컬 AI 거점으로'...금융·지자체 힘 합친다",
+   "outlet": "ㅍㅍㅅㅅ PPSS",
+   "published": "2026-09-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-22",
+   "last_shared": "2026-09-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=241762",
+   "title": "[위크픽 클라우드] 클라우드 보안 체계 일원화…행안부, 50개 공공시스템 민간 이전",
+   "outlet": "아이티데일리",
+   "published": "2026-09-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-22",
+   "last_shared": "2026-09-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202609230441324467",
+   "title": "속도조절 외치던 앤트로픽·오픈AI, 새 AI모델로 가성비 속도전",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-09-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-22",
+   "last_shared": "2026-09-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=702365",
+   "title": "[Tech Insight] 대화 보단 판단하고 결정하는 AI 모델 '제브'에 놀라는 이유",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-09-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-22",
+   "last_shared": "2026-09-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215556",
+   "title": "구글, 제미나이·안드로이드 결합한 프리미엄 '구글북' 출시",
+   "outlet": "AI타임스",
+   "published": "2026-09-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-22",
+   "last_shared": "2026-09-22",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.aitimes.com/news/articleView.html?idxno=215448",
    "title": "\"워드 안에서 챗GPT 쓴다\"...오픈AI, MS 워드 통합 기능 확대",
@@ -22,19 +100,6 @@
    "published": "2026-09-20",
    "kind": "기사",
    "shares": 2,
-   "first_shared": "2026-09-21",
-   "last_shared": "2026-09-21",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5063908",
-   "title": "광진구, 27일까지 정책 아이디어 공모…AI 활용 제안도 모집",
-   "outlet": "신아일보",
-   "published": "2026-09-20",
-   "kind": "기사",
-   "shares": 1,
    "first_shared": "2026-09-21",
    "last_shared": "2026-09-21",
    "sources": [
