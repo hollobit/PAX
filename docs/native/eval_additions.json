@@ -11170,5 +11170,33 @@
     "resilience": "미확인(조례·법령 미러 갱신 주기, 항·호 단위 변경 미탐지)",
     "post_url": "",
     "service_url": "https://seoul-dead-cite.vercel.app/"
+  },
+  {
+    "no": 472,
+    "id": "afef30356a841dac",
+    "org": "공직 현장(개인 개발)",
+    "title": "개인정보 마스킹 웹앱 — 국산 탐지 모델에 규칙·사용자 단어를 얹고 법원식 표기까지 고르는 로컬 도구",
+    "ax_prev": "AI-Enabled",
+    "ax": "AI-Enabled",
+    "s": "S2",
+    "s_name": "Tool bundle",
+    "c": "C1",
+    "c_name": "결과 제공",
+    "m": "해당 없음",
+    "m_name": "비-MCP 사례",
+    "native_scope": "해당 없음",
+    "status": "Published tool",
+    "scope": "Internal",
+    "mcp_role": "Unknown/None",
+    "risk": "R1 낮음",
+    "human": "검토 후 사용(오탐·미탐 한계를 문서에 명시)",
+    "evidence": "E1 코드·도구 확인",
+    "confidence": "중간",
+    "gate": "상위 관문 미충족/해당 없음",
+    "rationale": "탐지 네 갈래와 마스킹 표기 네 종을 한 앱에 묶어 Tool bundle이며 산출물은 가린 텍스트라 C1이다. 이미 등재된 국산 탐지 모델(dcba0f65)을 공직 실무자가 업무 도구로 감싼 첫 관측이고, 대법원 비실명 처리 기준을 표기 방식으로 구현한 점이 기존 마스킹 도구와 다르다. 청크 경계 미탐과 모델 오탐을 스스로 적어 둔 문서 태도도 근거로 삼았다.",
+    "feedback": "미확인",
+    "resilience": "미확인(모델 라이선스가 매출 조건을 포함한 Schift License v2.0)",
+    "post_url": "",
+    "service_url": ""
   }
 ]

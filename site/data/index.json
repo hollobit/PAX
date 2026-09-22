@@ -2,19 +2,19 @@
  "generated_at": "2026-09-22",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 469,
+ "total_cases": 470,
  "total_champions": 208,
  "community": {
-  "members": 2135,
-  "kakao_week": 3392,
-  "kakao_total_observed": 36162,
+  "members": 2132,
+  "kakao_week": 3761,
+  "kakao_total_observed": 36531,
   "threads_observed": 294
  },
  "certified_champions": 5,
  "unattributed_cases": 90,
  "ax_distribution": {
   "AI-Ready": 319,
-  "AI-Enabled": 132,
+  "AI-Enabled": 133,
   "AX 단계 외": 12,
   "AI-First": 5,
   "AI-Native 계획": 1
@@ -22,7 +22,7 @@
  "c_axis_mean": 0.92,
  "p_distribution": {
   "P0": 151,
-  "P1": 303,
+  "P1": 304,
   "P2": 15
  },
  "model_dependency": {
@@ -32,7 +32,7 @@
   "혼합": 11,
   "해외 상용 API": 59,
   "모델 중립(BYO)": 72,
-  "국산 독자모델": 5,
+  "국산 독자모델": 6,
   "미상": 7,
   "국산 오픈웨이트": 1
  },
@@ -463,6 +463,30 @@
     "domestic": true
    },
    {
+    "name": "schift(자체 학습)",
+    "n": 3,
+    "variants": [
+     "schift-ko-pii(자체 학습)",
+     "schift-ko-pii-v6(자체 학습)",
+     "schift-ko-pii-v7(40M NER, 로컬)"
+    ],
+    "cases": [
+     {
+      "id": "8f7e23fec614657c",
+      "title": "한국어 개인정보 탐지 모델 schift-ko-pii 오픈소스 공개"
+     },
+     {
+      "id": "dcba0f654467bdc9",
+      "title": "schift-ko-pii-v6 — 한국어 개인정보 검출·마스킹 경량 모델"
+     },
+     {
+      "id": "afef30356a841dac",
+      "title": "개인정보 마스킹 웹앱 — 국산 탐지 모델에 규칙·사용자 단어를 얹고 법원식 표기까지 고르는 로컬 도구"
+     }
+    ],
+    "domestic": true
+   },
+   {
     "name": "Whisper",
     "n": 2,
     "variants": [
@@ -480,25 +504,6 @@
      }
     ],
     "domestic": false
-   },
-   {
-    "name": "schift(자체 학습)",
-    "n": 2,
-    "variants": [
-     "schift-ko-pii(자체 학습)",
-     "schift-ko-pii-v6(자체 학습)"
-    ],
-    "cases": [
-     {
-      "id": "8f7e23fec614657c",
-      "title": "한국어 개인정보 탐지 모델 schift-ko-pii 오픈소스 공개"
-     },
-     {
-      "id": "dcba0f654467bdc9",
-      "title": "schift-ko-pii-v6 — 한국어 개인정보 검출·마스킹 경량 모델"
-     }
-    ],
-    "domestic": true
    },
    {
     "name": "Jev(TypeSafe AI 판정 모델)",
@@ -732,6 +737,13 @@
     "models": [
      "CLOVA Studio GOV STT(범정부 AI 공통기반)"
     ]
+   },
+   {
+    "id": "afef30356a841dac",
+    "title": "개인정보 마스킹 웹앱 — 국산 탐지 모델에 규칙·사용자 단어를 얹고 법원식 표기까지 고르는 로컬 도구",
+    "models": [
+     "schift-ko-pii-v7(40M NER, 로컬)"
+    ]
    }
   ],
   "dist_detail": {
@@ -760,8 +772,8 @@
     "specified": 3
    },
    "국산 독자모델": {
-    "n": 5,
-    "specified": 4
+    "n": 6,
+    "specified": 5
    },
    "미상": {
     "n": 7,
@@ -775,11 +787,11 @@
   "models_by_dep": [
    {
     "dep": "국산 독자모델",
-    "n": 5,
+    "n": 6,
     "families": [
      {
       "name": "schift(자체 학습)",
-      "n": 2,
+      "n": 3,
       "cases": [
        {
         "id": "8f7e23fec614657c",
@@ -788,12 +800,17 @@
        {
         "id": "dcba0f654467bdc9",
         "title": "schift-ko-pii-v6 — 한국어 개인정보 검출·마스킹 경량 모델"
+       },
+       {
+        "id": "afef30356a841dac",
+        "title": "개인정보 마스킹 웹앱 — 국산 탐지 모델에 규칙·사용자 단어를 얹고 법원식 표기까지 고르는 로컬 도구"
        }
       ],
       "domestic": true,
       "variants": [
        "schift-ko-pii(자체 학습)",
-       "schift-ko-pii-v6(자체 학습)"
+       "schift-ko-pii-v6(자체 학습)",
+       "schift-ko-pii-v7(40M NER, 로컬)"
       ]
      },
      {
@@ -1567,18 +1584,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.058,
- "local_model_rate": 0.262,
- "model_known": 103,
- "license_tagged": 363,
- "license_stated_rate": 0.496,
+ "domestic_model_rate": 0.067,
+ "local_model_rate": 0.26,
+ "model_known": 104,
+ "license_tagged": 364,
+ "license_stated_rate": 0.495,
  "gitlab_cases": 249,
  "gitlab_mirror_pairs": 36,
  "gitlab_open_rate": 0.145,
  "mcp_cases": 84,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 387,
+  "미확인": 388,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1687,7 +1704,7 @@
    ]
   },
   "github": {
-   "count": 140,
+   "count": 141,
    "starred": 112,
    "stars_sum": 176133,
    "maintenance": {
@@ -1780,7 +1797,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 183,
+  "명시 없음": 184,
   "MIT": 118,
   "Apache-2.0": 28,
   "Other": 16,
@@ -1795,7 +1812,7 @@
  },
  "license_matrix": {
   "명시 없음": {
-   "github": 49,
+   "github": 50,
    "gitlab": 134
   },
   "MIT": {
@@ -1845,7 +1862,7 @@
  },
  "license_by_source": {
   "github": {
-   "total": 129,
+   "total": 130,
    "stated": 92
   },
   "github-pages": {
