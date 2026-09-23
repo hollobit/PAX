@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-09-21",
+ "generated_at": "2026-09-23",
  "summary": {
-  "total": 84,
+  "total": 85,
   "counts": {
    "주의": 71,
-   "양호": 13
+   "양호": 14
   },
   "top_warn_axis": "hygiene"
  },
@@ -2804,6 +2804,40 @@
     "data_flow": {
      "verdict": "통과",
      "note": "소스에 외부 호출 대상이 없다 — 단축어 CLI로 로컬에서만 읽고 결과 텍스트를 MCP 클라이언트에 돌려준다. askew.my는 README의 다른 제품 안내 링크이며 코드에서 호출하지 않는다 (근거: src/*.ts URL 전수 스캔)"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
+   "case_id": "198bf13b6b986dd6",
+   "title": "공공기관 내부규정 MCP — 법령 검색에 344개 기관 3만 5천 건 규정을 붙여 상위법과 함께 훑는 서버",
+   "stars": null,
+   "checked_at": "2026-09-23",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "읽기 조회 도구 125종이며 셸·파일 쓰기 코드 없음. 자동 검사의 주의는 정규식 exec 패턴을 셸 실행으로 오인한 것"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "법제처 키는 LAW_OC 환경변수로만 받고 하드코딩 없음 (근거: src/index.ts:16-17 · src/cli.ts:346)"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "package-lock.json으로 버전 고정. NOTICE에 외부 라이브러리·데이터 출처와 라이선스를 따로 표기"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "MIT·유지보수 미상"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "도구 입력을 zod 스키마로 정의해 MCP inputSchema로 변환(src/tool-registry.ts:8,820,848). 셸·child_process·eval 없음 — 패턴 일치는 전부 정규식 .exec()로 법령 본문 파싱 (근거: src/tools/law-text.ts:274,285,298 · law-linkage.ts:51-59)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "호출 대상은 법제처(www.law.go.kr·open.law.go.kr)·알리오(www.alio.go.kr)·법무부·자치법규정보·대법원도서관 공식 도메인과 자체 배포본(fly.dev)뿐이며 제3자 전송·텔레메트리 없음 (근거: 소스 URL 전수 스캔)"
     }
    },
    "dynamic": null,
