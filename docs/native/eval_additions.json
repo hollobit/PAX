@@ -11282,5 +11282,33 @@
     "resilience": "미확인(자료 기준일 표기 공백·지도 기능 준비 중)",
     "post_url": "",
     "service_url": "https://integrated-care-national-dashboard.xgfox54.chatgpt.site/"
+  },
+  {
+    "no": 476,
+    "id": "e83a543b442722be",
+    "org": "개인정보보호위원회",
+    "title": "개인정보위 업무혁신 바이브코딩 챌린지 — 비개발자 직원이 업무 불편을 직접 서비스로 만드는 사내 경진대회",
+    "ax_prev": "AI-Ready",
+    "ax": "AI-Ready",
+    "s": "S1",
+    "s_name": "Script/보조",
+    "c": "C0",
+    "c_name": "기능 제공",
+    "m": "해당 없음",
+    "m_name": "비-MCP 사례",
+    "native_scope": "해당 없음",
+    "status": "Live service",
+    "scope": "Internal",
+    "mcp_role": "Unknown/None",
+    "risk": "R0 최소",
+    "human": "해당 없음",
+    "evidence": "E2 화면·서비스 확인",
+    "confidence": "중간",
+    "gate": "상위 관문 미충족/해당 없음",
+    "rationale": "도구가 아니라 사내 경진대회를 알리는 한 장짜리 사이트라 Script/보조·C0이며 운영 화면을 열어 구성과 일정을 확인해 E2다. 아카이브에서 기관이 비개발자 직원을 겨냥해 바이브코딩 경진대회를 열고 학습 모임이 대회 기간 내내 받치는 구조를 공개한 첫 관측이라 제도 쪽 사례로 둔다. 쇼케이스 화면은 아직 비어 있어 산출물은 확인하지 못했다.",
+    "feedback": "미확인",
+    "resilience": "미확인(쇼케이스 미공개 — 대회 산출물 공개 시 보강 필요)",
+    "post_url": "",
+    "service_url": "https://www.pipc-ax.kr/"
   }
 ]

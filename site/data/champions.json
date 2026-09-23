@@ -993,7 +993,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -5513,6 +5513,12 @@
    "title": "전국 통합돌봄 사업 총괄 대시보드 — 지자체 사업을 분류·지역으로 걸러 비교하고 조건을 공유하는 화면",
    "org": "공직 현장(개인 개발)",
    "url": "https://integrated-care-national-dashboard.xgfox54.chatgpt.site/"
+  },
+  {
+   "id": "e83a543b442722be",
+   "title": "개인정보위 업무혁신 바이브코딩 챌린지 — 비개발자 직원이 업무 불편을 직접 서비스로 만드는 사내 경진대회",
+   "org": "개인정보보호위원회",
+   "url": "https://www.pipc-ax.kr/"
   }
  ]
 }
