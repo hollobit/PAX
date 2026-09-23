@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-09-23T06:37:53Z",
- "count": 69,
+ "updated_at": "2026-09-23T14:35:14Z",
+ "count": 71,
  "videos": [
+  {
+   "id": "pUlFM3htjG0",
+   "title": "신인 보이그룹 데뷔 무대(?) 모두의 AI 너무너무 좋아요",
+   "channel": "과학기술정보통신부",
+   "url": "https://www.youtube.com/watch?v=pUlFM3htjG0",
+   "thumb": "https://i.ytimg.com/vi/pUlFM3htjG0/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-23",
+   "last_shared": "2026-09-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "gIt8EOrm46s",
+   "title": "링 위에 오른 '인간 vs 휴머노이드 로봇'…격투 경기 화제 / 연합뉴스 (Yonhapnews)",
+   "channel": "연합뉴스 Yonhapnews",
+   "url": "https://www.youtube.com/watch?v=gIt8EOrm46s",
+   "thumb": "https://i.ytimg.com/vi/gIt8EOrm46s/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-23",
+   "last_shared": "2026-09-23",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "0KtQBSAfv00",
    "title": "대치동 학원, AI 시대에도 살아남을까? 현업 강사 3인의 솔직한 답변",
