@@ -1,6 +1,30 @@
 {
- "total": 209,
+ "total": 210,
  "champions": [
+  {
+   "id": "github:Yeachan-Heo",
+   "name": "Bellman",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "Yeachan-Heo",
+     "url": "https://github.com/Yeachan-Heo"
+    }
+   ],
+   "affiliation": {
+    "value": "Layoff-Labs",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "cases": [
+    "157289f6e0cd7fd4"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
+    "stars": 0
+   }
+  },
   {
    "id": "github:ChangooLee",
    "name": "Changoo Lee",
@@ -5512,7 +5536,7 @@
    "id": "de85358ecf364f0a",
    "title": "전국 통합돌봄 사업 총괄 대시보드 — 지자체 사업을 분류·지역으로 걸러 비교하고 조건을 공유하는 화면",
    "org": "공직 현장(개인 개발)",
-   "url": "https://integrated-care-national-dashboard.xgfox54.chatgpt.site/"
+   "url": "https://integrated-care-national-dashboard.xgfox54.chatgpt.site/welfare100"
   },
   {
    "id": "e83a543b442722be",
