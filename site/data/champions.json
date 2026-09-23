@@ -1,5 +1,5 @@
 {
- "total": 208,
+ "total": 209,
  "champions": [
   {
    "id": "github:ChangooLee",
@@ -546,10 +546,11 @@
    ],
    "affiliation": null,
    "cases": [
-    "c864500e8cf1d78d"
+    "c864500e8cf1d78d",
+    "198bf13b6b986dd6"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 1,
     "stars": 0
    }
@@ -973,6 +974,26 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:gschamisle",
+   "name": "gschamisle",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "gschamisle",
+     "url": "https://github.com/gschamisle"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "9f6be40ee87d4b84"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },
@@ -1814,7 +1835,7 @@
    ],
    "stats": {
     "case_count": 2,
-    "top_ax": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -5486,6 +5507,12 @@
    "title": "서울 자치구 조례 정합성 지도 — 본청과 25개 구 조례의 법률 인용을 현행 조문과 대조해 지도로",
    "org": "지방자치혁신연구원",
    "url": "https://seoul-dead-cite.vercel.app/"
+  },
+  {
+   "id": "de85358ecf364f0a",
+   "title": "전국 통합돌봄 사업 총괄 대시보드 — 지자체 사업을 분류·지역으로 걸러 비교하고 조건을 공유하는 화면",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://integrated-care-national-dashboard.xgfox54.chatgpt.site/"
   }
  ]
 }

@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-09-22T22:33:51Z",
- "count": 67,
+ "updated_at": "2026-09-23T06:37:53Z",
+ "count": 69,
  "videos": [
+  {
+   "id": "0KtQBSAfv00",
+   "title": "대치동 학원, AI 시대에도 살아남을까? 현업 강사 3인의 솔직한 답변",
+   "channel": "Alex AI",
+   "url": "https://www.youtube.com/watch?v=0KtQBSAfv00",
+   "thumb": "https://i.ytimg.com/vi/0KtQBSAfv00/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-23",
+   "last_shared": "2026-09-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "n2cJ8fjXARI",
+   "title": "[한글자막] 팔란티어 AI 최적화 — 비용 90% 줄인 사례",
+   "channel": "PunkAI",
+   "url": "https://www.youtube.com/watch?v=n2cJ8fjXARI",
+   "thumb": "https://i.ytimg.com/vi/n2cJ8fjXARI/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-22",
+   "last_shared": "2026-09-22",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "3hilsneulfM",
    "title": "잘할 마음 없는 직원이 ‘AI 슬롭’ 쏟아낸다 (원티드랩 윤명훈 사업 총괄)",

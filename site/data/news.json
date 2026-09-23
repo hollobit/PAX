@@ -1,7 +1,46 @@
 {
- "updated_at": "2026-09-22T22:33:52Z",
- "count": 536,
+ "updated_at": "2026-09-23T06:37:55Z",
+ "count": 540,
  "articles": [
+  {
+   "url": "https://www.hani.co.kr/arti/economy/biznews/1279010.html",
+   "title": "세종대 경영전문대학원, 2027학년도 ‘AI 기술경영 DBA’ 신설",
+   "outlet": "한겨레",
+   "published": "2026-09-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-23",
+   "last_shared": "2026-09-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/mnews/article/018/0006374657?sid=100",
+   "title": "'짜고 친' 입찰 잔치에… 망가지는 축제들",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-23",
+   "last_shared": "2026-09-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.blog.naver.com/csmode7/224404982242",
+   "title": "송길영 신간 『시대예보: 수고인류의 시간』 예약판매 시작｜AI 시대, ‘수고인류’는 누구인가",
+   "outlet": "네이버 블로그 | 별빛서재",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-23",
+   "last_shared": "2026-09-23",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5063908",
    "title": "광진구, 27일까지 정책 아이디어 공모…AI 활용 제안도 모집",
@@ -72,6 +111,19 @@
    "title": "구글, 제미나이·안드로이드 결합한 프리미엄 '구글북' 출시",
    "outlet": "AI타임스",
    "published": "2026-09-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-22",
+   "last_shared": "2026-09-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://mdkorea.tistory.com/m/331",
+   "title": "클로드 오퍼스 5.5란 무엇인가? 성능·가격·달라진 점 한눈에 정리 (2026년 9월)",
+   "outlet": "GEO마케팅 연구원 최재용 원장",
+   "published": "2026-09-23",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-22",

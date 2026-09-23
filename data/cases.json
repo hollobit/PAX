@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-22T23:34:42+09:00",
+ "updated_at": "2026-09-23T15:36:43+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -13002,6 +13002,85 @@
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-09-22"
+  },
+  {
+   "tags": [
+    "법령",
+    "인용관계",
+    "시각화",
+    "법제처API",
+    "개정점검"
+   ],
+   "summary": "조문을 고치거나 낯선 업무를 맡았을 때 함께 읽어야 할 조문을 찾도록, 법제처 공개 자료에서 뽑은 인용 관계를 열두 개 분야의 입체 지도로 보여 주는 탐색기다. 이 조문이 참고하는 곳과 이 조문을 참고하는 곳을 갈라 표시하고 항 범위 인용까지 대조하며, 연결을 누르면 본문과 시행일, 공식 출처가 함께 열린다. 위임 문구의 후속 개정 점검을 따로 두었고, 인용 정확도와 누락률은 아직 검증하지 못했다고 화면에 적었다.",
+   "link": "https://gschamisle.github.io/law-orbit/",
+   "model_dependency": "없음(비LLM)",
+   "title": "법의 궤도 — 조문 하나에서 뻗어 나가는 법령 인용 관계를 입체 지도로 펼치는 탐색기",
+   "case_url": "https://github.com/gschamisle/law-orbit",
+   "runtime_env": "브라우저만",
+   "network_req": "인터넷 필수",
+   "source": "kakao",
+   "case_class": "개인 개발",
+   "org": "재정경제부(개인 개발)",
+   "collected_at": "2026-09-23",
+   "org_type": "중앙행정기관",
+   "date": "2026-09-23",
+   "deployment_env": "인터넷망",
+   "task_category": "감사·법무",
+   "id": "9f6be40ee87d4b84",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-09-23"
+  },
+  {
+   "tags": [
+    "MCP",
+    "법령",
+    "공공기관규정",
+    "알리오",
+    "인용그래프"
+   ],
+   "summary": "국가법령정보와 공공기관 경영정보시스템의 내부규정을 한 서버에서 검색·비교하는 MCP로, 법령 도구 여든일곱에 기관 규정과 보고서형 공시 도구를 더해 백스물다섯 개를 제공한다. 기관 규정이 인용한 법령을 자동으로 뽑고 상위법에서 거꾸로 규정을 찾는 역검색, 조문 간 인용 그래프를 붙여 두 영역을 잇는다. 법령만 다루던 기존 서버들과 달리 기관 내부규정 삼만여 건을 함께 훑는 점이 다르며 출처·라이선스 표기를 따로 두었다.",
+   "link": "https://github.com/scvcoder/korean-law-alio-mcp",
+   "model_dependency": "없음(비LLM)",
+   "title": "공공기관 내부규정 MCP — 법령 검색에 344개 기관 3만 5천 건 규정을 붙여 상위법과 함께 훑는 서버",
+   "runtime_env": "MCP·CLI 설정",
+   "network_req": "인터넷 필수",
+   "source": "kakao",
+   "case_class": "커뮤니티",
+   "org": "공직 커뮤니티",
+   "collected_at": "2026-09-23",
+   "org_type": "커뮤니티",
+   "date": "2026-04-26",
+   "deployment_env": "인터넷망",
+   "task_category": "감사·법무",
+   "id": "198bf13b6b986dd6",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-09-23"
+  },
+  {
+   "tags": [
+    "통합돌봄",
+    "보건복지",
+    "지자체비교",
+    "대시보드",
+    "공공데이터"
+   ],
+   "summary": "전국 지자체가 벌이는 통합돌봄 사업을 광역·기초 단위와 사업 분류로 걸러 찾고 견주는 대시보드다. 식사지원·병원동행·주거지원처럼 자주 찾는 갈래를 버튼으로 두고, 결과를 CSV로 내려받거나 현재 검색 조건을 링크로 공유할 수 있다. 분류는 보건복지부 공식 메뉴판 대분류를 따르고 표에 분류가 없을 때만 사업명과 내용으로 보완한다고 기준을 밝혔으며, 오류 제보 창구를 화면에 두었다.",
+   "link": "https://integrated-care-national-dashboard.xgfox54.chatgpt.site/",
+   "model_dependency": "없음(비LLM)",
+   "title": "전국 통합돌봄 사업 총괄 대시보드 — 지자체 사업을 분류·지역으로 걸러 비교하고 조건을 공유하는 화면",
+   "runtime_env": "브라우저만",
+   "network_req": "인터넷 필수",
+   "source": "kakao",
+   "case_class": "개인 개발",
+   "org": "공직 현장(개인 개발)",
+   "collected_at": "2026-09-23",
+   "org_type": "공직 개인",
+   "date": "2026-09-23",
+   "deployment_env": "인터넷망",
+   "task_category": "데이터·통계",
+   "id": "de85358ecf364f0a"
   }
  ]
 }
