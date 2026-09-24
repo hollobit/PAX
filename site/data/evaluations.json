@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-09-24",
- "total": 475,
+ "total": 476,
  "cases": [
   {
    "no": 1,
@@ -15674,6 +15674,39 @@
    "tool_type": "AI 스킬·에이전트",
    "audience": "G2C 공개",
    "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 478,
+   "id": "939022c0f2b66a12",
+   "org": "서울 정비사업 지도(운영 주체 미상)",
+   "title": "서울 정비사업 지도 — 결정·고시 구역과 추진 단계를 공개자료로 모아 한 화면에 얹은 지도",
+   "ax_prev": "AI-Ready",
+   "ax": "AI-Ready",
+   "s": "S1",
+   "s_name": "Single tool",
+   "c": "C1",
+   "c_name": "결과 제공",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Live service",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R0 최소",
+   "human": "검토 후 사용(후보지 단계는 추정, 공식 자료 확인 안내)",
+   "evidence": "E2 화면·서비스 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "단계·유형으로 걸러 지도를 그리는 한 가지 일을 하는 화면이라 S1·C1이며 운영 화면에서 범례와 출처 안내를 확인해 E2다. 확정 구역과 추정 후보지를 범례로 갈라 표시하고 추정이 섞였음을 화면에 적은 점이 같은 갈래의 부동산 정보 서비스와 다른 자리다. 운영 주체가 드러나지 않아 참고로 둔다.",
+   "feedback": "미확인",
+   "resilience": "미확인(운영 주체·갱신 주기 미상, 공개자료 기반 추정 포함)",
+   "post_url": "",
+   "service_url": "https://seoul-redev-map-production.up.railway.app/",
+   "tool_type": "웹 서비스",
+   "audience": "G2C 공개",
+   "p": "P0 읽기 전용(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }

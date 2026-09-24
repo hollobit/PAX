@@ -21,7 +21,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -5543,6 +5543,12 @@
    "title": "개인정보위 업무혁신 바이브코딩 챌린지 — 비개발자 직원이 업무 불편을 직접 서비스로 만드는 사내 경진대회",
    "org": "개인정보보호위원회",
    "url": "https://www.pipc-ax.kr/"
+  },
+  {
+   "id": "939022c0f2b66a12",
+   "title": "서울 정비사업 지도 — 결정·고시 구역과 추진 단계를 공개자료로 모아 한 화면에 얹은 지도",
+   "org": "서울 정비사업 지도(운영 주체 미상)",
+   "url": "https://seoul-redev-map-production.up.railway.app/"
   }
  ]
 }
