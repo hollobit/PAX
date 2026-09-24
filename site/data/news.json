@@ -1,12 +1,129 @@
 {
- "updated_at": "2026-09-23T22:35:33Z",
- "count": 543,
+ "updated_at": "2026-09-24T06:37:37Z",
+ "count": 550,
  "articles": [
+  {
+   "url": "https://share.google/DPlWMmwKActkLhYDr",
+   "title": "구글, '제미나이 4 프로'  테스트 착수 포착…\"UI·웹 디자인 성능 도약\"",
+   "outlet": "AI타임스",
+   "published": "2026-09-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-24",
+   "last_shared": "2026-09-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5",
+   "title": "Getting the most out of Opus 5.5 in Claude and Claude Code /",
+   "outlet": "claude.dev",
+   "published": "2026-09-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-24",
+   "last_shared": "2026-09-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=241762",
+   "title": "[위크픽 클라우드] 클라우드 보안 체계 일원화…행안부, 50개 공공시스템 민간 이전",
+   "outlet": "아이티데일리",
+   "published": "2026-09-21",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-22",
+   "last_shared": "2026-09-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215556",
+   "title": "구글, 제미나이·안드로이드 결합한 프리미엄 '구글북' 출시",
+   "outlet": "AI타임스",
+   "published": "2026-09-22",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-22",
+   "last_shared": "2026-09-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/MYH20260923019200038",
+   "title": "\"유쾌한 홍보부터 재난 대응까지\"…지자체 'AI 행정' 성과",
+   "outlet": "연합뉴스",
+   "published": "2026-09-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-23",
+   "last_shared": "2026-09-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newstap.co.kr/news/articleView.html?idxno=334591",
+   "title": "AWS, 오픈소스 AI 에이전트 ‘스트랜즈 하네스’ 공개…“토큰 비용 평균 28% 절감”",
+   "outlet": "뉴스탭",
+   "published": "2026-09-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-23",
+   "last_shared": "2026-09-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newstap.co.kr/news/articleView.html?idxno=334565",
+   "title": "오픈AI, GPT-6 솔·루나 출시…“성능 높이고 비용은 절반으로”",
+   "outlet": "뉴스탭",
+   "published": "2026-09-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-23",
+   "last_shared": "2026-09-23",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.hani.co.kr/arti/economy/biznews/1279010.html",
    "title": "세종대 경영전문대학원, 2027학년도 ‘AI 기술경영 DBA’ 신설",
    "outlet": "한겨레",
    "published": "2026-09-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-23",
+   "last_shared": "2026-09-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215628",
+   "title": "노타 ‘휴머노이드 서밋’서 로봇 AI 모델 7종 최적화 성과 공개",
+   "outlet": "AI타임스",
+   "published": "2026-09-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-23",
+   "last_shared": "2026-09-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215583",
+   "title": "새로운 최고 성능·가격 40% 인하…앤트로픽, '클로드 오퍼스 5.5' 공개",
+   "outlet": "AI타임스",
+   "published": "2026-09-23",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-23",
@@ -107,19 +224,6 @@
    ]
   },
   {
-   "url": "https://www.itdaily.kr/news/articleView.html?idxno=241762",
-   "title": "[위크픽 클라우드] 클라우드 보안 체계 일원화…행안부, 50개 공공시스템 민간 이전",
-   "outlet": "아이티데일리",
-   "published": "2026-09-21",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-22",
-   "last_shared": "2026-09-22",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
    "url": "https://www.fnnews.com/news/202609230441324467",
    "title": "속도조절 외치던 앤트로픽·오픈AI, 새 AI모델로 가성비 속도전",
    "outlet": "파이낸셜뉴스",
@@ -136,19 +240,6 @@
    "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=702365",
    "title": "[Tech Insight] 대화 보단 판단하고 결정하는 AI 모델 '제브'에 놀라는 이유",
    "outlet": "디지털투데이 (DigitalToday)",
-   "published": "2026-09-22",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-22",
-   "last_shared": "2026-09-22",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=215556",
-   "title": "구글, 제미나이·안드로이드 결합한 프리미엄 '구글북' 출시",
-   "outlet": "AI타임스",
    "published": "2026-09-22",
    "kind": "기사",
    "shares": 1,
