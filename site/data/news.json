@@ -1,7 +1,124 @@
 {
- "updated_at": "2026-09-24T14:35:04Z",
- "count": 550,
+ "updated_at": "2026-09-24T22:34:28Z",
+ "count": 557,
  "articles": [
+  {
+   "url": "https://www.yna.co.kr/view/MYH20260923019200038",
+   "title": "\"유쾌한 홍보부터 재난 대응까지\"…지자체 'AI 행정' 성과",
+   "outlet": "연합뉴스",
+   "published": "2026-09-23",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-23",
+   "last_shared": "2026-09-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newstap.co.kr/news/articleView.html?idxno=334565",
+   "title": "오픈AI, GPT-6 솔·루나 출시…“성능 높이고 비용은 절반으로”",
+   "outlet": "뉴스탭",
+   "published": "2026-09-23",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-23",
+   "last_shared": "2026-09-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/MYH20260925001500038",
+   "title": "\"생산 현장·채용까지\"…AI 체질 개선 속도전",
+   "outlet": "연합뉴스",
+   "published": "2026-09-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-24",
+   "last_shared": "2026-09-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=490198",
+   "title": "딥시크도 “AI 에이전트 절대 믿지 마라”…스스로 통제 벗어난 사례 공개",
+   "outlet": "핀포인트뉴스",
+   "published": "2026-09-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-24",
+   "last_shared": "2026-09-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.nocutnews.co.kr/news/6582845",
+   "title": "추석 밥상 오른 청년 취업난…\"AI 탓\"이라 할 수 있을까",
+   "outlet": "노컷뉴스",
+   "published": "2026-09-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-24",
+   "last_shared": "2026-09-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mk.co.kr/news/it/12158192",
+   "title": "공공행정에도 AI 에이전트…SKT, 빅데이터 활용사례 공개",
+   "outlet": "매일경제",
+   "published": "2026-09-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-24",
+   "last_shared": "2026-09-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202609231039013743",
+   "title": "앤트로픽·오픈AI \"속도조절\" 외치더니 가성비 AI 출시 경쟁",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-09-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-24",
+   "last_shared": "2026-09-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.etnews.com/20260922000458",
+   "title": "“보훈심사부터 치안 현장까지”…행안부, 6개 분야 행정 서비스 AI로 혁신",
+   "outlet": "미래를 보는 창 - 전자신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-24",
+   "last_shared": "2026-09-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=702898",
+   "title": "오픈AI, 챗GPT 모바일앱에 음성 기반 에이전트 기능 추가",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-09-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-24",
+   "last_shared": "2026-09-24",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://share.google/DPlWMmwKActkLhYDr",
    "title": "구글, '제미나이 4 프로'  테스트 착수 포착…\"UI·웹 디자인 성능 도약\"",
@@ -55,34 +172,8 @@
    ]
   },
   {
-   "url": "https://www.yna.co.kr/view/MYH20260923019200038",
-   "title": "\"유쾌한 홍보부터 재난 대응까지\"…지자체 'AI 행정' 성과",
-   "outlet": "연합뉴스",
-   "published": "2026-09-23",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-23",
-   "last_shared": "2026-09-23",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
    "url": "https://www.newstap.co.kr/news/articleView.html?idxno=334591",
    "title": "AWS, 오픈소스 AI 에이전트 ‘스트랜즈 하네스’ 공개…“토큰 비용 평균 28% 절감”",
-   "outlet": "뉴스탭",
-   "published": "2026-09-23",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-23",
-   "last_shared": "2026-09-23",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.newstap.co.kr/news/articleView.html?idxno=334565",
-   "title": "오픈AI, GPT-6 솔·루나 출시…“성능 높이고 비용은 절반으로”",
    "outlet": "뉴스탭",
    "published": "2026-09-23",
    "kind": "기사",
