@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-09-24T06:37:34Z",
- "count": 71,
+ "updated_at": "2026-09-24T14:35:01Z",
+ "count": 72,
  "videos": [
+  {
+   "id": "nI8jjkpGF0Q",
+   "title": "[무료] 엑셀만 올리면 바로 지도로 변환되는 '바로맵'",
+   "channel": "초실행관",
+   "url": "https://www.youtube.com/watch?v=nI8jjkpGF0Q",
+   "thumb": "https://i.ytimg.com/vi/nI8jjkpGF0Q/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-24",
+   "last_shared": "2026-09-24",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "pUlFM3htjG0",
    "title": "신인 보이그룹 데뷔 무대(?) 모두의 AI 너무너무 좋아요",
