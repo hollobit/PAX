@@ -11366,5 +11366,33 @@
     "resilience": "미확인(운영 주체·갱신 주기 미상, 공개자료 기반 추정 포함)",
     "post_url": "",
     "service_url": "https://seoul-redev-map-production.up.railway.app/"
+  },
+  {
+    "no": 479,
+    "id": "4ce9fa1c75ec36b5",
+    "org": "공직 현장(개인 개발)",
+    "title": "소담 라이노 오프라인 MCP — 라이선스 없이 건축 3D 모델을 만들고 되읽어 검수하는 로컬 도구",
+    "ax_prev": "AI-Ready",
+    "ax": "AI-Ready",
+    "s": "S2",
+    "s_name": "Tool bundle",
+    "c": "C1",
+    "c_name": "결과 제공",
+    "m": "M2",
+    "m_name": "재사용형",
+    "native_scope": "건축 3D 모델 파일(.3dm) 생성·검수·렌더링 — 공공 데이터 아님",
+    "status": "Published tool",
+    "scope": "Internal",
+    "mcp_role": "Server",
+    "risk": "R1 낮음",
+    "human": "검토 후 사용(자동 완성 제품이 아니라고 범위 명시)",
+    "evidence": "E1 코드·도구 확인",
+    "confidence": "중간",
+    "gate": "상위 관문 미충족/해당 없음",
+    "rationale": "모델 생성·수정·검수·렌더링 도구 여덟을 한 서버에 묶어 S2·C1이며 특정 업무에 매이지 않아 M2다. 경로를 작업공간 밖으로 못 나가게 막고 외부 실행 파일을 환경변수로만 받는 처리가 로컬 파일을 다루는 MCP에서 드물게 단정하다. 상용 모델러 라이선스 없이 설계 검토용 3D를 다루게 한 점이 시설 직렬에 닿는 자리이며, 무엇을 못 하는지 먼저 적은 문서 태도도 근거로 삼았다.",
+    "feedback": "미확인",
+    "resilience": "미확인(윈도우 전용·Blender 별도 설치 필요)",
+    "post_url": "",
+    "service_url": ""
   }
 ]

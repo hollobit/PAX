@@ -2,18 +2,18 @@
  "generated_at": "2026-09-25",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 476,
+ "total_cases": 477,
  "total_champions": 210,
  "community": {
-  "members": 2193,
-  "kakao_week": 4028,
-  "kakao_total_observed": 38010,
-  "threads_observed": 305
+  "members": 2158,
+  "kakao_week": 4205,
+  "kakao_total_observed": 38187,
+  "threads_observed": 306
  },
  "certified_champions": 5,
  "unattributed_cases": 93,
  "ax_distribution": {
-  "AI-Ready": 325,
+  "AI-Ready": 326,
   "AI-Enabled": 133,
   "AX 단계 외": 12,
   "AI-First": 5,
@@ -21,13 +21,13 @@
  },
  "c_axis_mean": 0.91,
  "p_distribution": {
-  "P0": 155,
+  "P0": 156,
   "P1": 306,
   "P2": 15
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 227,
+  "없음(비LLM)": 228,
   "해외 오픈웨이트(로컬)": 27,
   "혼합": 11,
   "해외 상용 API": 59,
@@ -752,7 +752,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 227,
+    "n": 228,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -1587,15 +1587,15 @@
  "domestic_model_rate": 0.067,
  "local_model_rate": 0.26,
  "model_known": 104,
- "license_tagged": 367,
- "license_stated_rate": 0.496,
+ "license_tagged": 368,
+ "license_stated_rate": 0.497,
  "gitlab_cases": 249,
  "gitlab_mirror_pairs": 36,
  "gitlab_open_rate": 0.145,
- "mcp_cases": 86,
+ "mcp_cases": 87,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 394,
+  "미확인": 395,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1704,7 +1704,7 @@
    ]
   },
   "github": {
-   "count": 144,
+   "count": 145,
    "starred": 112,
    "stars_sum": 176133,
    "maintenance": {
@@ -1799,7 +1799,7 @@
  "license_distribution": {
   "명시 없음": 185,
   "MIT": 120,
-  "Apache-2.0": 28,
+  "Apache-2.0": 29,
   "Other": 16,
   "GNU AGPLv3": 5,
   "AGPL-3.0": 4,
@@ -1820,7 +1820,7 @@
    "gitlab": 50
   },
   "Apache-2.0": {
-   "github": 9,
+   "github": 10,
    "gitlab": 19
   },
   "Other": {
@@ -1862,8 +1862,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 133,
-   "stated": 94
+   "total": 134,
+   "stated": 95
   },
   "github-pages": {
    "total": 16,
@@ -1875,12 +1875,12 @@
   }
  },
  "mcp_stats": {
-  "total": 86,
+  "total": 87,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
-   "Server": 74,
+   "Server": 75,
    "Client/Host": 7,
    "Unknown/None": 4
   },
@@ -1888,7 +1888,7 @@
    "C0": 68,
    "C2": 6,
    "C3": 1,
-   "C1": 11
+   "C1": 12
   },
   "maintenance": {
    "활발": 42,
@@ -1989,7 +1989,7 @@
   },
   {
    "id": "578e4da94db0682d",
-   "title": "건설공사 표준품셈 검색 MCP 공개",
+   "title": "표준품셈 MCP — 건설·전기·정보통신·소방 4개 분야 2,888개 항목 검색",
    "github": "https://github.com/seum8660/pumsem",
    "gitlab": "https://gitlab.aigov.go.kr/archimin/pumsem"
   },

@@ -595,11 +595,12 @@
     "evidence": "GitHub 공개 프로필 소속란"
    },
    "cases": [
+    "4ce9fa1c75ec36b5",
     "c483c6ad4ccff0ab",
     "f5f24469d5ca281f"
    ],
    "stats": {
-    "case_count": 2,
+    "case_count": 3,
     "top_ax": 2,
     "stars": 0
    }
