@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-09-23",
+ "generated_at": "2026-09-25",
  "summary": {
-  "total": 85,
+  "total": 86,
   "counts": {
    "주의": 71,
-   "양호": 14
+   "양호": 15
   },
   "top_warn_axis": "hygiene"
  },
@@ -1079,7 +1079,7 @@
   },
   {
    "case_id": "578e4da94db0682d",
-   "title": "건설공사 표준품셈 검색 MCP 공개",
+   "title": "표준품셈 MCP — 건설·전기·정보통신·소방 4개 분야 2,888개 항목 검색",
    "stars": 5,
    "checked_at": "2026-09-07",
    "axes": {
@@ -2838,6 +2838,40 @@
     "data_flow": {
      "verdict": "통과",
      "note": "호출 대상은 법제처(www.law.go.kr·open.law.go.kr)·알리오(www.alio.go.kr)·법무부·자치법규정보·대법원도서관 공식 도메인과 자체 배포본(fly.dev)뿐이며 제3자 전송·텔레메트리 없음 (근거: 소스 URL 전수 스캔)"
+    }
+   },
+   "dynamic": null,
+   "overall": "양호"
+  },
+  {
+   "case_id": "4ce9fa1c75ec36b5",
+   "title": "소담 라이노 오프라인 MCP — 라이선스 없이 건축 3D 모델을 만들고 되읽어 검수하는 로컬 도구",
+   "stars": null,
+   "checked_at": "2026-09-25",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "파일 경로를 작업공간 안으로 제한한다 — 파일명에 경로 구분자가 있으면 거절하고 resolve 후 부모가 작업공간 루트가 아니면 \"path escapes workspace\"로 막는다 (근거: sodam_rhino_mcp/server.py:41-49)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "requirements.txt가 버전을 고정(rhino3dm 8.35.0 · mcp 1.30.0 · Pillow 11.3.0 · numpy 2.3.3)"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Apache-2.0(LICENSE) + NOTICE·NOTICE.md에 GPL 구성요소 경계와 권리 점검표 별도 기재"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "Blender 호출은 execFile 형태의 리스트 인자(셸 미경유)이고 실행 파일은 환경변수 SODAM_BLENDER_EXE로 받아 is_file()로 검사, 스크립트·장면 파일은 임시 디렉터리에 써서 넘긴다. 사용자 문자열이 명령 문자열로 조합되는 경로 없음 (근거: blender_render.py:80-94 · blend_import.py:36-37)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "소스에 네트워크 호출이 없다(requests·urllib·httpx 0건). 모든 처리가 로컬 파일과 Blender 실행으로 끝난다"
     }
    },
    "dynamic": null,
