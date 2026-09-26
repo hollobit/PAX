@@ -3136,3 +3136,135 @@ a.dash-tile:hover, a.dash-tile:focus-visible {
   color: var(--ink-soft);
   font-size: 0.78rem;
 }
+
+/* ---- 3D PAX 거리 산책 (1인칭 오버레이) ---- */
+.pax3d-street {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background: #cfe3ea;
+}
+
+.pax3d-street canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.pax3d-street__hud {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  max-width: min(620px, calc(100% - 15rem));
+  pointer-events: none;
+}
+
+.pax3d-street__hud p,
+.pax3d-street__help,
+.pax3d-street__hint {
+  margin: 0 0 0.35rem;
+  padding: 0.3rem 0.6rem;
+  border: 1.5px solid #221d16;
+  border-radius: 6px;
+  background: rgb(251 246 234 / 0.93);
+  color: #221d16;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.pax3d-street__title {
+  font-weight: 700;
+}
+
+.pax3d-street__tools {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.pax3d-street__hint {
+  position: absolute;
+  left: 50%;
+  bottom: 3.2rem;
+  transform: translateX(-50%);
+  max-width: 80%;
+  font-weight: 700;
+  text-align: center;
+  pointer-events: none;
+}
+
+.pax3d-street__hint[hidden] {
+  display: none;
+}
+
+.pax3d-street__help {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  margin: 0;
+  pointer-events: none;
+}
+
+.pax3d-street__attrib {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.4rem;
+  max-width: 45%;
+  margin: 0;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  background: rgb(255 255 255 / 0.85);
+  color: #333;
+  font-size: 0.7rem;
+}
+
+.pax3d-street::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  border: 1.5px solid #221d16;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 0.8);
+  pointer-events: none;
+}
+
+.pax3d-street__pad {
+  position: absolute;
+  left: 1rem;
+  bottom: 3.4rem;
+  display: none;
+  grid-template-columns: repeat(3, 3rem);
+  grid-template-rows: repeat(2, 3rem);
+  gap: 0.3rem;
+}
+
+.pax3d-street__key {
+  border: 1.5px solid #221d16;
+  border-radius: 8px;
+  background: rgb(251 246 234 / 0.9);
+  font-size: 1.1rem;
+  touch-action: none;
+}
+
+.pax3d-street__key--f { grid-column: 2; grid-row: 1; }
+.pax3d-street__key--l { grid-column: 1; grid-row: 2; }
+.pax3d-street__key--b { grid-column: 2; grid-row: 2; }
+.pax3d-street__key--r { grid-column: 3; grid-row: 2; }
+
+@media (pointer: coarse) {
+  .pax3d-street__pad {
+    display: grid;
+  }
+
+  .pax3d-street__help {
+    display: none;
+  }
+}

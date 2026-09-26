@@ -1,9 +1,9 @@
 // 3D PAX 미니어처 세계 — 시도 지형·시군구 경계·실제 지도 타일, 사례 건물, 카메라와 선택.
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { toon, toonGradient, skyTexture, signSprite, createPostPass } from './pax3d-look.js?v=dbbbdea6';
-import { ISLANDS, TASK_COLORS, FALLBACK_COLOR, shapeOf } from './pax3d-data.js?v=24c96a86';
-import { buildingGeometries, mountains, trees, clouds, pin, dokdo } from './pax3d-props.js?v=8e15dbbd';
+import { toon, toonGradient, skyTexture, signSprite, createPostPass } from './pax3d-look.js?v=a66df86b';
+import { ISLANDS, SEATS, TASK_COLORS, FALLBACK_COLOR, shapeOf } from './pax3d-data.js?v=a28d94ec';
+import { buildingGeometries, mountains, trees, clouds, pin, dokdo } from './pax3d-props.js?v=968f3044';
 import {
   LAND_H, project, unproject, toWorld, projectPolys, rng, inPolys, polysArea, randomIn, scatter, blobRing,
 } from './pax3d-geom.js?v=f13514eb';
@@ -17,14 +17,7 @@ const LABEL_AT = {
   대구: [128.6, 35.87], 울산: [129.26, 35.56], 부산: [129.06, 35.16], 경남: [128.22, 35.3],
   제주: [126.55, 33.38],
 };
-// 시군구를 모르는 시도 사례는 시·도청 앞에 모은다 — 확대했을 때 엉뚱한 동네에 서 있지 않도록.
-const SEATS = {
-  서울: [126.978, 37.566], 부산: [129.075, 35.18], 대구: [128.601, 35.871], 인천: [126.705, 37.456],
-  광주: [126.852, 35.16], 대전: [127.385, 36.35], 울산: [129.311, 35.539], 세종: [127.289, 36.48],
-  경기: [127.009, 37.275], 강원: [127.73, 37.885], 충북: [127.491, 36.635], 충남: [126.673, 36.659],
-  전북: [127.108, 35.82], 전남: [126.463, 34.816], 경북: [128.505, 36.576], 경남: [128.692, 35.238],
-  제주: [126.498, 33.489],
-};
+
 
 const REGION_TINTS = ['#b9d49a', '#c6d9a1', '#aecf95', '#cfdca9', '#bcd7a6', '#c3d39a'];
 const UNOBSERVED = '#cfc9b8';
@@ -460,7 +453,7 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, onHover, onPi
   resize();
 
   const clock = new THREE.Clock();
-  renderer.setAnimationLoop(() => {
+  function frame() {
     const t = clock.getElapsedTime();
     if (flight) {
       const k = Math.min(1, (performance.now() - flight.t0) / 1100);
@@ -504,7 +497,8 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, onHover, onPi
       onHover(hit && hit.caseId ? hit.caseId : null, ev.clientX, ev.clientY);
     }
     post.render(scene, camera);
-  });
+  }
+  renderer.setAnimationLoop(frame);
 
   return {
     setHighlight,
@@ -528,6 +522,8 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, onHover, onPi
     debug: () => ({ tiles: tiles.stats(), d: camera.position.distanceTo(controls.target), target: controls.target.toArray() }),
     setAutoRotate(on) { controls.autoRotate = on; },
     onUserInteract(fn) { userInteract = fn; },
+    /** 거리 산책 중에는 지도 렌더링을 멈춰 GPU를 양보한다 */
+    setPaused(on) { renderer.setAnimationLoop(on ? null : frame); },
     get flying() { return Boolean(flight); },
   };
 }

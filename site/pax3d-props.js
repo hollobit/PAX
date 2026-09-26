@@ -3,7 +3,7 @@
 // 인스턴스 색(업무 유형)이 그 위에 곱해진다 — 한 색으로 벽과 지붕이 구분된다.
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
-import { toon, signSprite } from './pax3d-look.js?v=dbbbdea6';
+import { toon, signSprite } from './pax3d-look.js?v=a66df86b';
 
 function tinted(geo, shade) {
   const n = geo.attributes.position.count;
