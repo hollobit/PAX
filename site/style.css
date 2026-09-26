@@ -2575,3 +2575,468 @@ a.dash-tile:hover, a.dash-tile:focus-visible {
 @media (max-width: 480px) {
   .dash-rank__row { grid-template-columns: 5.4rem 1fr 1.9rem 2.6rem; }
 }
+
+/* ==========================================================================
+   3D PAX — 미니어처 대한민국 탐험 (pax3d.html)
+   무대(3D)는 덧입힌 층이고, 오른쪽 패널만으로도 모든 사례에 닿는다.
+   ========================================================================== */
+.site-header--compact {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.pax3d {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 1rem;
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
+
+.pax3d-stage {
+  position: relative;
+  height: min(82vh, 900px);
+  min-height: 520px;
+  overflow: hidden;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-md);
+  background: linear-gradient(#9cc9e8, #f6ecd8);
+  box-shadow: 0 2px 10px hsl(var(--shadow-color) / 0.18);
+}
+
+.pax3d-stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none;
+}
+
+.pax3d-stage--fallback canvas {
+  display: none;
+}
+
+.pax3d-fallback[hidden] {
+  display: none;
+}
+
+.pax3d-status,
+.pax3d-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+  color: #221d16;
+  font-weight: 600;
+}
+
+.pax3d-hud {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  max-width: min(560px, calc(100% - 11rem));
+  pointer-events: none;
+}
+
+.pax3d-hud p {
+  display: inline-block;
+  margin: 0 0 0.35rem;
+  padding: 0.3rem 0.6rem;
+  border: 1.5px solid #221d16;
+  border-radius: 6px;
+  background: rgb(251 246 234 / 0.92);
+  color: #221d16;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.pax3d-hud__hint {
+  color: #6b6153 !important;
+}
+
+.pax3d-tools {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.pax3d-tool {
+  padding: 0.35rem 0.7rem;
+  border: 1.5px solid #221d16;
+  border-radius: 6px;
+  background: #fbf6ea;
+  color: #221d16;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pax3d-tool[aria-pressed="false"] {
+  background: #e9e3d6;
+  color: #8a8272;
+}
+
+.pax3d-tool:focus-visible,
+.pax3d-chip:focus-visible,
+.pax3d-tab:focus-visible,
+.pax3d-result:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.pax3d-legend {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  max-width: min(340px, calc(100% - 1.5rem));
+  padding: 0.4rem 0.7rem;
+  border: 1.5px solid #221d16;
+  border-radius: 6px;
+  background: rgb(251 246 234 / 0.94);
+  color: #221d16;
+  font-size: 0.8rem;
+}
+
+.pax3d-legend summary {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.pax3d-legend ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.7rem;
+  margin-bottom: 0.3rem;
+}
+
+.pax3d-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.pax3d-legend__h {
+  margin: 0.5rem 0 0.2rem;
+  font-weight: 700;
+}
+
+.pax3d-legend__note {
+  margin: 0.4rem 0 0;
+  color: #6b6153;
+  line-height: 1.45;
+}
+
+.pax3d-tip {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  gap: 0.15rem;
+  max-width: 300px;
+  padding: 0.45rem 0.65rem;
+  border: 1.5px solid #221d16;
+  border-radius: 6px;
+  background: #fbf6ea;
+  color: #221d16;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  pointer-events: none;
+  box-shadow: 2px 2px 0 #221d16;
+}
+
+.pax3d-tip span {
+  color: #6b6153;
+}
+
+.pax3d-dot {
+  flex: none;
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1px solid rgb(0 0 0 / 0.35);
+  border-radius: 2px;
+}
+
+/* ---- 패널 ---- */
+.pax3d-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: min(82vh, 900px);
+  min-height: 520px;
+  overflow: auto;
+  padding: 0.85rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+}
+
+.pax3d-panel > * {
+  flex: none;
+}
+
+.pax3d-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.pax3d-tab {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: transparent;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.pax3d-tab[aria-selected="true"] {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.pax3d-search {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+}
+
+.pax3d-values {
+  max-height: 34vh;
+  overflow: auto;
+}
+
+.pax3d-values__group {
+  margin: 0.4rem 0 0.25rem;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.pax3d-values__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.pax3d-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.pax3d-chip[aria-pressed="true"] {
+  border-color: var(--accent-2);
+  box-shadow: inset 0 0 0 1px var(--accent-2);
+  background: var(--badge-central-bg);
+  color: var(--badge-central-fg);
+}
+
+.pax3d-chip__n {
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.pax3d-chip__tier {
+  padding: 0 0.3rem;
+  border-radius: 3px;
+  background: var(--accent-2);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.pax3d-empty {
+  color: var(--ink-faint);
+  font-size: 0.85rem;
+}
+
+.pax3d-case {
+  position: relative;
+  padding: 0.8rem 0.9rem;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.pax3d-case__close {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.45rem;
+  border: 0;
+  background: none;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.pax3d-case__org {
+  margin: 0 1.5rem 0.2rem 0;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+}
+
+.pax3d-case__title {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.pax3d-case__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.pax3d-tag {
+  --tag: var(--rule-strong);
+  padding: 0.05rem 0.4rem;
+  border: 1px solid var(--tag);
+  border-left-width: 4px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+}
+
+.pax3d-case__summary {
+  margin: 0.6rem 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.pax3d-case__champs {
+  margin: 0 0 0.6rem;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.pax3d-linkish {
+  margin-right: 0.35rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent-2);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.pax3d-case__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.pax3d-btn {
+  padding: 0.35rem 0.75rem;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pax3d-btn--primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.pax3d-results__head {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.pax3d-results__sub {
+  margin: 0.2rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+}
+
+.pax3d-results__link {
+  display: inline-block;
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.pax3d-results__list {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.pax3d-result {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.1rem 0.45rem;
+  align-items: baseline;
+  width: 100%;
+  padding: 0.35rem 0.45rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pax3d-result:hover,
+.pax3d-result[aria-current="true"] {
+  border-color: var(--rule);
+  background: var(--bg-inset);
+}
+
+.pax3d-result__title {
+  font-size: 0.86rem;
+  line-height: 1.4;
+}
+
+.pax3d-result__meta {
+  grid-column: 2;
+  color: var(--ink-faint);
+  font-size: 0.75rem;
+}
+
+.pax3d-more {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.35rem;
+  border: 1px dashed var(--rule-strong);
+  border-radius: var(--radius-sm);
+  background: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1099px) {
+  .pax3d {
+    grid-template-columns: 1fr;
+  }
+
+  .pax3d-stage {
+    height: 64vh;
+    min-height: 380px;
+  }
+
+  .pax3d-panel {
+    height: auto;
+    min-height: 0;
+  }
+
+  .pax3d-hud__hint {
+    display: none !important;
+  }
+}
