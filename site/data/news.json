@@ -1,16 +1,29 @@
 {
- "updated_at": "2026-09-25T22:35:23Z",
- "count": 557,
+ "updated_at": "2026-09-26T06:36:39Z",
+ "count": 565,
  "articles": [
+  {
+   "url": "https://www.pressian.com/pages/articles/2026091415153836288",
+   "title": "AI를 사지 않고 직접 만든 공무원…‘IT변방’ 전북에서 일어난 작은 반란",
+   "outlet": "프레시안",
+   "published": "2026-09-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-26",
+   "last_shared": "2026-09-26",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.yna.co.kr/view/MYH20260923019200038",
    "title": "\"유쾌한 홍보부터 재난 대응까지\"…지자체 'AI 행정' 성과",
    "outlet": "연합뉴스",
    "published": "2026-09-23",
    "kind": "기사",
-   "shares": 2,
+   "shares": 3,
    "first_shared": "2026-09-23",
-   "last_shared": "2026-09-24",
+   "last_shared": "2026-09-25",
    "sources": [
     "kakao"
    ]
@@ -21,9 +34,113 @@
    "outlet": "뉴스탭",
    "published": "2026-09-23",
    "kind": "기사",
-   "shares": 2,
+   "shares": 3,
    "first_shared": "2026-09-23",
-   "last_shared": "2026-09-24",
+   "last_shared": "2026-09-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=702898",
+   "title": "오픈AI, 챗GPT 모바일앱에 음성 기반 에이전트 기능 추가",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-09-24",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-24",
+   "last_shared": "2026-09-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/MYH20260925009800038",
+   "title": "[CEO풍향계] '반도체 역량 강화' 최태원…'AI속도전' 구자은",
+   "outlet": "연합뉴스",
+   "published": "2026-09-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-25",
+   "last_shared": "2026-09-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20260922040400017",
+   "title": "[테크스냅] KT, NIA와 글로벌 AI 인재 양성 협력",
+   "outlet": "연합뉴스",
+   "published": "2026-09-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-25",
+   "last_shared": "2026-09-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.tokenpost.kr/news/ai/414186",
+   "title": "리커시브, AI 반도체 설계 주기 수주 단축 목표",
+   "outlet": "토큰포스트",
+   "published": "2026-09-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-25",
+   "last_shared": "2026-09-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202609260433370995",
+   "title": "\"삼성전자·SK하이닉스 독주 체제 강화\"…증시 쏠림 속 AI 데이터센터 수혜주 주목",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-09-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-25",
+   "last_shared": "2026-09-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.bosa.co.kr/news/articleView.html?idxno=3012790",
+   "title": "고대의대, 과기부 기초연구사업 23개 과제 선정",
+   "outlet": "의학신문",
+   "published": "2026-09-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-25",
+   "last_shared": "2026-09-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215636",
+   "title": "구글, '제미나이 3.8 플래시 TTS' 공개...'음성 디자인' 패러다임 연다",
+   "outlet": "AI타임스",
+   "published": "2026-09-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-25",
+   "last_shared": "2026-09-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://lnkd.in/p/gi5Vyr4q",
+   "title": "&quot;저는 코드를 볼 줄 모릅니다.&quot;\n \n3일 전, 저는 면접장에서 뒤통수를 맞았습니다.\n \n프로젝트에 투입할 프리랜서 개발자 면접이었습니다.\n이력서는 화려했습니다. 구현, 구축, 배포, 운영 경험.\n \n대화를 시작하자마자 감이 왔습니다.\n 이 분, AI를 진짜 잘 쓰시는",
+   "outlet": "LinkedIn",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-25",
+   "last_shared": "2026-09-25",
    "sources": [
     "kakao"
    ]
@@ -98,19 +215,6 @@
    "title": "“보훈심사부터 치안 현장까지”…행안부, 6개 분야 행정 서비스 AI로 혁신",
    "outlet": "미래를 보는 창 - 전자신문",
    "published": "",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-24",
-   "last_shared": "2026-09-24",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=702898",
-   "title": "오픈AI, 챗GPT 모바일앱에 음성 기반 에이전트 기능 추가",
-   "outlet": "디지털투데이 (DigitalToday)",
-   "published": "2026-09-24",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-24",

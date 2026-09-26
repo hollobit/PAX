@@ -1,5 +1,5 @@
 {
- "total": 210,
+ "total": 211,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -810,6 +810,26 @@
    "stats": {
     "case_count": 3,
     "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:crayon-sim",
+   "name": "crayon-sim",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "crayon-sim",
+     "url": "https://github.com/crayon-sim"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "9deddc356d5102b2"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },
