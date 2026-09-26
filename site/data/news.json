@@ -1,7 +1,85 @@
 {
- "updated_at": "2026-09-26T14:37:18Z",
- "count": 569,
+ "updated_at": "2026-09-26T22:36:01Z",
+ "count": 573,
  "articles": [
+  {
+   "url": "https://www.yna.co.kr/view/MYH20260923019200038",
+   "title": "\"유쾌한 홍보부터 재난 대응까지\"…지자체 'AI 행정' 성과",
+   "outlet": "연합뉴스",
+   "published": "2026-09-23",
+   "kind": "기사",
+   "shares": 4,
+   "first_shared": "2026-09-23",
+   "last_shared": "2026-09-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newstap.co.kr/news/articleView.html?idxno=334565",
+   "title": "오픈AI, GPT-6 솔·루나 출시…“성능 높이고 비용은 절반으로”",
+   "outlet": "뉴스탭",
+   "published": "2026-09-23",
+   "kind": "기사",
+   "shares": 4,
+   "first_shared": "2026-09-23",
+   "last_shared": "2026-09-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=702898",
+   "title": "오픈AI, 챗GPT 모바일앱에 음성 기반 에이전트 기능 추가",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-09-24",
+   "kind": "기사",
+   "shares": 3,
+   "first_shared": "2026-09-24",
+   "last_shared": "2026-09-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.bosa.co.kr/news/articleView.html?idxno=3012790",
+   "title": "고대의대, 과기부 기초연구사업 23개 과제 선정",
+   "outlet": "의학신문",
+   "published": "2026-09-25",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-25",
+   "last_shared": "2026-09-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215636",
+   "title": "구글, '제미나이 3.8 플래시 TTS' 공개...'음성 디자인' 패러다임 연다",
+   "outlet": "AI타임스",
+   "published": "2026-09-24",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-25",
+   "last_shared": "2026-09-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20260926014200009",
+   "title": "오픈AI 에이전트, 챗GPT 이용자 이미지 53장 무단 유출",
+   "outlet": "연합뉴스",
+   "published": "2026-09-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-26",
+   "last_shared": "2026-09-26",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.vegannews.co.kr/mobile/article.html?no=388127",
    "title": "[비건뉴스] [단독] 챗GPT 월 79만원 요금제 나오나…프로 맥스 준비 정황",
@@ -16,10 +94,49 @@
    ]
   },
   {
+   "url": "https://www.sijung.co.kr/news/articleView.html?idxno=437795",
+   "title": "노원구, 행안부 ‘온AI’ 시범 지자체 선정...AI 행정혁신 본격화",
+   "outlet": "시정일보",
+   "published": "2026-09-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-26",
+   "last_shared": "2026-09-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.pressian.com/pages/articles/2026091415153836288",
    "title": "AI를 사지 않고 직접 만든 공무원…‘IT변방’ 전북에서 일어난 작은 반란",
    "outlet": "프레시안",
    "published": "2026-09-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-26",
+   "last_shared": "2026-09-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mt.co.kr/industry/2026/09/27/2026092313501624453",
+   "title": "원료도 웨이퍼도 칩도 다 오른다…반도체 공급망 '가격 인상 도미노'",
+   "outlet": "머니투데이",
+   "published": "2026-09-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-26",
+   "last_shared": "2026-09-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=702970",
+   "title": "백악관 \"영국보다 美 먼저\"…오픈AI·앤트로픽 최신 AI 모델 제동",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-09-25",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-26",
@@ -68,45 +185,6 @@
    ]
   },
   {
-   "url": "https://www.yna.co.kr/view/MYH20260923019200038",
-   "title": "\"유쾌한 홍보부터 재난 대응까지\"…지자체 'AI 행정' 성과",
-   "outlet": "연합뉴스",
-   "published": "2026-09-23",
-   "kind": "기사",
-   "shares": 3,
-   "first_shared": "2026-09-23",
-   "last_shared": "2026-09-25",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.newstap.co.kr/news/articleView.html?idxno=334565",
-   "title": "오픈AI, GPT-6 솔·루나 출시…“성능 높이고 비용은 절반으로”",
-   "outlet": "뉴스탭",
-   "published": "2026-09-23",
-   "kind": "기사",
-   "shares": 3,
-   "first_shared": "2026-09-23",
-   "last_shared": "2026-09-25",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=702898",
-   "title": "오픈AI, 챗GPT 모바일앱에 음성 기반 에이전트 기능 추가",
-   "outlet": "디지털투데이 (DigitalToday)",
-   "published": "2026-09-24",
-   "kind": "기사",
-   "shares": 2,
-   "first_shared": "2026-09-24",
-   "last_shared": "2026-09-25",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
    "url": "https://www.yna.co.kr/view/MYH20260925009800038",
    "title": "[CEO풍향계] '반도체 역량 강화' 최태원…'AI속도전' 구자은",
    "outlet": "연합뉴스",
@@ -150,32 +228,6 @@
    "title": "\"삼성전자·SK하이닉스 독주 체제 강화\"…증시 쏠림 속 AI 데이터센터 수혜주 주목",
    "outlet": "파이낸셜뉴스",
    "published": "2026-09-26",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-25",
-   "last_shared": "2026-09-25",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.bosa.co.kr/news/articleView.html?idxno=3012790",
-   "title": "고대의대, 과기부 기초연구사업 23개 과제 선정",
-   "outlet": "의학신문",
-   "published": "2026-09-25",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-25",
-   "last_shared": "2026-09-25",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=215636",
-   "title": "구글, '제미나이 3.8 플래시 TTS' 공개...'음성 디자인' 패러다임 연다",
-   "outlet": "AI타임스",
-   "published": "2026-09-24",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-25",
