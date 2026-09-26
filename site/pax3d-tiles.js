@@ -34,11 +34,10 @@ export function markLandStencil(material) {
  * @param {{scene:THREE.Scene, project:(lon:number,lat:number)=>THREE.Vector2,
  *          unproject:(x:number,z:number)=>number[], y:number, onActive:(on:boolean)=>void}} opts
  */
-export function createTileLayer({ scene, project, unproject, y, onActive }) {
+export function createTileLayer({ scene, project, unproject, y, onActive, heightAt = () => 0, landMask = null }) {
   const group = new THREE.Group();
   group.renderOrder = 1;
   scene.add(group);
-  const plane = new THREE.PlaneGeometry(1, 1).rotateX(-Math.PI / 2);
   const loader = new THREE.TextureLoader();
   loader.setCrossOrigin('anonymous');
   const cache = new Map(); // key → {mesh, used}
@@ -53,11 +52,37 @@ export function createTileLayer({ scene, project, unproject, y, onActive }) {
     const se = project(x2lon(x + 1, n), y2lat(yy + 1, n));
     const material = new THREE.MeshBasicMaterial({
       color: 0xfff6ea, transparent: true, opacity: 0, depthWrite: false,
-      stencilWrite: true, stencilRef: 1, stencilFunc: THREE.EqualStencilFunc,
+      // 지형 위에서는 폴리곤 오프셋으로 한 겹 앞으로 — 격자가 달라 봉우리가 타일을 뚫고 나오지 않게
+      polygonOffset: true, polygonOffsetFactor: -4, polygonOffsetUnits: -16,
     });
-    const mesh = new THREE.Mesh(plane, material);
-    mesh.scale.set(se.x - nw.x, 1, nw.y - se.y);
-    mesh.position.set((nw.x + se.x) / 2, y, -(nw.y + se.y) / 2);
+    if (landMask) {
+      // 실제 지형이 있으면 육지 가림막으로 바다·가상 섬을 잘라낸다
+      material.onBeforeCompile = (sh) => {
+        sh.uniforms.landMask = { value: landMask.texture };
+        sh.uniforms.maskGrid = { value: landMask.grid };
+        sh.vertexShader = sh.vertexShader
+          .replace('#include <common>', '#include <common>\nvarying vec3 vW;')
+          .replace('#include <begin_vertex>', '#include <begin_vertex>\nvW = (modelMatrix * vec4(position, 1.0)).xyz;');
+        sh.fragmentShader = sh.fragmentShader
+          .replace('#include <common>', '#include <common>\nvarying vec3 vW;\nuniform sampler2D landMask;\nuniform vec4 maskGrid;')
+          .replace('#include <map_fragment>', `#include <map_fragment>
+            vec2 muv = vec2((vW.x - maskGrid.x) / maskGrid.z, (maskGrid.y + vW.z) / maskGrid.w);
+            if (texture2D(landMask, muv).r < 0.5) discard;`);
+      };
+    } else {
+      // 평평한 판: 시도 윗면이 스텐실에 써 둔 1 위에만
+      Object.assign(material, { stencilWrite: true, stencilRef: 1, stencilFunc: THREE.EqualStencilFunc });
+    }
+    // 타일을 지형에 입힌다 — 24×24로 잘게 나눠 꼭짓점마다 그 자리 높이
+    const geo = new THREE.PlaneGeometry(1, 1, 24, 24).rotateX(-Math.PI / 2);
+    const p = geo.attributes.position;
+    for (let i = 0; i < p.count; i++) {
+      const wx = (nw.x + se.x) / 2 + p.getX(i) * (se.x - nw.x);
+      const wz = -(nw.y + se.y) / 2 + p.getZ(i) * (nw.y - se.y);
+      p.setXYZ(i, wx, y + heightAt(wx, wz), wz);
+    }
+    geo.computeVertexNormals();
+    const mesh = new THREE.Mesh(geo, material);
     mesh.visible = false;
     mesh.renderOrder = 1;
     loader.load(TILE_URL(z, x, yy), (tex) => {
@@ -76,6 +101,7 @@ export function createTileLayer({ scene, project, unproject, y, onActive }) {
     const old = [...cache].filter(([k]) => !keep.has(k)).sort((a, b) => a[1].used - b[1].used);
     for (const [k, v] of old.slice(0, cache.size - CACHE_MAX)) {
       group.remove(v.mesh);
+      v.mesh.geometry.dispose();
       if (v.mesh.material.map) v.mesh.material.map.dispose();
       v.mesh.material.dispose();
       cache.delete(k);

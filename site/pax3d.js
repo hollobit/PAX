@@ -100,12 +100,15 @@ async function main() {
   let world = null;
   const tip = $('#pax3d-tip');
   try {
-    const { createWorld } = await import('./pax3d-world.js?v=e1c898aa');
+    const { createWorld } = await import('./pax3d-world.js?v=456645c1');
+    // 실제 지형(수치표고) — 못 받으면 평평한 판으로 그대로 간다
+    const terrain = await import('./pax3d-terrain.js?v=a3bd09aa').then((t) => t.loadTerrain()).catch(() => null);
     world = createWorld($('#pax3d-canvas'), {
       geo,
       sggDoc,
       cases,
       located: model.located,
+      terrain,
       onHover(id, x, y) {
         if (!id) {
           tip.hidden = true;

@@ -3,11 +3,11 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { toon, toonGradient, skyTexture, signSprite, createPostPass } from './pax3d-look.js?v=a66df86b';
 import { ISLANDS, SEATS, TASK_COLORS, FALLBACK_COLOR, shapeOf } from './pax3d-data.js?v=a28d94ec';
-import { buildingGeometries, mountains, trees, clouds, pin, dokdo } from './pax3d-props.js?v=968f3044';
+import { buildingGeometries, mountains, trees, clouds, pin, dokdo } from './pax3d-props.js?v=83d5cb9b';
 import {
   LAND_H, project, unproject, toWorld, projectPolys, rng, inPolys, polysArea, randomIn, scatter, blobRing,
 } from './pax3d-geom.js?v=f13514eb';
-import { createTileLayer, markLandStencil } from './pax3d-tiles.js?v=0b3b411e';
+import { createTileLayer, markLandStencil } from './pax3d-tiles.js?v=4ac31ec5';
 
 // 간판 자리 — 무게중심은 경기(서울 구멍 포함)처럼 엉뚱한 곳에 떨어져 손으로 정했다.
 const LABEL_AT = {
@@ -39,7 +39,7 @@ function landMesh(polys, capColor, sideColor, grad, place, stencil) {
   return mesh;
 }
 
-function outline(polysList, y, color, opacity) {
+function outline(polysList, y, color, opacity, hAt = () => 0) {
   const pts = [];
   for (const polys of polysList) {
     for (const poly of polys) {
@@ -47,7 +47,8 @@ function outline(polysList, y, color, opacity) {
         for (let i = 0; i < ring.length; i++) {
           const a = ring[i];
           const b = ring[(i + 1) % ring.length];
-          pts.push(a.x, y, -a.y, b.x, y, -b.y);
+          // 실제 지형 위에 선을 얹는다 — 꼭짓점마다 그 자리 높이
+          pts.push(a.x, y + hAt(a.x, -a.y), -a.y, b.x, y + hAt(b.x, -b.y), -b.y);
         }
       }
     }
@@ -78,7 +79,10 @@ function zoneKey(loc) {
  * @param canvas 그릴 캔버스
  * @param opts {geo, sggDoc, cases, located, onHover, onPickCase, onPickPlace, onTiles}
  */
-export function createWorld(canvas, { geo, sggDoc, cases, located, onHover, onPickCase, onPickPlace, onTiles }) {
+export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHover, onPickCase, onPickPlace, onTiles }) {
+  // 실제 지형(수치표고)이 있으면 모든 것이 그 높이 위에 선다 — 없으면 평평한 판
+  const hAt = (x, z) => (terrain ? terrain.heightAt(x, z) : 0);
+  const onGround = (v, lift = 0) => toWorld(v, LAND_H + lift + hAt(v.x, -v.y));
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, stencil: true, powerPreference: 'high-performance' });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   renderer.shadowMap.enabled = true;
@@ -133,6 +137,7 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, onHover, onPi
 
   // ---- 시도 지형 (윗면이 스텐실 1 — 실제 지도 타일은 여기에만 깔린다) ----------------
   const regionPolys = new Map();
+  const tints = {};
   const pickables = [];
   const labels = [];
   let tint = 0;
@@ -140,17 +145,25 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, onHover, onPi
     const polys = projectPolys(polysLL);
     regionPolys.set(name, polys);
     const n = (byPlace.get(name) || []).length;
-    const mesh = landMesh(polys, n ? REGION_TINTS[tint++ % REGION_TINTS.length] : UNOBSERVED, '#d9c9a3', grad, name, true);
+    tints[name] = n ? REGION_TINTS[tint++ % REGION_TINTS.length] : UNOBSERVED;
+    const mesh = landMesh(polys, tints[name], '#d9c9a3', grad, name, true);
     scene.add(mesh);
     pickables.push(mesh);
     const [lon, lat] = LABEL_AT[name];
     const sign = signSprite([name, n ? `사례 ${n}` : '관측 없음'], { scale: 0.4, dim: !n });
-    sign.position.copy(toWorld(project(lon, lat), LAND_H + 0.28));
+    sign.position.copy(onGround(project(lon, lat), 0.28));
     sign.userData = { kind: 'region', key: name };
     scene.add(sign);
     labels.push(sign);
   }
-  const regionLines = outline([...regionPolys.values()], LAND_H + 0.005, 0x3a3226, 0.55);
+  if (terrain) {
+    const mat = new THREE.MeshToonMaterial({ color: 0xffffff, gradientMap: grad, vertexColors: true });
+    markLandStencil(mat); // 실제 지도 타일은 이 지형 위에 깔린다
+    const land = terrain.buildMesh(tints, LAND_H, mat);
+    scene.add(land);
+    pickables.push(land);
+  }
+  const regionLines = outline([...regionPolys.values()], LAND_H + 0.012, 0x3a3226, 0.55, hAt);
   scene.add(regionLines);
 
   // ---- 시군구 경계 (확대할수록 진해진다) ---------------------------------------------
@@ -163,7 +176,7 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, onHover, onPi
     if (!sggByRegion.has(s.region)) sggByRegion.set(s.region, []);
     sggByRegion.get(s.region).push({ key, polys, center: project(...s.center) });
   }
-  const sggLines = outline([...sggPolys.values()], LAND_H + 0.004, 0x5b4f3c, 0);
+  const sggLines = outline([...sggPolys.values()], LAND_H + 0.011, 0x5b4f3c, 0, hAt);
   scene.add(sggLines);
 
   // ---- 지역 밖 섬 ---------------------------------------------------------------
@@ -188,8 +201,9 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, onHover, onPi
   }
   scene.add(dokdo(project(131.865, 37.242), grad, LAND_H));
 
-  const { group: peaks, blocked } = mountains({ project, grad, landH: LAND_H });
-  scene.add(peaks);
+  // 실제 지형이 있으면 원뿔 산은 세우지 않는다 — 산은 이제 수치표고가 말한다
+  const { group: peaks, blocked } = terrain ? { group: null, blocked: [] } : mountains({ project, grad, landH: LAND_H });
+  if (peaks) scene.add(peaks);
 
   // ---- 사례 건물 -----------------------------------------------------------------
   const geos = buildingGeometries();
@@ -220,7 +234,7 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, onHover, onPi
       entries.push({
         c,
         loc,
-        pos: toWorld(pts[i], LAND_H),
+        pos: onGround(pts[i]),
         s: 0.075 * f,
         h: 0.85 + r() * 0.45 + (c.org_type === '중앙행정기관' ? 0.5 : 0),
         rot: r() * Math.PI * 2,
@@ -241,7 +255,7 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, onHover, onPi
   for (const { inst, names, n } of sites.values()) {
     const title = names.length > 2 ? `${names.slice(0, 2).join('·')} 외 ${names.length - 2}` : names.join('·');
     const sign = screenSign([title, `사례 ${n}`], 0.042, { accent: '#234a72' });
-    sign.position.copy(toWorld(project(inst.lon, inst.lat), LAND_H + 0.1));
+    sign.position.copy(onGround(project(inst.lon, inst.lat), 0.1));
     sign.userData = { kind: 'inst', keys: names.map((nm) => `inst:${nm}`) };
     scene.add(sign);
     labels.push(sign);
@@ -254,7 +268,7 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, onHover, onPi
     const s = (sggByRegion.get(region) || []).find((x) => x.key === key);
     if (!s) continue;
     const sign = screenSign([name, `사례 ${n}`], 0.046);
-    sign.position.copy(toWorld(s.center, LAND_H + 0.12));
+    sign.position.copy(onGround(s.center, 0.12));
     sign.userData = { kind: 'sgg', key };
     scene.add(sign);
     labels.push(sign);
@@ -302,7 +316,7 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, onHover, onPi
   refresh();
 
   const treeMesh = trees({
-    placePolys: regionPolys, grad, landH: LAND_H, rng, randomIn,
+    placePolys: regionPolys, grad, landH: LAND_H, rng, randomIn, heightAt: hAt,
     avoid: [...blocked, ...entries.map((e) => ({ p: new THREE.Vector2(e.pos.x, -e.pos.z), r: e.s * 0.9 + 0.03 }))],
   });
   scene.add(treeMesh);
@@ -335,7 +349,7 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, onHover, onPi
 
   // 실제 지도가 깔리면 나무는 걷는다 — 지도 글자를 가리지 않게(산은 이정표로 남긴다)
   const tiles = createTileLayer({
-    scene, project, unproject, y: LAND_H + 0.002,
+    scene, project, unproject, y: LAND_H + (terrain ? 0.02 : 0.012), heightAt: hAt, landMask: terrain ? terrain.landMask() : null,
     onActive: (on) => { treeMesh.visible = !on; if (onTiles) onTiles(on); },
   });
   const post = createPostPass(renderer);
@@ -410,7 +424,8 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, onHover, onPi
     const hit = ray.intersectObjects(pickables, false)[0];
     if (!hit) return null;
     if (hit.object.isInstancedMesh) return { caseId: hit.object.userData.entries[hit.instanceId].c.id };
-    const place = hit.object.userData.place;
+    const place = hit.object.userData.terrain ? terrain.regionAt(hit.point.x, hit.point.z) : hit.object.userData.place;
+    if (!place) return null;
     // 가까이 들어와 있으면 시도가 아니라 그 자리의 시군구를 고른다
     if (camera.position.distanceTo(controls.target) < 5.5) {
       const key = sggAt(place, new THREE.Vector2(hit.point.x, -hit.point.z));

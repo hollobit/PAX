@@ -1,0 +1,30 @@
+{
+ "source": "AWS Terrain Tiles (Terrarium z8; Korea mostly SRTM, public domain) — Mapzen/Tilezen",
+ "attribution": "지형: AWS Terrain Tiles(Mapzen) · SRTM",
+ "cols": 338,
+ "rows": 359,
+ "cell": 0.04,
+ "x0": -6.60253,
+ "north0": 7.02848,
+ "max_m": 2000.0,
+ "encoding": "code 0 = 바다·국외, 표고 = ((code-1)/254)^2 × max_m; 이어서 시도 번호 0=없음, 1..17=regions",
+ "regions": [
+  "서울",
+  "부산",
+  "대구",
+  "인천",
+  "광주",
+  "대전",
+  "울산",
+  "세종",
+  "경기",
+  "강원",
+  "충북",
+  "충남",
+  "전북",
+  "전남",
+  "경북",
+  "경남",
+  "제주"
+ ]
+}
