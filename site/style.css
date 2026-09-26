@@ -3040,3 +3040,99 @@ a.dash-tile:hover, a.dash-tile:focus-visible {
     display: none !important;
   }
 }
+
+/* ---- 3D PAX: 검색·썸네일·투어·실제 지도 (2026-09-27 추가) ---- */
+.pax3d-qform {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.pax3d-q {
+  flex: 1;
+  min-width: 0;
+  padding: 0.45rem 0.6rem;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+}
+
+.pax3d-panel mark {
+  padding: 0 0.1em;
+  border-radius: 2px;
+  background: #f4d35e;
+  color: #221d16;
+}
+
+.pax3d-tool--tour[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.pax3d-attrib {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.4rem;
+  margin: 0;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  background: rgb(255 255 255 / 0.85);
+  color: #333;
+  font-size: 0.7rem;
+}
+
+.pax3d-attrib[hidden],
+.pax3d-tip[hidden] {
+  display: none;
+}
+
+.pax3d-tip__thumb {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border: 1px solid #221d16;
+  border-radius: 4px;
+}
+
+.pax3d-result {
+  grid-template-columns: 64px 1fr;
+}
+
+.pax3d-result__thumb {
+  grid-row: span 2;
+  width: 64px;
+  height: 40px;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--bg-inset);
+}
+
+.pax3d-result__title .pax3d-dot {
+  margin-right: 0.35rem;
+  vertical-align: -1px;
+}
+
+.pax3d-case__thumb {
+  display: block;
+  width: 100%;
+  max-height: 190px;
+  margin-bottom: 0.6rem;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+}
+
+.pax3d-case__place {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 0.82rem;
+}
+
+.pax3d-case__maps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.6rem;
+  margin: 0 0 0.3rem;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+}
