@@ -1,5 +1,5 @@
 {
- "total": 211,
+ "total": 212,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -1435,6 +1435,26 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "threads:patrol_jev",
+   "name": "patrol_jev",
+   "accounts": [
+    {
+     "platform": "threads",
+     "id": "patrol_jev",
+     "url": "https://www.threads.com/@patrol_jev"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "ad435a193856fac5"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },

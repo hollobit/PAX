@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-26T22:08:18+09:00",
+ "updated_at": "2026-09-26T23:35:02+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -6227,6 +6227,9 @@
    "stars_gitlab": 2,
    "stars": 2,
    "maintenance": "활발",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-09-26",
    "thumb_v": 1787613691
   },
   {
@@ -13704,7 +13707,36 @@
     "의정정보",
     "데이터시각화"
    ],
-   "id": "113e9caee50e73cc"
+   "id": "113e9caee50e73cc",
+   "thumb_v": 1790428146
+  },
+  {
+   "date": "2026-09-26",
+   "runtime_env": "브라우저만",
+   "summary": "환경순찰 사진을 올리면 자리별로 묶고 주소판을 읽어 옮겨 적은 뒤 순찰일지 문장을 만들어 한글 파일로 내려받게 한다. 범용 모델이 사진을 글로 옮기고 판정 전용 모델이 네 갈래 중 하나로 가르며, 묶기와 문장 조립은 코드가 맡는다. 키 없이 직접 적는 방식은 모델을 부르지 않아 사진이 브라우저 밖으로 나가지 않고, 계정·데이터베이스 없이 MIT 오픈소스로 배포한다. 한 주에 두 시간 걸리던 사진 붙이기를 몇 초로 줄였다고 밝혔다.",
+   "org": "공직 현장(개인 개발)",
+   "source": "kakao",
+   "task_category": "문서·기안",
+   "tags": [
+    "순찰일지",
+    "hwpx",
+    "문서자동화",
+    "비전모델"
+   ],
+   "mirror_url": "https://github.com/patrol-jev/patrol-jev",
+   "model_dependency": "혼합",
+   "collected_at": "2026-09-26",
+   "title": "순찰일지 — 현장 사진을 올리면 순찰결과보고서 글과 한글(.hwpx) 파일이 나오는 도구",
+   "org_type": "공직 개인",
+   "case_class": "개인 개발",
+   "case_url": "https://patrol.ai.kr",
+   "link": "https://www.threads.com/@patrol_jev/post/DdwA3okAV5I",
+   "deployment_env": "인터넷망",
+   "id": "ad435a193856fac5",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-09-26",
+   "thumb_v": 1790433327
   }
  ]
 }

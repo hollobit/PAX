@@ -11450,5 +11450,33 @@
   "resilience": "미확인(CLIK 반영 지연 1~4주·미연계 의회 누락, 시범 운영)",
   "post_url": "",
   "service_url": "https://jorye-board.vercel.app"
+ },
+ {
+  "no": 482,
+  "id": "ad435a193856fac5",
+  "org": "공직 현장(개인 개발)",
+  "title": "순찰일지 — 현장 사진을 올리면 순찰결과보고서 글과 한글(.hwpx) 파일이 나오는 도구",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S2",
+  "s_name": "Workflow",
+  "c": "C2",
+  "c_name": "부분 완결",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Published tool",
+  "scope": "Internal",
+  "mcp_role": "Unknown/None",
+  "risk": "R1 낮음",
+  "human": "H2 Human-in-the-loop",
+  "evidence": "E1 코드·도구 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "사진 묶기 → 비전 모델의 판독 → 판정 모델의 네 갈래 분류 → 코드의 문장 조립 → hwpx 출력까지 이어져 S2 Workflow이며, 판단이 필요한 대목은 담당자가 채워 C2·H2다. 공개 저장소 README와 운영 페이지로 구조를 확인해 E1이다. 모델을 부르지 않는 직접 입력 모드를 기본 경로로 남겨 사진이 브라우저를 벗어나지 않게 한 점, 판정 모델을 끼운 3단 분리(시각·판단·자동)를 공직 실무자가 주간 반복 보고서에 적용한 점이 값어치다.",
+  "feedback": "미확인",
+  "resilience": "MIT·계정/DB 없음·키 없이도 동작(모델 호출은 OpenAI·Jev 키 필요, 테스트 페이지는 일일 한도)",
+  "post_url": "https://www.threads.com/@patrol_jev/post/DdwA3okAV5I",
+  "service_url": "https://patrol.ai.kr"
  }
 ]
