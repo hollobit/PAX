@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-09-26T06:36:37Z",
- "count": 74,
+ "updated_at": "2026-09-26T13:09:39Z",
+ "count": 76,
  "videos": [
+  {
+   "id": "y2S7XMWDF6U",
+   "title": "[9월-1 ON명사특강] AI와 일하는 조직이 알아야 할 것",
+   "channel": "인재교육tv",
+   "url": "https://www.youtube.com/watch?v=y2S7XMWDF6U",
+   "thumb": "https://i.ytimg.com/vi/y2S7XMWDF6U/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-26",
+   "last_shared": "2026-09-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "mKHxeqTPCGw",
+   "title": "미쳤다… Claude OPUS 5.5로 블렌더 돌렸더니",
+   "channel": "Alex AI",
+   "url": "https://www.youtube.com/watch?v=mKHxeqTPCGw",
+   "thumb": "https://i.ytimg.com/vi/mKHxeqTPCGw/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-26",
+   "last_shared": "2026-09-26",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "7FS4wbogcrc",
    "title": "3개월 뒤, 부의 판도가 완전히 뒤집힌다ㅣ초대석: 합석 EP.16 (김대식 X 유현준 X 송길영)",

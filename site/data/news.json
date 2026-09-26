@@ -1,12 +1,64 @@
 {
- "updated_at": "2026-09-26T06:36:39Z",
- "count": 565,
+ "updated_at": "2026-09-26T13:09:40Z",
+ "count": 569,
  "articles": [
+  {
+   "url": "https://www.vegannews.co.kr/mobile/article.html?no=388127",
+   "title": "[비건뉴스] [단독] 챗GPT 월 79만원 요금제 나오나…프로 맥스 준비 정황",
+   "outlet": "vegannews.co.kr",
+   "published": "2026-09-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-26",
+   "last_shared": "2026-09-26",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.pressian.com/pages/articles/2026091415153836288",
    "title": "AI를 사지 않고 직접 만든 공무원…‘IT변방’ 전북에서 일어난 작은 반란",
    "outlet": "프레시안",
    "published": "2026-09-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-26",
+   "last_shared": "2026-09-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://v.daum.net/v/20260926120003633",
+   "title": "공공부문 '한 축' 된 공무직⋯30여년 만에 법정 위원회로",
+   "outlet": "Daum | 이투데이",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-26",
+   "last_shared": "2026-09-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://share.google/KTB0hcT94BIoLfbfi",
+   "title": "빌 게이츠 “AI, 10억명 사망 초래할 만큼 강력…정부 규제 필요”",
+   "outlet": "미래를 보는 창 - 전자신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-26",
+   "last_shared": "2026-09-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/022/0004161929?sid=104",
+   "title": "[속보] 트럼프·시진핑, AI 대신 ‘슈퍼지능(SI)’ 쓴다…비상 소통 채널 구축 합의",
+   "outlet": "n.news.naver.com",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-26",

@@ -829,7 +829,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -5570,6 +5570,12 @@
    "title": "서울 정비사업 지도 — 결정·고시 구역과 추진 단계를 공개자료로 모아 한 화면에 얹은 지도",
    "org": "서울 정비사업 지도(운영 주체 미상)",
    "url": "https://seoul-redev-map-production.up.railway.app/"
+  },
+  {
+   "id": "113e9caee50e73cc",
+   "title": "전국 조례 상황판 — 245개 지방의회 조례안이 어느 처리 단계에 있는지 한 화면에 모은 보드",
+   "org": "지방자치혁신연구원",
+   "url": "https://jorye-board.vercel.app"
   }
  ]
 }
