@@ -1,6 +1,6 @@
 // 3D PAX — 미니어처 대한민국에서 공공AX 사례를 탐험하는 화면.
 // 3D는 덧입힌 층이다: WebGL이 없어도 오른쪽 목록(검색·축 → 값 → 사례 → 상세 링크)만으로 전부 쓸 수 있다.
-import { buildAxes, placeText, TASK_COLORS, SHAPES, caseTargetUrl } from './pax3d-data.js?v=24c96a86';
+import { buildAxes, placeText, TASK_COLORS, SHAPES, SEATS, caseTargetUrl } from './pax3d-data.js?v=a28d94ec';
 import { createTour } from './pax3d-tour.js?v=9e8d6421';
 
 const $ = (sel) => document.querySelector(sel);
@@ -61,6 +61,27 @@ async function main() {
       placeText(loc), loc.inst ? loc.inst.address : '', ...who].join(' ').toLowerCase()];
   }));
 
+  // ---- 거리 산책 대상 — 사례가 선 자리(기관 소재지·시군구·시·도청 앞·섬)와 같은 자리의 사례들 ----
+  const sameZone = (a, b) => (a.inst ? Boolean(b.inst) && a.inst.lon === b.inst.lon && a.inst.lat === b.inst.lat
+    : a.sgg ? !b.inst && b.place === a.place && b.sgg && b.sgg.name === a.sgg.name
+      : a.basis === 'island' ? b.place === a.place : !b.inst && !b.sgg && b.place === a.place && b.basis !== 'island');
+  function streetTarget(loc, focusId) {
+    const list = cases.filter((c) => sameZone(loc, model.located.get(c.id)));
+    const ordered = focusId ? [byId.get(focusId), ...list.filter((c) => c.id !== focusId)] : list;
+    const road = loc.inst && loc.inst.address && loc.inst.address.match(/([가-힣A-Za-z0-9]+(?:로|길))\s*(\d+(?:-\d+)?)/);
+    if (loc.inst) {
+      return { cases: ordered, target: { mode: 'osm', lon: loc.inst.lon, lat: loc.inst.lat,
+        label: `${loc.inst.name} 일대 · ${loc.inst.address || `${loc.place} ${loc.sgg ? loc.sgg.name : ''}`}`,
+        address: road ? { road: road[1], num: road[2] } : null } };
+    }
+    if (loc.sgg) return { cases: ordered, target: { mode: 'osm', lon: loc.sgg.center[0], lat: loc.sgg.center[1], label: `${loc.place} ${loc.sgg.name}`, address: null } };
+    if (SEATS[loc.place]) {
+      const [lon, lat] = SEATS[loc.place];
+      return { cases: ordered, target: { mode: 'osm', lon, lat, label: `${loc.place} 시·도청 앞 (시군구 미상 사례)`, address: null } };
+    }
+    return { cases: ordered, target: { mode: 'alley', label: loc.place, address: null } };
+  }
+
   const params = new URLSearchParams(location.search);
   const state = {
     axis: model.axes.some((a) => a.key === params.get('axis')) ? params.get('axis') : 'region',
@@ -79,7 +100,7 @@ async function main() {
   let world = null;
   const tip = $('#pax3d-tip');
   try {
-    const { createWorld } = await import('./pax3d-world.js?v=5e037c68');
+    const { createWorld } = await import('./pax3d-world.js?v=e1c898aa');
     world = createWorld($('#pax3d-canvas'), {
       geo,
       sggDoc,
@@ -291,6 +312,9 @@ async function main() {
     chips.append(task, el('span', 'pax3d-tag', c.org_type));
     if (c.date) chips.appendChild(el('span', 'pax3d-tag', c.date));
     const actions = el('div', 'pax3d-case__actions');
+    const walk = el('button', 'pax3d-btn', '🚶 이 거리 걸어보기');
+    walk.type = 'button';
+    walk.addEventListener('click', () => openStreetView(streetTarget(loc, c.id)));
     const detail = el('a', 'pax3d-btn pax3d-btn--primary', '사례 상세 보기');
     detail.href = `case/${encodeURIComponent(c.id)}.html`;
     actions.appendChild(detail);
@@ -302,6 +326,7 @@ async function main() {
       go.rel = 'noopener';
       actions.appendChild(go);
     }
+    actions.appendChild(walk);
     const nodes = [
       thumb(c, 'pax3d-case__thumb'),
       el('p', 'pax3d-case__org', c.org),
@@ -374,6 +399,44 @@ async function main() {
     show: (id) => selectCase(id, { fly: true }),
     world,
     button: $('#pax3d-tour'),
+  });
+
+  let street = null;
+  /** 선택한 사례의 자리, 없으면 고른 시도·시군구·섬으로 거리에 내려간다 */
+  function streetFromSelection() {
+    if (state.caseId) return streetTarget(model.located.get(state.caseId), state.caseId);
+    const v = state.axis === 'region' ? currentValue() : null;
+    if (!v) return null;
+    const pick = cases.find((c) => v.ids.has(c.id));
+    return pick ? streetTarget(model.located.get(pick.id), null) : null;
+  }
+  async function openStreetView(sel) {
+    if (!sel || street) return;
+    tour.stop();
+    if (world) world.setPaused(true);
+    try {
+      const { openStreet } = await import('./pax3d-street.js?v=8504691b');
+      street = await openStreet($('#pax3d-stage'), {
+        ...sel,
+        focusId: state.caseId,
+        colorOf: (c) => TASK_COLORS[c.task_category] || '#6b6153',
+        shortTitle: (c) => {
+          const t = c.title.split(/\s[—–-]\s/)[0].trim();
+          return t.length > 16 ? `${t.slice(0, 15)}…` : t;
+        },
+        onPickCase: (id) => selectCase(id, { fly: false }),
+        onClose: () => { street = null; if (world) world.setPaused(false); },
+      });
+    } catch (err) {
+      street = null;
+      if (world) world.setPaused(false);
+      $('#pax3d-summary').textContent = `거리를 열지 못했습니다: ${err.message}`;
+    }
+  }
+  $('#pax3d-street').addEventListener('click', () => {
+    const sel = streetFromSelection();
+    if (sel) openStreetView(sel);
+    else $('#pax3d-summary').textContent = '사례를 하나 고르거나 광역시도 탭에서 시도·시군구·섬을 고른 뒤 거리 산책을 눌러 주세요';
   });
 
   let qTimer = null;

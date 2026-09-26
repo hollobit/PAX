@@ -87,6 +87,8 @@ uniform float near;
 uniform float far;
 uniform float inkOn;
 uniform float focusY;
+uniform float tilt;
+uniform vec2 inkRange;
 varying vec2 vUv;
 float lin(vec2 uv) {
   float d = texture2D(tDepth, uv).x;
@@ -98,10 +100,10 @@ void main() {
   float d0 = lin(vUv);
   float lap = abs(4.0 * d0 - lin(vUv + vec2(px.x, 0.0)) - lin(vUv - vec2(px.x, 0.0))
                            - lin(vUv + vec2(0.0, px.y)) - lin(vUv - vec2(0.0, px.y)));
-  float ink = smoothstep(0.012, 0.045, lap / d0) * inkOn;
+  float ink = smoothstep(inkRange.x, inkRange.y, lap / d0) * inkOn;
 
   vec3 sharp = texture2D(tColor, vUv).rgb;
-  float blur = smoothstep(0.16, 0.52, abs(vUv.y - focusY));
+  float blur = tilt * smoothstep(0.16, 0.52, abs(vUv.y - focusY));
   vec3 soft = vec3(0.0);
   float r = 3.2 * blur;
   for (int i = 0; i < 8; i++) {
@@ -142,6 +144,8 @@ export function createPostPass(renderer) {
       far: { value: 100 },
       inkOn: { value: 1 },
       focusY: { value: 0.5 },
+      tilt: { value: 1 },
+      inkRange: { value: new THREE.Vector2(0.012, 0.045) },
     },
     depthTest: false,
     depthWrite: false,

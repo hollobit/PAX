@@ -10,7 +10,7 @@
   <meta property="og:title" content="3D PAX — 미니어처 대한민국에서 공공AX 사례 탐험">
   <meta property="og:description" content="사례 한 건이 건물 한 채 — 색은 업무 유형, 모양은 누가 만들었는지. 시도를 누르면 그 지역 사례로 날아갑니다.">
   <meta property="og:url" content="https://hollobit.github.io/PAX/pax3d.html">
-  <link rel="stylesheet" href="style.css?v=0747e06f">
+  <link rel="stylesheet" href="style.css?v=06b66364">
   <script type="importmap">
     { "imports": {
         "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
@@ -22,7 +22,7 @@
   <header class="site-header site-header--compact">
     <p class="eyebrow">3D PAX · 미니어처 대한민국</p>
     <h1>사례 한 건이 건물 한 채</h1>
-    <p class="tagline">색은 업무 유형, 모양은 누가 만들었는지 — 시도나 건물을 눌러 사례로 바로 이동하세요</p>
+    <p class="tagline">색은 업무 유형, 모양은 누가 만들었는지 — 시도나 건물을 눌러 사례로 이동하고, 🚶 거리 산책으로 그 동네 거리를 걸어 보세요</p>
     <nav class="site-nav" aria-label="주요 메뉴">
       <a href="./">사례 아카이브</a>
       <a href="pax3d.html" aria-current="page">3D PAX</a>
@@ -52,6 +52,7 @@
       </div>
       <div class="pax3d-tools">
         <button type="button" class="pax3d-tool pax3d-tool--tour" id="pax3d-tour" aria-pressed="false" title="지금 목록의 사례를 차례로 둘러봅니다 — 지도를 만지면 멈춥니다">▶ 자동 투어</button>
+        <button type="button" class="pax3d-tool" id="pax3d-street" title="고른 사례·지역의 거리로 내려가 1인칭으로 걷기">🚶 거리 산책</button>
         <button type="button" class="pax3d-tool" id="pax3d-home" title="처음 보기로">⌂ 처음으로</button>
         <button type="button" class="pax3d-tool" id="pax3d-tiles" aria-pressed="true" title="확대했을 때 실제 지도(OpenStreetMap) 깔기">실제 지도</button>
         <button type="button" class="pax3d-tool" id="pax3d-ink" aria-pressed="true" title="먹선 켜기/끄기">먹선</button>
@@ -85,10 +86,10 @@
     </aside>
   </main>
   <footer class="site-footer">
-    <p>모두의 공공AX 사례 아카이브 · <a href="./">아카이브로 돌아가기</a> · 행정 경계: 통계청 SGIS 행정동 경계(공공누리 제1유형)를 <a href="https://github.com/vuski/admdongkor" target="_blank" rel="noopener">vuski/admdongkor</a>가 가공, CC BY 4.0 · 지도 타일·기관 좌표: © OpenStreetMap contributors · 3D: three.js · 화풍 참고: sakura-crossing</p>
+    <p>모두의 공공AX 사례 아카이브 · <a href="./">아카이브로 돌아가기</a> · 행정 경계: 통계청 SGIS 행정동 경계(공공누리 제1유형)를 <a href="https://github.com/vuski/admdongkor" target="_blank" rel="noopener">vuski/admdongkor</a>가 가공, CC BY 4.0 · 지도 타일·기관 좌표·거리 건물: © OpenStreetMap contributors · 거리 벡터 타일: OpenFreeMap · 3D: three.js · 화풍 참고: sakura-crossing</p>
   </footer>
   <script src="case-domains.js?v=202b47c3"></script>
   <script src="ministries.js?v=d0e486dc"></script>
-  <script type="module" src="pax3d.js?v=39376c66"></script>
+  <script type="module" src="pax3d.js?v=48689bb1"></script>
 </body>
 </html>
