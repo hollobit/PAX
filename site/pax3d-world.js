@@ -1,22 +1,13 @@
-// 3D PAX 미니어처 세계 — 시도 지형, 지역 밖 섬, 사례 건물, 카메라와 선택.
+// 3D PAX 미니어처 세계 — 시도 지형·시군구 경계·실제 지도 타일, 사례 건물, 카메라와 선택.
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { toon, toonGradient, skyTexture, signSprite, createPostPass } from './pax3d-look.js?v=af667c9a';
-import { ISLANDS, TASK_COLORS, FALLBACK_COLOR, shapeOf } from './pax3d-data.js?v=7715f3cd';
-import { buildingGeometries, mountains, trees, clouds, pin, dokdo } from './pax3d-props.js?v=122a3045';
-
-// 등장방형 투영 — 위도 36도 기준 코사인 보정. 1 단위 ≈ 43km.
-const LON0 = 127.7;
-const LAT0 = 35.95;
-const KM = 111.32;
-const S = 0.023;
-const COS = Math.cos((LAT0 * Math.PI) / 180);
-export const LAND_H = 0.22;
-
-export function project(lon, lat) {
-  return new THREE.Vector2((lon - LON0) * KM * COS * S, (lat - LAT0) * KM * S); // (동, 북)
-}
-const toWorld = (v, y = 0) => new THREE.Vector3(v.x, y, -v.y);
+import { toon, toonGradient, skyTexture, signSprite, createPostPass } from './pax3d-look.js?v=dbbbdea6';
+import { ISLANDS, TASK_COLORS, FALLBACK_COLOR, shapeOf } from './pax3d-data.js?v=24c96a86';
+import { buildingGeometries, mountains, trees, clouds, pin, dokdo } from './pax3d-props.js?v=8e15dbbd';
+import {
+  LAND_H, project, unproject, toWorld, projectPolys, rng, inPolys, polysArea, randomIn, scatter, blobRing,
+} from './pax3d-geom.js?v=f13514eb';
+import { createTileLayer, markLandStencil } from './pax3d-tiles.js?v=0b3b411e';
 
 // 간판 자리 — 무게중심은 경기(서울 구멍 포함)처럼 엉뚱한 곳에 떨어져 손으로 정했다.
 const LABEL_AT = {
@@ -26,103 +17,19 @@ const LABEL_AT = {
   대구: [128.6, 35.87], 울산: [129.26, 35.56], 부산: [129.06, 35.16], 경남: [128.22, 35.3],
   제주: [126.55, 33.38],
 };
+// 시군구를 모르는 시도 사례는 시·도청 앞에 모은다 — 확대했을 때 엉뚱한 동네에 서 있지 않도록.
+const SEATS = {
+  서울: [126.978, 37.566], 부산: [129.075, 35.18], 대구: [128.601, 35.871], 인천: [126.705, 37.456],
+  광주: [126.852, 35.16], 대전: [127.385, 36.35], 울산: [129.311, 35.539], 세종: [127.289, 36.48],
+  경기: [127.009, 37.275], 강원: [127.73, 37.885], 충북: [127.491, 36.635], 충남: [126.673, 36.659],
+  전북: [127.108, 35.82], 전남: [126.463, 34.816], 경북: [128.505, 36.576], 경남: [128.692, 35.238],
+  제주: [126.498, 33.489],
+};
 
 const REGION_TINTS = ['#b9d49a', '#c6d9a1', '#aecf95', '#cfdca9', '#bcd7a6', '#c3d39a'];
 const UNOBSERVED = '#cfc9b8';
 
-// ---- 결정적 난수: 같은 사례는 언제나 같은 자리에 선다 -------------------------------
-function hash(str) {
-  let h = 2166136261;
-  for (let i = 0; i < str.length; i++) {
-    h ^= str.charCodeAt(i);
-    h = Math.imul(h, 16777619);
-  }
-  return h >>> 0;
-}
-export function rng(seed) {
-  let a = typeof seed === 'string' ? hash(seed) : seed >>> 0;
-  return () => {
-    a = (a + 0x6d2b79f5) | 0;
-    let t = Math.imul(a ^ (a >>> 15), 1 | a);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
-}
-
-// ---- 평면 도형 ----------------------------------------------------------------
-function ringArea(r) {
-  let a = 0;
-  for (let i = 0, j = r.length - 1; i < r.length; j = i++) a += r[j].x * r[i].y - r[i].x * r[j].y;
-  return Math.abs(a) / 2;
-}
-function inRing(p, r) {
-  let inside = false;
-  for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
-    if ((r[i].y > p.y) !== (r[j].y > p.y)
-        && p.x < ((r[j].x - r[i].x) * (p.y - r[i].y)) / (r[j].y - r[i].y) + r[i].x) inside = !inside;
-  }
-  return inside;
-}
-function inPolys(p, polys) {
-  return polys.some(([outer, ...holes]) => inRing(p, outer) && !holes.some((h) => inRing(p, h)));
-}
-function polysArea(polys) {
-  return polys.reduce((s, [o, ...hs]) => s + ringArea(o) - hs.reduce((t, h) => t + ringArea(h), 0), 0);
-}
-function randomIn(polys, rand) {
-  const areas = polys.map(([o]) => ringArea(o));
-  const total = areas.reduce((a, b) => a + b, 0);
-  let pick = rand() * total;
-  let k = 0;
-  while (k < polys.length - 1 && pick > areas[k]) pick -= areas[k++];
-  const outer = polys[k][0];
-  const xs = outer.map((v) => v.x);
-  const ys = outer.map((v) => v.y);
-  const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
-  for (let t = 0; t < 80; t++) {
-    const p = new THREE.Vector2(x0 + rand() * (x1 - x0), y0 + rand() * (y1 - y0));
-    if (inPolys(p, polys)) return p;
-  }
-  return null;
-}
-
-/** 서로 가장 먼 후보를 고르는 표본(best-candidate) — 건물이 한데 뭉치지 않게. */
-export function scatter(polys, ids, blocked, spacingHint) {
-  const placed = [];
-  for (const id of ids) {
-    const rand = rng(id);
-    let best = null;
-    let bestD = -1;
-    for (let k = 0; k < 16; k++) {
-      const p = randomIn(polys, rand);
-      if (!p) continue;
-      let d = Infinity;
-      for (const q of placed) d = Math.min(d, p.distanceTo(q));
-      for (const b of blocked) d = Math.min(d, p.distanceTo(b.p) - b.r);
-      if (d > bestD) {
-        best = p;
-        bestD = d;
-      }
-      if (bestD > spacingHint * 3) break;
-    }
-    placed.push(best || polys[0][0][0].clone());
-  }
-  return placed;
-}
-
-function blobRing(center, radius, seed) {
-  const rand = rng(seed);
-  const [a, b, c] = [rand() * 6, rand() * 6, rand() * 6];
-  const pts = [];
-  for (let i = 0; i < 44; i++) {
-    const t = (i / 44) * Math.PI * 2;
-    const r = radius * (1 + 0.11 * Math.sin(3 * t + a) + 0.07 * Math.sin(5 * t + b) + 0.04 * Math.sin(7 * t + c));
-    pts.push(new THREE.Vector2(center.x + Math.cos(t) * r, center.y + Math.sin(t) * r));
-  }
-  return pts;
-}
-
-function landMesh(polys, capColor, sideColor, grad, place) {
+function landMesh(polys, capColor, sideColor, grad, place, stencil) {
   const shapes = polys.map(([outer, ...holes]) => {
     const s = new THREE.Shape(outer);
     s.holes = holes.map((h) => new THREE.Path(h));
@@ -130,37 +37,56 @@ function landMesh(polys, capColor, sideColor, grad, place) {
   });
   const geo = new THREE.ExtrudeGeometry(shapes, { depth: LAND_H, bevelEnabled: false, curveSegments: 1 });
   geo.rotateX(-Math.PI / 2);
-  const mesh = new THREE.Mesh(geo, [toon(capColor, grad), toon(sideColor, grad)]);
+  const cap = toon(capColor, grad);
+  if (stencil) markLandStencil(cap);
+  const mesh = new THREE.Mesh(geo, [cap, toon(sideColor, grad)]);
   mesh.receiveShadow = true;
   mesh.castShadow = true;
   mesh.userData.place = place;
   return mesh;
 }
 
-function borderLines(polys) {
+function outline(polysList, y, color, opacity) {
   const pts = [];
-  for (const poly of polys) {
-    for (const ring of poly) {
-      for (let i = 0; i < ring.length; i++) {
-        const a = ring[i];
-        const b = ring[(i + 1) % ring.length];
-        pts.push(a.x, LAND_H + 0.003, -a.y, b.x, LAND_H + 0.003, -b.y);
+  for (const polys of polysList) {
+    for (const poly of polys) {
+      for (const ring of poly) {
+        for (let i = 0; i < ring.length; i++) {
+          const a = ring[i];
+          const b = ring[(i + 1) % ring.length];
+          pts.push(a.x, y, -a.y, b.x, y, -b.y);
+        }
       }
     }
   }
   const geo = new THREE.BufferGeometry();
   geo.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
-  return new THREE.LineSegments(geo, new THREE.LineBasicMaterial({
-    color: 0x3a3226, transparent: true, opacity: 0.5,
-  }));
+  return new THREE.LineSegments(geo, new THREE.LineBasicMaterial({ color, transparent: true, opacity }));
+}
+
+/** 화면 크기가 일정한 작은 간판 — 확대해도 부풀지 않는다(시군구·기관). h는 화면 높이 대비 비율. */
+function screenSign(lines, h, opts) {
+  const sign = signSprite(lines, opts);
+  const aspect = sign.scale.x / sign.scale.y;
+  sign.material.sizeAttenuation = false;
+  sign.scale.set(aspect * h, h, 1);
+  return sign;
+}
+
+/** 사례 한 건이 설 자리(zone)의 열쇠 — 기관 소재지 > 시군구 > 시·도청 앞 > 섬. */
+function zoneKey(loc) {
+  if (loc.inst) return `inst:${loc.inst.name}`;
+  if (loc.sgg) return `sgg:${loc.place}/${loc.sgg.name}`;
+  if (SEATS[loc.place]) return `seat:${loc.place}`;
+  return `isl:${loc.place}`;
 }
 
 /**
  * @param canvas 그릴 캔버스
- * @param opts {geo, cases, places, onHover(id|null, x, y), onPickCase(id), onPickPlace(key)}
+ * @param opts {geo, sggDoc, cases, located, onHover, onPickCase, onPickPlace, onTiles}
  */
-export function createWorld(canvas, { geo, cases, places, onHover, onPickCase, onPickPlace }) {
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, powerPreference: 'high-performance' });
+export function createWorld(canvas, { geo, sggDoc, cases, located, onHover, onPickCase, onPickPlace, onTiles }) {
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, stencil: true, powerPreference: 'high-performance' });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -170,18 +96,19 @@ export function createWorld(canvas, { geo, cases, places, onHover, onPickCase, o
   scene.fog = new THREE.Fog(0xe6eee8, 26, 60);
   const grad = toonGradient();
 
-  const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 100);
+  const camera = new THREE.PerspectiveCamera(30, 1, 0.05, 100);
   const HOME = { target: new THREE.Vector3(0.2, 0, 0.9), pos: new THREE.Vector3(0.2, 17.5, 16) };
   camera.position.copy(HOME.pos);
   const controls = new OrbitControls(camera, canvas);
   controls.target.copy(HOME.target);
   controls.enableDamping = true;
   controls.dampingFactor = 0.08;
-  controls.minDistance = 1.2;
+  controls.minDistance = 0.45;
   controls.maxDistance = 34;
-  controls.minPolarAngle = 0.15;
+  controls.minPolarAngle = 0.12;
   controls.maxPolarAngle = 1.22;
   controls.screenSpacePanning = false;
+  controls.autoRotateSpeed = 0.5;
 
   scene.add(new THREE.HemisphereLight(0xfff4e0, 0x8aa3a0, 1.4));
   const sun = new THREE.DirectionalLight(0xfff1d6, 2.4);
@@ -199,69 +126,107 @@ export function createWorld(canvas, { geo, cases, places, onHover, onPickCase, o
   sea.receiveShadow = true;
   scene.add(sea);
 
-  // ---- 자리(시도·섬)별 폴리곤과 사례 수 ------------------------------------------
+  // ---- 자리별 사례 --------------------------------------------------------------
   const byPlace = new Map();
+  const byZone = new Map();
   for (const c of cases) {
-    const k = places.get(c.id);
-    if (!byPlace.has(k)) byPlace.set(k, []);
-    byPlace.get(k).push(c);
+    const loc = located.get(c.id);
+    if (!byPlace.has(loc.place)) byPlace.set(loc.place, []);
+    byPlace.get(loc.place).push(c);
+    const k = zoneKey(loc);
+    if (!byZone.has(k)) byZone.set(k, { loc, list: [] });
+    byZone.get(k).list.push(c);
   }
-  const placePolys = new Map();
+
+  // ---- 시도 지형 (윗면이 스텐실 1 — 실제 지도 타일은 여기에만 깔린다) ----------------
+  const regionPolys = new Map();
   const pickables = [];
-  const labels = new Map();
+  const labels = [];
   let tint = 0;
   for (const [name, polysLL] of Object.entries(geo.regions)) {
-    const polys = polysLL.map((poly) => poly.map((ring) => ring.map(([lon, lat]) => project(lon, lat))));
-    placePolys.set(name, polys);
+    const polys = projectPolys(polysLL);
+    regionPolys.set(name, polys);
     const n = (byPlace.get(name) || []).length;
-    const mesh = landMesh(polys, n ? REGION_TINTS[tint++ % REGION_TINTS.length] : UNOBSERVED, '#d9c9a3', grad, name);
-    scene.add(mesh, borderLines(polys));
+    const mesh = landMesh(polys, n ? REGION_TINTS[tint++ % REGION_TINTS.length] : UNOBSERVED, '#d9c9a3', grad, name, true);
+    scene.add(mesh);
     pickables.push(mesh);
     const [lon, lat] = LABEL_AT[name];
     const sign = signSprite([name, n ? `사례 ${n}` : '관측 없음'], { scale: 0.4, dim: !n });
     sign.position.copy(toWorld(project(lon, lat), LAND_H + 0.28));
+    sign.userData = { kind: 'region', key: name };
     scene.add(sign);
-    labels.set(name, sign);
+    labels.push(sign);
   }
+  const regionLines = outline([...regionPolys.values()], LAND_H + 0.005, 0x3a3226, 0.55);
+  scene.add(regionLines);
+
+  // ---- 시군구 경계 (확대할수록 진해진다) ---------------------------------------------
+  const sggPolys = new Map(); // 'region/name' → polys
+  const sggByRegion = new Map();
+  for (const s of (sggDoc && sggDoc.sgg) || []) {
+    const polys = projectPolys(s.polys);
+    const key = `${s.region}/${s.name}`;
+    sggPolys.set(key, polys);
+    if (!sggByRegion.has(s.region)) sggByRegion.set(s.region, []);
+    sggByRegion.get(s.region).push({ key, polys, center: project(...s.center) });
+  }
+  const sggLines = outline([...sggPolys.values()], LAND_H + 0.004, 0x5b4f3c, 0);
+  scene.add(sggLines);
+
+  // ---- 지역 밖 섬 ---------------------------------------------------------------
+  const islandPolys = new Map();
   for (const isl of ISLANDS) {
     const n = (byPlace.get(isl.key) || []).length;
     if (!n) continue;
     const center = project(isl.lon, isl.lat);
     const radius = 0.34 + 0.085 * Math.sqrt(n);
-    const ring = blobRing(center, radius, isl.key);
-    const polys = [[ring]];
-    placePolys.set(isl.key, [[blobRing(center, radius * 0.86, isl.key)]]);
-    const mesh = landMesh(polys, '#cfdcb4', '#e8d9ae', grad, isl.key);
-    const beach = landMesh([[blobRing(center, radius * 1.08, `${isl.key}-beach`)]], '#eadfbe', '#eadfbe', grad, isl.key);
+    const polys = [[blobRing(center, radius, isl.key)]];
+    islandPolys.set(isl.key, [[blobRing(center, radius * 0.86, isl.key)]]);
+    const mesh = landMesh(polys, '#cfdcb4', '#e8d9ae', grad, isl.key, false);
+    const beach = landMesh([[blobRing(center, radius * 1.08, `${isl.key}-beach`)]], '#eadfbe', '#eadfbe', grad, isl.key, false);
     beach.scale.y = 0.35;
-    scene.add(beach, mesh, borderLines(polys));
+    scene.add(beach, mesh, outline([polys], LAND_H + 0.003, 0x3a3226, 0.5));
     pickables.push(mesh, beach);
     const sign = signSprite([isl.key, `사례 ${n}`], { scale: 0.56, accent: '#234a72' });
     sign.position.copy(toWorld(new THREE.Vector2(center.x, center.y + radius * 0.2), LAND_H + 0.55));
+    sign.userData = { kind: 'region', key: isl.key };
     scene.add(sign);
-    labels.set(isl.key, sign);
+    labels.push(sign);
   }
   scene.add(dokdo(project(131.865, 37.242), grad, LAND_H));
 
-  // ---- 산 (건물은 산을 피해 선다) -----------------------------------------------------
   const { group: peaks, blocked } = mountains({ project, grad, landH: LAND_H });
   scene.add(peaks);
 
   // ---- 사례 건물 -----------------------------------------------------------------
   const geos = buildingGeometries();
-  const entries = []; // {c, shape, idx, pos(Vector3), s, h, color}
-  for (const [place, list] of byPlace) {
-    const polys = placePolys.get(place);
-    if (!polys) continue;
-    const area = polysArea(polys);
-    const f = THREE.MathUtils.clamp(Math.sqrt(area / (list.length * 0.02)), 0.42, 1);
-    const ids = list.map((c) => c.id);
-    const pts = scatter(polys, ids, blocked.filter((b) => inPolys(b.p, polys)), 0.09 * f);
+  const entries = [];
+  for (const [key, { loc, list }] of byZone) {
+    const n = list.length;
+    let zone;
+    let f;
+    if (key.startsWith('inst:')) {
+      zone = { polys: regionPolys.get(loc.place), center: project(loc.inst.lon, loc.inst.lat), radius: 0.02 + 0.014 * Math.sqrt(n) };
+      f = 0.42;
+    } else if (key.startsWith('sgg:')) {
+      zone = { polys: sggPolys.get(`${loc.place}/${loc.sgg.name}`) || regionPolys.get(loc.place) };
+      f = THREE.MathUtils.clamp(Math.sqrt(polysArea(zone.polys) / (n * 0.02)), 0.3, 1);
+    } else if (key.startsWith('seat:')) {
+      zone = { polys: regionPolys.get(loc.place), center: project(...SEATS[loc.place]), radius: 0.05 + 0.026 * Math.sqrt(n) };
+      f = 0.55;
+    } else {
+      zone = { polys: islandPolys.get(loc.place) };
+      if (!zone.polys) continue;
+      f = THREE.MathUtils.clamp(Math.sqrt(polysArea(zone.polys) / (n * 0.02)), 0.42, 1);
+    }
+    if (!zone.polys) continue;
+    const near = blocked.filter((b) => inPolys(b.p, zone.polys));
+    const pts = scatter(zone, list.map((c) => c.id), near, 0.09 * f);
     list.forEach((c, i) => {
       const r = rng(`${c.id}-h`);
       entries.push({
         c,
-        place,
+        loc,
         pos: toWorld(pts[i], LAND_H),
         s: 0.075 * f,
         h: 0.85 + r() * 0.45 + (c.org_type === '중앙행정기관' ? 0.5 : 0),
@@ -270,6 +235,38 @@ export function createWorld(canvas, { geo, cases, places, onHover, onPickCase, o
       });
     });
   }
+  // 기관 간판 — 같은 주소(정부대전청사 등)에 든 기관은 한 간판으로 묶는다
+  const sites = new Map();
+  for (const [key, { loc, list }] of byZone) {
+    if (!key.startsWith('inst:')) continue;
+    const at = `${loc.inst.lon.toFixed(3)},${loc.inst.lat.toFixed(3)}`;
+    if (!sites.has(at)) sites.set(at, { inst: loc.inst, names: [], n: 0 });
+    const site = sites.get(at);
+    site.names.push(loc.inst.name);
+    site.n += list.length;
+  }
+  for (const { inst, names, n } of sites.values()) {
+    const title = names.length > 2 ? `${names.slice(0, 2).join('·')} 외 ${names.length - 2}` : names.join('·');
+    const sign = screenSign([title, `사례 ${n}`], 0.042, { accent: '#234a72' });
+    sign.position.copy(toWorld(project(inst.lon, inst.lat), LAND_H + 0.1));
+    sign.userData = { kind: 'inst', keys: names.map((nm) => `inst:${nm}`) };
+    scene.add(sign);
+    labels.push(sign);
+  }
+  // 시군구 간판: 그 시군구에 선 사례(기관 소재지 포함) 수
+  const sggCounts = new Map();
+  for (const e of entries) if (e.loc.sgg) sggCounts.set(`${e.loc.place}/${e.loc.sgg.name}`, (sggCounts.get(`${e.loc.place}/${e.loc.sgg.name}`) || 0) + 1);
+  for (const [key, n] of sggCounts) {
+    const [region, name] = key.split('/');
+    const s = (sggByRegion.get(region) || []).find((x) => x.key === key);
+    if (!s) continue;
+    const sign = screenSign([name, `사례 ${n}`], 0.046);
+    sign.position.copy(toWorld(s.center, LAND_H + 0.12));
+    sign.userData = { kind: 'sgg', key };
+    scene.add(sign);
+    labels.push(sign);
+  }
+
   const meshes = {};
   const byId = new Map();
   for (const shape of Object.keys(geos)) {
@@ -311,11 +308,31 @@ export function createWorld(canvas, { geo, cases, places, onHover, onPickCase, o
   entries.forEach((e) => applyInstance(e, 'normal'));
   refresh();
 
-  // 나무는 건물과 산이 자리 잡은 뒤에 빈 땅에 심는다.
-  scene.add(trees({
-    placePolys, grad, landH: LAND_H, rng, randomIn,
+  const treeMesh = trees({
+    placePolys: regionPolys, grad, landH: LAND_H, rng, randomIn,
     avoid: [...blocked, ...entries.map((e) => ({ p: new THREE.Vector2(e.pos.x, -e.pos.z), r: e.s * 0.9 + 0.03 }))],
-  }));
+  });
+  scene.add(treeMesh);
+
+  // 검색·선택된 사례 위에 뜨는 노란 표지 — 전국 화면에서도 어디 있는지 보이게 (사용자 지시 2026-09-27)
+  const BEACON_MAX = 240;
+  const beacons = new THREE.InstancedMesh(new THREE.OctahedronGeometry(1, 0),
+    new THREE.MeshToonMaterial({ color: 0xf4d35e, gradientMap: grad, emissive: 0x6b4d00 }), BEACON_MAX);
+  beacons.count = 0;
+  beacons.renderOrder = 5;
+  beacons.frustumCulled = false; // 행렬을 매 프레임 바꾸므로 경계구를 믿지 않는다
+  scene.add(beacons);
+  let beaconList = [];
+  function layBeacons(d, t) {
+    const k = THREE.MathUtils.clamp(d * 0.011, 0.012, 0.2);
+    beaconList.forEach((e, i) => {
+      const top = e.pos.y + e.s * e.h * 1.35 * 2 + k * 1.6 + Math.sin(t * 2.5 + i) * k * 0.3;
+      q.setFromAxisAngle(up, t * 1.2 + i);
+      m4.compose(new THREE.Vector3(e.pos.x, top, e.pos.z), q, new THREE.Vector3(k * 0.7, k, k * 0.7));
+      beacons.setMatrixAt(i, m4);
+    });
+    beacons.instanceMatrix.needsUpdate = true;
+  }
 
   const marker = pin(grad);
   marker.visible = false;
@@ -323,6 +340,11 @@ export function createWorld(canvas, { geo, cases, places, onHover, onPickCase, o
   const cloudGroup = clouds(grad, rng);
   scene.add(cloudGroup);
 
+  // 실제 지도가 깔리면 나무는 걷는다 — 지도 글자를 가리지 않게(산은 이정표로 남긴다)
+  const tiles = createTileLayer({
+    scene, project, unproject, y: LAND_H + 0.002,
+    onActive: (on) => { treeMesh.visible = !on; if (onTiles) onTiles(on); },
+  });
   const post = createPostPass(renderer);
 
   // ---- 카메라 이동 ----------------------------------------------------------------
@@ -347,19 +369,25 @@ export function createWorld(canvas, { geo, cases, places, onHover, onPickCase, o
     const box = new THREE.Box3().setFromPoints(points);
     const size = box.getSize(new THREE.Vector3());
     const center = box.getCenter(new THREE.Vector3());
-    flyTo(center, THREE.MathUtils.clamp(Math.max(size.x, size.z) * 1.9 + 2.2, 2.4, 30));
+    flyTo(center, THREE.MathUtils.clamp(Math.max(size.x, size.z) * 1.9 + 1.2, 1.4, 30));
   }
 
   // ---- 선택·강조 -----------------------------------------------------------------
   let highlighted = null;
+  function labelHasHit(sign, ids) {
+    const { kind, key } = sign.userData;
+    return entries.some((e) => ids.has(e.c.id) && (
+      (kind === 'region' && e.loc.place === key)
+      || (kind === 'sgg' && e.loc.sgg && `${e.loc.place}/${e.loc.sgg.name}` === key)
+      || (kind === 'inst' && e.loc.inst && sign.userData.keys.includes(`inst:${e.loc.inst.name}`))));
+  }
   function setHighlight(ids) {
     highlighted = ids;
     for (const e of entries) applyInstance(e, !ids ? 'normal' : ids.has(e.c.id) ? 'on' : 'off');
     refresh();
-    for (const [place, sign] of labels) {
-      const hit = !ids || (byPlace.get(place) || []).some((c) => ids.has(c.id));
-      sign.userData.baseOpacity = hit ? 1 : 0.35;
-    }
+    for (const sign of labels) sign.userData.base = !ids || labelHasHit(sign, ids) ? 1 : 0.3;
+    beaconList = ids ? entries.filter((e) => ids.has(e.c.id)).slice(0, BEACON_MAX) : [];
+    beacons.count = beaconList.length;
   }
   function focusCase(id, { fly = true } = {}) {
     const e = byId.get(id);
@@ -368,19 +396,20 @@ export function createWorld(canvas, { geo, cases, places, onHover, onPickCase, o
       return;
     }
     const k = highlighted && !highlighted.has(id) ? 0.55 : highlighted ? 1.35 : 1;
-    marker.scale.setScalar(Math.max(0.35, e.s / 0.075) * 0.7);
+    marker.scale.setScalar(Math.max(0.3, e.s / 0.075) * 0.7);
     marker.position.set(e.pos.x, e.pos.y + e.s * e.h * k * 2.1 + 0.04, e.pos.z);
     marker.userData.baseY = marker.position.y;
     marker.visible = true;
-    if (fly) flyTo(e.pos, 2.8);
-  }
-  function clearFocus() {
-    marker.visible = false;
+    if (fly) flyTo(e.pos, 1.6);
   }
 
   // ---- 포인터 -----------------------------------------------------------------
   const ray = new THREE.Raycaster();
   const ndc = new THREE.Vector2();
+  function sggAt(region, p) {
+    const hit = (sggByRegion.get(region) || []).find((s) => inPolys(p, s.polys));
+    return hit ? hit.key : null;
+  }
   function pick(ev) {
     const rect = canvas.getBoundingClientRect();
     ndc.set(((ev.clientX - rect.left) / rect.width) * 2 - 1, -((ev.clientY - rect.top) / rect.height) * 2 + 1);
@@ -388,11 +417,23 @@ export function createWorld(canvas, { geo, cases, places, onHover, onPickCase, o
     const hit = ray.intersectObjects(pickables, false)[0];
     if (!hit) return null;
     if (hit.object.isInstancedMesh) return { caseId: hit.object.userData.entries[hit.instanceId].c.id };
-    return { place: hit.object.userData.place };
+    const place = hit.object.userData.place;
+    // 가까이 들어와 있으면 시도가 아니라 그 자리의 시군구를 고른다
+    if (camera.position.distanceTo(controls.target) < 5.5) {
+      const key = sggAt(place, new THREE.Vector2(hit.point.x, -hit.point.z));
+      if (key) return { place: key };
+    }
+    return { place };
   }
   let down = null;
   let hoverQueued = null;
-  canvas.addEventListener('pointerdown', (ev) => { down = { x: ev.clientX, y: ev.clientY }; flight = null; });
+  let userInteract = () => {};
+  canvas.addEventListener('pointerdown', (ev) => {
+    down = { x: ev.clientX, y: ev.clientY };
+    flight = null;
+    userInteract();
+  });
+  canvas.addEventListener('wheel', () => userInteract(), { passive: true });
   canvas.addEventListener('pointerup', (ev) => {
     if (!down || Math.hypot(ev.clientX - down.x, ev.clientY - down.y) > 5) return;
     const hit = pick(ev);
@@ -422,28 +463,37 @@ export function createWorld(canvas, { geo, cases, places, onHover, onPickCase, o
   renderer.setAnimationLoop(() => {
     const t = clock.getElapsedTime();
     if (flight) {
-      const k = Math.min(1, (performance.now() - flight.t0) / 900);
+      const k = Math.min(1, (performance.now() - flight.t0) / 1100);
       const e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
       controls.target.lerpVectors(flight.fromT, flight.toT, e);
       camera.position.lerpVectors(flight.fromP, flight.toP, e);
       if (k >= 1) flight = null;
     }
     controls.update();
-    // 초점 띠를 화면 가운데에 — 확대할수록 흐림 띠를 좁게 느끼도록 거리로 살짝 조정
-    post.uniforms.focusY.value = 0.5;
+    const d = camera.position.distanceTo(controls.target);
+    // 시군구 선이 진해지는 만큼 시도 선은 옅어진다 — 두 선은 따로 단순화돼 겹치면 이중선이 된다
+    const near = 1 - THREE.MathUtils.smoothstep(d, 4.5, 8);
+    sggLines.material.opacity = 0.6 * near;
+    regionLines.material.opacity = 0.55 * (1 - near * 0.85);
+    // 간판: 시도는 멀리서, 시군구는 중간에서, 기관은 가까이에서
+    for (const sign of labels) {
+      const ds = camera.position.distanceTo(sign.position);
+      const { kind } = sign.userData;
+      const vis = kind === 'region' ? THREE.MathUtils.smoothstep(ds, 2.2, 5.5)
+        : kind === 'sgg' ? (1 - THREE.MathUtils.smoothstep(ds, 4.5, 7)) * THREE.MathUtils.smoothstep(ds, 0.5, 1.1)
+          : 1 - THREE.MathUtils.smoothstep(ds, 1.6, 2.6);
+      sign.material.opacity = (sign.userData.base ?? 1) * vis;
+      sign.visible = sign.material.opacity > 0.02;
+    }
+    tiles.update(camera, controls.target);
+    cloudGroup.visible = d > 3;
     cloudGroup.children.forEach((cl, i) => {
       cl.position.x = ((cl.userData.x0 + t * cl.userData.v + 24) % 48) - 24;
       cl.position.y = cl.userData.y0 + Math.sin(t * 0.3 + i) * 0.05;
     });
-    // 가까이 가면 간판을 걷어 건물이 보이게 — 간판은 멀리서 길을 찾는 용도다
-    for (const sign of labels.values()) {
-      const d = camera.position.distanceTo(sign.position);
-      const near = THREE.MathUtils.smoothstep(d, 2.2, 5.5);
-      sign.material.opacity = (sign.userData.baseOpacity ?? 1) * near;
-      sign.visible = near > 0.02;
-    }
+    if (beaconList.length) layBeacons(d, t);
     if (marker.visible) {
-      marker.position.y = marker.userData.baseY + Math.sin(t * 3) * 0.04;
+      marker.position.y = marker.userData.baseY + Math.sin(t * 3) * 0.03;
       marker.rotation.y = t * 1.5;
     }
     if (hoverQueued) {
@@ -451,7 +501,7 @@ export function createWorld(canvas, { geo, cases, places, onHover, onPickCase, o
       hoverQueued = null;
       const hit = pick(ev);
       canvas.style.cursor = hit ? 'pointer' : 'grab';
-      onHover(hit && hit.caseId ? hit.caseId : null, ev.clientX, ev.clientY, hit && hit.place);
+      onHover(hit && hit.caseId ? hit.caseId : null, ev.clientX, ev.clientY);
     }
     post.render(scene, camera);
   });
@@ -459,21 +509,25 @@ export function createWorld(canvas, { geo, cases, places, onHover, onPickCase, o
   return {
     setHighlight,
     focusCase,
-    clearFocus,
+    clearFocus() { marker.visible = false; },
     flyToIds(ids) {
       flyToPoints([...ids].map((id) => byId.get(id)).filter(Boolean).map((e) => e.pos));
     },
     flyToPlace(place) {
-      const list = byPlace.get(place) || [];
-      if (list.length) this.flyToIds(new Set(list.map((c) => c.id)));
-      else if (labels.has(place)) flyTo(labels.get(place).position.clone().setY(0), 4);
+      const inPlace = entries.filter((e) => (place.includes('/')
+        ? e.loc.sgg && `${e.loc.place}/${e.loc.sgg.name}` === place : e.loc.place === place));
+      if (inPlace.length) flyToPoints(inPlace.map((e) => e.pos));
+      else {
+        const sign = labels.find((s) => s.userData.key === place);
+        if (sign) flyTo(sign.position.clone().setY(0), 4);
+      }
     },
-    flyHome() {
-      flyTo(HOME.target, HOME.pos.distanceTo(HOME.target));
-    },
-    setInk(on) {
-      post.uniforms.inkOn.value = on ? 1 : 0;
-    },
+    flyHome() { flyTo(HOME.target, HOME.pos.distanceTo(HOME.target)); },
+    setInk(on) { post.uniforms.inkOn.value = on ? 1 : 0; },
+    setTiles(on) { tiles.setEnabled(on); },
+    debug: () => ({ tiles: tiles.stats(), d: camera.position.distanceTo(controls.target), target: controls.target.toArray() }),
+    setAutoRotate(on) { controls.autoRotate = on; },
+    onUserInteract(fn) { userInteract = fn; },
+    get flying() { return Boolean(flight); },
   };
 }
-

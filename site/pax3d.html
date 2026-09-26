@@ -10,7 +10,7 @@
   <meta property="og:title" content="3D PAX — 미니어처 대한민국에서 공공AX 사례 탐험">
   <meta property="og:description" content="사례 한 건이 건물 한 채 — 색은 업무 유형, 모양은 누가 만들었는지. 시도를 누르면 그 지역 사례로 날아갑니다.">
   <meta property="og:url" content="https://hollobit.github.io/PAX/pax3d.html">
-  <link rel="stylesheet" href="style.css?v=27d2308d">
+  <link rel="stylesheet" href="style.css?v=0747e06f">
   <script type="importmap">
     { "imports": {
         "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
@@ -48,10 +48,12 @@
       </div>
       <div class="pax3d-hud">
         <p class="pax3d-hud__summary" id="pax3d-summary"></p>
-        <p class="pax3d-hud__hint">끌어서 돌리기 · 휠이나 두 손가락으로 확대 · 오른쪽 끌기로 이동 · 시도와 건물을 눌러 보세요</p>
+        <p class="pax3d-hud__hint">끌어서 돌리기 · 휠로 확대하면 시군구와 실제 지도가 나타납니다 · 오른쪽 끌기로 이동 · 땅과 건물을 눌러 보세요</p>
       </div>
       <div class="pax3d-tools">
+        <button type="button" class="pax3d-tool pax3d-tool--tour" id="pax3d-tour" aria-pressed="false" title="지금 목록의 사례를 차례로 둘러봅니다 — 지도를 만지면 멈춥니다">▶ 자동 투어</button>
         <button type="button" class="pax3d-tool" id="pax3d-home" title="처음 보기로">⌂ 처음으로</button>
+        <button type="button" class="pax3d-tool" id="pax3d-tiles" aria-pressed="true" title="확대했을 때 실제 지도(OpenStreetMap) 깔기">실제 지도</button>
         <button type="button" class="pax3d-tool" id="pax3d-ink" aria-pressed="true" title="먹선 켜기/끄기">먹선</button>
       </div>
       <details class="pax3d-legend">
@@ -60,12 +62,17 @@
         <ul id="pax3d-legend-colors"></ul>
         <p class="pax3d-legend__h">모양 = 만든 주체</p>
         <ul id="pax3d-legend-shapes"></ul>
-        <p class="pax3d-legend__note">지역이 없는 사례는 만든 사람의 소속 기관명에서 시도를 찾아 세우고, 그래도 모르면 이름 붙인 섬(정부·공공기관 / 공직 현장 / 커뮤니티 / 참고)에 둡니다. 섬의 크기는 사례 수입니다.</p>
+        <p class="pax3d-legend__note">자리 정하는 순서: ① 정부·공공기관은 기관 소재지(주소) ② 기관명·만든 사람 소속에서 읽히는 시군구 ③ 시도만 알면 시·도청 앞 ④ 그래도 모르면 이름 붙인 섬(공직 현장 / 커뮤니티 / 참고). 섬의 크기는 사례 수입니다.</p>
       </details>
       <div class="pax3d-tip" id="pax3d-tip" hidden></div>
+      <p class="pax3d-attrib" id="pax3d-attrib" hidden>지도 타일 © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</p>
     </section>
 
     <aside class="pax3d-panel" aria-label="축별 사례 탐색">
+      <form class="pax3d-qform" id="pax3d-q-form" role="search">
+        <input class="pax3d-q" id="pax3d-q" type="search" placeholder="사례 검색 — 제목·기관·요약·태그·지역·만든 사람" aria-label="사례 검색">
+        <button type="submit" class="pax3d-tool">찾기</button>
+      </form>
       <article class="pax3d-case" id="pax3d-case" hidden aria-live="polite"></article>
       <div class="pax3d-tabs" id="pax3d-tabs" role="tablist" aria-label="탐색 축"></div>
       <input class="pax3d-search" id="pax3d-search" type="search" placeholder="챔피언 이름·소속 검색" aria-label="챔피언 검색" hidden>
@@ -78,10 +85,10 @@
     </aside>
   </main>
   <footer class="site-footer">
-    <p>모두의 공공AX 사례 아카이브 · <a href="./">아카이브로 돌아가기</a> · 지도 경계: Natural Earth(퍼블릭 도메인) · 3D: three.js · 화풍 참고: sakura-crossing</p>
+    <p>모두의 공공AX 사례 아카이브 · <a href="./">아카이브로 돌아가기</a> · 행정 경계: 통계청 SGIS 행정동 경계(공공누리 제1유형)를 <a href="https://github.com/vuski/admdongkor" target="_blank" rel="noopener">vuski/admdongkor</a>가 가공, CC BY 4.0 · 지도 타일·기관 좌표: © OpenStreetMap contributors · 3D: three.js · 화풍 참고: sakura-crossing</p>
   </footer>
   <script src="case-domains.js?v=202b47c3"></script>
   <script src="ministries.js?v=d0e486dc"></script>
-  <script type="module" src="pax3d.js?v=82c66d61"></script>
+  <script type="module" src="pax3d.js?v=39376c66"></script>
 </body>
 </html>

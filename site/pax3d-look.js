@@ -123,8 +123,12 @@ void main() {
 /** 장면을 깊이와 함께 렌더 타깃에 그린 뒤 먹선·틸트시프트를 입혀 화면에 낸다. */
 export function createPostPass(renderer) {
   const size = renderer.getDrawingBufferSize(new THREE.Vector2());
+  // 스텐실 포함 깊이 텍스처 — 실제 지도 타일을 시도 땅 위에만 그리는 데 스텐실이 필요하다(pax3d-tiles.js)
+  const depthTexture = new THREE.DepthTexture(size.x, size.y, THREE.UnsignedInt248Type);
+  depthTexture.format = THREE.DepthStencilFormat;
   const target = new THREE.WebGLRenderTarget(size.x, size.y, {
-    depthTexture: new THREE.DepthTexture(size.x, size.y),
+    depthTexture,
+    stencilBuffer: true,
     type: THREE.HalfFloatType,
   });
   const material = new THREE.ShaderMaterial({
