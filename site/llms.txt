@@ -19,6 +19,7 @@
 - [AX 성숙도 개념](https://hollobit.github.io/PAX/ax-maturity-infographic.html)
 - [관측소 — 공공 AX 지수](https://hollobit.github.io/PAX/observatory.html): 분기 지수 원데이터는 /data/index.json
 - [격차 지도](https://hollobit.github.io/PAX/gap-map.html)
+- [3D PAX — 미니어처 대한민국 사례 탐험](https://hollobit.github.io/PAX/pax3d.html): 시도 경계는 /data/korea-geo.json
 - [전이 플레이북·자가진단](https://hollobit.github.io/PAX/playbook.html)
 - 사례별 정적 상세: https://hollobit.github.io/PAX/case/<id>.html — 인용에 이 URL을 권장
 

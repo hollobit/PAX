@@ -20,7 +20,7 @@ PAX = Threads `공공AX` 태그 + 카카오톡 오픈채팅 "공공AX 네트워�
 | `scripts/collect_prompt.md` | **일일 수집 절차서(크론 세션이 그대로 따름)** | |
 | `scripts/mcp_audit_prompt.md` | MCP 사례 LLM 감사 절차(축 4·5) | |
 | `config/rooms.json` | 수집 대상(Threads 태그·카카오 방 이름) | |
-| `site/` | 정적 사이트(index·dashboard·observatory·gap-map·playbook·champions·mcp-review·guidelines·changelog·case/) | 공개 |
+| `site/` | 정적 사이트(index·pax3d(3D 지도, three.js)·dashboard·observatory·gap-map·playbook·champions·mcp-review·guidelines·changelog·case/) | 공개 |
 | `HISTORY.md` | 공개 연혁 — 주요 기능·운영 변경 시 갱신 | 공개 |
 | `.claude/skills/pax-register/` | **사례 단건 등재·보강 스킬**(중복 검사 `preflight.py`·평가 항목·MCP 검증·썸네일·커밋 체크리스트) — 사용자가 URL을 주며 등재를 청하면 이 스킬을 쓴다 | 비공개(로컬) |
 

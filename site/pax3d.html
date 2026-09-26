@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D PAX — 미니어처 대한민국에서 공공AX 사례 탐험</title>
+  <meta name="description" content="모두의 공공AX 사례를 3D 미니어처 대한민국 지도 위 건물로 — 업무 유형·분야·중앙행정기관·광역시도·기관 유형·챔피언별로 골라 보고 사례로 바로 이동합니다.">
+  <link rel="canonical" href="https://hollobit.github.io/PAX/pax3d.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="3D PAX — 미니어처 대한민국에서 공공AX 사례 탐험">
+  <meta property="og:description" content="사례 한 건이 건물 한 채 — 색은 업무 유형, 모양은 누가 만들었는지. 시도를 누르면 그 지역 사례로 날아갑니다.">
+  <meta property="og:url" content="https://hollobit.github.io/PAX/pax3d.html">
+  <link rel="stylesheet" href="style.css?v=27d2308d">
+  <script type="importmap">
+    { "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+    } }
+  </script>
+</head>
+<body>
+  <header class="site-header site-header--compact">
+    <p class="eyebrow">3D PAX · 미니어처 대한민국</p>
+    <h1>사례 한 건이 건물 한 채</h1>
+    <p class="tagline">색은 업무 유형, 모양은 누가 만들었는지 — 시도나 건물을 눌러 사례로 바로 이동하세요</p>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="./">사례 아카이브</a>
+      <a href="pax3d.html" aria-current="page">3D PAX</a>
+      <a href="dashboard.html">AX 평가</a>
+      <a href="champions.html">챔피언</a>
+      <a href="ax-maturity-infographic.html">AX 성숙도 개념</a>
+      <a href="observatory.html">관측소</a>
+      <a href="gap-map.html">격차 지도</a>
+      <a href="mcp-review.html">MCP 검증</a>
+      <a href="playbook.html">전이 플레이북</a>
+      <a href="guidelines.html">안내서·가이드라인</a>
+      <a href="videos.html">공유 동영상</a>
+      <a href="news.html">공유 뉴스</a>
+      <a href="changelog.html">변경 기록</a>
+    </nav>
+  </header>
+  <main class="pax3d">
+    <section class="pax3d-stage" id="pax3d-stage" aria-label="3D 미니어처 지도">
+      <canvas id="pax3d-canvas" aria-label="공공AX 사례가 건물로 선 3D 대한민국 지도. 같은 내용을 오른쪽 목록으로도 볼 수 있습니다."></canvas>
+      <p class="pax3d-status" id="pax3d-status">미니어처 세계를 짓는 중…</p>
+      <div class="pax3d-fallback" id="pax3d-fallback" hidden>
+        <p>이 기기에서는 3D 지도를 띄울 수 없습니다.<br>오른쪽(아래) 목록으로 같은 사례를 모두 볼 수 있습니다.</p>
+      </div>
+      <div class="pax3d-hud">
+        <p class="pax3d-hud__summary" id="pax3d-summary"></p>
+        <p class="pax3d-hud__hint">끌어서 돌리기 · 휠이나 두 손가락으로 확대 · 오른쪽 끌기로 이동 · 시도와 건물을 눌러 보세요</p>
+      </div>
+      <div class="pax3d-tools">
+        <button type="button" class="pax3d-tool" id="pax3d-home" title="처음 보기로">⌂ 처음으로</button>
+        <button type="button" class="pax3d-tool" id="pax3d-ink" aria-pressed="true" title="먹선 켜기/끄기">먹선</button>
+      </div>
+      <details class="pax3d-legend">
+        <summary>범례</summary>
+        <p class="pax3d-legend__h">색 = 업무 유형</p>
+        <ul id="pax3d-legend-colors"></ul>
+        <p class="pax3d-legend__h">모양 = 만든 주체</p>
+        <ul id="pax3d-legend-shapes"></ul>
+        <p class="pax3d-legend__note">지역이 없는 사례는 만든 사람의 소속 기관명에서 시도를 찾아 세우고, 그래도 모르면 이름 붙인 섬(정부·공공기관 / 공직 현장 / 커뮤니티 / 참고)에 둡니다. 섬의 크기는 사례 수입니다.</p>
+      </details>
+      <div class="pax3d-tip" id="pax3d-tip" hidden></div>
+    </section>
+
+    <aside class="pax3d-panel" aria-label="축별 사례 탐색">
+      <article class="pax3d-case" id="pax3d-case" hidden aria-live="polite"></article>
+      <div class="pax3d-tabs" id="pax3d-tabs" role="tablist" aria-label="탐색 축"></div>
+      <input class="pax3d-search" id="pax3d-search" type="search" placeholder="챔피언 이름·소속 검색" aria-label="챔피언 검색" hidden>
+      <div class="pax3d-values" id="pax3d-values"></div>
+      <div class="pax3d-results">
+        <div class="pax3d-results__head" id="pax3d-results-head"></div>
+        <ul class="pax3d-results__list" id="pax3d-results"></ul>
+        <button type="button" class="pax3d-more" id="pax3d-more" hidden></button>
+      </div>
+    </aside>
+  </main>
+  <footer class="site-footer">
+    <p>모두의 공공AX 사례 아카이브 · <a href="./">아카이브로 돌아가기</a> · 지도 경계: Natural Earth(퍼블릭 도메인) · 3D: three.js · 화풍 참고: sakura-crossing</p>
+  </footer>
+  <script src="case-domains.js?v=202b47c3"></script>
+  <script src="ministries.js?v=d0e486dc"></script>
+  <script type="module" src="pax3d.js?v=82c66d61"></script>
+</body>
+</html>
