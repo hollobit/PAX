@@ -66,7 +66,7 @@ export function mountains({ project, grad, landH }) {
 }
 
 /** 시도마다 넓이에 비례해 나무를 심는다 — 건물·산 자리는 피한다. */
-export function trees({ placePolys, grad, landH, rng, randomIn, avoid }) {
+export function trees({ placePolys, grad, landH, rng, randomIn, avoid, heightAt = () => 0 }) {
   const spots = [];
   for (const [place, polys] of placePolys) {
     const rand = rng(`trees-${place}`);
@@ -86,7 +86,7 @@ export function trees({ placePolys, grad, landH, rng, randomIn, avoid }) {
   const m4 = new THREE.Matrix4();
   const greens = [new THREE.Color('#5f8f55'), new THREE.Color('#739f5b'), new THREE.Color('#4f7f52')];
   spots.forEach((t, i) => {
-    m4.makeScale(t.s, t.s, t.s).setPosition(t.p.x, landH, -t.p.y);
+    m4.makeScale(t.s, t.s, t.s).setPosition(t.p.x, landH + heightAt(t.p.x, -t.p.y), -t.p.y);
     mesh.setMatrixAt(i, m4);
     mesh.setColorAt(i, greens[Math.floor(t.g * greens.length)]);
   });
