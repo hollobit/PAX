@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-25T15:35:15+09:00",
+ "updated_at": "2026-09-26T15:35:17+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -13656,6 +13656,31 @@
    "license_source": "github",
    "license_checked": "2026-09-25",
    "thumb_v": 1790318261
+  },
+  {
+   "runtime_env": "브라우저만",
+   "link": "https://crayon-sim.github.io/defense-ai-newsletter/",
+   "case_class": "커뮤니티",
+   "source": "kakao",
+   "tags": [
+    "국방",
+    "뉴스레터",
+    "요약",
+    "아카이브"
+   ],
+   "summary": "국방 분야의 인공지능·정보기술 기사를 매주 선별해 AI로 요약하고 사람이 손질해 뉴스레터로 배포하는 작업물을, 1호부터 72호까지 한 화면에서 검색할 수 있게 모은 아카이브다. 호수·출처·주제로 걸러 기사 요약과 원문 링크를 함께 보여주며, 서버 없이 브라우저에서만 도는 정적 사이트로 만들어 호수별 자료 파일을 더하는 방식으로 운영된다.",
+   "case_url": "https://github.com/crayon-sim/defense-ai-newsletter",
+   "title": "국방 AI 뉴스레터 아카이브 — 72호 분량 기사를 호수·출처·주제로 찾는 정적 검색 사이트",
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-09-26",
+   "date": "2026-09-26",
+   "org_type": "커뮤니티",
+   "task_category": "기획·정책",
+   "org": "공직 커뮤니티",
+   "id": "9deddc356d5102b2",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-09-26"
   }
  ]
 }

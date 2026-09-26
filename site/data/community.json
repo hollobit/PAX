@@ -2,11 +2,11 @@
  "generated_at": "2026-09-26",
  "note": "카카오 수치는 수집 아카이브 기반 관측치(공백 구간 과소 집계), Threads는 태그 검색 관측 누적",
  "kakao": {
-  "today": 0,
-  "week": 4933,
-  "month": 21670,
-  "total": 39311,
-  "observed_days": 54
+  "today": 74,
+  "week": 5018,
+  "month": 21755,
+  "total": 39396,
+  "observed_days": 55
  },
  "kakao_recent": [
   [
@@ -87,23 +87,19 @@
   ],
   [
    "2026-09-25",
-   1287
+   1298
   ],
   [
    "2026-09-26",
-   0
+   74
   ]
  ],
  "members": {
-  "latest": 2157,
-  "latest_date": "2026-09-25",
+  "latest": 2163,
+  "latest_date": "2026-09-26",
   "first": 1205,
   "first_date": "2026-08-22",
   "series": [
-   [
-    "2026-08-26",
-    1372
-   ],
    [
     "2026-08-27",
     1393
@@ -219,6 +215,10 @@
    [
     "2026-09-25",
     2157
+   ],
+   [
+    "2026-09-26",
+    2163
    ]
   ]
  },
@@ -227,325 +227,331 @@
    "date": "2026-08-03",
    "joins": 36,
    "leaves": 9,
-   "cumulative": 531
+   "cumulative": 532
   },
   {
    "date": "2026-08-04",
    "joins": 9,
    "leaves": 3,
-   "cumulative": 537
+   "cumulative": 538
   },
   {
    "date": "2026-08-05",
    "joins": 11,
    "leaves": 6,
-   "cumulative": 542
+   "cumulative": 543
   },
   {
    "date": "2026-08-06",
    "joins": 35,
    "leaves": 11,
-   "cumulative": 566
+   "cumulative": 567
   },
   {
    "date": "2026-08-07",
    "joins": 55,
    "leaves": 11,
-   "cumulative": 610
+   "cumulative": 611
   },
   {
    "date": "2026-08-08",
    "joins": 53,
    "leaves": 6,
-   "cumulative": 657
+   "cumulative": 658
   },
   {
    "date": "2026-08-09",
    "joins": 111,
    "leaves": 22,
-   "cumulative": 746
+   "cumulative": 747
   },
   {
    "date": "2026-08-10",
    "joins": 63,
    "leaves": 16,
-   "cumulative": 793
+   "cumulative": 794
   },
   {
    "date": "2026-08-11",
    "joins": 29,
    "leaves": 15,
-   "cumulative": 807
+   "cumulative": 808
   },
   {
    "date": "2026-08-12",
    "joins": 211,
    "leaves": 30,
-   "cumulative": 988
+   "cumulative": 989
   },
   {
    "date": "2026-08-13",
    "joins": 42,
    "leaves": 14,
-   "cumulative": 1016
+   "cumulative": 1017
   },
   {
    "date": "2026-08-14",
    "joins": 25,
    "leaves": 8,
-   "cumulative": 1033
+   "cumulative": 1034
   },
   {
    "date": "2026-08-15",
    "joins": 17,
    "leaves": 7,
-   "cumulative": 1043
+   "cumulative": 1044
   },
   {
    "date": "2026-08-16",
    "joins": 30,
    "leaves": 6,
-   "cumulative": 1067
+   "cumulative": 1068
   },
   {
    "date": "2026-08-17",
    "joins": 13,
    "leaves": 6,
-   "cumulative": 1074
+   "cumulative": 1075
   },
   {
    "date": "2026-08-18",
    "joins": 26,
    "leaves": 6,
-   "cumulative": 1094
+   "cumulative": 1095
   },
   {
    "date": "2026-08-19",
    "joins": 22,
    "leaves": 8,
-   "cumulative": 1108
+   "cumulative": 1109
   },
   {
    "date": "2026-08-20",
    "joins": 23,
    "leaves": 11,
-   "cumulative": 1120
+   "cumulative": 1121
   },
   {
    "date": "2026-08-21",
    "joins": 13,
    "leaves": 8,
-   "cumulative": 1125
+   "cumulative": 1126
   },
   {
    "date": "2026-08-22",
    "joins": 37,
    "leaves": 5,
-   "cumulative": 1157
+   "cumulative": 1158
   },
   {
    "date": "2026-08-23",
    "joins": 25,
    "leaves": 9,
-   "cumulative": 1173
+   "cumulative": 1174
   },
   {
    "date": "2026-08-24",
    "joins": 28,
    "leaves": 7,
-   "cumulative": 1194
+   "cumulative": 1195
   },
   {
    "date": "2026-08-25",
    "joins": 88,
    "leaves": 25,
-   "cumulative": 1257
+   "cumulative": 1258
   },
   {
    "date": "2026-08-26",
    "joins": 67,
    "leaves": 13,
-   "cumulative": 1311
+   "cumulative": 1312
   },
   {
    "date": "2026-08-27",
    "joins": 57,
    "leaves": 22,
-   "cumulative": 1346
+   "cumulative": 1347
   },
   {
    "date": "2026-08-28",
    "joins": 32,
    "leaves": 16,
-   "cumulative": 1362
+   "cumulative": 1363
   },
   {
    "date": "2026-08-29",
    "joins": 4,
    "leaves": 2,
-   "cumulative": 1364
+   "cumulative": 1365
   },
   {
    "date": "2026-08-30",
    "joins": 15,
    "leaves": 9,
-   "cumulative": 1370
+   "cumulative": 1371
   },
   {
    "date": "2026-08-31",
    "joins": 20,
    "leaves": 9,
-   "cumulative": 1381
+   "cumulative": 1382
   },
   {
    "date": "2026-09-01",
    "joins": 14,
    "leaves": 4,
-   "cumulative": 1391
+   "cumulative": 1392
   },
   {
    "date": "2026-09-02",
    "joins": 10,
    "leaves": 9,
-   "cumulative": 1392
+   "cumulative": 1393
   },
   {
    "date": "2026-09-03",
    "joins": 89,
    "leaves": 12,
-   "cumulative": 1469
+   "cumulative": 1470
   },
   {
    "date": "2026-09-04",
    "joins": 35,
    "leaves": 7,
-   "cumulative": 1497
+   "cumulative": 1498
   },
   {
    "date": "2026-09-05",
    "joins": 18,
    "leaves": 5,
-   "cumulative": 1510
+   "cumulative": 1511
   },
   {
    "date": "2026-09-06",
    "joins": 65,
    "leaves": 15,
-   "cumulative": 1560
+   "cumulative": 1561
   },
   {
    "date": "2026-09-07",
    "joins": 33,
    "leaves": 18,
-   "cumulative": 1575
+   "cumulative": 1576
   },
   {
    "date": "2026-09-08",
    "joins": 18,
    "leaves": 11,
-   "cumulative": 1582
+   "cumulative": 1583
   },
   {
    "date": "2026-09-09",
    "joins": 15,
    "leaves": 6,
-   "cumulative": 1591
+   "cumulative": 1592
   },
   {
    "date": "2026-09-10",
    "joins": 23,
    "leaves": 7,
-   "cumulative": 1607
+   "cumulative": 1608
   },
   {
    "date": "2026-09-11",
    "joins": 12,
    "leaves": 7,
-   "cumulative": 1612
+   "cumulative": 1613
   },
   {
    "date": "2026-09-12",
    "joins": 88,
    "leaves": 21,
-   "cumulative": 1679
+   "cumulative": 1680
   },
   {
    "date": "2026-09-13",
    "joins": 116,
    "leaves": 36,
-   "cumulative": 1759
+   "cumulative": 1760
   },
   {
    "date": "2026-09-14",
    "joins": 52,
    "leaves": 18,
-   "cumulative": 1793
+   "cumulative": 1794
   },
   {
    "date": "2026-09-15",
    "joins": 42,
    "leaves": 14,
-   "cumulative": 1821
+   "cumulative": 1822
   },
   {
    "date": "2026-09-16",
    "joins": 52,
    "leaves": 19,
-   "cumulative": 1854
+   "cumulative": 1855
   },
   {
    "date": "2026-09-17",
    "joins": 26,
    "leaves": 5,
-   "cumulative": 1875
+   "cumulative": 1876
   },
   {
    "date": "2026-09-18",
    "joins": 47,
    "leaves": 16,
-   "cumulative": 1906
+   "cumulative": 1907
   },
   {
    "date": "2026-09-19",
    "joins": 36,
    "leaves": 12,
-   "cumulative": 1930
+   "cumulative": 1931
   },
   {
    "date": "2026-09-20",
    "joins": 135,
    "leaves": 26,
-   "cumulative": 2039
+   "cumulative": 2040
   },
   {
    "date": "2026-09-21",
    "joins": 70,
    "leaves": 29,
-   "cumulative": 2080
+   "cumulative": 2081
   },
   {
    "date": "2026-09-22",
    "joins": 18,
    "leaves": 18,
-   "cumulative": 2080
+   "cumulative": 2081
   },
   {
    "date": "2026-09-23",
    "joins": 43,
    "leaves": 16,
-   "cumulative": 2107
+   "cumulative": 2108
   },
   {
    "date": "2026-09-24",
    "joins": 50,
    "leaves": 14,
-   "cumulative": 2143
+   "cumulative": 2144
   },
   {
    "date": "2026-09-25",
    "joins": 25,
-   "leaves": 11,
+   "leaves": 12,
    "cumulative": 2157
+  },
+  {
+   "date": "2026-09-26",
+   "joins": 6,
+   "leaves": 0,
+   "cumulative": 2163
   }
  ],
  "threads": {
