@@ -72,7 +72,7 @@ def repo_of(case):
     https://{user}.github.io/{repo}/... → {user}/{repo},
     루트 페이지는 {user}/{user}.github.io.
     """
-    urls = [u for u in [case.get("link"), case.get("case_url")] if u]
+    urls = [u for u in [case.get("link"), case.get("case_url"), case.get("mirror_url")] if u]
     for u in urls:
         m = re.match(r"https://github\.com/([\w.\-]+)/([\w.\-]+)", u)
         if m and m.group(1) not in ("orgs", "topics", "search"):

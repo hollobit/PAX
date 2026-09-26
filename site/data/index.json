@@ -2,34 +2,34 @@
  "generated_at": "2026-09-26",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 479,
- "total_champions": 211,
+ "total_cases": 480,
+ "total_champions": 212,
  "community": {
-  "members": 2222,
-  "kakao_week": 5168,
-  "kakao_total_observed": 39546,
-  "threads_observed": 306
+  "members": 2223,
+  "kakao_week": 5191,
+  "kakao_total_observed": 39569,
+  "threads_observed": 308
  },
  "certified_champions": 5,
  "unattributed_cases": 94,
  "ax_distribution": {
   "AI-Ready": 326,
-  "AI-Enabled": 134,
+  "AI-Enabled": 135,
   "AX 단계 외": 13,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
- "c_axis_mean": 0.91,
+ "c_axis_mean": 0.92,
  "p_distribution": {
   "P0": 157,
-  "P1": 307,
+  "P1": 308,
   "P2": 15
  },
  "model_dependency": {
   "미확인": 65,
   "없음(비LLM)": 229,
   "해외 오픈웨이트(로컬)": 27,
-  "혼합": 11,
+  "혼합": 12,
   "해외 상용 API": 59,
   "모델 중립(BYO)": 72,
   "국산 독자모델": 6,
@@ -760,7 +760,7 @@
     "specified": 16
    },
    "혼합": {
-    "n": 11,
+    "n": 12,
     "specified": 11
    },
    "해외 상용 API": {
@@ -893,7 +893,7 @@
    },
    {
     "dep": "혼합",
-    "n": 11,
+    "n": 12,
     "families": [
      {
       "name": "로컬 서빙(Ollama·vLLM 등)",
@@ -1585,8 +1585,8 @@
   ]
  },
  "domestic_model_rate": 0.067,
- "local_model_rate": 0.26,
- "model_known": 104,
+ "local_model_rate": 0.257,
+ "model_known": 105,
  "license_tagged": 369,
  "license_stated_rate": 0.496,
  "gitlab_cases": 249,
@@ -1595,7 +1595,7 @@
  "mcp_cases": 87,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 397,
+  "미확인": 398,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1603,7 +1603,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.743
+  "feedback": 0.744
  },
  "maintenance_distribution": {
   "활발": 198,
@@ -1704,7 +1704,7 @@
    ]
   },
   "github": {
-   "count": 146,
+   "count": 147,
    "starred": 112,
    "stars_sum": 176133,
    "maintenance": {
