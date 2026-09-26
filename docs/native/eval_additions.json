@@ -11478,5 +11478,33 @@
   "resilience": "MIT·계정/DB 없음·키 없이도 동작(모델 호출은 OpenAI·Jev 키 필요, 테스트 페이지는 일일 한도)",
   "post_url": "https://www.threads.com/@patrol_jev/post/DdwA3okAV5I",
   "service_url": "https://patrol.ai.kr"
+ },
+ {
+  "no": 483,
+  "id": "1cabc8c7aa0e47ab",
+  "org": "법률사무소 리바이어던",
+  "title": "개정 형사소송법 안내 — 검사 직접수사 폐지 이후 사건 흐름을 조문 카드·3D 지도·실무 퀴즈로 따라가는 사이트",
+  "ax_prev": "AX 단계 외",
+  "ax": "AX 단계 외",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Live service",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R1 낮음",
+  "human": "H2 Human-in-the-loop",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "개정 조문을 국가법령정보센터 원문과 나란히 정리해 3D 절차 지도·퀴즈로 보여 주는 정적 안내 사이트라 S1·C1이며, 운영 화면에서 조문 카드 17장·퀴즈 24문제·글 읽기 판을 직접 확인해 E2다. 화면에 AI 사용이 드러나지 않고 민간 법률사무소 사이트라 AX 단계 외로 둔다. 다만 10월 2일 검사 직접수사 폐지를 앞두고 수사실무자 입장을 따로 두어 경찰·특별사법경찰 등 수사기관 실무자가 개정 절차를 익히는 데 바로 쓸 수 있다는 점이 참고 가치다.",
+  "feedback": "미확인",
+  "resilience": "미확인(기준일 2026-09-24, 하위법령·시행 후 개정 반영 여부)",
+  "post_url": "",
+  "service_url": "https://crimpro.lvl.co.kr/"
  }
 ]
