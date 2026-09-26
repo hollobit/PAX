@@ -8,7 +8,7 @@
   "members": 2223,
   "kakao_week": 5191,
   "kakao_total_observed": 39569,
-  "threads_observed": 308
+  "threads_observed": 309
  },
  "certified_champions": 5,
  "unattributed_cases": 94,
@@ -1587,7 +1587,7 @@
  "domestic_model_rate": 0.067,
  "local_model_rate": 0.257,
  "model_known": 105,
- "license_tagged": 369,
+ "license_tagged": 371,
  "license_stated_rate": 0.496,
  "gitlab_cases": 249,
  "gitlab_mirror_pairs": 36,
@@ -1797,8 +1797,8 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 186,
-  "MIT": 120,
+  "명시 없음": 187,
+  "MIT": 121,
   "Apache-2.0": 29,
   "Other": 16,
   "GNU AGPLv3": 5,
@@ -1813,10 +1813,10 @@
  "license_matrix": {
   "명시 없음": {
    "github": 52,
-   "gitlab": 134
+   "gitlab": 135
   },
   "MIT": {
-   "github": 69,
+   "github": 70,
    "gitlab": 50
   },
   "Apache-2.0": {
@@ -1862,15 +1862,15 @@
  },
  "license_by_source": {
   "github": {
-   "total": 135,
-   "stated": 95
+   "total": 136,
+   "stated": 96
   },
   "github-pages": {
    "total": 16,
    "stated": 4
   },
   "gitlab": {
-   "total": 217,
+   "total": 218,
    "stated": 83
   }
  },
