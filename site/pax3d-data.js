@@ -2,7 +2,7 @@
 //
 // 분류 규칙은 새로 만들지 않는다. 분야는 case-domains.js, 중앙행정기관·지역 스코프는
 // ministries.js의 전역 정의를 그대로 쓴다 — 첫 화면·관측소·격차 지도와 같은 숫자가 나와야 한다.
-import { makeLocator, makeInstitutionFinder } from './pax3d-locate.js?v=87e6e994';
+import { sggLabel, makeLocator, makeInstitutionFinder } from './pax3d-locate.js?v=6baaa238';
 
 /* global CASE_DOMAIN_NAMES, matchesCaseDomain, buildChampAffMap, MINISTRY_GROUPS, paxRegionScope */
 
@@ -109,8 +109,9 @@ export function placeOf(c, affs, locator, institutionFor) {
 
 export function placeText(loc) {
   if (!loc) return '';
-  if (loc.basis === 'institution') return `${loc.place} ${loc.sgg ? loc.sgg.name : ''} · ${loc.inst.name} 소재지`;
-  const where = loc.sgg ? `${loc.place} ${loc.sgg.name}` : loc.basis === 'island' ? loc.place : `${loc.place} (시군구 미상)`;
+  const sgg = loc.sgg ? sggLabel(loc.place, loc.sgg.name) : '';
+  if (loc.basis === 'institution') return `${loc.place} ${sgg} · ${loc.inst.name} 소재지`;
+  const where = loc.sgg ? `${loc.place} ${sgg}` : loc.basis === 'island' ? loc.place : `${loc.place} (시군구 미상)`;
   return loc.basis === 'affiliation' ? `${where} · 만든 사람 소속 기준` : where;
 }
 
@@ -172,7 +173,7 @@ export function buildAxes(cases, championsDoc, sggDoc, orgDoc) {
     const names = new Map();
     for (const [, loc] of located) if (loc.place === r && loc.sgg) names.set(loc.sgg.name, loc.sgg);
     for (const [name, sgg] of [...names].sort((a, b) => a[0].localeCompare(b[0], 'ko'))) {
-      sggValues.push({ value: `${r}/${name}`, label: name, group: `${r} 시군구`, parent: r, sgg,
+      sggValues.push({ value: `${r}/${name}`, label: sggLabel(r, name), group: `${r} 시군구`, parent: r, sgg,
         test: (c) => { const l = located.get(c.id); return l.place === r && l.sgg && l.sgg.name === name; } });
     }
   }

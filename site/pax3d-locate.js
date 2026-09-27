@@ -7,6 +7,10 @@
 //  · 자치구처럼 같은 이름이 여러 시도에 있는 곳(중구·동구·고성군…)과 경기 광주시는
 //    같은 문자열이나 사례 원장에서 시도가 확인될 때만 받아들인다.
 //  · 겹치는 매치는 긴 쪽이 이긴다('부산 강서구'는 서구가 아니라 강서구). 서로 다른 곳이 남으면 판정하지 않는다.
+//  · 특례시(수원·고양·용인·화성·창원)는 '화성특례시'처럼 적혀도 그 시로 읽는다.
+//  · 사례의 시도가 이미 정해져 있으면(원장 region) 그 시도 밖 시군구는 받지 않는다 — 만든 사람 소속에
+//    다른 시도가 적혀 있어도(화성 도구를 광진구가 포팅한 사례: 소속 '서울특별시 광진구') 경기 사례가
+//    광진구에 서지 않게(2026-09-27 사용자 지적).
 const AMBIGUOUS_TEXT = /전남광주통합/; // 2026-07 통합 — 옛 광주·전남 중 어디인지 이름만으로 정할 수 없다
 const PROVINCE_RULES = [
   [/서울|\bseoul\b/i, '서울'], [/부산/, '부산'], [/대구/, '대구'], [/인천/, '인천'],
@@ -18,6 +22,12 @@ const PROVINCE_RULES = [
 const NEEDS_REGION = new Set(['광주시']); // 경기 광주시 ↔ 광주광역시를 '광주시'로 부르는 관행
 // 교육지원청은 뺐다 — '화성오산교육지원청'처럼 두 시가 붙은 공동 기관명이 한쪽으로 잘못 떨어진다
 const BASE_SUFFIX = '(청|지방|지청|소방서|대학교|의회)';
+
+// 특례시 — 행정 경계 자료(SGIS)에는 '화성시'로 있지만 화면에는 공식 명칭으로 보인다
+const SPECIAL_CITIES = { 경기: ['수원시', '고양시', '용인시', '화성시'], 경남: ['창원시'] };
+export function sggLabel(region, name) {
+  return (SPECIAL_CITIES[region] || []).includes(name) ? name.replace(/시$/, '특례시') : name;
+}
 
 export function provinceOf(text) {
   if (!text || AMBIGUOUS_TEXT.test(text)) return null;
@@ -37,6 +47,7 @@ export function makeLocator(sggList) {
     const base = s.name.slice(0, -1);
     const isGu = s.name.endsWith('구');
     if (!isGu && base.length >= 2) forms.push(`${base}${BASE_SUFFIX}`);
+    if (s.name.endsWith('시') && base.length >= 2) forms.push(`${base}특례시`);
     return {
       sgg: s,
       re: new RegExp(forms.join('|'), 'g'),
@@ -60,10 +71,14 @@ export function makeLocator(sggList) {
       && o.end - o.start > h.end - h.start));
   }
 
+  /** regionHint가 있으면 그 시도 안의 시군구만 — 글에 다른 시도가 적혀 있어도 사례의 자리(시도)를 넘지 않는다 */
   function locate(texts, regionHint = null) {
     const found = new Map();
     for (const t of texts) {
-      for (const h of matchText(t, regionHint)) found.set(`${h.sgg.region}/${h.sgg.name}`, h.sgg);
+      for (const h of matchText(t, regionHint)) {
+        if (regionHint && h.sgg.region !== regionHint) continue;
+        found.set(`${h.sgg.region}/${h.sgg.name}`, h.sgg);
+      }
     }
     return found.size === 1 ? [...found.values()][0] : null;
   }

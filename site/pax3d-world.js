@@ -2,11 +2,12 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { toon, toonGradient, skyTexture, signSprite, createPostPass } from './pax3d-look.js?v=a66df86b';
-import { ISLANDS, SEATS, TASK_COLORS, FALLBACK_COLOR, shapeOf, cityKeyOf } from './pax3d-data.js?v=73414d04';
+import { ISLANDS, SEATS, TASK_COLORS, FALLBACK_COLOR, shapeOf, cityKeyOf } from './pax3d-data.js?v=5ed46b81';
 import { buildingGeometries, mountains, trees, clouds, pin, dokdo } from './pax3d-props.js?v=83d5cb9b';
 import {
   LAND_H, project, unproject, toWorld, projectPolys, rng, inPolys, polysArea, randomIn, scatter, blobRing,
 } from './pax3d-geom.js?v=f13514eb';
+import { sggLabel } from './pax3d-locate.js?v=6baaa238';
 import { createTileLayer, markLandStencil } from './pax3d-tiles.js?v=0eceea68';
 import { MODES, skyTexture as citySky, sunDirection } from './city3d/js/modes.js';
 import { createLandmarkFlight } from './city3d/js/flight.js';
@@ -279,7 +280,7 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     const [region, name] = key.split('/');
     const s = (sggByRegion.get(region) || []).find((x) => x.key === key);
     if (!s) continue;
-    const sign = screenSign([name, `사례 ${n}`], 0.046);
+    const sign = screenSign([sggLabel(region, name), `사례 ${n}`], 0.046);
     sign.position.copy(onGround(s.center, 0.12));
     sign.userData = { kind: 'sgg', key };
     scene.add(sign);

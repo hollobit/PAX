@@ -34,6 +34,15 @@ const out = {
   firstMentioned: (inst(['과학기술정보통신부·NIA']) || {}).name,
   longerName: (inst(['코레일유통']) || {}).name,
   asciiWord: inst(['ASIAN 연구소']),
+  specialCity: loc('화성특례시 AI스마트전략실'),
+  specialSuwon: loc('수원특례시청'),
+  // 경기 사례 — 기관명엔 화성특례시, 만든 사람 소속엔 서울 광진구(포팅). 경기 안의 화성시여야 한다
+  portedCase: (() => { const s = L.locate(['화성특례시·광진구', '서울특별시 광진구'], '경기'); return s ? `${s.region} ${s.name}` : null; })(),
+  // 시도 힌트가 있으면 다른 시도 시군구만 적힌 글로는 판정하지 않는다
+  otherRegionOnly: L.locate(['서울특별시 광진구'], '경기'),
+  labelHwaseong: mod.sggLabel('경기', '화성시'),
+  labelChangwon: mod.sggLabel('경남', '창원시'),
+  labelPlain: mod.sggLabel('경기', '성남시'),
 };
 console.log(JSON.stringify(out));
 """
@@ -85,3 +94,20 @@ def test_institution_order_and_length(result):
 
 def test_ascii_keyword_matches_whole_word_only(result):
     assert result["asciiWord"] is None
+
+
+def test_special_city_names_are_read(result):
+    assert result["specialCity"] == "경기 화성시"
+    assert result["specialSuwon"] == "경기 수원시"
+
+
+def test_district_never_leaves_the_case_region(result):
+    """화성 도구를 광진구가 포팅한 경기 사례가 경기 아래 '광진구'로 나오던 문제(2026-09-27 사용자 지적)"""
+    assert result["portedCase"] == "경기 화성시"
+    assert result["otherRegionOnly"] is None
+
+
+def test_special_city_label(result):
+    assert result["labelHwaseong"] == "화성특례시"
+    assert result["labelChangwon"] == "창원특례시"
+    assert result["labelPlain"] == "성남시"
