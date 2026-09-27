@@ -3,8 +3,9 @@ import * as THREE from 'three';
 import { MapControls } from 'three/addons/controls/MapControls.js';
 import {
   makeFrame, buildTerrain, buildWater, buildGreen, buildRibbons, roadStyle, waterwayStyle, buildOutline,
-  createBuildingMesh, buildingColor, WATER_COLOR, buildDistrictLines,
+  createBuildingMesh, WATER_COLOR, buildDistrictLines,
 } from './layers.js';
+import { selectBuildings, writeBuildingInstances } from './buildings.js';
 
 const MOBILE = matchMedia('(pointer: coarse)').matches || Math.min(innerWidth, innerHeight) < 700;
 
@@ -70,67 +71,21 @@ export function createWorld(canvas, { onPick, onStats, onFrame }) {
   let bmesh = null;
   let visible = new Uint32Array(0);
   let lastSel = null;
-  const m4 = new THREE.Matrix4();
-  const q = new THREE.Quaternion();
-  const up = new THREE.Vector3(0, 1, 0);
-  const tmpC = new THREE.Color();
 
-  /** 시점 둘레에서 가까운 순(높은 건물은 가산점)으로 예산만큼 고른다 — O(N) 히스토그램 선택 */
-  function selectBuildings(force) {
+  /** 시점 둘레에서 예산만큼 고른다(buildings.js) — 시점이 조금 움직였을 때는 다시 고르지 않는다 */
+  function selectVisible(force) {
     if (!city) return;
-    const b = city.b;
     const [tx, tn] = city.frame.local(controls.target.x, controls.target.z);
     const dist = camera.position.distanceTo(controls.target);
     if (!force && lastSel && Math.hypot(tx - lastSel[0], tn - lastSel[1]) < Math.max(300, dist * 0.15)) return;
     lastSel = [tx, tn];
-    const n = b.n;
-    const budget = Math.min(n, BUDGET.buildings);
-    let chosen;
-    if (budget === n) {
-      chosen = visible.length === n ? visible : Uint32Array.from({ length: n }, (_, i) => i);
-    } else {
-      const score = new Float32Array(n);
-      let lo = Infinity;
-      let hi = -Infinity;
-      for (let i = 0; i < n; i++) {
-        const s = Math.hypot(b.x[i] - tx, b.y[i] - tn) - Math.min(b.h[i], 300) * 15;
-        score[i] = s;
-        if (s < lo) lo = s;
-        if (s > hi) hi = s;
-      }
-      const BINS = 2048;
-      const hist = new Uint32Array(BINS);
-      const k = (BINS - 1) / (hi - lo || 1);
-      for (let i = 0; i < n; i++) hist[Math.floor((score[i] - lo) * k)]++;
-      let acc = 0;
-      let cut = 0;
-      while (cut < BINS && acc + hist[cut] <= budget) acc += hist[cut++];
-      chosen = new Uint32Array(budget);
-      let j = 0;
-      for (let i = 0; i < n && j < budget; i++) if (Math.floor((score[i] - lo) * k) < cut) chosen[j++] = i;
-      for (let i = 0; i < n && j < budget; i++) if (Math.floor((score[i] - lo) * k) === cut) chosen[j++] = i;
-    }
-    visible = chosen;
+    visible = selectBuildings(city.b, tx, tn, BUDGET.buildings, visible);
     writeInstances();
   }
 
   function writeInstances() {
-    const b = city.b;
-    const f = city.frame;
-    for (let j = 0; j < visible.length; j++) {
-      const i = visible[j];
-      const ground = Math.max(f.elev(b.x[i], b.y[i]), 0) * vscale;
-      q.setFromAxisAngle(up, b.ang[i]);
-      const hh = Math.max(b.h[i] - b.h0[i], 1);
-      m4.compose(new THREE.Vector3(f.X(b.x[i]), ground + b.h0[i], f.Z(b.y[i])), q, new THREE.Vector3(b.w[i], hh, b.d[i]));
-      bmesh.setMatrixAt(j, m4);
-      bmesh.setColorAt(j, buildingColor(b, i, markEstimated, tmpC));
-    }
-    bmesh.count = visible.length;
-    bmesh.instanceMatrix.needsUpdate = true;
-    if (bmesh.instanceColor) bmesh.instanceColor.needsUpdate = true;
-    bmesh.computeBoundingSphere();
-    onStats({ visible: visible.length, total: b.n });
+    writeBuildingInstances(bmesh, city.b, visible, city.frame, vscale, markEstimated);
+    onStats({ visible: visible.length, total: city.b.n });
   }
 
   // ---- 도시 장면 짓기 --------------------------------------------------------------------
@@ -164,7 +119,7 @@ export function createWorld(canvas, { onPick, onStats, onFrame }) {
     bmesh = createBuildingMesh(Math.min(city.b.n, BUDGET.buildings), uniforms);
     group.add(bmesh);
     applyMode();
-    selectBuildings(true);
+    selectVisible(true);
   }
 
   /** 넘겨받은 지점에 130m 주황 기둥 — 지형 배율이 바뀌면 buildScene이 다시 세운다 */
@@ -257,7 +212,7 @@ export function createWorld(canvas, { onPick, onStats, onFrame }) {
     }
     controls.update();
     placeSun();
-    selectBuildings(false);
+    selectVisible(false);
     renderer.render(scene, camera);
     if (city && onFrame) onFrame(api);
     frames++;

@@ -10,7 +10,7 @@
   <meta property="og:title" content="3D PAX — 미니어처 대한민국에서 공공AX 사례 탐험">
   <meta property="og:description" content="사례 한 건이 건물 한 채 — 색은 업무 유형, 모양은 누가 만들었는지. 시도를 누르면 그 지역 사례로 날아갑니다.">
   <meta property="og:url" content="https://hollobit.github.io/PAX/pax3d.html">
-  <link rel="stylesheet" href="style.css?v=06b66364">
+  <link rel="stylesheet" href="style.css?v=d0e7a9a0">
   <script type="importmap">
     { "imports": {
         "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
@@ -22,7 +22,7 @@
   <header class="site-header site-header--compact">
     <p class="eyebrow">3D PAX · 미니어처 대한민국</p>
     <h1>사례 한 건이 건물 한 채</h1>
-    <p class="tagline">색은 업무 유형, 모양은 누가 만들었는지 — 시도나 건물을 눌러 사례로 이동하고, 🚶 거리 산책으로 그 동네 거리를 걸어 보세요 · 🏙 도시 3D로 서울·부산·세종·대구·광양의 실제 도시 지도를 봅니다</p>
+    <p class="tagline">색은 업무 유형, 모양은 누가 만들었는지 — 시도나 건물을 눌러 사례로 이동하고, 🚶 거리 산책으로 그 동네 거리를 걸어 보세요 · 서울·부산·세종·대구·광양은 가까이 확대하면 실제 건물·도로·지형의 3D 입체지도가 펼쳐집니다</p>
     <nav class="site-nav" aria-label="주요 메뉴">
       <a href="./">사례 아카이브</a>
       <a href="pax3d.html" aria-current="page">3D PAX</a>
@@ -42,18 +42,19 @@
   <main class="pax3d">
     <section class="pax3d-stage" id="pax3d-stage" aria-label="3D 미니어처 지도">
       <canvas id="pax3d-canvas" aria-label="공공AX 사례가 건물로 선 3D 대한민국 지도. 같은 내용을 오른쪽 목록으로도 볼 수 있습니다."></canvas>
+      <div class="pax3d-citylabels" id="pax3d-citylabels" aria-label="도시 입체지도 이름표"></div>
       <p class="pax3d-status" id="pax3d-status">미니어처 세계를 짓는 중…</p>
       <div class="pax3d-fallback" id="pax3d-fallback" hidden>
         <p>이 기기에서는 3D 지도를 띄울 수 없습니다.<br>오른쪽(아래) 목록으로 같은 사례를 모두 볼 수 있습니다.</p>
       </div>
       <div class="pax3d-hud">
         <p class="pax3d-hud__summary" id="pax3d-summary"></p>
-        <p class="pax3d-hud__hint">끌어서 돌리기 · 휠로 확대하면 시군구와 실제 지도가 나타납니다 · 오른쪽 끌기로 이동 · 땅과 건물을 눌러 보세요</p>
+        <p class="pax3d-hud__hint">끌어서 돌리기 · 휠로 확대하면 시군구와 실제 지도가 나타나고, 서울·부산·세종·대구·광양은 더 확대하면 실제 건물의 3D 입체지도 위에 사례가 실제 자리에 섭니다 · 오른쪽 끌기로 이동 · 땅과 건물을 눌러 보세요</p>
+        <p class="pax3d-hud__city" id="pax3d-city" role="status" hidden></p>
       </div>
       <div class="pax3d-tools">
         <button type="button" class="pax3d-tool pax3d-tool--tour" id="pax3d-tour" aria-pressed="false" title="지금 목록의 사례를 차례로 둘러봅니다 — 지도를 만지면 멈춥니다">▶ 자동 투어</button>
         <button type="button" class="pax3d-tool" id="pax3d-street" title="고른 사례·지역의 거리로 내려가 1인칭으로 걷기">🚶 거리 산책</button>
-        <button type="button" class="pax3d-tool" id="pax3d-city3d" title="서울·부산·세종·대구·광양 — 실제 OSM 건물·도로·지형으로 세운 상세 3D 도시 지도(고른 사례·시도가 있으면 그 도시·자리로)">🏙 도시 3D</button>
         <button type="button" class="pax3d-tool" id="pax3d-home" title="처음 보기로">⌂ 처음으로</button>
         <button type="button" class="pax3d-tool" id="pax3d-tiles" aria-pressed="true" title="확대했을 때 실제 지도(OpenStreetMap) 깔기">실제 지도</button>
         <button type="button" class="pax3d-tool" id="pax3d-ink" aria-pressed="true" title="먹선 켜기/끄기">먹선</button>
@@ -67,7 +68,7 @@
         <p class="pax3d-legend__note">자리 정하는 순서: ① 정부·공공기관은 기관 소재지(주소) ② 기관명·만든 사람 소속에서 읽히는 시군구 ③ 시도만 알면 시·도청 앞 ④ 그래도 모르면 이름 붙인 섬(공직 현장 / 커뮤니티 / 참고). 섬의 크기는 사례 수입니다.</p>
       </details>
       <div class="pax3d-tip" id="pax3d-tip" hidden></div>
-      <p class="pax3d-attrib" id="pax3d-attrib" hidden>지도 타일 © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</p>
+      <p class="pax3d-attrib" id="pax3d-attrib" hidden><span class="pax3d-attrib__tiles">지도 타일</span><span class="pax3d-attrib__city">건물·도로·이름 OpenFreeMap(OpenMapTiles) · 지형 AWS Terrain Tiles ·</span> © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</p>
     </section>
 
     <aside class="pax3d-panel" aria-label="축별 사례 탐색">
@@ -91,6 +92,6 @@
   </footer>
   <script src="case-domains.js?v=202b47c3"></script>
   <script src="ministries.js?v=d0e486dc"></script>
-  <script type="module" src="pax3d.js?v=3f2cc324"></script>
+  <script type="module" src="pax3d.js?v=51d89559"></script>
 </body>
 </html>

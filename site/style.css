@@ -3268,3 +3268,46 @@ a.dash-tile:hover, a.dash-tile:focus-visible {
     display: none;
   }
 }
+
+/* ---- 3D PAX 도시 입체지도(pax3d-city.js) — 확대하면 펼쳐지는 실제 건물 지도의 OSM 이름표 ---- */
+.pax3d-citylabels {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.pax3d-citylabels .lb {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0 0.35rem;
+  border: 1px solid rgb(34 29 22 / 0.35);
+  border-radius: 4px;
+  background: rgb(251 246 234 / 0.9);
+  color: #221d16;
+  font: 500 0.72rem/1.45 var(--font-body);
+  white-space: nowrap;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.pax3d-citylabels .lb[hidden] { display: none; }
+.pax3d-citylabels .lb:focus-visible { outline: 2px solid #234a72; }
+.pax3d-citylabels .lb--district { font-size: 0.86rem; font-weight: 700; color: #fbf6ea; background: rgb(72 52 104 / 0.85); border-color: #221d16; }
+.pax3d-citylabels .lb--quarter { color: #3c2f55; }
+.pax3d-citylabels .lb--road { font-size: 0.68rem; color: #6b4210; background: rgb(255 238 205 / 0.92); }
+.pax3d-citylabels .lb--transit { color: #fff; background: rgb(35 74 114 / 0.9); }
+.pax3d-citylabels .lb--peak { color: #24361b; background: rgb(226 240 212 / 0.92); }
+.pax3d-citylabels .lb--water { color: #0e3a66; background: rgb(214 234 252 / 0.92); font-style: italic; }
+.pax3d-citylabels .lb--poi { font-size: 0.68rem; color: #5a3a24; }
+.pax3d-hud .pax3d-hud__city {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  background: rgb(35 74 114 / 0.92);
+  border-color: #234a72;
+  color: #fbf6ea;
+}
+.pax3d-hud .pax3d-hud__city[hidden] { display: none; }
+.pax3d-attrib__city { display: none; }
+.pax3d-attrib[data-mode="city"] .pax3d-attrib__city { display: inline; }
+.pax3d-attrib[data-mode="city"] .pax3d-attrib__tiles { display: none; }

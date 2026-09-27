@@ -24,7 +24,14 @@ export const LABEL_GROUPS = {
 const PRIORITY = { focus: -1, district: 0, city: 1, airport: 2, peak: 3, station: 3, water: 4, gov: 5, landmark: 5, road: 6, quarter: 6, hospital: 7, school: 7 };
 const MAX_SHOWN = 160;
 
-export function createLabelLayer(root, { onClick }) {
+/**
+ * @param root 이름표 DOM 부모
+ * @param opts.onClick 이름표를 눌렀을 때(item: {k, name, x, n})
+ * @param opts.place (item, liftM, vscale) → [X, Y, Z] 월드 좌표. 기본은 이 페이지 장면(도시 로컬 m, X = x − W/2 …).
+ *        3D PAX처럼 다른 좌표계에 얹을 때 바꾼다.
+ * @param opts.unit 월드 단위/미터 — 종류별 표시 거리(far, m)를 월드 거리로 바꿀 때 쓴다
+ */
+export function createLabelLayer(root, { onClick, place = null, unit = 1 }) {
   let items = [];
   let pool = [];
   const on = Object.fromEntries(Object.keys(LABEL_GROUPS).map((g) => [g, true]));
@@ -43,6 +50,7 @@ export function createLabelLayer(root, { onClick }) {
     items = rows.map((r) => ({
       ...r, X: frame.X(r.x), Z: frame.Z(r.n), ground: Math.max(frame.elev(r.x, r.n), 0), pri: PRIORITY[r.k] ?? 9,
     })).sort((a, b) => a.pri - b.pri);
+    if (!place) place = (it, lift, vscale) => [it.X, it.ground * vscale + lift, it.Z];
     lastKey = '';
   }
 
@@ -60,7 +68,7 @@ export function createLabelLayer(root, { onClick }) {
 
   /** 매 프레임 호출 — 카메라 행렬이 그대로면 아무것도 하지 않는다 */
   function update(camera, vscale, width, height) {
-    const key = camera.matrixWorld.elements.map((e) => e.toFixed(1)).join() + vscale + width + height + JSON.stringify(on);
+    const key = camera.matrixWorld.elements.map((e) => e.toPrecision(7)).join() + vscale + width + height + JSON.stringify(on);
     if (key === lastKey) return;
     lastKey = key;
     const taken = []; // 화면에 놓인 이름표 상자
@@ -70,10 +78,10 @@ export function createLabelLayer(root, { onClick }) {
       if (shown >= MAX_SHOWN) break;
       const K = LABEL_KINDS[it.k];
       if (!K || (K.group && !on[K.group])) continue;
-      const y = it.ground * vscale + (it.k === 'focus' ? 140 : it.k === 'peak' ? 20 : it.k === 'district' ? 60 : 25);
-      const d = Math.hypot(it.X - cam.x, y - cam.y, it.Z - cam.z);
+      const [X, Y, Z] = place(it, it.k === 'focus' ? 140 : it.k === 'peak' ? 20 : it.k === 'district' ? 60 : 25, vscale);
+      const d = Math.hypot(X - cam.x, Y - cam.y, Z - cam.z) / unit;
       if (d > K.far) continue;
-      v.set(it.X, y, it.Z).project(camera);
+      v.set(X, Y, Z).project(camera);
       if (v.z > 1 || v.x < -1.05 || v.x > 1.05 || v.y < -1.05 || v.y > 1.05) continue;
       const sx = (v.x * 0.5 + 0.5) * width;
       const sy = (-v.y * 0.5 + 0.5) * height;
@@ -98,6 +106,8 @@ export function createLabelLayer(root, { onClick }) {
 
   return {
     setLabels,
+    setUnit(u) { unit = u; lastKey = ''; },
+    clear() { items = []; lastKey = ''; for (const b of pool) { b.hidden = true; b._item = null; } },
     update,
     setGroup(g, value) { on[g] = value; },
     groups: on,

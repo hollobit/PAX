@@ -377,7 +377,7 @@ def main():
         summary[city["key"]] = meta["counts"] | {"bytes": sum(v["bytes"] for v in meta["files"].values())}
         print(city["key"], json.dumps(summary[city["key"]], ensure_ascii=False), flush=True)
     idx_path = OUT / "cities.json"
-    cities = json.loads(idx_path.read_text()) if idx_path.exists() else {}
+    cities = {}  # 목록은 산출된 meta.json에서 매번 다시 만든다(이전 파일을 읽어 덧붙이면 중첩된다)
     for c in CITIES:
         mp = OUT / c["key"] / "meta.json"
         if mp.exists():

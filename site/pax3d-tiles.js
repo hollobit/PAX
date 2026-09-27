@@ -122,10 +122,10 @@ export function createTileLayer({ scene, project, unproject, y, onActive, height
       enabled = on;
       lastKey = '';
     },
-    /** 매 프레임 호출 — 카메라 거리로 타일 줌과 투명도를 정한다. */
-    update(camera, target) {
+    /** 매 프레임 호출 — 카메라 거리로 타일 줌과 투명도를 정한다. suppressed면(도시 입체지도가 펼쳐졌을 때) 걷는다. */
+    update(camera, target, suppressed = false) {
       const d = camera.position.distanceTo(target);
-      opacity = enabled ? 1 - THREE.MathUtils.smoothstep(d, FADE_NEAR, FADE_FAR) : 0;
+      opacity = enabled && !suppressed ? 1 - THREE.MathUtils.smoothstep(d, FADE_NEAR, FADE_FAR) : 0;
       setActive(opacity > 0.02);
       if (!active) {
         group.visible = false;

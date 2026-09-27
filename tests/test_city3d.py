@@ -238,3 +238,61 @@ def test_locator_names_real_districts():
     assert [r[0] for r in out["busan"]] == ["해운대구", "동구"]
     assert abs(out["seoul"][0][2][0] - 126.9769) < 1e-9 and abs(out["seoul"][0][2][1] - 37.5759) < 1e-9
     assert all(r[1] for r in out["seoul"] + out["busan"])  # 가까운 동네 이름이 잡힌다
+
+
+# ---- 3D PAX 안에서 펼치기: 도시 범위·청사 찾기·사례 → 도시 -------------------------------------
+def test_city_index_has_bbox_matching_meta():
+    """3D PAX는 자료를 받기 전에 cities.json의 경위도 범위로 '지금 어느 도시 위인가'를 판정한다"""
+    index = json.loads((DATA / "cities.json").read_text())
+    assert set(index["cities"]) == {c["key"] for c in CITIES}
+    for key, c in index["cities"].items():
+        f = json.loads((DATA / key / "meta.json").read_text())["frame"]
+        assert c["bbox"] == [f["lon0"], f["lat0"], f["lon1"], f["lat1"]]
+        assert c["packed_bytes"] == sum((DATA / key / f"{n}.gz.b64.txt").stat().st_size for n in FILES)
+
+
+SEAT_NODE = """
+import fs from 'fs';
+const geo = await import('data:text/javascript,' + encodeURIComponent(fs.readFileSync('site/city3d/js/geo.js', 'utf8')));
+const out = {};
+for (const [key, place, withLoc] of [['gwangyang', '광양시', true], ['busan', '연제구', true], ['seoul', '중구', true],
+    ['sejong', '세종시', true], ['seoul', '서울', false], ['busan', '부산', false], ['daegu', '수성구', true]]) {
+  const info = JSON.parse(fs.readFileSync(`site/city3d/data/${key}/mapinfo.json`, 'utf8'));
+  const loc = geo.createLocator(info);
+  const s = geo.seatOf(info, place, withLoc ? loc : null);
+  out[`${key}/${place}`] = s && { name: s.name, gu: loc.district(s.x, s.n) };
+}
+console.log(JSON.stringify(out));
+"""
+
+
+@pytest.mark.skipif(not shutil.which("node"), reason="node 없음")
+def test_seat_of_finds_the_real_hall_inside_the_district():
+    """시군구까지만 아는 사례는 그 청사 자리에 선다 — 이름 앞머리만 같은 다른 구 청사(중구 → 중랑구청)로 가지 않는다"""
+    out = json.loads(subprocess.run(["node", "--input-type=module", "-e", SEAT_NODE], cwd=ROOT, capture_output=True, text=True, check=True).stdout)
+    assert out["gwangyang/광양시"]["name"] == "광양시청"
+    assert out["busan/연제구"] == {"name": "연제구청", "gu": "연제구"}
+    assert out["daegu/수성구"] == {"name": "수성구청", "gu": "수성구"}
+    assert out["sejong/세종시"]["name"] == "세종특별자치시청"
+    assert out["seoul/서울"]["name"] == "서울특별시청" and out["busan/부산"]["name"] == "부산광역시청"
+    assert out["seoul/중구"]["gu"] == "중구"  # 청사 이름표가 없으면 중구 이름표 자리 — 어느 쪽이든 중구 안
+
+
+CITYKEY_NODE = """
+import fs from 'fs';
+// 위치 판정 모듈 import는 cityKeyOf와 무관해 떼어 낸다(data: URL에서는 상대 경로를 풀 수 없다)
+const src = fs.readFileSync('site/pax3d-data.js', 'utf8').replace(/^import .*$/gm, '');
+const mod = await import('data:text/javascript,' + encodeURIComponent(src));
+const k = mod.cityKeyOf;
+console.log(JSON.stringify([
+  k({ place: '서울' }), k({ place: '부산', sgg: { name: '연제구' } }), k({ place: '세종' }), k({ place: '대구' }),
+  k({ place: '대구', sgg: { name: '군위군' } }), k({ place: '전남', sgg: { name: '광양시' } }), k({ place: '전남', sgg: { name: '순천시' } }),
+  k({ place: '경기' }), k({ place: '공직 현장 섬' }), k(null),
+]));
+"""
+
+
+@pytest.mark.skipif(not shutil.which("node"), reason="node 없음")
+def test_case_location_maps_to_city():
+    out = json.loads(subprocess.run(["node", "--input-type=module", "-e", CITYKEY_NODE], cwd=ROOT, capture_output=True, text=True, check=True).stdout)
+    assert out == ["seoul", "busan", "sejong", "daegu", None, "gwangyang", None, None, None, None]

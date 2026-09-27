@@ -18,7 +18,7 @@ from common import OUT, SITE_DATA  # noqa: E402
 
 total_raw = total_packed = 0
 SITE_DATA.mkdir(parents=True, exist_ok=True)
-shutil.copy2(OUT / "cities.json", SITE_DATA / "cities.json")
+index = json.loads((OUT / "cities.json").read_text())
 for meta_path in sorted(OUT.glob("*/meta.json")):
     meta = json.loads(meta_path.read_text())
     dst = SITE_DATA / meta_path.parent.name
@@ -33,4 +33,9 @@ for meta_path in sorted(OUT.glob("*/meta.json")):
     meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=1))
     shutil.copy2(meta_path, dst / "meta.json")
     shutil.copy2(meta_path.parent / "mapinfo.json", dst / "mapinfo.json")
+    # 3D PAX가 도시 자료를 받기 전에 "지금 어느 도시 위인가"를 알도록 경위도 범위·전송 크기를 목록에 싣는다
+    f = meta["frame"]
+    index["cities"][dst.name] |= {"bbox": [f["lon0"], f["lat0"], f["lon1"], f["lat1"]],
+                                  "packed_bytes": sum(v["packed_bytes"] for v in meta["files"].values())}
+(SITE_DATA / "cities.json").write_text(json.dumps(index, ensure_ascii=False, indent=1))
 print(f"원본 {total_raw / 1048576:.1f}MB → 전송본 {total_packed / 1048576:.1f}MB (gzip+base64)")

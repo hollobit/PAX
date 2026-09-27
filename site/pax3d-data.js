@@ -44,8 +44,15 @@ export const SEATS = {
   제주: [126.498, 33.489],
 };
 
-// 상세 3D 도시 지도(city3d/)가 있는 도시 — 광양은 전남 광양시라 시군구로 따로 판정한다(pax3d.js city3dKey)
+// 도시 입체지도(city3d/data)가 있는 도시 — 확대하면 미니어처 대신 실제 건물·지형이 펼쳐지고 사례가 실제 자리에 선다.
+// 광양은 전남 광양시라 시군구로 판정하고, 대구의 군위군은 도시 지도 범위 밖이다.
 export const CITY3D = { 서울: 'seoul', 부산: 'busan', 세종: 'sejong', 대구: 'daegu' };
+export function cityKeyOf(loc) {
+  if (!loc) return null;
+  if (loc.place === '전남') return loc.sgg && loc.sgg.name === '광양시' ? 'gwangyang' : null;
+  if (loc.place === '대구' && loc.sgg && loc.sgg.name === '군위군') return null;
+  return CITY3D[loc.place] || null;
+}
 
 export const ISLAND_KEYS = ISLANDS.map((i) => i.key);
 

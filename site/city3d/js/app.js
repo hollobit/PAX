@@ -1,10 +1,10 @@
 // 다섯 도시 입체지도 — 화면 구성과 도시 불러오기(파일마다 레코드 수·길이·CRC32 검증).
-import { readC3D, decodeBuildings, decodeLines, decodeMesh, decodeDem } from './binary.js';
+import { getJSON, loadCity as fetchCity } from './load.js';
 import { createWorld, MODES } from './world.js';
 import { ROAD_STYLE } from './layers.js';
 import { createLabelLayer, LABEL_GROUPS, LABEL_KINDS } from './maplabels.js';
 import { createMinimap } from './minimap.js';
-import { createLocator, externalLinks, toLonLat, toLocal } from './geo.js';
+import { createLocator, externalLinks, seatOf, toLonLat, toLocal } from './geo.js';
 
 const $ = (s) => document.querySelector(s);
 const fmt = new Intl.NumberFormat('ko-KR');
@@ -14,27 +14,6 @@ function el(tag, cls, text) {
   if (cls) n.className = cls;
   if (text != null) n.textContent = text;
   return n;
-}
-
-async function getJSON(path) {
-  const r = await fetch(path);
-  if (!r.ok) throw new Error(`${path}을(를) 받지 못했습니다 (${r.status})`);
-  return r.json();
-}
-/**
- * 바이너리 받기 — 배포처(Claude sites)가 임의 바이너리를 내보내지 않아 gzip+base64 텍스트로 싣는다.
- * base64를 풀고 gzip을 되돌린 원래 .bin 바이트를 돌려준다(검증은 그 바이트로 readC3D가 한다).
- */
-async function getBin(path) {
-  const r = await fetch(`${path}.gz.b64.txt`);
-  if (!r.ok) throw new Error(`${path}을(를) 받지 못했습니다 (${r.status})`);
-  const b64 = (await r.text()).trim();
-  const bin = atob(b64);
-  const bytes = new Uint8Array(bin.length);
-  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
-  if (typeof DecompressionStream === 'undefined') throw new Error('이 브라우저는 gzip 풀기(DecompressionStream)를 지원하지 않습니다');
-  const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'));
-  return new Response(stream).arrayBuffer();
 }
 
 const CITY_KEYS = ['seoul', 'busan', 'sejong', 'daegu', 'gwangyang'];
@@ -167,27 +146,9 @@ async function main() {
     $('#error').hidden = true;
     const t0 = performance.now();
     try {
-      const meta = await getJSON(`data/${key}/meta.json`);
-      const mapinfo = await getJSON(`data/${key}/mapinfo.json`);
-      if (mapinfo.key !== key || mapinfo.snapshot !== meta.snapshot) throw new Error('mapinfo.json이 meta.json과 다른 도시·스냅샷입니다');
-      const names = ['buildings.bin', 'roads.bin', 'waterways.bin', 'water.bin', 'green.bin', 'terrain.bin'];
-      const bufs = await Promise.all(names.map((n) => getBin(`data/${key}/${n}`)));
-      $('#busy').textContent = '레코드 수·길이·CRC32를 확인하는 중…';
-      await new Promise((r) => setTimeout(r, 10));
-      const [B, R, WW, W, G, D] = names.map((n, i) => readC3D(bufs[i], { 'buildings.bin': 'BLDG', 'roads.bin': 'LINE', 'waterways.bin': 'LINE', 'water.bin': 'MESH', 'green.bin': 'MESH', 'terrain.bin': 'DEMG' }[n], meta.files[n]));
-      if (B.count !== meta.counts.buildings) throw new Error(`건물 레코드 수가 meta.json(${meta.counts.buildings})과 다릅니다 (${B.count})`);
-      const city = {
-        meta,
-        b: decodeBuildings(B),
-        roads: decodeLines(R),
-        waterways: decodeLines(WW),
-        water: decodeMesh(W),
-        green: decodeMesh(G),
-        dem: decodeDem(D, meta.terrain),
-        mapinfo,
-      };
-      const bytes = bufs.reduce((s, b) => s + b.byteLength, 0);
-      $('#verify').textContent = `검증 통과 — 파일 ${names.length}개 · ${fmt.format(Math.round(bytes / 1024))}KB · 레코드 수·본문 길이·CRC32 일치`;
+      const city = await fetchCity('data', key, (msg) => { $('#busy').textContent = msg; });
+      const { meta, mapinfo } = city;
+      $('#verify').textContent = `검증 통과 — 파일 ${city.files}개 · ${fmt.format(Math.round(city.bytes / 1024))}KB · 레코드 수·본문 길이·CRC32 일치`;
       $('#busy').textContent = '장면을 짓는 중…';
       await new Promise((r) => setTimeout(r, 10));
       world.setCity(city);
@@ -363,17 +324,8 @@ async function main() {
   }
 
   /** 넘겨받은 지점을 이 도시 좌표로 옮겨 표시하고 그곳으로 날아간다. 도시 범위 밖이면 알리고 무시한다. */
-  /** 시군구 이름 → 그 청사 이름표(광양시 → 광양시청, 세종시 → 세종특별자치시청), 없으면 구 이름표 자리 */
-  function seatOf(mapinfo, place) {
-    const stem = place.replace(/[시군구]$/, '');
-    const gov = mapinfo.labels.find((l) => l.k === 'gov' && (l.name === `${place}청` || (l.name.startsWith(stem) && l.name.endsWith(`${place.slice(-1)}청`))));
-    if (gov) return { x: gov.x, n: gov.n, name: gov.name };
-    const d = mapinfo.districts.find((x) => x.name === place);
-    return d ? { x: d.x, n: d.n, name: `${d.name} 이름표 자리` } : null;
-  }
-
   function applyFocus(key, meta, mapinfo) {
-    const seat = want && want.city === key && want.place ? seatOf(mapinfo, want.place) : null;
+    const seat = want && want.city === key && want.place ? seatOf(mapinfo, want.place, createLocator(mapinfo)) : null;
     const focus = seat ? { x: seat.x, n: seat.n, label: `${want.label || want.place} · ${seat.name}` }
       : want && want.city === key && want.lat != null ? (() => {
       const [x, n] = toLocal(meta.frame, want.lon, want.lat);

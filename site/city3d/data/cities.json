@@ -1,78 +1,60 @@
 {
  "snapshot": "20260913_164504_pt",
  "cities": {
-  "snapshot": "20260913_164504_pt",
-  "cities": {
-   "snapshot": "20260913_164504_pt",
-   "cities": {
-    "snapshot": "20260913_164504_pt",
-    "cities": {
-     "gwangyang": {
-      "name": "광양",
-      "buildings": 6134
-     }
-    },
-    "seoul": {
-     "name": "서울",
-     "buildings": 167255
-    },
-    "busan": {
-     "name": "부산",
-     "buildings": 41244
-    },
-    "sejong": {
-     "name": "세종",
-     "buildings": 26551
-    },
-    "daegu": {
-     "name": "대구",
-     "buildings": 42109
-    },
-    "gwangyang": {
-     "name": "광양",
-     "buildings": 6134
-    }
-   },
-   "seoul": {
-    "name": "서울",
-    "buildings": 167255
-   },
-   "busan": {
-    "name": "부산",
-    "buildings": 41244
-   },
-   "sejong": {
-    "name": "세종",
-    "buildings": 26551
-   },
-   "daegu": {
-    "name": "대구",
-    "buildings": 42109
-   },
-   "gwangyang": {
-    "name": "광양",
-    "buildings": 6134
-   }
-  },
   "seoul": {
    "name": "서울",
-   "buildings": 167255
+   "buildings": 167255,
+   "bbox": [
+    126.755,
+    37.419000000000004,
+    127.194,
+    37.711
+   ],
+   "packed_bytes": 6852472
   },
   "busan": {
    "name": "부산",
-   "buildings": 41244
+   "buildings": 41244,
+   "bbox": [
+    128.78400000000002,
+    34.978,
+    129.315,
+    35.399
+   ],
+   "packed_bytes": 4058944
   },
   "sejong": {
    "name": "세종",
-   "buildings": 26551
+   "buildings": 26551,
+   "bbox": [
+    127.118,
+    36.397,
+    127.41900000000001,
+    36.744
+   ],
+   "packed_bytes": 2906664
   },
   "daegu": {
    "name": "대구",
-   "buildings": 42109
+   "buildings": 42109,
+   "bbox": [
+    128.341,
+    35.597,
+    128.772,
+    36.025999999999996
+   ],
+   "packed_bytes": 4608764
   },
   "gwangyang": {
    "name": "광양",
-   "buildings": 6134
+   "buildings": 6134,
+   "bbox": [
+    127.51599999999999,
+    34.876000000000005,
+    127.796,
+    35.193999999999996
+   ],
+   "packed_bytes": 2020184
   }
  }
 }

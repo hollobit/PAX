@@ -2,12 +2,13 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { toon, toonGradient, skyTexture, signSprite, createPostPass } from './pax3d-look.js?v=a66df86b';
-import { ISLANDS, SEATS, TASK_COLORS, FALLBACK_COLOR, shapeOf } from './pax3d-data.js?v=522678f7';
+import { ISLANDS, SEATS, TASK_COLORS, FALLBACK_COLOR, shapeOf, cityKeyOf } from './pax3d-data.js?v=d9469f19';
 import { buildingGeometries, mountains, trees, clouds, pin, dokdo } from './pax3d-props.js?v=83d5cb9b';
 import {
   LAND_H, project, unproject, toWorld, projectPolys, rng, inPolys, polysArea, randomIn, scatter, blobRing,
 } from './pax3d-geom.js?v=f13514eb';
-import { createTileLayer, markLandStencil } from './pax3d-tiles.js?v=4ac31ec5';
+import { createTileLayer, markLandStencil } from './pax3d-tiles.js?v=0eceea68';
+import { createCityLayer } from './pax3d-city.js?v=b45ccb82';
 
 // 간판 자리 — 무게중심은 경기(서울 구멍 포함)처럼 엉뚱한 곳에 떨어져 손으로 정했다.
 const LABEL_AT = {
@@ -77,9 +78,9 @@ function zoneKey(loc) {
 
 /**
  * @param canvas 그릴 캔버스
- * @param opts {geo, sggDoc, cases, located, onHover, onPickCase, onPickPlace, onTiles}
+ * @param opts {geo, sggDoc, cases, located, onHover, onPickCase, onPickPlace, onTiles, labelRoot, onCity}
  */
-export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHover, onPickCase, onPickPlace, onTiles }) {
+export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHover, onPickCase, onPickPlace, onTiles, labelRoot, onCity = () => {} }) {
   // 실제 지형(수치표고)이 있으면 모든 것이 그 높이 위에 선다 — 없으면 평평한 판
   const hAt = (x, z) => (terrain ? terrain.heightAt(x, z) : 0);
   const onGround = (v, lift = 0) => toWorld(v, LAND_H + lift + hAt(v.x, -v.y));
@@ -115,7 +116,9 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
   Object.assign(sun.shadow.camera, { left: -12, right: 12, top: 12, bottom: -12, near: 1, far: 40 });
   sun.shadow.bias = -0.0006;
   sun.shadow.normalBias = 0.02;
-  scene.add(sun);
+  scene.add(sun, sun.target); // 도시 모드에서는 그림자 상자가 시점을 따라간다(target을 장면에 넣어야 갱신된다)
+  const SUN_HOME = { pos: sun.position.clone(), span: 12, near: 1, far: 40, normalBias: 0.02 };
+  const SUN_DIR = sun.position.clone().normalize();
 
   const sea = new THREE.Mesh(new THREE.CircleGeometry(40, 64), toon(0x8ec6cc, grad));
   sea.rotateX(-Math.PI / 2);
@@ -156,10 +159,11 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     scene.add(sign);
     labels.push(sign);
   }
+  let land = null; // 도시 입체지도가 펼쳐지면 걷는다(과장된 전국 지형이 실제 축척 도시를 덮지 않게)
   if (terrain) {
     const mat = new THREE.MeshToonMaterial({ color: 0xffffff, gradientMap: grad, vertexColors: true });
     markLandStencil(mat); // 실제 지도 타일은 이 지형 위에 깔린다
-    const land = terrain.buildMesh(tints, LAND_H, mat);
+    land = terrain.buildMesh(tints, LAND_H, mat);
     scene.add(land);
     pickables.push(land);
   }
@@ -234,6 +238,8 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
       entries.push({
         c,
         loc,
+        cityKey: cityKeyOf(loc),
+        city: null, // 도시 입체지도에서 설 자리 {pos, s, h} — 그 도시 자료를 받은 뒤 채운다
         pos: onGround(pts[i]),
         s: 0.075 * f,
         h: 0.85 + r() * 0.45 + (c.org_type === '중앙행정기관' ? 0.5 : 0),
@@ -298,10 +304,18 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
   const q = new THREE.Quaternion();
   const up = new THREE.Vector3(0, 1, 0);
   const grey = new THREE.Color('#bdb6a6');
+  let cityMode = null; // 펼쳐진 도시 입체지도(pax3d-city.js) — 없으면 전국 미니어처
+  /** 지금 화면에서 사례 건물이 서는 자리 — 도시 모드면 그 도시 사례만 실제 자리에, 나머지는 숨김(null) */
+  function view(e) {
+    if (!cityMode) return e;
+    return e.cityKey === cityMode.key && e.city ? e.city : null;
+  }
   function applyInstance(e, mode) {
     const k = mode === 'on' ? 1.35 : mode === 'off' ? 0.55 : 1;
+    const v = view(e);
     q.setFromAxisAngle(up, e.rot);
-    m4.compose(e.pos, q, new THREE.Vector3(e.s, e.s * e.h * k, e.s));
+    if (!v) m4.makeScale(1e-7, 1e-7, 1e-7).setPosition(e.pos);
+    else m4.compose(v.pos, q, new THREE.Vector3(v.s, v.s * v.h * k, v.s));
     e.mesh.setMatrixAt(e.idx, m4);
     e.mesh.setColorAt(e.idx, mode === 'off' ? e.color.clone().lerp(grey, 0.75) : e.color);
   }
@@ -331,11 +345,13 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
   scene.add(beacons);
   let beaconList = [];
   function layBeacons(d, t) {
-    const k = THREE.MathUtils.clamp(d * 0.011, 0.012, 0.2);
+    // 도시 모드에서는 화면 크기가 일정하도록 거리에 비례(전국 화면의 최소 크기 0.012 ≈ 500m는 도시에서 너무 크다)
+    const k = cityMode ? d * 0.006 : THREE.MathUtils.clamp(d * 0.011, 0.012, 0.2);
     beaconList.forEach((e, i) => {
-      const top = e.pos.y + e.s * e.h * 1.35 * 2 + k * 1.6 + Math.sin(t * 2.5 + i) * k * 0.3;
+      const v = view(e) || e;
+      const top = v.pos.y + v.s * v.h * 1.35 * 2 + k * 1.6 + Math.sin(t * 2.5 + i) * k * 0.3;
       q.setFromAxisAngle(up, t * 1.2 + i);
-      m4.compose(new THREE.Vector3(e.pos.x, top, e.pos.z), q, new THREE.Vector3(k * 0.7, k, k * 0.7));
+      m4.compose(new THREE.Vector3(v.pos.x, top, v.pos.z), q, new THREE.Vector3(k * 0.7, k, k * 0.7));
       beacons.setMatrixAt(i, m4);
     });
     beacons.instanceMatrix.needsUpdate = true;
@@ -348,10 +364,83 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
   scene.add(cloudGroup);
 
   // 실제 지도가 깔리면 나무는 걷는다 — 지도 글자를 가리지 않게(산은 이정표로 남긴다)
+  let tilesOn = false;
   const tiles = createTileLayer({
     scene, project, unproject, y: LAND_H + (terrain ? 0.02 : 0.012), heightAt: hAt, landMask: terrain ? terrain.landMask() : null,
-    onActive: (on) => { treeMesh.visible = !on; if (onTiles) onTiles(on); },
+    onActive: (on) => { tilesOn = on; treeMesh.visible = !on && !cityMode; if (onTiles) onTiles(on); },
   });
+
+  // ---- 도시 입체지도: 서울·부산·세종·대구·광양 위로 가까이 가면 펼쳐진다 ------------------------------
+  const citySigns = new Map(); // 도시 key → 사례 자리 간판들
+  const cityLayer = createCityLayer({
+    scene,
+    labelRoot,
+    onLabelClick: (p, dist) => flyTo(p, dist),
+    onState: (st) => onCity(st),
+    onChange: (c) => enterCity(c),
+  });
+  /** 그 도시 사례를 실제 자리에 — 기관 소재지 → 시군구 청사 → 시청. 같은 자리의 사례는 해바라기 배열로 둘러선다. */
+  function placeCityCases(c) {
+    const groups = new Map();
+    for (const e of entries) {
+      if (e.cityKey !== c.key) continue;
+      const a = cityLayer.anchorOf(c, e.loc);
+      if (!a) continue;
+      const k = `${Math.round(a[0])},${Math.round(a[1])}`;
+      if (!groups.has(k)) groups.set(k, { a, list: [] });
+      groups.get(k).list.push(e);
+    }
+    const signs = [];
+    for (const { a: [x, n, name], list } of groups.values()) {
+      list.forEach((e, i) => {
+        const r = list.length === 1 ? 0 : 68 * Math.sqrt(i + 0.6);
+        const ang = i * 2.39996;
+        const px = x + Math.cos(ang) * r;
+        const pn = n + Math.sin(ang) * r;
+        // 바닥 약 38m, 높이 약 80~220m — 실제 건물 사이에서 눈에 띄는 사례 탑(축척은 표지용, 실제 건물 아님)
+        e.city = { pos: c.toWorld(px, pn, 0), s: 48 * c.sz, h: e.h * 2 };
+      });
+      const sign = screenSign([name, `사례 ${list.length}`], 0.04, { accent: '#234a72' });
+      sign.position.copy(c.toWorld(x, n, 260));
+      sign.userData = { kind: 'city', city: c.key, ids: new Set(list.map((e) => e.c.id)) };
+      sign.visible = false;
+      scene.add(sign);
+      labels.push(sign);
+      signs.push(sign);
+    }
+    citySigns.set(c.key, signs);
+  }
+  let focusedId = null;
+  let pendingFly = null; // 전국 화면에서 도시 사례를 골랐을 때 — 도시가 펼쳐지면 그 자리로 한 번 더 내려간다
+  function enterCity(c) {
+    cityMode = c;
+    if (c && !citySigns.has(c.key)) placeCityCases(c);
+    if (land) land.visible = !c;
+    regionLines.visible = !c;
+    sggLines.visible = !c;
+    treeMesh.visible = !c && !tilesOn;
+    controls.minDistance = c ? 0.004 : 0.45; // 약 170m까지 — 전국 화면은 원래대로 약 20km
+    controls.zoomSpeed = c ? 1.8 : 1;
+    if (!c) {
+      sun.position.copy(SUN_HOME.pos);
+      sun.target.position.set(0, 0, 0);
+      fitShadow(SUN_HOME.span, SUN_HOME.near, SUN_HOME.far, SUN_HOME.normalBias);
+    }
+    setHighlight(highlighted);
+    if (focusedId) {
+      const e = byId.get(focusedId);
+      const fly = c && pendingFly === focusedId && view(e);
+      focusCase(focusedId, { fly: Boolean(fly) });
+      if (fly) pendingFly = null;
+    }
+    onCity(c ? { phase: 'enter', key: c.key, name: c.name, meta: c.data.meta, ms: c.ms } : { phase: 'leave' });
+  }
+  function fitShadow(span, near, far, normalBias) {
+    const cam = sun.shadow.camera;
+    Object.assign(cam, { left: -span, right: span, top: span, bottom: -span, near, far });
+    cam.updateProjectionMatrix();
+    sun.shadow.normalBias = normalBias;
+  }
   const post = createPostPass(renderer);
 
   // ---- 카메라 이동 ----------------------------------------------------------------
@@ -376,7 +465,8 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     const box = new THREE.Box3().setFromPoints(points);
     const size = box.getSize(new THREE.Vector3());
     const center = box.getCenter(new THREE.Vector3());
-    flyTo(center, THREE.MathUtils.clamp(Math.max(size.x, size.z) * 1.9 + 1.2, 1.4, 30));
+    flyTo(center, cityMode ? THREE.MathUtils.clamp(Math.max(size.x, size.z) * 1.9 + 0.02, 0.03, 2)
+      : THREE.MathUtils.clamp(Math.max(size.x, size.z) * 1.9 + 1.2, 1.4, 30));
   }
 
   // ---- 선택·강조 -----------------------------------------------------------------
@@ -386,28 +476,44 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     return entries.some((e) => ids.has(e.c.id) && (
       (kind === 'region' && e.loc.place === key)
       || (kind === 'sgg' && e.loc.sgg && `${e.loc.place}/${e.loc.sgg.name}` === key)
-      || (kind === 'inst' && e.loc.inst && sign.userData.keys.includes(`inst:${e.loc.inst.name}`))));
+      || (kind === 'inst' && e.loc.inst && sign.userData.keys.includes(`inst:${e.loc.inst.name}`))
+      || (kind === 'city' && sign.userData.ids.has(e.c.id))));
   }
   function setHighlight(ids) {
     highlighted = ids;
     for (const e of entries) applyInstance(e, !ids ? 'normal' : ids.has(e.c.id) ? 'on' : 'off');
     refresh();
     for (const sign of labels) sign.userData.base = !ids || labelHasHit(sign, ids) ? 1 : 0.3;
-    beaconList = ids ? entries.filter((e) => ids.has(e.c.id)).slice(0, BEACON_MAX) : [];
+    beaconList = ids ? entries.filter((e) => ids.has(e.c.id) && view(e)).slice(0, BEACON_MAX) : [];
     beacons.count = beaconList.length;
   }
   function focusCase(id, { fly = true } = {}) {
     const e = byId.get(id);
+    focusedId = e ? id : null;
     if (!e) {
       marker.visible = false;
       return;
     }
     const k = highlighted && !highlighted.has(id) ? 0.55 : highlighted ? 1.35 : 1;
-    marker.scale.setScalar(Math.max(0.3, e.s / 0.075) * 0.7);
-    marker.position.set(e.pos.x, e.pos.y + e.s * e.h * k * 2.1 + 0.04, e.pos.z);
+    const v = view(e);
+    if (v && cityMode) {
+      // 도시 모드: 핀도 도시 축척으로(사례 건물 위 약 60m)
+      marker.scale.setScalar(v.s * 5);
+      marker.position.set(v.pos.x, v.pos.y + v.s * v.h * k * 1.9 + v.s * 0.6, v.pos.z);
+    } else {
+      marker.scale.setScalar(Math.max(0.3, e.s / 0.075) * 0.7);
+      marker.position.set(e.pos.x, e.pos.y + e.s * e.h * k * 2.1 + 0.04, e.pos.z);
+    }
     marker.userData.baseY = marker.position.y;
-    marker.visible = true;
-    if (fly) flyTo(e.pos, 1.6);
+    marker.userData.bob = v && cityMode ? v.s * 0.5 : 0.03;
+    marker.visible = Boolean(v) || !cityMode;
+    if (!fly) return;
+    if (v && cityMode) flyTo(v.pos, 0.035);
+    else {
+      // 도시 사례면 자료를 미리 받고, 도시가 펼쳐지면 실제 자리로 한 번 더 내려간다
+      if (e.cityKey) { pendingFly = id; cityLayer.index && cityLayer.ensureLoaded(e.cityKey); }
+      flyTo(e.pos, 1.6);
+    }
   }
 
   // ---- 포인터 -----------------------------------------------------------------
@@ -421,9 +527,13 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     const rect = canvas.getBoundingClientRect();
     ndc.set(((ev.clientX - rect.left) / rect.width) * 2 - 1, -((ev.clientY - rect.top) / rect.height) * 2 + 1);
     ray.setFromCamera(ndc, camera);
-    const hit = ray.intersectObjects(pickables, false)[0];
+    const hit = ray.intersectObjects(pickables.filter((o) => o.visible), false)[0];
     if (!hit) return null;
-    if (hit.object.isInstancedMesh) return { caseId: hit.object.userData.entries[hit.instanceId].c.id };
+    if (hit.object.isInstancedMesh) {
+      const e = hit.object.userData.entries[hit.instanceId];
+      return view(e) ? { caseId: e.c.id } : null;
+    }
+    if (cityMode) return null; // 도시 입체지도 안에서 땅을 누르면 시도로 날아가지 않는다
     const place = hit.object.userData.terrain ? terrain.regionAt(hit.point.x, hit.point.z) : hit.object.userData.place;
     if (!place) return null;
     // 가까이 들어와 있으면 시도가 아니라 그 자리의 시군구를 고른다
@@ -479,6 +589,25 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     }
     controls.update();
     const d = camera.position.distanceTo(controls.target);
+    // 가까운 면 — 도시 거리(수백 m)까지 내려가므로 거리에 비례해 줄인다(잉크 선은 near/far로 깊이를 되살린다)
+    const nearPlane = THREE.MathUtils.clamp(d * 0.02, 0.00004, 0.05);
+    if (Math.abs(camera.near - nearPlane) > nearPlane * 0.1) {
+      camera.near = nearPlane;
+      camera.updateProjectionMatrix();
+    }
+    cityLayer.update(camera, controls.target, d, canvas.clientWidth, canvas.clientHeight);
+    if (cityMode) {
+      // 그림자 상자가 시점을 따라간다 — 도시 축척에서도 건물 그림자가 뭉개지지 않게
+      const span = THREE.MathUtils.clamp(d * 1.2, 0.004, 0.8);
+      sun.position.copy(controls.target).addScaledVector(SUN_DIR, span * 3);
+      sun.target.position.copy(controls.target);
+      fitShadow(span, span * 0.2, span * 8, span * 0.0008);
+      scene.fog.near = d * 8;
+      scene.fog.far = d * 30;
+    } else {
+      scene.fog.near = 26;
+      scene.fog.far = 60;
+    }
     // 시군구 선이 진해지는 만큼 시도 선은 옅어진다 — 두 선은 따로 단순화돼 겹치면 이중선이 된다
     const near = 1 - THREE.MathUtils.smoothstep(d, 4.5, 8);
     sggLines.material.opacity = 0.6 * near;
@@ -487,13 +616,15 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     for (const sign of labels) {
       const ds = camera.position.distanceTo(sign.position);
       const { kind } = sign.userData;
-      const vis = kind === 'region' ? THREE.MathUtils.smoothstep(ds, 2.2, 5.5)
+      const vis = kind === 'city' ? (cityMode && sign.userData.city === cityMode.key ? 1 - THREE.MathUtils.smoothstep(ds, 0.14, 0.34) : 0)
+        : cityMode ? 0
+        : kind === 'region' ? THREE.MathUtils.smoothstep(ds, 2.2, 5.5)
         : kind === 'sgg' ? (1 - THREE.MathUtils.smoothstep(ds, 4.5, 7)) * THREE.MathUtils.smoothstep(ds, 0.5, 1.1)
           : 1 - THREE.MathUtils.smoothstep(ds, 1.6, 2.6);
       sign.material.opacity = (sign.userData.base ?? 1) * vis;
       sign.visible = sign.material.opacity > 0.02;
     }
-    tiles.update(camera, controls.target);
+    tiles.update(camera, controls.target, Boolean(cityMode));
     cloudGroup.visible = d > 3;
     cloudGroup.children.forEach((cl, i) => {
       cl.position.x = ((cl.userData.x0 + t * cl.userData.v + 24) % 48) - 24;
@@ -501,7 +632,7 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     });
     if (beaconList.length) layBeacons(d, t);
     if (marker.visible) {
-      marker.position.y = marker.userData.baseY + Math.sin(t * 3) * 0.03;
+      marker.position.y = marker.userData.baseY + Math.sin(t * 3) * (marker.userData.bob ?? 0.03);
       marker.rotation.y = t * 1.5;
     }
     if (hoverQueued) {
@@ -518,14 +649,15 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
   return {
     setHighlight,
     focusCase,
-    clearFocus() { marker.visible = false; },
+    clearFocus() { marker.visible = false; focusedId = null; pendingFly = null; },
     flyToIds(ids) {
-      flyToPoints([...ids].map((id) => byId.get(id)).filter(Boolean).map((e) => e.pos));
+      flyToPoints([...ids].map((id) => byId.get(id)).filter((e) => e && view(e)).map((e) => view(e).pos));
     },
     flyToPlace(place) {
       const inPlace = entries.filter((e) => (place.includes('/')
         ? e.loc.sgg && `${e.loc.place}/${e.loc.sgg.name}` === place : e.loc.place === place));
-      if (inPlace.length) flyToPoints(inPlace.map((e) => e.pos));
+      const shown = inPlace.filter((e) => view(e));
+      if (shown.length) flyToPoints(shown.map((e) => view(e).pos));
       else {
         const sign = labels.find((s) => s.userData.key === place);
         if (sign) flyTo(sign.position.clone().setY(0), 4);
@@ -534,7 +666,8 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     flyHome() { flyTo(HOME.target, HOME.pos.distanceTo(HOME.target)); },
     setInk(on) { post.uniforms.inkOn.value = on ? 1 : 0; },
     setTiles(on) { tiles.setEnabled(on); },
-    debug: () => ({ tiles: tiles.stats(), d: camera.position.distanceTo(controls.target), target: controls.target.toArray() }),
+    debug: () => ({ tiles: tiles.stats(), city: cityLayer.stats(), d: camera.position.distanceTo(controls.target), target: controls.target.toArray(), near: camera.near }),
+    setCityLabelGroup(g, on) { cityLayer.setLabelGroup(g, on); },
     setAutoRotate(on) { controls.autoRotate = on; },
     onUserInteract(fn) { userInteract = fn; },
     /** 거리 산책 중에는 지도 렌더링을 멈춰 GPU를 양보한다 */

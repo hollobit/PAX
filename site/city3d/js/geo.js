@@ -49,6 +49,22 @@ export function createLocator(mapinfo) {
   };
 }
 
+/**
+ * 시군구·시도 이름 → 그 청사 이름표(광양시 → 광양시청, 세종시 → 세종특별자치시청, 서울 → 서울특별시청),
+ * 없으면 구 이름표 자리. 이름이 정확히 같은 청사를 먼저 찾고, 앞머리로 찾을 때는 locator가 있으면
+ * 청사가 그 시군구 안에 있는지 확인한다(중구 → 중랑구청 같은 오인 방지).
+ */
+export function seatOf(mapinfo, place, locator = null) {
+  const suffix = /[시군구]$/.test(place) ? place.slice(-1) : '시';
+  const stem = place.replace(/[시군구]$/, '');
+  const gov = mapinfo.labels.filter((l) => l.k === 'gov');
+  const hit = gov.find((l) => l.name === `${place}청`)
+    || gov.find((l) => l.name.startsWith(stem) && l.name.endsWith(`${suffix}청`) && (!locator || locator.district(l.x, l.n) === place));
+  if (hit) return { x: hit.x, n: hit.n, name: hit.name };
+  const d = mapinfo.districts.find((x) => x.name === place);
+  return d ? { x: d.x, n: d.n, name: `${d.name} 이름표 자리` } : null;
+}
+
 /** 외부 지도에서 같은 지점 열기(새 창). 좌표만 넘기고 다른 정보는 보내지 않는다. */
 export function externalLinks(lat, lon, name = '선택한 지점', zoom = 17) {
   const la = lat.toFixed(6);
