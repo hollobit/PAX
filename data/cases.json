@@ -1732,7 +1732,7 @@
   {
    "source": "threads",
    "org": "공직 현장(개인 개발)",
-   "popularity": 1981,
+   "popularity": 2039,
    "case_url": "https://github.com/chrisryugj/kordoc",
    "org_type": "공직 개인",
    "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
@@ -2585,7 +2585,7 @@
   {
    "collected_at": "2026-08-12",
    "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
-   "popularity": 2443,
+   "popularity": 2609,
    "summary": "법제처 국가법령정보를 LLM에서 바로 조회하는 MCP 서버가 공개됐다. 헌법부터 판례까지 법령 17만 5천여 건을 64개 도구로 검색하고 AI 답변의 인용 조문을 검증해 법령 환각을 줄인다. 공개 50일 만에 기관 내부망 AI에 법령 에이전트로 공식 등록되는 등 공직 실무 법령 MCP 생태계의 대표 저장소로 자리잡았다.",
    "tags": [
     "MCP",
