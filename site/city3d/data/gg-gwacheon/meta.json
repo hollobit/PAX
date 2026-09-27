@@ -1,0 +1,219 @@
+{
+ "key": "gg-gwacheon",
+ "name": "과천시",
+ "frame": {
+  "lon0": 126.951,
+  "lat0": 37.391000000000005,
+  "lon1": 127.057,
+  "lat1": 37.477,
+  "m_lon": 88394.09758138927,
+  "m_lat": 110574.0,
+  "width": 9369.8,
+  "height": 9509.4
+ },
+ "snapshot": "20260913_164504_pt",
+ "terrain": {
+  "cols": 313,
+  "rows": 317,
+  "cell": 30.0,
+  "unit_m": 0.25,
+  "min_m": -129.6,
+  "max_m": 731.7,
+  "missing_cells": 6237,
+  "source_zoom": 13,
+  "tiles": 7
+ },
+ "counts": {
+  "buildings": 1861,
+  "roads": 2541,
+  "road_points": 13683,
+  "waterways": 96,
+  "waterway_points": 1305,
+  "water_triangles": 502,
+  "green_triangles": 5754,
+  "estimated_height": 1566,
+  "corrected_height": 0
+ },
+ "build_stats": {
+  "buildings_in_tiles": 343,
+  "outside_city": 1944,
+  "hidden_3d": 0,
+  "estimated_height": 1566,
+  "degenerate": 0
+ },
+ "files": {
+  "buildings.bin": {
+   "bytes": 29808,
+   "crc32": 1847328852,
+   "packed_bytes": 24468
+  },
+  "roads.bin": {
+   "bytes": 64928,
+   "crc32": 3401875635,
+   "packed_bytes": 65504
+  },
+  "waterways.bin": {
+   "bytes": 5636,
+   "crc32": 1694277676,
+   "packed_bytes": 6632
+  },
+  "water.bin": {
+   "bytes": 8304,
+   "crc32": 111981108,
+   "packed_bytes": 5196
+  },
+  "green.bin": {
+   "bytes": 101028,
+   "crc32": 3078285330,
+   "packed_bytes": 56108
+  },
+  "terrain.bin": {
+   "bytes": 198474,
+   "crc32": 435417790,
+   "packed_bytes": 174244
+  }
+ },
+ "landmarks": [
+  {
+   "name": "서울대공원",
+   "x": 5337.6,
+   "n": 4747.4,
+   "source": "OSM POI",
+   "osm_name": "서울대공원",
+   "osm_class": "theme_park",
+   "rule": "table-in-boundary"
+  },
+  {
+   "name": "국립과천과학관",
+   "x": 4879.5,
+   "n": 5255.1,
+   "source": "OSM POI",
+   "osm_name": "국립과천과학관",
+   "osm_class": "museum",
+   "rule": "table-in-boundary"
+  },
+  {
+   "name": "과천시청",
+   "x": 3234.6,
+   "n": 4226.4,
+   "source": "OSM POI",
+   "osm_name": "과천시청",
+   "osm_class": "town_hall",
+   "rule": "auto"
+  },
+  {
+   "name": "관악산(632m)",
+   "x": 1170.0,
+   "n": 5986.5,
+   "source": "OSM POI",
+   "osm_name": "관악산",
+   "osm_class": "peak",
+   "rule": "auto"
+  }
+ ],
+ "outline": [
+  [
+   [
+    883.9,
+    3870.1
+   ],
+   [
+    1149.1,
+    4533.5
+   ],
+   [
+    1149.1,
+    6081.6
+   ],
+   [
+    2033.1,
+    6302.7
+   ],
+   [
+    4066.1,
+    7850.8
+   ],
+   [
+    3977.7,
+    8403.6
+   ],
+   [
+    4596.5,
+    8403.6
+   ],
+   [
+    5303.6,
+    7076.7
+   ],
+   [
+    6629.6,
+    7408.5
+   ],
+   [
+    6983.1,
+    8182.5
+   ],
+   [
+    7425.1,
+    8071.9
+   ],
+   [
+    7690.3,
+    6081.6
+   ],
+   [
+    7513.5,
+    5307.6
+   ],
+   [
+    7955.5,
+    5197.0
+   ],
+   [
+    8485.8,
+    4423.0
+   ],
+   [
+    8043.9,
+    3980.7
+   ],
+   [
+    7955.5,
+    2653.8
+   ],
+   [
+    5126.9,
+    2322.1
+   ],
+   [
+    4331.3,
+    1548.0
+   ],
+   [
+    3270.6,
+    1879.8
+   ],
+   [
+    2828.6,
+    1105.7
+   ],
+   [
+    2209.9,
+    1658.6
+   ],
+   [
+    2033.1,
+    2653.8
+   ],
+   [
+    1149.1,
+    3096.1
+   ],
+   [
+    883.9,
+    3870.1
+   ]
+  ]
+ ],
+ "note": null
+}

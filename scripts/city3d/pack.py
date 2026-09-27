@@ -14,7 +14,24 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import OUT, SITE_DATA  # noqa: E402
+from common import CITIES, OUT, SITE_DATA  # noqa: E402
+
+GROUPS = {c["key"]: c["group"] for c in CITIES if c.get("group")}
+
+
+def outline_lonlat(meta, step_m=250):
+    """도시 경계(로컬 m) → 경위도, 250m보다 가까운 점은 건너뛴다 — 3D PAX가 목표점이 어느 시·군 안인지 가린다
+    (경기 시·군·서울·인천은 경계 상자가 서로 겹쳐 상자만으로는 고를 수 없다)."""
+    f = meta["frame"]
+    rings = []
+    for ring in meta["outline"]:
+        kept = [ring[0]]
+        for x, n in ring[1:]:
+            if (x - kept[-1][0]) ** 2 + (n - kept[-1][1]) ** 2 >= step_m * step_m:
+                kept.append([x, n])
+        if len(kept) >= 3:
+            rings.append([[round(f["lon0"] + x / f["m_lon"], 5), round(f["lat0"] + n / f["m_lat"], 5)] for x, n in kept])
+    return rings
 
 total_raw = total_packed = 0
 SITE_DATA.mkdir(parents=True, exist_ok=True)
@@ -36,6 +53,7 @@ for meta_path in sorted(OUT.glob("*/meta.json")):
     # 3D PAX가 도시 자료를 받기 전에 "지금 어느 도시 위인가"를 알도록 경위도 범위·전송 크기를 목록에 싣는다
     f = meta["frame"]
     index["cities"][dst.name] |= {"bbox": [f["lon0"], f["lat0"], f["lon1"], f["lat1"]],
-                                  "packed_bytes": sum(v["packed_bytes"] for v in meta["files"].values())}
+                                  "packed_bytes": sum(v["packed_bytes"] for v in meta["files"].values()),
+                                  "outline": outline_lonlat(meta), **({"group": GROUPS[dst.name]} if dst.name in GROUPS else {})}
 (SITE_DATA / "cities.json").write_text(json.dumps(index, ensure_ascii=False, indent=1))
 print(f"원본 {total_raw / 1048576:.1f}MB → 전송본 {total_packed / 1048576:.1f}MB (gzip+base64)")

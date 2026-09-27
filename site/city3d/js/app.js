@@ -16,12 +16,13 @@ function el(tag, cls, text) {
   return n;
 }
 
-const CITY_KEYS = ['seoul', 'busan', 'daegu', 'daejeon', 'sejong', 'gwangyang'];
+// 단추 순서(나머지는 목록 순). 묶음(group)이 있는 도시 — 경기 시·군 — 는 단추 대신 고르기 상자 하나로.
+const BUTTON_ORDER = ['seoul', 'busan', 'daegu', 'daejeon', 'incheon', 'sejong', 'gwangyang', 'jeju'];
 
 /** 주소 인자 검사 — 도시 키는 목록 안에서만, 좌표는 한국 범위의 숫자만, 이름표는 60자까지 */
-function parseFocus(params) {
+function parseFocus(params, keys) {
   const city = params.get('city');
-  if (!CITY_KEYS.includes(city)) return null;
+  if (!keys.includes(city)) return null;
   const lat = Number(params.get('lat'));
   const lon = Number(params.get('lon'));
   const ok = params.has('lat') && params.has('lon') && lat > 33 && lat < 39 && lon > 124 && lon < 132;
@@ -49,7 +50,7 @@ async function main() {
   const state = { key: null, mode: 'day', vscale: 1, mark: true, city: null };
   // 바깥에서 여는 주소: ?city=busan&lat=35.16&lon=129.16&label=기관명&case=사례id (3D PAX가 이렇게 연다)
   const params = new URLSearchParams(location.search);
-  const want = parseFocus(params);
+  const want = parseFocus(params, Object.keys(index.cities));
   setupBackLink(params.get('case'));
   const stats = { visible: 0, total: 0, fps: null, calls: 0, tris: 0 };
 
@@ -75,14 +76,30 @@ async function main() {
   $('#snapshot').textContent = snapshotText(index.snapshot);
 
   // 도시 단추
-  const order = CITY_KEYS;
-  $('#cities').replaceChildren(...order.filter((k) => index.cities[k]).map((k) => {
-    const b = el('button', 'seg', index.cities[k].name);
-    b.type = 'button';
-    b.dataset.key = k;
-    b.addEventListener('click', () => loadCity(k));
-    return b;
-  }));
+  const keys = Object.keys(index.cities);
+  const singles = [...BUTTON_ORDER.filter((k) => index.cities[k]), ...keys.filter((k) => !BUTTON_ORDER.includes(k) && !index.cities[k].group)];
+  const groups = [...new Set(keys.map((k) => index.cities[k].group).filter(Boolean))];
+  $('#cities').replaceChildren(
+    ...singles.map((k) => {
+      const b = el('button', 'seg', index.cities[k].name);
+      b.type = 'button';
+      b.dataset.key = k;
+      b.addEventListener('click', () => loadCity(k));
+      return b;
+    }),
+    ...groups.map((g) => {
+      const sel = el('select', 'seg seg--select');
+      sel.dataset.group = g;
+      sel.setAttribute('aria-label', `${g} 시·군 고르기`);
+      const first = el('option', null, `${g} 시·군 ▾`);
+      first.value = '';
+      sel.append(first, ...keys.filter((k) => index.cities[k].group === g)
+        .sort((a, b) => index.cities[a].name.localeCompare(index.cities[b].name, 'ko'))
+        .map((k) => { const o = el('option', null, index.cities[k].name); o.value = k; return o; }));
+      sel.addEventListener('change', () => { if (sel.value) loadCity(sel.value); });
+      return sel;
+    }),
+  );
   // 시간대
   $('#modes').replaceChildren(...Object.entries(MODES).map(([k, m]) => {
     const b = el('button', 'seg', m.label);
@@ -145,7 +162,13 @@ async function main() {
   async function loadCity(key) {
     if (state.key === key) return;
     state.key = key;
-    for (const x of $('#cities').children) x.setAttribute('aria-pressed', String(x.dataset.key === key));
+    for (const x of $('#cities').children) {
+      if (x.tagName === 'SELECT') {
+        const mine = index.cities[key].group === x.dataset.group;
+        x.value = mine ? key : '';
+        x.setAttribute('aria-pressed', String(mine));
+      } else x.setAttribute('aria-pressed', String(x.dataset.key === key));
+    }
     $('#busy').hidden = false;
     $('#busy').textContent = `${index.cities[key].name} 자료를 받는 중…`;
     $('#error').hidden = true;

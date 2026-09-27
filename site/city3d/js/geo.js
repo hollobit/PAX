@@ -58,7 +58,10 @@ export function seatOf(mapinfo, place, locator = null) {
   const suffix = /[시군구]$/.test(place) ? place.slice(-1) : '시';
   const stem = place.replace(/[시군구]$/, '');
   const gov = mapinfo.labels.filter((l) => l.k === 'gov');
+  // 시도 이름(구·시·군 끝말이 없음)이면 도청을 먼저 — 제주 → 제주특별자치도청(제주시청이 아니라), 경기 → 경기도청
+  const region = !/[시군구]$/.test(place);
   const hit = gov.find((l) => l.name === `${place}청`)
+    || (region && gov.find((l) => l.name.startsWith(stem) && l.name.endsWith('도청')))
     || gov.find((l) => l.name.startsWith(stem) && l.name.endsWith(`${suffix}청`) && (!locator || locator.district(l.x, l.n) === place));
   if (hit) return { x: hit.x, n: hit.n, name: hit.name };
   const d = mapinfo.districts.find((x) => x.name === place);

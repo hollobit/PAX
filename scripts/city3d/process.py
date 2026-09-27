@@ -98,10 +98,53 @@ LANDMARKS = {
                 ("대전월드컵경기장", ["대전월드컵경기장"], (127.3252, 36.3651)),
                 ("계족산", ["계족산"], (127.4431, 36.3867)),
                 ("보문산", ["보문산", "시루봉"], (127.4199, 36.3007))],
+    "incheon": [("인천국제공항", ["인천국제공항"], (126.4407, 37.4602)),
+                ("인천시청", ["인천광역시청"], (126.7052, 37.4563)),
+                ("송도센트럴파크", ["송도센트럴파크"], (126.6390, 37.3925)),
+                ("인천역", ["인천역"], (126.6166, 37.4764)),
+                ("차이나타운", ["인천차이나타운", "차이나타운"], (126.6177, 37.4757)),
+                ("월미도", ["월미도", "월미공원"], (126.5970, 37.4750)),
+                ("문학경기장", ["인천문학경기장", "문학경기장"], (126.6931, 37.4344)),
+                ("소래포구", ["소래포구", "소래포구역"], (126.7390, 37.4000)),
+                ("마니산", ["마니산"], (126.4379, 37.6135))],
+    "jeju": [("제주국제공항", ["제주국제공항"], (126.4930, 33.5113)),
+             ("제주도청", ["제주특별자치도청"], (126.4989, 33.4890)),
+             ("한라산", ["한라산", "백록담"], (126.5332, 33.3617)),
+             ("성산일출봉", ["성산일출봉"], (126.9423, 33.4580)),
+             ("우도", ["우도"], (126.9510, 33.5040)),
+             ("서귀포시청", ["서귀포시청"], (126.5602, 33.2541)),
+             ("천지연폭포", ["천지연폭포"], (126.5543, 33.2446)),
+             ("중문색달해수욕장", ["중문색달해수욕장", "중문해수욕장"], (126.4105, 33.2445)),
+             ("협재해수욕장", ["협재해수욕장"], (126.2397, 33.3940))],
+    # 경기 시·군: 실제 위치를 표로 적지 않고 "이름이 같고 그 시·군 경계 안"인 OSM 지점만 쓴다(좌표 None).
+    # 시청·군청과 경계 안 가장 높은 봉우리는 모든 시·군에 자동으로 더한다(auto_landmarks).
+    "gg-suwon": [("화성행궁", ["화성행궁"], None), ("수원역", ["수원역"], None), ("경기도청", ["경기도청"], None),
+                 ("수원월드컵경기장", ["수원월드컵경기장"], None)],
+    "gg-seongnam": [("판교역", ["판교역"], None)],
+    "gg-goyang": [("킨텍스", ["킨텍스", "KINTEX"], None), ("일산호수공원", ["일산호수공원"], None), ("행주산성", ["행주산성"], None)],
+    "gg-yongin": [("에버랜드", ["에버랜드"], None), ("한국민속촌", ["한국민속촌"], None)],
+    "gg-paju": [("임진각", ["임진각"], None), ("헤이리예술마을", ["헤이리예술마을", "헤이리"], None)],
+    "gg-gwangju-gg": [("남한산성", ["남한산성"], None)],
+    "gg-gwacheon": [("서울대공원", ["서울대공원"], None), ("국립과천과학관", ["국립과천과학관"], None)],
+    "gg-gwangmyeong": [("광명역", ["광명역"], None), ("광명동굴", ["광명동굴"], None)],
+    "gg-pyeongtaek": [("평택역", ["평택역"], None), ("평택항", ["평택항"], None)],
+    "gg-gapyeong": [("남이섬", ["남이섬"], None), ("쁘띠프랑스", ["쁘띠프랑스"], None)],
+    "gg-yangpyeong": [("두물머리", ["두물머리"], None), ("양평역", ["양평역"], None)],
+    "gg-hwaseong": [("융건릉", ["융건릉"], None), ("제부도", ["제부도"], None)],
+    "gg-ansan": [("안산역", ["안산역"], None), ("대부도", ["대부도"], None)],
+    "gg-bucheon": [("부천역", ["부천역"], None)],
+    "gg-anyang": [("안양역", ["안양역"], None)],
+    "gg-uijeongbu": [("의정부역", ["의정부역"], None)],
+    "gg-icheon": [("이천역", ["이천역"], None), ("설봉공원", ["설봉공원"], None)],
+    "gg-yeoju": [("신륵사", ["신륵사"], None), ("여주역", ["여주역"], None)],
+    "gg-pocheon": [("산정호수", ["산정호수"], None)],
+    "gg-hanam": [("스타필드 하남", ["스타필드 하남", "스타필드하남"], None)],
+    "gg-siheung": [("오이도", ["오이도"], None)],
 }
 # 같은 이름이 여럿이면 지물다운 분류를 먼저: 명소·청사·봉우리·역 > 정류장·대여소 > 식당·가게
 GOOD_CLASS = {"attraction", "monument", "museum", "castle", "office", "stadium", "park", "theme_park", "peak",
-              "railway", "island", "town", "city", "lake", "river", "bay", "town_hall", "college", "zoo", "viewpoint"}
+              "railway", "island", "town", "city", "lake", "river", "bay", "town_hall", "college", "zoo", "viewpoint",
+              "airport", "place_of_worship", "beach", "ferry_terminal", "harbor", "aquarium"}
 WEAK_CLASS = {"bus", "bicycle_rental", "information", "parking", "entrance"}
 LANDMARK_RADIUS_M = 2000
 
@@ -186,22 +229,41 @@ def lines_of(g):
     return []
 
 
-def find_landmark(pois, names, lon, lat, frame):
-    """이름이 정확히 같은 OSM 지점 중 실제 위치 2km 안 — 분류가 좋은 것, 그다음 가까운 것"""
-    ex, en = frame.to_local(lon, lat)
+def find_landmark(pois, names, expected, frame, boundary):
+    """이름이 정확히 같은 OSM 지점 중 실제 위치 2km 안(expected가 없으면 도시 경계 안) — 분류가 좋은 것, 그다음 가까운 것"""
+    ex, en = frame.to_local(*expected) if expected else (None, None)
     best = None
-    for name, ll, cls in pois:
+    for name, ll, cls, _ in pois:
         if name not in names:
             continue
         x, n = frame.to_local(*ll)
-        d = math.hypot(x - ex, n - en)
-        if d > LANDMARK_RADIUS_M:
-            continue
+        if expected:
+            d = math.hypot(x - ex, n - en)
+            if d > LANDMARK_RADIUS_M:
+                continue
+        else:
+            if not boundary.contains(shapely.Point(x, n)):
+                continue
+            d = 0.0
         rank = 0 if cls in GOOD_CLASS else 2 if cls not in WEAK_CLASS else 1
         key = (rank, d)
         if best is None or key < best[0]:
             best = (key, (name, ll, cls))
     return best[1] if best else None
+
+
+def auto_landmarks(city, pois, frame, boundary):
+    """모든 도시에: 시·군청(시군구 단위 도시)과 경계 안에서 가장 높은 봉우리 — 표에 이미 있으면 건너뛴다"""
+    out = []
+    if "sgg" in city:
+        hall = f"{city['sgg'][1]}청"
+        out.append((hall, [hall], None))
+    peaks = [(ele, name) for name, ll, cls, ele in pois
+             if cls == "peak" and ele and boundary.contains(shapely.Point(*frame.to_local(*ll)))]
+    if peaks:
+        ele, name = max(peaks)
+        out.append((f"{name}({ele}m)", [name], None))
+    return out
 
 
 def build_city(city, snapshot):
@@ -306,14 +368,15 @@ def build_city(city, snapshot):
                         target_i.append(idx)
                         if klass:
                             green_c.append(np.full(len(v), gc, dtype=np.uint8))
-        for layer in ("poi", "mountain_peak", "place", "water_name"):
+        for layer in ("poi", "mountain_peak", "place", "water_name", "aerodrome_label"):
             for ft in layers.get(layer, {}).get("features", []):
                 p = ft["properties"]
                 name = p.get("name:ko") or p.get("name")
                 if name and ft["geometry"]["type"] == "Point":
                     px, py = ft["geometry"]["coordinates"]
                     if 0 <= px < EXTENT and 0 <= py < EXTENT:
-                        pois.append((name, conv(px, py), "peak" if layer == "mountain_peak" else p.get("class")))
+                        cls = "peak" if layer == "mountain_peak" else "airport" if layer == "aerodrome_label" else p.get("class")
+                        pois.append((name, conv(px, py), cls, p.get("ele") if layer == "mountain_peak" else None))
 
     out = OUT / city["key"]
     out.mkdir(parents=True, exist_ok=True)
@@ -327,14 +390,21 @@ def build_city(city, snapshot):
     files["terrain.bin"] = dem_meta.pop("bytes")
 
     landmarks = []
-    for label, names, (lon, lat) in LANDMARKS[city["key"]]:
-        hit = find_landmark(pois, names, lon, lat, frame)
+    table = LANDMARKS.get(city["key"], [])
+    known = {n for _, names, _ in table for n in names}
+    extra = [a for a in auto_landmarks(city, pois, frame, boundary) if not set(a[1]) & known]
+    for k, (label, names, expected) in enumerate(table + extra):
+        auto = k >= len(table)
+        hit = find_landmark(pois, names, expected, frame, boundary)
+        if not hit and not expected:
+            continue  # 좌표를 적지 않은 항목은 찾지 못하면 아예 넣지 않는다
         src = "OSM POI" if hit else "대략 좌표(추정)"
-        x, n = frame.to_local(*(hit[1] if hit else (lon, lat)))
+        x, n = frame.to_local(*(hit[1] if hit else expected))
         if not (0 <= x <= frame.width and 0 <= n <= frame.height):
             continue  # 도시 지도 범위 밖(예: 경계 밖으로 빠진 산)
         landmarks.append({"name": label, "x": round(x, 1), "n": round(n, 1), "source": src,
-                          "osm_name": hit[0] if hit else None, "osm_class": hit[2] if hit else None})
+                          "osm_name": hit[0] if hit else None, "osm_class": hit[2] if hit else None,
+                          "rule": "auto" if auto else "table" if expected else "table-in-boundary"})
 
     outline = [[[round(a, 1), round(b, 1)] for a, b in p.exterior.simplify(20).coords] for p in polygons_of(boundary)]
     meta = {

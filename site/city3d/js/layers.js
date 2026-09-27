@@ -110,7 +110,52 @@ export function carveWater(frame, dem, water) {
  * @param carved carveWater 결과(없으면 원본 표고). 지형을 step칸마다 성기게 뽑을 때 좁은 물길이 꼭짓점 사이로 빠져
  *        다시 땅에 덮이지 않도록, 꼭짓점 둘레(step칸)에 물 칸이 있으면 그 물 칸의 가장 낮은 높이를 쓴다.
  */
-export function buildTerrain(frame, dem, vscale, step, carved = null) {
+/**
+ * 숲·공원을 지형 색으로 칠하기 — 큰 숲 다각형은 earcut 삼각형이 수 km짜리 평면이 되어 산등성이를 뚫거나 덮는다
+ * (봉우리 둘레에 부채꼴 판이 생기는 문제). 변 하나라도 maxEdge(m)보다 긴 삼각형은 표고 격자에 래스터화해 그 칸의
+ * 지형 색으로 칠하고(지형을 그대로 따른다), 작은 삼각형(도심 공원 등)만 얹는 면으로 남긴다.
+ * @returns {{cls: Uint8Array, small: Uint32Array, painted: number, dropped: number}}
+ */
+export function paintGreen(frame, dem, green, maxEdge = 150) {
+  const { cols, rows, cell } = dem;
+  const cls = new Uint8Array(cols * rows);
+  const { xy, idx } = green;
+  const keep = [];
+  let painted = 0;
+  let dropped = 0;
+  const m2 = maxEdge * maxEdge;
+  for (let t = 0; t < idx.length; t += 3) {
+    const a = idx[t]; const b = idx[t + 1]; const c = idx[t + 2];
+    const ax = xy[a * 2]; const an = xy[a * 2 + 1];
+    const bx = xy[b * 2]; const bn = xy[b * 2 + 1];
+    const cx = xy[c * 2]; const cn = xy[c * 2 + 1];
+    const long = (ax - bx) ** 2 + (an - bn) ** 2 > m2 || (bx - cx) ** 2 + (bn - cn) ** 2 > m2 || (cx - ax) ** 2 + (cn - an) ** 2 > m2;
+    if (!long) { keep.push(a, b, c); continue; }
+    dropped++;
+    const k = green.cls ? green.cls[a] : 3;
+    const den = (bn - cn) * (ax - cx) + (cx - bx) * (an - cn);
+    if (Math.abs(den) < 1e-6) continue;
+    const c0 = Math.max(0, Math.floor(Math.min(ax, bx, cx) / cell));
+    const c1 = Math.min(cols - 1, Math.ceil(Math.max(ax, bx, cx) / cell));
+    const r0 = Math.max(0, Math.floor(rows - 1 - Math.max(an, bn, cn) / cell));
+    const r1 = Math.min(rows - 1, Math.ceil(rows - 1 - Math.min(an, bn, cn) / cell));
+    for (let r = r0; r <= r1; r++) {
+      const n = (rows - 1 - r) * cell;
+      for (let q = c0; q <= c1; q++) {
+        const x = q * cell;
+        const w1 = ((bn - cn) * (x - cx) + (cx - bx) * (n - cn)) / den;
+        const w2 = ((cn - an) * (x - cx) + (ax - cx) * (n - cn)) / den;
+        if (w1 < -1e-4 || w2 < -1e-4 || 1 - w1 - w2 < -1e-4) continue;
+        const i = r * cols + q;
+        if (!cls[i]) painted++;
+        cls[i] = k || 3;
+      }
+    }
+  }
+  return { cls, small: Uint32Array.from(keep), painted, dropped };
+}
+
+export function buildTerrain(frame, dem, vscale, step, carved = null, green = null) {
   const { cols, rows, cell } = dem;
   const h = carved ? carved.h : dem.h;
   const half = Math.floor(step / 2);
@@ -142,7 +187,7 @@ export function buildTerrain(frame, dem, vscale, step, carved = null) {
       const empty = dem.void[i];
       pos[o + 1] = empty ? -25 : Math.max(m, -3) * vscale;
       pos[o + 2] = frame.Z(n);
-      (empty ? c.set('#56606b') : rampColor(m, c)).toArray(col, o);
+      (empty ? c.set('#56606b') : green && green.cls[i] ? c.set(GREEN_COLOR[green.cls[i]] || GREEN_COLOR[3]) : rampColor(m, c)).toArray(col, o);
     }
   }
   const idx = new Uint32Array((nc - 1) * (nr - 1) * 6);
@@ -244,11 +289,12 @@ export function buildWater(frame, mesh, vscale) {
   return m;
 }
 
-export function buildGreen(frame, mesh, vscale) {
+/** @param painted paintGreen 결과 — 있으면 작은 삼각형만 얹는다(큰 것은 지형 색으로 칠해졌다) */
+export function buildGreen(frame, mesh, vscale, painted = null) {
   const mat = new THREE.MeshLambertMaterial({
     vertexColors: true, polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -2,
   });
-  const m = buildArea(frame, mesh, vscale, 0.8, mat, (k) => GREEN_COLOR[k] || GREEN_COLOR[3]);
+  const m = buildArea(frame, painted ? { ...mesh, idx: painted.small } : mesh, vscale, 0.8, mat, (k) => GREEN_COLOR[k] || GREEN_COLOR[3]);
   m.name = 'green';
   return m;
 }

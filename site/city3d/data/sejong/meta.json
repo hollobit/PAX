@@ -80,7 +80,8 @@
    "n": 11821.0,
    "source": "OSM POI",
    "osm_name": "정부세종청사",
-   "osm_class": "office"
+   "osm_class": "office",
+   "rule": "table"
   },
   {
    "name": "세종호수공원",
@@ -88,7 +89,8 @@
    "n": 11621.2,
    "source": "OSM POI",
    "osm_name": "세종호수공원",
-   "osm_class": "park"
+   "osm_class": "park",
+   "rule": "table"
   },
   {
    "name": "국립세종도서관",
@@ -96,7 +98,8 @@
    "n": 11413.3,
    "source": "OSM POI",
    "osm_name": "국립세종도서관",
-   "osm_class": "bus"
+   "osm_class": "bus",
+   "rule": "table"
   },
   {
    "name": "대통령기록관",
@@ -104,7 +107,8 @@
    "n": 11564.0,
    "source": "OSM POI",
    "osm_name": "대통령기록관",
-   "osm_class": "museum"
+   "osm_class": "museum",
+   "rule": "table"
   },
   {
    "name": "세종시청",
@@ -112,7 +116,8 @@
    "n": 9183.0,
    "source": "OSM POI",
    "osm_name": "세종특별자치시청",
-   "osm_class": "office"
+   "osm_class": "office",
+   "rule": "table"
   },
   {
    "name": "원수산",
@@ -120,7 +125,8 @@
    "n": 13252.2,
    "source": "OSM POI",
    "osm_name": "원수산",
-   "osm_class": "peak"
+   "osm_class": "peak",
+   "rule": "table"
   },
   {
    "name": "전월산",
@@ -128,7 +134,8 @@
    "n": 12420.8,
    "source": "OSM POI",
    "osm_name": "전월산",
-   "osm_class": "peak"
+   "osm_class": "peak",
+   "rule": "table"
   },
   {
    "name": "금강보행교",
@@ -136,7 +143,8 @@
    "n": 8735.3,
    "source": "대략 좌표(추정)",
    "osm_name": null,
-   "osm_class": null
+   "osm_class": null,
+   "rule": "table"
   },
   {
    "name": "조치원역",
@@ -144,7 +152,17 @@
    "n": 22556.9,
    "source": "OSM POI",
    "osm_name": "조치원역",
-   "osm_class": "bus"
+   "osm_class": "bus",
+   "rule": "table"
+  },
+  {
+   "name": "운주산(460m)",
+   "x": 11132.6,
+   "n": 31911.0,
+   "source": "OSM POI",
+   "osm_name": "운주산",
+   "osm_class": "peak",
+   "rule": "auto"
   }
  ],
  "outline": [

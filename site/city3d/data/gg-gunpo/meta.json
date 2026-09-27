@@ -1,0 +1,198 @@
+{
+ "key": "gg-gunpo",
+ "name": "군포시",
+ "frame": {
+  "lon0": 126.863,
+  "lat0": 37.295,
+  "lon1": 126.97200000000001,
+  "lat1": 37.388999999999996,
+  "m_lon": 88502.63434411469,
+  "m_lat": 110574.0,
+  "width": 9646.8,
+  "height": 10394.0
+ },
+ "snapshot": "20260913_164504_pt",
+ "terrain": {
+  "cols": 322,
+  "rows": 347,
+  "cell": 30.0,
+  "unit_m": 0.25,
+  "min_m": -1613.1,
+  "max_m": 478.4,
+  "missing_cells": 9156,
+  "source_zoom": 13,
+  "tiles": 7
+ },
+ "counts": {
+  "buildings": 7178,
+  "roads": 3948,
+  "road_points": 19460,
+  "waterways": 98,
+  "waterway_points": 1213,
+  "water_triangles": 524,
+  "green_triangles": 7108,
+  "estimated_height": 5942,
+  "corrected_height": 1
+ },
+ "build_stats": {
+  "buildings_in_tiles": 507,
+  "outside_city": 3707,
+  "hidden_3d": 1,
+  "estimated_height": 5942,
+  "degenerate": 0,
+  "corrected_height": 1
+ },
+ "files": {
+  "buildings.bin": {
+   "bytes": 114880,
+   "crc32": 1241209196,
+   "packed_bytes": 93876
+  },
+  "roads.bin": {
+   "bytes": 93664,
+   "crc32": 3802494261,
+   "packed_bytes": 94036
+  },
+  "waterways.bin": {
+   "bytes": 5276,
+   "crc32": 3633689083,
+   "packed_bytes": 6232
+  },
+  "water.bin": {
+   "bytes": 8704,
+   "crc32": 972393840,
+   "packed_bytes": 5488
+  },
+  "green.bin": {
+   "bytes": 125748,
+   "crc32": 3389348747,
+   "packed_bytes": 69776
+  },
+  "terrain.bin": {
+   "bytes": 223500,
+   "crc32": 619939645,
+   "packed_bytes": 177688
+  }
+ },
+ "landmarks": [
+  {
+   "name": "군포시청",
+   "x": 6405.4,
+   "n": 7346.3,
+   "source": "OSM POI",
+   "osm_name": "군포시청",
+   "osm_class": "office",
+   "rule": "auto"
+  },
+  {
+   "name": "수리봉(428m)",
+   "x": 3761.0,
+   "n": 7035.2,
+   "source": "OSM POI",
+   "osm_name": "수리봉",
+   "osm_class": "peak",
+   "rule": "auto"
+  }
+ ],
+ "outline": [
+  [
+   [
+    885.0,
+    3096.1
+   ],
+   [
+    973.5,
+    3870.1
+   ],
+   [
+    2124.1,
+    4975.8
+   ],
+   [
+    2301.1,
+    5971.0
+   ],
+   [
+    3009.1,
+    6966.2
+   ],
+   [
+    3628.6,
+    6855.6
+   ],
+   [
+    4867.6,
+    9067.1
+   ],
+   [
+    6814.7,
+    8956.5
+   ],
+   [
+    6903.2,
+    9288.2
+   ],
+   [
+    7434.2,
+    8956.5
+   ],
+   [
+    7434.2,
+    8293.0
+   ],
+   [
+    8761.8,
+    7408.5
+   ],
+   [
+    8407.8,
+    5418.1
+   ],
+   [
+    7611.2,
+    4975.8
+   ],
+   [
+    7257.2,
+    2764.3
+   ],
+   [
+    6549.2,
+    2985.5
+   ],
+   [
+    5929.7,
+    2432.6
+   ],
+   [
+    6106.7,
+    1326.9
+   ],
+   [
+    4602.1,
+    1105.7
+   ],
+   [
+    4602.1,
+    2211.5
+   ],
+   [
+    4159.6,
+    2432.6
+   ],
+   [
+    3982.6,
+    2985.5
+   ],
+   [
+    2212.6,
+    2543.2
+   ],
+   [
+    885.0,
+    3096.1
+   ]
+  ]
+ ],
+ "note": null
+}

@@ -81,7 +81,8 @@
    "n": 17398.8,
    "source": "OSM POI",
    "osm_name": "대전역",
-   "osm_class": "railway"
+   "osm_class": "railway",
+   "rule": "table"
   },
   {
    "name": "대전시청",
@@ -89,7 +90,8 @@
    "n": 19509.7,
    "source": "OSM POI",
    "osm_name": "대전광역시청",
-   "osm_class": "town_hall"
+   "osm_class": "town_hall",
+   "rule": "table"
   },
   {
    "name": "정부대전청사",
@@ -97,7 +99,8 @@
    "n": 20423.0,
    "source": "대략 좌표(추정)",
    "osm_name": null,
-   "osm_class": null
+   "osm_class": null,
+   "rule": "table"
   },
   {
    "name": "한밭수목원",
@@ -105,7 +108,8 @@
    "n": 21586.7,
    "source": "OSM POI",
    "osm_name": "한밭수목원",
-   "osm_class": "bicycle_rental"
+   "osm_class": "bicycle_rental",
+   "rule": "table"
   },
   {
    "name": "한빛탑",
@@ -113,7 +117,8 @@
    "n": 22160.3,
    "source": "OSM POI",
    "osm_name": "한빛탑",
-   "osm_class": "bus"
+   "osm_class": "bus",
+   "rule": "table"
   },
   {
    "name": "국립중앙과학관",
@@ -121,7 +126,8 @@
    "n": 22253.9,
    "source": "OSM POI",
    "osm_name": "국립중앙과학관",
-   "osm_class": "museum"
+   "osm_class": "museum",
+   "rule": "table"
   },
   {
    "name": "유성온천",
@@ -129,7 +135,8 @@
    "n": 19871.4,
    "source": "OSM POI",
    "osm_name": "유성온천역",
-   "osm_class": "bus"
+   "osm_class": "bus",
+   "rule": "table"
   },
   {
    "name": "대전월드컵경기장",
@@ -137,7 +144,8 @@
    "n": 21150.6,
    "source": "OSM POI",
    "osm_name": "대전월드컵경기장",
-   "osm_class": "stadium"
+   "osm_class": "stadium",
+   "rule": "table"
   },
   {
    "name": "계족산",
@@ -145,7 +153,8 @@
    "n": 23299.8,
    "source": "OSM POI",
    "osm_name": "계족산",
-   "osm_class": "peak"
+   "osm_class": "peak",
+   "rule": "table"
   },
   {
    "name": "보문산",
@@ -153,7 +162,17 @@
    "n": 13511.1,
    "source": "OSM POI",
    "osm_name": "보문산",
-   "osm_class": "peak"
+   "osm_class": "peak",
+   "rule": "table"
+  },
+  {
+   "name": "식장산(597m)",
+   "x": 21889.1,
+   "n": 13900.2,
+   "source": "OSM POI",
+   "osm_name": "식장산",
+   "osm_class": "peak",
+   "rule": "auto"
   }
  ],
  "outline": [

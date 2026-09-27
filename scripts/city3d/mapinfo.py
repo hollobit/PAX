@@ -15,7 +15,7 @@ from pathlib import Path
 
 import mapbox_vector_tile as mvt
 import shapely
-from shapely.geometry import LineString, MultiPolygon, Polygon, shape
+from shapely.geometry import LineString, MultiPolygon, Polygon, box, shape
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import CACHE, CITIES, OUT, PAX_DATA, Frame  # noqa: E402
@@ -66,9 +66,11 @@ def districts(city, frame):
         polys = []
         for p in s["polys"]:
             ring = [frame.to_local(lon, lat) for lon, lat in p[0]]
-            poly = Polygon(ring).buffer(0).simplify(12)
+            # 도시 지도 틀 안으로 자른다 — 시군구 경계가 도시 경계보다 조금 넓은 섬(제주 우도 등)이 틀 밖으로 삐져나오지 않게
+            poly = Polygon(ring).buffer(0).simplify(12).intersection(box(0, 0, frame.width, frame.height))
             for part in getattr(poly, "geoms", [poly]):
-                if part.area > 20000:
+                c = part.centroid  # 도시 범위 밖으로 뺀 섬(추자도 등)은 넣지 않는다
+                if part.area > 20000 and 0 <= c.x <= frame.width and 0 <= c.y <= frame.height:
                     polys.append([[round(a, 1), round(b, 1)] for a, b in part.exterior.coords])
         geom = MultiPolygon([Polygon(p) for p in polys]).buffer(0)
         c = geom.representative_point() if not geom.is_empty else None

@@ -80,7 +80,8 @@
    "n": 30353.4,
    "source": "OSM POI",
    "osm_name": "대구광역시청",
-   "osm_class": "office"
+   "osm_class": "office",
+   "rule": "table"
   },
   {
    "name": "동성로",
@@ -88,7 +89,8 @@
    "n": 30076.1,
    "source": "대략 좌표(추정)",
    "osm_name": null,
-   "osm_class": null
+   "osm_class": null,
+   "rule": "table"
   },
   {
    "name": "서문시장",
@@ -96,7 +98,8 @@
    "n": 30150.6,
    "source": "OSM POI",
    "osm_name": "서문시장",
-   "osm_class": "railway"
+   "osm_class": "railway",
+   "rule": "table"
   },
   {
    "name": "대구역",
@@ -104,7 +107,8 @@
    "n": 30881.2,
    "source": "OSM POI",
    "osm_name": "대구역",
-   "osm_class": "railway"
+   "osm_class": "railway",
+   "rule": "table"
   },
   {
    "name": "동대구역",
@@ -112,7 +116,8 @@
    "n": 31186.8,
    "source": "OSM POI",
    "osm_name": "동대구역",
-   "osm_class": "bus"
+   "osm_class": "bus",
+   "rule": "table"
   },
   {
    "name": "83타워",
@@ -120,7 +125,8 @@
    "n": 28362.8,
    "source": "OSM POI",
    "osm_name": "83타워",
-   "osm_class": "monument"
+   "osm_class": "monument",
+   "rule": "table"
   },
   {
    "name": "수성못",
@@ -128,7 +134,8 @@
    "n": 25462.3,
    "source": "OSM POI",
    "osm_name": "수성못",
-   "osm_class": "lake"
+   "osm_class": "lake",
+   "rule": "table"
   },
   {
    "name": "앞산",
@@ -136,7 +143,8 @@
    "n": 24318.6,
    "source": "OSM POI",
    "osm_name": "앞산",
-   "osm_class": "peak"
+   "osm_class": "peak",
+   "rule": "table"
   },
   {
    "name": "팔공산",
@@ -144,7 +152,17 @@
    "n": 42548.9,
    "source": "대략 좌표(추정)",
    "osm_name": null,
-   "osm_class": null
+   "osm_class": null,
+   "rule": "table"
+  },
+  {
+   "name": "동봉(1167m)",
+   "x": 32135.0,
+   "n": 46041.1,
+   "source": "OSM POI",
+   "osm_name": "동봉",
+   "osm_class": "peak",
+   "rule": "auto"
   }
  ],
  "outline": [

@@ -31,13 +31,39 @@ CITIES = [
     {"key": "daegu", "name": "대구", "region": "대구", "exclude_sgg": ["군위군"]},
     {"key": "gwangyang", "name": "광양", "sgg": ("전남", "광양시")},
     {"key": "daejeon", "name": "대전", "region": "대전"},
+    # 인천: 옹진군(백령도 등 서해 섬, 최대 200km 밖)은 빼고 강화·영종은 넣는다
+    {"key": "incheon", "name": "인천", "region": "인천", "exclude_sgg": ["옹진군"]},
+    # 제주: 본섬에서 15km 넘게 떨어진 섬(추자도)은 뺀다 — 우도·가파도·마라도는 남는다
+    {"key": "jeju", "name": "제주", "region": "제주", "max_island_km": 15},
 ]
+# 경기도는 1만㎢라 한 장으로 싣지 않고 시·군 31곳을 따로 만든다 — 3D PAX는 확대한 시·군만 받는다
+GYEONGGI = {
+    "가평군": "gapyeong", "고양시": "goyang", "과천시": "gwacheon", "광명시": "gwangmyeong", "광주시": "gwangju-gg",
+    "구리시": "guri", "군포시": "gunpo", "김포시": "gimpo", "남양주시": "namyangju", "동두천시": "dongducheon",
+    "부천시": "bucheon", "성남시": "seongnam", "수원시": "suwon", "시흥시": "siheung", "안산시": "ansan",
+    "안성시": "anseong", "안양시": "anyang", "양주시": "yangju", "양평군": "yangpyeong", "여주시": "yeoju",
+    "연천군": "yeoncheon", "오산시": "osan", "용인시": "yongin", "의왕시": "uiwang", "의정부시": "uijeongbu",
+    "이천시": "icheon", "파주시": "paju", "평택시": "pyeongtaek", "포천시": "pocheon", "하남시": "hanam", "화성시": "hwaseong",
+}
+CITIES += [{"key": f"gg-{rom}", "name": name, "sgg": ("경기", name), "group": "경기"} for name, rom in GYEONGGI.items()]
 
 M_LAT = 110574.0
 
 
 def city_boundary(city):
     """[[외곽, 구멍…], …] (경도·위도) — PAX 저장소의 SGIS 가공 경계에서."""
+    polys = _raw_boundary(city)
+    if city.get("max_island_km"):
+        # 가장 큰 땅에서 max_island_km 넘게 떨어진 섬은 뺀다(도시 범위·표고 격자가 바다로 크게 늘지 않게)
+        from shapely.geometry import Polygon
+        shapes = [Polygon(p[0], p[1:]) for p in polys]
+        main = max(shapes, key=lambda g: g.area)
+        lim = city["max_island_km"] / 111.0
+        polys = [p for p, g in zip(polys, shapes) if g.distance(main) <= lim]
+    return polys
+
+
+def _raw_boundary(city):
     if "sgg" in city:
         region, name = city["sgg"]
         sgg = json.loads((PAX_DATA / "korea-sgg.json").read_text())["sgg"]

@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import { MapControls } from 'three/addons/controls/MapControls.js';
 import {
   makeFrame, buildTerrain, buildWater, buildGreen, buildRibbons, roadStyle, waterwayStyle, buildOutline,
-  createBuildingMesh, buildDistrictLines, carveWater,
+  createBuildingMesh, buildDistrictLines, carveWater, paintGreen,
 } from './layers.js';
 import { selectBuildings, writeBuildingInstances } from './buildings.js';
 import { MODES, skyTexture, sunDirection, styleCityMaterials } from './modes.js';
@@ -83,10 +83,10 @@ export function createWorld(canvas, { onPick, onStats, onFrame, onTour = () => {
   function buildScene() {
     clearGroup();
     const { frame, dem, water, green, roads, waterways } = city;
-    group.add(buildTerrain(frame, dem, vscale, BUDGET.terrainStep, city.carved));
+    group.add(buildTerrain(frame, dem, vscale, BUDGET.terrainStep, city.carved, city.painted));
     group.add(buildOutline(frame, city.meta.outline, vscale));
     if (city.mapinfo) group.add(buildDistrictLines(frame, city.mapinfo.districts, vscale));
-    group.add(buildGreen(frame, green, vscale));
+    group.add(buildGreen(frame, green, vscale, city.painted));
     group.add(buildWater(frame, water, vscale));
     const ww = new THREE.Mesh(buildRibbons(frame, waterways, vscale, waterwayStyle), new THREE.MeshPhongMaterial({ color: '#ffffff', specular: '#cfe6ff', shininess: 60, vertexColors: true, side: THREE.DoubleSide }));
     ww.receiveShadow = true;
@@ -286,6 +286,7 @@ export function createWorld(canvas, { onPick, onStats, onFrame, onTour = () => {
       tour.stop();
       city = { ...c, frame: makeFrame(c.meta, c.dem) };
       city.carved = carveWater(city.frame, c.dem, c.water); // 물 밑 지형을 수면 아래로(강이 땅에 덮이지 않게)
+      city.painted = paintGreen(city.frame, c.dem, c.green); // 큰 숲은 지형 색으로(산등성이를 덮는 판이 생기지 않게)
       lastSel = null;
       visible = new Uint32Array(0);
       buildScene();

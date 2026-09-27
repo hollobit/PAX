@@ -80,7 +80,8 @@
    "n": 15229.0,
    "source": "OSM POI",
    "osm_name": "부산역",
-   "osm_class": "railway"
+   "osm_class": "railway",
+   "rule": "table"
   },
   {
    "name": "부산타워",
@@ -88,7 +89,8 @@
    "n": 13633.0,
    "source": "OSM POI",
    "osm_name": "부산타워",
-   "osm_class": "attraction"
+   "osm_class": "attraction",
+   "rule": "table"
   },
   {
    "name": "자갈치시장",
@@ -96,7 +98,8 @@
    "n": 13168.6,
    "source": "OSM POI",
    "osm_name": "자갈치시장",
-   "osm_class": "attraction"
+   "osm_class": "attraction",
+   "rule": "table"
   },
   {
    "name": "부산시민공원",
@@ -104,7 +107,8 @@
    "n": 21110.7,
    "source": "OSM POI",
    "osm_name": "부산시민공원",
-   "osm_class": "park"
+   "osm_class": "park",
+   "rule": "table"
   },
   {
    "name": "광안대교",
@@ -112,7 +116,8 @@
    "n": 18542.3,
    "source": "OSM POI",
    "osm_name": "광안대교",
-   "osm_class": "attraction"
+   "osm_class": "attraction",
+   "rule": "table"
   },
   {
    "name": "벡스코",
@@ -120,7 +125,8 @@
    "n": 21107.3,
    "source": "OSM POI",
    "osm_name": "벡스코",
-   "osm_class": "railway"
+   "osm_class": "railway",
+   "rule": "table"
   },
   {
    "name": "해운대해수욕장",
@@ -128,7 +134,8 @@
    "n": 20034.2,
    "source": "OSM POI",
    "osm_name": "해운대해수욕장",
-   "osm_class": "bus"
+   "osm_class": "bus",
+   "rule": "table"
   },
   {
    "name": "금정산",
@@ -136,7 +143,8 @@
    "n": 33802.5,
    "source": "대략 좌표(추정)",
    "osm_name": null,
-   "osm_class": null
+   "osm_class": null,
+   "rule": "table"
   },
   {
    "name": "을숙도",
@@ -144,7 +152,17 @@
    "n": 13704.4,
    "source": "OSM POI",
    "osm_name": "을숙도",
-   "osm_class": "island"
+   "osm_class": "island",
+   "rule": "table"
+  },
+  {
+   "name": "갑오봉(718m)",
+   "x": 25130.4,
+   "n": 35121.2,
+   "source": "OSM POI",
+   "osm_name": "갑오봉",
+   "osm_class": "peak",
+   "rule": "auto"
   }
  ],
  "outline": [

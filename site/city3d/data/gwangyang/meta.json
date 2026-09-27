@@ -80,7 +80,8 @@
    "n": 7148.5,
    "source": "OSM POI",
    "osm_name": "광양시청",
-   "osm_class": "office"
+   "osm_class": "office",
+   "rule": "table"
   },
   {
    "name": "광양읍",
@@ -88,7 +89,8 @@
    "n": 10753.3,
    "source": "OSM POI",
    "osm_name": "광양읍",
-   "osm_class": "town"
+   "osm_class": "town",
+   "rule": "table"
   },
   {
    "name": "광양역",
@@ -96,7 +98,8 @@
    "n": 9011.6,
    "source": "OSM POI",
    "osm_name": "광양역",
-   "osm_class": "bus"
+   "osm_class": "bus",
+   "rule": "table"
   },
   {
    "name": "매화마을",
@@ -104,7 +107,8 @@
    "n": 22360.5,
    "source": "OSM POI",
    "osm_name": "매화마을",
-   "osm_class": "restaurant"
+   "osm_class": "restaurant",
+   "rule": "table"
   },
   {
    "name": "백운산",
@@ -112,7 +116,8 @@
    "n": 25474.0,
    "source": "OSM POI",
    "osm_name": "백운산",
-   "osm_class": "peak"
+   "osm_class": "peak",
+   "rule": "table"
   },
   {
    "name": "이순신대교",
@@ -120,7 +125,8 @@
    "n": 2664.8,
    "source": "대략 좌표(추정)",
    "osm_name": null,
-   "osm_class": null
+   "osm_class": null,
+   "rule": "table"
   },
   {
    "name": "광양제철소",
@@ -128,7 +134,8 @@
    "n": 4865.3,
    "source": "대략 좌표(추정)",
    "osm_name": null,
-   "osm_class": null
+   "osm_class": null,
+   "rule": "table"
   }
  ],
  "outline": [

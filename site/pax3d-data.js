@@ -45,12 +45,17 @@ export const SEATS = {
 };
 
 // 도시 입체지도(city3d/data)가 있는 도시 — 확대하면 미니어처 대신 실제 건물·지형이 펼쳐지고 사례가 실제 자리에 선다.
-// 광양은 전남 광양시라 시군구로 판정하고, 대구의 군위군은 도시 지도 범위 밖이다.
-export const CITY3D = { 서울: 'seoul', 부산: 'busan', 대구: 'daegu', 대전: 'daejeon', 세종: 'sejong' };
+// 광양은 전남 광양시, 경기는 시·군마다 따로(gg-…), 인천은 옹진군 제외, 대구는 군위군 제외.
+// 기관 소재지·시·도청 앞처럼 좌표가 있는 사례는 3D PAX가 도시 목록을 받은 뒤 경계 다각형으로 다시 판정한다(pax3d-world.js).
+export const CITY3D = { 서울: 'seoul', 부산: 'busan', 대구: 'daegu', 대전: 'daejeon', 세종: 'sejong', 인천: 'incheon', 제주: 'jeju' };
+export const GYEONGGI_CITY3D = { 가평군: 'gapyeong', 고양시: 'goyang', 과천시: 'gwacheon', 광명시: 'gwangmyeong', 광주시: 'gwangju-gg', 구리시: 'guri', 군포시: 'gunpo', 김포시: 'gimpo', 남양주시: 'namyangju', 동두천시: 'dongducheon', 부천시: 'bucheon', 성남시: 'seongnam', 수원시: 'suwon', 시흥시: 'siheung', 안산시: 'ansan', 안성시: 'anseong', 안양시: 'anyang', 양주시: 'yangju', 양평군: 'yangpyeong', 여주시: 'yeoju', 연천군: 'yeoncheon', 오산시: 'osan', 용인시: 'yongin', 의왕시: 'uiwang', 의정부시: 'uijeongbu', 이천시: 'icheon', 파주시: 'paju', 평택시: 'pyeongtaek', 포천시: 'pocheon', 하남시: 'hanam', 화성시: 'hwaseong' };
 export function cityKeyOf(loc) {
   if (!loc) return null;
-  if (loc.place === '전남') return loc.sgg && loc.sgg.name === '광양시' ? 'gwangyang' : null;
-  if (loc.place === '대구' && loc.sgg && loc.sgg.name === '군위군') return null;
+  const sgg = loc.sgg && loc.sgg.name;
+  if (loc.place === '전남') return sgg === '광양시' ? 'gwangyang' : null;
+  if (loc.place === '대구' && sgg === '군위군') return null;
+  if (loc.place === '인천' && sgg === '옹진군') return null;
+  if (loc.place === '경기') return sgg ? (GYEONGGI_CITY3D[sgg] ? `gg-${GYEONGGI_CITY3D[sgg]}` : null) : 'gg-suwon'; // 도청은 수원
   return CITY3D[loc.place] || null;
 }
 

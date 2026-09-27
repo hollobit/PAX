@@ -1,4 +1,4 @@
-// 3D PAX 도시 입체지도 층 — 서울·부산·대구·대전·세종·광양 위로 가까이 다가가면 실제 건물·도로·물길·지형이 펼쳐진다
+// 3D PAX 도시 입체지도 층 — 서울·부산·대구·대전·인천·세종·광양·제주와 경기 시·군 위로 가까이 다가가면 실제 건물·도로·물길·지형이 펼쳐진다
 // (사용자 지시 2026-09-27: 별도 메뉴가 아니라 확대하면 그 자리에서).
 //
 // 자료와 그리는 코드는 독립 페이지 city3d/와 같은 것을 쓴다(city3d/js/*). 도시 자료는 도시 로컬 미터 좌표
@@ -9,7 +9,7 @@ import * as THREE from 'three';
 import { loadCity } from './city3d/js/load.js';
 import {
   makeFrame, buildTerrain, buildWater, buildGreen, buildRibbons, roadStyle, waterwayStyle, buildOutline,
-  buildDistrictLines, createBuildingMesh, carveWater,
+  buildDistrictLines, createBuildingMesh, carveWater, paintGreen,
 } from './city3d/js/layers.js';
 import { MODES, styleCityMaterials } from './city3d/js/modes.js';
 import { flightStops } from './city3d/js/flight.js';
@@ -22,12 +22,31 @@ const BASE = 'city3d/data';
 const MOBILE = matchMedia('(pointer: coarse)').matches || Math.min(innerWidth, innerHeight) < 700;
 /** 모바일은 표시 건물 수·지형 격자를 따로 줄인다 */
 export const CITY_BUDGET = MOBILE ? { label: '모바일', buildings: 30000, terrainStep: 4 } : { label: '데스크톱', buildings: 180000, terrainStep: 3 };
-export const ENTER = 2.4;    // 이보다 가까우면(월드 단위, 1 ≈ 43km) 도시 모드
-const EXIT = 2.9;            // 이보다 멀어지면 전국 지도로 (되돌이 떨림 방지 간격)
-const PREFETCH = 4.4;        // 이보다 가까워지면 도시 자료를 미리 받기 시작
+// 도시 모드로 바뀌는 거리(월드 단위, 1 ≈ 43km)는 도시 크기에 비례 — 서울(약 45km)은 약 2.4, 과천 같은 작은 시는 0.5.
+// 작은 시를 먼 곳에서 펼치면 화면의 점 하나만 입체가 되기 때문이다. 나갈 때는 1.2배, 미리 받기는 1.8배.
+const ENTER_MAX = 2.4;
+const ENTER_MIN = 0.5;
+const EXIT_K = 1.2;
+const PREFETCH_K = 1.8;
 const LIFT = 0.0003;         // 시도 판 윗면(LAND_H) 위로 약 13m — 해수면 물·지형이 판과 겹쳐 깜빡이지 않게
 
-export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onState }) {
+function inRing(ring, x, y) {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const [xi, yi] = ring[i];
+    const [xj, yj] = ring[j];
+    if ((yi > y) !== (yj > y) && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) inside = !inside;
+  }
+  return inside;
+}
+/** 단순화한 경계선에서 약 1km 안 — 다각형 사이 틈(단순화 오차)에 빠진 점을 살린다 */
+function nearOutline(c, lon, lat) {
+  const k = Math.cos((lat * Math.PI) / 180);
+  return c.outline.some((ring) => ring.some(([x, y]) => Math.hypot((x - lon) * k, y - lat) < 0.009));
+}
+const MAX_LOADED = 4; // 메모리에 둘 도시 수 — 경기 시·군을 옮겨 다녀도 쌓이지 않게
+
+export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onState, onIndex = () => {} }) {
   let index = null;
   const loaded = new Map();   // key → 도시(장면 그룹·변환·자료)
   const loading = new Map();  // key → Promise
@@ -35,7 +54,8 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
   let lastSel = null;
   let look = MODES.day; // 시간대 — 도시 재질(물·도로·야간 창문)
   const uniforms = { uNight: { value: 0 } };
-  fetch(`${BASE}/cities.json`, { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : null)).then((j) => { index = j; }).catch(() => { index = null; });
+  fetch(`${BASE}/cities.json`, { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : null))
+    .then((j) => { index = j; if (j) onIndex(); }).catch(() => { index = null; });
 
   const labels = createLabelLayer(labelRoot, {
     onClick: (it) => { const c = loaded.get(active); if (c) onLabelClick(c.toWorld(it.x, it.n, 0), it.k === 'district' || it.k === 'city' ? 0.2 : 0.045); },
@@ -43,13 +63,29 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
     unit: 1, // setCity 때 도시별 배율로 바꾼다
   });
 
+  /** 경위도가 어느 도시 경계 안인가 — 상자로 거르고 경계 다각형(cities.json outline)으로 가린다.
+   *  경기 시·군·서울·인천은 상자가 겹치므로 다각형이 필요하다. 경계선 근처 틈이면 상자가 맞는 첫 도시. */
+  const enterCache = new Map();
+  function enterDist(key) {
+    if (!enterCache.has(key)) {
+      const [w, s, e, n] = index.cities[key].bbox;
+      const diag = project(w, s).distanceTo(project(e, n));
+      enterCache.set(key, Math.min(ENTER_MAX, Math.max(ENTER_MIN, diag * 1.8)));
+    }
+    return enterCache.get(key);
+  }
+
   function cityAt(lon, lat) {
     if (!index) return null;
+    let boxHit = null;
     for (const [key, c] of Object.entries(index.cities)) {
       const [w, s, e, n] = c.bbox || [];
-      if (lon >= w && lon <= e && lat >= s && lat <= n) return key;
+      if (!(lon >= w && lon <= e && lat >= s && lat <= n)) continue;
+      if (!c.outline) return key;
+      if (c.outline.some((ring) => inRing(ring, lon, lat))) return key;
+      boxHit = boxHit || key;
     }
-    return null;
+    return boxHit && index.cities[boxHit].outline && nearOutline(index.cities[boxHit], lon, lat) ? boxHit : null;
   }
 
   /** 도시 로컬 미터 ↔ 미니어처 월드 */
@@ -74,11 +110,12 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
     group.scale.set(xf.sx, xf.sy, xf.sz);
     // 물 밑 지형을 수면 아래로 깎는다 — 30m 표고가 강 가운데서 수면보다 높아 강이 땅에 덮이지 않게
     const carved = carveWater(frame, data.dem, data.water);
-    const terrain = buildTerrain(frame, data.dem, 1, CITY_BUDGET.terrainStep, carved);
+    const painted = paintGreen(frame, data.dem, data.green); // 큰 숲 삼각형은 지형 색으로 — 봉우리를 덮는 판 방지
+    const terrain = buildTerrain(frame, data.dem, 1, CITY_BUDGET.terrainStep, carved, painted);
     group.add(terrain);
     group.add(buildOutline(frame, data.meta.outline, 1));
     group.add(buildDistrictLines(frame, data.mapinfo.districts, 1));
-    group.add(buildGreen(frame, data.green, 1));
+    group.add(buildGreen(frame, data.green, 1, painted));
     group.add(buildWater(frame, data.water, 1));
     const ww = new THREE.Mesh(buildRibbons(frame, data.waterways, 1, waterwayStyle),
       new THREE.MeshPhongMaterial({ color: '#ffffff', specular: '#cfe6ff', shininess: 60, vertexColors: true, side: THREE.DoubleSide }));
@@ -112,6 +149,7 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
           locator: createLocator(data.mapinfo), ms: performance.now() - t0 };
         loaded.set(key, c);
         loading.delete(key);
+        evict(key);
         onState({ phase: 'ready', key, name: info.name, ms: c.ms, files: data.files, bytes: data.bytes, meta: data.meta });
         return c;
       })
@@ -125,7 +163,22 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
     return p;
   }
 
+  const lastUsed = new Map();
+  /** 오래 안 쓴 도시부터 장면·GPU에서 내린다(펼쳐진 도시와 방금 받은 도시는 남긴다) */
+  function evict(keep) {
+    lastUsed.set(keep, performance.now());
+    const order = [...loaded.keys()].filter((k) => k !== keep && k !== active).sort((a, b) => (lastUsed.get(a) || 0) - (lastUsed.get(b) || 0));
+    while (loaded.size > MAX_LOADED && order.length) {
+      const k = order.shift();
+      const c = loaded.get(k);
+      scene.remove(c.group);
+      c.group.traverse((o) => { o.geometry?.dispose(); (Array.isArray(o.material) ? o.material : [o.material]).forEach((m) => m?.dispose()); });
+      loaded.delete(k);
+    }
+  }
+
   function setActive(key) {
+    if (key) lastUsed.set(key, performance.now());
     if (key === active) return;
     if (active) loaded.get(active).group.visible = false;
     active = key;
@@ -153,14 +206,16 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
     get index() { return index; },
     cityAt,
     ensureLoaded,
+    /** 그 도시가 펼쳐지는 거리 — 목록을 아직 못 받았으면 null */
+    enterDistance(key) { return index && index.cities[key] ? enterDist(key) : null; },
     /** 매 프레임 — 시점(목표점)이 도시 범위 안이고 충분히 가까우면 도시 모드. 자료는 PREFETCH 거리에서 미리 받는다. */
     update(camera, target, d, width, height) {
       if (!index) return;
       const [lon, lat] = unproject(target.x, target.z);
       const key = cityAt(lon, lat);
-      if (key && d < PREFETCH && !loaded.has(key) && !loading.has(key)) ensureLoaded(key);
-      if (active && (key !== active || d > EXIT)) setActive(null);
-      if (!active && key && d < ENTER && loaded.has(key)) setActive(key);
+      if (key && d < enterDist(key) * PREFETCH_K && !loaded.has(key) && !loading.has(key)) ensureLoaded(key);
+      if (active && (key !== active || d > enterDist(active) * EXIT_K)) setActive(null);
+      if (!active && key && d < enterDist(key) && loaded.has(key)) setActive(key);
       if (!active) return;
       const c = loaded.get(active);
       selectVisible(c, camera, target);
@@ -176,13 +231,20 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
     /** 랜드마크 비행 순서(OSM에서 확인된 지점만) */
     flightStops(c) { return flightStops(c.data.meta.landmarks); },
     /** 사례가 설 자리: 기관 소재지 → 시군구 청사(없으면 구 이름표 자리) → 시청 — 도시 로컬 [x, n, 이름] */
-    anchorOf(c, loc) {
+    anchorOf(c, loc, seatLL = null) {
       if (loc.inst) {
         const [x, n] = [(loc.inst.lon - c.data.meta.frame.lon0) * c.data.meta.frame.m_lon, (loc.inst.lat - c.data.meta.frame.lat0) * c.data.meta.frame.m_lat];
         return [x, n, loc.inst.name];
       }
       const seat = seatOf(c.data.mapinfo, loc.sgg ? loc.sgg.name : loc.place, loc.sgg ? c.locator : null);
       if (seat) return [seat.x, seat.n, seat.name];
+      if (seatLL) {
+        // 시·도청 앞(SEATS) 좌표 — 이 도시 지도 안일 때만
+        const f = c.data.meta.frame;
+        const x = (seatLL[0] - f.lon0) * f.m_lon;
+        const n = (seatLL[1] - f.lat0) * f.m_lat;
+        if (x >= 0 && n >= 0 && x <= f.width && n <= f.height) return [x, n, `${loc.place} 청사 앞`];
+      }
       return null;
     },
     stats() {

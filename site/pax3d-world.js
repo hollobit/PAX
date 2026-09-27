@@ -2,7 +2,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { toon, toonGradient, skyTexture, signSprite, createPostPass } from './pax3d-look.js?v=a66df86b';
-import { ISLANDS, SEATS, TASK_COLORS, FALLBACK_COLOR, shapeOf, cityKeyOf } from './pax3d-data.js?v=32ebb984';
+import { ISLANDS, SEATS, TASK_COLORS, FALLBACK_COLOR, shapeOf, cityKeyOf } from './pax3d-data.js?v=73414d04';
 import { buildingGeometries, mountains, trees, clouds, pin, dokdo } from './pax3d-props.js?v=83d5cb9b';
 import {
   LAND_H, project, unproject, toWorld, projectPolys, rng, inPolys, polysArea, randomIn, scatter, blobRing,
@@ -10,7 +10,7 @@ import {
 import { createTileLayer, markLandStencil } from './pax3d-tiles.js?v=0eceea68';
 import { MODES, skyTexture as citySky, sunDirection } from './city3d/js/modes.js';
 import { createLandmarkFlight } from './city3d/js/flight.js';
-import { createCityLayer } from './pax3d-city.js?v=dc76c808';
+import { createCityLayer } from './pax3d-city.js?v=fc47b561';
 
 // 간판 자리 — 무게중심은 경기(서울 구멍 포함)처럼 엉뚱한 곳에 떨어져 손으로 정했다.
 const LABEL_AT = {
@@ -376,7 +376,7 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     onActive: (on) => { tilesOn = on; treeMesh.visible = !on && !cityMode; if (onTiles) onTiles(on); },
   });
 
-  // ---- 도시 입체지도: 서울·부산·대구·대전·세종·광양 위로 가까이 가면 펼쳐진다 ------------------------------
+  // ---- 도시 입체지도: 서울·부산·대구·대전·인천·세종·광양·제주와 경기 시·군 위로 가까이 가면 펼쳐진다 ------------------------------
   const citySigns = new Map(); // 도시 key → 사례 자리 간판들
   const cityLayer = createCityLayer({
     scene,
@@ -384,13 +384,23 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     onLabelClick: (p, dist) => flyTo(p, dist),
     onState: (st) => onCity(st),
     onChange: (c) => enterCity(c),
+    onIndex: () => refineCityKeys(),
   });
+  /** 좌표가 있는 사례(기관 소재지·시·도청 앞)는 도시 경계 다각형으로 다시 판정 — 표(cityKeyOf)보다 정확하다
+   *  (예: 경기 사례의 기관이 실제로는 서울에 있거나, 시군구를 모르는 경기 사례가 도청이 있는 수원에 서는 것) */
+  function refineCityKeys() {
+    for (const e of entries) {
+      const pt = seatPoint(e.loc) || (e.loc.inst ? [e.loc.inst.lon, e.loc.inst.lat] : null);
+      if (pt) e.cityKey = cityLayer.cityAt(pt[0], pt[1]);
+    }
+  }
+  const seatPoint = (loc) => (!loc.inst && !loc.sgg && SEATS[loc.place] ? SEATS[loc.place] : null);
   /** 그 도시 사례를 실제 자리에 — 기관 소재지 → 시군구 청사 → 시청. 같은 자리의 사례는 해바라기 배열로 둘러선다. */
   function placeCityCases(c) {
     const groups = new Map();
     for (const e of entries) {
       if (e.cityKey !== c.key) continue;
-      const a = cityLayer.anchorOf(c, e.loc);
+      const a = cityLayer.anchorOf(c, e.loc, seatPoint(e.loc));
       if (!a) continue;
       const k = `${Math.round(a[0])},${Math.round(a[1])}`;
       if (!groups.has(k)) groups.set(k, { a, list: [] });
@@ -540,8 +550,10 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     if (v && cityMode) flyTo(v.pos, 0.035);
     else {
       // 도시 사례면 자료를 미리 받고, 도시가 펼쳐지면 실제 자리로 한 번 더 내려간다
-      if (e.cityKey) { pendingFly = id; cityLayer.index && cityLayer.ensureLoaded(e.cityKey); }
-      flyTo(e.pos, 1.6);
+      const enter = e.cityKey ? cityLayer.enterDistance(e.cityKey) : null;
+      if (e.cityKey && enter) { pendingFly = id; cityLayer.ensureLoaded(e.cityKey); }
+      // 도시 사례는 그 도시가 펼쳐지는 거리 안까지 내려간다(작은 시·군은 더 가까이)
+      flyTo(e.pos, enter ? Math.min(1.6, enter * 0.8) : 1.6);
     }
   }
 

@@ -74,7 +74,8 @@ def test_files_match_meta(city, tmp_path):
 def test_buildings_are_sane(city, tmp_path):
     key, meta = city
     r = read_packed(key, "buildings.bin", tmp_path)
-    assert r["count"] == meta["counts"]["buildings"] > 1000
+    # 경기 북부·동부 군은 OSM 건물 입력이 적다(연천·여주·동두천 1,000채 미만) — 자료 자체의 차이라 기준을 나눈다
+    assert r["count"] == meta["counts"]["buildings"] > (500 if key.startswith("gg-") else 1000)
     w, h = meta["frame"]["width"], meta["frame"]["height"]
     est = 0
     for (x, n, bw, bd, ang, flags, hh, h0, area) in struct.iter_unpack("<HHHHBBHHH", r["body"]):
@@ -115,7 +116,7 @@ def test_terrain_grid(city, tmp_path):
     r = read_packed(key, "terrain.bin", tmp_path)
     t = meta["terrain"]
     assert r["extra"] == t["cols"] and r["count"] == t["cols"] * t["rows"]
-    assert t["max_m"] > 150  # 모든 도시에 산이 있다(서울 북한산, 부산 금정산, 대구 팔공산, 세종 원수산·운주산, 광양 백운산)
+    assert t["max_m"] > 50  # 모든 도시·시군에 언덕 이상이 있다(서울 836m, 제주 한라산 1,934m …)
 
 
 def test_landmarks_have_positions_inside_frame(city):
@@ -201,7 +202,8 @@ def test_mapinfo_matches_city(city):
         assert r["name"] and 0 <= r["x"] <= w and 0 <= r["n"] <= h, r
         kinds[r["k"]] = kinds.get(r["k"], 0) + 1
     assert {k: v for k, v in info["counts"].items() if k != "district"} == {k: kinds.get(k, 0) for k in info["counts"] if k != "district"}
-    assert kinds.get("quarter", 0) > 20 and kinds.get("road", 0) > 50
+    small = key.startswith("gg-")  # 경기 군·작은 시는 동네·도로 이름이 적다
+    assert kinds.get("quarter", 0) >= (3 if small else 20) and kinds.get("road", 0) >= (10 if small else 50)
 
 
 @pytest.mark.parametrize("key", list(KNOWN))
@@ -250,6 +252,10 @@ def test_city_index_has_bbox_matching_meta():
         f = json.loads((DATA / key / "meta.json").read_text())["frame"]
         assert c["bbox"] == [f["lon0"], f["lat0"], f["lon1"], f["lat1"]]
         assert c["packed_bytes"] == sum((DATA / key / f"{n}.gz.b64.txt").stat().st_size for n in FILES)
+        # 3D PAX가 "어느 도시 위인가"를 가리는 경계 다각형 — 경위도, 상자 안
+        assert c["outline"] and all(len(r) >= 3 for r in c["outline"])
+        w, s_, e, n = c["bbox"]
+        assert all(w - 0.01 <= x <= e + 0.01 and s_ - 0.01 <= y <= n + 0.01 for r in c["outline"] for x, y in r)
 
 
 SEAT_NODE = """
@@ -292,14 +298,21 @@ console.log(JSON.stringify([
   k({ place: '서울' }), k({ place: '부산', sgg: { name: '연제구' } }), k({ place: '세종' }), k({ place: '대구' }),
   k({ place: '대구', sgg: { name: '군위군' } }), k({ place: '전남', sgg: { name: '광양시' } }), k({ place: '전남', sgg: { name: '순천시' } }),
   k({ place: '경기' }), k({ place: '공직 현장 섬' }), k(null), k({ place: '대전', sgg: { name: '유성구' } }),
+  k({ place: '인천', sgg: { name: '연수구' } }), k({ place: '인천', sgg: { name: '옹진군' } }), k({ place: '제주' }),
+  k({ place: '경기', sgg: { name: '수원시' } }), k({ place: '경기', sgg: { name: '광주시' } }),
 ]));
+console.log(JSON.stringify(mod.GYEONGGI_CITY3D));
 """
 
 
 @pytest.mark.skipif(not shutil.which("node"), reason="node 없음")
 def test_case_location_maps_to_city():
-    out = json.loads(subprocess.run(["node", "--input-type=module", "-e", CITYKEY_NODE], cwd=ROOT, capture_output=True, text=True, check=True).stdout)
-    assert out == ["seoul", "busan", "sejong", "daegu", None, "gwangyang", None, None, None, None, "daejeon"]
+    lines = subprocess.run(["node", "--input-type=module", "-e", CITYKEY_NODE], cwd=ROOT, capture_output=True, text=True, check=True).stdout.splitlines()
+    out, gg = json.loads(lines[0]), json.loads(lines[1])
+    assert out == ["seoul", "busan", "sejong", "daegu", None, "gwangyang", None, "gg-suwon", None, None, "daejeon",
+                   "incheon", None, "jeju", "gg-suwon", "gg-gwangju-gg"]
+    from common import GYEONGGI
+    assert gg == GYEONGGI  # 3D PAX 표와 빌드 표가 같다
 
 
 # ---- 랜드마크(바로 가기·랜드마크 비행) -------------------------------------------------------
@@ -315,11 +328,14 @@ def test_verified_landmarks_are_near_their_real_place(city):
     """OSM 지점으로 표시한 랜드마크는 이름이 후보 중 하나이고 실제 위치 2km 안 — 같은 이름 식당·정류장에 끌려가지 않았다"""
     import math
     key, meta = city
-    table = {label: (names, ll) for label, names, ll in _landmark_table()[key]}
+    table = {label: (names, ll) for label, names, ll in _landmark_table().get(key, [])}
     f = meta["frame"]
     verified = [l for l in meta["landmarks"] if l["source"] == "OSM POI"]
-    assert len(verified) >= 4, "비행할 랜드마크가 너무 적다"
+    assert len(verified) >= (1 if key.startswith("gg-") else 4), "비행할 랜드마크가 너무 적다"
     for l in verified:
+        assert 0 <= l["x"] <= f["width"] and 0 <= l["n"] <= f["height"]
+        if l.get("rule") != "table":
+            continue  # 좌표를 적지 않은 항목(경기 시·군 표·시군청·최고봉)은 "이름이 같고 경계 안"으로 골랐다
         names, (lon, lat) = table[l["name"]]
         assert l["osm_name"] in names
         ex, en = (lon - f["lon0"]) * f["m_lon"], (lat - f["lat0"]) * f["m_lat"]

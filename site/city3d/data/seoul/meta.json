@@ -81,7 +81,8 @@
    "n": 16875.3,
    "source": "OSM POI",
    "osm_name": "광화문",
-   "osm_class": "railway"
+   "osm_class": "railway",
+   "rule": "table"
   },
   {
    "name": "경복궁",
@@ -89,7 +90,8 @@
    "n": 17775.1,
    "source": "OSM POI",
    "osm_name": "경복궁",
-   "osm_class": "castle"
+   "osm_class": "castle",
+   "rule": "table"
   },
   {
    "name": "청와대",
@@ -97,7 +99,8 @@
    "n": 18541.3,
    "source": "OSM POI",
    "osm_name": "청와대",
-   "osm_class": "office"
+   "osm_class": "office",
+   "rule": "table"
   },
   {
    "name": "서울역",
@@ -105,7 +108,8 @@
    "n": 14865.2,
    "source": "OSM POI",
    "osm_name": "서울역",
-   "osm_class": "railway"
+   "osm_class": "railway",
+   "rule": "table"
   },
   {
    "name": "남산서울타워",
@@ -113,7 +117,8 @@
    "n": 14625.3,
    "source": "OSM POI",
    "osm_name": "남산서울타워",
-   "osm_class": "attraction"
+   "osm_class": "attraction",
+   "rule": "table"
   },
   {
    "name": "동대문디자인플라자",
@@ -121,7 +126,8 @@
    "n": 16506.7,
    "source": "OSM POI",
    "osm_name": "동대문디자인플라자",
-   "osm_class": "bicycle_rental"
+   "osm_class": "bicycle_rental",
+   "rule": "table"
   },
   {
    "name": "롯데월드타워",
@@ -129,7 +135,8 @@
    "n": 10344.8,
    "source": "OSM POI",
    "osm_name": "롯데월드타워",
-   "osm_class": "attraction"
+   "osm_class": "attraction",
+   "rule": "table"
   },
   {
    "name": "63스퀘어",
@@ -137,7 +144,8 @@
    "n": 11246.3,
    "source": "OSM POI",
    "osm_name": "63스퀘어",
-   "osm_class": "bicycle_rental"
+   "osm_class": "bicycle_rental",
+   "rule": "table"
   },
   {
    "name": "여의도",
@@ -145,7 +153,17 @@
    "n": 12480.2,
    "source": "OSM POI",
    "osm_name": "국회의사당",
-   "osm_class": "office"
+   "osm_class": "office",
+   "rule": "table"
+  },
+  {
+   "name": "만경대(801m)",
+   "x": 19831.3,
+   "n": 26234.6,
+   "source": "OSM POI",
+   "osm_name": "만경대",
+   "osm_class": "peak",
+   "rule": "auto"
   }
  ],
  "outline": [
