@@ -32,7 +32,7 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
   let active = null;
   let lastSel = null;
   const uniforms = { uNight: { value: 0 } };
-  fetch(`${BASE}/cities.json`).then((r) => (r.ok ? r.json() : null)).then((j) => { index = j; }).catch(() => { index = null; });
+  fetch(`${BASE}/cities.json`, { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : null)).then((j) => { index = j; }).catch(() => { index = null; });
 
   const labels = createLabelLayer(labelRoot, {
     onClick: (it) => { const c = loaded.get(active); if (c) onLabelClick(c.toWorld(it.x, it.n, 0), it.k === 'district' || it.k === 'city' ? 0.2 : 0.045); },

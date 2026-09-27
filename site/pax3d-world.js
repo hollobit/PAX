@@ -8,7 +8,7 @@ import {
   LAND_H, project, unproject, toWorld, projectPolys, rng, inPolys, polysArea, randomIn, scatter, blobRing,
 } from './pax3d-geom.js?v=f13514eb';
 import { createTileLayer, markLandStencil } from './pax3d-tiles.js?v=0eceea68';
-import { createCityLayer } from './pax3d-city.js?v=0f606d9c';
+import { createCityLayer } from './pax3d-city.js?v=aab7f443';
 
 // 간판 자리 — 무게중심은 경기(서울 구멍 포함)처럼 엉뚱한 곳에 떨어져 손으로 정했다.
 const LABEL_AT = {

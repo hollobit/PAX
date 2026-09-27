@@ -2,8 +2,12 @@
 // 파일마다 헤더의 레코드 수·본문 길이·CRC32와 meta.json의 크기·CRC를 확인한 뒤에만 넘긴다.
 import { readC3D, decodeBuildings, decodeLines, decodeMesh, decodeDem } from './binary.js';
 
+// 자료는 주소에 판 번호가 없어 브라우저 캐시(GitHub Pages 10분)가 옛 파일을 줄 수 있다 — 도시를 더하거나 다시 빌드한 뒤
+// 새 meta.json과 옛 .bin이 섞이면 CRC 검증에서 막힌다. 그래서 매번 서버에 확인한다(바뀌지 않았으면 304로 가볍게 끝난다).
+const FRESH = { cache: 'no-cache' };
+
 export async function getJSON(path) {
-  const r = await fetch(path);
+  const r = await fetch(path, FRESH);
   if (!r.ok) throw new Error(`${path}을(를) 받지 못했습니다 (${r.status})`);
   return r.json();
 }
@@ -13,7 +17,7 @@ export async function getJSON(path) {
  * base64를 풀고 gzip을 되돌린 원래 .bin 바이트를 돌려준다(검증은 그 바이트로 readC3D가 한다).
  */
 export async function getBin(path) {
-  const r = await fetch(`${path}.gz.b64.txt`);
+  const r = await fetch(`${path}.gz.b64.txt`, FRESH);
   if (!r.ok) throw new Error(`${path}을(를) 받지 못했습니다 (${r.status})`);
   const b64 = (await r.text()).trim();
   const bin = atob(b64);
