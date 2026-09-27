@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-27T00:10:06+09:00",
+ "updated_at": "2026-09-27T23:35:16+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -13761,6 +13761,55 @@
    "org_type": "민간(참고)",
    "id": "1cabc8c7aa0e47ab",
    "thumb_v": 1790435485
+  },
+  {
+   "source": "kakao",
+   "org": "지방자치혁신연구원",
+   "case_class": "참고",
+   "network_req": "인터넷 필수",
+   "org_type": "민간(참고)",
+   "runtime_env": "브라우저만",
+   "link": "https://toji.jachiai.kr",
+   "model_dependency": "없음(비LLM)",
+   "task_category": "민원",
+   "tags": [
+    "인허가",
+    "국토계획법",
+    "공공데이터",
+    "규칙기반"
+   ],
+   "summary": "서울 주소와 지으려는 건물 용도를 고르면 브이월드에서 그 땅의 용도지역을 찾아 국토계획법 시행령 별표를 근거로 가능·불가·조건부를 보여 준다. 판정은 코드로 짠 규칙이 하고 AI는 설명만 맡는 구조를 연습한 교육과정 실습 결과물로, 공개판은 AI 요약을 꺼 두었다. 지구단위계획·건폐율·용적률은 보지 않는 참고용이며 한계를 화면에 밝혔다.",
+   "title": "토지 인허가 사전진단 — 주소와 건물 용도로 용도지역별 건축 가능 여부를 미리 짚는 서울 시범판",
+   "collected_at": "2026-09-27",
+   "date": "2026-09-27",
+   "id": "24d1c3a77cd2322f"
+  },
+  {
+   "models_used": [
+    "OpenAI Codex"
+   ],
+   "source": "kakao",
+   "org": "공직 현장(개인 개발)",
+   "case_class": "개인 개발",
+   "org_type": "공직 개인",
+   "runtime_env": "AI 도구 설정",
+   "link": "https://github.com/sodam-ai/SoDam-RhinoGHCode-Codex",
+   "model_dependency": "해외 상용 API",
+   "task_category": "시설·안전",
+   "tags": [
+    "건축",
+    "3D모델",
+    "코드생성",
+    "Codex"
+   ],
+   "summary": "Rhino 7 그래스호퍼의 C# Script·GhPython 노드에 넣을 코드와 입력·출력 포트 설정, 붙여넣을 위치까지 Codex가 안내하도록 묶은 마켓플레이스 플러그인이다. 실제 Rhino 7에서 예제 5개를 시험했고, 공개 저장소의 원본 프로젝트를 밝히고 Rhino 7에 맞게 고쳤다. 같은 개발자의 소담 라이노 오프라인 MCP에 이은 건축 설계 보조 도구다.",
+   "title": "소담 라이노 GH코드 Codex — Rhino 7 그래스호퍼 스크립트 노드 코드를 짜 주는 Codex 플러그인",
+   "collected_at": "2026-09-27",
+   "date": "2026-09-27",
+   "id": "48a2fe695d62b13f",
+   "license": "Apache-2.0",
+   "license_source": "github",
+   "license_checked": "2026-09-27"
   }
  ]
 }

@@ -1,7 +1,59 @@
 {
- "updated_at": "2026-09-27T06:38:02Z",
- "count": 573,
+ "updated_at": "2026-09-27T14:38:10Z",
+ "count": 577,
  "articles": [
+  {
+   "url": "https://www.joongang.co.kr/article/25465015",
+   "title": "서울대·고대·성대 B 이상 100% 육박…챗GPT 출시 이후 눈에 띄는 학점 인플레",
+   "outlet": "중앙일보",
+   "published": "2026-09-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.hankookilbo.com/news/article/A2026092518300005113?did=NA",
+   "title": "\"앱 열지 말고 AI에 시켜라\" MS 코파일럿, AI 운영체제로-경제",
+   "outlet": "한국일보",
+   "published": "2026-09-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://v.daum.net/v/20260927073537492",
+   "title": "AI 석·박사 인력 양성 1천명 넘어…취업 연계는 과제",
+   "outlet": "Daum | 이데일리",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://core.today/blog/git-basics-07-ai-agents",
+   "title": "Git, 이것만 알면 협업한다 7편 — Claude Code 시대의 git: 에이전트에게 맡기고, 사람이 감독하는 법",
+   "outlet": "core.today",
+   "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.yna.co.kr/view/MYH20260923019200038",
    "title": "\"유쾌한 홍보부터 재난 대응까지\"…지자체 'AI 행정' 성과",
