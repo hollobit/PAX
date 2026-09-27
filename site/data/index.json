@@ -1,52 +1,53 @@
 {
- "generated_at": "2026-09-27",
+ "generated_at": "2026-09-28",
  "quarter": "2026Q3",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 483,
- "total_champions": 212,
+ "total_cases": 489,
+ "total_champions": 215,
  "community": {
-  "members": 2260,
-  "kakao_week": 5448,
-  "kakao_total_observed": 40786,
+  "members": 2262,
+  "kakao_week": 4857,
+  "kakao_total_observed": 40864,
   "threads_observed": 312
  },
  "certified_champions": 5,
- "unattributed_cases": 96,
+ "unattributed_cases": 95,
  "ax_distribution": {
-  "AI-Ready": 327,
-  "AI-Enabled": 136,
-  "AX 단계 외": 14,
+  "AI-Ready": 328,
+  "AI-Enabled": 140,
+  "AX 단계 외": 15,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
  "c_axis_mean": 0.92,
  "p_distribution": {
   "P0": 158,
-  "P1": 310,
-  "P2": 15
+  "P1": 315,
+  "P2": 16
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 231,
+  "없음(비LLM)": 232,
   "해외 오픈웨이트(로컬)": 27,
-  "혼합": 12,
-  "해외 상용 API": 60,
-  "모델 중립(BYO)": 72,
+  "혼합": 13,
+  "해외 상용 API": 61,
+  "모델 중립(BYO)": 74,
   "국산 독자모델": 6,
-  "미상": 9,
+  "미상": 10,
   "국산 오픈웨이트": 1
  },
  "model_stats": {
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 26,
+    "n": 27,
     "variants": [
      "Claude Code(BYO 구독)",
      "Claude Code(플러그인)",
      "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
      "Claude Code/Codex(플러그인)",
      "Claude(대조·근거 작성)",
+     "Claude(선택 기능)",
      "Codex CLI/Claude CLI(BYO 구독)",
      "Codex 이미지 생성(BYO 구독)",
      "상용 API 모드(Claude 등)"
@@ -155,6 +156,10 @@
      {
       "id": "133d7e9c594456be",
       "title": "서울 자치구 조례 정합성 지도 — 본청과 25개 구 조례의 법률 인용을 현행 조문과 대조해 지도로"
+     },
+     {
+      "id": "fbdee1f08c2ca185",
+      "title": "농해수위 국정감사 온톨로지 — 위원회 회의록을 발언·쟁점·이행약속 지식그래프로 엮어 국감 브리핑을 만드는 서비스"
      }
     ],
     "domestic": false
@@ -367,7 +372,7 @@
    },
    {
     "name": "로컬 서빙(Ollama·vLLM 등)",
-    "n": 9,
+    "n": 10,
     "variants": [
      "LM Studio 로컬 모델(OpenAI 호환)",
      "Ollama 로컬 모델",
@@ -378,7 +383,8 @@
      "Ollama(로컬)",
      "Ollama/vLLM 로컬(기본)",
      "WebGPU 브라우저 모델",
-     "vLLM/Ollama/LiteLLM 로컬(OpenAI 호환)"
+     "vLLM/Ollama/LiteLLM 로컬(OpenAI 호환)",
+     "자체호스팅 vLLM(모델 미명시)"
     ],
     "cases": [
      {
@@ -416,6 +422,10 @@
      {
       "id": "e65b0800852d5e5f",
       "title": "RuleLens AI — 기준 법령·지침과 내 자료를 로컬 Ollama로 대조하는 적합성 검토 도구"
+     },
+     {
+      "id": "42267bcd8527ba4a",
+      "title": "침해사고 신고 24시간 초과 검증 파이프라인 — 신고 자료에서 사실만 뽑고 과태료 대상 여부는 코드가 재계산"
      }
     ],
     "domestic": false
@@ -757,7 +767,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 231,
+    "n": 232,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -765,15 +775,15 @@
     "specified": 16
    },
    "혼합": {
-    "n": 12,
-    "specified": 11
+    "n": 13,
+    "specified": 12
    },
    "해외 상용 API": {
-    "n": 60,
-    "specified": 45
+    "n": 61,
+    "specified": 46
    },
    "모델 중립(BYO)": {
-    "n": 72,
+    "n": 74,
     "specified": 3
    },
    "국산 독자모델": {
@@ -781,8 +791,8 @@
     "specified": 5
    },
    "미상": {
-    "n": 9,
-    "specified": 0
+    "n": 10,
+    "specified": 1
    },
    "국산 오픈웨이트": {
     "n": 1,
@@ -898,7 +908,7 @@
    },
    {
     "dep": "혼합",
-    "n": 12,
+    "n": 13,
     "families": [
      {
       "name": "로컬 서빙(Ollama·vLLM 등)",
@@ -1129,16 +1139,44 @@
       "variants": [
        "로컬 LLM(세부 미상)"
       ]
+     },
+     {
+      "name": "로컬 AI(비식별화)",
+      "n": 1,
+      "cases": [
+       {
+        "id": "e72eed20d3744266",
+        "title": "정보보호 공시 검증 자동화 — 공개 데이터는 규칙으로, 기업 기밀은 로컬 AI로 비식별화한 뒤에만 상용 AI에 묻는 설계"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "로컬 AI(비식별화)"
+      ]
+     },
+     {
+      "name": "상용 AI(판단)",
+      "n": 1,
+      "cases": [
+       {
+        "id": "e72eed20d3744266",
+        "title": "정보보호 공시 검증 자동화 — 공개 데이터는 규칙으로, 기업 기밀은 로컬 AI로 비식별화한 뒤에만 상용 AI에 묻는 설계"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "상용 AI(판단)"
+      ]
      }
     ]
    },
    {
     "dep": "해외 상용 API",
-    "n": 60,
+    "n": 61,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
-      "n": 22,
+      "n": 23,
       "cases": [
        {
         "id": "7acf5f25369c1401",
@@ -1227,6 +1265,10 @@
        {
         "id": "fe0d33cc718246d6",
         "title": "Public Cardnews — 정부·공공기관 정책 카드뉴스를 기획부터 이미지까지 만드는 Codex 스킬"
+       },
+       {
+        "id": "fbdee1f08c2ca185",
+        "title": "농해수위 국정감사 온톨로지 — 위원회 회의록을 발언·쟁점·이행약속 지식그래프로 엮어 국감 브리핑을 만드는 서비스"
        }
       ],
       "domestic": false,
@@ -1235,6 +1277,7 @@
        "Claude Code(플러그인)",
        "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
        "Claude Code/Codex(플러그인)",
+       "Claude(선택 기능)",
        "Codex 이미지 생성(BYO 구독)"
       ]
      },
@@ -1594,18 +1637,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.066,
- "local_model_rate": 0.255,
- "model_known": 106,
- "license_tagged": 372,
- "license_stated_rate": 0.497,
- "gitlab_cases": 249,
- "gitlab_mirror_pairs": 36,
- "gitlab_open_rate": 0.145,
+ "domestic_model_rate": 0.065,
+ "local_model_rate": 0.25,
+ "model_known": 108,
+ "license_tagged": 380,
+ "license_stated_rate": 0.487,
+ "gitlab_cases": 258,
+ "gitlab_mirror_pairs": 37,
+ "gitlab_open_rate": 0.143,
  "mcp_cases": 87,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 401,
+  "미확인": 407,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1613,55 +1656,79 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.745
+  "feedback": 0.748
  },
  "maintenance_distribution": {
-  "활발": 198,
-  "정체": 18,
+  "활발": 313,
+  "정체": 32,
   "방치": 13
  },
- "stars_collected": 229,
+ "stars_collected": 358,
  "repo_stats": {
   "gitlab": {
-   "count": 249,
-   "starred": 138,
-   "stars_sum": 330,
+   "count": 258,
+   "starred": 248,
+   "stars_sum": 433,
    "maintenance": {
-    "활발": 138,
-    "정체": 6
+    "활발": 238,
+    "정체": 11
    },
    "top": [
     {
      "id": "43dc7f4ab2500260",
      "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
-     "stars": 13,
+     "stars": 14,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "류승인"
     },
     {
-     "id": "2798c2e0b79ab291",
-     "title": "KODA — 폐쇄망용 보안취약점 점검 도구",
-     "stars": 9,
-     "maintenance": "활발",
-     "license": "Apache-2.0",
-     "developer": "김지현"
-    },
-    {
      "id": "a8492663acf67b99",
      "title": "나라예산 한눈에 — 중앙관서 세출예산서 8,500건 웹서비스",
-     "stars": 9,
+     "stars": 11,
      "maintenance": "활발",
      "license": "명시 없음",
      "developer": "김기현"
     },
     {
+     "id": "2798c2e0b79ab291",
+     "title": "KODA — 폐쇄망용 보안취약점 점검 도구",
+     "stars": 10,
+     "maintenance": "활발",
+     "license": "Apache-2.0",
+     "developer": "김지현"
+    },
+    {
      "id": "17ed2d7a88c03119",
      "title": "Rekian — HWPX 공문서 재기안 에이전트 스킬셋",
-     "stars": 9,
+     "stars": 10,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "정솔현"
+    },
+    {
+     "id": "8ff758ac1d5e40eb",
+     "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
+     "stars": 9,
+     "maintenance": "활발",
+     "license": "MIT",
+     "developer": "류승인"
+    },
+    {
+     "id": "d6c35b2999da8ca0",
+     "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱",
+     "stars": 8,
+     "maintenance": "활발",
+     "license": "명시 없음",
+     "developer": "한종훈"
+    },
+    {
+     "id": "de4b2dab339d69b7",
+     "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
+     "stars": 7,
+     "maintenance": "활발",
+     "license": "Other",
+     "developer": "류승인"
     },
     {
      "id": "d08bc7e9a69190af",
@@ -1672,14 +1739,6 @@
      "developer": "우성균"
     },
     {
-     "id": "8ff758ac1d5e40eb",
-     "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
-     "stars": 7,
-     "maintenance": "활발",
-     "license": "MIT",
-     "developer": "류승인"
-    },
-    {
      "id": "8c5458af8f13435d",
      "title": "한글 AI 도우미 — 로컬 LLM 웹한글 보고서 확장",
      "stars": 7,
@@ -1688,45 +1747,29 @@
      "developer": "정재경"
     },
     {
-     "id": "d6c35b2999da8ca0",
-     "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱",
-     "stars": 7,
-     "maintenance": "활발",
-     "license": "명시 없음",
-     "developer": "한종훈"
-    },
-    {
-     "id": "de4b2dab339d69b7",
-     "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
+     "id": "ac09bd2e1c0fbb29",
+     "title": "온AI Work — 공무원 보고서 AI 작성 도구",
      "stars": 6,
      "maintenance": "활발",
-     "license": "Other",
-     "developer": "류승인"
-    },
-    {
-     "id": "10f18583c9e56e12",
-     "title": "화성특례시 신규자 지식창고 — 규정 검증 카드 130장 웹앱 (원본)",
-     "stars": 6,
-     "maintenance": "활발",
-     "license": "명시 없음",
-     "developer": "신환철"
+     "license": "MIT",
+     "developer": "정준우"
     }
    ]
   },
   "github": {
    "count": 148,
-   "starred": 112,
-   "stars_sum": 176133,
+   "starred": 145,
+   "stars_sum": 269507,
    "maintenance": {
-    "활발": 86,
-    "정체": 15,
+    "활발": 111,
+    "정체": 22,
     "방치": 13
    },
    "top": [
     {
      "id": "c54ee4b5fb3ee4c5",
      "title": "Orca — 병렬 에이전트 플릿을 부리는 에이전트 개발 환경(ADE)",
-     "stars": 62743,
+     "stars": 79509,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "stablyai"
@@ -1734,15 +1777,23 @@
     {
      "id": "4f136eeeea72fe65",
      "title": "Archify — 코드베이스·시스템 설명을 검증 가능한 다이어그램으로 바꾸는 에이전트 스킬",
-     "stars": 50700,
+     "stars": 72745,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "tt-a1i"
     },
     {
+     "id": "2085370092f99007",
+     "title": "God's Eye View — 항공기·선박·위성·지진·공개 카메라를 한 3D 지구본에 띄우는 오픈소스 공간정보 관제 참고 도구",
+     "stars": 44034,
+     "maintenance": "활발",
+     "license": "Other",
+     "developer": "bilawalsidhu"
+    },
+    {
      "id": "f108979f0d8b2009",
      "title": "book-to-skill — 기술 서적 PDF를 Claude Code 스킬로 바꾸는 도구",
-     "stars": 28790,
+     "stars": 32717,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "virgiliojr94"
@@ -1750,7 +1801,7 @@
     {
      "id": "b64e832490a6c814",
      "title": "MCP Inspector — MCP 서버를 눈으로 검사하는 공식 테스트 도구",
-     "stars": 10834,
+     "stars": 10965,
      "maintenance": "활발",
      "license": "명시 없음",
      "developer": "modelcontextprotocol"
@@ -1758,7 +1809,7 @@
     {
      "id": "2f4ed1e68a6464c5",
      "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
-     "stars": 7431,
+     "stars": 7699,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "NomaDamas"
@@ -1766,48 +1817,40 @@
     {
      "id": "0292062a6328545a",
      "title": "public-apis-4Kr — 한국 공개 API 300+ 커뮤니티 큐레이션 목록",
-     "stars": 3172,
+     "stars": 3255,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "yoobin_mion"
     },
     {
+     "id": "157289f6e0cd7fd4",
+     "title": "가재코드 치트시트 — 코딩 에이전트 사용법을 한 장으로 정리해 공식 저장소에 반영된 커뮤니티 기여물",
+     "stars": 2872,
+     "maintenance": "활발",
+     "license": "MIT",
+     "developer": "Bellman"
+    },
+    {
      "id": "43dc7f4ab2500260",
      "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
-     "stars": 2558,
+     "stars": 2610,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "류승인"
     },
     {
-     "id": "8ff758ac1d5e40eb",
-     "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
-     "stars": 1795,
-     "maintenance": "활발",
+     "id": "8d5d9da284a4f810",
+     "title": "map3d — 오픈스트리트맵으로 도시를 3D 건물·도로 지도로 만들어 GLB로 내보내는 오픈소스",
+     "stars": 2434,
+     "maintenance": "정체",
      "license": "MIT",
-     "developer": "류승인"
-    },
-    {
-     "id": "847dfef5759dbcac",
-     "title": "HOP is Open HWP — HWP·HWPX를 여는 크로스플랫폼 오픈소스 편집기",
-     "stars": 1789,
-     "maintenance": "활발",
-     "license": "MIT",
-     "developer": "Jin Kim"
-    },
-    {
-     "id": "efe52d0b0f115f47",
-     "title": "Capptivo — 오픈소스 화면 녹화·자동 줌 도구(온디바이스 자막)",
-     "stars": 924,
-     "maintenance": "활발",
-     "license": "MIT",
-     "developer": "SECHAK-AG"
+     "developer": "cartesiancs"
     }
    ]
   }
  },
  "license_distribution": {
-  "명시 없음": 187,
+  "명시 없음": 195,
   "MIT": 121,
   "Apache-2.0": 30,
   "Other": 16,
@@ -1823,7 +1866,7 @@
  "license_matrix": {
   "명시 없음": {
    "github": 52,
-   "gitlab": 135
+   "gitlab": 143
   },
   "MIT": {
    "github": 70,
@@ -1880,7 +1923,7 @@
    "stated": 4
   },
   "gitlab": {
-   "total": 218,
+   "total": 226,
    "stated": 83
   }
  },
@@ -1901,9 +1944,9 @@
    "C1": 12
   },
   "maintenance": {
-   "활발": 42,
-   "정체": 12,
-   "방치": 13
+   "활발": 51,
+   "방치": 13,
+   "정체": 12
   }
  },
  "mirror_pair_cases": [
@@ -2122,6 +2165,12 @@
    "title": "Path Finder — 나이스 학교 목록에서 방문지를 고르고 기간을 정하면 일자별 출장·배달 동선을 짜 주는 웹앱",
    "github": "https://github.com/soonpyopark/Path-Finder",
    "gitlab": "https://gitlab.aigov.go.kr/soonpyo/pathfinder"
+  },
+  {
+   "id": "9f6be40ee87d4b84",
+   "title": "법의 궤도 — 조문 하나에서 뻗어 나가는 법령 인용 관계를 입체 지도로 펼치는 탐색기",
+   "github": "https://github.com/gschamisle/law-orbit",
+   "gitlab": "https://gitlab.aigov.go.kr/gslee0819/law-orbit"
   }
  ]
 }

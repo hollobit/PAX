@@ -29,7 +29,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -65,7 +65,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -101,7 +101,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -137,7 +137,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -173,7 +173,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -209,7 +209,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -228,8 +228,8 @@
      "note": "하드코딩 자격증명 패턴 없음"
     },
     "supply_chain": {
-     "verdict": "주의",
-     "note": "High 이상 CVE 6건"
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
     },
     "hygiene": {
      "verdict": "통과",
@@ -245,7 +245,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -281,7 +281,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -317,7 +317,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -353,7 +353,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -389,7 +389,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -425,7 +425,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -444,8 +444,8 @@
      "note": "하드코딩 자격증명 패턴 없음"
     },
     "supply_chain": {
-     "verdict": "주의",
-     "note": "High 이상 CVE 2건"
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
     },
     "hygiene": {
      "verdict": "통과",
@@ -461,7 +461,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -497,7 +497,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -533,7 +533,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -569,7 +569,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -605,7 +605,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -641,7 +641,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -660,8 +660,8 @@
      "note": "하드코딩 자격증명 패턴 없음"
     },
     "supply_chain": {
-     "verdict": "주의",
-     "note": "High 이상 CVE 2건"
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
     },
     "hygiene": {
      "verdict": "통과",
@@ -677,7 +677,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -713,7 +713,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -749,7 +749,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -785,7 +785,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -805,7 +805,7 @@
     },
     "supply_chain": {
      "verdict": "주의",
-     "note": "High 이상 CVE 13건"
+     "note": "High 이상 CVE 14건"
     },
     "hygiene": {
      "verdict": "주의",
@@ -821,7 +821,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -857,7 +857,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -893,7 +893,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -929,7 +929,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -965,7 +965,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1001,7 +1001,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1037,7 +1037,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1073,7 +1073,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1109,7 +1109,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1128,8 +1128,8 @@
      "note": "하드코딩 자격증명 패턴 없음"
     },
     "supply_chain": {
-     "verdict": "주의",
-     "note": "High 이상 CVE 11건"
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
     },
     "hygiene": {
      "verdict": "통과",
@@ -1145,7 +1145,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1181,7 +1181,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1217,7 +1217,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1253,7 +1253,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1289,7 +1289,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1325,7 +1325,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1361,7 +1361,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1397,7 +1397,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1433,7 +1433,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1469,7 +1469,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1505,7 +1505,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1541,7 +1541,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1577,7 +1577,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1616,7 +1616,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1652,7 +1652,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1688,7 +1688,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1724,7 +1724,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1760,7 +1760,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1796,7 +1796,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1832,7 +1832,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1868,7 +1868,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1904,7 +1904,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1940,7 +1940,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -1976,7 +1976,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2012,7 +2012,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2048,7 +2048,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2084,7 +2084,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2120,7 +2120,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2156,7 +2156,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2192,7 +2192,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2228,7 +2228,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2264,7 +2264,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2300,7 +2300,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2336,7 +2336,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2372,7 +2372,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2408,7 +2408,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2444,7 +2444,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
@@ -2470,8 +2470,8 @@
      "note": "하드코딩 자격증명 패턴 없음"
     },
     "supply_chain": {
-     "verdict": "주의",
-     "note": "High 이상 CVE 7건"
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
     },
     "hygiene": {
      "verdict": "주의",
@@ -2487,7 +2487,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2523,7 +2523,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
@@ -2533,12 +2533,12 @@
    "case_id": "b64e832490a6c814",
    "axes": {
     "supply_chain": {
-     "verdict": "주의",
-     "note": "High 이상 CVE 1건"
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
@@ -2573,7 +2573,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
@@ -2584,16 +2584,16 @@
    "case_id": "e996c18ebe1f7413",
    "axes": {
     "permission_surface": {
-     "verdict": "주의",
-     "note": "셸 실행 패턴 3건 — 도구 목적 대비 필요성 검토 권장"
+     "verdict": "미검증",
+     "note": "미검증(저장소 접근 불가)"
     },
     "secrets": {
-     "verdict": "통과",
-     "note": "하드코딩 자격증명 패턴 없음"
+     "verdict": "미검증",
+     "note": "미검증(저장소 접근 불가)"
     },
     "supply_chain": {
-     "verdict": "주의",
-     "note": "High 이상 CVE 2건"
+     "verdict": "미검증",
+     "note": "미검증(저장소 접근 불가)"
     },
     "hygiene": {
      "verdict": "통과",
@@ -2609,7 +2609,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
@@ -2620,16 +2620,16 @@
    "case_id": "e627c2ca4ea8e5a1",
    "axes": {
     "permission_surface": {
-     "verdict": "주의",
-     "note": "파일 쓰기 패턴 5건 — 쓰기 범위 확인 권장"
+     "verdict": "미검증",
+     "note": "미검증(저장소 접근 불가)"
     },
     "secrets": {
-     "verdict": "통과",
-     "note": "하드코딩 자격증명 패턴 없음"
+     "verdict": "미검증",
+     "note": "미검증(저장소 접근 불가)"
     },
     "supply_chain": {
-     "verdict": "주의",
-     "note": "High 이상 CVE 4건"
+     "verdict": "미검증",
+     "note": "미검증(저장소 접근 불가)"
     },
     "hygiene": {
      "verdict": "통과",
@@ -2645,7 +2645,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
@@ -2681,7 +2681,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
@@ -2717,7 +2717,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
@@ -2733,7 +2733,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-07",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
@@ -2760,7 +2760,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-09",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
@@ -2787,7 +2787,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-09",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
@@ -2822,10 +2822,10 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-16",
+   "checked_at": "2026-09-28",
    "tools": {
-    "npm": "11.11.0",
-    "pip_audit": "없음"
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
    }
   },
   {
@@ -2840,8 +2840,8 @@
      "note": "하드코딩 자격증명 패턴 없음 (근거: 소스 전수 스캔, 단일 파일 695행)"
     },
     "supply_chain": {
-     "verdict": "미검증",
-     "note": "pip-audit 미실행 — 의존성 mcp·requests·beautifulsoup4·python-dateutil (근거: pyproject.toml)"
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
     },
     "hygiene": {
      "verdict": "통과",
@@ -2857,7 +2857,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-18",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2876,8 +2876,8 @@
      "note": "미검증(저장소 접근 불가)"
     },
     "supply_chain": {
-     "verdict": "미검증",
-     "note": "미검증(저장소 접근 불가)"
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
     },
     "hygiene": {
      "verdict": "주의",
@@ -2893,7 +2893,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-18",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
@@ -2911,8 +2911,8 @@
      "note": "하드코딩 자격증명 패턴 없음"
     },
     "supply_chain": {
-     "verdict": "통과",
-     "note": "pnpm-lock.yaml로 버전 고정(검사기는 package-lock.json만 봄). 런타임 의존성은 @modelcontextprotocol/sdk·zod 둘뿐 (근거: package.json)"
+     "verdict": "주의",
+     "note": "락파일 없음(버전 미고정)"
     },
     "hygiene": {
      "verdict": "통과",
@@ -2928,7 +2928,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-20",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2947,8 +2947,8 @@
      "note": "하드코딩 자격증명 없음 — 환경변수만 사용(lib/supabase.ts:23-27)"
     },
     "supply_chain": {
-     "verdict": "통과",
-     "note": "package-lock.json으로 버전 고정. 런타임 의존성은 mcp-handler·supabase-js·next·react·zod (근거: package.json)"
+     "verdict": "주의",
+     "note": "High 이상 CVE 5건"
     },
     "hygiene": {
      "verdict": "주의",
@@ -2964,7 +2964,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-21",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -2983,8 +2983,8 @@
      "note": "법제처 키는 LAW_OC 환경변수로만 받고 하드코딩 없음 (근거: src/index.ts:16-17 · src/cli.ts:346)"
     },
     "supply_chain": {
-     "verdict": "통과",
-     "note": "package-lock.json으로 버전 고정. NOTICE에 외부 라이브러리·데이터 출처와 라이선스를 따로 표기"
+     "verdict": "주의",
+     "note": "High 이상 CVE 8건"
     },
     "hygiene": {
      "verdict": "통과",
@@ -3000,7 +3000,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-23",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
@@ -3020,7 +3020,7 @@
     },
     "supply_chain": {
      "verdict": "통과",
-     "note": "requirements.txt가 버전을 고정(rhino3dm 8.35.0 · mcp 1.30.0 · Pillow 11.3.0 · numpy 2.3.3)"
+     "note": "알려진 High 이상 CVE 없음"
     },
     "hygiene": {
      "verdict": "통과",
@@ -3036,11 +3036,26 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-09-25",
+   "checked_at": "2026-09-28",
    "tools": {
     "npm": "11.14.1",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-09-25"
+   }
+  },
+  {
+   "case_id": "8ff758ac1d5e40eb",
+   "axes": {
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-09-28",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
    }
   }
  ]

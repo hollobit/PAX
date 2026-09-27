@@ -1,5 +1,5 @@
 {
- "total": 212,
+ "total": 215,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -1717,6 +1717,26 @@
    }
   },
   {
+   "id": "gitlab:skynet_b",
+   "name": "skynet_b",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "skynet_b",
+     "url": "https://gitlab.aigov.go.kr/skynet_b"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "42267bcd8527ba4a"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
+    "stars": 0
+   }
+  },
+  {
    "id": "github:slicequeue",
    "name": "slicequeue",
    "accounts": [
@@ -1926,7 +1946,7 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
-    "stars": 0
+    "stars": 3255
    }
   },
   {
@@ -2699,10 +2719,11 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "fbdee1f08c2ca185",
     "000bb96831380931"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 2,
     "stars": 0
    }
@@ -2867,6 +2888,30 @@
    }
   },
   {
+   "id": "gitlab:jh.noh",
+   "name": "노준현",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "jh.noh",
+     "url": "https://gitlab.aigov.go.kr/jh.noh"
+    }
+   ],
+   "affiliation": {
+    "value": "한국인터넷진흥원",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "f2e5fa95789e73fb"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
+    "stars": 0
+   }
+  },
+  {
    "id": "github:dochungpikachu",
    "name": "도청피카츄",
    "accounts": [
@@ -2957,7 +3002,7 @@
    "stats": {
     "case_count": 16,
     "top_ax": 3,
-    "stars": 6671
+    "stars": 6800
    },
    "certification": {
     "tier": "BLUE",
@@ -3191,10 +3236,11 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "1db4a17fca5b103c",
     "bebee8e2201944f0"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 2,
     "stars": 0
    }
@@ -3925,12 +3971,13 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "ef389de4efadc258",
     "798f4e6bef72fc13",
     "e160d086c0ce2b1b",
     "d08bc7e9a69190af"
    ],
    "stats": {
-    "case_count": 3,
+    "case_count": 4,
     "top_ax": 1,
     "stars": 0
    }
@@ -4229,6 +4276,30 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:j30231",
+   "name": "이재식",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "j30231",
+     "url": "https://gitlab.aigov.go.kr/j30231"
+    }
+   ],
+   "affiliation": {
+    "value": "한국인터넷진흥원",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "e72eed20d3744266"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },
@@ -4844,6 +4915,7 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "09f8bff3e9cc3b02",
     "2633ef9fbb2eeb96",
     "0dd22d6d0375bc39",
     "b0808306ddb06317",
@@ -4852,7 +4924,7 @@
     "85e155bd270cafc9"
    ],
    "stats": {
-    "case_count": 6,
+    "case_count": 7,
     "top_ax": 2,
     "stars": 0
    }
@@ -5447,12 +5519,6 @@
    "title": "AX 조직관리 레이더 — 공공·민간 조직관리와 혁신행동을 데이터로 비교",
    "org": "공직 현장(개인 개발)",
    "url": "https://public-private-innovation-dashboard.vercel.app/"
-  },
-  {
-   "id": "ef389de4efadc258",
-   "title": "조달법령 관리시스템 — 매일 최신성을 검증하는 조달 법령·행정규칙 통합 검색",
-   "org": "공직 현장(개인 개발)",
-   "url": "https://procurement-law-system.milkbuttercheese.chatgpt.site/"
   },
   {
    "id": "8c461c4901e30775",

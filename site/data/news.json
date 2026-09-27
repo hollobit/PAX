@@ -1,7 +1,98 @@
 {
- "updated_at": "2026-09-27T14:38:10Z",
- "count": 577,
+ "updated_at": "2026-09-27T22:49:02Z",
+ "count": 588,
  "articles": [
+  {
+   "url": "https://www.yna.co.kr/view/AKR20260926014200009",
+   "title": "오픈AI 에이전트, 챗GPT 이용자 이미지 53장 무단 유출",
+   "outlet": "연합뉴스",
+   "published": "2026-09-26",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-26",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/MYH20260928002700038",
+   "title": "[AI&] \"유쾌한 홍보부터 재난 대응까지\"…지자체 'AI 행정' 성과 外",
+   "outlet": "연합뉴스",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20260923178900530",
+   "title": "'AI로 재난안전 업무 개선'…행안부, 우수사례 경진대회 개최",
+   "outlet": "연합뉴스",
+   "published": "2026-09-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.sijung.co.kr/news/articleView.html?idxno=437834",
+   "title": "관악구, 직원이 직접 만든 AI로 행정업무 자동화",
+   "outlet": "시정일보",
+   "published": "2026-09-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.outsourcing.co.kr/news/articleView.html?idxno=203912",
+   "title": "[AI 뉴스] 구글 ‘제미나이 3.8 TTS’ 출시…어디서 어떻게 사용하나",
+   "outlet": "아웃소싱타임스",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mt.co.kr/industry/2026/09/28/2026092719251976645",
+   "title": "원료도 소재도… 반도체 공급망 가격 들썩",
+   "outlet": "머니투데이",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mediafine.co.kr/news/articleView.html?idxno=90984",
+   "title": "LG전자, 엔비디아 AI 데이터센터 냉각 파트너 선정-글로벌 시장 공략 확대",
+   "outlet": "미디어파인",
+   "published": "2026-09-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.joongang.co.kr/article/25465015",
    "title": "서울대·고대·성대 B 이상 100% 육박…챗GPT 출시 이후 눈에 띄는 학점 인플레",
@@ -29,6 +120,19 @@
    ]
   },
   {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42070",
+   "title": "‘제미나이 3.8 라이브’ 라이브 아바타 탑재…실시간 대화형 영상 AI 에이전트 시대 연다",
+   "outlet": "인공지능신문",
+   "published": "2026-09-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://v.daum.net/v/20260927073537492",
    "title": "AI 석·박사 인력 양성 1천명 넘어…취업 연계는 과제",
    "outlet": "Daum | 이데일리",
@@ -46,6 +150,58 @@
    "title": "Git, 이것만 알면 협업한다 7편 — Claude Code 시대의 git: 에이전트에게 맡기고, 사람이 감독하는 법",
    "outlet": "core.today",
    "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-28-px-최저가-입찰-조달가",
+   "title": "[공공AX 네트워크] 조달 PC는 조립 80·브랜드 150·조달 250이라는 체감 — 공공AX 방이 짚은 최저가 입찰과 조달 가격의 구조",
+   "outlet": "akwiki.org",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-28-px-망분리-ax-부서-인재",
+   "title": "[공공AX 네트워크] 망분리에 막힌 AX 부서, 과제 대신 IPO — 공공AX 방이 AI 인력의 진로를 다시 짚었다",
+   "outlet": "akwiki.org",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-28-px-드론-해킹-시연-ai-모의해킹",
+   "title": "[공공AX 네트워크] AI가 공격자 맡는 모의해킹은 이미 실습 중, 드론 해킹 시연은 기획 단계 — 교육·대회로 넓힐 길도 물었다",
+   "outlet": "akwiki.org",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-28-px-공공ai-성과-홍보-실체",
+   "title": "[공공AX 네트워크] 공공 AI 챗봇이 도는 길은 기관마다 달랐다 — 래핑 서비스·로컬 모델 경로와 범정부AI공통기반·온AI·AI정부실험실 구분이 정리됐다",
+   "outlet": "akwiki.org",
+   "published": "2026-09-28",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-27",
@@ -114,19 +270,6 @@
    "kind": "기사",
    "shares": 2,
    "first_shared": "2026-09-25",
-   "last_shared": "2026-09-26",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.yna.co.kr/view/AKR20260926014200009",
-   "title": "오픈AI 에이전트, 챗GPT 이용자 이미지 53장 무단 유출",
-   "outlet": "연합뉴스",
-   "published": "2026-09-26",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-26",
    "last_shared": "2026-09-26",
    "sources": [
     "kakao"
