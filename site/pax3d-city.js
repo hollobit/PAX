@@ -9,8 +9,10 @@ import * as THREE from 'three';
 import { loadCity } from './city3d/js/load.js';
 import {
   makeFrame, buildTerrain, buildWater, buildGreen, buildRibbons, roadStyle, waterwayStyle, buildOutline,
-  buildDistrictLines, createBuildingMesh,
+  buildDistrictLines, createBuildingMesh, carveWater,
 } from './city3d/js/layers.js';
+import { MODES, styleCityMaterials } from './city3d/js/modes.js';
+import { flightStops } from './city3d/js/flight.js';
 import { selectBuildings, writeBuildingInstances } from './city3d/js/buildings.js';
 import { createLabelLayer } from './city3d/js/maplabels.js';
 import { createLocator, seatOf } from './city3d/js/geo.js';
@@ -31,6 +33,7 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
   const loading = new Map();  // key → Promise
   let active = null;
   let lastSel = null;
+  let look = MODES.day; // 시간대 — 도시 재질(물·도로·야간 창문)
   const uniforms = { uNight: { value: 0 } };
   fetch(`${BASE}/cities.json`, { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : null)).then((j) => { index = j; }).catch(() => { index = null; });
 
@@ -69,7 +72,9 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
     const group = new THREE.Group();
     group.position.set(xf.x0 + (frame.W / 2) * xf.sx, xf.y0, xf.z0 - (frame.H / 2) * xf.sz);
     group.scale.set(xf.sx, xf.sy, xf.sz);
-    const terrain = buildTerrain(frame, data.dem, 1, CITY_BUDGET.terrainStep);
+    // 물 밑 지형을 수면 아래로 깎는다 — 30m 표고가 강 가운데서 수면보다 높아 강이 땅에 덮이지 않게
+    const carved = carveWater(frame, data.dem, data.water);
+    const terrain = buildTerrain(frame, data.dem, 1, CITY_BUDGET.terrainStep, carved);
     group.add(terrain);
     group.add(buildOutline(frame, data.meta.outline, 1));
     group.add(buildDistrictLines(frame, data.mapinfo.districts, 1));
@@ -80,13 +85,16 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
     const rd = new THREE.Mesh(buildRibbons(frame, data.roads, 1, roadStyle), new THREE.MeshLambertMaterial({ vertexColors: true, side: THREE.DoubleSide }));
     ww.receiveShadow = true;
     rd.receiveShadow = true;
+    ww.name = 'waterways';
+    rd.name = 'roads';
     group.add(ww, rd);
     const bmesh = createBuildingMesh(Math.min(data.b.n, CITY_BUDGET.buildings), uniforms);
     bmesh.castShadow = true;
     group.add(bmesh);
     group.visible = false;
+    styleCityMaterials(group, look);
     scene.add(group);
-    return { group, bmesh };
+    return { group, bmesh, carvedCells: carved.cells };
   }
 
   function ensureLoaded(key) {
@@ -99,8 +107,8 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
       .then((data) => {
         const frame = makeFrame(data.meta, data.dem);
         const xf = makeTransform(data.meta, frame);
-        const { group, bmesh } = buildGroup(data, frame, xf);
-        const c = { key, name: info.name, data, frame, ...xf, group, bmesh, visible: new Uint32Array(0),
+        const { group, bmesh, carvedCells } = buildGroup(data, frame, xf);
+        const c = { key, name: info.name, data, frame, ...xf, group, bmesh, carvedCells, visible: new Uint32Array(0),
           locator: createLocator(data.mapinfo), ms: performance.now() - t0 };
         loaded.set(key, c);
         loading.delete(key);
@@ -159,6 +167,14 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
       labels.update(camera, 1, width, height);
     },
     setLabelGroup(g, on) { labels.setGroup(g, on); },
+    /** 시간대 — 이미 받은 모든 도시 재질과 야간 창문 */
+    setMode(M) {
+      look = M;
+      uniforms.uNight.value = M.night;
+      for (const c of loaded.values()) styleCityMaterials(c.group, M);
+    },
+    /** 랜드마크 비행 순서(OSM에서 확인된 지점만) */
+    flightStops(c) { return flightStops(c.data.meta.landmarks); },
     /** 사례가 설 자리: 기관 소재지 → 시군구 청사(없으면 구 이름표 자리) → 시청 — 도시 로컬 [x, n, 이름] */
     anchorOf(c, loc) {
       if (loc.inst) {

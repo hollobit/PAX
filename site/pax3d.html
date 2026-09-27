@@ -10,7 +10,7 @@
   <meta property="og:title" content="3D PAX — 미니어처 대한민국에서 공공AX 사례 탐험">
   <meta property="og:description" content="사례 한 건이 건물 한 채 — 색은 업무 유형, 모양은 누가 만들었는지. 시도를 누르면 그 지역 사례로 날아갑니다.">
   <meta property="og:url" content="https://hollobit.github.io/PAX/pax3d.html">
-  <link rel="stylesheet" href="style.css?v=d0e7a9a0">
+  <link rel="stylesheet" href="style.css?v=9afa1048">
   <script type="importmap">
     { "imports": {
         "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
@@ -51,6 +51,15 @@
         <p class="pax3d-hud__summary" id="pax3d-summary"></p>
         <p class="pax3d-hud__hint">끌어서 돌리기 · 휠로 확대하면 시군구와 실제 지도가 나타나고, 서울·부산·대구·대전·세종·광양은 더 확대하면 실제 건물의 3D 입체지도 위에 사례가 실제 자리에 섭니다 · 오른쪽 끌기로 이동 · 땅과 건물을 눌러 보세요</p>
         <p class="pax3d-hud__city" id="pax3d-city" role="status" hidden></p>
+        <div class="pax3d-citybar" id="pax3d-citybar" hidden>
+          <div class="pax3d-citybar__looks" role="group" aria-label="시간대">
+            <button type="button" data-look="day" aria-pressed="true">주간</button>
+            <button type="button" data-look="sunset" aria-pressed="false">일몰</button>
+            <button type="button" data-look="night" aria-pressed="false">야간</button>
+          </div>
+          <button type="button" class="pax3d-citybar__fly" id="pax3d-flight" aria-pressed="false" title="이 도시의 주요 랜드마크(OSM에서 확인된 지점)를 차례로 날아가며 보여 줍니다 — 지도를 만지면 멈춥니다">✈ 랜드마크 비행</button>
+          <span class="pax3d-citybar__cap" id="pax3d-flight-cap" role="status"></span>
+        </div>
       </div>
       <div class="pax3d-tools">
         <button type="button" class="pax3d-tool pax3d-tool--tour" id="pax3d-tour" aria-pressed="false" title="지금 목록의 사례를 차례로 둘러봅니다 — 지도를 만지면 멈춥니다">▶ 자동 투어</button>
@@ -92,6 +101,6 @@
   </footer>
   <script src="case-domains.js?v=202b47c3"></script>
   <script src="ministries.js?v=d0e486dc"></script>
-  <script type="module" src="pax3d.js?v=d601871b"></script>
+  <script type="module" src="pax3d.js?v=cb47d59e"></script>
 </body>
 </html>

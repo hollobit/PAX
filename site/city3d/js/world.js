@@ -3,9 +3,11 @@ import * as THREE from 'three';
 import { MapControls } from 'three/addons/controls/MapControls.js';
 import {
   makeFrame, buildTerrain, buildWater, buildGreen, buildRibbons, roadStyle, waterwayStyle, buildOutline,
-  createBuildingMesh, WATER_COLOR, buildDistrictLines,
+  createBuildingMesh, buildDistrictLines, carveWater,
 } from './layers.js';
 import { selectBuildings, writeBuildingInstances } from './buildings.js';
+import { MODES, skyTexture, sunDirection, styleCityMaterials } from './modes.js';
+import { createLandmarkFlight, flightStops } from './flight.js';
 
 const MOBILE = matchMedia('(pointer: coarse)').matches || Math.min(innerWidth, innerHeight) < 700;
 
@@ -14,28 +16,9 @@ export const BUDGET = MOBILE
   ? { label: '모바일', dpr: 1, shadow: 1024, buildings: 40000, terrainStep: 4, antialias: false }
   : { label: '데스크톱', dpr: Math.min(devicePixelRatio || 1, 2), shadow: 4096, buildings: 220000, terrainStep: 2, antialias: true };
 
-export const MODES = {
-  day: { label: '주간', sky: ['#6fa6e0', '#d9e9f6'], fog: '#cfe0ec', sunEl: 55, sunAz: 135, sun: '#fff3dd', sunI: 2.4, hemi: ['#dcebfb', '#8c917c', 1.0], night: 0 },
-  sunset: { label: '일몰', sky: ['#33406e', '#f39064'], fog: '#e3a07d', sunEl: 7, sunAz: 255, sun: '#ffab6b', sunI: 2.1, hemi: ['#f3b48c', '#4d3b4e', 0.7], night: 0.12 },
-  night: { label: '야간', sky: ['#04070f', '#16213a'], fog: '#0c1424', sunEl: 38, sunAz: 200, sun: '#9eb4ff', sunI: 0.35, hemi: ['#2a3a58', '#0b0f18', 0.4], night: 1 },
-};
+export { MODES };
 
-function skyTexture([top, bottom]) {
-  const c = document.createElement('canvas');
-  c.width = 2;
-  c.height = 256;
-  const g = c.getContext('2d');
-  const grad = g.createLinearGradient(0, 0, 0, 256);
-  grad.addColorStop(0, top);
-  grad.addColorStop(1, bottom);
-  g.fillStyle = grad;
-  g.fillRect(0, 0, 2, 256);
-  const t = new THREE.CanvasTexture(c);
-  t.colorSpace = THREE.SRGBColorSpace;
-  return t;
-}
-
-export function createWorld(canvas, { onPick, onStats, onFrame }) {
+export function createWorld(canvas, { onPick, onStats, onFrame, onTour = () => {} }) {
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: BUDGET.antialias, logarithmicDepthBuffer: true, powerPreference: 'high-performance' });
   renderer.setPixelRatio(BUDGET.dpr);
   renderer.shadowMap.enabled = true;
@@ -100,7 +83,7 @@ export function createWorld(canvas, { onPick, onStats, onFrame }) {
   function buildScene() {
     clearGroup();
     const { frame, dem, water, green, roads, waterways } = city;
-    group.add(buildTerrain(frame, dem, vscale, BUDGET.terrainStep));
+    group.add(buildTerrain(frame, dem, vscale, BUDGET.terrainStep, city.carved));
     group.add(buildOutline(frame, city.meta.outline, vscale));
     if (city.mapinfo) group.add(buildDistrictLines(frame, city.mapinfo.districts, vscale));
     group.add(buildGreen(frame, green, vscale));
@@ -136,7 +119,7 @@ export function createWorld(canvas, { onPick, onStats, onFrame }) {
 
   function applyMode() {
     const M = MODES[mode];
-    scene.background = skyTexture(M.sky);
+    scene.background = skyTexture(M);
     scene.fog = new THREE.Fog(M.fog, 6000, 70000);
     hemi.color.set(M.hemi[0]);
     hemi.groundColor.set(M.hemi[1]);
@@ -144,26 +127,14 @@ export function createWorld(canvas, { onPick, onStats, onFrame }) {
     sun.color.set(M.sun);
     sun.intensity = M.sunI;
     uniforms.uNight.value = M.night;
-    const rd = group.getObjectByName('roads');
-    if (rd) {
-      rd.material.emissive.set(M.night > 0.5 ? '#6b4a1c' : M.night > 0 ? '#2a1c0c' : '#000000');
-    }
-    const w = group.getObjectByName('water');
-    if (w) {
-      w.material.color.set(M.night > 0.5 ? '#14263d' : WATER_COLOR);
-      w.material.specular.set(M.night > 0.5 ? '#1c2a3d' : M.night > 0 ? '#ffc9a0' : '#cfe6ff');
-    }
-    const ww = group.getObjectByName('waterways');
-    if (ww) ww.material.color.set(M.night > 0.5 ? '#6f8198' : '#ffffff');
+    styleCityMaterials(group, M);
   }
 
   function placeSun() {
     const M = MODES[mode];
     const d = camera.position.distanceTo(controls.target);
     const span = THREE.MathUtils.clamp(d * 1.1, 600, 16000);
-    const el = THREE.MathUtils.degToRad(M.sunEl);
-    const az = THREE.MathUtils.degToRad(M.sunAz);
-    const dir = new THREE.Vector3(Math.sin(az) * Math.cos(el), Math.sin(el), Math.cos(az) * Math.cos(el));
+    const dir = sunDirection(M);
     sun.position.copy(controls.target).addScaledVector(dir, span * 2);
     sun.target.position.copy(controls.target);
     const cam = sun.shadow.camera;
@@ -179,7 +150,8 @@ export function createWorld(canvas, { onPick, onStats, onFrame }) {
   // ---- 고르기 ------------------------------------------------------------------------
   const ray = new THREE.Raycaster();
   let down = null;
-  canvas.addEventListener('pointerdown', (e) => { down = [e.clientX, e.clientY]; });
+  canvas.addEventListener('pointerdown', (e) => { down = [e.clientX, e.clientY]; tour.stop(); });
+  canvas.addEventListener('wheel', () => tour.stop(), { passive: true });
   canvas.addEventListener('pointerup', (e) => {
     if (!down || Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 5 || !bmesh) return;
     const r = canvas.getBoundingClientRect();
@@ -202,8 +174,16 @@ export function createWorld(canvas, { onPick, onStats, onFrame }) {
   let frames = 0;
   let t0 = performance.now();
   let flight = null;
+  // 랜드마크 비행 — 지도를 만지면 멈춘다
+  const tour = createLandmarkFlight({
+    camera, controls, unit: 1,
+    toWorld: (x, n, lift) => new THREE.Vector3(city.frame.X(x), Math.max(city.frame.elev(x, n), 0) * vscale + lift, city.frame.Z(n)),
+    onStop: (i, stop, total) => onTour({ phase: 'stop', i, name: stop.name, total }),
+    onEnd: (finished) => onTour({ phase: 'end', finished }),
+  });
   renderer.setAnimationLoop(() => {
-    if (flight) {
+    if (tour.update()) flight = null;
+    else if (flight) {
       const k = Math.min(1, (performance.now() - flight.t0) / 1400);
       const e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
       controls.target.lerpVectors(flight.fromT, flight.toT, e);
@@ -303,7 +283,9 @@ export function createWorld(canvas, { onPick, onStats, onFrame }) {
     },
     budget: BUDGET,
     setCity(c) {
+      tour.stop();
       city = { ...c, frame: makeFrame(c.meta, c.dem) };
+      city.carved = carveWater(city.frame, c.dem, c.water); // 물 밑 지형을 수면 아래로(강이 땅에 덮이지 않게)
       lastSel = null;
       visible = new Uint32Array(0);
       buildScene();
@@ -313,6 +295,11 @@ export function createWorld(canvas, { onPick, onStats, onFrame }) {
       controls.update();
     },
     setMode(m) { mode = m; applyMode(); },
+    /** 랜드마크 비행 시작 — OSM에서 확인된 바로 가기 지점을 가까운 순으로 */
+    startTour() { return city ? tour.start(flightStops(city.meta.landmarks)) : false; },
+    stopTour() { tour.stop(); },
+    get touring() { return tour.active; },
+    get carvedCells() { return city ? city.carved.cells : 0; },
     setFocus(f) { focus = f; addFocusBeam(); },
     setVScale(v) { vscale = v; buildScene(); },
     setMarkEstimated(on) { markEstimated = on; if (city) writeInstances(); },

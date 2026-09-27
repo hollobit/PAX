@@ -60,6 +60,7 @@ async function main() {
   const world = createWorld($('#map'), {
     onPick: (i, e) => (i == null ? showPoint(world.pickGround(e.clientX, e.clientY)) : showBuilding(i)),
     onStats: (s) => { Object.assign(stats, s); renderStats(); },
+    onTour: (t) => renderTour(t),
     // 매 프레임: 이름표 재투영(카메라가 움직였을 때만) + 2D 지도 시야 사각형
     onFrame: (w) => {
       const [width, height] = w.size;
@@ -106,6 +107,10 @@ async function main() {
       if (state.city) setBusy('지형 배율을 바꾸는 중…', () => world.setVScale(state.vscale));
     });
   }
+  $('#tour-btn').addEventListener('click', () => {
+    if (world.touring) world.stopTour();
+    else if (!world.startTour()) renderTour({ phase: 'empty' });
+  });
   $('#mark').addEventListener('change', (e) => { state.mark = e.target.checked; world.setMarkEstimated(state.mark); });
   $('#panel-toggle').addEventListener('click', () => {
     const open = $('#panel').classList.toggle('panel--open');
@@ -309,6 +314,18 @@ async function main() {
       if (g) byGroup[g] = (byGroup[g] || 0) + n;
     }
     for (const s of document.querySelectorAll('#label-groups [data-group]')) s.textContent = fmt.format(byGroup[s.dataset.group] || 0);
+  }
+
+  /** 비행 상태 — 지금 날아가는 랜드마크 이름과 순번 */
+  function renderTour(t) {
+    const cap = $('#tour-caption');
+    const on = t.phase === 'stop';
+    $('#tour-btn').setAttribute('aria-pressed', String(on));
+    $('#tour-btn').textContent = on ? '■ 비행 멈추기' : '✈ 랜드마크 비행';
+    cap.hidden = t.phase === 'end' && !t.finished;
+    cap.textContent = on ? `✈ ${t.i + 1}/${t.total} · ${t.name}`
+      : t.phase === 'empty' ? 'OSM에서 확인된 랜드마크가 없어 비행할 수 없습니다.'
+        : '비행을 마쳤습니다.';
   }
 
   function renderLegend() {

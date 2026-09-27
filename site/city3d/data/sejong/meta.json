@@ -79,35 +79,72 @@
    "x": 13097.5,
    "n": 11821.0,
    "source": "OSM POI",
-   "osm_name": "정부세종청사"
+   "osm_name": "정부세종청사",
+   "osm_class": "office"
   },
   {
    "name": "세종호수공원",
    "x": 14147.8,
    "n": 11621.2,
    "source": "OSM POI",
-   "osm_name": "세종호수공원"
+   "osm_name": "세종호수공원",
+   "osm_class": "park"
   },
   {
-   "name": "조치원역",
-   "x": 16017.3,
-   "n": 22556.9,
+   "name": "국립세종도서관",
+   "x": 13368.0,
+   "n": 11413.3,
    "source": "OSM POI",
-   "osm_name": "조치원역"
+   "osm_name": "국립세종도서관",
+   "osm_class": "bus"
   },
   {
-   "name": "금강보행교",
-   "x": 14751.6,
-   "n": 8735.3,
-   "source": "대략 좌표(추정)",
-   "osm_name": null
+   "name": "대통령기록관",
+   "x": 13875.4,
+   "n": 11564.0,
+   "source": "OSM POI",
+   "osm_name": "대통령기록관",
+   "osm_class": "museum"
+  },
+  {
+   "name": "세종시청",
+   "x": 15276.3,
+   "n": 9183.0,
+   "source": "OSM POI",
+   "osm_name": "세종특별자치시청",
+   "osm_class": "office"
   },
   {
    "name": "원수산",
    "x": 14263.9,
    "n": 13252.2,
    "source": "OSM POI",
-   "osm_name": "원수산"
+   "osm_name": "원수산",
+   "osm_class": "peak"
+  },
+  {
+   "name": "전월산",
+   "x": 16079.2,
+   "n": 12420.8,
+   "source": "OSM POI",
+   "osm_name": "전월산",
+   "osm_class": "peak"
+  },
+  {
+   "name": "금강보행교",
+   "x": 14751.6,
+   "n": 8735.3,
+   "source": "대략 좌표(추정)",
+   "osm_name": null,
+   "osm_class": null
+  },
+  {
+   "name": "조치원역",
+   "x": 16017.3,
+   "n": 22556.9,
+   "source": "OSM POI",
+   "osm_name": "조치원역",
+   "osm_class": "bus"
   }
  ],
  "outline": [

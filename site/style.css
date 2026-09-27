@@ -3311,3 +3311,33 @@ a.dash-tile:hover, a.dash-tile:focus-visible {
 .pax3d-attrib__city { display: none; }
 .pax3d-attrib[data-mode="city"] .pax3d-attrib__city { display: inline; }
 .pax3d-attrib[data-mode="city"] .pax3d-attrib__tiles { display: none; }
+.pax3d-citybar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 0.1rem;
+  padding: 0.3rem 0.45rem;
+  border: 1.5px solid #221d16;
+  border-radius: 6px;
+  background: rgb(251 246 234 / 0.94);
+  pointer-events: auto;
+}
+.pax3d-citybar[hidden] { display: none; }
+.pax3d-citybar__looks { display: flex; gap: 0.2rem; }
+.pax3d-citybar button {
+  font: inherit;
+  font-size: 0.78rem;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid #221d16;
+  border-radius: 999px;
+  background: transparent;
+  color: #221d16;
+  cursor: pointer;
+}
+.pax3d-citybar button[aria-pressed="true"] { background: #234a72; border-color: #234a72; color: #fbf6ea; font-weight: 700; }
+.pax3d-citybar button:focus-visible { outline: 2px solid #234a72; outline-offset: 2px; }
+.pax3d-citybar__cap { font-size: 0.78rem; font-weight: 700; color: #234a72; }
+.pax3d-citybar__cap:empty { display: none; }

@@ -58,8 +58,74 @@ function rampColor(m, out) {
   return out.copy(RAMP[RAMP.length - 1][1]);
 }
 
-export function buildTerrain(frame, dem, vscale, step) {
-  const { cols, rows, cell, h } = dem;
+/**
+ * 물 밑 지형 깎기 — 수면 삼각형은 강둑 꼭짓점 높이만 가져 강 가운데의 30m 표고가 수면보다 높으면 땅이 물을 덮는다.
+ * 수면 삼각형을 표고 격자에 래스터화해 그 칸의 땅을 수면보다 WATER_DEPTH 아래로 내린다(원본 표고는 건드리지 않고 사본).
+ * @returns {{h: Float32Array, mask: Uint8Array, cells: number}} 깎은 표고 사본, 수면 밑 칸 표시, 깎인 칸 수
+ */
+export const WATER_DEPTH = 2.5;
+export function carveWater(frame, dem, water) {
+  const { cols, rows, cell } = dem;
+  const h = Float32Array.from(dem.h);
+  const mask = new Uint8Array(h.length); // 물 밑으로 깎인 칸
+  const { xy, idx } = water;
+  const level = new Float32Array(water.nv); // buildArea(flatWater)와 같은 규칙의 수면 높이(띄우기 전)
+  for (let i = 0; i < water.nv; i++) {
+    const e = frame.elev(xy[i * 2], xy[i * 2 + 1]);
+    level[i] = e < 5 ? 0 : Math.max(e, 0);
+  }
+  let cells = 0;
+  for (let t = 0; t < idx.length; t += 3) {
+    const a = idx[t]; const b = idx[t + 1]; const c = idx[t + 2];
+    const ax = xy[a * 2]; const an = xy[a * 2 + 1];
+    const bx = xy[b * 2]; const bn = xy[b * 2 + 1];
+    const cx = xy[c * 2]; const cn = xy[c * 2 + 1];
+    const den = (bn - cn) * (ax - cx) + (cx - bx) * (an - cn);
+    if (Math.abs(den) < 1e-6) continue;
+    // 격자 칸(열 c = x/cell, 행 r = rows−1−n/cell) 범위
+    const c0 = Math.max(0, Math.floor(Math.min(ax, bx, cx) / cell));
+    const c1 = Math.min(cols - 1, Math.ceil(Math.max(ax, bx, cx) / cell));
+    const r0 = Math.max(0, Math.floor(rows - 1 - Math.max(an, bn, cn) / cell));
+    const r1 = Math.min(rows - 1, Math.ceil(rows - 1 - Math.min(an, bn, cn) / cell));
+    for (let r = r0; r <= r1; r++) {
+      const n = (rows - 1 - r) * cell;
+      for (let k = c0; k <= c1; k++) {
+        const x = k * cell;
+        const w1 = ((bn - cn) * (x - cx) + (cx - bx) * (n - cn)) / den;
+        const w2 = ((cn - an) * (x - cx) + (ax - cx) * (n - cn)) / den;
+        const w3 = 1 - w1 - w2;
+        if (w1 < -1e-4 || w2 < -1e-4 || w3 < -1e-4) continue;
+        const i = r * cols + k;
+        if (dem.void[i]) continue;
+        const wl = w1 * level[a] + w2 * level[b] + w3 * level[c];
+        if (h[i] > wl - WATER_DEPTH) { h[i] = wl - WATER_DEPTH; cells++; }
+        mask[i] = 1;
+      }
+    }
+  }
+  return { h, mask, cells };
+}
+
+/**
+ * @param carved carveWater 결과(없으면 원본 표고). 지형을 step칸마다 성기게 뽑을 때 좁은 물길이 꼭짓점 사이로 빠져
+ *        다시 땅에 덮이지 않도록, 꼭짓점 둘레(step칸)에 물 칸이 있으면 그 물 칸의 가장 낮은 높이를 쓴다.
+ */
+export function buildTerrain(frame, dem, vscale, step, carved = null) {
+  const { cols, rows, cell } = dem;
+  const h = carved ? carved.h : dem.h;
+  const half = Math.floor(step / 2);
+  const sample = (r0, k0) => {
+    const i = r0 * cols + k0;
+    if (!carved || step < 2) return h[i];
+    let low = Infinity;
+    for (let r = Math.max(0, r0 - half); r <= Math.min(rows - 1, r0 + half); r++) {
+      for (let k = Math.max(0, k0 - half); k <= Math.min(cols - 1, k0 + half); k++) {
+        const j = r * cols + k;
+        if (carved.mask[j] && h[j] < low) low = h[j];
+      }
+    }
+    return low < Infinity ? Math.min(low, h[i]) : h[i];
+  };
   const nc = Math.floor((cols - 1) / step) + 1;
   const nr = Math.floor((rows - 1) / step) + 1;
   const pos = new Float32Array(nc * nr * 3);
@@ -68,7 +134,7 @@ export function buildTerrain(frame, dem, vscale, step) {
   for (let r = 0; r < nr; r++) {
     for (let k = 0; k < nc; k++) {
       const i = (r * step) * cols + k * step;
-      const m = h[i];
+      const m = sample(r * step, k * step);
       const x = k * step * cell;
       const n = (rows - 1 - r * step) * cell;
       const o = (r * nc + k) * 3;

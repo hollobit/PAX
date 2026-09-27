@@ -106,6 +106,13 @@ async function main() {
     a.hidden = !(tilesOn || cityOn);
     a.dataset.mode = cityOn ? 'city' : 'tiles';
   }
+  /** 랜드마크 비행 — 단추 상태와 지금 날아가는 곳 */
+  function renderFlight(st) {
+    const on = st.phase === 'tour';
+    $('#pax3d-flight').setAttribute('aria-pressed', String(on));
+    $('#pax3d-flight').textContent = on ? '■ 비행 멈추기' : '✈ 랜드마크 비행';
+    $('#pax3d-flight-cap').textContent = on ? `${st.i + 1}/${st.total} · ${st.name}` : st.finished ? '비행을 마쳤습니다' : '';
+  }
   /** 도시 입체지도 상태 — 받는 중·검증 중·펼침·오류를 지도 위 작은 띠로 알린다 */
   function renderCity(st) {
     const badge = $('#pax3d-city');
@@ -117,14 +124,17 @@ async function main() {
       const c = st.meta.counts;
       badge.textContent = `${st.name} 3D 입체지도 · 실제 건물 ${fmt.format(c.buildings)}채(높이 추정 ${Math.round((c.estimated_height / c.buildings) * 100)}%는 회색) · 사례는 실제 자리에 · OSM 스냅샷 ${st.meta.snapshot.slice(0, 4)}-${st.meta.snapshot.slice(4, 6)}-${st.meta.snapshot.slice(6, 8)}`;
     }
+    if (st.phase === 'tour' || st.phase === 'tourEnd') { renderFlight(st); return; }
     cityOn = st.phase === 'enter' || (cityOn && st.phase !== 'leave');
+    $('#pax3d-citybar').hidden = !cityOn;
+    if (!cityOn) renderFlight({ phase: 'tourEnd', finished: false });
     badge.hidden = st.phase === 'leave';
     $('#pax3d-stage').classList.toggle('pax3d-stage--city', cityOn);
     renderAttrib();
   }
   const tip = $('#pax3d-tip');
   try {
-    const { createWorld } = await import('./pax3d-world.js?v=b5d91614');
+    const { createWorld } = await import('./pax3d-world.js?v=3949ecb6');
     // 실제 지형(수치표고) — 못 받으면 평평한 판으로 그대로 간다
     const terrain = await import('./pax3d-terrain.js?v=a3bd09aa').then((t) => t.loadTerrain()).catch(() => null);
     world = createWorld($('#pax3d-canvas'), {
@@ -155,6 +165,19 @@ async function main() {
       onTiles: (on) => { tilesOn = on; renderAttrib(); },
       labelRoot: $('#pax3d-citylabels'),
       onCity: (st) => renderCity(st),
+    });
+    for (const b of document.querySelectorAll('#pax3d-citybar [data-look]')) {
+      b.addEventListener('click', () => {
+        world.setCityLook(b.dataset.look);
+        for (const x of document.querySelectorAll('#pax3d-citybar [data-look]')) x.setAttribute('aria-pressed', String(x === b));
+      });
+    }
+    $('#pax3d-flight').addEventListener('click', () => {
+      if ($('#pax3d-flight').getAttribute('aria-pressed') === 'true') world.stopLandmarkFlight();
+      else {
+        tour.stop(); // 사례 자동 투어와 겹치지 않게
+        if (!world.startLandmarkFlight()) $('#pax3d-flight-cap').textContent = 'OSM에서 확인된 랜드마크가 없습니다';
+      }
     });
   } catch (err) {
     $('#pax3d-stage').classList.add('pax3d-stage--fallback');

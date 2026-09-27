@@ -76,39 +76,76 @@
  },
  "landmarks": [
   {
-   "name": "남산서울타워",
-   "x": 20839.0,
-   "n": 14597.1,
+   "name": "광화문",
+   "x": 19580.4,
+   "n": 16875.3,
    "source": "OSM POI",
-   "osm_name": "남산서울타워"
+   "osm_name": "광화문",
+   "osm_class": "railway"
+  },
+  {
+   "name": "경복궁",
+   "x": 19561.0,
+   "n": 17775.1,
+   "source": "OSM POI",
+   "osm_name": "경복궁",
+   "osm_class": "castle"
+  },
+  {
+   "name": "청와대",
+   "x": 19507.0,
+   "n": 18541.3,
+   "source": "OSM POI",
+   "osm_name": "청와대",
+   "osm_class": "office"
+  },
+  {
+   "name": "서울역",
+   "x": 18953.7,
+   "n": 14865.2,
+   "source": "OSM POI",
+   "osm_name": "서울역",
+   "osm_class": "railway"
+  },
+  {
+   "name": "남산서울타워",
+   "x": 20585.8,
+   "n": 14625.3,
+   "source": "OSM POI",
+   "osm_name": "남산서울타워",
+   "osm_class": "attraction"
+  },
+  {
+   "name": "동대문디자인플라자",
+   "x": 22460.7,
+   "n": 16506.7,
+   "source": "OSM POI",
+   "osm_name": "동대문디자인플라자",
+   "osm_class": "bicycle_rental"
   },
   {
    "name": "롯데월드타워",
    "x": 30679.1,
    "n": 10344.8,
    "source": "OSM POI",
-   "osm_name": "롯데월드타워"
+   "osm_name": "롯데월드타워",
+   "osm_class": "attraction"
+  },
+  {
+   "name": "63스퀘어",
+   "x": 16294.4,
+   "n": 11246.3,
+   "source": "OSM POI",
+   "osm_name": "63스퀘어",
+   "osm_class": "bicycle_rental"
   },
   {
    "name": "여의도",
-   "x": 14379.7,
-   "n": 12054.5,
+   "x": 14040.7,
+   "n": 12480.2,
    "source": "OSM POI",
-   "osm_name": "국회의사당"
-  },
-  {
-   "name": "광화문",
-   "x": 19580.4,
-   "n": 16875.3,
-   "source": "OSM POI",
-   "osm_name": "광화문"
-  },
-  {
-   "name": "북한산",
-   "x": 20858.0,
-   "n": 26447.3,
-   "source": "OSM POI",
-   "osm_name": "백운대탐방지원센터"
+   "osm_name": "국회의사당",
+   "osm_class": "office"
   }
  ],
  "outline": [

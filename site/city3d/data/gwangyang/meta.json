@@ -79,35 +79,56 @@
    "x": 16402.6,
    "n": 7148.5,
    "source": "OSM POI",
-   "osm_name": "광양시청"
+   "osm_name": "광양시청",
+   "osm_class": "office"
   },
   {
-   "name": "이순신대교",
-   "x": 18393.9,
-   "n": 2664.8,
-   "source": "대략 좌표(추정)",
-   "osm_name": null
+   "name": "광양읍",
+   "x": 5925.1,
+   "n": 10753.3,
+   "source": "OSM POI",
+   "osm_name": "광양읍",
+   "osm_class": "town"
   },
   {
-   "name": "광양제철소",
-   "x": 19505.9,
-   "n": 4865.3,
-   "source": "대략 좌표(추정)",
-   "osm_name": null
+   "name": "광양역",
+   "x": 6659.0,
+   "n": 9011.6,
+   "source": "OSM POI",
+   "osm_name": "광양역",
+   "osm_class": "bus"
+  },
+  {
+   "name": "매화마을",
+   "x": 18362.3,
+   "n": 22360.5,
+   "source": "OSM POI",
+   "osm_name": "매화마을",
+   "osm_class": "restaurant"
   },
   {
    "name": "백운산",
    "x": 9600.1,
    "n": 25474.0,
    "source": "OSM POI",
-   "osm_name": "백운산"
+   "osm_name": "백운산",
+   "osm_class": "peak"
   },
   {
-   "name": "광양항",
-   "x": 16504.7,
-   "n": 5097.8,
-   "source": "OSM POI",
-   "osm_name": "광양항국제여객터미널"
+   "name": "이순신대교",
+   "x": 18393.9,
+   "n": 2664.8,
+   "source": "대략 좌표(추정)",
+   "osm_name": null,
+   "osm_class": null
+  },
+  {
+   "name": "광양제철소",
+   "x": 19505.9,
+   "n": 4865.3,
+   "source": "대략 좌표(추정)",
+   "osm_name": null,
+   "osm_class": null
   }
  ],
  "outline": [

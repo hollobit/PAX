@@ -45,6 +45,8 @@
   .seg { font: inherit; font-size: 13px; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; cursor: pointer; }
   .seg[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 700; }
   .seg:focus-visible, .chip:focus-visible, #panel-toggle:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  #tour-caption { margin: 0; font-size: 13px; font-weight: 700; color: var(--accent); }
+  #tour-caption[hidden] { display: none; }
   #vscale-note { margin: 0; color: var(--ink-soft); font-size: 11.5px; max-width: 34ch; }
   #panel { position: fixed; top: calc(150px + env(safe-area-inset-top, 0px)); right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); width: min(340px, calc(100% - 32px)); overflow: auto; padding: 12px 14px; display: flex; flex-direction: column; gap: 14px; }
   #panel h2 { margin: 0 0 6px; font-size: 11px; letter-spacing: 0.08em; color: var(--ink-soft); font-weight: 500; }
@@ -135,6 +137,10 @@
         <button type="button" class="seg" data-v="2" aria-pressed="false">2× 과장</button>
       </div>
     </div>
+    <div class="row"><span class="label">비행</span>
+      <button type="button" class="seg" id="tour-btn" aria-pressed="false" title="OSM에서 확인된 주요 랜드마크를 차례로 날아가며 보여 줍니다 — 지도를 만지면 멈춥니다">✈ 랜드마크 비행</button>
+    </div>
+    <p id="tour-caption" role="status" hidden></p>
     <p id="vscale-note">1× — 실제 축척입니다. 수평·수직 모두 같은 미터 단위이고 과장하지 않았습니다.</p>
   </section>
 </div>

@@ -300,3 +300,52 @@ console.log(JSON.stringify([
 def test_case_location_maps_to_city():
     out = json.loads(subprocess.run(["node", "--input-type=module", "-e", CITYKEY_NODE], cwd=ROOT, capture_output=True, text=True, check=True).stdout)
     assert out == ["seoul", "busan", "sejong", "daegu", None, "gwangyang", None, None, None, None, "daejeon"]
+
+
+# ---- 랜드마크(바로 가기·랜드마크 비행) -------------------------------------------------------
+def _landmark_table():
+    """scripts/city3d/process.py의 LANDMARKS 표를 무거운 의존성 없이 읽는다(ast)"""
+    import ast
+    tree = ast.parse((ROOT / "scripts" / "city3d" / "process.py").read_text())
+    node = next(n for n in tree.body if isinstance(n, ast.Assign) and getattr(n.targets[0], "id", "") == "LANDMARKS")
+    return ast.literal_eval(node.value)
+
+
+def test_verified_landmarks_are_near_their_real_place(city):
+    """OSM 지점으로 표시한 랜드마크는 이름이 후보 중 하나이고 실제 위치 2km 안 — 같은 이름 식당·정류장에 끌려가지 않았다"""
+    import math
+    key, meta = city
+    table = {label: (names, ll) for label, names, ll in _landmark_table()[key]}
+    f = meta["frame"]
+    verified = [l for l in meta["landmarks"] if l["source"] == "OSM POI"]
+    assert len(verified) >= 4, "비행할 랜드마크가 너무 적다"
+    for l in verified:
+        names, (lon, lat) = table[l["name"]]
+        assert l["osm_name"] in names
+        ex, en = (lon - f["lon0"]) * f["m_lon"], (lat - f["lat0"]) * f["m_lat"]
+        assert math.hypot(l["x"] - ex, l["n"] - en) <= 2000, l
+
+
+FLIGHT_NODE = """
+import fs from 'fs';
+const src = fs.readFileSync('site/city3d/js/flight.js', 'utf8').replace(/^import .*$/gm, '');
+const mod = await import('data:text/javascript,' + encodeURIComponent(src));
+const out = {};
+for (const key of process.argv.slice(1)) {
+  const meta = JSON.parse(fs.readFileSync(`site/city3d/data/${key}/meta.json`, 'utf8'));
+  const stops = mod.flightStops(meta.landmarks);
+  out[key] = { names: stops.map((s) => s.name), sources: [...new Set(stops.map((s) => s.source))],
+    total: meta.landmarks.filter((l) => l.source === 'OSM POI').length };
+}
+console.log(JSON.stringify(out));
+"""
+
+
+@pytest.mark.skipif(not shutil.which("node"), reason="node 없음")
+def test_flight_visits_every_verified_landmark_once():
+    keys = [c["key"] for c in CITIES]
+    out = json.loads(subprocess.run(["node", "--input-type=module", "-e", FLIGHT_NODE, *keys], cwd=ROOT, capture_output=True, text=True, check=True).stdout)
+    for key in keys:
+        r = out[key]
+        assert r["sources"] == ["OSM POI"], key          # 대략 좌표로 둔 곳은 날지 않는다
+        assert len(r["names"]) == len(set(r["names"])) == r["total"]

@@ -8,7 +8,9 @@ import {
   LAND_H, project, unproject, toWorld, projectPolys, rng, inPolys, polysArea, randomIn, scatter, blobRing,
 } from './pax3d-geom.js?v=f13514eb';
 import { createTileLayer, markLandStencil } from './pax3d-tiles.js?v=0eceea68';
-import { createCityLayer } from './pax3d-city.js?v=aab7f443';
+import { MODES, skyTexture as citySky, sunDirection } from './city3d/js/modes.js';
+import { createLandmarkFlight } from './city3d/js/flight.js';
+import { createCityLayer } from './pax3d-city.js?v=dc76c808';
 
 // 간판 자리 — 무게중심은 경기(서울 구멍 포함)처럼 엉뚱한 곳에 떨어져 손으로 정했다.
 const LABEL_AT = {
@@ -108,7 +110,8 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
   controls.screenSpacePanning = false;
   controls.autoRotateSpeed = 0.5;
 
-  scene.add(new THREE.HemisphereLight(0xfff4e0, 0x8aa3a0, 1.4));
+  const hemi = new THREE.HemisphereLight(0xfff4e0, 0x8aa3a0, 1.4);
+  scene.add(hemi);
   const sun = new THREE.DirectionalLight(0xfff1d6, 2.4);
   sun.position.set(-7, 14, 8);
   sun.castShadow = true;
@@ -118,7 +121,10 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
   sun.shadow.normalBias = 0.02;
   scene.add(sun, sun.target); // 도시 모드에서는 그림자 상자가 시점을 따라간다(target을 장면에 넣어야 갱신된다)
   const SUN_HOME = { pos: sun.position.clone(), span: 12, near: 1, far: 40, normalBias: 0.02 };
-  const SUN_DIR = sun.position.clone().normalize();
+  const SUN_DIR = sun.position.clone().normalize(); // 도시 모드 그림자 상자 방향 — 시간대가 바꾼다
+  // 전국 미니어처의 모습(종이 디오라마) — 도시 모드를 벗어나면 이것으로 돌아간다
+  const HOME_LOOK = { sky: scene.background, fog: scene.fog.color.clone(), hemi: [hemi.color.clone(), hemi.groundColor.clone(), hemi.intensity],
+    sun: [sun.color.clone(), sun.intensity], dir: SUN_DIR.clone() };
 
   const sea = new THREE.Mesh(new THREE.CircleGeometry(40, 64), toon(0x8ec6cc, grad));
   sea.rotateX(-Math.PI / 2);
@@ -410,10 +416,33 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     }
     citySigns.set(c.key, signs);
   }
+  let cityLook = 'day'; // 도시 입체지도의 시간대(주간·일몰·야간)
+  let tour = null;      // 랜드마크 비행
+  /** 시간대 적용 — 도시 모드일 때만. 주간은 미니어처의 빛을 그대로 두고(이어지는 모습), 일몰·야간은 하늘·안개·빛·해 방향을 바꾼다 */
+  function applyLook() {
+    const M = MODES[cityMode ? cityLook : 'day'];
+    const home = !cityMode || cityLook === 'day';
+    scene.background = home ? HOME_LOOK.sky : citySky(M);
+    scene.fog.color.copy(home ? HOME_LOOK.fog : new THREE.Color(M.fog));
+    if (home) {
+      hemi.color.copy(HOME_LOOK.hemi[0]); hemi.groundColor.copy(HOME_LOOK.hemi[1]); hemi.intensity = HOME_LOOK.hemi[2];
+      sun.color.copy(HOME_LOOK.sun[0]); sun.intensity = HOME_LOOK.sun[1];
+      SUN_DIR.copy(HOME_LOOK.dir);
+    } else {
+      hemi.color.set(M.hemi[0]); hemi.groundColor.set(M.hemi[1]); hemi.intensity = M.hemi[2] * 1.3; // 툰 재질은 조금 더 밝게
+      sun.color.set(M.sun); sun.intensity = M.sunI;
+      sunDirection(M, SUN_DIR);
+    }
+    // 밤에도 사례 탑이 어둠에 묻히지 않게 약하게 스스로 빛난다
+    for (const mesh of Object.values(meshes)) mesh.material.emissive.set(cityMode && M.night > 0.5 ? 0x3a2e1e : 0x000000);
+    cityLayer.setMode(M);
+  }
   let focusedId = null;
   let pendingFly = null; // 전국 화면에서 도시 사례를 골랐을 때 — 도시가 펼쳐지면 그 자리로 한 번 더 내려간다
   function enterCity(c) {
     cityMode = c;
+    if (!c && tour) tour.stop();
+    applyLook();
     if (c && !citySigns.has(c.key)) placeCityCases(c);
     if (land) land.visible = !c;
     regionLines.visible = !c;
@@ -549,9 +578,10 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
   canvas.addEventListener('pointerdown', (ev) => {
     down = { x: ev.clientX, y: ev.clientY };
     flight = null;
+    if (tour) tour.stop();
     userInteract();
   });
-  canvas.addEventListener('wheel', () => userInteract(), { passive: true });
+  canvas.addEventListener('wheel', () => { userInteract(); if (tour) tour.stop(); }, { passive: true });
   canvas.addEventListener('pointerup', (ev) => {
     if (!down || Math.hypot(ev.clientX - down.x, ev.clientY - down.y) > 5) return;
     const hit = pick(ev);
@@ -580,7 +610,8 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
   const clock = new THREE.Clock();
   function frame() {
     const t = clock.getElapsedTime();
-    if (flight) {
+    if (tour && tour.update()) flight = null;
+    else if (flight) {
       const k = Math.min(1, (performance.now() - flight.t0) / 1100);
       const e = k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
       controls.target.lerpVectors(flight.fromT, flight.toT, e);
@@ -668,6 +699,24 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     setTiles(on) { tiles.setEnabled(on); },
     debug: () => ({ tiles: tiles.stats(), city: cityLayer.stats(), d: camera.position.distanceTo(controls.target), target: controls.target.toArray(), near: camera.near }),
     setCityLabelGroup(g, on) { cityLayer.setLabelGroup(g, on); },
+    /** 도시 입체지도 시간대: 'day' | 'sunset' | 'night' */
+    setCityLook(k) { if (MODES[k]) { cityLook = k; applyLook(); } },
+    /** 랜드마크 비행 — 펼쳐진 도시의 OSM 확인 랜드마크를 가까운 순으로 */
+    startLandmarkFlight() {
+      if (!cityMode) return false;
+      const c = cityMode;
+      if (tour) tour.stop();
+      flight = null;
+      tour = createLandmarkFlight({
+        camera, controls, unit: c.sz, toWorld: (x, n, lift) => c.toWorld(x, n, lift),
+        onStop: (i, stop, total) => onCity({ phase: 'tour', i, name: stop.name, total }),
+        onEnd: (finished) => { tour = null; onCity({ phase: 'tourEnd', finished }); },
+      });
+      const ok = tour.start(cityLayer.flightStops(c));
+      if (!ok) tour = null;
+      return ok;
+    },
+    stopLandmarkFlight() { if (tour) tour.stop(); },
     setAutoRotate(on) { controls.autoRotate = on; },
     onUserInteract(fn) { userInteract = fn; },
     /** 거리 산책 중에는 지도 렌더링을 멈춰 GPU를 양보한다 */

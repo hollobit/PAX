@@ -77,38 +77,83 @@
  "landmarks": [
   {
    "name": "대전역",
-   "x": 17442.6,
-   "n": 17628.7,
+   "x": 17607.6,
+   "n": 17398.8,
    "source": "OSM POI",
-   "osm_name": "대전역"
+   "osm_name": "대전역",
+   "osm_class": "railway"
+  },
+  {
+   "name": "대전시청",
+   "x": 13247.2,
+   "n": 19509.7,
+   "source": "OSM POI",
+   "osm_name": "대전광역시청",
+   "osm_class": "town_hall"
+  },
+  {
+   "name": "정부대전청사",
+   "x": 13315.6,
+   "n": 20423.0,
+   "source": "대략 좌표(추정)",
+   "osm_name": null,
+   "osm_class": null
+  },
+  {
+   "name": "한밭수목원",
+   "x": 13578.1,
+   "n": 21586.7,
+   "source": "OSM POI",
+   "osm_name": "한밭수목원",
+   "osm_class": "bicycle_rental"
   },
   {
    "name": "한빛탑",
    "x": 13457.9,
    "n": 22160.3,
    "source": "OSM POI",
-   "osm_name": "한빛탑"
+   "osm_name": "한빛탑",
+   "osm_class": "bus"
   },
   {
-   "name": "정부대전청사",
-   "x": 12829.2,
-   "n": 20532.0,
+   "name": "국립중앙과학관",
+   "x": 12421.8,
+   "n": 22253.9,
    "source": "OSM POI",
-   "osm_name": "정부대전청사남문"
+   "osm_name": "국립중앙과학관",
+   "osm_class": "museum"
   },
   {
-   "name": "대전시청",
-   "x": 13279.4,
-   "n": 19590.5,
+   "name": "유성온천",
+   "x": 9139.3,
+   "n": 19871.4,
    "source": "OSM POI",
-   "osm_name": "대전광역시청"
+   "osm_name": "유성온천역",
+   "osm_class": "bus"
+  },
+  {
+   "name": "대전월드컵경기장",
+   "x": 7900.7,
+   "n": 21150.6,
+   "source": "OSM POI",
+   "osm_name": "대전월드컵경기장",
+   "osm_class": "stadium"
+  },
+  {
+   "name": "계족산",
+   "x": 18130.0,
+   "n": 23299.8,
+   "source": "OSM POI",
+   "osm_name": "계족산",
+   "osm_class": "peak"
   },
   {
    "name": "보문산",
-   "x": 23120.5,
-   "n": 19527.9,
+   "x": 16575.8,
+   "n": 13511.1,
    "source": "OSM POI",
-   "osm_name": "시루봉"
+   "osm_name": "보문산",
+   "osm_class": "peak"
   }
  ],
  "outline": [
