@@ -4,6 +4,7 @@
     uv run --with shapely python3 scripts/city3d/fetch.py
 """
 import json
+import re
 import sys
 import time
 import urllib.request
@@ -49,11 +50,27 @@ def tiles_for(poly, z):
 
 
 def main():
-    template = json.loads(urllib.request.urlopen(urllib.request.Request(TILEJSON, headers={"User-Agent": UA})).read())["tiles"][0]
-    snapshot = template.split("/planet/")[1].split("/")[0]
-    (CACHE / "snapshot.txt").write_text(snapshot)
-    report = {}
+    """python3 scripts/city3d/fetch.py [--refresh] [도시 key…]
+
+    기본은 이미 받은 스냅샷(cache/snapshot.txt)에 고정한다 — 도시 하나를 더할 때 다른 날짜 자료가 섞이지 않게.
+    --refresh면 OpenFreeMap 최신 스냅샷으로 바꾼다(그때는 모든 도시를 다시 받고 다시 가공해야 한다).
+    """
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    latest = json.loads(urllib.request.urlopen(urllib.request.Request(TILEJSON, headers={"User-Agent": UA})).read())["tiles"][0]
+    pinned = CACHE / "snapshot.txt"
+    if pinned.exists() and "--refresh" not in sys.argv:
+        snapshot = pinned.read_text().strip()
+        template = re.sub(r"/planet/[^/]+/", f"/planet/{snapshot}/", latest)
+    else:
+        template = latest
+        snapshot = template.split("/planet/")[1].split("/")[0]
+        CACHE.mkdir(parents=True, exist_ok=True)
+        pinned.write_text(snapshot)
+    report_path = CACHE / "fetch-report.json"
+    report = json.loads(report_path.read_text())["cities"] if report_path.exists() else {}
     for city in CITIES:
+        if args and city["key"] not in args:
+            continue
         polys = city_boundary(city)
         geom = MultiPolygon([Polygon(p[0], p[1:]) for p in polys]).buffer(0.002)
         mvt = tiles_for(geom, MVT_Z)
@@ -69,7 +86,7 @@ def main():
         counts = {k: results.count(k) for k in set(results)}
         report[city["key"]] = {"mvt_tiles": len(mvt), "dem_tiles": len(dem), "results": counts}
         print(city["key"], report[city["key"]], flush=True)
-    (CACHE / "fetch-report.json").write_text(json.dumps({"snapshot": snapshot, "cities": report}, ensure_ascii=False, indent=1))
+    report_path.write_text(json.dumps({"snapshot": snapshot, "cities": report}, ensure_ascii=False, indent=1))
 
 
 if __name__ == "__main__":

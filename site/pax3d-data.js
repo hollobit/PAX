@@ -46,7 +46,7 @@ export const SEATS = {
 
 // 도시 입체지도(city3d/data)가 있는 도시 — 확대하면 미니어처 대신 실제 건물·지형이 펼쳐지고 사례가 실제 자리에 선다.
 // 광양은 전남 광양시라 시군구로 판정하고, 대구의 군위군은 도시 지도 범위 밖이다.
-export const CITY3D = { 서울: 'seoul', 부산: 'busan', 세종: 'sejong', 대구: 'daegu' };
+export const CITY3D = { 서울: 'seoul', 부산: 'busan', 대구: 'daegu', 대전: 'daejeon', 세종: 'sejong' };
 export function cityKeyOf(loc) {
   if (!loc) return null;
   if (loc.place === '전남') return loc.sgg && loc.sgg.name === '광양시' ? 'gwangyang' : null;

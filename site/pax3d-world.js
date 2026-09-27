@@ -2,13 +2,13 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { toon, toonGradient, skyTexture, signSprite, createPostPass } from './pax3d-look.js?v=a66df86b';
-import { ISLANDS, SEATS, TASK_COLORS, FALLBACK_COLOR, shapeOf, cityKeyOf } from './pax3d-data.js?v=d9469f19';
+import { ISLANDS, SEATS, TASK_COLORS, FALLBACK_COLOR, shapeOf, cityKeyOf } from './pax3d-data.js?v=32ebb984';
 import { buildingGeometries, mountains, trees, clouds, pin, dokdo } from './pax3d-props.js?v=83d5cb9b';
 import {
   LAND_H, project, unproject, toWorld, projectPolys, rng, inPolys, polysArea, randomIn, scatter, blobRing,
 } from './pax3d-geom.js?v=f13514eb';
 import { createTileLayer, markLandStencil } from './pax3d-tiles.js?v=0eceea68';
-import { createCityLayer } from './pax3d-city.js?v=b45ccb82';
+import { createCityLayer } from './pax3d-city.js?v=0f606d9c';
 
 // 간판 자리 — 무게중심은 경기(서울 구멍 포함)처럼 엉뚱한 곳에 떨어져 손으로 정했다.
 const LABEL_AT = {
@@ -370,7 +370,7 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     onActive: (on) => { tilesOn = on; treeMesh.visible = !on && !cityMode; if (onTiles) onTiles(on); },
   });
 
-  // ---- 도시 입체지도: 서울·부산·세종·대구·광양 위로 가까이 가면 펼쳐진다 ------------------------------
+  // ---- 도시 입체지도: 서울·부산·대구·대전·세종·광양 위로 가까이 가면 펼쳐진다 ------------------------------
   const citySigns = new Map(); // 도시 key → 사례 자리 간판들
   const cityLayer = createCityLayer({
     scene,

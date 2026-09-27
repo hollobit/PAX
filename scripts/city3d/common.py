@@ -30,6 +30,7 @@ CITIES = [
     # 2023년 편입된 군위군은 도심에서 40km 떨어진 농촌이라 제외(README에 명시) — 좌표 범위를 65km 안에 둔다
     {"key": "daegu", "name": "대구", "region": "대구", "exclude_sgg": ["군위군"]},
     {"key": "gwangyang", "name": "광양", "sgg": ("전남", "광양시")},
+    {"key": "daejeon", "name": "대전", "region": "대전"},
 ]
 
 M_LAT = 110574.0

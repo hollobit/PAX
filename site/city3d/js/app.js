@@ -1,4 +1,4 @@
-// 다섯 도시 입체지도 — 화면 구성과 도시 불러오기(파일마다 레코드 수·길이·CRC32 검증).
+// 여섯 도시 입체지도 — 화면 구성과 도시 불러오기(파일마다 레코드 수·길이·CRC32 검증).
 import { getJSON, loadCity as fetchCity } from './load.js';
 import { createWorld, MODES } from './world.js';
 import { ROAD_STYLE } from './layers.js';
@@ -16,7 +16,7 @@ function el(tag, cls, text) {
   return n;
 }
 
-const CITY_KEYS = ['seoul', 'busan', 'sejong', 'daegu', 'gwangyang'];
+const CITY_KEYS = ['seoul', 'busan', 'daegu', 'daejeon', 'sejong', 'gwangyang'];
 
 /** 주소 인자 검사 — 도시 키는 목록 안에서만, 좌표는 한국 범위의 숫자만, 이름표는 60자까지 */
 function parseFocus(params) {

@@ -177,6 +177,7 @@ KNOWN = {  # (도시, 종류, 이름, 실제 위도, 경도) — 공개 지도�
     "seoul": ("city", "서울특별시", 37.5666, 126.9782),
     "busan": ("airport", "김해국제공항", 35.1795, 128.9382),
     "daegu": ("airport", "대구국제공항", 35.8941, 128.6589),
+    "daejeon": ("station", "대전역", 36.3323, 127.4346),
 }
 
 
@@ -256,7 +257,8 @@ import fs from 'fs';
 const geo = await import('data:text/javascript,' + encodeURIComponent(fs.readFileSync('site/city3d/js/geo.js', 'utf8')));
 const out = {};
 for (const [key, place, withLoc] of [['gwangyang', '광양시', true], ['busan', '연제구', true], ['seoul', '중구', true],
-    ['sejong', '세종시', true], ['seoul', '서울', false], ['busan', '부산', false], ['daegu', '수성구', true]]) {
+    ['sejong', '세종시', true], ['seoul', '서울', false], ['busan', '부산', false], ['daegu', '수성구', true],
+    ['daejeon', '유성구', true], ['daejeon', '대전', false]]) {
   const info = JSON.parse(fs.readFileSync(`site/city3d/data/${key}/mapinfo.json`, 'utf8'));
   const loc = geo.createLocator(info);
   const s = geo.seatOf(info, place, withLoc ? loc : null);
@@ -275,6 +277,8 @@ def test_seat_of_finds_the_real_hall_inside_the_district():
     assert out["daegu/수성구"] == {"name": "수성구청", "gu": "수성구"}
     assert out["sejong/세종시"]["name"] == "세종특별자치시청"
     assert out["seoul/서울"]["name"] == "서울특별시청" and out["busan/부산"]["name"] == "부산광역시청"
+    assert out["daejeon/유성구"]["gu"] == "유성구"
+    assert out["daejeon/대전"]["name"] == "대전광역시청"
     assert out["seoul/중구"]["gu"] == "중구"  # 청사 이름표가 없으면 중구 이름표 자리 — 어느 쪽이든 중구 안
 
 
@@ -287,7 +291,7 @@ const k = mod.cityKeyOf;
 console.log(JSON.stringify([
   k({ place: '서울' }), k({ place: '부산', sgg: { name: '연제구' } }), k({ place: '세종' }), k({ place: '대구' }),
   k({ place: '대구', sgg: { name: '군위군' } }), k({ place: '전남', sgg: { name: '광양시' } }), k({ place: '전남', sgg: { name: '순천시' } }),
-  k({ place: '경기' }), k({ place: '공직 현장 섬' }), k(null),
+  k({ place: '경기' }), k({ place: '공직 현장 섬' }), k(null), k({ place: '대전', sgg: { name: '유성구' } }),
 ]));
 """
 
@@ -295,4 +299,4 @@ console.log(JSON.stringify([
 @pytest.mark.skipif(not shutil.which("node"), reason="node 없음")
 def test_case_location_maps_to_city():
     out = json.loads(subprocess.run(["node", "--input-type=module", "-e", CITYKEY_NODE], cwd=ROOT, capture_output=True, text=True, check=True).stdout)
-    assert out == ["seoul", "busan", "sejong", "daegu", None, "gwangyang", None, None, None, None]
+    assert out == ["seoul", "busan", "sejong", "daegu", None, "gwangyang", None, None, None, None, "daejeon"]
