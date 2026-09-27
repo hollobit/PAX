@@ -1,0 +1,406 @@
+// 다섯 도시 입체지도 — 화면 구성과 도시 불러오기(파일마다 레코드 수·길이·CRC32 검증).
+import { readC3D, decodeBuildings, decodeLines, decodeMesh, decodeDem } from './binary.js';
+import { createWorld, MODES } from './world.js';
+import { ROAD_STYLE } from './layers.js';
+import { createLabelLayer, LABEL_GROUPS, LABEL_KINDS } from './maplabels.js';
+import { createMinimap } from './minimap.js';
+import { createLocator, externalLinks, toLonLat, toLocal } from './geo.js';
+
+const $ = (s) => document.querySelector(s);
+const fmt = new Intl.NumberFormat('ko-KR');
+
+function el(tag, cls, text) {
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text != null) n.textContent = text;
+  return n;
+}
+
+async function getJSON(path) {
+  const r = await fetch(path);
+  if (!r.ok) throw new Error(`${path}을(를) 받지 못했습니다 (${r.status})`);
+  return r.json();
+}
+/**
+ * 바이너리 받기 — 배포처(Claude sites)가 임의 바이너리를 내보내지 않아 gzip+base64 텍스트로 싣는다.
+ * base64를 풀고 gzip을 되돌린 원래 .bin 바이트를 돌려준다(검증은 그 바이트로 readC3D가 한다).
+ */
+async function getBin(path) {
+  const r = await fetch(`${path}.gz.b64.txt`);
+  if (!r.ok) throw new Error(`${path}을(를) 받지 못했습니다 (${r.status})`);
+  const b64 = (await r.text()).trim();
+  const bin = atob(b64);
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  if (typeof DecompressionStream === 'undefined') throw new Error('이 브라우저는 gzip 풀기(DecompressionStream)를 지원하지 않습니다');
+  const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'));
+  return new Response(stream).arrayBuffer();
+}
+
+const CITY_KEYS = ['seoul', 'busan', 'sejong', 'daegu', 'gwangyang'];
+
+/** 주소 인자 검사 — 도시 키는 목록 안에서만, 좌표는 한국 범위의 숫자만, 이름표는 60자까지 */
+function parseFocus(params) {
+  const city = params.get('city');
+  if (!CITY_KEYS.includes(city)) return null;
+  const lat = Number(params.get('lat'));
+  const lon = Number(params.get('lon'));
+  const ok = params.has('lat') && params.has('lon') && lat > 33 && lat < 39 && lon > 124 && lon < 132;
+  const clean = (v, n) => (v || '').replace(/\s+/g, ' ').trim().slice(0, n);
+  // place = 시군구 이름(사례 자리를 시군구까지만 알 때) — 좌표 대신 그 시군구 청사(없으면 구 이름표 자리)로 맞춘다
+  return { city, lat: ok ? lat : null, lon: ok ? lon : null, label: clean(params.get('label'), 60), place: clean(params.get('place'), 20), done: false };
+}
+
+/** 3D PAX로 돌아가는 링크 — GitHub Pages(같은 사이트)에서는 상대 경로, 다른 곳(Claude 아티팩트 등)에서는 공개 주소 */
+function setupBackLink(caseId) {
+  const a = document.querySelector('#back');
+  if (!a) return;
+  const sameSite = /github\.io$|^localhost$|^127\.0\.0\.1$/.test(location.hostname);
+  const base = sameSite ? '../pax3d.html' : 'https://hollobit.github.io/PAX/pax3d.html';
+  a.href = caseId && /^[a-f0-9]{8,64}$/.test(caseId) ? `${base}?case=${encodeURIComponent(caseId)}` : base;
+}
+
+function snapshotText(s) {
+  const m = /^(\d{4})(\d{2})(\d{2})_(\d{2})(\d{2})/.exec(s || '');
+  return m ? `${m[1]}-${m[2]}-${m[3]} ${m[4]}:${m[5]} UTC` : s;
+}
+
+async function main() {
+  const index = await getJSON('data/cities.json');
+  const state = { key: null, mode: 'day', vscale: 1, mark: true, city: null };
+  // 바깥에서 여는 주소: ?city=busan&lat=35.16&lon=129.16&label=기관명&case=사례id (3D PAX가 이렇게 연다)
+  const params = new URLSearchParams(location.search);
+  const want = parseFocus(params);
+  setupBackLink(params.get('case'));
+  const stats = { visible: 0, total: 0, fps: null, calls: 0, tris: 0 };
+
+  let locator = null;
+  const labels = createLabelLayer($('#labels'), { onClick: (it) => world.flyToLocal(it.x, it.n, it.k === 'district' || it.k === 'city' ? 7000 : 1800) });
+  const minimap = createMinimap($('#minimap'), { onJump: (x, n, instant) => world.jumpToLocal(x, n, instant) });
+  let lastView = '';
+  const world = createWorld($('#map'), {
+    onPick: (i, e) => (i == null ? showPoint(world.pickGround(e.clientX, e.clientY)) : showBuilding(i)),
+    onStats: (s) => { Object.assign(stats, s); renderStats(); },
+    // 매 프레임: 이름표 재투영(카메라가 움직였을 때만) + 2D 지도 시야 사각형
+    onFrame: (w) => {
+      const [width, height] = w.size;
+      labels.update(w.camera, w.vscale, width, height);
+      const v = w.view();
+      const key = `${v.cam.map(Math.round)}|${v.target.map(Math.round)}|${w.camera.quaternion.toArray().map((q) => q.toFixed(3))}`;
+      if (key !== lastView) { lastView = key; minimap.setView(w.footprint(), v.cam, v.target); }
+    },
+  });
+  if (location.hash === '#bench') window.__city3d = world; // 측정용(주소 끝 #bench일 때만)
+  $('#budget').textContent = `${world.budget.label} 예산 · 픽셀 비율 ${world.budget.dpr.toFixed(2)} · 그림자 ${world.budget.shadow}px · 건물 최대 ${fmt.format(world.budget.buildings)}채 · 지형 ${30 * world.budget.terrainStep}m 격자`;
+  $('#snapshot').textContent = snapshotText(index.snapshot);
+
+  // 도시 단추
+  const order = CITY_KEYS;
+  $('#cities').replaceChildren(...order.filter((k) => index.cities[k]).map((k) => {
+    const b = el('button', 'seg', index.cities[k].name);
+    b.type = 'button';
+    b.dataset.key = k;
+    b.addEventListener('click', () => loadCity(k));
+    return b;
+  }));
+  // 시간대
+  $('#modes').replaceChildren(...Object.entries(MODES).map(([k, m]) => {
+    const b = el('button', 'seg', m.label);
+    b.type = 'button';
+    b.dataset.key = k;
+    b.setAttribute('aria-pressed', String(k === state.mode));
+    b.addEventListener('click', () => {
+      state.mode = k;
+      world.setMode(k);
+      for (const x of $('#modes').children) x.setAttribute('aria-pressed', String(x.dataset.key === k));
+    });
+    return b;
+  }));
+  // 지형 배율
+  for (const b of document.querySelectorAll('#vscale .seg')) {
+    b.addEventListener('click', () => {
+      state.vscale = Number(b.dataset.v);
+      for (const x of document.querySelectorAll('#vscale .seg')) x.setAttribute('aria-pressed', String(x === b));
+      $('#vscale-note').textContent = state.vscale === 1
+        ? '1× — 실제 축척입니다. 수평·수직 모두 같은 미터 단위이고 과장하지 않았습니다.'
+        : '2× — 지형 표고만 2배로 과장했습니다. 완만한 구릉과 하천 골짜기를 읽기 쉽게 하려는 것이며, 건물 높이는 과장하지 않습니다.';
+      if (state.city) setBusy('지형 배율을 바꾸는 중…', () => world.setVScale(state.vscale));
+    });
+  }
+  $('#mark').addEventListener('change', (e) => { state.mark = e.target.checked; world.setMarkEstimated(state.mark); });
+  $('#panel-toggle').addEventListener('click', () => {
+    const open = $('#panel').classList.toggle('panel--open');
+    $('#panel-toggle').setAttribute('aria-expanded', String(open));
+  });
+
+  renderLegend();
+  renderLabelToggles();
+  $('#minimap-size').addEventListener('click', () => {
+    const big = $('#minimap-card').classList.toggle('mini--big');
+    $('#minimap-size').setAttribute('aria-pressed', String(big));
+    $('#minimap-size').textContent = big ? '작게' : '크게';
+    requestAnimationFrame(() => { lastView = ''; minimap.redraw(); });
+  });
+  // 커서 아래 지점: 위도·경도·표고·구·가까운 동네(마우스일 때만, 한 프레임에 한 번)
+  let hoverEv = null;
+  $('#map').addEventListener('pointermove', (e) => {
+    if (e.pointerType !== 'mouse') return;
+    if (!hoverEv) requestAnimationFrame(() => { renderCursor(world.pickGround(hoverEv.clientX, hoverEv.clientY)); hoverEv = null; });
+    hoverEv = e;
+  });
+  $('#map').addEventListener('pointerleave', () => renderCursor(null));
+
+  function setBusy(text, fn) {
+    $('#busy').textContent = text;
+    $('#busy').hidden = false;
+    requestAnimationFrame(() => setTimeout(() => {
+      try { fn(); } finally { $('#busy').hidden = true; }
+    }, 20));
+  }
+
+  async function loadCity(key) {
+    if (state.key === key) return;
+    state.key = key;
+    for (const x of $('#cities').children) x.setAttribute('aria-pressed', String(x.dataset.key === key));
+    $('#busy').hidden = false;
+    $('#busy').textContent = `${index.cities[key].name} 자료를 받는 중…`;
+    $('#error').hidden = true;
+    const t0 = performance.now();
+    try {
+      const meta = await getJSON(`data/${key}/meta.json`);
+      const mapinfo = await getJSON(`data/${key}/mapinfo.json`);
+      if (mapinfo.key !== key || mapinfo.snapshot !== meta.snapshot) throw new Error('mapinfo.json이 meta.json과 다른 도시·스냅샷입니다');
+      const names = ['buildings.bin', 'roads.bin', 'waterways.bin', 'water.bin', 'green.bin', 'terrain.bin'];
+      const bufs = await Promise.all(names.map((n) => getBin(`data/${key}/${n}`)));
+      $('#busy').textContent = '레코드 수·길이·CRC32를 확인하는 중…';
+      await new Promise((r) => setTimeout(r, 10));
+      const [B, R, WW, W, G, D] = names.map((n, i) => readC3D(bufs[i], { 'buildings.bin': 'BLDG', 'roads.bin': 'LINE', 'waterways.bin': 'LINE', 'water.bin': 'MESH', 'green.bin': 'MESH', 'terrain.bin': 'DEMG' }[n], meta.files[n]));
+      if (B.count !== meta.counts.buildings) throw new Error(`건물 레코드 수가 meta.json(${meta.counts.buildings})과 다릅니다 (${B.count})`);
+      const city = {
+        meta,
+        b: decodeBuildings(B),
+        roads: decodeLines(R),
+        waterways: decodeLines(WW),
+        water: decodeMesh(W),
+        green: decodeMesh(G),
+        dem: decodeDem(D, meta.terrain),
+        mapinfo,
+      };
+      const bytes = bufs.reduce((s, b) => s + b.byteLength, 0);
+      $('#verify').textContent = `검증 통과 — 파일 ${names.length}개 · ${fmt.format(Math.round(bytes / 1024))}KB · 레코드 수·본문 길이·CRC32 일치`;
+      $('#busy').textContent = '장면을 짓는 중…';
+      await new Promise((r) => setTimeout(r, 10));
+      world.setCity(city);
+      state.city = city;
+      locator = createLocator(mapinfo);
+      minimap.setCity({ ...city, frame: world.frame });
+      lastView = '';
+      renderLabelCounts(mapinfo);
+      renderCity(meta);
+      $('#loadtime').textContent = `불러오기·검증·장면 구성 ${((performance.now() - t0) / 1000).toFixed(1)}초`;
+      showBuilding(null);
+      applyFocus(key, meta, mapinfo);
+      syncUrl(key);
+    } catch (err) {
+      $('#error').textContent = `불러오지 못했습니다: ${err.message}`;
+      $('#error').hidden = false;
+      state.key = null;
+    } finally {
+      $('#busy').hidden = true;
+    }
+  }
+
+  function renderCity(meta) {
+    const c = meta.counts;
+    const rows = [
+      ['건물', c.buildings], ['높이 추정(기본 5m)', c.estimated_height], ['도로·철도 선', c.roads],
+      ['하천 중심선', c.waterways], ['수면 삼각형', c.water_triangles], ['숲·공원 삼각형', c.green_triangles],
+      ['표고 격자', meta.terrain.cols * meta.terrain.rows],
+    ];
+    $('#counts').replaceChildren(...rows.map(([k, v]) => {
+      const d = el('div', 'kv');
+      d.append(el('span', null, k), el('b', 'num', fmt.format(v)));
+      return d;
+    }));
+    const est = ((c.estimated_height / c.buildings) * 100).toFixed(0);
+    $('#est-note').textContent = `${meta.name} 건물의 ${est}%는 OSM에 높이·층수가 없어 OpenMapTiles 기본값 5m로 세운 추정 높이입니다(회색).`;
+    $('#city-note').textContent = meta.note ? `경계: ${meta.note}` : '';
+    $('#landmarks').replaceChildren(...meta.landmarks.map((l) => {
+      const b = el('button', 'chip', l.name);
+      b.type = 'button';
+      b.title = l.source === 'OSM POI' ? `OSM 지점: ${l.osm_name}` : '대략 좌표(추정)';
+      if (l.source !== 'OSM POI') b.classList.add('chip--est');
+      b.addEventListener('click', () => world.flyToLocal(l.x, l.n, 2400));
+      return b;
+    }));
+    $('#terrain-range').textContent = `표고 ${fmt.format(Math.round(meta.terrain.min_m))}~${fmt.format(Math.round(meta.terrain.max_m))}m · AWS Terrain Tiles z${meta.terrain.source_zoom} → 30m 격자`;
+  }
+
+  function renderStats() {
+    $('#stat-fps').textContent = stats.fps ? stats.fps.toFixed(0) : '–';
+    $('#stat-vis').textContent = stats.total ? `${fmt.format(stats.visible)} / ${fmt.format(stats.total)}` : '–';
+    $('#stat-calls').textContent = fmt.format(stats.calls);
+    $('#stat-tris').textContent = fmt.format(stats.tris);
+  }
+
+  function showBuilding(i) {
+    const box = $('#building');
+    if (i == null || !state.city) {
+      box.replaceChildren(el('p', 'muted', '건물을 누르면 원본 높이·바닥면적·지면 표고가 여기에 나옵니다.'));
+      return;
+    }
+    const b = state.city.b;
+    const f = state.city.meta.frame;
+    const est = b.flags[i];
+    const lon = f.lon0 + b.x[i] / f.m_lon;
+    const lat = f.lat0 + b.y[i] / f.m_lat;
+    const rows = [
+      ['높이', b.flags[i] & 2 ? `${fmt.format(b.h[i])} m — 추정(보정)` : est ? '5 m — 추정' : `${fmt.format(b.h[i])} m`],
+      ...(b.h0[i] > 0 ? [['시작 높이', `${fmt.format(b.h0[i])} m`]] : []),
+      ['바닥면적(원본 윤곽)', b.area[i] >= 65535 ? '65,535 ㎡ 이상' : `${fmt.format(b.area[i])} ㎡`],
+      ['표시 상자', `${b.w[i].toFixed(1)} × ${b.d[i].toFixed(1)} m`],
+      ['지면 표고', `${world.groundAt(b.x[i], b.y[i]).toFixed(1)} m`],
+      ...placeRows(b.x[i], b.y[i]).rows,
+    ];
+    box.replaceChildren(
+      ...rows.map(([k, v]) => { const d = el('div', 'kv'); d.append(el('span', null, k), el('b', 'num', v)); return d; }),
+      el('p', 'muted small', b.flags[i] & 2
+        ? 'OSM에 시작 높이(min_height)만 있고 높이가 없어 기본값 5m가 시작 높이보다 낮았습니다. 시작 높이 + 3m로 세운 추정값입니다.'
+        : est
+        ? 'OSM에 height·building:levels가 없어 OpenMapTiles가 넣는 기본값입니다. 실제 높이와 다를 수 있습니다.'
+        : 'OSM height 태그(없으면 building:levels × 3.66m)를 OpenMapTiles가 정수로 반올림한 값입니다.'),
+      linksNode(lat, lon, placeRows(b.x[i], b.y[i]).label),
+    );
+  }
+
+  function placeRows(x, n) {
+    const [lon, lat] = toLonLat(state.city.meta.frame, x, n);
+    const gu = locator.district(x, n);
+    const q = locator.nearestQuarter(x, n);
+    return {
+      lat, lon,
+      rows: [
+        ['구·군', gu || '경계 밖'],
+        ['가까운 동네', q ? `${q.name} (이름 점에서 ${fmt.format(Math.round(q.dist))}m)` : '2.5km 안에 없음'],
+        ['위도·경도', `${lat.toFixed(5)}, ${lon.toFixed(5)}`],
+      ],
+      label: [gu, q?.name].filter(Boolean).join(' ') || state.city.meta.name,
+    };
+  }
+
+  function linksNode(lat, lon, name) {
+    const p = el('p', 'links small');
+    p.append(document.createTextNode('실제 지도에서 보기: '));
+    externalLinks(lat, lon, name).forEach(([t, href], i) => {
+      if (i) p.append(document.createTextNode(' · '));
+      const a = el('a', null, t);
+      a.href = href;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      p.append(a);
+    });
+    return p;
+  }
+
+  function kvRows(rows) {
+    return rows.map(([k, v]) => { const d = el('div', 'kv'); d.append(el('span', null, k), el('b', 'num', v)); return d; });
+  }
+
+  /** 건물이 아닌 땅을 눌렀을 때 — 그 지점의 실제 위치 정보 */
+  function showPoint(p, title) {
+    if (!p || !state.city) { showBuilding(null); return; }
+    const info = placeRows(p.x, p.n);
+    $('#building').replaceChildren(
+      el('p', 'muted small', title ? `📍 ${title}` : '누른 지점(건물 아님)'),
+      ...kvRows([...info.rows, ['지면 표고', `${p.elev.toFixed(1)} m`]]),
+      linksNode(info.lat, info.lon, info.label),
+    );
+  }
+
+  function renderCursor(p) {
+    const box = $('#cursor');
+    if (!p || !state.city) { box.textContent = '지도 위에 마우스를 올리면 그 지점의 위도·경도·표고·구가 나옵니다.'; return; }
+    const [lon, lat] = toLonLat(state.city.meta.frame, p.x, p.n);
+    const gu = locator.district(p.x, p.n);
+    const q = locator.nearestQuarter(p.x, p.n, 1500);
+    box.textContent = `${lat.toFixed(5)}°N ${lon.toFixed(5)}°E · 표고 ${p.elev.toFixed(0)}m · ${gu || '경계 밖'}${q ? ` · ${q.name} 근처` : ''}`;
+  }
+
+  function renderLabelToggles() {
+    $('#label-groups').replaceChildren(...Object.entries(LABEL_GROUPS).map(([g, t]) => {
+      const lab = el('label', 'check');
+      const cb = el('input');
+      cb.type = 'checkbox';
+      cb.checked = true;
+      cb.addEventListener('change', () => labels.setGroup(g, cb.checked));
+      const count = el('span', 'num muted', '');
+      count.dataset.group = g;
+      lab.append(cb, document.createTextNode(t), count);
+      return lab;
+    }));
+  }
+
+  function renderLabelCounts(mapinfo) {
+    const byGroup = {};
+    for (const [k, n] of Object.entries(mapinfo.counts)) {
+      if (k === 'city' && mapinfo.districts.length > 1) continue; // 구가 있는 도시는 시 이름표를 띄우지 않는다
+      const g = LABEL_KINDS[k]?.group;
+      if (g) byGroup[g] = (byGroup[g] || 0) + n;
+    }
+    for (const s of document.querySelectorAll('#label-groups [data-group]')) s.textContent = fmt.format(byGroup[s.dataset.group] || 0);
+  }
+
+  function renderLegend() {
+    const items = [
+      ['swatch--water', '물(바다·강·호수)'], ['swatch--wood', '숲'], ['swatch--park', '공원·녹지'],
+      ['swatch--low', '낮은 건물'], ['swatch--high', '높은 건물(180m+)'], ['swatch--est', '추정 높이 건물'],
+    ];
+    const roadItems = [1, 3, 5, 6, 8].map((k) => [ROAD_STYLE[k].color, ROAD_STYLE[k].name]);
+    $('#legend').replaceChildren(
+      ...items.map(([cls, t]) => { const li = el('li'); li.append(el('i', `swatch ${cls}`), document.createTextNode(t)); return li; }),
+      ...roadItems.map(([c, t]) => { const li = el('li'); const i = el('i', 'swatch swatch--road'); i.style.background = c; li.append(i, document.createTextNode(t)); return li; }),
+    );
+  }
+
+  /** 넘겨받은 지점을 이 도시 좌표로 옮겨 표시하고 그곳으로 날아간다. 도시 범위 밖이면 알리고 무시한다. */
+  /** 시군구 이름 → 그 청사 이름표(광양시 → 광양시청, 세종시 → 세종특별자치시청), 없으면 구 이름표 자리 */
+  function seatOf(mapinfo, place) {
+    const stem = place.replace(/[시군구]$/, '');
+    const gov = mapinfo.labels.find((l) => l.k === 'gov' && (l.name === `${place}청` || (l.name.startsWith(stem) && l.name.endsWith(`${place.slice(-1)}청`))));
+    if (gov) return { x: gov.x, n: gov.n, name: gov.name };
+    const d = mapinfo.districts.find((x) => x.name === place);
+    return d ? { x: d.x, n: d.n, name: `${d.name} 이름표 자리` } : null;
+  }
+
+  function applyFocus(key, meta, mapinfo) {
+    const seat = want && want.city === key && want.place ? seatOf(mapinfo, want.place) : null;
+    const focus = seat ? { x: seat.x, n: seat.n, label: `${want.label || want.place} · ${seat.name}` }
+      : want && want.city === key && want.lat != null ? (() => {
+      const [x, n] = toLocal(meta.frame, want.lon, want.lat);
+      return x >= 0 && n >= 0 && x <= meta.frame.width && n <= meta.frame.height ? { x, n, label: want.label || '넘겨받은 지점' } : null;
+    })() : null;
+    labels.setLabels(mapinfo, world.frame, focus);
+    world.setFocus(focus);
+    if (want && want.city === key && want.lat != null && !focus) $('#cursor').textContent = `넘겨받은 좌표(${want.lat}, ${want.lon})가 ${meta.name} 지도 범위 밖입니다.`;
+    if (focus && !want.done) {
+      want.done = true;
+      world.flyToLocal(focus.x, focus.n, 1600);
+      showPoint({ x: focus.x, n: focus.n, elev: world.groundAt(focus.x, focus.n) }, focus.label);
+    }
+  }
+
+  function syncUrl(key) {
+    const q = new URLSearchParams(location.search);
+    q.set('city', key);
+    if (!want || want.city !== key) { q.delete('lat'); q.delete('lon'); q.delete('label'); q.delete('place'); }
+    try { history.replaceState(null, '', `${location.pathname}?${q}${location.hash}`); } catch { /* 샌드박스 등에서 막히면 주소만 그대로 */ }
+  }
+
+  loadCity(want ? want.city : 'seoul');
+}
+
+main().catch((e) => {
+  const n = document.querySelector('#error');
+  n.textContent = `시작하지 못했습니다: ${e.message}`;
+  n.hidden = false;
+});

@@ -1,6 +1,6 @@
 // 3D PAX — 미니어처 대한민국에서 공공AX 사례를 탐험하는 화면.
 // 3D는 덧입힌 층이다: WebGL이 없어도 오른쪽 목록(검색·축 → 값 → 사례 → 상세 링크)만으로 전부 쓸 수 있다.
-import { buildAxes, placeText, TASK_COLORS, SHAPES, SEATS, caseTargetUrl } from './pax3d-data.js?v=a28d94ec';
+import { buildAxes, placeText, TASK_COLORS, SHAPES, SEATS, CITY3D, caseTargetUrl } from './pax3d-data.js?v=522678f7';
 import { createTour } from './pax3d-tour.js?v=9e8d6421';
 
 const $ = (sel) => document.querySelector(sel);
@@ -82,6 +82,35 @@ async function main() {
     return { cases: ordered, target: { mode: 'alley', label: loc.place, address: null } };
   }
 
+  // ---- 도시 3D 지도(city3d/) — 서울·부산·세종·대구·광양은 실제 건물·지형으로 세운 상세 3D 지도로 연다 ----
+  function city3dKey(loc) {
+    if (!loc) return null;
+    if (loc.place === '전남') return loc.sgg && loc.sgg.name === '광양시' ? 'gwangyang' : null;
+    if (loc.place === '대구' && loc.sgg && loc.sgg.name === '군위군') return null; // 도시 지도 범위 밖
+    return CITY3D[loc.place] || null;
+  }
+  /** 사례 자리(기관 소재지 → 시군구 중심 → 시·도청 앞)를 좌표로 넘긴다. 이름표에는 기관명·시군구만 싣는다. */
+  function city3dUrl(loc, caseId) {
+    const key = city3dKey(loc);
+    if (!key) return null;
+    const q = new URLSearchParams({ city: key });
+    const pt = loc.inst ? [loc.inst.lat, loc.inst.lon, loc.inst.name]
+      : loc.sgg ? [loc.sgg.center[1], loc.sgg.center[0], `${loc.place} ${loc.sgg.name}`]
+        : SEATS[loc.place] ? [SEATS[loc.place][1], SEATS[loc.place][0], `${loc.place} 시·도청 앞`] : null;
+    if (pt) { q.set('lat', pt[0].toFixed(6)); q.set('lon', pt[1].toFixed(6)); q.set('label', pt[2]); }
+    // 시군구까지만 아는 자리는 시군구 중심점(산 한가운데일 수 있다) 대신 그 청사로 맞추라고 넘긴다
+    if (!loc.inst && loc.sgg) q.set('place', loc.sgg.name);
+    if (caseId) q.set('case', caseId);
+    return `city3d/?${q}`;
+  }
+  function city3dFromSelection() {
+    if (state.caseId) return city3dUrl(model.located.get(state.caseId), state.caseId);
+    const v = state.axis === 'region' ? currentValue() : null;
+    const pick = v && cases.find((c) => v.ids.has(c.id));
+    const key = pick && city3dKey(model.located.get(pick.id));
+    return key ? `city3d/?city=${key}` : null;
+  }
+
   const params = new URLSearchParams(location.search);
   const state = {
     axis: model.axes.some((a) => a.key === params.get('axis')) ? params.get('axis') : 'region',
@@ -100,7 +129,7 @@ async function main() {
   let world = null;
   const tip = $('#pax3d-tip');
   try {
-    const { createWorld } = await import('./pax3d-world.js?v=456645c1');
+    const { createWorld } = await import('./pax3d-world.js?v=7d29514f');
     // 실제 지형(수치표고) — 못 받으면 평평한 판으로 그대로 간다
     const terrain = await import('./pax3d-terrain.js?v=a3bd09aa').then((t) => t.loadTerrain()).catch(() => null);
     world = createWorld($('#pax3d-canvas'), {
@@ -330,6 +359,13 @@ async function main() {
       actions.appendChild(go);
     }
     actions.appendChild(walk);
+    const city3d = city3dUrl(loc, c.id);
+    if (city3d) {
+      const a = el('a', 'pax3d-btn', '🏙 실제 도시 3D 지도');
+      a.href = city3d;
+      a.title = '실제 OSM 건물·도로·지형으로 세운 상세 3D 도시 지도에서 이 자리를 봅니다';
+      actions.appendChild(a);
+    }
     const nodes = [
       thumb(c, 'pax3d-case__thumb'),
       el('p', 'pax3d-case__org', c.org),
@@ -440,6 +476,10 @@ async function main() {
     const sel = streetFromSelection();
     if (sel) openStreetView(sel);
     else $('#pax3d-summary').textContent = '사례를 하나 고르거나 광역시도 탭에서 시도·시군구·섬을 고른 뒤 거리 산책을 눌러 주세요';
+  });
+
+  $('#pax3d-city3d').addEventListener('click', () => {
+    location.href = city3dFromSelection() || 'city3d/';
   });
 
   let qTimer = null;

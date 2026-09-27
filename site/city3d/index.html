@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>다섯 도시 입체지도</title>
+<meta name="description" content="서울·부산·세종·대구·광양을 OpenStreetMap 건물·도로·물길과 실제 지형 표고로 세운 3D 지도 — 구 경계·실제 이름표·2D 연동 지도, 주간·일몰·야간, 건물별 원본 높이와 추정 표시.">
+<link rel="canonical" href="https://hollobit.github.io/PAX/city3d/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="다섯 도시 입체지도 — 3D PAX">
+<meta property="og:description" content="OpenStreetMap 건물·도로·물길과 실제 지형으로 세운 서울·부산·세종·대구·광양 3D 지도.">
+<meta property="og:url" content="https://hollobit.github.io/PAX/city3d/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap">
+<style>
+  /* 지도 앱이라 어두운 유리판 한 가지 모습으로 고정한다 — 모든 색을 명시. */
+  :root {
+    color-scheme: dark;
+    --ground: #0b1017;
+    --glass: rgba(14, 20, 29, 0.86);
+    --glass-strong: rgba(14, 20, 29, 0.95);
+    --ink: #e8edf2;
+    --ink-soft: #9fb0c0;
+    --line: rgba(160, 185, 210, 0.22);
+    --accent: #f0a950;
+    --accent-ink: #1a1206;
+    --est: #b9b3a8;
+    --focus: #7fc4ff;
+    --font: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--font); font-size: 14px; overflow: hidden; }
+  #map { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+  .card { background: var(--glass); border: 1px solid var(--line); border-radius: 10px; backdrop-filter: blur(6px); }
+  .top { position: fixed; top: calc(12px + env(safe-area-inset-top, 0px)); left: 16px; right: 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-start; pointer-events: none; }
+  .top > * { pointer-events: auto; }
+  .brand { padding: 10px 14px; display: grid; gap: 8px; }
+  .brand h1 { margin: 0; font-size: 17px; font-weight: 700; letter-spacing: -0.01em; text-wrap: balance; }
+  .brand p { margin: 0; color: var(--ink-soft); font-size: 12px; }
+  .controls { margin-left: auto; padding: 10px 12px; display: grid; gap: 8px; }
+  .row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .label { color: var(--ink-soft); font-size: 11px; letter-spacing: 0.06em; min-width: 3.2em; }
+  .seg { font: inherit; font-size: 13px; color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; cursor: pointer; }
+  .seg[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 700; }
+  .seg:focus-visible, .chip:focus-visible, #panel-toggle:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  #vscale-note { margin: 0; color: var(--ink-soft); font-size: 11.5px; max-width: 34ch; }
+  #panel { position: fixed; top: calc(150px + env(safe-area-inset-top, 0px)); right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); width: min(340px, calc(100% - 32px)); overflow: auto; padding: 12px 14px; display: flex; flex-direction: column; gap: 14px; }
+  #panel h2 { margin: 0 0 6px; font-size: 11px; letter-spacing: 0.08em; color: var(--ink-soft); font-weight: 500; }
+  .kv { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; border-bottom: 1px dashed var(--line); font-size: 13px; }
+  .kv span { color: var(--ink-soft); }
+  .num { font-family: var(--mono); font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; }
+  .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .stat { padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; }
+  .stat small { display: block; color: var(--ink-soft); font-size: 11px; }
+  .stat b { font-family: var(--mono); font-size: 15px; font-variant-numeric: tabular-nums; }
+  .muted { color: var(--ink-soft); margin: 4px 0 0; font-size: 12.5px; line-height: 1.5; }
+  .small { font-size: 11.5px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font: inherit; font-size: 12.5px; color: var(--ink); background: rgba(255, 255, 255, 0.05); border: 1px solid var(--line); border-radius: 6px; padding: 4px 9px; cursor: pointer; }
+  .chip--est { border-style: dashed; }
+  #legend { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 10px; font-size: 12px; }
+  #legend li { display: flex; align-items: center; gap: 6px; }
+  .swatch { display: inline-block; width: 14px; height: 10px; border-radius: 2px; flex: none; }
+  .swatch--water { background: #3a7bbf; } .swatch--wood { background: #557f47; } .swatch--park { background: #86b366; }
+  .swatch--low { background: #efe8dc; } .swatch--high { background: #8fa9c6; }
+  .swatch--est { background: repeating-linear-gradient(45deg, #b9b3a8 0 3px, #8f897f 3px 5px); }
+  .swatch--road { height: 4px; }
+  .check { display: flex; gap: 8px; align-items: center; font-size: 12.5px; }
+  .src { margin: 0; padding-left: 1.1em; display: grid; gap: 4px; font-size: 12px; color: var(--ink-soft); line-height: 1.45; }
+  .src b { color: var(--ink); font-weight: 500; }
+  a { color: var(--focus); }
+  #busy, #error { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); padding: 8px 14px; border-radius: 999px; background: var(--glass-strong); border: 1px solid var(--line); font-size: 13px; max-width: calc(100% - 32px); }
+  #error { border-color: #e0685a; color: #ffd9d3; border-radius: 10px; }
+  #panel-toggle { display: none; }
+  /* 지도 이름표(3D 위 DOM) */
+  #labels { position: fixed; inset: 0; pointer-events: none; overflow: hidden; }
+  .lb { position: absolute; left: 0; top: 0; pointer-events: auto; cursor: pointer; font: 500 12px var(--font); white-space: nowrap; color: #16202c; background: rgba(255, 255, 255, 0.86); border: 1px solid rgba(20, 30, 45, 0.25); border-radius: 5px; padding: 1px 6px; line-height: 1.45; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); }
+  .lb[hidden] { display: none; }
+  .lb:focus-visible { outline: 2px solid var(--focus); }
+  .lb--district { font-size: 15px; font-weight: 700; color: #f4ecff; background: rgba(60, 38, 100, 0.78); border-color: rgba(200, 170, 255, 0.6); padding: 2px 9px; }
+  .lb--quarter { color: #2d2340; background: rgba(245, 240, 255, 0.82); }
+  .lb--road { font-size: 11px; color: #5a3a0a; background: rgba(255, 238, 205, 0.9); border-color: rgba(200, 140, 50, 0.5); }
+  .lb--transit { color: #fff; background: rgba(35, 70, 140, 0.88); border-color: rgba(140, 180, 255, 0.6); }
+  .lb--peak { color: #24361b; background: rgba(226, 240, 212, 0.9); }
+  .lb--water { color: #0e3a66; background: rgba(214, 234, 252, 0.9); font-style: italic; }
+  .lb--focus { font-size: 13px; font-weight: 700; color: #1a1206; background: #ff9d3d; border-color: #ffd2a3; box-shadow: 0 0 0 3px rgba(255, 138, 31, 0.35), 0 2px 6px rgba(0, 0, 0, 0.35); z-index: 1; }
+  .back { font-size: 12px; color: var(--accent); text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+  .lb--poi { font-size: 11px; color: #402414; background: rgba(255, 246, 236, 0.9); }
+  /* 2D 지도 + 커서 위치 */
+  #minimap-card { position: fixed; left: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); width: 280px; padding: 8px; display: grid; gap: 6px; }
+  #minimap-card.mini--big { width: min(560px, calc(100% - 400px)); }
+  #minimap-card header { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 11px; color: var(--ink-soft); letter-spacing: 0.04em; }
+  #minimap { width: 100%; aspect-ratio: 1.25; display: block; border-radius: 6px; cursor: crosshair; touch-action: none; }
+  #minimap-card.mini--big #minimap { aspect-ratio: 1.15; }
+  #cursor { margin: 0; font-family: var(--mono); font-size: 11.5px; color: var(--ink); line-height: 1.45; min-height: 2.9em; }
+  .links a { margin: 0 1px; }
+  #label-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 3px 10px; }
+  #label-groups .num { margin-left: auto; font-size: 11px; }
+  #label-groups .check { gap: 6px; }
+  @media (max-width: 760px) {
+    #minimap-card { width: 150px; padding: 5px; bottom: calc(60px + env(safe-area-inset-bottom, 0px)); }
+    #minimap-card header span, #cursor, #minimap-size { display: none; }
+    .brand p { display: none; }
+    .controls { margin-left: 0; }
+    #vscale-note { display: none; }
+    #panel { top: auto; left: 16px; right: 16px; width: auto; max-height: 55vh; display: none; }
+    #panel.panel--open { display: flex; }
+    #panel-toggle { display: block; position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); font: inherit; font-size: 13px; color: var(--accent-ink); background: var(--accent); border: 0; border-radius: 999px; padding: 8px 14px; font-weight: 700; }
+    #panel.panel--open ~ #panel-toggle { bottom: calc(55vh + 24px); }
+  }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<canvas id="map" aria-label="선택한 도시의 3차원 지도. 끌어서 이동, 오른쪽 끌기로 회전, 휠로 확대합니다."></canvas>
+
+<div id="labels" aria-label="지도 이름표"></div>
+
+<div class="top">
+  <header class="card brand">
+    <a class="back" id="back" href="../pax3d.html">← 3D PAX로 돌아가기</a>
+    <h1>다섯 도시 입체지도</h1>
+    <p>OpenStreetMap 건물·도로·물길과 실제 지형으로 세운 서울·부산·세종·대구·광양</p>
+    <div class="row" id="cities" role="group" aria-label="도시 고르기"></div>
+  </header>
+  <section class="card controls" aria-label="보기 설정">
+    <div class="row"><span class="label">시간대</span><div class="row" id="modes" role="group" aria-label="시간대"></div></div>
+    <div class="row"><span class="label">지형</span>
+      <div class="row" id="vscale" role="group" aria-label="지형 배율">
+        <button type="button" class="seg" data-v="1" aria-pressed="true">1× 실제</button>
+        <button type="button" class="seg" data-v="2" aria-pressed="false">2× 과장</button>
+      </div>
+    </div>
+    <p id="vscale-note">1× — 실제 축척입니다. 수평·수직 모두 같은 미터 단위이고 과장하지 않았습니다.</p>
+  </section>
+</div>
+
+<aside id="panel" class="card" aria-label="지도 정보">
+  <section>
+    <h2>렌더링 — 이 기기에서 실측</h2>
+    <div class="stats">
+      <div class="stat"><small>FPS(1초 평균)</small><b id="stat-fps">–</b></div>
+      <div class="stat"><small>표시 건물 / 전체</small><b id="stat-vis">–</b></div>
+      <div class="stat"><small>드로 콜</small><b id="stat-calls">–</b></div>
+      <div class="stat"><small>삼각형</small><b id="stat-tris">–</b></div>
+    </div>
+    <p class="muted small" id="budget"></p>
+    <p class="muted small" id="loadtime"></p>
+  </section>
+  <section>
+    <h2>선택한 건물</h2>
+    <div id="building"></div>
+    <label class="check"><input type="checkbox" id="mark" checked> 추정 높이 건물을 회색으로 표시</label>
+  </section>
+  <section>
+    <h2>지도 이름표 — OSM 실제 이름</h2>
+    <div id="label-groups"></div>
+    <p class="muted small">이름·위치는 같은 스냅샷의 OpenStreetMap 자료입니다. 가까이 갈수록 동네·길·건물 이름이 늘어나고, 겹치면 큰 단위(구 → 역·산 → 길·동네)를 먼저 보입니다. 이름표를 누르면 그곳으로 이동합니다. 보라색 선은 구·군 경계(SGIS)입니다.</p>
+  </section>
+  <section>
+    <h2>자료 수</h2>
+    <div id="counts"></div>
+    <p class="muted small" id="est-note"></p>
+    <p class="muted small" id="city-note"></p>
+    <p class="muted small" id="verify"></p>
+  </section>
+  <section>
+    <h2>바로 가기</h2>
+    <div class="chips" id="landmarks"></div>
+    <p class="muted small">점선 테두리는 지도 자료에서 이름을 찾지 못해 대략 좌표로 둔 곳입니다.</p>
+  </section>
+  <section>
+    <h2>범례</h2>
+    <ul id="legend"></ul>
+  </section>
+  <section>
+    <h2>출처·스냅샷·라이선스</h2>
+    <ul class="src">
+      <li><b>건물·도로·물길·숲</b> — OpenFreeMap 벡터 타일(OpenMapTiles 형식) z14, 스냅샷 <span id="snapshot"></span>. 자료 © OpenStreetMap contributors, ODbL 1.0.</li>
+      <li><b>지형</b> — AWS Terrain Tiles(Mapzen Terrarium) z13, 한국은 주로 SRTM(퍼블릭 도메인). <span id="terrain-range"></span></li>
+      <li><b>도시·구·군 경계</b> — 통계청 SGIS 행정동 경계(공공누리 1유형)를 vuski/admdongkor가 가공(CC BY 4.0), 시군구로 병합·12m 단순화.</li>
+      <li><b>지도 이름표</b> — 같은 OpenFreeMap 스냅샷의 place·poi·transportation_name·waterway·water_name·mountain_peak·aerodrome_label 레이어(© OpenStreetMap contributors, ODbL 1.0). “실제 지도에서 보기” 링크는 좌표만 넘겨 새 창으로 엽니다.</li>
+      <li><b>건물 모양</b> — 원본 윤곽을 최소 회전 직사각형 상자로 근사(면적·높이는 원본 값). 자세한 한계는 <a href="README.md" target="_blank" rel="noopener">README</a>.</li>
+    </ul>
+  </section>
+</aside>
+<figure id="minimap-card" class="card" aria-label="2D 지도와 현재 3D 시야">
+  <header><span>2D 지도 · 주황 = 지금 보이는 곳</span><button type="button" class="seg" id="minimap-size" aria-pressed="false">크게</button></header>
+  <canvas id="minimap" aria-label="북쪽이 위인 평면 지도. 누르거나 끌면 3D 시점이 그곳으로 옮겨집니다."></canvas>
+  <p id="cursor">지도 위에 마우스를 올리면 그 지점의 위도·경도·표고·구가 나옵니다.</p>
+</figure>
+<button type="button" id="panel-toggle" aria-expanded="false" aria-controls="panel">정보</button>
+<p id="busy" role="status">불러오는 중…</p>
+<p id="error" role="alert" hidden></p>
+
+<script type="importmap">
+  { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+  } }
+</script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

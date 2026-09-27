@@ -1,0 +1,78 @@
+{
+ "snapshot": "20260913_164504_pt",
+ "cities": {
+  "snapshot": "20260913_164504_pt",
+  "cities": {
+   "snapshot": "20260913_164504_pt",
+   "cities": {
+    "snapshot": "20260913_164504_pt",
+    "cities": {
+     "gwangyang": {
+      "name": "광양",
+      "buildings": 6134
+     }
+    },
+    "seoul": {
+     "name": "서울",
+     "buildings": 167255
+    },
+    "busan": {
+     "name": "부산",
+     "buildings": 41244
+    },
+    "sejong": {
+     "name": "세종",
+     "buildings": 26551
+    },
+    "daegu": {
+     "name": "대구",
+     "buildings": 42109
+    },
+    "gwangyang": {
+     "name": "광양",
+     "buildings": 6134
+    }
+   },
+   "seoul": {
+    "name": "서울",
+    "buildings": 167255
+   },
+   "busan": {
+    "name": "부산",
+    "buildings": 41244
+   },
+   "sejong": {
+    "name": "세종",
+    "buildings": 26551
+   },
+   "daegu": {
+    "name": "대구",
+    "buildings": 42109
+   },
+   "gwangyang": {
+    "name": "광양",
+    "buildings": 6134
+   }
+  },
+  "seoul": {
+   "name": "서울",
+   "buildings": 167255
+  },
+  "busan": {
+   "name": "부산",
+   "buildings": 41244
+  },
+  "sejong": {
+   "name": "세종",
+   "buildings": 26551
+  },
+  "daegu": {
+   "name": "대구",
+   "buildings": 42109
+  },
+  "gwangyang": {
+   "name": "광양",
+   "buildings": 6134
+  }
+ }
+}

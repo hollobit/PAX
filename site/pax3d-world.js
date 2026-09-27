@@ -2,7 +2,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { toon, toonGradient, skyTexture, signSprite, createPostPass } from './pax3d-look.js?v=a66df86b';
-import { ISLANDS, SEATS, TASK_COLORS, FALLBACK_COLOR, shapeOf } from './pax3d-data.js?v=a28d94ec';
+import { ISLANDS, SEATS, TASK_COLORS, FALLBACK_COLOR, shapeOf } from './pax3d-data.js?v=522678f7';
 import { buildingGeometries, mountains, trees, clouds, pin, dokdo } from './pax3d-props.js?v=83d5cb9b';
 import {
   LAND_H, project, unproject, toWorld, projectPolys, rng, inPolys, polysArea, randomIn, scatter, blobRing,

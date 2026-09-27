@@ -44,6 +44,9 @@ export const SEATS = {
   제주: [126.498, 33.489],
 };
 
+// 상세 3D 도시 지도(city3d/)가 있는 도시 — 광양은 전남 광양시라 시군구로 따로 판정한다(pax3d.js city3dKey)
+export const CITY3D = { 서울: 'seoul', 부산: 'busan', 세종: 'sejong', 대구: 'daegu' };
+
 export const ISLAND_KEYS = ISLANDS.map((i) => i.key);
 
 // 건물 모양 = 누가 만들었나. 색(업무)과 독립한 두 번째 시각 축.
