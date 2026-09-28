@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-09-28T06:34:45Z",
- "count": 618,
+ "updated_at": "2026-09-28T14:45:25Z",
+ "count": 628,
  "articles": [
   {
    "url": "https://www.theguru.co.kr/mobile/article.html?no=107563",
@@ -20,6 +20,32 @@
    "title": "\"핵잠 빗장 열린다\"···HD현대·한화 '제2 KDDX' 수주전 펼쳐지나",
    "outlet": "서울파이낸스",
    "published": "2026-09-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.segye.com/newsView/20260928514968?OutUrl=naver",
+   "title": "[단독] 2026년 데이터센터 신청 88건 ‘역대 최대’",
+   "outlet": "세계일보",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.khan.co.kr/article/202609281340001",
+   "title": "한국인 AI 사용률 40% 첫 돌파···주요국 중 상승폭 ‘최상위’",
+   "outlet": "경향신문",
+   "published": "2026-09-28",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-28",
@@ -94,6 +120,32 @@
    ]
   },
   {
+   "url": "https://www.chosun.com/economy/tech_it/2026/09/28/ND2KGALDS5HGFDF7TEX26ZBC4Q",
+   "title": "[단독] 정부 2000억 쓴 ‘국가대표 AI’ 접고, 5조 들여 SPC 설립 검토",
+   "outlet": "조선일보",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215638",
+   "title": "앤트로픽, '오퍼스 5.5' 프롬프트 팁 공개...\"불필요 문구 삭제해야\"",
+   "outlet": "AI타임스",
+   "published": "2026-09-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://v.daum.net/v/20260927060007862",
    "title": "[단독] 방사청, 18년 묵은 ‘망분리’ 빗장 푼다…K-방산 클라우드 대전환",
    "outlet": "Daum | 에너지경제",
@@ -111,6 +163,32 @@
    "title": "OpenAI says 80 to 90 percent of its research already targets GPT 7 and beyond",
    "outlet": "The Decoder",
    "published": "2026-09-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://online.fliphtml5.com/selub/1-mZZV",
+   "title": "국회 의원실 PPT 최신ver",
+   "outlet": "online.fliphtml5.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://online.fliphtml5.com/egubr/bbyv",
+   "title": "국회의원 PPT 스타일 (2022ver)",
+   "outlet": "online.fliphtml5.com",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-28",
@@ -213,6 +291,19 @@
   {
    "url": "https://n.news.naver.com/article/081/0003683144?sid=101",
    "title": "한화에어로·KAI, KF-21 장거리 공대공 유도탄 국산화 MOU…항공무장 협업 속도",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/023/0004000761?sid=105",
+   "title": "[단독] 정부 2000억 쓴 ‘국가대표 AI’ 접고, 5조 들여 SPC 설립 검토",
    "outlet": "n.news.naver.com",
    "published": "",
    "kind": "기사",
@@ -384,6 +475,45 @@
    "title": "Gemini 3.8 text-to-speech says hello",
    "outlet": "Google",
    "published": "2026-09-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-28-px-로컬-llm-장비-실사용",
+   "title": "[공공AX 네트워크] 900만원 맥 스튜디오 대신 구독형과 NVIDIA GPU — 로컬 LLM 장비 질문에 개발자들이 실사용 수치로 답했다",
+   "outlet": "akwiki.org",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-28-px-기획예산처-솔라-브리티",
+   "title": "[공공AX 네트워크] 기획예산처 내부망 브리티웍스에 솔라 Pro4 — 제미나이 대신 국산 LLM, 정책 기조가 작용했다는 전언이 나왔다",
+   "outlet": "akwiki.org",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-28-cross-ai-일자리-번역-행정",
+   "title": "[에르메스단·공공AX 네트워크] 번역가는 검수자로, 한 기관은 행정 채용 대신 클로드 구독을 — 두 방이 같은 오후 AI가 줄이는 자리를 말했다",
+   "outlet": "akwiki.org",
+   "published": "2026-09-28",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-28",
