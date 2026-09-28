@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-09-27T22:48:58Z",
- "count": 76,
+ "updated_at": "2026-09-28T06:34:41Z",
+ "count": 78,
  "videos": [
+  {
+   "id": "iMH91sfqpqU",
+   "title": "사람이 만든 데이터가 아니라면... AI 모델이 붕괴되는 걸 입증한 네이처 논문 등장 | AI 주도권은  빅테크 플랫폼 기업이 더 강해진다?",
+   "channel": "안될공학 - IT 테크 신기술",
+   "url": "https://www.youtube.com/watch?v=iMH91sfqpqU",
+   "thumb": "https://i.ytimg.com/vi/iMH91sfqpqU/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "9dkNqHs1PYM",
+   "title": "AI로 1인 Ontology SaaS 개발 운영과정",
+   "channel": "Alex AI",
+   "url": "https://www.youtube.com/watch?v=9dkNqHs1PYM",
+   "thumb": "https://i.ytimg.com/vi/9dkNqHs1PYM/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-27",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "y2S7XMWDF6U",
    "title": "[9월-1 ON명사특강] AI와 일하는 조직이 알아야 할 것",

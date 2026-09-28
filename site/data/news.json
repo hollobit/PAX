@@ -1,7 +1,397 @@
 {
- "updated_at": "2026-09-27T22:49:02Z",
- "count": 588,
+ "updated_at": "2026-09-28T06:34:45Z",
+ "count": 618,
  "articles": [
+  {
+   "url": "https://www.theguru.co.kr/mobile/article.html?no=107563",
+   "title": "[K-방산 AtoZ] 미사일 막고 드론 잡는다…현대로템 K2 '흑표'의 생존법",
+   "outlet": "theguru.co.kr",
+   "published": "2026-09-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.seoulfn.com/news/articleView.html?idxno=638550",
+   "title": "\"핵잠 빗장 열린다\"···HD현대·한화 '제2 KDDX' 수주전 펼쳐지나",
+   "outlet": "서울파이낸스",
+   "published": "2026-09-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.incheonilbo.com/news/articleView.html?idxno=1332906",
+   "title": "경기지역 데이터센터 곳곳 추진…주민 반발 장기화",
+   "outlet": "인천일보",
+   "published": "2026-09-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.hani.co.kr/arti/economy/it/1279689.html",
+   "title": "[단독] 노년층 54% “AI 익혀 일·소득으로 연결하고 싶다”",
+   "outlet": "한겨레",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.hani.co.kr/arti/economy/it/1279686.html",
+   "title": "[단독] 노년층 85% “AI 배우면 새 기회”…기대가 우려의 4배",
+   "outlet": "한겨레",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.etnews.com/20260927000063",
+   "title": "기획처, 내부 업무망에 국산 LLM 도입…공무원 AI 활용 확대",
+   "outlet": "미래를 보는 창 - 전자신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.cnbc.com/2026/09/26/china-ai-global-adoption.html",
+   "title": "Chinese AI models surge in global popularity — and Washington is worried",
+   "outlet": "CNBC",
+   "published": "2026-09-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://v.daum.net/v/20260927060007862",
+   "title": "[단독] 방사청, 18년 묵은 ‘망분리’ 빗장 푼다…K-방산 클라우드 대전환",
+   "outlet": "Daum | 에너지경제",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://the-decoder.com/openai-says-80-to-90-percent-of-its-research-already-targets-gpt-7-and-beyond",
+   "title": "OpenAI says 80 to 90 percent of its research already targets GPT 7 and beyond",
+   "outlet": "The Decoder",
+   "published": "2026-09-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/469/0000956241?sid=101",
+   "title": "한화 vs 현대로템·LIG… KF-21 '장거리 공대공' 수주전 관전 포인트는",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/421/0009193724?sid=100",
+   "title": "합참·유엔사, '서부전선 폭발 사고' 현장 접근…정밀검사 여건 마련",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/421/0009192884?sid=100",
+   "title": "'방산 4대 강국' 내걸었지만…중동엔 방사청 상주 인력 '0'",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/421/0009189925?sid=100",
+   "title": "한국형 '코요테' 2028년 개발 목표…\"초음속 미사일 모사 표적기\"",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/366/0001194432?sid=101",
+   "title": "[K무기열전]① 5명이 쏘던 砲, 3명이 쏜다… 美 육군이 먼저 시험하는 K9A2 기술",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/277/0005820954?sid=101",
+   "title": "\"국가 안보 방패 삼은 방산 독점 깬다\"…공정위, '철옹성' 방위산업 문턱 허문다",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/277/0005820216?sid=100",
+   "title": "천룡 비행시험 성공… 전력배치 눈앞[양낙규의 Defence Club]",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/081/0003683144?sid=101",
+   "title": "한화에어로·KAI, KF-21 장거리 공대공 유도탄 국산화 MOU…항공무장 협업 속도",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/022/0004162023?sid=100",
+   "title": "전투기만 강하면 뭐하나…공군 수송기·급유기 결함 455건 [박수찬의 軍]",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/020/0003750779?sid=100",
+   "title": "“北포로 2명, 민항기로 입국…정보당국 보호 아래 치료·조사중”",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/015/0005335751?sid=101",
+   "title": "[단독] 항공엔진 국산화 사업 첫 입찰 결국 유찰",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/014/0005580717?sid=100",
+   "title": "李대통령, 멕시코 정상회담서 방산협력…전투기 수출 교두보",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/003/0014215610?sid=101",
+   "title": "한화필리조선소, 19만㎡ 부지 추가 확보…\"美 함정 건조 본격화 기대\"",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/003/0014213952?sid=100",
+   "title": "강신철, DMZ 폭발사고·사관학교 통합 등 현안 산적…내달 국정감사 첫 시험대",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/001/0016334515?sid=100",
+   "title": "北, 개량 240㎜방사포탄 시험…\"가장치명적 무력 남부국경 집중\"(종합)",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.yes24.com/goods/detail/181000532",
+   "title": "온톨로지 | 이현종 | 처음북스(CheomBooks)",
+   "outlet": "예스24",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.etoday.co.kr/news/view/2629161",
+   "title": "UAE發 49조 방산 빅딜 열린다…한화-EDGE ‘통합대공망’ 합의에 L-SAM 첫 수출 ‘가시권’",
+   "outlet": "이투데이",
+   "published": "2026-09-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.ekn.kr/view.php?key=20260923023317757",
+   "title": "[단독] 방사청, 18년 묵은 ‘망분리’ 빗장 푼다…K-방산 클라우드 대전환",
+   "outlet": "에너지경제신문",
+   "published": "2026-09-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.asiatime.co.kr/article/20260927500009",
+   "title": "사브, ‘싱가포르 운용’ 80m급 함정으로 에스토니아 공략…한화·HD현대와 각축전",
+   "outlet": "아시아타임즈",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://kookbang.dema.mil.kr/newsWeb/m/20260928/2/ATCE_CTGR_0010030000/view.do?nav=0&nav2=0",
+   "title": "[야전은 지금] 육군미사일전략사령부창설20주년",
+   "outlet": "국방일보",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech",
+   "title": "Gemini 3.8 text-to-speech says hello",
+   "outlet": "Google",
+   "published": "2026-09-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.yna.co.kr/view/AKR20260926014200009",
    "title": "오픈AI 에이전트, 챗GPT 이용자 이미지 53장 무단 유출",
