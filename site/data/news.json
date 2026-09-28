@@ -1,7 +1,59 @@
 {
- "updated_at": "2026-09-28T14:45:25Z",
- "count": 628,
+ "updated_at": "2026-09-28T22:34:17Z",
+ "count": 638,
  "articles": [
+  {
+   "url": "https://www.yna.co.kr/view/MYH20260928002700038",
+   "title": "[AI&] \"유쾌한 홍보부터 재난 대응까지\"…지자체 'AI 행정' 성과 外",
+   "outlet": "연합뉴스",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.outsourcing.co.kr/news/articleView.html?idxno=203912",
+   "title": "[AI 뉴스] 구글 ‘제미나이 3.8 TTS’ 출시…어디서 어떻게 사용하나",
+   "outlet": "아웃소싱타임스",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42070",
+   "title": "‘제미나이 3.8 라이브’ 라이브 아바타 탑재…실시간 대화형 영상 AI 에이전트 시대 연다",
+   "outlet": "인공지능신문",
+   "published": "2026-09-26",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-27",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20260928098500017",
+   "title": "[AI프리즘] 증명서 2주→1∼2분…'장병e음'에 AI 비서 들어온다",
+   "outlet": "연합뉴스",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.theguru.co.kr/mobile/article.html?no=107563",
    "title": "[K-방산 AtoZ] 미사일 막고 드론 잡는다…현대로템 K2 '흑표'의 생존법",
@@ -33,6 +85,45 @@
    "title": "[단독] 2026년 데이터센터 신청 88건 ‘역대 최대’",
    "outlet": "세계일보",
    "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mk.co.kr/news/politics/12162989",
+   "title": "[단독] 국책연구기관 이름이 아깝다…AI환각 받아적고 “문제없음”",
+   "outlet": "매일경제",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mk.co.kr/news/it/12163316",
+   "title": "메타 AI비서가 하루만에 14만원 벌어줬다…안쓰는 구독, 알아서 해지",
+   "outlet": "매일경제",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.khan.co.kr/article/202609290600021",
+   "title": "[AI 포모와 포비아 사이]“AI 잘 쓰는지 보겠습니다”…취준생들 “어디까지 해야 잘 쓰는 건데요?”",
+   "outlet": "경향신문",
+   "published": "2026-09-29",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-28",
@@ -107,6 +198,19 @@
    ]
   },
   {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=703229",
+   "title": "\"한국 생성형 AI 사용률 세계 12위...주요 경제권서 가장 빠른 증가세\"",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.cnbc.com/2026/09/26/china-ai-global-adoption.html",
    "title": "Chinese AI models surge in global popularity — and Washington is worried",
    "outlet": "CNBC",
@@ -124,6 +228,19 @@
    "title": "[단독] 정부 2000억 쓴 ‘국가대표 AI’ 접고, 5조 들여 SPC 설립 검토",
    "outlet": "조선일보",
    "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215685",
+   "title": "앤트로픽, 클로드 플러그인 개발 포털 공개...제출·검토·분석 통합 지원",
+   "outlet": "AI타임스",
+   "published": "2026-09-27",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-28",
@@ -419,6 +536,19 @@
    ]
   },
   {
+   "url": "https://m.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609280206",
+   "title": "[단독] 폐기된 ＇모두의 AI＇에 미래대응기금 4.7조 배정",
+   "outlet": "m.wowtv.co.kr",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://m.etoday.co.kr/news/view/2629161",
    "title": "UAE發 49조 방산 빅딜 열린다…한화-EDGE ‘통합대공망’ 합의에 L-SAM 첫 수출 ‘가시권’",
    "outlet": "이투데이",
@@ -484,6 +614,45 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-09-29-px-ai-특수법인-spc-구도",
+   "title": "[공공AX 네트워크] 정부 출자 AI 특수법인, '정해진 바 없다' 해명 뒤에도 정부 5조·기업 11조 구도를 따졌다",
+   "outlet": "akwiki.org",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-29-px-ai-업무-몰림-챔피언-인증",
+   "title": "[공공AX 네트워크] AI 잘 쓰면 일만 몰린다는 호봉제의 고민, 챔피언 블루를 따도 달라진 게 없다",
+   "outlet": "akwiki.org",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-29-cross-소넷55-도착-체감-저하",
+   "title": "[3개 방 공통] GPT-6 체감 저하 불만 속 새벽에 올라온 클로드 소넷 5.5 도착 전언 — 한 밤, 세 방의 온도는 달랐다",
+   "outlet": "akwiki.org",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-09-28-px-로컬-llm-장비-실사용",
    "title": "[공공AX 네트워크] 900만원 맥 스튜디오 대신 구독형과 NVIDIA GPU — 로컬 LLM 장비 질문에 개발자들이 실사용 수치로 답했다",
    "outlet": "akwiki.org",
@@ -536,19 +705,6 @@
    ]
   },
   {
-   "url": "https://www.yna.co.kr/view/MYH20260928002700038",
-   "title": "[AI&] \"유쾌한 홍보부터 재난 대응까지\"…지자체 'AI 행정' 성과 外",
-   "outlet": "연합뉴스",
-   "published": "2026-09-28",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-27",
-   "last_shared": "2026-09-27",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
    "url": "https://www.yna.co.kr/view/AKR20260923178900530",
    "title": "'AI로 재난안전 업무 개선'…행안부, 우수사례 경진대회 개최",
    "outlet": "연합뉴스",
@@ -566,19 +722,6 @@
    "title": "관악구, 직원이 직접 만든 AI로 행정업무 자동화",
    "outlet": "시정일보",
    "published": "2026-09-27",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-27",
-   "last_shared": "2026-09-27",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.outsourcing.co.kr/news/articleView.html?idxno=203912",
-   "title": "[AI 뉴스] 구글 ‘제미나이 3.8 TTS’ 출시…어디서 어떻게 사용하나",
-   "outlet": "아웃소싱타임스",
-   "published": "2026-09-28",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-27",
@@ -631,19 +774,6 @@
    "title": "\"앱 열지 말고 AI에 시켜라\" MS 코파일럿, AI 운영체제로-경제",
    "outlet": "한국일보",
    "published": "2026-09-25",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-27",
-   "last_shared": "2026-09-27",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42070",
-   "title": "‘제미나이 3.8 라이브’ 라이브 아바타 탑재…실시간 대화형 영상 AI 에이전트 시대 연다",
-   "outlet": "인공지능신문",
-   "published": "2026-09-26",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-27",
