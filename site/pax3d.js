@@ -2,6 +2,7 @@
 // 3D는 덧입힌 층이다: WebGL이 없어도 오른쪽 목록(검색·축 → 값 → 사례 → 상세 링크)만으로 전부 쓸 수 있다.
 import { buildAxes, placeText, TASK_COLORS, SHAPES, SEATS, caseTargetUrl } from './pax3d-data.js?v=5ed46b81';
 import { createTour } from './pax3d-tour.js?v=9e8d6421';
+import { loadBookmarks, toggleBookmark, onBookmarksChanged } from './pax-bookmarks.js?v=90c7c03c';
 
 const $ = (sel) => document.querySelector(sel);
 function el(tag, cls, text) {
@@ -90,6 +91,8 @@ async function main() {
     q: params.get('q') || '',
     champQuery: '',
     shown: RESULT_PAGE,
+    bookmarks: loadBookmarks(),
+    bookmarkedOnly: params.get('bm') === '1',
   };
   $('#pax3d-q').value = state.q;
 
@@ -194,10 +197,11 @@ async function main() {
   function matchedIds() {
     const v = currentValue();
     const t = terms();
-    if (!v && !t.length) return null;
+    if (!v && !t.length && !state.bookmarkedOnly) return null;
     const ids = new Set();
     for (const c of cases) {
       if (v && !v.ids.has(c.id)) continue;
+      if (state.bookmarkedOnly && !state.bookmarks.has(c.id)) continue;
       const hay = haystack.get(c.id);
       if (t.every((w) => hay.includes(w))) ids.add(c.id);
     }
@@ -210,6 +214,7 @@ async function main() {
     if (state.value) p.set('v', state.value);
     if (state.q) p.set('q', state.q);
     if (state.caseId) p.set('case', state.caseId);
+    if (state.bookmarkedOnly) p.set('bm', '1');
     history.replaceState(null, '', `${location.pathname}?${p}`);
   }
 
@@ -299,8 +304,9 @@ async function main() {
     const bits = [];
     if (v) bits.push(`${currentAxis().label} · ${v.label}`);
     if (t.length) bits.push(`검색 '${state.q}'`);
+    if (state.bookmarkedOnly) bits.push('★ 북마크');
     const head = $('#pax3d-results-head');
-    head.replaceChildren(el('strong', null, bits.length ? bits.join(' + ') : '전체 사례'), el('span', null, ` ${list.length}건`));
+    head.replaceChildren(bookmarkFilterButton(), el('strong', null, bits.length ? bits.join(' + ') : '전체 사례'), el('span', null, ` ${list.length}건`));
     if (v && v.sub) head.appendChild(el('p', 'pax3d-results__sub', v.sub));
     if (v && v.href) {
       const a = el('a', 'pax3d-results__link', '챔피언 페이지 →');
@@ -320,13 +326,54 @@ async function main() {
       meta.append(...marked(`${c.org} · ${placeText(model.located.get(c.id))}`, t));
       b.append(thumb(c, 'pax3d-result__thumb'), title, meta);
       b.addEventListener('click', () => selectCase(c.id, { fly: true }));
-      li.appendChild(b);
+      li.className = 'pax3d-results__item';
+      li.append(b, bookmarkButton(c));
       return li;
     }));
+    if (!list.length && state.bookmarkedOnly && !state.bookmarks.size) {
+      $('#pax3d-results').appendChild(el('li', 'pax3d-empty', '아직 북마크한 사례가 없습니다. 목록의 ☆를 눌러 추가하세요.'));
+    }
     const more = $('#pax3d-more');
     more.hidden = list.length <= state.shown;
     more.textContent = `더 보기 (${list.length - state.shown}건 남음)`;
   }
+
+  // ---- 북마크 -----------------------------------------------------------------------
+  function bookmarkButton(c) {
+    const on = state.bookmarks.has(c.id);
+    const b = el('button', 'bookmark-btn pax3d-result__bookmark', on ? '★' : '☆');
+    b.type = 'button';
+    b.setAttribute('aria-pressed', String(on));
+    b.setAttribute('aria-label', `${c.title} ${on ? '북마크 해제' : '북마크 추가'}`);
+    b.title = on ? '북마크 해제' : '북마크 추가';
+    b.dataset.caseId = c.id;
+    b.addEventListener('click', () => {
+      state.bookmarks = toggleBookmark(state.bookmarks, c.id);
+      applyFilter({ fly: false });
+      // 목록을 다시 그리면 버튼이 새로 생기므로 포커스를 같은 사례의 별로 돌려놓는다
+      const again = document.querySelector(`.pax3d-result__bookmark[data-case-id="${CSS.escape(c.id)}"]`);
+      (again || $('.pax3d-bm-filter'))?.focus();
+    });
+    return b;
+  }
+
+  function bookmarkFilterButton() {
+    const n = state.bookmarks.size;
+    const b = el('button', 'pax3d-bm-filter', n ? `★ 북마크만 (${n})` : '★ 북마크만');
+    b.type = 'button';
+    b.setAttribute('aria-pressed', String(state.bookmarkedOnly));
+    b.addEventListener('click', () => {
+      state.bookmarkedOnly = !state.bookmarkedOnly;
+      state.shown = RESULT_PAGE;
+      applyFilter({ fly: true });
+    });
+    return b;
+  }
+
+  onBookmarksChanged((next) => {
+    state.bookmarks = next;
+    applyFilter({ fly: false });
+  });
 
   // ---- 사례 상세 ---------------------------------------------------------------------
   function mapLinks(loc) {

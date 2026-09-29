@@ -3341,3 +3341,34 @@ a.dash-tile:hover, a.dash-tile:focus-visible {
 .pax3d-citybar button:focus-visible { outline: 2px solid #234a72; outline-offset: 2px; }
 .pax3d-citybar__cap { font-size: 0.78rem; font-weight: 700; color: #234a72; }
 .pax3d-citybar__cap:empty { display: none; }
+
+/* ── 3D PAX 결과 목록 북마크 ─────────────────────────────── */
+
+.pax3d-results__item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.pax3d-result__bookmark {
+  margin-left: 0;
+  padding: 0.35rem 0.4rem;
+}
+
+.pax3d-bm-filter {
+  float: right;
+  margin-left: 0.4rem;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: none;
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.pax3d-bm-filter[aria-pressed="true"] {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  font-weight: 600;
+}
