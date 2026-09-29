@@ -1,13 +1,52 @@
 {
- "updated_at": "2026-09-29T11:23:38Z",
- "count": 645,
+ "updated_at": "2026-09-29T14:35:14Z",
+ "count": 648,
  "articles": [
+  {
+   "url": "https://www.news1.kr/politics/assembly/6304945",
+   "title": "'정부24'도 지난달 해킹당했다…주민번호·ID·비밀번호 유출",
+   "outlet": "뉴스1",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.lawschooltimes.com/news/articleView.html?idxno=11889",
+   "title": "법제처, 'AI 법령 비서' 개발 사무관 등 특별성과 포상",
+   "outlet": "로스쿨타임즈",
+   "published": "2026-09-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.edunmc.or.kr/nplms/education/work/view/7888/C",
    "title": "국립중앙의료원 공공보건의료교육훈련센터",
    "outlet": "edunmc.or.kr",
    "published": "",
    "kind": "공고·안내",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://share.google/LgZk4r9IxKbDBzOLO",
+   "title": "[기고] 공무원이 만든 AI 행정 프로그램, 사고 나면 누가 책임지나",
+   "outlet": "조선일보",
+   "published": "2026-09-28",
+   "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-29",
    "last_shared": "2026-09-29",
