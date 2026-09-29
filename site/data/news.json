@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-09-29T14:35:14Z",
- "count": 648,
+ "updated_at": "2026-09-29T22:34:39Z",
+ "count": 663,
  "articles": [
+  {
+   "url": "https://www.yna.co.kr/view/RPR20260928005400353",
+   "title": "북구, 인공지능(AI) 활용 행정 효율 높인다",
+   "outlet": "연합뉴스",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20260929124000009",
+   "title": "\"엔비디아, 'AI칩 담보대출' 보험 추진…AI 인프라 위험 분산\"",
+   "outlet": "연합뉴스",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.news1.kr/politics/assembly/6304945",
    "title": "'정부24'도 지난달 해킹당했다…주민번호·ID·비밀번호 유출",
@@ -29,11 +55,102 @@
    ]
   },
   {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=241901",
+   "title": "오픈AI, ‘일하는 AI’ 전면에…상시 AI 에이전트 ‘닷’ 공개",
+   "outlet": "아이티데일리",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202609300432125548",
+   "title": "오픈AI, 비용 80% 줄인 '가성비' AI 'GPT-6.1 솔' 공개",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.enewstoday.co.kr/news/articleView.html?idxno=2475198",
+   "title": "서울교통공사, AI로 지하철 냉방 혁신, 행안부 장관상 ‘최우수상’ 수상",
+   "outlet": "이뉴스투데이",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.edunmc.or.kr/nplms/education/work/view/7888/C",
    "title": "국립중앙의료원 공공보건의료교육훈련센터",
    "outlet": "edunmc.or.kr",
    "published": "",
    "kind": "공고·안내",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42111",
+   "title": "앤트로픽, ‘클로드 소넷 5.5’ 공개…코딩 성능 대폭 향상·속도 30%↑, 비용 30%↓",
+   "outlet": "인공지능신문",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42098",
+   "title": "LG전자, 블록처럼 연결하는 모듈러 솔루션...AI 데이터센터 냉각 시장 공략",
+   "outlet": "인공지능신문",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215766",
+   "title": "과기부, AI중심대학 18개교·AX대학원 15개교 출범",
+   "outlet": "AI타임스",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215760",
+   "title": "카카오, AI안전연구소와 AI 안전성 평가 도구 개발",
+   "outlet": "AI타임스",
+   "published": "2026-09-29",
+   "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-29",
    "last_shared": "2026-09-29",
@@ -59,6 +176,84 @@
    "title": "Prompting Claude Sonnet 5.5",
    "outlet": "Claude Platform Docs",
    "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://naver.me/F4WMoe3f",
+   "title": "[기고] 공무원이 만든 AI 행정 프로그램, 사고 나면 누가 책임지나",
+   "outlet": "naver.me",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-30-px-행정-게임-연휴-제작",
+   "title": "[공공AX 네트워크] 누리호 발사 기원 게임과 연휴에 폰으로 만든 게임, 행정에 게임을 입히자는 말이 나왔다",
+   "outlet": "akwiki.org",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-30-px-질병코드-3d-바디맵",
+   "title": "[공공AX 네트워크] 질병코드 4만 4천 건을 붙인 3D 인체도, 좀비 인상은 새벽 1시 반에도 남았다",
+   "outlet": "akwiki.org",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-30-px-공무원-ai도구-책임-기고",
+   "title": "[공공AX 네트워크] 공무원이 만든 AI 도구의 책임 기고에 「일할 환경부터」 반발이 모였다",
+   "outlet": "akwiki.org",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-30-cross-소넷55-롱폼-콘텐츠-홍수",
+   "title": "[에이전트코리아·공공AX 네트워크] 소넷 5.5 롱폼은 10분 영상에 주간 사용량 3%였고, 흔해질수록 안 보게 된다는 반론이 나왔다",
+   "outlet": "akwiki.org",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-30-cross-데브데이-솔61-사용량-10배",
+   "title": "[3개 방 공통] 오픈AI 데브데이 밤, 네 방이 Pro 200 사용량 10배와 6.1 솔을 각자의 자리에서 받아냈다",
+   "outlet": "akwiki.org",
+   "published": "2026-09-30",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-29",
