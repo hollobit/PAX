@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-28T07:47:02+09:00",
+ "updated_at": "2026-09-29T20:21:33+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -14213,6 +14213,52 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-09-28"
+  },
+  {
+   "summary": "서구 AI행정혁신 학습팀이 10월 서창억새노을마라톤을 소재로 캐릭터가 억새노을길을 달리며 퀴즈를 푸는 모바일 게임을 Claude와 GPT로 Unity 기반 제작했다. 무예산으로 추석 연휴 약 3일 만에 만들었고, 다른 부서도 행사용 게임을 만들 수 있도록 5단계 제작 과정과 요청문을 별도 사이트로 공개했다.",
+   "org_type": "기초지자체",
+   "network_req": "인터넷 필수",
+   "link": "https://sunset-run.vercel.app/",
+   "region": "광주",
+   "runtime_env": "브라우저만",
+   "tags": [
+    "게임",
+    "행사홍보",
+    "바이브코딩",
+    "Unity"
+   ],
+   "date": "2026-09-29",
+   "model_dependency": "없음(비LLM)",
+   "title": "SUNSET RUN — 서창억새노을마라톤 참여를 이끄는 행사 홍보 러닝 게임과 제작기",
+   "collected_at": "2026-09-29",
+   "org": "전남광주통합특별시 서구",
+   "task_category": "공통·범용",
+   "case_url": "https://how-to-make-sunsetrun.netlify.app/",
+   "source": "kakao",
+   "case_class": "기관 공식",
+   "id": "e90a4c090605bf28"
+  },
+  {
+   "summary": "강릉시 홍보 채널 개설에 맞춰 부서가 만든 픽셀 보드게임 시안으로, 주사위를 굴려 명소 스탬프와 축제 이벤트를 모으고 강릉 퀴즈를 풀며 최대 4명이 겨룬다. 저작권과 게임물 심의 부담으로 정식 배포는 보류됐으며 HTML 단일 파일로 내려받아 실행한다.",
+   "org_type": "기초지자체",
+   "network_req": "로컬 완결",
+   "link": "https://gangneung-pixel-marble-2026.thsalsdn33.chatgpt.site/",
+   "region": "강원",
+   "runtime_env": "브라우저만",
+   "tags": [
+    "게임",
+    "관광홍보",
+    "바이브코딩"
+   ],
+   "date": "2026-09-29",
+   "model_dependency": "없음(비LLM)",
+   "title": "강릉마실한바퀴 — 강릉 명소·축제를 도는 픽셀 보드게임 홍보 시안",
+   "collected_at": "2026-09-29",
+   "org": "강원 강릉시",
+   "task_category": "공통·범용",
+   "source": "kakao",
+   "case_class": "기관 공식",
+   "id": "8d7130819201e068"
   }
  ]
 }

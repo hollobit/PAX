@@ -177,7 +177,9 @@ import datetime
 t=datetime.datetime.fromisoformat('$latest_iso'.replace('Z','+00:00'))
 print(int((datetime.datetime.now(datetime.timezone.utc)-t).total_seconds()//60))")
 
-CHAT_ID=(비공개 채팅방 ID — 기록에서 삭제)
+# 채팅방 ID는 공개 저장소에 두지 않는다 — 비공개 data/state.json의 kakao.chat_id에서 읽는다
+CHAT_ID=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['kakao']['chat_id'])" "$ROOT/data/state.json" 2>/dev/null)
+if [ -z "$CHAT_ID" ]; then log "점검 실패: data/state.json에 kakao.chat_id 없음"; exit 0; fi
 if [ "$age_min" -lt "$STALL_MIN" ]; then
   # 상시 수집: 최근 2일 창을 일자별 파일로 원자적 덤프 (커뮤니티 지표·정기 수집의 안전망)
   TODAY=$(date '+%F')

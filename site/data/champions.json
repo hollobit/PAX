@@ -1732,7 +1732,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -2907,7 +2907,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -4299,7 +4299,7 @@
    ],
    "stats": {
     "case_count": 1,
-    "top_ax": 0,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -5675,6 +5675,18 @@
    "title": "토지 인허가 사전진단 — 주소와 건물 용도로 용도지역별 건축 가능 여부를 미리 짚는 서울 시범판",
    "org": "지방자치혁신연구원",
    "url": "https://toji.jachiai.kr"
+  },
+  {
+   "id": "e90a4c090605bf28",
+   "title": "SUNSET RUN — 서창억새노을마라톤 참여를 이끄는 행사 홍보 러닝 게임과 제작기",
+   "org": "전남광주통합특별시 서구",
+   "url": "https://how-to-make-sunsetrun.netlify.app/"
+  },
+  {
+   "id": "8d7130819201e068",
+   "title": "강릉마실한바퀴 — 강릉 명소·축제를 도는 픽셀 보드게임 홍보 시안",
+   "org": "강원 강릉시",
+   "url": "https://gangneung-pixel-marble-2026.thsalsdn33.chatgpt.site/"
   }
  ]
 }

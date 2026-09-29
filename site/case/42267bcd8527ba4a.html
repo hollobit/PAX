@@ -49,15 +49,15 @@
     </section>
     <section class="obs-section">
       <h2 class="obs-heading">4축 평가</h2>
-      <p>평가 데이터 없음</p>
-      <p class="obs-note"></p>
+      <div class="table-wrap"><table class="obs-table"><tr><th scope="row">AX 단계</th><td>AI-Enabled</td></tr><tr><th scope="row">업무 범위</th><td>S2 Workflow</td></tr><tr><th scope="row">업무 완결성</th><td>C2 부분 완결</td></tr><tr><th scope="row">권한(P축)</th><td>P1 산출물 생성(잠정)</td></tr><tr><th scope="row">위험도</th><td>R2 보통(행정처분 검토)</td></tr><tr><th scope="row">인간 통제</th><td>H2 Human-in-the-loop</td></tr><tr><th scope="row">증거 등급</th><td>E1 코드·도구 확인</td></tr><tr><th scope="row">신뢰도</th><td>중간</td></tr></table></div>
+      <p class="obs-note">신고 자료 분석부터 24시간 초과·과태료 대상 분류, 정정신청·콜백 질문·의견제출서 검토까지 같은 구조로 처리하고 담당자 대시보드로 판단을 남겨 S2·C2다. LLM은 사실 추출만 하고 기산점·판정은 코드가 결정론적으로 재계산하는 설계, 원문은 내부망 로컬 모델만 보고 밖으로 나가는 문장은 마스킹하는 경계를 README에서 확인해 E1이다. 행정처분이라 출력은 늘 검토 초안이라는 원칙을 문서화한 점이 근거이며, 사용한 로컬 모델명은 밝히지 않았다.</p>
     </section>
     <section class="obs-section">
       <h2 class="obs-heading">실무 도입 카드</h2>
       <div class="obs-cards">
         <div class="obs-card"><p class="obs-card__label">필요한 것</p><p class="obs-card__note">실행환경: 서버 구축 · 망 요건: 폐쇄망 가능 · 라이선스: 명시 없음</p></div>
         <div class="obs-card"><p class="obs-card__label">첫 3단계</p><p class="obs-card__note">① 원문·저장소에서 실체 확인 → ② 소규모 업무로 시험 → ③ 결과를 동료와 교차 검증</p></div>
-        <div class="obs-card"><p class="obs-card__label">주의사항</p><p class="obs-card__note">성과 수치는 출처가 확인된 것만 신뢰하세요</p></div>
+        <div class="obs-card"><p class="obs-card__label">주의사항</p><p class="obs-card__note">실사용 피드백이 미확인입니다 — 도입 전 소규모 검증을 권합니다 · 성과 수치는 출처가 확인된 것만 신뢰하세요</p></div>
       </div>
       <p class="obs-note">전이 절차(보안검토→품의→배포)는 <a href="../playbook.html">전이 플레이북</a>을 참고하세요.</p>
     </section>

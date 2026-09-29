@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-09-28T22:34:13Z",
- "count": 78,
+ "updated_at": "2026-09-29T11:23:35Z",
+ "count": 80,
  "videos": [
+  {
+   "id": "cquvA_IpEsA",
+   "title": "Gyroscope",
+   "channel": "ScienceOnline",
+   "url": "https://www.youtube.com/watch?v=cquvA_IpEsA",
+   "thumb": "https://i.ytimg.com/vi/cquvA_IpEsA/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "Y_HSLlXEzBQ",
+   "title": "GPT-6 솔·루나 vs 오퍼스·소넷 5.5: 가격은 절반, 성능은?(풀AI로 만든 영상 입니다)",
+   "channel": "Alex AI",
+   "url": "https://www.youtube.com/watch?v=Y_HSLlXEzBQ",
+   "thumb": "https://i.ytimg.com/vi/Y_HSLlXEzBQ/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "iMH91sfqpqU",
    "title": "사람이 만든 데이터가 아니라면... AI 모델이 붕괴되는 걸 입증한 네이처 논문 등장 | AI 주도권은  빅테크 플랫폼 기업이 더 강해진다?",

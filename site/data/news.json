@@ -1,7 +1,98 @@
 {
- "updated_at": "2026-09-28T22:34:17Z",
- "count": 638,
+ "updated_at": "2026-09-29T11:23:38Z",
+ "count": 645,
  "articles": [
+  {
+   "url": "https://www.edunmc.or.kr/nplms/education/work/view/7888/C",
+   "title": "국립중앙의료원 공공보건의료교육훈련센터",
+   "outlet": "edunmc.or.kr",
+   "published": "",
+   "kind": "공고·안내",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-sonnet-5-5",
+   "title": "Prompting Claude Sonnet 5.5",
+   "outlet": "Claude Platform Docs",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-29-px-정부24-ai국민비서-구조",
+   "title": "[공공AX 네트워크] 정부24 안의 AI국민비서, 방에서는 네이버·카카오 서비스에 정부 API를 연계한 구조로 설명됐다",
+   "outlet": "akwiki.org",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-29-px-공공현장-ai코딩-보안충돌",
+   "title": "[공공AX 네트워크] 공공 현장의 코덱스 사용, 보안 프로그램 충돌과 막힌 클라우드가 발목을 잡는다",
+   "outlet": "akwiki.org",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-29-cross-한국어-ocr-오픈웨이트-검증",
+   "title": "[에이전트코리아·공공AX 네트워크] 한국어 문서 OCR 모델이 오픈웨이트로 풀렸다 — 같은 공개 글, 대화가 이어진 곳은 에이전트코리아뿐",
+   "outlet": "akwiki.org",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-29-cross-소넷55-저녁-평가-속도-가성비",
+   "title": "[3개 방 공통] 클로드 소넷 5.5 출시 첫날, 세 방은 다른 잣대로 쟀다 — 가벼운 작업·속도 가성비·벤치 점수",
+   "outlet": "akwiki.org",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-09-29-cross-openai-요금-개편-사용량-체감",
+   "title": "[3개 방 공통] Pro 200달러 재오픈 공지에 세 방이 갈렸다 — 사용량 반토막인가, 요금표 조정인가",
+   "outlet": "akwiki.org",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.yna.co.kr/view/MYH20260928002700038",
    "title": "[AI&] \"유쾌한 홍보부터 재난 대응까지\"…지자체 'AI 행정' 성과 外",
