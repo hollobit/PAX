@@ -11814,5 +11814,33 @@
   "human": "해당 없음",
   "rationale": "언론 공개 지출 데이터를 식당 단위로 재집계해 지도로 보여 주는 도구로, 실행 시 AI를 쓰지 않아 AI-Ready·S1/C1이다. 공공 지출 공개 데이터를 시민이 직접 탐색하게 만든 민간 참고 사례로, 공공기관이 업무추진비 공개를 어떤 형태로 제공할지 가늠하게 해 준다. 데이터 갱신 주기와 유지 주체는 미확인이다.",
   "resilience": "미확인(원본 데이터 갱신 주기)"
+ },
+ {
+  "no": 495,
+  "id": "a30371a307e1fe08",
+  "org": "충남 천안의료원(개인 개발)",
+  "title": "천안의료원 3D 질병코드 바디맵 — 인체 부위를 눌러 증상·진료과·의료진과 질병코드를 찾는 상담 참고 도구",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "feedback": "미확인",
+  "post_url": "",
+  "service_url": "https://medical-bodymap-3d.ruby-trail-1962.chatgpt.site/",
+  "ax_prev": "AI-Ready",
+  "ax": "AI-Ready",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "status": "Prototype",
+  "scope": "External",
+  "risk": "R1 낮음(진단 도구 아님·119 안내 고지)",
+  "human": "검토 후 사용(원내 EMR 확인 전제 명시)",
+  "rationale": "원내 질병코드·진료과 연결표를 3D 인체 탐색으로 풀어 낸 규칙 기반 안내 도구로, 실행 시 AI를 쓰지 않아 AI-Ready·S1/C1이다. 지방의료원 실무자가 환자 상담 창구의 질문을 부위 중심으로 바꾼 첫 관측 사례이며, 진단이 아니라는 고지와 응급 안내를 스스로 갖췄다. 원내 공식 운영 여부와 의료진 검수는 미확인이다.",
+  "resilience": "미확인(원내 공식 게시·의료진 검수 여부)"
  }
 ]

@@ -1,6 +1,6 @@
 {
- "evaluated_at": "2026-09-29",
- "total": 492,
+ "evaluated_at": "2026-09-30",
+ "total": 493,
  "cases": [
   {
    "no": 1,
@@ -16235,6 +16235,39 @@
    "tool_type": "웹 서비스",
    "audience": "G2C 공개",
    "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 495,
+   "id": "a30371a307e1fe08",
+   "org": "충남 천안의료원(개인 개발)",
+   "title": "천안의료원 3D 질병코드 바디맵 — 인체 부위를 눌러 증상·진료과·의료진과 질병코드를 찾는 상담 참고 도구",
+   "ax_prev": "AI-Ready",
+   "ax": "AI-Ready",
+   "s": "S1",
+   "s_name": "Single tool",
+   "c": "C1",
+   "c_name": "결과 제공",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Prototype",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R1 낮음(진단 도구 아님·119 안내 고지)",
+   "human": "검토 후 사용(원내 EMR 확인 전제 명시)",
+   "evidence": "E2 화면·서비스 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "원내 질병코드·진료과 연결표를 3D 인체 탐색으로 풀어 낸 규칙 기반 안내 도구로, 실행 시 AI를 쓰지 않아 AI-Ready·S1/C1이다. 지방의료원 실무자가 환자 상담 창구의 질문을 부위 중심으로 바꾼 첫 관측 사례이며, 진단이 아니라는 고지와 응급 안내를 스스로 갖췄다. 원내 공식 운영 여부와 의료진 검수는 미확인이다.",
+   "feedback": "미확인",
+   "resilience": "미확인(원내 공식 게시·의료진 검수 여부)",
+   "post_url": "",
+   "service_url": "https://medical-bodymap-3d.ruby-trail-1962.chatgpt.site/",
+   "tool_type": "웹 서비스",
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }

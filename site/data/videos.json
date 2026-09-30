@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-09-29T22:34:35Z",
- "count": 80,
+ "updated_at": "2026-09-30T06:35:54Z",
+ "count": 81,
  "videos": [
   {
    "id": "cquvA_IpEsA",
@@ -21,6 +21,19 @@
    "channel": "Alex AI",
    "url": "https://www.youtube.com/watch?v=Y_HSLlXEzBQ",
    "thumb": "https://i.ytimg.com/vi/Y_HSLlXEzBQ/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "GPXmGSQZB3U",
+   "title": "닷츠: OpenAI 데브데이 2026 총정리와 숨은 이야기",
+   "channel": "Alex AI",
+   "url": "https://www.youtube.com/watch?v=GPXmGSQZB3U",
+   "thumb": "https://i.ytimg.com/vi/GPXmGSQZB3U/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-09-29",
    "last_shared": "2026-09-29",
