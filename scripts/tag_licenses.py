@@ -10,11 +10,16 @@
 """
 import json
 import re
+from pathlib import Path
 import subprocess
 import sys
 import urllib.parse
 import urllib.request
 from datetime import date
+
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from pax.jsonio import read_json, write_json  # noqa: E402
 
 CASES = "data/cases.json"
 GITLAB_HOST = "gitlab.aigov.go.kr"
@@ -91,7 +96,7 @@ def repo_of(case):
 
 def main():
     refresh = "--refresh" in sys.argv
-    data = json.load(open(CASES))
+    data = read_json(CASES)
     cases = data["cases"]
     today = date.today().isoformat()
     tagged = skipped = failed = 0
@@ -112,7 +117,7 @@ def main():
         c["license_checked"] = today
         tagged += 1
         print(f"  {lic:<20} [{kind}] {c['title'][:44]}")
-    json.dump(data, open(CASES, "w"), ensure_ascii=False, indent=1)
+    write_json(CASES, data)
     print(f"태깅 {tagged}건 / 기존 유지 {skipped}건 / 확인 실패 {failed}건 / 총 {len(cases)}건")
 
 

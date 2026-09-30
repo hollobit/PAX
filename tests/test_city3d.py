@@ -290,8 +290,8 @@ def test_seat_of_finds_the_real_hall_inside_the_district():
 
 CITYKEY_NODE = """
 import fs from 'fs';
-// 위치 판정 모듈 import는 cityKeyOf와 무관해 떼어 낸다(data: URL에서는 상대 경로를 풀 수 없다)
-const src = fs.readFileSync('site/pax3d-data.js', 'utf8').replace(/^import .*$/gm, '');
+// 위치 판정 모듈 import·재수출(export … from)은 cityKeyOf와 무관해 떼어 낸다(data: URL에서는 상대 경로를 풀 수 없다)
+const src = fs.readFileSync('site/pax3d-data.js', 'utf8').replace(/^(import .*|export \{[^}]*\} from .*)$/gm, '');
 const mod = await import('data:text/javascript,' + encodeURIComponent(src));
 const k = mod.cityKeyOf;
 console.log(JSON.stringify([
@@ -344,7 +344,7 @@ def test_verified_landmarks_are_near_their_real_place(city):
 
 FLIGHT_NODE = """
 import fs from 'fs';
-const src = fs.readFileSync('site/city3d/js/flight.js', 'utf8').replace(/^import .*$/gm, '');
+const src = fs.readFileSync('site/city3d/js/flight.js', 'utf8').replace(/^(import .*|export \{[^}]*\} from .*)$/gm, '');
 const mod = await import('data:text/javascript,' + encodeURIComponent(src));
 const out = {};
 for (const key of process.argv.slice(1)) {

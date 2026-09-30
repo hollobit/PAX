@@ -7,6 +7,8 @@ import json
 import re
 from pathlib import Path
 
+from pax.jsonio import write_json
+
 VERDICTS = frozenset(["통과", "주의", "심각(비공개 처리 중)", "미검증", "해당 없음"])
 AXES = ("permission_surface", "secrets", "supply_chain", "injection", "data_flow", "hygiene")
 OVERALLS = frozenset(["양호", "주의", "심각(비공개 처리 중)", "부분 검증", "미검증"])
@@ -57,5 +59,4 @@ def load_reviews(path: Path, case_ids: set) -> dict:
 
 
 def save_reviews(path: Path, doc: dict) -> None:
-    Path(path).write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n",
-                          encoding="utf-8")
+    write_json(path, doc)

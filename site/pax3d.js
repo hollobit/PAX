@@ -1,8 +1,8 @@
 // 3D PAX — 미니어처 대한민국에서 공공AX 사례를 탐험하는 화면.
 // 3D는 덧입힌 층이다: WebGL이 없어도 오른쪽 목록(검색·축 → 값 → 사례 → 상세 링크)만으로 전부 쓸 수 있다.
-import { buildAxes, placeText, TASK_COLORS, SHAPES, SEATS, caseTargetUrl } from './pax3d-data.js?v=5ed46b81';
+import { buildAxes, placeText, TASK_COLORS, SHAPES, SEATS, caseTargetUrl } from './pax3d-data.js?v=d2c6ecd8';
 import { createTour } from './pax3d-tour.js?v=9e8d6421';
-import { loadBookmarks, toggleBookmark, onBookmarksChanged } from './pax-bookmarks.js?v=90c7c03c';
+import { loadBookmarks, toggleBookmark, onBookmarksChanged } from './pax-bookmarks.js?v=c1fdc503';
 
 const $ = (sel) => document.querySelector(sel);
 function el(tag, cls, text) {
@@ -27,14 +27,22 @@ function marked(text, terms) {
   return text.split(re).map((part, i) => (i % 2 ? el('mark', null, part) : document.createTextNode(part)));
 }
 
+/** 썸네일 — WebP(약 1/4 크기)를 먼저, 못 읽으면 JPEG. pax.thumbs가 두 파일을 짝으로 만든다. */
 function thumb(c, cls) {
-  const img = el('img', cls);
+  const v = c.thumb_v ? `?v=${c.thumb_v}` : '';
+  const base = `thumbs/${encodeURIComponent(c.id)}`;
+  const picture = el('picture', cls);
+  const source = el('source');
+  source.type = 'image/webp';
+  source.srcset = `${base}.webp${v}`;
+  const img = el('img');
   img.alt = '';
   img.loading = 'lazy';
   img.decoding = 'async';
-  img.src = `thumbs/${encodeURIComponent(c.id)}.jpg${c.thumb_v ? `?v=${c.thumb_v}` : ''}`;
-  img.addEventListener('error', () => img.remove(), { once: true });
-  return img;
+  img.src = `${base}.jpg${v}`;
+  img.addEventListener('error', () => picture.remove(), { once: true });
+  picture.append(source, img);
+  return picture;
 }
 
 async function main() {
@@ -137,7 +145,7 @@ async function main() {
   }
   const tip = $('#pax3d-tip');
   try {
-    const { createWorld } = await import('./pax3d-world.js?v=df45d31b');
+    const { createWorld } = await import('./pax3d-world.js?v=c5468ac9');
     // 실제 지형(수치표고) — 못 받으면 평평한 판으로 그대로 간다
     const terrain = await import('./pax3d-terrain.js?v=a3bd09aa').then((t) => t.loadTerrain()).catch(() => null);
     world = createWorld($('#pax3d-canvas'), {

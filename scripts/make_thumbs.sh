@@ -51,3 +51,5 @@ while IFS=$'\t' read -r cid url; do
 done <<< "$TARGETS"
 
 echo "썸네일 생성 ${made}건, 기존 유지 ${skipped}건, 실패 ${failed}건"
+# 카드·3D 목록이 먼저 쓰는 WebP 파생본(JPEG보다 오래된 것만 다시 만든다)
+PYTHONPATH=scripts python3 -m pax.thumbs site/thumbs

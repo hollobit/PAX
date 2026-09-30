@@ -63,7 +63,7 @@ function renderMinistries(cases, affOfCase) {
 
 async function main() {
   const [res, champRes] = await Promise.all([
-    fetch('./data/cases.json', { cache: 'no-cache' }),
+    fetch('./data/cases-lite.json', { cache: 'no-cache' }),
     fetch('./data/champions.json', { cache: 'no-cache' }).catch(() => null),
   ]);
   const cases = (await res.json()).cases;

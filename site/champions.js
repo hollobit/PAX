@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * 공공AX 챔피언 디렉토리 — champions.json + cases.json을 읽어 카드 그리드를 그린다.
+ * 공공AX 챔피언 디렉토리 — champions.json + cases-lite.json을 읽어 카드 그리드를 그린다.
  * 데이터 삽입은 전부 textContent/createElement (XSS 방지). 외부 라이브러리 없음.
  */
 
@@ -39,7 +39,7 @@ async function load() {
   try {
     const [champRes, caseRes, counts] = await Promise.all([
       fetch('./data/champions.json', { cache: 'no-cache' }),
-      fetch('./data/cases.json', { cache: 'no-cache' }),
+      fetch('./data/cases-lite.json', { cache: 'no-cache' }),
       loadBookmarkCounts(),
     ]);
     if (!champRes.ok || !caseRes.ok) throw new Error('HTTP 오류');

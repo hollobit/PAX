@@ -1,0 +1,3238 @@
+{
+ "updated_at": "2026-09-30T15:35:00+09:00",
+ "cases": [
+  {
+   "id": "a2eaaf9f454da37f",
+   "title": "정부 AI 교육 통합 포털 '모두의 AI 성장사다리' 출범",
+   "org": "과학기술정보통신부·NIA",
+   "org_type": "중앙행정기관",
+   "region": null
+  },
+  {
+   "id": "02656bf9d2589964",
+   "title": "서울시, 기관 공용 AI 엔진 기반 AI 에이전트 구축 착수",
+   "org": "서울특별시",
+   "org_type": "광역지자체",
+   "region": "서울"
+  },
+  {
+   "id": "59ff218c60039cc9",
+   "title": "바이브 코딩으로 서무 업무 자동화 프로그램 제작",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "6f376e827405e328",
+   "title": "화면 기록형 매크로 도구 공개 — 공공 AX 로컬 시리즈 4",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "719692c2c31da09f",
+   "title": "로컬 문서 검수 도구 공개 — 맞춤법·공공언어 검사",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "2c14f2adaa83a00e",
+   "title": "로컬 인수인계 도구 MVP 공개 — 공공 AX 로컬 시리즈 3",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "075fd5baf003c3b0",
+   "title": "AI 기반 업무 인수인계 관리 사례",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "de4b2dab339d69b7",
+   "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": "서울"
+  },
+  {
+   "id": "d40cc4a9cf6e29b6",
+   "title": "국가법령정보 MCP 활용 사례 공유",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": "서울"
+  },
+  {
+   "id": "5451653f4cddb6f2",
+   "title": "제도100 — 국가 제도 505개 업무구조도 웹서비스",
+   "org": "공직 현장(행안부)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "6a2d1fa6e385ef2b",
+   "title": "부서 수요 기반 ChatGPT 팀계정 지원 후 보안형 AI SaaS 도입",
+   "org": "기관 미상(공공)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "422f3e4e0e9a23eb",
+   "title": "바이브 코딩으로 억대 규모 서비스 버전업 프로토타입을 1개월 만에 개발",
+   "org": "국립중앙의료원(중앙응급의료센터)",
+   "org_type": "공공기관",
+   "region": "서울"
+  },
+  {
+   "id": "bf04cec910b4755d",
+   "title": "보-편 | 보호법 편히보기 — 개인정보 법령·고시 통합 리더",
+   "org": "개인정보보호위원회(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "d487843b67c6063e",
+   "title": "교육행정 업무 워크플로 맵 제작기 공유",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "971a8738f6563214",
+   "title": "공공데이터 API 파인더 도구 공개",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "7acf5f25369c1401",
+   "title": "시연 영상 제작 자동화 스킬 공유",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "38dc6d3806bf2e8f",
+   "title": "법령 비교·AI 법률 검색 웹서비스 LexDiff 공유",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "651bfec5c1ede6d1",
+   "title": "자연어 입력을 공문서로 바꿔주는 공문 생성기",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "a021bc5b58ed72cd",
+   "title": "교육행정 업무 자동화 도구·자료 모음 사이트",
+   "org": "공직 현장(교육행정)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "d08bc7e9a69190af",
+   "title": "내부망용 빠른 메모·구조화 앱",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "e93a0e5c75f51a7b",
+   "title": "한글(HWP) 작업 효율화 프로그램 쉽다한글",
+   "org": "공직 현장(교육청)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "1c77044568e730de",
+   "title": "PDF 개인정보 완전 로컬 마스킹 도구 Nothing",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "cbe008b504b9dd18",
+   "title": "의학 연구 동료 AI 플러그인 ResearchFellow",
+   "org": "공직 현장(의료 연구)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "a93c7283cafb3b9b",
+   "title": "서무 업무 도구 모음 허브",
+   "org": "공직 현장(통일부)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "32d199fa9ad4f674",
+   "title": "국민신문고 민원 초안 생성 스킬 minwon-draft",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "ea2bce110972762e",
+   "title": "공공기관 규정 MCP 생성기",
+   "org": "공직 현장(공공기관)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "9d2b45d14879241e",
+   "title": "서무랜드 — 서무 툴 모음 페이지",
+   "org": "공직 현장(통일부)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "f5abed24ff6bdd4a",
+   "title": "엑셀 업무 자동화 도구 VHLookup",
+   "org": "공직 현장(공공기관)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "48e33f2318bdffae",
+   "title": "클릭 과정을 PDF 가이드로 만드는 ClickGuide Local",
+   "org": "공직 현장(공공기관)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "0a2535cadf2d621a",
+   "title": "MICE 안전관리 문서 MCP와 웹 시뮬레이터",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "0d668fa0c977b439",
+   "title": "업무포털 원클릭 이동 프로그램",
+   "org": "공직 현장(교육행정)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "92d5147e02f7ae36",
+   "title": "NCS 기반 구조화 면접 질문 생성기 NCScope",
+   "org": "공직 현장(공공기관)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "856b4951cb5274d1",
+   "title": "K-지방직 정책서랍 — 전국 지자체 예산서·주요업무계획 검색 서비스",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": "전남"
+  },
+  {
+   "id": "e0be95cc501650ae",
+   "title": "공공기관 공시항목 비교 사이트",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "918bddd1b60d8a74",
+   "title": "로컬 엑셀 처리 도구 — 마스킹·파일 취합",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "aa58f3a62af622b6",
+   "title": "ODA 수원국 공공조달 제도 정리 사이트",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "5835971d479dbf81",
+   "title": "국회의원 트랙레코드 사이트",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "c78372217646db56",
+   "title": "초실행관 — 공무원 AI 활용·실무 도구 사이트",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "58420e002644542c",
+   "title": "행안부, 엑사원·Gemma4를 행정 내부망에 도입",
+   "org": "행정안전부",
+   "org_type": "중앙행정기관",
+   "region": null
+  },
+  {
+   "id": "9d56d423296a3238",
+   "title": "공공데이터 MCP 5종 통합 서버 운영",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "a25534e407326d76",
+   "title": "내부망 문서용 로컬 RAG 구축기",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "9d115930495a1e65",
+   "title": "공무원용 로컬 AI 에이전트 워크플레이스 개발",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "56cdd4fc23166800",
+   "title": "화성특례시 신규자 지식창고, 광진구 버전으로 포팅",
+   "org": "화성특례시·광진구",
+   "org_type": "기초지자체",
+   "region": "경기"
+  },
+  {
+   "id": "bfcd190155ae69f7",
+   "title": "내부망 LLM 기반 사내 AI 체험 플랫폼 AX플레이그라운드 구축",
+   "org": "코레일유통",
+   "org_type": "공공기관",
+   "region": null
+  },
+  {
+   "id": "1502d338e8e99382",
+   "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "fbde74aa0071ea45",
+   "title": "공공데이터포털에 AI 대화형 검색 도입",
+   "org": "공공데이터포털(NIA)",
+   "org_type": "공공기관",
+   "region": null
+  },
+  {
+   "id": "54d599932088897f",
+   "title": "정부 지원사업 전수조사 에이전트 스킬 ir-search",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "0826e58f026fe560",
+   "title": "파주 실시간 인파 지도 — 지금 파주",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "62ed887a548dfb25",
+   "title": "서울 인파레이더 — 명소 121곳 실시간 인구밀집 상황판",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "5b37a71c441b663b",
+   "title": "북적북적 제주 — 명소 66곳 실시간 인파 지도",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": "부산"
+  },
+  {
+   "id": "ef0fc393d25e4e97",
+   "title": "북적북적 인천공항 — 실시간 혼잡 지도",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": "제주"
+  },
+  {
+   "id": "13e5e75fbf179ebf",
+   "title": "공공데이터 렌즈 — AI 공공데이터 탐색·판단 계층",
+   "org": "중앙대학교 HIKE 연구실",
+   "org_type": "교육기관",
+   "region": "서울"
+  },
+  {
+   "id": "ceceadd796cc6ea1",
+   "title": "대한민국 AI 행동계획 2026 대시보드",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "807dd39dd613b7da",
+   "title": "2026 AI 재정사업 분석 플랫폼",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "73ca59dc1a41074f",
+   "title": "대한민국 공공 Open API 현황 종합 분석 (K-GAPI)",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "7868cf416d6fe407",
+   "title": "K-GAPI Δ — Agentic 시대 공공 API 개선 비교",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "c7ccd2903fbe27a5",
+   "title": "대한민국 제도 온톨로지 뷰어",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "ec17e6cd86e7aaa1",
+   "title": "PDF 번역·검토 작업장 — 공공 AX 로컬 시리즈 6",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "fe3bb0d913e27677",
+   "title": "로컬 Ollama 기반 MCP 멀티 호스트",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "cba450dfb5c8fadf",
+   "title": "표준주소실록 — 주소 표준화 정리 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "94639db9e5fd6c2c",
+   "title": "로컬 폴더 이중 보관 트레이 앱 — 공공 AX 로컬 시리즈 7",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "849b973bf966f4ff",
+   "title": "AX360° — AX 전 과정 원스톱 지원 포털 개설",
+   "org": "과학기술정보통신부·NIPA·KOSA",
+   "org_type": "중앙행정기관",
+   "region": null
+  },
+  {
+   "id": "93482d8cbe86c9d9",
+   "title": "한국산업인력공단, 공식 HRDKorea MCP 서비스 개시",
+   "org": "한국산업인력공단",
+   "org_type": "공공기관",
+   "region": "울산"
+  },
+  {
+   "id": "7c63339c2722da03",
+   "title": "문서 리소스 추출기 — 공공 AX 로컬 시리즈 5",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "8ff758ac1d5e40eb",
+   "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "0af085f0e51a1a7e",
+   "title": "법령 MCP로 과학기술 법령 체계 분석",
+   "org": "과학기술혁신본부",
+   "org_type": "중앙행정기관",
+   "region": null
+  },
+  {
+   "id": "586bab7a0b40cb95",
+   "title": "지방의정 지원 AI 에이전트 자치아이 베타",
+   "org": "지방자치혁신연구원",
+   "org_type": "민간(참고)",
+   "region": null
+  },
+  {
+   "id": "4ab9bf954cb48eb9",
+   "title": "AI 정부 실험실 프로젝트 현황 보드 공개",
+   "org": "AI 정부 실험실",
+   "org_type": "중앙행정기관",
+   "region": null
+  },
+  {
+   "id": "235db3db0bff39d2",
+   "title": "미국 GovInfo, 정부 문서 MCP 공개 프리뷰",
+   "org": "미국 연방정부(GovInfo)",
+   "org_type": "해외(참고)",
+   "region": null
+  },
+  {
+   "id": "0c994fa292d1d15d",
+   "title": "싱가포르 통계청, SingStat MCP 서비스 제공",
+   "org": "싱가포르 통계청",
+   "org_type": "해외(참고)",
+   "region": null
+  },
+  {
+   "id": "e160d086c0ce2b1b",
+   "title": "내부망용 법령 리더 프로그램 개발",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "edf9a8632ff74a99",
+   "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연",
+   "org": "오픈소스 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "17329009668eb397",
+   "title": "NIA, 발간 자료의 마크다운 병행 등록 의무화",
+   "org": "한국지능정보사회진흥원(NIA)",
+   "org_type": "공공기관",
+   "region": "대구"
+  },
+  {
+   "id": "f76a328f43c0766f",
+   "title": "KIPRIS 특허 검색 MCP 공개",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "1f5e21b854f0aa3a",
+   "title": "공공데이터포털 API를 MCP 서버 모음으로 공개",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "c46225d9c7efdb93",
+   "title": "금융규제 샌드박스 유사사례 검색 서비스 PoC",
+   "org": "UNIST 금융공학연구실",
+   "org_type": "교육기관",
+   "region": "울산"
+  },
+  {
+   "id": "00411127055c4a07",
+   "title": "공무원 필수교육 이수 관리 시스템 공개",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "전북"
+  },
+  {
+   "id": "63a81d23af115b66",
+   "title": "인구감소지역 부동산 상황판 공개",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "54c2561cf3e1a268",
+   "title": "행안부, 정부 공공 깃랩 구축·전 기관 공문 안내",
+   "org": "행정안전부",
+   "org_type": "중앙행정기관",
+   "region": null
+  },
+  {
+   "id": "000bb96831380931",
+   "title": "농식품분야 특허 AI 기술분석 서비스",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "999efcd7e3a80a93",
+   "title": "카카오 PlayMCP — MCP 에이전트 플랫폼",
+   "org": "카카오",
+   "org_type": "민간(참고)",
+   "region": null
+  },
+  {
+   "id": "dfe9d069e330d1c8",
+   "title": "디자인 구현 레퍼런스 보드 design-isms",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "a8fbf74431025f70",
+   "title": "공공조달 제도 88개 업무 흐름도 — 그 많던 조달은 어떻게 했을까",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "798f4e6bef72fc13",
+   "title": "한 장으로 끝내는 조달제도 100",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "6c5b15f4c8414f29",
+   "title": "공공데이터포털 인텔리전스 — 파일→API 전환 검토 큐",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "112bf7dc576ed8aa",
+   "title": "공공행정 리서치 스킬 — 공식 근거를 검토용 보고서로 정리",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "026e1b69c1fe6678",
+   "title": "배너캅 — AI 불법현수막 단속·행정처분 관제 시스템",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "9dc1a7081bc869b1",
+   "title": "광진구, 공무원이 직접 개발한 AI 도구 6종 전 직원 업무 전면 투입",
+   "org": "광진구",
+   "org_type": "기초지자체",
+   "region": "서울"
+  },
+  {
+   "id": "e2f85975979aa487",
+   "title": "공무원이 직접 만든 'AI 법령 비서' 시범 개시",
+   "org": "법제처",
+   "org_type": "중앙행정기관",
+   "region": null
+  },
+  {
+   "id": "def97ef350fe7cae",
+   "title": "학교시설 업무 워크플로우 보드 — 26개 업무 전주기 정리",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "e7949c7bc45ca8e6",
+   "title": "출장 여비 서류 자동화 오픈소스 — 신청서·명세서·복명서 일괄 생성",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "ee30aa1cae172991",
+   "title": "서울 열린데이터광장 메타검색 MCP 공개",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "578e4da94db0682d",
+   "title": "표준품셈 MCP — 건설·전기·정보통신·소방 4개 분야 2,888개 항목 검색",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "759835514b4b7ca4",
+   "title": "레스큐79 — CCTV 팔 동작 인식 구조요청 감지 PoC",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "43dc7f4ab2500260",
+   "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "81c14797b7aaafa0",
+   "title": "LexGuard MCP — 일반인용 법률 정보 조회",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "10f6ec0f81090085",
+   "title": "korean-law-mcp — 한국 법령 조회 MCP",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "22be065e9c257d93",
+   "title": "law-mcp — 국가법령정보 공동활용 API MCP",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "ed42c0e326a6d068",
+   "title": "한국 공공데이터 통합 MCP — 법령·DART·공공데이터포털",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "daab018ffea87c77",
+   "title": "법제처 OPEN API 통합 MCP — 130여 개 도구",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "05763974d3375178",
+   "title": "법령 온톨로지 검색 MCP — 법제처 LOD SPARQL 기반",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "b37636486ec1dee4",
+   "title": "나라장터 MCP 서버",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "146501d37df93aa2",
+   "title": "나라장터 데이터 수집·가공 MCP",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "27c2fd1b292cfcbf",
+   "title": "나라장터(G2B) 조달 조회 MCP — 15개 도구",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "952ab7cccb367db6",
+   "title": "정부 공공데이터 5종 통합 MCP — 중기부·정부24·기업마당 등",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "e07be0004494e652",
+   "title": "한국 주식 분석 MCP",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "13342535139dd7a0",
+   "title": "DART 전자공시 MCP",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "83bb0ac0ed9f576d",
+   "title": "OpenDART 전자공시 MCP — 83개 API를 15개 도구로",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "4925d016e9377a50",
+   "title": "한국 금융 통합 MCP — ECOS·부동산·DART·KRX",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "9070c4f923623855",
+   "title": "한국 주식 분석 원격 MCP — DART·KRX 기반",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "b9da6eddda89513d",
+   "title": "DART 전자공시 API MCP 서버",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "9aee6bbb0c29dddb",
+   "title": "pykrx 기반 KRX 시세 MCP",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "991e9f9e7b324692",
+   "title": "LS증권 OpenAPI MCP — 시세·차트·스크리너 자연어 조회",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "75b9815de6b6dcf5",
+   "title": "아파트 실거래가 MCP — 국토교통부 공개 API 기반",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "d69be456031471a4",
+   "title": "공공데이터 카탈로그 조합 설계 MCP",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "09f079e1424f6992",
+   "title": "KOSIS 통계 자연어 조회 MCP",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "0011a7e888431aeb",
+   "title": "통계청 API MCP",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "b6f4cc079eb86f11",
+   "title": "공공데이터 5종 연결 MCP — 날씨·실거래가·대기질·경제통계·사업자조회",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "2f4ed1e68a6464c5",
+   "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "76f07692203606ad",
+   "title": "건축HUB MCP — 건축물대장·인허가·필지 종합카드",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "8f1e3c48b2baa6d2",
+   "title": "실거래가×건축물대장 역매칭 MCP",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "56c2bb56426019ec",
+   "title": "기상청 날씨 MCP 서버",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "f8c9ae69a673c52a",
+   "title": "국회 API MCP — 국회·국민참여입법 API 통합",
+   "org": "공공기관 연구자(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "bef8ee3811d115e4",
+   "title": "정부 지원사업 조회 MCP",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "0561ecd39ea94051",
+   "title": "도서관 정보나루 MCP — 도서·도서관 검색 25개 도구",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "966d6a2ae42587a4",
+   "title": "식약처 식품영양성분DB MCP",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "6a9c5da9f1d3210f",
+   "title": "KORAIL 공공데이터 MCP 서버 모음",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "c5aa260668941b92",
+   "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "05c30a6088be7960",
+   "title": "건설현장 법정 안전문서 작성·검토 오픈소스",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "5bfadfc3b8e2292f",
+   "title": "식약처 의약품 OpenAPI MCP — 의약품·DUR·알약식별",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "ec4f975c809401cb",
+   "title": "공공 의료 데이터 MCP — 심평원·식약처 통합",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "a7abbaedd53db684",
+   "title": "국회 법안·회의록 탐색 MCP — 공식 기록 검증",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "ce2287d57e6bacaa",
+   "title": "정부 R&D 규정 검토 MCP — 혁신법·행정규칙 55종",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "2beb100ecc126fb2",
+   "title": "우주·항공 정부 R&D 지원사업 공고 MCP",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "ca5651ea46caa07f",
+   "title": "서울 실시간 도시데이터 MCP — 121개 장소 혼잡도·교통·날씨",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": "서울"
+  },
+  {
+   "id": "bc609dfe7f04d6ed",
+   "title": "서울시 건설알림이 MCP",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": "서울"
+  },
+  {
+   "id": "5c3cb7251749ab2e",
+   "title": "서울시 공영주차장 MCP",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": "서울"
+  },
+  {
+   "id": "3ba829c8e42e7cc7",
+   "title": "서울시 공중화장실 조회 MCP — 급똥서울",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": "서울"
+  },
+  {
+   "id": "92bbbba967365291",
+   "title": "서울시 대기환경 MCP",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": "서울"
+  },
+  {
+   "id": "c864500e8cf1d78d",
+   "title": "개인정보보호법 쉬운 안내 MCP — 소상공인·개인용",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "e52e2378641903f4",
+   "title": "인사·노무 뉴스 추천 자동발송 프로그램 개발",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "f0c21de2b0af63b3",
+   "title": "업무구조도 생성기 korea100studio 오픈소스 공개",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "cbda9aefec586c48",
+   "title": "맥 전용 로컬 실시간 음성전사 도구 murmur 공유",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "5e76949a3f487274",
+   "title": "경기도의회 법령·자치법규 나무 베타 공개",
+   "org": "경기도의회",
+   "org_type": "지방의회",
+   "region": "경기"
+  },
+  {
+   "id": "31a47960ddebd977",
+   "title": "하이패스 경비 정산 자동화 도구",
+   "org": "경기도의회",
+   "org_type": "지방의회",
+   "region": "경기"
+  },
+  {
+   "id": "145a534a79c6fc53",
+   "title": "범정부오피스 — 공무원이 만든 공문서 편집 자동화 프로그램",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "791311495e38151c",
+   "title": "세상에 그런법이 어딨어요? — 경기도의회 AI 법·조례 안내 서비스",
+   "org": "경기도의회",
+   "org_type": "지방의회",
+   "region": "경기"
+  },
+  {
+   "id": "611503a5916453a3",
+   "title": "CODEF — 공공·금융 데이터 연동 구독형 API 플랫폼",
+   "org": "CODEF(민간)",
+   "org_type": "민간(참고)",
+   "region": null
+  },
+  {
+   "id": "7ac3b301c1a8f79d",
+   "title": "발표 슬라이드 밈 삽입 도구 slide-meme-inserter",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "789c1267f63c3b01",
+   "title": "폴리위키 — 공직·입법 공개 데이터베이스",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "e18d5e018e0cd10d",
+   "title": "오토한글 — 브라우저·터미널용 HWP 편집 엔진",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "3a12372c14bc0972",
+   "title": "전국민 AI 경진대회 — AI 달인 100 챌린지 개최",
+   "org": "과학기술정보통신부·NIA",
+   "org_type": "중앙행정기관",
+   "region": null
+  },
+  {
+   "id": "8d17b8feee1af705",
+   "title": "전북교육청, 문서 취합·변환 도구 공식 배포",
+   "org": "전북특별자치도교육청",
+   "org_type": "교육기관",
+   "region": "전북"
+  },
+  {
+   "id": "5de0d36c1b37fe58",
+   "title": "공공AX 링크 보관함 — 자동 수집 링크 갤러리",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "83dd1411a30c6653",
+   "title": "병무청, 내부 업무지원 AI '워크메이트' 가동",
+   "org": "병무청",
+   "org_type": "중앙행정기관",
+   "region": null
+  },
+  {
+   "id": "3d07b6da99f5e1ed",
+   "title": "직제 기반 조직도 자동생성기 개발",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "1c54d608228e0845",
+   "title": "이미지 생성 프롬프트 컴파일 스킬 — 공냥이 프롬프트 킷",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "ac09bd2e1c0fbb29",
+   "title": "온AI Work — 공무원 보고서 AI 작성 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "2798c2e0b79ab291",
+   "title": "KODA — 폐쇄망용 보안취약점 점검 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "a8492663acf67b99",
+   "title": "나라예산 한눈에 — 중앙관서 세출예산서 8,500건 웹서비스",
+   "org": "행정안전부 AI실험실",
+   "org_type": "중앙행정기관",
+   "region": null
+  },
+  {
+   "id": "17ed2d7a88c03119",
+   "title": "Rekian — HWPX 공문서 재기안 에이전트 스킬셋",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "전남"
+  },
+  {
+   "id": "8c5458af8f13435d",
+   "title": "한글 AI 도우미 — 로컬 LLM 웹한글 보고서 확장",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "d6c35b2999da8ca0",
+   "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "8fb7daa690db1660",
+   "title": "온나라 전부서 문서 통합검색 사이드바",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "c6a58cb9146d0694",
+   "title": "parknews — 국립공원 현안 뉴스 지도·일일 요약",
+   "org": "국립공원공단",
+   "org_type": "공공기관",
+   "region": null
+  },
+  {
+   "id": "50ab356bb2ee3f4d",
+   "title": "범정부 내부망 AI 브라우저 사이드바 어시스턴트",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "85e155bd270cafc9",
+   "title": "병무청 신규자 업무 지식창고",
+   "org": "병무청",
+   "org_type": "중앙행정기관",
+   "region": null
+  },
+  {
+   "id": "b0b96e656d3572e9",
+   "title": "남양주 AI-Agent 시스템 베타 — 내부망 상용 AI",
+   "org": "남양주시",
+   "org_type": "기초지자체",
+   "region": "경기"
+  },
+  {
+   "id": "1de6fb50cc324684",
+   "title": "모두의 민원콜 — 한 문장으로 담당 연락처 찾기",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "65e1983235232514",
+   "title": "bookforge — 한국어 전자책 PDF 생성 에이전트 스킬",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "aef95509b7611c96",
+   "title": "AIDC 입지 시뮬레이터 — 전력망·용수·SOC 종합 검토",
+   "org": "공공기관 연구자(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "acd684108227b9c2",
+   "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크",
+   "org": "한국국제협력단(KOICA)",
+   "org_type": "공공기관",
+   "region": null
+  },
+  {
+   "id": "4c918008fd4eff60",
+   "title": "민원 답변 작성 스킬 팩 — Codex·Claude Code·Gemini CLI 겸용",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "인천"
+  },
+  {
+   "id": "75b6a86d91aea955",
+   "title": "AI지원담당 — 공공 실무용 로컬 AI 메신저 MVP (공공 AX 로컬 시리즈 1)",
+   "org": "과학기술정보통신부",
+   "org_type": "중앙행정기관",
+   "region": null
+  },
+  {
+   "id": "8f7e23fec614657c",
+   "title": "한국어 개인정보 탐지 모델 schift-ko-pii 오픈소스 공개",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "4e577ad2f13f9ea4",
+   "title": "메가 프로젝트 절차 지도 — 광주 반도체 클러스터 법정 절차 1,281개",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "cb0abc29707cc710",
+   "title": "수정 가능한 PPTX·피그마 슬라이드 스킬 — 공공 카드뉴스 스타일",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "ccee126dc9e23cf6",
+   "title": "경북 면사무소 토목직의 AX — 토목 전용 GPTs와 횡단면도 작성 앱",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "경북"
+  },
+  {
+   "id": "a384b647830b2bf7",
+   "title": "쉽다공문 — 제미나이 GEM 공문서 초안 생성기 무료 배포",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "dada6ac641debe8f",
+   "title": "정보시스템 자산관리 솔루션 — 랙실장도·포트맵까지 폐쇄망 웹 관리",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "539d5aacb03635db",
+   "title": "민원 신고 스크리너 — 신고 7유형·근거법령·소관부서 자동 판별 모듈",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "0d94258abac0b093",
+   "title": "TaskCalendar — 실무자용 Windows 일정·메모 관리 앱",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "경기"
+  },
+  {
+   "id": "034b8bd869e0d6ea",
+   "title": "여비업무통합도우미 — 자가용 출장 여비 계산·품의 문안 검증 시제품",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "광주"
+  },
+  {
+   "id": "76c050a0c58a9760",
+   "title": "전통시장·상점가 디지털 구역도 — QGIS 연동 웹지도 대시보드",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "울산"
+  },
+  {
+   "id": "de45e7387cab1c62",
+   "title": "KODA SBOM Tracker — 폐쇄망 한국어 SBOM 추적·취약점 관리 포털",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "0b9d4e9c2beed197",
+   "title": "public-doc-to-hwpx — AI 초안을 공공기관 보고서 서식 HWPX로 만드는 스킬",
+   "org": "공직 현장(공공기관)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "386d7292c2c1f4dd",
+   "title": "2022 개정 교육과정 MCP — 중고등 수업 설계의 근거 기반 AI 답변",
+   "org": "공직 현장(교육)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "baebbc7b8aa4c952",
+   "title": "Open AI Service Hub — 경북IT융합산업기술원의 공공형 AI 모델 서빙 플랫폼",
+   "org": "경북IT융합산업기술원(GITC)",
+   "org_type": "공공기관",
+   "region": "경북"
+  },
+  {
+   "id": "10f18583c9e56e12",
+   "title": "화성특례시 신규자 지식창고 — 규정 검증 카드 130장 웹앱 (원본)",
+   "org": "화성특례시 AI스마트전략실",
+   "org_type": "기초지자체",
+   "region": "경기"
+  },
+  {
+   "id": "ea8ce2a3d003400f",
+   "title": "KID — 공공문서 개인정보 자동 검출·마스킹 데스크톱 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "b3294bcc65e7f2e7",
+   "title": "소방기술민원 답변생성기 — 법령·유사민원 검색과 참고 답변 초안",
+   "org": "소방 119빅데이터팀",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "9ed53fd6dad0561a",
+   "title": "SN-SNS-Solution — 성남시 SNS 실적 취합 자동화 브라우저 확장",
+   "org": "성남시(AI동호회)",
+   "org_type": "공직 개인",
+   "region": "경기"
+  },
+  {
+   "id": "afc5c1316c86db8e",
+   "title": "온나라 리마스터 — 결재 화면 다크모드·가독성 개선 확장",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "0d6d0bf3edf2b438",
+   "title": "GeoPoint Editor — 엑셀 위경도·주소를 지도에서 편집하는 GIS 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "전남"
+  },
+  {
+   "id": "72209c4dc90a2188",
+   "title": "행안부 세출예산서 마크다운 저장소 — 나라예산 한눈에의 출발점",
+   "org": "행정안전부 AI실험실",
+   "org_type": "중앙행정기관"
+  },
+  {
+   "id": "9c850ff3e7429a24",
+   "title": "소방 장비서무 인수인계 대시보드 — 3교대 공용 PC용 로컬 관제판",
+   "org": "소방 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "전북"
+  },
+  {
+   "id": "33c36cc77c4bfc5c",
+   "title": "Korean Stats MCP — KOSIS 통계를 자연어로, 출처 자동 인용",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "f20250742f06ccb5",
+   "title": "Awesome MCP Korea — 한국 특화 MCP 서버 큐레이션 목록",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "6c44153f6db7d61c",
+   "title": "팩트방망이(FactBat) — 공공 원문 통합검색 + 원격 MCP",
+   "org": "팩트방망이(민간 개인 개발)",
+   "org_type": "민간(참고)"
+  },
+  {
+   "id": "e6b6f2b13b9ea1aa",
+   "title": "OpenData MCP — 공공데이터포털 API 문서를 표준화해 MCP로 제공",
+   "org": "이지알앤디(민간 기업)",
+   "org_type": "민간(참고)"
+  },
+  {
+   "id": "fe06420a5b17251f",
+   "title": "경기도의회 회의 실시간 자막 서비스 — 기관 도메인으로 정식 출시",
+   "org": "경기도의회(공직 개인 개발)",
+   "org_type": "지방의회",
+   "region": "경기"
+  },
+  {
+   "id": "2808aea47c52b21c",
+   "title": "경기도의회 지능형 법령정보시스템 — LexDiff 타 기관 재사용 구축",
+   "org": "경기도의회(공직 개인 개발)",
+   "org_type": "지방의회",
+   "region": "경기"
+  },
+  {
+   "id": "1488ff8944c8de22",
+   "title": "TechPartners — 싱가포르 공공데이터로 만든 연구협력 파트너 탐색 사이트",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "dcba0f654467bdc9",
+   "title": "schift-ko-pii-v6 — 한국어 개인정보 검출·마스킹 경량 모델",
+   "org": "Schift(민간 개발팀)",
+   "org_type": "민간(참고)"
+  },
+  {
+   "id": "48047741db1ff1cd",
+   "title": "보듬정착 — 지역소멸위기 지역 이주·정착 원스톱 안내 서비스",
+   "org": "군산시(공직 개인 개발)",
+   "org_type": "공직 개인",
+   "region": "전북"
+  },
+  {
+   "id": "c549f992e1c521a8",
+   "title": "재난문자 지도 — 재난안전문자를 지도·목록으로 보는 대시보드",
+   "org": "행정안전부(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "d9d7249fcb949e9a",
+   "title": "ONE윈도우 — 대화형 AI 검색을 갖춘 국가데이터통합플랫폼",
+   "org": "한국지능정보사회진흥원(NIA)",
+   "org_type": "공공기관"
+  },
+  {
+   "id": "0de42ad232a72d2c",
+   "title": "쨍하고해뜰날 — 주소 하나로 태양광 설치·수익을 진단하는 AI 도우미",
+   "org": "LX 한국국토정보공사(AI 챔피언 해커톤 결선)",
+   "org_type": "공공기관"
+  },
+  {
+   "id": "1e20470325db3ee6",
+   "title": "데이터버스 — AI챔피언 교육·인증 공식 학습지원시스템",
+   "org": "행정안전부(운영지원 NIA)",
+   "org_type": "중앙행정기관"
+  },
+  {
+   "id": "847dfef5759dbcac",
+   "title": "HOP is Open HWP — HWP·HWPX를 여는 크로스플랫폼 오픈소스 편집기",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "22bd8e0c137caa21",
+   "title": "정치인 도감 — 22대 국회의원 299명을 공공데이터로 한눈에",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "4559d150e4eddb0a",
+   "title": "UrbanLaw — 주소 한 줄로 도시·건축 법규를 검토하는 AI 컨설턴트",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "539f90471f451d80",
+   "title": "hwpx-skill — AI 에이전트가 한글(HWPX) 문서를 만들고 고치는 Claude 스킬",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "4ccc2c692aed50aa",
+   "title": "Gov.AX Insight — 정부 부처 AI 보도자료 수집·AX 동향 자동 리포트",
+   "org": "지식재산처(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "cd965d88ba23849c",
+   "title": "IP-AX 글로벌 뉴스 아카이브 — 해외 IP·AI 뉴스 자동 수집·분기 AI 리포트",
+   "org": "지식재산처(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "cc9ad59a95da1241",
+   "title": "IP-AX Law Monitor — 입법 동향을 감시하고 검토의견 초안까지 쓰는 법령 에이전트",
+   "org": "지식재산처(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "36b1148d2ee2caea",
+   "title": "지식재산처 지원사업 한눈에 — 분야별 조망과 AI 매칭 상담",
+   "org": "지식재산처(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "4f5ffee21b8bc19c",
+   "title": "내편안전 — 서울 중구의 중대재해·산업안전 통합관리시스템",
+   "org": "서울특별시 중구",
+   "org_type": "기초지자체",
+   "region": "서울"
+  },
+  {
+   "id": "32eccfe07448d060",
+   "title": "국회 회의록 실시간 수집기 — 공식 원문 우선, 진행 중 회의는 AI 속기 보조",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "a6cf409b9ccc336c",
+   "title": "민원AI — 감정 섞인 하소연을 격식 있는 민원·청구서로 바꾸는 서비스",
+   "org": "민원AI(민간 서비스)",
+   "org_type": "민간(참고)"
+  },
+  {
+   "id": "9e0778df3c0ad630",
+   "title": "AKwiki — 오픈카톡 대화를 일간 위키·기사로 바꾸는 커뮤니티 지식화 사례",
+   "org": "AI 커뮤니티(개인 개발)",
+   "org_type": "민간(참고)"
+  },
+  {
+   "id": "11f22180ed7f62b8",
+   "title": "우리동네 민원 판정기 — 민원을 조례·상위법에 비춰 다음 행동을 좁히는 검토 도구",
+   "org": "지방자치혁신연구원",
+   "org_type": "민간(참고)"
+  },
+  {
+   "id": "1c8fb0ad57992fe1",
+   "title": "vibecode-checker — AI 생성 코드를 공공 보안 기준으로 점검하는 1차 보안 린터",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "4032cd7b445543e6",
+   "title": "바이브코드 하네스 — 기획부터 보안 점검까지 같은 순서로 만드는 실행형 개발 하네스",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "c54ee4b5fb3ee4c5",
+   "title": "Orca — 병렬 에이전트 플릿을 부리는 에이전트 개발 환경(ADE)",
+   "org": "Stably AI(해외 오픈소스)",
+   "org_type": "해외(참고)"
+  },
+  {
+   "id": "f108979f0d8b2009",
+   "title": "book-to-skill — 기술 서적 PDF를 Claude Code 스킬로 바꾸는 도구",
+   "org": "해외 오픈소스",
+   "org_type": "해외(참고)"
+  },
+  {
+   "id": "b64e832490a6c814",
+   "title": "MCP Inspector — MCP 서버를 눈으로 검사하는 공식 테스트 도구",
+   "org": "Model Context Protocol(공식)",
+   "org_type": "해외(참고)"
+  },
+  {
+   "id": "4f136eeeea72fe65",
+   "title": "Archify — 코드베이스·시스템 설명을 검증 가능한 다이어그램으로 바꾸는 에이전트 스킬",
+   "org": "해외 오픈소스",
+   "org_type": "해외(참고)"
+  },
+  {
+   "id": "81e87c38477c4016",
+   "title": "펜통(PenTong) — 학교·교육청의 교무·행정 통합 업무 지원 프로그램",
+   "org": "교육 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "0dd22d6d0375bc39",
+   "title": "온나라 AI 문서 분배기 — 접수대기 문서를 범정부 AI 공통기반으로 분석해 담당 배분",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "d00d45bbe02f222b",
+   "title": "통일(tongil) — 설치·인터넷 없이 PDF를 합본하는 오프라인 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "2863151971658b11",
+   "title": "늘봄학교 예산 편성 대시보드 — 실시간 협업으로 본예산·추경을 함께 짜는 도구",
+   "org": "교육 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "c7e0862df664bbe5",
+   "title": "AI Survey Insight — 설문 주관식 수백 건을 주제·감정별로 정리하는 분석 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "1d90d7ec74b027d1",
+   "title": "Attendance Checker — 근태 기록에서 확인할 대상을 먼저 찾아주는 점검 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "fa5ac519aca439f4",
+   "title": "학교정보 MCP — 학교 이름 하나로 급식·수행평가·학사일정을 모아 보는 도구",
+   "org": "서울특별시 광진구(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "efe52d0b0f115f47",
+   "title": "Capptivo — 오픈소스 화면 녹화·자동 줌 도구(온디바이스 자막)",
+   "org": "SECHAK-AG(오픈소스)",
+   "org_type": "해외(참고)"
+  },
+  {
+   "id": "d74a4f0d2a187720",
+   "title": "G2B Masters — 나라장터·국방전자조달 입찰정보 통합 검색",
+   "org": "G2B Masters(운영 주체 미상)",
+   "org_type": "민간(참고)"
+  },
+  {
+   "id": "655d61608d54c98a",
+   "title": "HRMCP — NCS 온톨로지 기반 HR 실무 MCP 서버",
+   "org": "공직 현장(공공기관)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "29a4620d8090789b",
+   "title": "인사스캔 — 인사발령 엑셀을 브라우저에서 조회·필터·재저장",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티",
+   "region": null
+  },
+  {
+   "id": "95635604261b7867",
+   "title": "국산 경량 오픈모델 3종 조례 심사 실측 — 전패, 그리고 답이 흔들린다",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": null
+  },
+  {
+   "id": "4ef5fe3f290f3df3",
+   "title": "충남 공공의료 안전정보 허브 — 천안의료원 중심 응급실 병상·119 현황 통합 상황판(초안)",
+   "org": "천안의료원",
+   "org_type": "공공기관",
+   "region": "충남"
+  },
+  {
+   "id": "6c0fa4c0c3508ff0",
+   "title": "인물사진분류 AI — 행사 사진에서 등록 인물만 골라 폴더로 정리하는 로컬 CNN 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "3a211aec27b69d0a",
+   "title": "claw-hwp — 한컴 없이 Claude·Codex가 HWP/HWPX를 그대로 읽고 만들고 고치는 플러그인",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "0292062a6328545a",
+   "title": "public-apis-4Kr — 한국 공개 API 300+ 커뮤니티 큐레이션 목록",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "f101dfca65b4144b",
+   "title": "데스크톱 AI 반려화분 — 책상 위 투명 플로팅 다마고치형 스트레스 케어 위젯",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "aea43d543a0244e1",
+   "title": "MinsLab — 폐쇄망 로컬 LLM 채팅·RAG 실습·PoC 7종 묶음 저장소",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "eebec2ebc85768d7",
+   "title": "눈치코치 — 전임자 파일 더미에서 업무·일정·전례를 찾아 주는 인수인계 분석 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "253dd6b9ef7a7166",
+   "title": "safeDoc — 인터넷 없이 로컬에서 파일 속 개인정보를 비식별화하는 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "e65b0800852d5e5f",
+   "title": "RuleLens AI — 기준 법령·지침과 내 자료를 로컬 Ollama로 대조하는 적합성 검토 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "1f962fbf41a13407",
+   "title": "AI 카드뉴스 생성기 — 첨부 파일을 로컬 LLM으로 이미지·텍스트 카드뉴스로",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "c1f58364f2c8c930",
+   "title": "기후노트 — 업무망 PC 전용 캘린더·일정·스티키 노트 앱",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "a388a43362f33468",
+   "title": "스마트 클립보드 매니저 — 다중 복사·붙여넣기와 창 전환을 묶은 업무 유틸리티",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "14f7cad4dc158248",
+   "title": "K-탐색기 — 즐겨찾기·핀·메모·다중 패널을 갖춘 업무형 파일 탐색기",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "7ad16f34cfb6cca7",
+   "title": "korean-munseo-diff — HWP·HWPX·PDF 개정 신구대비표를 로컬에서 초안 생성",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "75e003a20b698c53",
+   "title": "어문 규범 조언 도구 — 온라인가나다 상담의 근거 찾기를 사전·규범 직접 조회로 자동화",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "720ad1356346730c",
+   "title": "공문핏 — 공문을 붙여넣으면 순번 체계를 자동 정리하는 작성 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "94030c5fb139bce4",
+   "title": "경력증명 자동화 — 경력대장 엑셀에서 경력증명서를 자동 작성·출력",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "2da44c532cd48ea4",
+   "title": "성남시 드론관제실 대관 시스템 — 예약·변경·현황 공유 웹서비스",
+   "org": "성남시",
+   "org_type": "기초지자체",
+   "region": "경기"
+  },
+  {
+   "id": "6c94a4ce57e81fee",
+   "title": "공문서작성기 — 샘플 서식과 재료를 주면 문서를 채워 주는 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "6e89aaf95f6ffbd9",
+   "title": "온나라 문서 검색 서포터 — 부서별 문서등록대장을 한 번에 검색하는 엣지 확장",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "977a72eb576ddd84",
+   "title": "한글 금액 변환기 — 숫자 금액을 문서용 한글 표기로 바꾸는 경량 유틸리티",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "b1650b0206b8342c",
+   "title": "어썸 메일 머지 — 엑셀 데이터를 한글 서식에 흘려 넣는 문서 자동화 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "475ae4a2e200aa27",
+   "title": "전북교육 한글 서식도우미 — 보고서·기안문에 자주 쓰는 서식 작업 퀵패널",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "전북"
+  },
+  {
+   "id": "0ab90cf5d003b12d",
+   "title": "JB업무ON — 학교·기관 반복 행정업무 자동화 32종 모음",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "전북"
+  },
+  {
+   "id": "0aaafa00490adad0",
+   "title": "국회요구자료 HWP 병합기 — 요구자료 파일을 의원별·날짜별로 정리·병합",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "0bbe8416a0aabb2f",
+   "title": "AI PC 닥터 — 업무 PC 설정·백업·문서 최적화를 한 화면에서 실행",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "e0bead338374d31a",
+   "title": "마크다운 변환기 — HWP·PDF·오피스 문서를 완전 오프라인으로 변환",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "7af52cadb55f2391",
+   "title": "pubdatamcp — 공공데이터 목록 조회 MCP와 AI 디스커버리 레이어",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "3228747115808243",
+   "title": "서울 약국 운영시간 공백 분석 — ai-gov 100일 챌린지 Day 1",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "e996c18ebe1f7413",
+   "title": "지하철 엘리베이터 환승 MCP — 교통약자 환승 가능 여부 조회",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "ef3a050410d18dc5",
+   "title": "이주민 지원 시설·언어 지도 — ai-gov 챌린지 Day 3",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "00d13e0b1ba148be",
+   "title": "공공 CSV 인코딩 정리기 — 깨진 한글 CSV를 바로잡는 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "e8b1d5c18fe542fe",
+   "title": "분리배출 기준 지역 비교 — 지자체별 규정 차이를 한눈에",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "e627c2ca4ea8e5a1",
+   "title": "조달 공고 지역·업종 검색 MCP — ai-gov 챌린지 Day 6",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "eccb4bca5ea5776c",
+   "title": "소규모 공사 내역서 대시보드 — 읍면동 소규모 공사비 적정 산출 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "29af2304c37b658b",
+   "title": "열린재정 예산 데이터 다운로드 자동화 — 연도·부처별 일괄 수집 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "f5f24469d5ca281f",
+   "title": "소담 패밀리 — 비개발자가 만든 Claude Code 안전벨트 플러그인 7종 묶음",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "c39ae1dfd84a207a",
+   "title": "GAI 허브 — 교육행정인의 바이브코딩 앱·강의·지식을 모으는 공유 플랫폼",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "fd81aa1b889ada2e",
+   "title": "노미스(No-Miss) — 실수를 없애는 개인 업무비서, 업무 대장·점검 이력·절차 구조도",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "b6b0a466c74ec485",
+   "title": "바빠(BAPA) — 공직자 업무자동화 도구를 모아 나누는 커뮤니티 플랫폼",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "636db1bb955d73ae",
+   "title": "경기도의회 AI 주간업무보고 목업 — 취합·검토·조판을 한 흐름으로 묶은 시제품",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "경기"
+  },
+  {
+   "id": "73bb12bf461ceb4c",
+   "title": "가짜일 킬러 — 엑셀 10종·한글 5종 반복 작업을 브라우저에서 끝내는 도구 모음",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "9ba78e3c1e469185",
+   "title": "AX 조직관리 레이더 — 공공·민간 조직관리와 혁신행동을 데이터로 비교",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "01963ce2b093182c",
+   "title": "ReportAI — 내부망 로컬 LLM으로 보고서 초안·보충자료·월간계획을 잇는 온프레미스 에이전트",
+   "org": "경남 양산시",
+   "org_type": "기초지자체",
+   "region": "경남"
+  },
+  {
+   "id": "6c86b53c5323b10e",
+   "title": "MemoMindAI — 실무자의 핵심 메모를 로컬에서 자산화하는 인수인계 대응 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "fe2ce0f01fcc8bb0",
+   "title": "DocuAuto — 엑셀 데이터로 한글·파워포인트 문서를 대량 생성하는 웹·크롬 확장",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "30c55330885db6d6",
+   "title": "지역사회보장정책 데이터 분석 대시보드 — 정책 수립 지원 지표 시각화",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "ef389de4efadc258",
+   "title": "조달법령 관리시스템 — 매일 최신성을 검증하는 조달 법령·행정규칙 통합 검색",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "4093246b3f316bd8",
+   "title": "119 빅데이터 MCP — 소방안전 빅데이터 플랫폼을 자연어로 조회",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "8074c4bdae66b1d2",
+   "title": "지자체 보건복지 예산·사업 분석 — 지방재정365 세부사업 기준",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "eabfc738053ad166",
+   "title": "HWP AI 에디터 — 완전 오프라인 로컬 LLM 결합 HWPX 편집기",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "8e6aa720ce7bf4d3",
+   "title": "Legal Reviewer — 법령 체계 연쇄 검토 지능형 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "d49d90ae171dee00",
+   "title": "내 지식 위키 — 로컬 색인·출처 연결 AI 초안 작업공간",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "3d3eaf8759345a3f",
+   "title": "STAY UP 소방드론 현장 상황판 — 오프라인 우선 단일 HTML",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "전북"
+  },
+  {
+   "id": "07ecaa7b4995211f",
+   "title": "gov-report-skill — 기획보고서 7대 항목 구조를 아는 작성 에이전트 스킬",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "0ccc65b2ea92c33b",
+   "title": "gov-docs-kr — 행정문서 초안·퇴고·AI 티 제거 스킬",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "cc97b961232b079a",
+   "title": "소방용수·안전시설물 관리 시스템 PoC",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "4f9705e8c86c01b4",
+   "title": "PayRecon VBA — e사람·디브레인 인건비 집행현황 대조 생성기",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "50b80ba457126d1f",
+   "title": "서귀포시 복지톡 — 복지 지침 질의응답 AI 업무비서(로컬 가능)",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "제주"
+  },
+  {
+   "id": "2dd83474d3fd2c4e",
+   "title": "DB돋보기 — 테이블 명세·쿼리 보관함·업무 문서 통합 관리",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "2633ef9fbb2eeb96",
+   "title": "Omx Sticky Notes — DPAPI 암호화 단일 실행 메모앱",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "f29d4461ca101f9f",
+   "title": "웹기반 시트 공동편집 — 내부망 엑셀 협업 시스템",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "cbdbd939523c230f",
+   "title": "아산 하천 수위 예측 모니터링 — 곡교천 13개 지점 1~4시간 선행 예측",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "충남"
+  },
+  {
+   "id": "c5d9b943e082e8b3",
+   "title": "editable-pptx-studio — 슬라이드를 대화로 만드는 PPTX 스킬",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "전남"
+  },
+  {
+   "id": "5e4dca70708a1262",
+   "title": "고교학점제 시험시간표 제작 프로그램",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "342d96de10ee1c13",
+   "title": "유연근무 출퇴근 지정 오류 검증기 — 복무위반 사전 방지",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "9fce3174edfb29bf",
+   "title": "KTL 미니 자동화도구 — AutoHotkey 생산성 도구 모음",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "0286b6f3a317807b",
+   "title": "KTL 파일전송 — 계정 없이 올리기만 하는 파일 전송 클라이언트",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "6751e5911661a481",
+   "title": "KTL 레드마인 MCP — 프로젝트 관리를 AI 대화로",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "7dfbee7ef60b358e",
+   "title": "KTL 웹 리포트 제너레이터 — 23종 컴포넌트 동적 양식 생성",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "06886d440d3b0027",
+   "title": "KTL 정도검사 자동화 — 디지털기록계 파일 분석·전송",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "fdd52c0a86c4d676",
+   "title": "문서 지식화 변환기 — 폐쇄망 비정형 문서 AI 전처리 파이프라인",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "b053dab5a5075549",
+   "title": "지자체 주간행사 캘린더 — PDF 자동 파싱·교차 검증 공유 웹앱",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "77fc0140051bcb95",
+   "title": "DnS_Auto — PDF·OCR·엑셀 취합과 문서 변환을 GUI·로컬 MCP로",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "d8b2afa5e72012a8",
+   "title": "CompassLM — 오프라인 우선 문서 RAG(임베딩·OCR·온톨로지 보조)",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "c9a5f8edba7c5a14",
+   "title": "KIST hwpx 스킬 — 한글 보고서 자동 생성(기관 공식)",
+   "org": "한국과학기술연구원",
+   "org_type": "공공기관"
+  },
+  {
+   "id": "43dcfc6559c0abf5",
+   "title": "공시송달 주소 마스킹 — 건물번호·동·호수 자동 별표 처리",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "892aa97552ead898",
+   "title": "교육정책 통합검색 EduPolicy Search — 16개 시도교육청 191개 게시판",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "전북"
+  },
+  {
+   "id": "2dabf0fbae5c557b",
+   "title": "헬로라이트하우스 — 등대 1,480개를 잇는 원스톱 해양관광 서비스",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "a248a4c37b4c8d4e",
+   "title": "충남서부보훈지청 엑셀정리기 — AI연구모임의 디브레인 예산 정리 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "충남"
+  },
+  {
+   "id": "8e8782de32b8c90b",
+   "title": "GatherFlow 엑셀한셀 취합도우미 — 폐쇄망 설치형",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "0dd018f24ec9bf23",
+   "title": "K-PoliShield — 폐쇄망 설치형 개인정보 마스킹 지원",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "861e4f85a1173965",
+   "title": "타운홀 키트 — QR 접속·닉네임 참여형 기관 행사 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "f6dc8da32adbe5dc",
+   "title": "fess 검색엔진 AI 파일검색 — NAS 문서 본문 검색",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "4d94bba36c1b16df",
+   "title": "정부 보도자료 키워드 다운로더 — 기간·기관·키워드 필터",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "4555f669760ca370",
+   "title": "졸업사정 결과 확인 — 학생·학부모·행정이 함께 보는 졸업 요건 점검",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "1e145932fab1b1f5",
+   "title": "문서 한방 출력 — 형식 혼합 일괄 인쇄 데스크톱 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "d8da49c9dd6db753",
+   "title": "교원 호봉 획정·재획정기 — 100% 로컬 OCR 경력 산정",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "42bbbb4b6af435b3",
+   "title": "경기도교육청 모든업무 챗봇 — 20,867개 문서 14만 청크 RAG",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "경기"
+  },
+  {
+   "id": "11cbf10247642c9f",
+   "title": "바로 응급 — 응급실 알림·응급 상황 대처 안내 서비스",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "05653c51718e68e6",
+   "title": "군포 민원신청서 작성 도우미 — 오프라인 자체완결 HTML",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "경기"
+  },
+  {
+   "id": "a6834b493c566013",
+   "title": "릴리즈픽(ReleasePick) — 보도자료를 15분 만에 카드뉴스·인포그래픽으로 만드는 정책홍보 자동제작 시스템",
+   "org": "재정경제부",
+   "org_type": "중앙행정기관"
+  },
+  {
+   "id": "9998aba2d1f55c24",
+   "title": "개인정보 위험도 자가점검 도구 — 법령·안내서·처분사례를 묶어 보호조치 수준을 스스로 진단",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "2ebfec74844ad120",
+   "title": "rhwp — 한컴 없이 브라우저에서 HWP를 열고 고치는 크롬 확장",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "4b4c41e966b2968e",
+   "title": "오늘학교 — 학사일정·급식·시간표를 한 화면에 모은 생활형 캘린더",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "2eaef8173bffb87e",
+   "title": "학교카드 사용지도 — 서울 교육청 업무추진비 공개자료를 지도로",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "0fe5b5889c8a985f",
+   "title": "공공마스킹 — 정보공개청구 답변용 PDF 마스킹 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "8808dfc3d8f01f18",
+   "title": "초근누구 — NEIS 초과근무 자료를 캘린더로 정리해 특근매식비 검토",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "3ccca48e333c1b1b",
+   "title": "계약서류 작성지원 도구 — 업체용 승낙사항·수의계약 서약서 일괄 작성",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "a027a99b27a8ba31",
+   "title": "학교예산 시각화 — 에듀파인 엑셀을 읽어 학교회계를 그림으로",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "8dea0f477c3fbd55",
+   "title": "학교 공사 업무 허브 — 계약·착공·준공·하자 서류를 한 곳에서",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "31d4fa4a67ff393f",
+   "title": "직무발명 특허 관리 도구 — 특허번호로 담당 부서 즉시 조회·KIPRIS 연동",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "강원"
+  },
+  {
+   "id": "34dc791884a2e0ce",
+   "title": "감사 처리대장·검토 의견서 자동화 — 로컬 AI로 일상감사 의견 초안",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "강원"
+  },
+  {
+   "id": "3fffed900372804c",
+   "title": "Law Helper MVP — 법제처 API로 법령·조문을 찾아 주는 검색 도우미",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "ca382091612780f6",
+   "title": "방위사업청 계약 데이터 대시보드 — 필터·검색·시각화",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "69b9f308463f6d26",
+   "title": "항공우주연구원 계약 데이터 대시보드 — 필터·검색·시각화",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "9643d5dfecbb5d79",
+   "title": "갈피 법령 MCP — 목적별 법령검토를 위한 읽기 전용 서버",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "addc602fa82a6c66",
+   "title": "이기종 AI 에이전트 협업 — 클로드 코드와 코덱스를 한 프로젝트에서",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "c1708f95ed0a54c1",
+   "title": "오프라인 한글 맞춤법 검사기 — 공공언어 순화·개인정보까지 탐지",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "9bd5db0d42162a7b",
+   "title": "택배 송장번호 일괄조회 — 여러 건을 한 번에 조회하고 엑셀로",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "제주"
+  },
+  {
+   "id": "393f9a6a043e8c8b",
+   "title": "온나라 플러스 — UI 크기 조절·다크모드·통합검색 사용성 확장",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "제주"
+  },
+  {
+   "id": "8838e30428782f61",
+   "title": "주소 익명화 도구 — 인사 배치용 주소를 인근 랜드마크로 변환",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "145a89799b1be340",
+   "title": "법령 마크다운 변환기 — 법제처 XML을 구조화 문서로",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "3e2ccb6c2da0e6ba",
+   "title": "Artifact Intelligence — 의도와 자료를 주면 공공문서를 만들고 사람이 검수",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "c5b815f06013fe9f",
+   "title": "원페이퍼 보고서 스킬 — A4 한 쪽 개조식 압축·DOCX 출력 검증",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "18cc34d0c2575113",
+   "title": "HTML PPT Studio — 24테마·31레이아웃 발표자료 생성 스킬",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "da8410280f41bdc2",
+   "title": "LLM Wiki 초기화 스킬 — 지식베이스 골격을 설치하는 에이전트 스킬",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "204931d47b43f1d6",
+   "title": "공사계약 자동화 시스템",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "8cef6ce664a3e49b",
+   "title": "EduFit Time — 원격교육 접속 로그로 근태·이수 판정",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "832674177ef4d247",
+   "title": "EduFit Manager — 연수 운영·만족도·강사 현황 통합 허브",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "fde81c13336c45cd",
+   "title": "화성오산 늘봄자원지도",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "경기"
+  },
+  {
+   "id": "93cdaad2433ab72a",
+   "title": "회의록 작성 도우미 — 시민의 알 권리를 위한 신속 회의록",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "4ac96b9f3ce12428",
+   "title": "책이지 — 도서관 상호대차를 음성으로 안내하는 AI 에이전트 데모",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "7f8dfb1eb051abe9",
+   "title": "책이지 MCP — 상호대차 자동화 표준 도구 10종 참조 구현",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "26e5c5b2268bf5ee",
+   "title": "HWPX 용량 줄이기 도우미 — 고해상도 삽입 이미지 자동 조정",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "91de989989c3888b",
+   "title": "스캔 파일 이름 정리 도우미 — 첫 페이지를 읽어 날짜_제목으로",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "전북"
+  },
+  {
+   "id": "f5668f521bb1d50a",
+   "title": "데스크노트 — 로컬 AI가 정리해 주는 바탕화면 스티키 메모",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "6cdb2a99b9fc3344",
+   "title": "타이니 PDF 에디터 — 광고 없는 무료 한글·이미지·PDF 병합 편집기",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "9a5fd0a6dbaddbce",
+   "title": "네오 데스크톱 캘린더 — 바탕화면에 임베드하는 일정 관리",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "b3a5a3f108b84716",
+   "title": "몬닥 — 제주 지원사업·법령·조례를 모아 AI에게 묻는 공익 서비스",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "제주"
+  },
+  {
+   "id": "ede8eebdd392590e",
+   "title": "인명용 한자 찾기 — 창구에서 같은 한자를 정확히 가리키는 조회 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "경기"
+  },
+  {
+   "id": "f55339aeb1f417a2",
+   "title": "건설공사 절차 지식 공유 — 종류·규모별 법적·행정 절차 스케치",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "fce3c395139e4b0f",
+   "title": "숫자금액 한글 변환기 — 지출문서용 콤마·한글 표기 동시 변환",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "ff202c516be11b82",
+   "title": "MCastTalk — 지역 네트워크 안에서 도는 온디바이스 다국어 음성 방송",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "8c461c4901e30775",
+   "title": "이미지 비교 실험실 — 이미지 생성 모델 세대 간 20종 대조 공개",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "3615205d53567c32",
+   "title": "국가AI전략위원회 1년 타임라인 — 분과별 정책 기록을 근거와 함께 따라가는 아카이브",
+   "org": "공공기관 연구자(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "9e0d7d42f0a21b44",
+   "title": "새집고고 — 건축물대장·실거래가로 전국 단지의 재건축 사업성을 등급화한 참고 서비스",
+   "org": "새집고고(운영 주체 미상)",
+   "org_type": "민간(참고)"
+  },
+  {
+   "id": "017deb488964980d",
+   "title": "집행대장 — 전국 243개 지자체 세부사업 46만 건의 예산 집행률을 매일 아침 정리하는 페이지",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "fcfac85b15998dee",
+   "title": "한국서부발전 위피봇 — 발전 현장 안전·설비 업무에 붙인 사내 생성형 AI 에이전트",
+   "org": "한국서부발전",
+   "org_type": "공공기관"
+  },
+  {
+   "id": "2f27c87e6f7c7614",
+   "title": "에듀코스트 — 학교시설 설계내역서 대시보드",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "a3b9afb1d17d15a0",
+   "title": "설계도면을 3차원으로 — 공공 시설사업 검토에 생성형 3D 모델링 적용",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "224e2d82d9369735",
+   "title": "안심학교 MAP — 통학구역·보행 통학로와 학교 주변 공사정보",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "4ff3227e6ec30331",
+   "title": "서울교육 출장 경로·여비 판단 지도",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "7283ffe2096fa4ee",
+   "title": "교육행정 문서 오프라인 코퍼스·검색 기반",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "43e5292fa9a441b7",
+   "title": "PDF 도깨비 방망이 — 행정용 23종 PDF 도구 모음",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "d2679e3d6555700c",
+   "title": "Legal Reviewer — 법령 검토와 공공서식 보고서 생성 워크벤치",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "1128dadf532a4f06",
+   "title": "KSPO 데이터 지도 — 공단 보유 데이터 한 화면 검색",
+   "org": "공직 현장(공공기관)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "d33ebcfc0adca9f8",
+   "title": "PII Cleaner — 오프라인 개인정보 비식별 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "90f8afce65c6f327",
+   "title": "영수증 사진으로 공용차량 세차내역 자동 입력",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "7df3c5d297166cb2",
+   "title": "교육행정 질의응답 사례 검색 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "3b195a5faf820769",
+   "title": "자치법규 정비 총괄 대시보드",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "경기"
+  },
+  {
+   "id": "7c989a8fe8dda878",
+   "title": "NCS JD — 채용 공고문 근거 매칭과 직무기술서 초안",
+   "org": "공직 현장(공공기관)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "6e2574c0914f8813",
+   "title": "SlideForge — 로컬에서 도는 발표자료 초안 생성 도구",
+   "org": "공직 현장(공공기관)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "204ab9b684be3cca",
+   "title": "myAI — 로컬 모델로 도는 업무 비서 웹앱",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "dee1a1ceb4432cd3",
+   "title": "DeskNote — 바탕화면 메모에 붙인 로컬 요약·유사 검색",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "e10607b74d8ffff6",
+   "title": "Alarm — 업무 중 발견한 할 일 등록·복귀 알림",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "42ac1d043a40db1b",
+   "title": "교사 개발자 연수 플랫폼 시안 — 수합·양식·사례집을 한 흐름으로",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "65f9634aacca2170",
+   "title": "행사 개인정보 수집·이용 동의 서비스 시안",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "0d6b2a5a76072edf",
+   "title": "광주지명필터 — 통합 특별시 지명을 옛 권역으로 나눠 보기",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "ce77601a3fa41786",
+   "title": "PDF를 마크다운으로 바꾸는 윈도우 변환기",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "664112a0d4b58f20",
+   "title": "전국 통합돌봄서비스 대시보드 — 시·군·구 12,104개 사업 검색·비교",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "55f606c2835337ba",
+   "title": "전북AI — 전북특별자치도 자체 구축 생성형 AI 행정 시스템",
+   "org": "전북특별자치도",
+   "org_type": "광역지자체",
+   "region": "전북"
+  },
+  {
+   "id": "c7cb2ef18a794314",
+   "title": "신재생 계통 지도 — 변전소 여유용량·사업성 분석·AI 투자 보고서(민간 참고)",
+   "org": "(주)인코어드테크놀로지스",
+   "org_type": "민간(참고)"
+  },
+  {
+   "id": "4bea357dc245a257",
+   "title": "바로맵 — 주소 엑셀을 올리면 주민 안내용 공개 지도가 되는 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "a3a18230c371b196",
+   "title": "시장실 결재 대기 현황판 — 모니터·관리자·퇴실 키오스크 세 화면",
+   "org": "광양시(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "전남"
+  },
+  {
+   "id": "dd784289395c2afb",
+   "title": "경기도의회사무처 신규자 지식창고 — 업무플랫폼 통합서비스의 한 모듈",
+   "org": "경기도의회(공직 개인 개발)",
+   "org_type": "지방의회",
+   "region": "경기"
+  },
+  {
+   "id": "3c5015d6c385a815",
+   "title": "KLEF 공람문서 요약 — K-에듀파인 공람 목록에 핵심·조치·기한을 붙이는 로컬 AI 도우미",
+   "org": "교육행정 현장(공직 개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "ada7cb6b9fabac8f",
+   "title": "paper-verify — 보고서·논문의 법령·판례·문헌 인용을 원본과 대조하는 Claude Code 스킬",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "9d19e64aa30f5332",
+   "title": "MiroFish-Ko 개인 수정판 — 로컬 LLM·Codex CLI로 돌리는 정책 여론 시뮬레이터",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "96added28c5e4ec7",
+   "title": "Liberaflow — 로컬 마크다운 노트 위에 AI 문서 작성·브라우저 자동화를 얹은 데스크톱 작업 공간",
+   "org": "지자체(공직 개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "fe0d33cc718246d6",
+   "title": "Public Cardnews — 정부·공공기관 정책 카드뉴스를 기획부터 이미지까지 만드는 Codex 스킬",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "2085370092f99007",
+   "title": "God's Eye View — 항공기·선박·위성·지진·공개 카메라를 한 3D 지구본에 띄우는 오픈소스 공간정보 관제 참고 도구",
+   "org": "Halfpixel(오픈소스)",
+   "org_type": "해외(참고)"
+  },
+  {
+   "id": "c483c6ad4ccff0ab",
+   "title": "소담 오브레인 Codex — AI 코딩 대화의 결정·제약을 로컬 SQLite에 기억하는 MCP 메모리 플러그인",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "e57919fda43f59c0",
+   "title": "모두의 AI — 전 국민 무료 범용 AI 챗봇·행정 지원 에이전트 사업, 3개 컨소시엄 선정",
+   "org": "과학기술정보통신부·NIPA",
+   "org_type": "중앙행정기관"
+  },
+  {
+   "id": "df836d25474724a0",
+   "title": "내편이음 — 최근 2년 업무 문서를 업무별·월별로 엮어 인수인계 정리본을 만드는 도구",
+   "org": "서울 중구(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "a1b13e28060a59fd",
+   "title": "통계나침반 — 국가승인통계를 주제별로 큐레이션해 찾고 읽게 돕는 안내 사이트",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "a5cfce33ba2fe7ba",
+   "title": "충남 특근근무자 급식비 간편산출 — 초과근무 정산 파일을 올리면 지급 대상이 추려지는 기관 도구",
+   "org": "충청남도",
+   "org_type": "광역지자체",
+   "region": "충남"
+  },
+  {
+   "id": "b1ef2ba8bb30f689",
+   "title": "공구름 — 나라일터·ALIO·클린아이에 흩어진 공공기관 채용공고를 한 화면에서 거르는 사이트",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "c7f23951a3543a28",
+   "title": "점심 딸깍 — 업무추진비 공개자료로 공무원 단골집을 짚어 주는 근처 밥집 뽑기",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "d982e6e9b6f4022d",
+   "title": "내편정보 — 열 가지 질문으로 요구사항·보안·시험 기준을 담은 제작 프롬프트를 정리하는 정보화 준비 도구",
+   "org": "서울 중구(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "df4b43a32f613d04",
+   "title": "내편반장 — 오늘 작업 한 문장으로 핵심 위험·확인 항목·유사 사례를 읽는 현장 안전브리핑 도구",
+   "org": "서울 중구(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "87836993a2f6a874",
+   "title": "내편동행 — 작은 사업장의 위험성평가·안전회의·교육 기록·개선조치 작성을 돕는 안전 파트너",
+   "org": "서울 중구(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "d141f5b3e0beb6a5",
+   "title": "내편공문 — 공문 오타·표현 검수와 기관 서식 재사용을 한곳에서 돕는 윈도우 문서 도구",
+   "org": "서울 중구(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "1c9efba39708c4d5",
+   "title": "내편집(PDF) — 병합·분할·페이지 편집과 선택 영역 정보 삭제를 인터넷 없이 처리하는 윈도우 PDF 도구",
+   "org": "서울 중구(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "2442dc859d5bac3a",
+   "title": "내편표지 — 안전표지를 검색해 크기를 맞추고 로고를 얹어 한 장씩 출력하는 윈도우 도구",
+   "org": "서울 중구(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "2b3089577cceaa08",
+   "title": "내편제출 — 부서별 서류 제출·미제출·보완·마감을 담당자 PC에서 관리하는 취합 도구",
+   "org": "서울 중구(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "e5e658e7a6c123a5",
+   "title": "목록형 엑셀-마커 KML 도구 생성기 — 낚시터·해수욕장·어촌체험마을 대장을 지도 마커 도구로 찍어내는 템플릿",
+   "org": "인천광역시 수산자원연구소",
+   "org_type": "광역지자체",
+   "region": "인천"
+  },
+  {
+   "id": "66711e6200439e4f",
+   "title": "수산자원관리수면 KML 제작 도구 — 고시문 좌표표를 지정 연도별 색 구역으로 그리는 변환기",
+   "org": "인천광역시 수산자원연구소",
+   "org_type": "광역지자체",
+   "region": "인천"
+  },
+  {
+   "id": "84346a9b03be7cc5",
+   "title": "어항관리 KML 변환 도구 — 어항 현황은 등급별 마커로, 보수보강 이력은 연도별 내역으로",
+   "org": "인천광역시 수산자원연구소",
+   "org_type": "광역지자체",
+   "region": "인천"
+  },
+  {
+   "id": "8ece417e2770f60f",
+   "title": "도서(섬) KML 제작 도구 — 유인도·무인도를 나눠 관할과 지정 구분별 폴더로 그리는 변환기",
+   "org": "인천광역시 수산자원연구소",
+   "org_type": "광역지자체",
+   "region": "인천"
+  },
+  {
+   "id": "2682065ff13cd4dd",
+   "title": "인공어초 KML 제작 도구 — 어초 종류별 아이콘 78종을 붙여 시설현황 대장을 지도로",
+   "org": "인천광역시 수산자원연구소",
+   "org_type": "광역지자체",
+   "region": "인천"
+  },
+  {
+   "id": "432f5ae5bc355914",
+   "title": "어업면허어장 KML 제작 도구 — 면허어장 대장을 어업 종류별 색 구역 KML·GeoJSON으로",
+   "org": "인천광역시 수산자원연구소",
+   "org_type": "광역지자체",
+   "region": "인천"
+  },
+  {
+   "id": "abdd47a1c604d6d1",
+   "title": "문서 표-엑셀 변환 도구 — 통계연보·업무편람의 PDF·HWPX 표를 시트 하나씩 엑셀로 되돌리는 도구",
+   "org": "인천광역시 수산자원연구소(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "인천"
+  },
+  {
+   "id": "57eb8ec2a19ce423",
+   "title": "엑셀 좌표-KML 변환 도구 — 고시문·도면의 좌표표를 도·도분초·평면직각좌표 어느 표기든 읽어 지도로",
+   "org": "인천광역시 수산자원연구소(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "인천"
+  },
+  {
+   "id": "d90828f716b18c74",
+   "title": "엑셀-통계파일 변환 도구 — 통계연보·백서 엑셀을 앱이 읽는 통계 JSON 하나로 묶는 도구",
+   "org": "인천광역시 수산자원연구소(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "인천"
+  },
+  {
+   "id": "d8db05d121f05142",
+   "title": "KML-엑셀 변환 도구 — 지도에 찍어 둔 좌표를 도분초·평면직각좌표와 길이·넓이까지 붙여 표로",
+   "org": "인천광역시 수산자원연구소(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "인천"
+  },
+  {
+   "id": "2349c4b45eb48e38",
+   "title": "지역사회보장계획 작성지원 플랫폼 — 제6기 시·군·구 계획을 절 단위로 써서 한글 문서로 내는 도구",
+   "org": "한국보건사회연구원(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "c110733ddf085d0d",
+   "title": "sAIde — 내 PC의 Ollama 모델로 웹페이지를 요약·번역하고 승인 후 조작하는 크롬 사이드패널 확장",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "c161b0158876229b",
+   "title": "온나라 sAIde — 문서등록대장을 열어 보지 않고 목록에서 공문을 AI로 요약·분석하고 첨부를 일괄 내려받는 엣지 사이드패널",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "5af7491b4ca15345",
+   "title": "MOPAN(모판) — RAG·MCP·모델·워크플로우를 직접 등록해 조합하는 에이전트 바탕 시스템",
+   "org": "농촌진흥청(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "b68ba0f4078e91cb",
+   "title": "공공 평가용어 검사기 — 공문서·보도자료·게시판 글의 어려운 외래어를 찾아 쉬운 우리말을 제시하는 윈도우 프로그램",
+   "org": "국제방송교류재단(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "2a1ab7f937e160a1",
+   "title": "webcheck MCP — 홈페이지 점검처럼 결정적 계산으로 끝나는 URL 확인을 코드에 맡겨 토큰을 아끼는 범용 MCP 서버",
+   "org": "농촌진흥청(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "2d37f3c2c8a2f80d",
+   "title": "Easy-On — 공장설립·등록·변경 등 공장행정 담당자의 검색·계산·기록·검토를 돕는 실무지원 플랫폼",
+   "org": "강원 강릉시(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "강원"
+  },
+  {
+   "id": "7a033dbc575873a3",
+   "title": "PenPDF — 에듀파인 첨부 용량 제한과 외부 변환 사이트 유출 걱정을 한 번에 푸는 교무·행정용 오프라인 PDF 도구",
+   "org": "부산광역시교육청(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "부산"
+  },
+  {
+   "id": "50e4aa3f24093d16",
+   "title": "국민 생애주기 혜택 내비게이터 — 18개 부처 세부사업 6,200여 개에서 국민 직접수혜 112개를 조건별로 보여 주는 정책 구상 데모",
+   "org": "기획예산처(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "c11374b81da3918d",
+   "title": "업무기억 AI — 개인 PC 문서를 로컬에서 검색해 골라 넣으면 인수인계서를 만들어 주는 MVP",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "b0808306ddb06317",
+   "title": "범정부 AI 준실시간 회의 자막 — 겹침 녹음과 CLOVA Studio GOV STT로 내부망 뷰어에 자막을 뿌리는 오프라인 실행형 시스템",
+   "org": "병무청(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "bebee8e2201944f0",
+   "title": "gov-visual-design — 공공 포스터·인포그래픽·카드뉴스를 대화와 시안 비교로 만들고 수정하기 쉽게 정리하는 디자인 지침 스킬",
+   "org": "보건복지부(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "081ff1760ed44fd7",
+   "title": "서울시교육청 공사계약 통합지원 시스템 — 계약길잡이 공개 자료를 출처 기반 위키·RAG와 규칙형 안내 엔진으로 잇는 계획~하자관리 업무공간",
+   "org": "서울특별시교육청(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "0fbe6800c85c1ae4",
+   "title": "AI 공간개발·공간관리 앱 — 함양군 지적도로 구역선 필지 교차 분석과 산업단지 입주 검증을 하는 두 갈래 도구",
+   "org": "경남 함양군(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "경남"
+  },
+  {
+   "id": "784186cf130cad9f",
+   "title": "BillTracker — 열린국회정보 API로 의안 심사 진행상황을 조회해 CSV로 남기는 콘솔 도구",
+   "org": "법제처(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "89a8d3b6f24a230d",
+   "title": "장부정리 — 물품·업체·구매·전체이력을 분류와 창고별로 관리하고 증빙까지 붙이는 로컬 장부 웹앱",
+   "org": "충남서부보훈지청(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "25f9560f0a6fa203",
+   "title": "Path Finder — 나이스 학교 목록에서 방문지를 고르고 기간을 정하면 일자별 출장·배달 동선을 짜 주는 웹앱",
+   "org": "대구광역시교육청(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "대구"
+  },
+  {
+   "id": "d8c600e7880172e4",
+   "title": "충주시 초·중학교 통학구역 검색 — 동·리, 통·반, 아파트명, 학교명으로 학구를 찾는 교육지원청 공식 정적 웹앱",
+   "org": "충청북도충주교육지원청",
+   "org_type": "교육기관",
+   "region": "충북"
+  },
+  {
+   "id": "d7422aa63cfaeb0e",
+   "title": "Stream-Record — 의회 중계 영상의 한국어 녹음·전사·회의록 작성을 윈도우 PC에서 끝내는 앱",
+   "org": "제주 서귀포시(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "제주"
+  },
+  {
+   "id": "579ea06f8895ceee",
+   "title": "관내여비 콕검 — 에듀파인 관내출장 엑셀로 근무지·출장지 보행 왕복거리와 2km 기준을 검토하는 도구",
+   "org": "서울특별시교육청 대청중학교(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "서울"
+  },
+  {
+   "id": "0e434e0b2047847c",
+   "title": "지반안전 액션랩 — 지하안전정보시스템 공개 지도에서 모은 실제 지반침하 사고 839건을 지도로 분석하는 정책 지원 웹앱",
+   "org": "행정안전부(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "9719b550772ed1b2",
+   "title": "CODERX — 폐쇄망 기관 PC 안에서 한국어 요구사항만으로 코드 생성·개선·보안점검을 하는 온프레미스 AI 코딩 도구",
+   "org": "한국철도공사",
+   "org_type": "공공기관"
+  },
+  {
+   "id": "145008482da81f0a",
+   "title": "외부강의등 신고 가이드 — 청탁금지법 제10조를 지방 공직자 기준으로 판단·신고·상한·초과사례금 순서로 풀어 쓴 안내 사이트",
+   "org": "경남 양산시(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "경남"
+  },
+  {
+   "id": "c38b78c5d8370920",
+   "title": "경기도의회 공통 디자인 시스템 — 11개 프런트엔드가 한 벌의 토큰·컴포넌트를 나눠 쓰게 만든 기반",
+   "org": "경기도의회",
+   "org_type": "지방의회",
+   "region": "경기"
+  },
+  {
+   "id": "a64a56c7a88a4da0",
+   "title": "소원이 갤러리 — 기관 캐릭터 이미지를 감정·행동별로 찾고 공식 CI까지 내려받는 브랜드 자산 창구",
+   "org": "경기도의회(공직 개인 개발)",
+   "org_type": "지방의회",
+   "region": "경기"
+  },
+  {
+   "id": "c6317f20659e8ad1",
+   "title": "맥 단축어 MCP — 에이전트가 일정·메모·연락처를 화면 조작 없이 읽게 하는 읽기 전용 서버",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "fdee8ff722146b48",
+   "title": "조례 인용 검증 게이트 실험 — AI 답변이 인용한 조문에 실제로 근거하는지 다른 모델로 채점한 재현 패키지",
+   "org": "지방자치혁신연구원",
+   "org_type": "민간(참고)"
+  },
+  {
+   "id": "136eb067c259c113",
+   "title": "공사기간 산정 검토 대시보드 — 고시 기준과 기상청 10년 실측으로 적정 공사기간을 두 갈래로 검토",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "8d5d9da284a4f810",
+   "title": "map3d — 오픈스트리트맵으로 도시를 3D 건물·도로 지도로 만들어 GLB로 내보내는 오픈소스",
+   "org": "cartesiancs(오픈소스)",
+   "org_type": "민간(참고)"
+  },
+  {
+   "id": "3cf9c1cfede2b178",
+   "title": "한양3D — 박물관 소장 옛 지도를 현대 고도 자료에 맞춰 펼친 18세기 한양 입체 지도",
+   "org": "한양3D(개인 오픈소스)",
+   "org_type": "민간(참고)",
+   "region": "서울"
+  },
+  {
+   "id": "f0a4485ba99e1417",
+   "title": "정부 보도자료 MCP — 12개 기관 17,500건을 제목·기관·기간으로 찾는 읽기 전용 색인",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "8a47740d405286c4",
+   "title": "자치법규 정합성 실측 — 서울시 조례 942건의 법률 인용 2,996개를 현행 조문과 전수 대조",
+   "org": "지방자치혁신연구원",
+   "org_type": "민간(참고)",
+   "region": "서울"
+  },
+  {
+   "id": "133d7e9c594456be",
+   "title": "서울 자치구 조례 정합성 지도 — 본청과 25개 구 조례의 법률 인용을 현행 조문과 대조해 지도로",
+   "org": "지방자치혁신연구원",
+   "org_type": "민간(참고)",
+   "region": "서울"
+  },
+  {
+   "id": "afef30356a841dac",
+   "title": "개인정보 마스킹 웹앱 — 국산 탐지 모델에 규칙·사용자 단어를 얹고 법원식 표기까지 고르는 로컬 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "9f6be40ee87d4b84",
+   "title": "법의 궤도 — 조문 하나에서 뻗어 나가는 법령 인용 관계를 입체 지도로 펼치는 탐색기",
+   "org": "재정경제부(개인 개발)",
+   "org_type": "중앙행정기관"
+  },
+  {
+   "id": "198bf13b6b986dd6",
+   "title": "공공기관 내부규정 MCP — 법령 검색에 344개 기관 3만 5천 건 규정을 붙여 상위법과 함께 훑는 서버",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "de85358ecf364f0a",
+   "title": "전국 통합돌봄 사업 총괄 대시보드 — 지자체 사업을 분류·지역으로 걸러 비교하고 조건을 공유하는 화면",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "e83a543b442722be",
+   "title": "개인정보위 업무혁신 바이브코딩 챌린지 — 비개발자 직원이 업무 불편을 직접 서비스로 만드는 사내 경진대회",
+   "org": "개인정보보호위원회",
+   "org_type": "중앙행정기관"
+  },
+  {
+   "id": "157289f6e0cd7fd4",
+   "title": "가재코드 치트시트 — 코딩 에이전트 사용법을 한 장으로 정리해 공식 저장소에 반영된 커뮤니티 기여물",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "939022c0f2b66a12",
+   "title": "서울 정비사업 지도 — 결정·고시 구역과 추진 단계를 공개자료로 모아 한 화면에 얹은 지도",
+   "org": "서울 정비사업 지도(운영 주체 미상)",
+   "org_type": "민간(참고)",
+   "region": "서울"
+  },
+  {
+   "id": "4ce9fa1c75ec36b5",
+   "title": "소담 라이노 오프라인 MCP — 라이선스 없이 건축 3D 모델을 만들고 되읽어 검수하는 로컬 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "9deddc356d5102b2",
+   "title": "국방 AI 뉴스레터 아카이브 — 72호 분량 기사를 호수·출처·주제로 찾는 정적 검색 사이트",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "113e9caee50e73cc",
+   "title": "전국 조례 상황판 — 245개 지방의회 조례안이 어느 처리 단계에 있는지 한 화면에 모은 보드",
+   "org": "지방자치혁신연구원",
+   "org_type": "민간(참고)"
+  },
+  {
+   "id": "ad435a193856fac5",
+   "title": "순찰일지 — 현장 사진을 올리면 순찰결과보고서 글과 한글(.hwpx) 파일이 나오는 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "1cabc8c7aa0e47ab",
+   "title": "개정 형사소송법 안내 — 검사 직접수사 폐지 이후 사건 흐름을 조문 카드·3D 지도·실무 퀴즈로 따라가는 사이트",
+   "org": "법률사무소 리바이어던",
+   "org_type": "민간(참고)"
+  },
+  {
+   "id": "24d1c3a77cd2322f",
+   "title": "토지 인허가 사전진단 — 주소와 건물 용도로 용도지역별 건축 가능 여부를 미리 짚는 서울 시범판",
+   "org": "지방자치혁신연구원",
+   "org_type": "민간(참고)"
+  },
+  {
+   "id": "48a2fe695d62b13f",
+   "title": "소담 라이노 GH코드 Codex — Rhino 7 그래스호퍼 스크립트 노드 코드를 짜 주는 Codex 플러그인",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "f2e5fa95789e73fb",
+   "title": "개인정보자문 작업 공간 — 침해사건 조사·자문과 보고서 초안을 법령·판례·결정문 근거로 돕는 웹 도구",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "42267bcd8527ba4a",
+   "title": "침해사고 신고 24시간 초과 검증 파이프라인 — 신고 자료에서 사실만 뽑고 과태료 대상 여부는 코드가 재계산",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "fbdee1f08c2ca185",
+   "title": "농해수위 국정감사 온톨로지 — 위원회 회의록을 발언·쟁점·이행약속 지식그래프로 엮어 국감 브리핑을 만드는 서비스",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "09f8bff3e9cc3b02",
+   "title": "병역판정검사 현황판 — 폐쇄망 Oracle을 읽기 전용으로 조회해 심리검사 진행·결과 등록 상태를 보여 주는 화면",
+   "org": "병무청(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "e72eed20d3744266",
+   "title": "정보보호 공시 검증 자동화 — 공개 데이터는 규칙으로, 기업 기밀은 로컬 AI로 비식별화한 뒤에만 상용 AI에 묻는 설계",
+   "org": "공직 현장(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "1db4a17fca5b103c",
+   "title": "SafeView 민원 보호 열람 — 공격적 표현은 필요한 구간만 펼쳐 보고 이전 제출본과 달라진 내용을 먼저 확인하는 시제품",
+   "org": "보건복지부(개인 개발)",
+   "org_type": "공직 개인"
+  },
+  {
+   "id": "e90a4c090605bf28",
+   "title": "SUNSET RUN — 서창억새노을마라톤 참여를 이끄는 행사 홍보 러닝 게임과 제작기",
+   "org": "전남광주통합특별시 서구",
+   "org_type": "기초지자체",
+   "region": "광주"
+  },
+  {
+   "id": "8d7130819201e068",
+   "title": "강릉마실한바퀴 — 강릉 명소·축제를 도는 픽셀 보드게임 홍보 시안",
+   "org": "강원 강릉시",
+   "org_type": "기초지자체",
+   "region": "강원"
+  },
+  {
+   "id": "607426b96a1fcac7",
+   "title": "공직자 법인카드 식당 맛집 지도 — 정치자금·법인카드 식대 지출을 식당별로 모은 지도",
+   "org": "법인카드 맛집 지도(민간 개인 개발)",
+   "org_type": "민간(참고)"
+  },
+  {
+   "id": "a30371a307e1fe08",
+   "title": "천안의료원 3D 질병코드 바디맵 — 인체 부위를 눌러 증상·진료과·의료진과 질병코드를 찾는 상담 참고 도구",
+   "org": "충남 천안의료원(개인 개발)",
+   "org_type": "공직 개인",
+   "region": "충남"
+  }
+ ]
+}

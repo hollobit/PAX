@@ -12,8 +12,14 @@ import concurrent.futures
 import datetime
 import json
 import re
+from pathlib import Path
 import subprocess
+import sys
 import urllib.parse
+
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from pax.jsonio import read_json, write_json  # noqa: E402
 
 CASES = "data/cases.json"
 ACTIVE_DAYS, STALE_DAYS = 60, 180
@@ -88,7 +94,7 @@ def check_case(c):
 
 
 def main():
-    data = json.load(open(CASES))
+    data = read_json(CASES)
     cases = data["cases"]
     today = datetime.date.today().isoformat()
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
@@ -113,7 +119,7 @@ def main():
         if not ok:
             dead += 1
             print(f"  링크 끊김: {c['title'][:40]} ← {c.get('case_url') or c.get('link')}")
-    json.dump(data, open(CASES, "w"), ensure_ascii=False, indent=1)
+    write_json(CASES, data)
     print(f"점검 완료 — 끊김 {dead}건 / 유지보수: 활발 {active}·정체 {stale}·방치 {idle}")
 
 

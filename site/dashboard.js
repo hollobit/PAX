@@ -22,7 +22,10 @@ const AX_LADDER_DESC = {
 // 순차(단일 색상 명도) 스케일 — 히트맵·막대용
 const SEQ_STEPS = ['var(--seq-1)', 'var(--seq-2)', 'var(--seq-3)', 'var(--seq-4)', 'var(--seq-5)'];
 
-const state = { cases: [], filter: '전체', sort: { key: 'no', dir: 'asc' } };
+const state = { cases: [], filter: '전체', sort: { key: 'no', dir: 'asc' }, page: 1 };
+
+// 평가표 쪽 나누기 — 사례마다 행 두 개(요약·판정 근거)를 그리면 500건에서 DOM이 1만 6천 개를 넘는다.
+const EVAL_PAGE_SIZE = 100;
 
 // 평가 표 컬럼 정의: [key, 라벨, 정렬값 추출 함수]
 const CONF_ORDER = { 높음: 3, 중간: 2, 낮음: 1 };
@@ -376,6 +379,7 @@ function renderFilter() {
     btn.setAttribute('aria-pressed', String(state.filter === label));
     btn.addEventListener('click', () => {
       state.filter = label;
+      state.page = 1;
       renderFilter();
       renderTable();
     });
@@ -446,6 +450,7 @@ function setEvalSort(key) {
   state.sort = sort.key === key
     ? { key, dir: sort.dir === 'asc' ? 'desc' : 'asc' }
     : { key, dir: 'asc' };
+  state.page = 1;
   renderTable();
 }
 
@@ -483,7 +488,10 @@ function renderTable() {
 
   const tbody = document.createElement('tbody');
   const rows = sortEvalRows(state.cases.filter((c) => state.filter === '전체' || c.ax === state.filter));
-  for (const c of rows) {
+  const pages = Math.max(1, Math.ceil(rows.length / EVAL_PAGE_SIZE));
+  state.page = Math.min(Math.max(1, state.page), pages);
+  const start = (state.page - 1) * EVAL_PAGE_SIZE;
+  for (const c of rows.slice(start, start + EVAL_PAGE_SIZE)) {
     const tr = document.createElement('tr');
     tr.className = 'eval-row';
 
@@ -538,38 +546,86 @@ function renderTable() {
     tr.append(no, title, org, ax, scm, tool, audience, ev, risk);
     tbody.appendChild(tr);
 
-    // 상세(판정 근거) 행 — 클릭 시 토글
-    const detail = document.createElement('tr');
-    detail.className = 'eval-detail';
-    detail.hidden = true;
-    const td = document.createElement('td');
-    td.colSpan = 9;
-    const dl = document.createElement('dl');
-    for (const [label, value] of [
-      ['도입 상태', c.status],
-      ['판정 근거', c.rationale],
-      ['관문 판정', c.gate],
-      ['피드백·학습', c.feedback],
-      ['복원력', c.resilience],
-      ['신뢰도 / 인간 통제', `${c.confidence} / ${c.human}`],
-    ]) {
-      if (!value) continue;
-      const dt = document.createElement('dt');
-      dt.textContent = label;
-      const dd = document.createElement('dd');
-      dd.textContent = value;
-      dl.append(dt, dd);
-    }
-    td.appendChild(dl);
-    detail.appendChild(td);
-    tbody.appendChild(detail);
-
+    // 상세(판정 근거) 행 — 처음 펼칠 때 만든다. 대부분 펼치지 않으므로 미리 그리지 않는다.
+    let detail = null;
     tr.addEventListener('click', (e) => {
       if (e.target.closest('a')) return; // 링크 클릭은 그대로
+      if (!detail) {
+        detail = evalDetailRow(c);
+        tr.after(detail);
+        return;
+      }
       detail.hidden = !detail.hidden;
     });
   }
   table.appendChild(tbody);
+  renderEvalPager(rows.length, pages);
 }
+
+function evalDetailRow(c) {
+  const detail = document.createElement('tr');
+  detail.className = 'eval-detail';
+  const td = document.createElement('td');
+  td.colSpan = 9;
+  const dl = document.createElement('dl');
+  for (const [label, value] of [
+    ['도입 상태', c.status],
+    ['판정 근거', c.rationale],
+    ['관문 판정', c.gate],
+    ['피드백·학습', c.feedback],
+    ['복원력', c.resilience],
+    ['신뢰도 / 인간 통제', `${c.confidence} / ${c.human}`],
+  ]) {
+    if (!value) continue;
+    const dt = document.createElement('dt');
+    dt.textContent = label;
+    const dd = document.createElement('dd');
+    dd.textContent = value;
+    dl.append(dt, dd);
+  }
+  td.appendChild(dl);
+  detail.appendChild(td);
+  return detail;
+}
+
+function renderEvalPager(total, pages) {
+  let nav = document.getElementById('eval-pager');
+  if (!nav) {
+    nav = document.createElement('nav');
+    nav.id = 'eval-pager';
+    nav.className = 'pager';
+    nav.setAttribute('aria-label', '평가표 쪽 이동');
+    document.getElementById('eval-table').closest('.table-wrap').after(nav);
+  }
+  nav.hidden = pages <= 1;
+  const from = total ? (state.page - 1) * EVAL_PAGE_SIZE + 1 : 0;
+  const to = Math.min(state.page * EVAL_PAGE_SIZE, total);
+  const range = document.createElement('span');
+  range.className = 'pager__range';
+  range.textContent = `${from}–${to} / ${total}건`;
+  const buttons = [];
+  const go = (n, label, opts = {}) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'pager__btn';
+    btn.textContent = label;
+    if (opts.current) btn.setAttribute('aria-current', 'page');
+    if (opts.disabled) btn.disabled = true;
+    else {
+      btn.addEventListener('click', () => {
+        state.page = n;
+        renderTable();
+        // 쪽을 넘기면 표 위로 — 넘긴 자리에서 이어 읽게 한다
+        document.getElementById('eval-table').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+    buttons.push(btn);
+  };
+  go(state.page - 1, '‹ 이전', { disabled: state.page === 1 });
+  for (let n = 1; n <= pages; n += 1) go(n, String(n), { current: n === state.page });
+  go(state.page + 1, '다음 ›', { disabled: state.page === pages });
+  nav.replaceChildren(range, ...buttons);
+}
+
 
 load();

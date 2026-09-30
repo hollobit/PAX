@@ -1,4 +1,4 @@
-// 사례 북마크 — 메인 목록(app.js)과 같은 저장소를 쓴다.
+// 사례 북마크 — 메인 목록(app.js)·3D PAX가 함께 쓰는 저장소.
 // 내 북마크는 localStorage 'pax-bookmarks'(사례 id 배열)에 두고, 전체 누적 수는 Supabase
 // bookmark_toggle RPC(+1/-1만 허용, RLS로 직접 쓰기 차단)로 보낸다. anon 키는 공개용 키다.
 
@@ -16,11 +16,29 @@ export function loadBookmarks() {
   }
 }
 
+const COUNTER_HEADERS = { apikey: COUNTER_KEY, Authorization: `Bearer ${COUNTER_KEY}`, 'Content-Type': 'application/json' };
+
+/** 전체 사용자 누적 북마크 수(case_id → count). 실패하면 빈 Map — 인기 판정은 SNS 지표로 대체된다. */
+export async function loadBookmarkCounts() {
+  try {
+    const res = await fetch(`${COUNTER_URL}/rest/v1/bookmark_counts?select=case_id,count`, {
+      headers: COUNTER_HEADERS,
+      cache: 'no-cache',
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const rows = await res.json();
+    return new Map(rows.map((r) => [r.case_id, r.count]));
+  } catch (err) {
+    console.error('북마크 카운터 로드 실패 (SNS 지표로 대체):', err);
+    return new Map();
+  }
+}
+
 function sendDelta(caseId, delta) {
   // 실패해도 화면 동작에는 영향 없음 (fire-and-forget)
   fetch(`${COUNTER_URL}/rest/v1/rpc/bookmark_toggle`, {
     method: 'POST',
-    headers: { apikey: COUNTER_KEY, Authorization: `Bearer ${COUNTER_KEY}`, 'Content-Type': 'application/json' },
+    headers: COUNTER_HEADERS,
     body: JSON.stringify({ p_case_id: caseId, p_delta: delta }),
   }).catch((err) => console.error('북마크 카운터 전송 실패:', err));
 }

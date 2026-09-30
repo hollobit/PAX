@@ -7,88 +7,19 @@
  * 사례 데이터를 문자열로 연결하는 코드는 두지 않는다 (XSS 방지).
  */
 
-const ORG_TYPES = ['전체', '중앙행정기관', '광역지자체', '기초지자체', '지방의회',
-  '공공기관', '교육기관', '공직 개인', '커뮤니티', '민간(참고)', '해외(참고)'];
-const SOURCES = ['전체', 'Threads', '오픈채팅'];
-
-const ORG_TYPE_BADGE_CLASS = {
-  중앙행정기관: 'badge--org-type-중앙',
-  광역지자체: 'badge--org-type-지자체',
-  기초지자체: 'badge--org-type-지자체',
-  지방의회: 'badge--org-type-지자체',
-  공공기관: 'badge--org-type-공공기관',
-  교육기관: 'badge--org-type-교육',
-  '공직 개인': 'badge--org-type-개인',
-  커뮤니티: 'badge--org-type-커뮤니티',
-  '민간(참고)': 'badge--org-type-참고',
-  '해외(참고)': 'badge--org-type-참고',
-};
-
-const TASK_CATEGORIES = ['인사·복무', '회계·정산', '계약·조달', '민원', '문서·기안',
-  '감사·법무', '시설·안전', '데이터·통계', '기획·정책', '공통·범용'];
+import { loadBookmarks, loadBookmarkCounts, toggleBookmark as storeToggleBookmark, onBookmarksChanged } from './pax-bookmarks.js?v=c1fdc503';
+import { createExportToolbar } from './app-export.js?v=fb98639b';
+import { ORG_TYPES, SOURCES, TASK_CATEGORIES, SYNONYMS, VIEWS } from './app-constants.js?v=c793f71d';
+import { readUrlState, buildUrlQuery } from './app-url.js?v=57ff3f9e';
+import { createCaseCard, createCaseTable, siteHostname } from './app-cards.js?v=afa344be';
 
 // 분야(도메인) 분류는 site/case-domains.js가 정본이다 — 관측소 현황판과 같은 정의를 쓴다.
 const DOMAIN_NAMES = CASE_DOMAIN_NAMES;
 const matchesDomain = matchesCaseDomain;
 
-// 검색 동의어 사전 (로드맵 1-1): 실무 어휘 ↔ 사례 표기의 간극을 메운다
-const SYNONYMS = {
-  여비: ['출장', '정산', '경비', '출장비'],
-  출장정산: ['여비', '출장', '정산'],
-  경비정산: ['여비', '정산'],
-  공문: ['기안', '공문서', '문서', 'hwp'],
-  기안: ['공문', '재기안', '품의'],
-  결재: ['품의', '기안'],
-  한글: ['hwp', 'hwpx'],
-  민원: ['신고', '상담', '콜'],
-  조달: ['입찰', '계약', '나라장터'],
-  회의록: ['회의', '녹취', '전사'],
-  번역: ['다국어', '통역'],
-  챗봇: ['상담', '어시스턴트', '비서'],
-  법령: ['법률', '법제', '조례', '규정'],
-  일정: ['캘린더', '스케줄'],
-  지도: ['gis', '맵', '현황판'],
-};
-
-const VIEWS = ['cards', 'list', 'tags'];
-
-/* ── 누적 북마크 카운터 (Supabase) ─────────────────────────
- * anon 키는 클라이언트 공개용으로 설계된 키다. 쓰기는 서버의
- * bookmark_toggle RPC(+1/-1만 허용, RLS로 직접 쓰기 차단)로만 가능.
- */
-const COUNTER_URL = 'https://pdkpqrxcqiznsetxcvaq.supabase.co';
-const COUNTER_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBka3BxcnhjcWl6bnNldHhjdmFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxMTA2MTAsImV4cCI6MjEwMTY4NjYxMH0.Rj7cnt9dHcQ7O-CuGeGwAyVxVdWFwQYuiCetOUbEHzI';
-const COUNTER_HEADERS = {
-  apikey: COUNTER_KEY,
-  Authorization: `Bearer ${COUNTER_KEY}`,
-  'Content-Type': 'application/json',
-};
+/* ── 북마크 ── 내 북마크 저장과 전체 누적 카운터는 pax-bookmarks.js(3D PAX와 공용)가 맡는다. */
 // 인기 항목 수: 북마크 횟수 상위 N개
 const POPULAR_TOP_N = 20;
-
-async function loadBookmarkCounts() {
-  try {
-    const res = await fetch(`${COUNTER_URL}/rest/v1/bookmark_counts?select=case_id,count`, {
-      headers: COUNTER_HEADERS,
-      cache: 'no-cache',
-    });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const rows = await res.json();
-    return new Map(rows.map((r) => [r.case_id, r.count]));
-  } catch (err) {
-    console.error('북마크 카운터 로드 실패 (SNS 지표로 대체):', err);
-    return new Map();
-  }
-}
-
-function sendBookmarkDelta(caseId, delta) {
-  // 실패해도 UI 동작에는 영향 없음 (fire-and-forget)
-  fetch(`${COUNTER_URL}/rest/v1/rpc/bookmark_toggle`, {
-    method: 'POST',
-    headers: COUNTER_HEADERS,
-    body: JSON.stringify({ p_case_id: caseId, p_delta: delta }),
-  }).catch((err) => console.error('북마크 카운터 전송 실패:', err));
-}
 
 function bookmarkCount(c) {
   return state.bookmarkCounts.get(c.id) || 0;
@@ -152,12 +83,6 @@ function isPopularCase(c) {
 }
 
 // 사례 대상 URL의 호스트명 (유니코드 도메인 보존을 위해 문자열로 추출)
-function siteHostname(c) {
-  const url = caseTargetUrl(c);
-  if (!url) return null;
-  return url.replace(/^https:\/\//, '').split('/')[0].replace(/^www\./, '');
-}
-
 const state = {
   cases: [],
   filter: { q: '', orgType: '전체', source: '전체', tag: null, bookmarkedOnly: false, taskCat: '전체', domain: '전체', noInstallOnly: false, region: null, ministry: null },
@@ -175,34 +100,14 @@ const state = {
   status: 'loading', // 'loading' | 'loaded' | 'error'
 };
 
-function loadBookmarks() {
-  try {
-    const saved = JSON.parse(localStorage.getItem('pax-bookmarks') || '[]');
-    return new Set(Array.isArray(saved) ? saved.filter((v) => typeof v === 'string') : []);
-  } catch {
-    return new Set();
-  }
-}
-
 function toggleBookmark(id) {
-  const next = new Set(state.bookmarks);
-  if (next.has(id)) {
-    next.delete(id);
-  } else {
-    next.add(id);
-  }
+  // 저장·서버 카운터 전송은 공용 모듈이, 화면용 누적 수는 여기서 낙관적으로 갱신한다
+  const next = storeToggleBookmark(state.bookmarks, id);
   state.bookmarks = next;
-  try {
-    localStorage.setItem('pax-bookmarks', JSON.stringify([...next]));
-  } catch {
-    // 저장 실패(사생활 보호 모드 등)는 무시 — 세션 내에서는 동작한다
-  }
-  // 전체 사용자 누적 카운터에 반영 (낙관적 로컬 갱신 + 서버 전송)
   const delta = next.has(id) ? 1 : -1;
   const counts = new Map(state.bookmarkCounts);
   counts.set(id, Math.max((counts.get(id) || 0) + delta, 0));
   state.bookmarkCounts = counts;
-  sendBookmarkDelta(id, delta);
   syncBookmarkFilterButton();
   // '북마크만 보기' 중에는 목록 자체가 달라지므로 전체 렌더링이 필요하지만,
   // 평소에는 화면 깜빡임 없이 해당 사례의 별표 버튼만 제자리에서 갱신한다.
@@ -229,64 +134,17 @@ function loadSavedView() {
   }
 }
 
-/* ── URL ↔ 상태 동기화 ─────────────────────────────────────
- * 모든 설정을 URL 쿼리로 표현한다: q, type, src, tag, view, sort, bm
- * URL에 있는 값이 localStorage 기본값보다 우선한다 (공유 링크 복원용).
- */
+/* ── URL ↔ 상태 동기화 ── 읽기·쓰기 규칙은 app-url.js의 순수 함수가 맡는다. */
 function applyUrlToState() {
-  const p = new URLSearchParams(location.search);
-  const orgType = p.get('type');
-  const source = p.get('src');
-  const view = p.get('view');
-  const sortParam = p.get('sort'); // "key.dir"
-  let sort = state.sort;
-  if (sortParam) {
-    const [key, dir] = sortParam.split('.');
-    if ((SORT_ACCESSORS[key] || key === 'popularity') && (dir === 'asc' || dir === 'desc')) {
-      sort = { key, dir };
-    }
-  }
-  state.filter = {
-    ...state.filter,
-    q: p.get('q') || '',
-    orgType: ORG_TYPES.includes(orgType) ? orgType : '전체',
-    source: SOURCES.includes(source) ? source : '전체',
-    tag: p.get('tag') || null,
-    bookmarkedOnly: p.get('bm') === '1',
-    taskCat: TASK_CATEGORIES.includes(p.get('task')) ? p.get('task') : '전체',
-    domain: DOMAIN_NAMES.includes(p.get('domain')) ? p.get('domain') : '전체',
-    noInstallOnly: p.get('ni') === '1',
-    region: p.get('region') || null,
-    ministry: (typeof MINISTRY_BY_NAME !== 'undefined' && MINISTRY_BY_NAME.has(p.get('ministry')))
-      ? p.get('ministry') : null,
-  };
-  state.focusCaseId = p.get('case') || null;
-  const page = Number.parseInt(p.get('page') || '1', 10);
-  state.page = Number.isFinite(page) && page > 0 ? page : 1;
-  if (VIEWS.includes(view)) state.view = view;
-  state.sort = sort;
+  Object.assign(state, readUrlState(location.search, state, {
+    sortKeys: [...Object.keys(SORT_ACCESSORS), 'popularity'],
+    domainNames: DOMAIN_NAMES,
+    ministries: typeof MINISTRY_BY_NAME !== 'undefined' ? MINISTRY_BY_NAME : new Map(),
+  }));
 }
 
 function syncUrl() {
-  const p = new URLSearchParams();
-  const f = state.filter;
-  if (f.q.trim()) p.set('q', f.q.trim());
-  if (f.orgType !== '전체') p.set('type', f.orgType);
-  if (f.source !== '전체') p.set('src', f.source);
-  if (f.tag) p.set('tag', f.tag);
-  if (f.bookmarkedOnly) p.set('bm', '1');
-  if (f.taskCat !== '전체') p.set('task', f.taskCat);
-  if (f.domain !== '전체') p.set('domain', f.domain);
-  if (f.noInstallOnly) p.set('ni', '1');
-  if (f.region) p.set('region', f.region);
-  if (f.ministry) p.set('ministry', f.ministry);
-  if (state.view !== 'cards') p.set('view', state.view);
-  if (state.sort.key !== 'popularity' || state.sort.dir !== 'desc') {
-    p.set('sort', `${state.sort.key}.${state.sort.dir}`);
-  }
-  if (state.focusCaseId) p.set('case', state.focusCaseId);
-  if (state.page > 1) p.set('page', String(state.page));
-  const qs = p.toString();
+  const qs = buildUrlQuery(state);
   history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
 }
 
@@ -727,8 +585,8 @@ function render() {
       const sorted = sortForList(results);
       const { pages, start } = resolvePage(sorted.length, sorted);
       // 내려받기는 보이는 쪽이 아니라 걸러진 전체를 담는다 — 쪽 나누기는 표시 방식일 뿐이다.
-      els.caseList.appendChild(createExportToolbar(sorted));
-      els.caseList.appendChild(createCaseTable(sorted.slice(start, start + PAGE_SIZE)));
+      els.caseList.appendChild(createExportToolbar(sorted, state.evalById));
+      els.caseList.appendChild(createCaseTable(sorted.slice(start, start + PAGE_SIZE), cardCtx()));
       if (pages > 1) els.caseList.appendChild(createPager(sorted.length, pages));
     }
     return;
@@ -742,7 +600,7 @@ function render() {
       const grid = document.createElement('div');
       grid.className = 'case-list tag-view-results';
       results.forEach((c, i) => {
-        const card = createCaseCard(c);
+        const card = createCaseCard(c, cardCtx());
         card.style.setProperty('--i', String(i));
         grid.appendChild(card);
       });
@@ -759,7 +617,7 @@ function render() {
 
   const { pages, start } = resolvePage(results.length, results);
   results.slice(start, start + PAGE_SIZE).forEach((c, i) => {
-    const card = createCaseCard(c);
+    const card = createCaseCard(c, cardCtx());
     card.style.setProperty('--i', String(i));
     els.caseList.appendChild(card);
   });
@@ -787,6 +645,23 @@ function createNewBadge() {
   return badge;
 }
 
+// 카드·목록 표(app-cards.js)가 읽는 상태와 콜백 — 렌더할 때마다 현재 값으로 만든다.
+function cardCtx() {
+  return {
+    evalById: state.evalById,
+    champOfCase: state.champOfCase,
+    sort: state.sort,
+    activeTag: state.filter.tag,
+    isNew: isNewCase,
+    isPopular: isPopularCase,
+    popularBadge: createPopularBadge,
+    newBadge: createNewBadge,
+    bookmarkButton: createBookmarkButton,
+    onSort: setSort,
+    onTag: setTag,
+  };
+}
+
 function createBookmarkButton(c) {
   const bookmarked = state.bookmarks.has(c.id);
   const btn = document.createElement('button');
@@ -799,268 +674,6 @@ function createBookmarkButton(c) {
   btn.title = bookmarked ? '북마크 해제' : '북마크 추가';
   btn.addEventListener('click', () => toggleBookmark(c.id));
   return btn;
-}
-
-/* ── 목록 내보내기 (CSV / PDF) ───────────────────────────── */
-
-function createExportToolbar(results) {
-  const bar = document.createElement('div');
-  bar.className = 'export-toolbar';
-
-  const label = document.createElement('span');
-  label.className = 'export-toolbar__label';
-  label.textContent = `${results.length}건 내보내기`;
-
-  const csvBtn = document.createElement('button');
-  csvBtn.type = 'button';
-  csvBtn.className = 'export-btn';
-  csvBtn.textContent = 'CSV 다운로드';
-  csvBtn.addEventListener('click', () => exportCsv(results));
-
-  const pdfBtn = document.createElement('button');
-  pdfBtn.type = 'button';
-  pdfBtn.className = 'export-btn';
-  pdfBtn.textContent = 'PDF 저장';
-  pdfBtn.title = '인쇄 대화상자에서 PDF로 저장을 선택하세요';
-  pdfBtn.addEventListener('click', () => exportPdf(results));
-
-  bar.append(label, csvBtn, pdfBtn);
-  return bar;
-}
-
-function csvEscape(value) {
-  let s = String(value == null ? '' : value);
-  // CSV 수식 주입 방어: 수식으로 해석될 수 있는 선행 문자를 중화한다
-  if (/^[=+\-@\t\r]/.test(s)) s = `'${s}`;
-  return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
-}
-
-function exportCsv(results) {
-  const header = ['제목', '기관', '기관유형', '구분', '지역', '업무분류', '태그', '요약',
-    'AX단계', '업무범위', '완결성', '위험도', '인간통제', '증거등급',
-    '사례URL', '출처', '원문/공유링크', '게시일', '수집일', '라이선스'];
-  const rows = results.map((c) => {
-    const ev = state.evalById.get(c.id) || {};
-    return [
-      c.title, c.org, c.org_type, c.case_class || '', c.region || '미상',
-      c.task_category || '', c.tags.join(' '), c.summary,
-      ev.ax || '', ev.s || '', ev.c || '', ev.risk || '', ev.human || '', ev.evidence || '',
-      caseTargetUrl(c) || '', c.source === 'threads' ? 'Threads' : '오픈채팅',
-      c.link || '', c.date, c.collected_at, c.license || '미확인',
-    ].map(csvEscape).join(',');
-  });
-  // BOM: Excel에서 한글이 깨지지 않도록
-  const csv = '﻿' + [header.join(','), ...rows].join('\r\n');
-  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = `공공AX-사례목록-${new Date().toISOString().slice(0, 10)}.csv`;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(a.href);
-}
-
-function exportPdf(results) {
-  // 인쇄 전용 영역을 만들어 브라우저 인쇄(PDF로 저장)를 연다 — 외부 라이브러리 없이
-  // 한글 PDF를 만들 수 있는 유일한 자체 완결 방식.
-  const old = document.getElementById('print-area');
-  if (old) old.remove();
-
-  const area = document.createElement('div');
-  area.id = 'print-area';
-
-  const h1 = document.createElement('h1');
-  h1.textContent = '모두의 공공AX 사례 아카이브';
-  const meta = document.createElement('p');
-  meta.textContent = `${new Date().toISOString().slice(0, 10)} 기준 · ${results.length}건 · hollobit.github.io/PAX`;
-  area.append(h1, meta);
-
-  const table = document.createElement('table');
-  const thead = document.createElement('thead');
-  const hr = document.createElement('tr');
-  for (const label of ['제목', '기관', '유형', '태그', '출처', '날짜']) {
-    const th = document.createElement('th');
-    th.textContent = label;
-    hr.appendChild(th);
-  }
-  thead.appendChild(hr);
-  table.appendChild(thead);
-
-  const tbody = document.createElement('tbody');
-  for (const c of results) {
-    const tr = document.createElement('tr');
-    const cells = [c.title, c.org, c.org_type, c.tags.map((t) => `#${t}`).join(' '),
-      c.source === 'threads' ? 'Threads' : '오픈채팅', c.date];
-    for (const value of cells) {
-      const td = document.createElement('td');
-      td.textContent = value;
-      tr.appendChild(td);
-    }
-    tbody.appendChild(tr);
-    const summaryTr = document.createElement('tr');
-    summaryTr.className = 'print-summary';
-    const td = document.createElement('td');
-    td.colSpan = 6;
-    const url = caseTargetUrl(c);
-    td.textContent = c.summary + (url ? ` (${url})` : '');
-    summaryTr.appendChild(td);
-    tbody.appendChild(summaryTr);
-  }
-  table.appendChild(tbody);
-  area.appendChild(table);
-  document.body.appendChild(area);
-
-  document.body.classList.add('printing-list');
-  const cleanup = () => {
-    document.body.classList.remove('printing-list');
-    area.remove();
-    window.removeEventListener('afterprint', cleanup);
-  };
-  window.addEventListener('afterprint', cleanup);
-  window.print();
-}
-
-const LIST_COLUMNS = [
-  { key: 'bookmark', label: '★', sortable: false },
-  { key: 'title', label: '제목', sortable: true },
-  { key: 'summary', label: '요약', sortable: false },
-  { key: 'org', label: '기관', sortable: true },
-  { key: 'org_type', label: '유형', sortable: true },
-  { key: 'tags', label: '태그', sortable: false },
-  { key: 'site', label: '사이트', sortable: true },
-  { key: 'source', label: '출처', sortable: true },
-  { key: 'date', label: '날짜', sortable: true },
-];
-
-function createCaseTable(results) {
-  const wrap = document.createElement('div');
-  wrap.className = 'table-wrap';
-
-  const table = document.createElement('table');
-  table.className = 'case-table';
-
-  const thead = document.createElement('thead');
-  const headRow = document.createElement('tr');
-  for (const col of LIST_COLUMNS) {
-    const th = document.createElement('th');
-    th.scope = 'col';
-    if (!col.sortable) {
-      th.textContent = col.label;
-    } else {
-      const isActive = state.sort.key === col.key;
-      th.setAttribute('aria-sort',
-        isActive ? (state.sort.dir === 'asc' ? 'ascending' : 'descending') : 'none');
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'sort-btn';
-      btn.textContent = col.label + (isActive ? (state.sort.dir === 'asc' ? ' ▲' : ' ▼') : '');
-      btn.addEventListener('click', () => setSort(col.key));
-      th.appendChild(btn);
-    }
-    headRow.appendChild(th);
-  }
-  thead.appendChild(headRow);
-  table.appendChild(thead);
-
-  const tbody = document.createElement('tbody');
-  for (const c of results) {
-    tbody.appendChild(createCaseRow(c));
-  }
-  table.appendChild(tbody);
-
-  wrap.appendChild(table);
-  return wrap;
-}
-
-function createCaseRow(c) {
-  const tr = document.createElement('tr');
-
-  const bookmarkTd = document.createElement('td');
-  bookmarkTd.className = 'case-table__bookmark';
-  bookmarkTd.appendChild(createBookmarkButton(c));
-
-  const titleTd = document.createElement('td');
-  titleTd.className = 'case-table__title';
-  if (isPopularCase(c)) {
-    titleTd.appendChild(createPopularBadge(c));
-    titleTd.append(' ');
-  } else if (isNewCase(c)) {
-    titleTd.appendChild(createNewBadge());
-    titleTd.append(' ');
-  }
-  const targetUrl = caseTargetUrl(c);
-  if (targetUrl) {
-    const a = document.createElement('a');
-    a.href = targetUrl;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    a.title = c.summary;
-    a.textContent = c.title;
-    titleTd.appendChild(a);
-  } else {
-    const span = document.createElement('span');
-    span.title = c.summary;
-    span.textContent = c.title;
-    titleTd.appendChild(span);
-  }
-
-  const summaryTd = document.createElement('td');
-  summaryTd.className = 'case-table__summary';
-  summaryTd.textContent = c.summary;
-
-  const orgTd = document.createElement('td');
-  orgTd.textContent = c.org;
-
-  const typeTd = document.createElement('td');
-  const badge = document.createElement('span');
-  badge.className = `badge ${ORG_TYPE_BADGE_CLASS[c.org_type] || 'badge--org-type-기타'}`;
-  badge.textContent = c.org_type;
-  typeTd.appendChild(badge);
-
-  const tagsTd = document.createElement('td');
-  tagsTd.className = 'case-table__tags';
-  for (const tag of c.tags) {
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'tag-chip tag-chip--small';
-    btn.textContent = `#${tag}`;
-    btn.setAttribute('aria-pressed', String(state.filter.tag === tag));
-    btn.addEventListener('click', () => setTag(tag));
-    tagsTd.appendChild(btn);
-  }
-
-  const siteTd = document.createElement('td');
-  siteTd.className = 'case-table__site';
-  const host = siteHostname(c);
-  if (host && targetUrl) {
-    const siteLink = document.createElement('a');
-    siteLink.href = targetUrl;
-    siteLink.target = '_blank';
-    siteLink.rel = 'noopener';
-    siteLink.title = targetUrl;
-    siteLink.textContent = `${host} ↗`;
-    siteTd.appendChild(siteLink);
-  } else {
-    siteTd.textContent = '—';
-  }
-
-  const sourceTd = document.createElement('td');
-  sourceTd.className = 'case-table__source';
-  const sourceLabel = document.createElement('span');
-  sourceLabel.textContent = c.source === 'threads' ? 'Threads' : '오픈채팅';
-  sourceTd.appendChild(sourceLabel);
-  if (c.link) {
-    sourceTd.append(' ');
-    sourceTd.appendChild(createSourceLink(c.link, '↗'));
-  }
-
-  const dateTd = document.createElement('td');
-  dateTd.className = 'case-table__date';
-  dateTd.textContent = c.date;
-
-  tr.append(bookmarkTd, titleTd, summaryTd, orgTd, typeTd, tagsTd, siteTd, sourceTd, dateTd);
-  return tr;
 }
 
 function renderRegionFilter() {
@@ -1125,236 +738,6 @@ function renderActiveTag() {
   els.activeTag.appendChild(pill);
 }
 
-function createCaseCard(c) {
-  const article = document.createElement('article');
-  article.className = 'case-card';
-  article.dataset.caseId = c.id;
-
-  const meta = document.createElement('div');
-  meta.className = 'case-card__meta';
-
-  const badge = document.createElement('span');
-  badge.className = `badge ${ORG_TYPE_BADGE_CLASS[c.org_type] || 'badge--org-type-기타'}`;
-  badge.textContent = c.org_type;
-
-  const org = document.createElement('span');
-  org.className = 'case-card__org';
-  org.textContent = c.org;
-
-  meta.appendChild(badge);
-  meta.appendChild(org);
-  if (isPopularCase(c)) {
-    meta.appendChild(createPopularBadge(c));
-  } else if (isNewCase(c)) {
-    meta.appendChild(createNewBadge());
-  }
-  meta.appendChild(createBookmarkButton(c));
-
-  const title = document.createElement('h3');
-  title.className = 'case-card__title';
-  title.textContent = c.title;
-
-  // 환경·평가·상태 배지 줄 (로드맵 1-2·1-3·1-6) — 파생된 값만 표시, 미확인은 생략
-  const badges = document.createElement('div');
-  badges.className = 'case-card__badges';
-  const addBadge = (text, cls, tip) => {
-    const b = document.createElement('span');
-    b.className = `mini-badge ${cls || ''}`;
-    b.textContent = text;
-    if (tip) b.title = tip;
-    badges.appendChild(b);
-  };
-  if (c.runtime_env) addBadge(c.runtime_env, 'mini-badge--env', '실행환경');
-  if (c.network_req) addBadge(c.network_req, 'mini-badge--net', '망 요건');
-  if (c.cost_req) addBadge(c.cost_req, 'mini-badge--cost', '비용·권한');
-  const ev = state.evalById.get(c.id);
-  if (ev && ev.ax) addBadge(ev.ax.replace('AI-', ''), 'mini-badge--ax', `AX 단계: ${ev.ax}`);
-  if (ev && ev.evidence) addBadge(ev.evidence.split(' ')[0], 'mini-badge--evidence', `증거 등급: ${ev.evidence}`);
-  if (c.link_ok === false) {
-    addBadge('링크 확인 안 됨', 'mini-badge--dead', `마지막 점검(${c.health_checked || ''})에서 대상 URL이 응답하지 않았습니다`);
-  } else if (c.maintenance === '정체' || c.maintenance === '방치') {
-    addBadge(`유지보수 ${c.maintenance}`, 'mini-badge--stale', '저장소 최근 활동 기준 (60일·180일 경계)');
-  }
-
-  // 사례 대상 URL이 있으면 썸네일과 함께 요약도 병기한다 (로드맵 1-4 — 툴팁 의존 해소).
-  // 썸네일 이미지(site/thumbs/<id>.png)가 없으면 onerror로 설명문에 폴백.
-  const targetUrl = caseTargetUrl(c);
-  let summary;
-  let clampSummary = null;
-  if (targetUrl) {
-    summary = createThumbElement(c, targetUrl);
-    clampSummary = document.createElement('p');
-    clampSummary.className = 'case-card__summary case-card__summary--clamp';
-    clampSummary.textContent = c.summary;
-  } else {
-    summary = document.createElement('p');
-    summary.className = 'case-card__summary';
-    summary.textContent = c.summary;
-  }
-
-  // 만든 사람 (로드맵 1-8): 챔피언 디렉토리와 양방향 연결
-  let makerLine = null;
-  const owners = state.champOfCase.get(c.id) || [];
-  if (owners.length) {
-    makerLine = document.createElement('p');
-    makerLine.className = 'case-card__maker';
-    makerLine.append('만든 사람: ');
-    owners.slice(0, 3).forEach((o, i) => {
-      if (i > 0) makerLine.append(' · ');
-      const a = document.createElement('a');
-      a.href = `champions.html#champ-${encodeURIComponent(o.id)}`;
-      a.textContent = o.name;
-      makerLine.appendChild(a);
-    });
-  }
-
-  const tags = document.createElement('div');
-  tags.className = 'case-card__tags';
-  for (const tag of c.tags) {
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'tag-chip';
-    btn.textContent = `#${tag}`;
-    btn.setAttribute('aria-pressed', String(state.filter.tag === tag));
-    btn.addEventListener('click', () => setTag(tag));
-    tags.appendChild(btn);
-  }
-
-  const footer = document.createElement('div');
-  footer.className = 'case-card__footer';
-
-  const date = document.createElement('span');
-  date.className = 'case-card__date';
-  date.textContent = c.date;
-  footer.appendChild(date);
-
-  const copyBtn = document.createElement('button');
-  copyBtn.type = 'button';
-  copyBtn.className = 'copy-link-btn';
-  copyBtn.textContent = '🔗';
-  copyBtn.title = '이 사례의 고정 링크 복사';
-  copyBtn.setAttribute('aria-label', '사례 링크 복사');
-  copyBtn.addEventListener('click', async () => {
-    const url = `${location.origin}${location.pathname.replace(/index\.html$/, '')}case/${c.id}.html`;
-    try {
-      await navigator.clipboard.writeText(url);
-      copyBtn.textContent = '✓';
-      setTimeout(() => { copyBtn.textContent = '🔗'; }, 1200);
-    } catch {
-      window.prompt('아래 링크를 복사하세요', url);
-    }
-  });
-  footer.appendChild(copyBtn);
-
-  // 저장소에서 확인된 라이선스만 표시한다 (미확인 사례는 배지 없음 — 미확인 원칙)
-  if (c.license) {
-    const lic = document.createElement('span');
-    const none = c.license === '명시 없음';
-    lic.className = 'license-badge' + (none ? ' license-badge--none' : '');
-    lic.textContent = none ? '라이선스 없음' : c.license;
-    lic.title = none
-      ? '저장소에 라이선스 파일이 없어 재사용 조건이 명시되지 않았습니다'
-      : `오픈소스 라이선스 ${c.license} — 저장소에서 확인됨 (${c.license_checked || ''})`;
-    footer.appendChild(lic);
-  }
-
-  footer.appendChild(createSourceElement(c));
-
-  article.appendChild(meta);
-  article.appendChild(title);
-  if (badges.childElementCount) article.appendChild(badges);
-  article.appendChild(summary);
-  if (clampSummary) article.appendChild(clampSummary);
-  if (makerLine) article.appendChild(makerLine);
-  article.appendChild(tags);
-  article.appendChild(footer);
-
-  return article;
-}
-
-// 운영 사이트가 있으면 저장소보다 먼저 보여 준다(사용자 지시 2026-09-11).
-// 사람이 사례를 알아보는 것은 돌아가는 화면이지 코드 목록이 아니다.
-// scripts/pax/urls.py와 같은 규칙 — 한쪽만 고치면 썸네일과 링크가 서로 다른 곳을 가리킨다.
-const REPO_HOST = /^https?:\/\/(www\.)?(github\.com|gitlab\.com|gitlab\.aigov\.go\.kr|bitbucket\.org|gitee\.com|sourceforge\.net)\//i;
-const POST_HOST = /^https?:\/\/([\w.-]+\.)?(threads\.com|threads\.net|twitter\.com|x\.com|facebook\.com|instagram\.com|brunch\.co\.kr|blog\.naver\.com)\//i;
-
-function caseTargetUrl(c) {
-  const urls = ['case_url', 'link', 'mirror_url']
-    .map((k) => c[k])
-    .filter((u) => typeof u === 'string' && u.startsWith('https://'));
-  if (!urls.length) return null;
-  // github.io·vercel.app 같은 배포 주소는 호스팅이 깃허브여도 서비스로 본다.
-  const live = urls.find((u) => !REPO_HOST.test(u) && !POST_HOST.test(u));
-  if (live) return live;
-  return urls.find((u) => REPO_HOST.test(u)) || null;
-}
-
-function createThumbElement(c, targetUrl) {
-  const anchor = document.createElement('a');
-  anchor.className = 'case-card__thumb';
-  anchor.href = targetUrl;
-  anchor.target = '_blank';
-  anchor.rel = 'noopener';
-  anchor.title = c.summary;
-
-  const img = document.createElement('img');
-  // src보다 먼저 정해야 한다 — src를 대입하는 순간 로딩 방식이 확정되므로,
-  // 뒤늦게 lazy를 붙이면 무시되고 화면 밖 썸네일까지 전부 즉시 내려받는다.
-  img.loading = 'lazy';
-  img.decoding = 'async';
-  // 표시 크기를 미리 알려 레이아웃 시프트(CLS)를 방지 (CSS aspect-ratio 16/10과 일치)
-  img.width = 640;
-  img.height = 400;
-  img.alt = `사례 미리보기: ${c.title}`;
-  img.src = `thumbs/${encodeURIComponent(c.id)}.jpg${c.thumb_v ? `?v=${c.thumb_v}` : ''}`;
-  img.addEventListener('error', () => {
-    // 썸네일이 없으면 설명문으로 폴백 (링크는 유지)
-    const fallback = document.createElement('p');
-    fallback.className = 'case-card__summary';
-    fallback.textContent = c.summary;
-    anchor.replaceWith(fallback);
-  });
-
-  const host = document.createElement('span');
-  host.className = 'case-card__thumb-host';
-  try {
-    host.textContent = `${new URL(targetUrl).hostname} ↗`;
-  } catch {
-    host.textContent = '바로가기 ↗';
-  }
-
-  anchor.appendChild(img);
-  anchor.appendChild(host);
-  return anchor;
-}
-
-function createSourceElement(c) {
-  if (c.source === 'threads' && c.link) {
-    return createSourceLink(c.link, '원문 보기 ↗');
-  }
-  const badge = document.createElement('span');
-  badge.className = 'case-card__source-badge';
-  badge.textContent = c.source === 'threads' ? '출처: Threads' : '출처: 오픈채팅';
-  if (c.source === 'kakao' && c.link) {
-    // 오픈채팅 원문은 비공개지만, 메시지에서 공유된 공개 서비스/저장소 링크는 제공한다.
-    const frag = document.createDocumentFragment();
-    frag.appendChild(badge);
-    frag.appendChild(createSourceLink(c.link, '공유 링크 ↗'));
-    return frag;
-  }
-  return badge;
-}
-
-function createSourceLink(href, label) {
-  const link = document.createElement('a');
-  link.className = 'case-card__source-link';
-  link.href = href;
-  link.target = '_blank';
-  link.rel = 'noopener';
-  link.textContent = label;
-  return link;
-}
-
 // 검색/필터 컨트롤은 정적 상수(ORG_TYPES, SOURCES)에만 의존하므로 fetch 성공 여부와
 // 무관하게 항상 초기화한다 — fetch가 실패해도 컨트롤 바가 죽은 채로 남지 않도록.
 applyUrlToState();
@@ -1365,4 +748,10 @@ els.orgTypeFilter.value = state.filter.orgType;
 els.sourceFilter.value = state.filter.source;
 syncViewButtons();
 syncBookmarkFilterButton();
+// 3D PAX 등 다른 탭에서 바꾼 북마크를 따라간다
+onBookmarksChanged((next) => {
+  state.bookmarks = next;
+  syncBookmarkFilterButton();
+  render();
+});
 load();

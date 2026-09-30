@@ -72,3 +72,34 @@ def test_thumb_version_stamped(tmp_path):
     out = json.loads(dst.read_text(encoding="utf-8"))
     assert out["cases"][0]["thumb_v"] == 1724650000
     assert "thumb_v" not in out["cases"][1]
+
+
+def test_lite_copy_keeps_only_listing_fields(tmp_path):
+    """챔피언·갭맵·플레이북은 id·제목·기관·유형·지역만 읽는다 — 경량판에 그만 담는다."""
+    from pax.publish import LITE_FIELDS, write_lite
+    doc = {"updated_at": "2026-09-30T00:00:00+09:00", "cases": [
+        {"id": "a", "title": "T", "org": "O", "org_type": "기초지자체", "region": "광주",
+         "summary": "긴 요약", "link": "https://x", "tags": ["t"]},
+        {"id": "b", "title": "U", "org": "P", "org_type": "커뮤니티"},  # region 없는 사례
+    ]}
+    dst = tmp_path / "cases-lite.json"
+    write_lite(doc, dst)
+    out = json.loads(dst.read_text(encoding="utf-8"))
+    assert out["updated_at"] == doc["updated_at"]
+    assert out["cases"][0] == {"id": "a", "title": "T", "org": "O", "org_type": "기초지자체", "region": "광주"}
+    assert "region" not in out["cases"][1]
+    assert set(LITE_FIELDS) == {"id", "title", "org", "org_type", "region"}
+    assert doc["cases"][0]["summary"] == "긴 요약"  # 원본 문서는 건드리지 않는다
+
+
+def test_cli_writes_lite_next_to_full_copy(tmp_path):
+    (tmp_path / "data").mkdir()
+    (tmp_path / "data" / "cases.json").write_text(
+        json.dumps({"cases": [{"id": "a", "title": "T", "org": "O", "org_type": "커뮤니티", "summary": "s"}]}),
+        encoding="utf-8")
+    scripts_dir = Path(__file__).resolve().parent.parent / "scripts"
+    result = subprocess.run([sys.executable, "-m", "pax.publish"], cwd=tmp_path, capture_output=True,
+                            text=True, env={"PYTHONPATH": str(scripts_dir), "PATH": "/usr/bin:/bin"})
+    assert result.returncode == 0, result.stderr
+    lite = json.loads((tmp_path / "site" / "data" / "cases-lite.json").read_text(encoding="utf-8"))
+    assert lite["cases"] == [{"id": "a", "title": "T", "org": "O", "org_type": "커뮤니티"}]

@@ -115,18 +115,8 @@ export function placeText(loc) {
   return loc.basis === 'affiliation' ? `${where} · 만든 사람 소속 기준` : where;
 }
 
-// 운영 사이트가 저장소보다 먼저 — app.js caseTargetUrl·scripts/pax/urls.py와 같은 규칙.
-const REPO_HOST = /^https?:\/\/(www\.)?(github\.com|gitlab\.com|gitlab\.aigov\.go\.kr|bitbucket\.org|gitee\.com|sourceforge\.net)\//i;
-const POST_HOST = /^https?:\/\/([\w.-]+\.)?(threads\.com|threads\.net|twitter\.com|x\.com|facebook\.com|instagram\.com|brunch\.co\.kr|blog\.naver\.com)\//i;
-
-export function caseTargetUrl(c) {
-  const urls = ['case_url', 'link', 'mirror_url']
-    .map((k) => c[k])
-    .filter((u) => typeof u === 'string' && u.startsWith('https://'));
-  if (!urls.length) return null;
-  const live = urls.find((u) => !REPO_HOST.test(u) && !POST_HOST.test(u));
-  return live || urls.find((u) => REPO_HOST.test(u)) || null;
-}
+// 대표 주소 규칙은 메인 목록과 같은 공용 모듈에 있다(3D 쪽 import를 바꾸지 않도록 다시 내보낸다).
+export { caseTargetUrl } from './pax-urls.js?v=1e5e0b4f';
 
 function ministryMatcher(kws, affMap) {
   return (c) => kws.some((k) => (c.org || '').includes(k) || (affMap.get(c.id) || '').includes(k));

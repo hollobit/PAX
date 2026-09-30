@@ -11,6 +11,8 @@ import sys
 import unicodedata
 from pathlib import Path
 
+from pax.jsonio import write_json
+
 from pax.privacy import find_privacy_issues
 from pax.schema import OPTIONAL_FIELDS, REQUIRED_FIELDS, validate_case
 
@@ -113,13 +115,11 @@ def main() -> int:
     now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
     new_doc, rejected = merge_cases(existing_doc, candidates, now.isoformat(timespec="seconds"))
 
-    CASES_PATH.write_text(
-        json.dumps(new_doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    write_json(CASES_PATH, new_doc)
     if rejected:
         REJECTED_DIR.mkdir(parents=True, exist_ok=True)
         out = REJECTED_DIR / incoming_path.name
-        out.write_text(json.dumps(rejected, ensure_ascii=False, indent=2),
-                       encoding="utf-8")
+        write_json(out, rejected)
         print(f"거부 {len(rejected)}건 → {out}")
     added = len(new_doc["cases"]) - len(existing_doc["cases"])
     print(f"신규 {added}건 병합, 총 {len(new_doc['cases'])}건")
