@@ -468,13 +468,17 @@ function createPager(total) {
   });
 }
 
+/**
+ * 딥링크 대상을 강조한다 — 카드가 없는 보기(목록)나 걸러져 없는 사례여도 첫 렌더에서 한 번 쓰고 비운다.
+ * 남겨 두면 resolvePage가 렌더마다 그 사례의 쪽으로 되돌려 쪽 이동이 먹지 않는다.
+ */
 function focusDeepLinkedCase() {
   if (!state.focusCaseId) return;
-  const el = document.querySelector(`[data-case-id="${CSS.escape(state.focusCaseId)}"]`);
-  if (!el) return;
-  el.classList.add('case-card--focused');
-  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  state.focusCaseId = null; // 1회만 — 이후 필터 조작을 방해하지 않는다
+  const card = document.querySelector(`.case-card[data-case-id="${CSS.escape(state.focusCaseId)}"]`);
+  state.focusCaseId = null;
+  if (!card) return;
+  card.classList.add('case-card--focused');
+  card.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 function renderTaskChips() {
@@ -559,6 +563,7 @@ function render() {
       els.caseList.appendChild(createCaseTable(sorted.slice(start, start + PAGE_SIZE), cardCtx()));
       if (pages > 1) els.caseList.appendChild(createPager(sorted.length));
     }
+    focusDeepLinkedCase();
     return;
   }
 
@@ -582,6 +587,7 @@ function render() {
       hint.textContent = '태그를 선택하면 해당 사례가 아래에 표시됩니다.';
       els.caseList.appendChild(hint);
     }
+    focusDeepLinkedCase();
     return;
   }
 

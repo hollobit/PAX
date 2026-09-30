@@ -44,3 +44,24 @@ def test_repository_site_is_fully_stamped():
     site = Path(__file__).resolve().parent.parent / "site"
     problems = sa.find_problems(site)
     assert not problems, f"{problems[:5]} — python3 scripts/stamp_assets.py 실행"
+
+
+def test_subfolder_modules_are_stamped_relative_to_the_importer(tmp_path):
+    # 3D PAX가 city3d/js 모듈을 부르고, 그 모듈이 또 이웃 모듈을 부른다 — 안쪽이 바뀌면 바깥 스탬프도 바뀐다
+    site = _site(tmp_path)
+    js = site / "city3d" / "js"
+    js.mkdir(parents=True)
+    (js / "layers.js").write_text("export const A = 1;\n", encoding="utf-8")
+    (js / "load.js").write_text("import { A } from './layers.js';\n", encoding="utf-8")
+    (site / "world.js").write_text("import { A } from './city3d/js/load.js';\n", encoding="utf-8")
+    (site / "city3d" / "index.html").write_text('<script src="js/load.js"></script><a href="../world.js">',
+                                                encoding="utf-8")
+    assert any("load.js" in p for p in sa.find_problems(site))
+    sa.stamp_all(site)
+    assert sa.find_problems(site) == []
+    assert f"'./layers.js?v={sa.digest(js / 'layers.js')}'" in (js / "load.js").read_text(encoding="utf-8")
+    before = (site / "world.js").read_text(encoding="utf-8")
+    (js / "layers.js").write_text("export const A = 2;\n", encoding="utf-8")
+    sa.stamp_all(site)
+    assert (site / "world.js").read_text(encoding="utf-8") != before
+    assert 'href="../world.js"' in (site / "city3d" / "index.html").read_text(encoding="utf-8")  # 거슬러 오르는 경로는 두지 않는다

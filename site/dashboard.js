@@ -31,7 +31,6 @@ const state = { cases: [], filter: '전체', sort: { key: 'no', dir: 'asc' }, pa
 const EVAL_PAGE_SIZE = 100;
 
 // 평가 표 컬럼 정의: [key, 라벨, 정렬값 추출 함수]
-const CONF_ORDER = { 높음: 3, 중간: 2, 낮음: 1 };
 const EVAL_COLUMNS = [
   ['no', 'No', (c) => c.no],
   ['title', '사례', (c) => c.title],

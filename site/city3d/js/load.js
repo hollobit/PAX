@@ -1,6 +1,6 @@
 // 도시 자료 불러오기 — 독립 페이지(city3d/)와 3D PAX(pax3d-city.js)가 함께 쓴다.
 // 파일마다 헤더의 레코드 수·본문 길이·CRC32와 meta.json의 크기·CRC를 확인한 뒤에만 넘긴다.
-import { readC3D, decodeBuildings, decodeLines, decodeMesh, decodeDem } from './binary.js';
+import { readC3D, decodeBuildings, decodeLines, decodeMesh, decodeDem } from './binary.js?v=1355de47';
 
 // 자료는 주소에 판 번호가 없어 브라우저 캐시(GitHub Pages 10분)가 옛 파일을 줄 수 있다 — 도시를 더하거나 다시 빌드한 뒤
 // 새 meta.json과 옛 .bin이 섞이면 CRC 검증에서 막힌다. 그래서 매번 서버에 확인한다(바뀌지 않았으면 304로 가볍게 끝난다).

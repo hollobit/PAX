@@ -18,31 +18,33 @@ from pathlib import Path
 
 SITE = Path(__file__).resolve().parent.parent / "site"
 
-# site/ 바로 아래 파일을 가리키는 로컬 참조만 다룬다(외부 주소·하위 폴더 경로는 대상이 아니다)
+# 참조하는 파일 기준의 로컬 상대 경로만 다룬다 — 'x.js', './city3d/js/x.js', 'js/app.js'.
+# 외부 주소와 '..'로 거슬러 오르는 경로는 대상이 아니다. 3D PAX가 city3d/js 모듈을 불러오므로
+# 하위 폴더도 찍는다(예전에는 site/ 바로 아래만 봐서 도시 모듈이 옛 캐시로 남을 수 있었다).
 REF = re.compile(
     r"""(?P<pre>(?:src|href)="|from\s+'\./|import\(\s*'\./)"""
-    r"""(?P<name>[\w.-]+\.(?:js|css))(?:\?v=(?P<v>[a-f0-9]+))?(?P<post>["'])""")
+    r"""(?P<name>(?:[\w-][\w.-]*/)*[\w-][\w.-]*\.(?:js|css))(?:\?v=(?P<v>[a-f0-9]+))?(?P<post>["'])""")
 
 
 def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()[:8]
 
 
-def _refs(text: str, site: Path):
+def _refs(text: str, base: Path):
     for m in REF.finditer(text):
-        if (site / m.group("name")).exists():
+        if (base / m.group("name")).exists():
             yield m
 
 
-def stamp_file(path: Path, cache: dict[str, str], site: Path = SITE) -> bool:
+def stamp_file(path: Path, cache: dict[Path, str], site: Path = SITE) -> bool:
     src = path.read_text(encoding="utf-8")
 
     def sub(m: re.Match) -> str:
         name = m.group("name")
-        asset = site / name
+        asset = (path.parent / name).resolve()
         if not asset.exists():
             return m.group(0)
-        new = cache.setdefault(name, digest(asset))
+        new = cache.setdefault(asset, digest(asset))
         if m.group("v") == new:
             return m.group(0)
         return f"{m.group('pre')}{name}?v={new}{m.group('post')}"
@@ -55,7 +57,9 @@ def stamp_file(path: Path, cache: dict[str, str], site: Path = SITE) -> bool:
 
 
 def _targets(site: Path) -> list[Path]:
-    return sorted(site.glob("*.js")) + sorted(site.glob("*.html"))
+    # 모듈을 먼저, 그것을 싣는 HTML을 나중에(해시가 안쪽부터 굳도록). case/는 build_case_pages가 찍는다.
+    return (sorted(site.glob("city3d/js/*.js")) + sorted(site.glob("*.js"))
+            + sorted(site.glob("*.html")) + sorted(site.glob("city3d/*.html")))
 
 
 def stamp_all(site: Path = SITE) -> set[str]:
@@ -63,9 +67,9 @@ def stamp_all(site: Path = SITE) -> set[str]:
     # 해시가 더 이상 변하지 않을 때까지 모듈 → HTML 순으로 반복한다.
     touched: set[str] = set()
     for _ in range(6):
-        cache: dict[str, str] = {}
+        cache: dict[Path, str] = {}
         changed = [p for p in _targets(site) if stamp_file(p, cache, site)]
-        touched.update(p.name for p in changed)
+        touched.update(str(p.relative_to(site)) for p in changed)
         if not changed:
             break
     return touched
@@ -74,12 +78,13 @@ def stamp_all(site: Path = SITE) -> set[str]:
 def find_problems(site: Path = SITE) -> list[str]:
     problems = []
     for path in _targets(site):
-        for m in _refs(path.read_text(encoding="utf-8"), site):
+        where = path.relative_to(site)
+        for m in _refs(path.read_text(encoding="utf-8"), path.parent):
             name, v = m.group("name"), m.group("v")
             if v is None:
-                problems.append(f"{path.name}: {name} 스탬프 없음")
-            elif v != digest(site / name):
-                problems.append(f"{path.name}: {name} 옛 스탬프({v})")
+                problems.append(f"{where}: {name} 스탬프 없음")
+            elif v != digest(path.parent / name):
+                problems.append(f"{where}: {name} 옛 스탬프({v})")
     return problems
 
 

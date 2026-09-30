@@ -6,16 +6,16 @@
 //   월드 x = x0 + x·sx,  월드 z = z0 − n·sz   (sx·sz = 경도·위도 1도의 월드 길이 ÷ 그 도시의 1도 미터)
 // 높이는 실제 축척(sy = sz) — 미니어처 지형은 약 10배 과장이라, 도시 모드에서는 전국 지형을 걷어 내고 이 지형을 쓴다.
 import * as THREE from 'three';
-import { loadCity } from './city3d/js/load.js';
+import { loadCity } from './city3d/js/load.js?v=62517a49';
 import {
   makeFrame, buildTerrain, buildWater, buildGreen, buildRibbons, roadStyle, waterwayStyle, buildOutline,
   buildDistrictLines, createBuildingMesh, carveWater, paintGreen,
-} from './city3d/js/layers.js';
-import { MODES, styleCityMaterials } from './city3d/js/modes.js';
-import { flightStops } from './city3d/js/flight.js';
-import { selectBuildings, writeBuildingInstances } from './city3d/js/buildings.js';
-import { createLabelLayer } from './city3d/js/maplabels.js';
-import { createLocator, seatOf } from './city3d/js/geo.js';
+} from './city3d/js/layers.js?v=c8c8545d';
+import { MODES, styleCityMaterials } from './city3d/js/modes.js?v=883955df';
+import { flightStops } from './city3d/js/flight.js?v=21b1fb25';
+import { selectBuildings, writeBuildingInstances } from './city3d/js/buildings.js?v=210a0f90';
+import { createLabelLayer } from './city3d/js/maplabels.js?v=107a28bb';
+import { createLocator, seatOf } from './city3d/js/geo.js?v=00345fad';
 import { LAND_H, project, unproject } from './pax3d-geom.js?v=f13514eb';
 
 const BASE = 'city3d/data';

@@ -82,10 +82,8 @@ async function main() {
 // ── 지역 그리드 ──
 function renderRegionGrid(cases) {
   const counts = new Map(REGIONS.map((r) => [r, 0]));
-  let unknown = 0;
   for (const c of cases) {
     if (c.region && counts.has(c.region)) counts.set(c.region, counts.get(c.region) + 1);
-    else unknown += 1;
   }
   const grid = document.getElementById('region-grid');
   for (const r of REGIONS) {

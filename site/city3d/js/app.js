@@ -1,10 +1,10 @@
 // 여섯 도시 입체지도 — 화면 구성과 도시 불러오기(파일마다 레코드 수·길이·CRC32 검증).
-import { getJSON, loadCity as fetchCity } from './load.js';
-import { createWorld, MODES } from './world.js';
-import { ROAD_STYLE } from './layers.js';
-import { createLabelLayer, LABEL_GROUPS, LABEL_KINDS } from './maplabels.js';
-import { createMinimap } from './minimap.js';
-import { createLocator, externalLinks, seatOf, toLonLat, toLocal } from './geo.js';
+import { getJSON, loadCity as fetchCity } from './load.js?v=62517a49';
+import { createWorld, MODES } from './world.js?v=31130718';
+import { ROAD_STYLE } from './layers.js?v=c8c8545d';
+import { createLabelLayer, LABEL_GROUPS, LABEL_KINDS } from './maplabels.js?v=107a28bb';
+import { createMinimap } from './minimap.js?v=33146097';
+import { createLocator, externalLinks, seatOf, toLonLat, toLocal } from './geo.js?v=00345fad';
 
 const $ = (s) => document.querySelector(s);
 const fmt = new Intl.NumberFormat('ko-KR');

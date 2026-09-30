@@ -1,6 +1,5 @@
 // 3D PAX 미니어처 세계 — 시도 지형·시군구 경계·실제 지도 타일, 사례 건물, 카메라와 선택.
 import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { toon, signSprite, createPostPass } from './pax3d-look.js?v=a66df86b';
 import { ISLANDS, SEATS, TASK_COLORS, FALLBACK_COLOR, shapeOf, cityKeyOf } from './pax3d-data.js?v=ad30f399';
 import { buildingGeometries, mountains, trees, clouds, pin, dokdo } from './pax3d-props.js?v=83d5cb9b';
@@ -9,9 +8,9 @@ import {
 } from './pax3d-geom.js?v=f13514eb';
 import { sggLabel } from './pax3d-locate.js?v=6baaa238';
 import { createTileLayer, markLandStencil } from './pax3d-tiles.js?v=0eceea68';
-import { MODES, skyTexture as citySky, sunDirection } from './city3d/js/modes.js';
-import { createLandmarkFlight } from './city3d/js/flight.js';
-import { createCityLayer } from './pax3d-city.js?v=fc47b561';
+import { MODES, skyTexture as citySky, sunDirection } from './city3d/js/modes.js?v=883955df';
+import { createLandmarkFlight } from './city3d/js/flight.js?v=21b1fb25';
+import { createCityLayer } from './pax3d-city.js?v=4e83e8cc';
 import { createStage, HOME } from './pax3d-stage.js?v=749c5dd6';
 import { groupCases } from './pax3d-places.js?v=2ac2ccfb';
 
@@ -81,7 +80,7 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
   // 실제 지형(수치표고)이 있으면 모든 것이 그 높이 위에 선다 — 없으면 평평한 판
   const hAt = (x, z) => (terrain ? terrain.heightAt(x, z) : 0);
   const onGround = (v, lift = 0) => toWorld(v, LAND_H + lift + hAt(v.x, -v.y));
-  const { renderer, scene, grad, camera, controls, hemi, sun, SUN_HOME, SUN_DIR, HOME_LOOK, sea } = createStage(canvas);
+  const { renderer, scene, grad, camera, controls, hemi, sun, SUN_HOME, SUN_DIR, HOME_LOOK } = createStage(canvas);
 
   // ---- 자리별 사례 --------------------------------------------------------------
   const { byPlace, byZone } = groupCases(cases, located);
