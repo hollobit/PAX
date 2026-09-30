@@ -1,0 +1,23 @@
+name: CI
+# 테스트·공개 저장소 지킴이. 배포(pages.yml)와 따로 돌며, 실패하면 푸시한 커밋에 빨간 표시가 뜬다.
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4  # 브라우저 모듈을 node로 검증하는 테스트가 있다
+        with:
+          node-version: "20"
+      - run: pip install pytest pillow openpyxl
+      - name: 공개 저장소 점검(비공개 경로·채팅방 ID·비밀 키·깨진 JSON)
+        run: python3 scripts/check_repo.py
+      - name: 테스트
+        run: python3 -m pytest -q

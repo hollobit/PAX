@@ -16,8 +16,8 @@ import sys
 import tempfile
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent))
 from pax.mcp_review import load_reviews, mcp_targets, save_reviews  # noqa: E402
+from pax.timeutil import kst_today  # noqa: E402
 
 LEDGER = Path("data/mcp_reviews.json")
 PRIVATE_DIR = Path("data/private/mcp_findings")
@@ -174,7 +174,7 @@ def tool_versions() -> dict:
         try:
             r = subprocess.run(cmd, capture_output=True, text=True, timeout=15)
             vers[name] = r.stdout.strip().split()[-1]
-        except Exception:
+        except (OSError, subprocess.TimeoutExpired, IndexError):
             vers[name] = "없음"
     return vers
 
@@ -233,7 +233,7 @@ def main() -> int:
             print(f"MCP 대상 아님 또는 미존재: {args.case}", file=sys.stderr)
             return 1
     ledger = load_reviews(LEDGER, set(by_id)) if LEDGER.exists() else {"reviews": []}
-    today = datetime.date.today().isoformat()
+    today = kst_today().isoformat()
     tools = tool_versions()
     for t in targets:
         check_case(t, by_id[t["case_id"]], ledger, today, tools, args.audit_only)

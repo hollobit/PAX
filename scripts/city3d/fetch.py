@@ -13,7 +13,6 @@ from pathlib import Path
 
 from shapely.geometry import MultiPolygon, Polygon, box
 
-sys.path.insert(0, str(Path(__file__).parent))
 from common import CACHE, CITIES, DEM_URL, DEM_Z, MVT_Z, TILEJSON, UA, city_boundary, tile_lonlat, tile_xy  # noqa: E402
 
 

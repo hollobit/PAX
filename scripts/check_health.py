@@ -18,8 +18,11 @@ import sys
 import urllib.parse
 
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pax.jsonio import read_json, write_json  # noqa: E402
+from pax.timeutil import kst_today  # noqa: E402
+
+# 조회 실패로 볼 오류 — 네트워크·도구 부재·응답 형식. 그 밖의 예외(코드 결함)는 드러나게 둔다.
+PROBE_ERRORS = (OSError, subprocess.TimeoutExpired, json.JSONDecodeError, AttributeError, ValueError)
 
 CASES = "data/cases.json"
 ACTIVE_DAYS, STALE_DAYS = 60, 180
@@ -35,7 +38,7 @@ def http_status(url: str) -> int:
             code = int(r.stdout or 0)
             if code and code != 405:
                 return code
-        except Exception:
+        except PROBE_ERRORS:
             pass
     return 0
 
@@ -44,26 +47,26 @@ def repo_activity(url: str):
     """저장소 (최근 활동 ISO, 스타 수) 또는 (None, None)."""
     m = re.match(r"https://github\.com/([\w.\-]+/[\w.\-]+)", url)
     if m:
-        r = subprocess.run(["gh", "api", f"repos/{m.group(1)}", "--jq",
-                            '{p: .pushed_at, s: .stargazers_count}'],
-                           capture_output=True, text=True, timeout=30)
-        if r.returncode == 0:
-            try:
+        try:
+            r = subprocess.run(["gh", "api", f"repos/{m.group(1)}", "--jq",
+                                '{p: .pushed_at, s: .stargazers_count}'],
+                               capture_output=True, text=True, timeout=30)
+            if r.returncode == 0:
                 info = json.loads(r.stdout)
                 return info.get("p"), info.get("s")
-            except Exception:
-                pass
+        except PROBE_ERRORS:
+            pass  # 한 저장소의 시간 초과가 주간 점검 전체를 멈추지 않게
         return None, None
     m = re.match(r"https://gitlab\.aigov\.go\.kr/([\w.\-/]+?)/?$", url)
     if m:
         pid = urllib.parse.quote(m.group(1), safe="")
-        r = subprocess.run(["curl", "-sL", "--max-time", "12",
-                            f"https://gitlab.aigov.go.kr/api/v4/projects/{pid}"],
-                           capture_output=True, text=True, timeout=20)
         try:
+            r = subprocess.run(["curl", "-sL", "--max-time", "12",
+                                f"https://gitlab.aigov.go.kr/api/v4/projects/{pid}"],
+                               capture_output=True, text=True, timeout=20)
             info = json.loads(r.stdout)
             return info.get("last_activity_at"), info.get("star_count")
-        except Exception:
+        except PROBE_ERRORS:
             return None, None
     return None, None
 
@@ -96,7 +99,7 @@ def check_case(c):
 def main():
     data = read_json(CASES)
     cases = data["cases"]
-    today = datetime.date.today().isoformat()
+    today = kst_today().isoformat()
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
         results = {cid: (ok, maint, stars) for cid, ok, maint, stars in ex.map(check_case, cases)}
     dead = active = stale = idle = 0

@@ -20,6 +20,10 @@ import json
 import os
 import sys
 
+from pax.jsonio import load_json, read_json, write_json_if_changed  # noqa: E402
+from pax.timeutil import kst_today  # noqa: E402
+from pax.urls import case_urls as urls  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CASES = os.path.join(ROOT, "data", "cases.json")
 COMMUNITY = os.path.join(ROOT, "data", "community_stats.json")
@@ -31,10 +35,6 @@ OUT = os.path.join(ROOT, "site", "data", "dashboard-history.json")
 LLM_DEPS = {"국산 독자모델", "국산 오픈웨이트", "해외 상용 API", "해외 오픈웨이트(로컬)", "혼합"}
 DOMESTIC = {"국산 독자모델", "국산 오픈웨이트"}
 LOCAL = {"국산 오픈웨이트", "해외 오픈웨이트(로컬)"}
-
-
-def urls(c: dict) -> list[str]:
-    return [c.get(k) or "" for k in ("link", "case_url", "mirror_url")]
 
 
 def is_mcp(c: dict) -> bool:
@@ -62,9 +62,19 @@ def measure(cases: list) -> dict:
     }
 
 
+def required_input(path: str) -> dict:
+    """오늘 관측값의 재료. 없거나 깨졌으면 그 지표만 비우되 조용히 넘어가지 않고 경고한다
+    (build_index·build_champions를 먼저 돌렸는지 확인하라는 뜻이다)."""
+    doc = load_json(path, default=None)
+    if not isinstance(doc, dict):
+        print(f"경고: {os.path.relpath(path, ROOT)}를 읽지 못해 오늘 값에서 해당 지표를 뺌", file=sys.stderr)
+        return {}
+    return doc
+
+
 def main() -> int:
-    cases = json.load(open(CASES, encoding="utf-8"))["cases"]
-    today = datetime.date.today().isoformat()
+    cases = read_json(CASES)["cases"]
+    today = kst_today().isoformat()
 
     dates = sorted({c.get("collected_at") for c in cases if c.get("collected_at")})
     days: dict[str, dict] = {}
@@ -73,10 +83,7 @@ def main() -> int:
         days[d] = {**measure(upto), "source": "복원"}
 
     # 가입자는 community_stats에 실제 일자별 원장이 있다 — 복원이 아니라 관측이다.
-    try:
-        members = json.load(open(COMMUNITY, encoding="utf-8")).get("members", {})
-    except Exception:
-        members = {}
+    members = required_input(COMMUNITY).get("members", {})
     for d, v in members.items():
         days.setdefault(d, {"source": "관측"})["members"] = v
 
@@ -84,23 +91,16 @@ def main() -> int:
     today_row = days.setdefault(today, {})
     today_row.update(measure([c for c in cases if (c.get("collected_at") or "") <= today]))
     today_row["source"] = "관측"
-    try:
-        today_row["total_champions"] = json.load(open(CHAMPIONS, encoding="utf-8")).get("total")
-    except Exception:
-        pass
-    try:
-        idx = json.load(open(INDEX, encoding="utf-8"))
-        for k in ("gitlab_stars_total", "github_stars_total"):
-            if idx.get(k) is not None:
-                today_row[k] = idx[k]
-    except Exception:
-        pass
+    champs = required_input(CHAMPIONS)
+    if champs.get("total") is not None:
+        today_row["total_champions"] = champs["total"]
+    idx = required_input(INDEX)
+    for k in ("gitlab_stars_total", "github_stars_total"):
+        if idx.get(k) is not None:
+            today_row[k] = idx[k]
 
     # 이전 회차에 적어 둔 관측값(챔피언·스타)은 되살릴 수 없으므로 반드시 보존한다.
-    try:
-        old = json.load(open(OUT, encoding="utf-8")).get("days", {})
-    except Exception:
-        old = {}
+    old = load_json(OUT, default={}).get("days", {})
     for d, row in old.items():
         keep = {k: v for k, v in row.items()
                 if k in ("total_champions", "gitlab_stars_total", "github_stars_total", "members")}
@@ -119,9 +119,7 @@ def main() -> int:
                  "(나중에 지운 중복·고친 분류가 소급된다). 관측 = 그날 적어 둔 실측값."),
         "days": {d: days[d] for d in sorted(days)},
     }
-    with open(OUT, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=1)
-        f.write("\n")
+    write_json_if_changed(OUT, payload)
     obs = sum(1 for r in days.values() if r.get("source") == "관측")
     print(f"site/data/dashboard-history.json ← {len(days)}일치 (관측 {obs}일 · 복원 {len(days) - obs}일)")
     return 0

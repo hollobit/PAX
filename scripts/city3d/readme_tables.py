@@ -9,7 +9,6 @@ import re
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import CITIES, OUT, REPO  # noqa: E402
 
 README = REPO / "site" / "city3d" / "README.md"

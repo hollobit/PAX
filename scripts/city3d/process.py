@@ -26,7 +26,6 @@ import shapely
 from PIL import Image
 from shapely.geometry import LineString, MultiPolygon, Polygon, box, shape
 
-sys.path.insert(0, str(Path(__file__).parent))
 from common import (  # noqa: E402
     CACHE, CITIES, DEM_Z, MVT_Z, OUT, Frame, city_boundary, tile_lonlat, write_bin,
 )

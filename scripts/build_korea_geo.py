@@ -15,6 +15,8 @@ import re
 import sys
 from pathlib import Path
 
+from pax.jsonio import write_json
+
 OUT_SIDO = Path("site/data/korea-geo.json")
 OUT_SGG = Path("site/data/korea-sgg.json")
 
@@ -108,7 +110,7 @@ def main():
         raise SystemExit(__doc__)
     sido, sgg = build(Path(sys.argv[1]))
     for path, doc in ((OUT_SIDO, sido), (OUT_SGG, sgg)):
-        path.write_text(json.dumps(doc, ensure_ascii=False, separators=(",", ":")))
+        write_json(path, doc, compact=True)
         print(f"{path} ← {path.stat().st_size // 1024}KB")
     print(f"시도 {len(sido['regions'])}개 · 시군구 {len(sgg['sgg'])}개")
 

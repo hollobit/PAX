@@ -1,0 +1,18 @@
+# PAX 데이터 파이프라인 — 설치형 패키지가 아니라 scripts/를 그대로 실행한다.
+# 여기 적은 것은 실행·테스트에 필요한 외부 의존성과 pytest 설정뿐이다.
+[project]
+name = "pax-archive"
+version = "0"
+requires-python = ">=3.11"
+dependencies = [
+  "pillow",    # 썸네일 WebP(pax.thumbs)·지형(build_korea_dem)
+  "openpyxl",  # 평가 원본 엑셀(build_eval_data)
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+# 도시 입체지도 빌드(scripts/city3d)는 uv run --with …로 따로 받는다 — 각 스크립트 머리 주석 참고
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["scripts"]

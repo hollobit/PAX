@@ -26,10 +26,15 @@ import sys
 from collections import defaultdict
 from urllib.parse import urlparse, urlunparse, parse_qsl, urlencode
 
+from pax.jsonio import load_json, write_json, write_json_if_changed  # noqa: E402
+from pax.timeutil import kst_date, kst_today  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW_GLOB = os.path.join(ROOT, "data", "raw", "*.json")
 CACHE = os.path.join(ROOT, "data", "private", "news_meta.json")
 OUT = os.path.join(ROOT, "site", "data", "news.json")
+
+RETRY_FAILED_AFTER_DAYS = 7  # 조회 실패 기사를 다시 두드리는 주기
 
 URL_RE = re.compile(r"https?://[^\s\)\]\>\"'`]+")
 
@@ -66,10 +71,7 @@ def scan() -> dict[str, dict]:
     seen: set[tuple] = set()
     out: dict[str, dict] = defaultdict(lambda: {"shares": 0, "dates": set(), "sources": set()})
     for path in sorted(glob.glob(RAW_GLOB)):
-        try:
-            rows = json.load(open(path, encoding="utf-8"))
-        except Exception:
-            continue
+        rows = load_json(path, default=None)
         if not isinstance(rows, list):
             continue
         source = "kakao" if "kakao" in os.path.basename(path) else "threads"
@@ -87,7 +89,7 @@ def scan() -> dict[str, dict]:
             if key in seen:
                 continue
             seen.add(key)
-            when = (msg.get("timestamp") or msg.get("date") or "")[:10]
+            when = kst_date(msg.get("timestamp") or msg.get("date")) or ""
             for u in found:
                 rec = out[u]
                 rec["shares"] += 1
@@ -149,8 +151,8 @@ def probe(url: str) -> dict | None:
              "-A", "Mozilla/5.0 (compatible; PAX-archive/1.0)", url],
             capture_output=True, timeout=30,
         )
-    except Exception:
-        return None
+    except (OSError, subprocess.TimeoutExpired):
+        return None  # 못 여는 페이지는 기사로 보지 않는다(캐시에 실패일을 남긴다)
     body = decode_body(res.stdout)
     if not body:
         return None
@@ -266,13 +268,10 @@ def tidy(title: str, outlet: str, host: str = "") -> tuple[str, str]:
 
 def main() -> int:
     found = scan()
-    try:
-        cache = json.load(open(CACHE, encoding="utf-8"))
-    except Exception:
-        cache = {}
+    cache = load_json(CACHE, default={})
 
     # 실패를 영영 기억하면 그때 막혔던 곳이 되살아나도 다시 못 본다 — 이레 지나면 다시 두드린다.
-    stale = (datetime.date.today() - datetime.timedelta(days=7)).isoformat()
+    stale = (kst_today() - datetime.timedelta(days=RETRY_FAILED_AFTER_DAYS)).isoformat()
     todo = [u for u in found
             if u not in cache
             or (cache[u] is None)
@@ -280,7 +279,7 @@ def main() -> int:
                 and not cache[u].get("title"))]
     if todo:
         with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
-            today_iso = datetime.date.today().isoformat()
+            today_iso = kst_today().isoformat()
             for url, meta in zip(todo, ex.map(probe, todo)):
                 # 실패도 날짜와 함께 기록해 매 회차 다시 두드리지 않되, 영영 묻어 두지도 않는다.
                 cache[url] = meta if meta else {"failed_at": today_iso}
@@ -328,16 +327,13 @@ def main() -> int:
     # 수백 줄 잡음이 남는다 — 주소를 마지막 기준으로 두어 순서를 고정한다.
     items.sort(key=lambda x: (x["last_shared"], x["shares"], x["url"]), reverse=True)
 
-    os.makedirs(os.path.dirname(CACHE), exist_ok=True)
-    json.dump(cache, open(CACHE, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    write_json(CACHE, cache)  # 원자적 교체 — 도중에 멈춰도 캐시가 잘린 채 남지 않는다
     payload = {
         "updated_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "count": len(items),
         "articles": items,
     }
-    with open(OUT, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=1)
-        f.write("\n")
+    write_json_if_changed(OUT, payload)  # 시각만 바뀐 회차는 파일을 건드리지 않는다
     outlets = len({i["outlet"] for i in items})
     print(f"site/data/news.json ← 기사 {len(items)}건 · 매체 {outlets}곳 "
           f"(후보 {len(found)}건 중 기사 아님·조회 불가 {len(found) - len(items)}건 제외)")

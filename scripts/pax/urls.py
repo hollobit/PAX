@@ -26,6 +26,11 @@ POST_HOST = re.compile(
 SLOTS = ("case_url", "link", "mirror_url")
 
 
+def case_urls(c: dict) -> list[str]:
+    """사례의 세 주소 슬롯 가운데 채워진 것(link → case_url → mirror_url 순). 지표 집계용."""
+    return [u for u in (c.get("link"), c.get("case_url"), c.get("mirror_url")) if u]
+
+
 def is_repo(url: str) -> bool:
     return bool(url) and bool(REPO_HOST.match(url))
 

@@ -9,6 +9,7 @@ site/case/<id>.html — og 태그를 갖춘 고정 페이지. "결재에 이 URL
 import html
 import json
 from pathlib import Path
+from pax.jsonio import load_json, read_json
 from pax.urls import preferred_url
 
 BASE = "https://hollobit.github.io/PAX"
@@ -148,13 +149,10 @@ def eval_table(ev):
 
 
 def main():
-    cases = json.load(open("data/cases.json"))["cases"]
-    mcp_path = Path("site/data/mcp-review.json")
-    mcp_reviews = {}
-    if mcp_path.exists():
-        for r in json.loads(mcp_path.read_text(encoding="utf-8")).get("reviews", []):
-            mcp_reviews[r["case_id"]] = r
-    evals = {e["id"]: e for e in json.load(open("site/data/evaluations.json"))["cases"]}
+    cases = read_json("data/cases.json")["cases"]
+    mcp_reviews = {r["case_id"]: r
+                   for r in load_json("site/data/mcp-review.json", default={}).get("reviews", [])}
+    evals = {e["id"]: e for e in read_json("site/data/evaluations.json")["cases"]}
     OUT_DIR.mkdir(exist_ok=True)
     for c in cases:
         ev = evals.get(c["id"])

@@ -172,10 +172,11 @@ ts=[t for t in ts if t]
 print(max(ts) if ts else '')")
 if [ -z "$latest_iso" ]; then log "점검 실패: kakaocli chats 응답 없음"; exit 0; fi
 
+# 값은 인자로 넘긴다 — 파이썬 코드 문자열에 끼워 넣으면 따옴표가 섞인 값에서 깨진다
 age_min=$(python3 -c "
-import datetime
-t=datetime.datetime.fromisoformat('$latest_iso'.replace('Z','+00:00'))
-print(int((datetime.datetime.now(datetime.timezone.utc)-t).total_seconds()//60))")
+import datetime, sys
+t=datetime.datetime.fromisoformat(sys.argv[1].replace('Z','+00:00'))
+print(int((datetime.datetime.now(datetime.timezone.utc)-t).total_seconds()//60))" "$latest_iso")
 
 # 채팅방 ID는 공개 저장소에 두지 않는다 — 비공개 data/state.json의 kakao.chat_id에서 읽는다
 CHAT_ID=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['kakao']['chat_id'])" "$ROOT/data/state.json" 2>/dev/null)

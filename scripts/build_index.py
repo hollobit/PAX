@@ -13,6 +13,10 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+from pax.jsonio import load_json, read_json, write_json, write_json_if_changed  # noqa: E402
+from pax.timeutil import kst_today  # noqa: E402
+from pax.urls import case_urls as urls  # noqa: E402
+
 OUT = Path("site/data/index.json")
 SNAP_DIR = Path("snapshots")
 
@@ -27,9 +31,10 @@ def c_score(c_grade: str) -> int | None:
 
 
 def build() -> dict:
-    cases = json.load(open("data/cases.json"))["cases"]
-    evals = json.load(open("site/data/evaluations.json"))["cases"]
-    champ_doc = json.load(open("site/data/champions.json"))
+    cases = read_json("data/cases.json")["cases"]
+    evals = read_json("site/data/evaluations.json")["cases"]
+    champ_doc = read_json("site/data/champions.json")
+    today = kst_today()  # 한 번만 — 자정 즈음 generated_at과 quarter가 어긋나지 않게
     champ_of_case = {}
     for ch in champ_doc.get("champions", []):
         for cid in ch.get("cases", []):
@@ -50,8 +55,6 @@ def build() -> dict:
     lic_stated = sum(1 for c in cases if c.get("license") and c["license"] != "명시 없음")
 
     # 공공 깃랩 브릿지 (2-7): 미러 쌍과 개방율
-    def urls(c):
-        return [u for u in (c.get("link"), c.get("case_url"), c.get("mirror_url")) if u]
     gitlab_cases = [c for c in cases if any("gitlab.aigov" in u for u in urls(c))]
     mirror_pairs = [c for c in gitlab_cases
                     if any("github.com" in u for u in urls(c))]
@@ -63,8 +66,8 @@ def build() -> dict:
     unknown_feedback = sum(1 for e in evals if e.get("feedback") == "미확인")
 
     return {
-        "generated_at": datetime.date.today().isoformat(),
-        "quarter": f"{datetime.date.today().year}Q{(datetime.date.today().month - 1) // 3 + 1}",
+        "generated_at": today.isoformat(),
+        "quarter": f"{today.year}Q{(today.month - 1) // 3 + 1}",
         "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
         "total_cases": len(cases),
         "total_champions": champ_doc.get("total", 0),
@@ -73,8 +76,7 @@ def build() -> dict:
             "kakao_week": c.get("kakao", {}).get("week"),
             "kakao_total_observed": c.get("kakao", {}).get("total"),
             "threads_observed": c.get("threads", {}).get("observed_total"),
-        })(json.load(open("site/data/community.json"))
-           if Path("site/data/community.json").exists() else {}),
+        })(load_json("site/data/community.json", default={})),
         "certified_champions": sum(
             1 for ch in champ_doc.get("champions", []) if ch.get("certification")),
         "unattributed_cases": len(champ_doc.get("unattributed", [])),
@@ -250,12 +252,12 @@ def model_stats(cases: list) -> dict:
 
 def main():
     doc = build()
-    OUT.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    write_json_if_changed(OUT, doc)
     print(f"{OUT} ← 지수 갱신 ({doc['quarter']})")
     if "--snapshot" in sys.argv:
         SNAP_DIR.mkdir(exist_ok=True)
         snap = SNAP_DIR / f"{doc['quarter']}.json"
-        snap.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        write_json(snap, doc)
         print(f"{snap} ← 분기 스냅샷 고정")
 
 

@@ -9,6 +9,12 @@ from pathlib import Path
 
 import openpyxl
 
+from pax.jsonio import write_json_if_changed  # noqa: E402
+from pax.timeutil import kst_today  # noqa: E402
+
+# 평가 반영일은 내용이 실제로 바뀐 날만 새로 찍는다 — 같은 평가를 다시 빌드해도 날짜가 움직이지 않게
+EVAL_VOLATILE = ("evaluated_at",)
+
 OUT = Path("site/data/evaluations.json")
 # 엑셀 이후 추가된 사례의 평가 — 엑셀 재발행 없이 신규 사례를 반영하는 보충 파일
 ADDITIONS = Path("docs/native/eval_additions.json")
@@ -149,9 +155,9 @@ def main() -> int:
             case["evidence"] = EVIDENCE_NORM[ev]
 
     # evaluated_at 자동 갱신 (로드맵 0-6): 빌드 시점 = 최종 평가 반영 시점
-    today = datetime.date.today().isoformat()
+    today = kst_today().isoformat()
     doc = {"evaluated_at": today, "total": len(cases), "cases": cases}
-    OUT.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    write_json_if_changed(OUT, doc, volatile=EVAL_VOLATILE)
     print(f"{OUT} ← {len(cases)}건")
 
     # 경량본 (성능 최적화): 아카이브 카드 배지·CSV·자가진단에 필요한 필드만 —
@@ -160,8 +166,7 @@ def main() -> int:
     lite = {"evaluated_at": today,
             "cases": [{f: case.get(f) for f in LITE_FIELDS} for case in cases]}
     lite_path = OUT.parent / "evals-lite.json"
-    lite_path.write_text(json.dumps(lite, ensure_ascii=False, separators=(",", ":")) + "\n",
-                         encoding="utf-8")
+    write_json_if_changed(lite_path, lite, compact=True, volatile=EVAL_VOLATILE)
     print(f"{lite_path} ← 경량본")
     return 0
 

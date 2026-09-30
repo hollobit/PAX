@@ -13,6 +13,7 @@ AGENTS.md §3-2(원문·닉네임 비공개)를 이 경계로 지킨다.
 """
 from __future__ import annotations
 
+import datetime
 import glob
 import json
 import os
@@ -20,6 +21,9 @@ import re
 import subprocess
 import sys
 from collections import defaultdict
+
+from pax.jsonio import load_json, write_json, write_json_if_changed  # noqa: E402
+from pax.timeutil import kst_date  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW_GLOB = os.path.join(ROOT, "data", "raw", "*.json")
@@ -40,10 +44,7 @@ def scan() -> dict[str, dict]:
     seen: set[tuple] = set()
     vids: dict[str, dict] = defaultdict(lambda: {"shares": 0, "dates": set(), "sources": set()})
     for path in sorted(glob.glob(RAW_GLOB)):
-        try:
-            rows = json.load(open(path, encoding="utf-8"))
-        except Exception:
-            continue
+        rows = load_json(path, default=None)
         if not isinstance(rows, list):
             continue
         source = "kakao" if "kakao" in os.path.basename(path) else "threads"
@@ -60,7 +61,7 @@ def scan() -> dict[str, dict]:
             if key in seen:
                 continue
             seen.add(key)
-            when = (msg.get("timestamp") or msg.get("date") or "")[:10]
+            when = kst_date(msg.get("timestamp") or msg.get("date")) or ""
             for vid in found:
                 v = vids[vid]
                 v["shares"] += 1
@@ -71,10 +72,7 @@ def scan() -> dict[str, dict]:
 
 
 def load_cache() -> dict:
-    try:
-        return json.load(open(CACHE, encoding="utf-8"))
-    except Exception:
-        return {}
+    return load_json(CACHE, default={})
 
 
 def fetch_meta(vid: str) -> dict | None:
@@ -86,8 +84,8 @@ def fetch_meta(vid: str) -> dict | None:
             capture_output=True, text=True, timeout=30,
         ).stdout
         data = json.loads(out)
-    except Exception:
-        return None
+    except (OSError, subprocess.TimeoutExpired, json.JSONDecodeError):
+        return None  # 비공개·삭제·지역제한 영상은 oEmbed가 JSON을 주지 않는다
     title = (data.get("title") or "").strip()
     if not title:
         return None
@@ -124,17 +122,13 @@ def main() -> int:
     # 동점 순서를 id로 고정한다(순서가 흔들리면 내용이 같아도 파일이 다시 쓰인다).
     items.sort(key=lambda x: (x["last_shared"], x["shares"], x["id"]), reverse=True)
 
-    os.makedirs(os.path.dirname(CACHE), exist_ok=True)
-    json.dump(cache, open(CACHE, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    write_json(CACHE, cache)  # 원자적 교체 — 도중에 멈춰도 캐시가 잘린 채 남지 않는다
     payload = {
-        "updated_at": __import__("datetime").datetime.now(
-            __import__("datetime").timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "updated_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "count": len(items),
         "videos": items,
     }
-    with open(OUT, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=1)
-        f.write("\n")
+    write_json_if_changed(OUT, payload)  # 시각만 바뀐 회차는 파일을 건드리지 않는다
     print(f"site/data/videos.json ← 영상 {len(items)}편 "
           f"(재공유 2회 이상 {sum(1 for i in items if i['shares'] >= 2)}편 · 조회 불가 제외 {dead}편)")
     return 0

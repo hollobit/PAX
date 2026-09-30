@@ -15,11 +15,13 @@ import subprocess
 import sys
 import urllib.parse
 import urllib.request
-from datetime import date
 
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pax.jsonio import read_json, write_json  # noqa: E402
+from pax.timeutil import kst_today  # noqa: E402
+
+# 조회 실패로 볼 오류 — 네트워크·도구 부재·응답 형식. 그 밖의 예외(코드 결함)는 드러나게 둔다.
+PROBE_ERRORS = (OSError, subprocess.TimeoutExpired, json.JSONDecodeError, AttributeError)
 
 CASES = "data/cases.json"
 GITLAB_HOST = "gitlab.aigov.go.kr"
@@ -41,7 +43,7 @@ def github_license(repo: str):
         if spdx == "NOASSERTION":
             return info.get("name") or "기타(비표준)"
         return spdx
-    except Exception:
+    except PROBE_ERRORS:
         return None
 
 
@@ -66,7 +68,7 @@ def gitlab_license(url: str):
         # GitLab API 표기 정규화 — SPDX 표기와 일치시키고, 무의미한 값은 비표준 처리
         return {"APACHE-2.0": "Apache-2.0", "LICENSE": "기타(비표준)",
                 "MIT LICENSE": "MIT", "GNU-AGPL-3.0": "AGPL-3.0"}.get(raw, raw)
-    except Exception:
+    except PROBE_ERRORS:
         return None
 
 
@@ -98,7 +100,7 @@ def main():
     refresh = "--refresh" in sys.argv
     data = read_json(CASES)
     cases = data["cases"]
-    today = date.today().isoformat()
+    today = kst_today().isoformat()
     tagged = skipped = failed = 0
     for c in cases:
         if c.get("license") and not refresh:

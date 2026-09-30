@@ -1,6 +1,6 @@
 # PAX 일일 수집 절차 (크론 세션용)
 
-작업 디렉토리: /Users/jonghongjeon/git/PAX
+작업 디렉토리: 이 저장소의 루트(모든 명령은 루트에서 실행한다).
 오늘 날짜를 `TODAY`(YYYY-MM-DD)로 둔다. 모든 단계는 실패해도 다음 단계로 진행하고,
 마지막에 log.md에 결과를 기록한다.
 
@@ -69,7 +69,7 @@
   `TODAY-kakao-pm.json`(오후·야간)에 저장한다 — `build_community_stats.py`가 `data/raw/*kakao*.json`
   중 리스트 형식 파일만 읽어 일별 대화량·가입자 추이를 집계하므로, 이름에 kakao가 없거나 dict로
   감싸면 그 회차 대화량이 통째로 빠진다.
-- 메시지·게시물 수집이 0건이면 4단계와 5-A를 건너뛴다. **5-B는 그래도 실행한다** —
+- 메시지·게시물 수집이 0건이면 4단계와 병합을 건너뛴다. **§5의 `pax.run post-collect`는 그래도 실행한다** —
   raw 아카이브 전체를 다시 훑는 집계라 이전 회차 누락분이 여기서 메워진다.
 
 ## 4. 사례 선별·구조화 (AI 판단)
@@ -120,37 +120,28 @@ JSON 리스트로 저장한다:
 
 ## 5. 병합·배포 데이터 갱신
 
-**두 갈래로 나뉜다.** 5-A는 신규 사례가 있을 때만, 5-B는 **신규 사례가 0건이어도 매 회차 반드시**
-실행한다. 5-B는 사례 원장이 아니라 수집 원문(`data/raw/`)과 커뮤니티 활동에서 나오므로,
-사례가 한 건도 안 늘어난 회차에도 공유 동영상·뉴스·대화량은 늘어 있다.
-
-### 5-A. 신규 사례가 있을 때만
+**신규 사례가 있으면 먼저 병합하고 평가 항목을 늘린다** — 이 두 가지는 판단이 필요해 세션이 한다:
 ```bash
 PYTHONPATH=scripts python3 -m pax.merge data/incoming/TODAY.json
-python3 scripts/tag_licenses.py   # 신규 사례의 저장소 라이선스 확인·태깅 (기존 태깅은 건너뜀)
-PYTHONPATH=scripts python3 -m pax.publish
-python3 scripts/build_champions.py
-python3 scripts/build_case_pages.py       # 사례별 정적 상세 페이지 재생성
-PYTHONPATH=scripts python3 scripts/build_mcp_review.py  # MCP 사례가 포함됐을 때
-bash scripts/make_thumbs.sh               # case_url/kakao link 대상, 기존 것은 건너뜀
 ```
 - merge가 거부 건을 출력하면 data/rejected/TODAY.json을 열어 원인(주로 익명화)을
   수정한 새 incoming 파일로 1회 재시도한다.
-- 썸네일 실패한 URL은 무시해도 된다 — 사이트가 설명문으로 폴백한다.
-- 평가 항목(`docs/native/eval_additions.json`)을 같은 회차에 늘리고 `build_eval_data.py`를 돌린다.
-  빠뜨리면 대시보드에서 새 사례가 '미평가'로 남는다.
+- 평가 항목(`docs/native/eval_additions.json`)을 같은 회차에 늘린다 — 빠뜨리면 대시보드에서
+  새 사례가 '미평가'로 남는다(형식: `.claude/skills/pax-register/references/eval-vocab.md`).
+- 신규 MCP 사례는 §4 끝의 check_mcp·LLM 감사를 병합 뒤에 한다.
 
-### 5-B. 매 회차 (신규 사례 0건이어도)
+**그다음 매 회차(신규 0건이어도) 후처리를 한 명령으로 돌린다:**
 ```bash
-python3 scripts/build_community_stats.py  # 대화량·가입자·Threads 관측
-python3 scripts/build_videos.py           # 공유된 동영상 목록 (raw 전체 재스캔, 제목은 캐시)
-python3 scripts/build_news.py             # 공유된 뉴스·기관 보도자료 (기사 판별·제목은 캐시)
-python3 scripts/build_index.py            # 공공 AX 지수 (분기 말에는 --snapshot 추가)
-python3 scripts/build_dashboard_history.py # 현황판 증감용 일자별 원장 — index·champions 뒤에 실행
-python3 scripts/stamp_assets.py           # site의 JS·CSS를 고쳤을 때만 (캐시 무효화)
+PYTHONPATH=scripts python3 -m pax.run post-collect   # 순서만 보려면 --dry-run
 ```
-- 순서를 지킨다: `build_dashboard_history.py`는 `build_index.py`·`build_champions.py`가
-  만든 값을 읽어 그날 관측값으로 적는다. 먼저 돌리면 어제 값이 오늘로 기록된다.
+라이선스 태깅 → 평가 빌드 → MCP 공개본 → (없는 썸네일만) 썸네일 → 사이트 사본·경량판·WebP →
+챔피언 → 사례 페이지 → 대화량·가입자 → 동영상 → 뉴스 → 지수 → 현황판 이력 → 자산 스탬프.
+순서는 `scripts/pax/run.py`의 POST_COLLECT가 정본이고 테스트가 지킨다(읽는 쪽이 만드는 쪽보다
+먼저 돌면 새 사례가 한 회차 동안 '평가 데이터 없음'으로 공개된다). 한 단계가 실패하면 거기서
+멈추고 종료 코드를 돌려준다 — 원인을 log에 적고, 고친 뒤 다시 돌린다. 분기 말에는
+`python3 scripts/build_index.py --snapshot`을 따로 한 번 더 돌린다.
+- 산출물은 시각만 바뀌면 다시 쓰지 않는다 — 사례·지표가 그대로인 회차는 커밋할 것이 없다(§6).
+- 썸네일 실패한 URL은 무시해도 된다 — 사이트가 설명문으로 폴백한다.
 - 변경 기록: 신규 사례가 1건 이상 병합됐으면 site/data/changelog.json의 entries
   맨 앞에 오늘 날짜 항목을 추가한다(같은 날짜가 이미 있으면 그 items에 덧붙임).
   형식: "OO 사례 N건 추가 — 대표 사례 2~3개 제목 (총 M건)". 닉네임 금지.

@@ -13,6 +13,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from pax.jsonio import write_json
+
 CASES = Path("data/cases.json")
 EVALS = Path("site/data/evaluations.json")
 LINKS = Path("docs/champion_links.json")
@@ -228,7 +230,7 @@ def main() -> int:
         profile = fetch_profile(acct)
         cache[acct] = profile or {}
         fetched += 1
-    CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
+    write_json(CACHE, cache)
 
     # 5) 챔피언 레코드 생성
     champions = []
@@ -302,7 +304,7 @@ def main() -> int:
 
     doc = {"total": len(champions), "champions": champions,
            "unattributed": unattributed}
-    OUT.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    write_json(OUT, doc)
     print(f"{OUT} ← 챔피언 {len(champions)}명 (프로필 신규 조회 {fetched}건)")
     return 0
 

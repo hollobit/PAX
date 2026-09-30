@@ -11,8 +11,9 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent))
+from pax.jsonio import read_json, write_json_if_changed  # noqa: E402
 from pax.mcp_review import load_reviews  # noqa: E402
+from pax.timeutil import kst_today  # noqa: E402
 
 LEDGER = Path("data/mcp_reviews.json")
 OUT = Path("site/data/mcp-review.json")
@@ -57,7 +58,7 @@ def build_public(ledger: dict, case_meta: dict) -> dict:
         })
     counts = Counter(r["overall"] for r in reviews)
     return {
-        "generated_at": datetime.date.today().isoformat(),
+        "generated_at": kst_today().isoformat(),
         "summary": {
             "total": len(reviews),
             "counts": dict(counts),
@@ -70,7 +71,7 @@ def build_public(ledger: dict, case_meta: dict) -> dict:
 
 
 def main() -> int:
-    cases = json.loads(Path("data/cases.json").read_text(encoding="utf-8"))["cases"]
+    cases = read_json("data/cases.json")["cases"]
     case_meta = {c["id"]: {"title": c.get("title", ""), "stars": c.get("stars")} for c in cases}
     ledger = load_reviews(LEDGER, set(case_meta))
     # 원장 overall과 재계산 값 불일치 시 실패 — 이중 검증
@@ -79,7 +80,7 @@ def main() -> int:
             print(f"overall 불일치: {r['case_id']} 원장={r['overall']}", file=sys.stderr)
             return 1
     doc = build_public(ledger, case_meta)
-    OUT.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    write_json_if_changed(OUT, doc)
     s = doc["summary"]
     print(f"mcp-review.json ← {s['total']}건 (분포 {s['counts']}, 최다 주의 축 {s['top_warn_axis']})")
     return 0

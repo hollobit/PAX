@@ -13,7 +13,6 @@ import shutil
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import CITIES, OUT, SITE_DATA  # noqa: E402
 
 GROUPS = {c["key"]: c["group"] for c in CITIES if c.get("group")}

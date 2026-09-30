@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-09-30T06:35:54Z",
+ "updated_at": "2026-09-30T13:56:40Z",
  "count": 81,
  "videos": [
+  {
+   "id": "GPXmGSQZB3U",
+   "title": "닷츠: OpenAI 데브데이 2026 총정리와 숨은 이야기",
+   "channel": "Alex AI",
+   "url": "https://www.youtube.com/watch?v=GPXmGSQZB3U",
+   "thumb": "https://i.ytimg.com/vi/GPXmGSQZB3U/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-30",
+   "last_shared": "2026-09-30",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "cquvA_IpEsA",
    "title": "Gyroscope",
@@ -29,19 +42,6 @@
    ]
   },
   {
-   "id": "GPXmGSQZB3U",
-   "title": "닷츠: OpenAI 데브데이 2026 총정리와 숨은 이야기",
-   "channel": "Alex AI",
-   "url": "https://www.youtube.com/watch?v=GPXmGSQZB3U",
-   "thumb": "https://i.ytimg.com/vi/GPXmGSQZB3U/mqdefault.jpg",
-   "shares": 1,
-   "first_shared": "2026-09-29",
-   "last_shared": "2026-09-29",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
    "id": "iMH91sfqpqU",
    "title": "사람이 만든 데이터가 아니라면... AI 모델이 붕괴되는 걸 입증한 네이처 논문 등장 | AI 주도권은  빅테크 플랫폼 기업이 더 강해진다?",
    "channel": "안될공학 - IT 테크 신기술",
@@ -61,8 +61,8 @@
    "url": "https://www.youtube.com/watch?v=9dkNqHs1PYM",
    "thumb": "https://i.ytimg.com/vi/9dkNqHs1PYM/mqdefault.jpg",
    "shares": 1,
-   "first_shared": "2026-09-27",
-   "last_shared": "2026-09-27",
+   "first_shared": "2026-09-28",
+   "last_shared": "2026-09-28",
    "sources": [
     "kakao"
    ]
@@ -146,6 +146,19 @@
    ]
   },
   {
+   "id": "n2cJ8fjXARI",
+   "title": "[한글자막] 팔란티어 AI 최적화 — 비용 90% 줄인 사례",
+   "channel": "PunkAI",
+   "url": "https://www.youtube.com/watch?v=n2cJ8fjXARI",
+   "thumb": "https://i.ytimg.com/vi/n2cJ8fjXARI/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-23",
+   "last_shared": "2026-09-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "id": "gIt8EOrm46s",
    "title": "링 위에 오른 '인간 vs 휴머노이드 로봇'…격투 경기 화제 / 연합뉴스 (Yonhapnews)",
    "channel": "연합뉴스 Yonhapnews",
@@ -172,19 +185,6 @@
    ]
   },
   {
-   "id": "n2cJ8fjXARI",
-   "title": "[한글자막] 팔란티어 AI 최적화 — 비용 90% 줄인 사례",
-   "channel": "PunkAI",
-   "url": "https://www.youtube.com/watch?v=n2cJ8fjXARI",
-   "thumb": "https://i.ytimg.com/vi/n2cJ8fjXARI/mqdefault.jpg",
-   "shares": 1,
-   "first_shared": "2026-09-22",
-   "last_shared": "2026-09-22",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
    "id": "3hilsneulfM",
    "title": "잘할 마음 없는 직원이 ‘AI 슬롭’ 쏟아낸다 (원티드랩 윤명훈 사업 총괄)",
    "channel": "티타임즈TV",
@@ -204,7 +204,7 @@
    "url": "https://www.youtube.com/watch?v=lx3YkhzM_04",
    "thumb": "https://i.ytimg.com/vi/lx3YkhzM_04/mqdefault.jpg",
    "shares": 2,
-   "first_shared": "2026-09-19",
+   "first_shared": "2026-09-20",
    "last_shared": "2026-09-20",
    "sources": [
     "kakao"
@@ -243,7 +243,7 @@
    "url": "https://www.youtube.com/watch?v=BM0oVk0aLAE",
    "thumb": "https://i.ytimg.com/vi/BM0oVk0aLAE/mqdefault.jpg",
    "shares": 3,
-   "first_shared": "2026-09-15",
+   "first_shared": "2026-09-16",
    "last_shared": "2026-09-17",
    "sources": [
     "kakao"
@@ -276,6 +276,19 @@
    ]
   },
   {
+   "id": "KQrIUK7jDBw",
+   "title": "AI 도입하고도 직원 수 유지하는 월마트의 비결은",
+   "channel": "티타임즈TV",
+   "url": "https://www.youtube.com/watch?v=KQrIUK7jDBw",
+   "thumb": "https://i.ytimg.com/vi/KQrIUK7jDBw/mqdefault.jpg",
+   "shares": 3,
+   "first_shared": "2026-09-09",
+   "last_shared": "2026-09-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "id": "vopSo8YHUrc",
    "title": "EP.1 사용료 0원! 다마고치로 나만의 AI 두뇌 육성하기 (설치부터 실습까지)",
    "channel": "CONNECT AI LAB",
@@ -284,19 +297,6 @@
    "shares": 1,
    "first_shared": "2026-09-16",
    "last_shared": "2026-09-16",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "id": "KQrIUK7jDBw",
-   "title": "AI 도입하고도 직원 수 유지하는 월마트의 비결은",
-   "channel": "티타임즈TV",
-   "url": "https://www.youtube.com/watch?v=KQrIUK7jDBw",
-   "thumb": "https://i.ytimg.com/vi/KQrIUK7jDBw/mqdefault.jpg",
-   "shares": 3,
-   "first_shared": "2026-09-08",
-   "last_shared": "2026-09-15",
    "sources": [
     "kakao"
    ]
@@ -438,6 +438,45 @@
    "url": "https://www.youtube.com/watch?v=ox1mAObaUHw",
    "thumb": "https://i.ytimg.com/vi/ox1mAObaUHw/mqdefault.jpg",
    "shares": 1,
+   "first_shared": "2026-09-10",
+   "last_shared": "2026-09-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "GC7RW7nDzgU",
+   "title": "Google AI Pro X 이병헌 | 이병헌이 깊이 있는 답을 준비하는 방법 👀",
+   "channel": "Google Korea",
+   "url": "https://www.youtube.com/watch?v=GC7RW7nDzgU",
+   "thumb": "https://i.ytimg.com/vi/GC7RW7nDzgU/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-10",
+   "last_shared": "2026-09-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "3EWjtYcHUEA",
+   "title": "\"AI 통제 불능\" 충격 고백..\"인류에 위협\" 연구원도 떠났다 / SBS / 모아보는 뉴스",
+   "channel": "SBS 뉴스",
+   "url": "https://www.youtube.com/watch?v=3EWjtYcHUEA",
+   "thumb": "https://i.ytimg.com/vi/3EWjtYcHUEA/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-10",
+   "last_shared": "2026-09-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "eKKpqMowytA",
+   "title": "GPT-6 Astra Can Now Build Architectural 3D Models",
+   "channel": "Salmaan Mohamed",
+   "url": "https://www.youtube.com/watch?v=eKKpqMowytA",
+   "thumb": "https://i.ytimg.com/vi/eKKpqMowytA/mqdefault.jpg",
+   "shares": 1,
    "first_shared": "2026-09-09",
    "last_shared": "2026-09-09",
    "sources": [
@@ -458,39 +497,13 @@
    ]
   },
   {
-   "id": "GC7RW7nDzgU",
-   "title": "Google AI Pro X 이병헌 | 이병헌이 깊이 있는 답을 준비하는 방법 👀",
-   "channel": "Google Korea",
-   "url": "https://www.youtube.com/watch?v=GC7RW7nDzgU",
-   "thumb": "https://i.ytimg.com/vi/GC7RW7nDzgU/mqdefault.jpg",
-   "shares": 1,
-   "first_shared": "2026-09-09",
-   "last_shared": "2026-09-09",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "id": "3EWjtYcHUEA",
-   "title": "\"AI 통제 불능\" 충격 고백..\"인류에 위협\" 연구원도 떠났다 / SBS / 모아보는 뉴스",
-   "channel": "SBS 뉴스",
-   "url": "https://www.youtube.com/watch?v=3EWjtYcHUEA",
-   "thumb": "https://i.ytimg.com/vi/3EWjtYcHUEA/mqdefault.jpg",
-   "shares": 1,
-   "first_shared": "2026-09-09",
-   "last_shared": "2026-09-09",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
    "id": "LA2_TUw_-OE",
    "title": "AI로 손쉽게 만드는 ‘딸깍앱’…보안은? [9시 뉴스] / KBS 2026.09.07.",
    "channel": "KBS News",
    "url": "https://www.youtube.com/watch?v=LA2_TUw_-OE",
    "thumb": "https://i.ytimg.com/vi/LA2_TUw_-OE/mqdefault.jpg",
    "shares": 2,
-   "first_shared": "2026-09-07",
+   "first_shared": "2026-09-08",
    "last_shared": "2026-09-08",
    "sources": [
     "kakao"
@@ -502,19 +515,6 @@
    "channel": "Alex AI",
    "url": "https://www.youtube.com/watch?v=ztkLrj2PITI",
    "thumb": "https://i.ytimg.com/vi/ztkLrj2PITI/mqdefault.jpg",
-   "shares": 1,
-   "first_shared": "2026-09-08",
-   "last_shared": "2026-09-08",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "id": "eKKpqMowytA",
-   "title": "GPT-6 Astra Can Now Build Architectural 3D Models",
-   "channel": "Salmaan Mohamed",
-   "url": "https://www.youtube.com/watch?v=eKKpqMowytA",
-   "thumb": "https://i.ytimg.com/vi/eKKpqMowytA/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-09-08",
    "last_shared": "2026-09-08",
@@ -575,24 +575,24 @@
    ]
   },
   {
-   "id": "duiMS7vSycw",
-   "title": "진상민원과 족발 뼈다구 과장 | 계속 역주행 하는 전설의 영상",
-   "channel": "울산남구 고래방송국",
-   "url": "https://www.youtube.com/watch?v=duiMS7vSycw",
-   "thumb": "https://i.ytimg.com/vi/duiMS7vSycw/mqdefault.jpg",
-   "shares": 1,
-   "first_shared": "2026-09-03",
-   "last_shared": "2026-09-03",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
    "id": "1QNsdr-Qx_I",
    "title": "Introducing GPT-6 Astra: the most intelligent and aligned model in the world.",
    "channel": "OpenAI",
    "url": "https://www.youtube.com/watch?v=1QNsdr-Qx_I",
    "thumb": "https://i.ytimg.com/vi/1QNsdr-Qx_I/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-09-04",
+   "last_shared": "2026-09-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "duiMS7vSycw",
+   "title": "진상민원과 족발 뼈다구 과장 | 계속 역주행 하는 전설의 영상",
+   "channel": "울산남구 고래방송국",
+   "url": "https://www.youtube.com/watch?v=duiMS7vSycw",
+   "thumb": "https://i.ytimg.com/vi/duiMS7vSycw/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-09-03",
    "last_shared": "2026-09-03",
@@ -634,7 +634,7 @@
    "thumb": "https://i.ytimg.com/vi/6WH_CQQm-jw/mqdefault.jpg",
    "shares": 3,
    "first_shared": "2026-08-25",
-   "last_shared": "2026-08-27",
+   "last_shared": "2026-08-28",
    "sources": [
     "kakao"
    ]
@@ -645,6 +645,19 @@
    "channel": "전주MBC News",
    "url": "https://www.youtube.com/watch?v=VkXOBQOMuBQ",
    "thumb": "https://i.ytimg.com/vi/VkXOBQOMuBQ/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-08-27",
+   "last_shared": "2026-08-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "5dyJ2oTCEeE",
+   "title": "AI시대에 디자이너는 끝? ㄴㄴ 클로드로 미친 성과 만든 원티드 디자이너의 실무 활용법 공개 | 왓츠인마이AI ep.01 #프로덕트디자이너 #UIUX #피그마",
+   "channel": "채널 원티드",
+   "url": "https://www.youtube.com/watch?v=5dyJ2oTCEeE",
+   "thumb": "https://i.ytimg.com/vi/5dyJ2oTCEeE/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-08-27",
    "last_shared": "2026-08-27",
@@ -666,6 +679,19 @@
    ]
   },
   {
+   "id": "jFIS7T99Yk0",
+   "title": "랄프톤 후기, 인지부채를 예방하는 하네스 개발 (이웅기 교수/고려대)",
+   "channel": "AI프렌즈",
+   "url": "https://www.youtube.com/watch?v=jFIS7T99Yk0",
+   "thumb": "https://i.ytimg.com/vi/jFIS7T99Yk0/mqdefault.jpg",
+   "shares": 3,
+   "first_shared": "2026-08-25",
+   "last_shared": "2026-08-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "id": "TR53RdqWbjw",
    "title": "(26.8.25.) 이재명 대통령 제37회 국무회의",
    "channel": "KTV 국민방송",
@@ -674,32 +700,6 @@
    "shares": 1,
    "first_shared": "2026-08-26",
    "last_shared": "2026-08-26",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "id": "5dyJ2oTCEeE",
-   "title": "AI시대에 디자이너는 끝? ㄴㄴ 클로드로 미친 성과 만든 원티드 디자이너의 실무 활용법 공개 | 왓츠인마이AI ep.01 #프로덕트디자이너 #UIUX #피그마",
-   "channel": "채널 원티드",
-   "url": "https://www.youtube.com/watch?v=5dyJ2oTCEeE",
-   "thumb": "https://i.ytimg.com/vi/5dyJ2oTCEeE/mqdefault.jpg",
-   "shares": 1,
-   "first_shared": "2026-08-26",
-   "last_shared": "2026-08-26",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "id": "jFIS7T99Yk0",
-   "title": "랄프톤 후기, 인지부채를 예방하는 하네스 개발 (이웅기 교수/고려대)",
-   "channel": "AI프렌즈",
-   "url": "https://www.youtube.com/watch?v=jFIS7T99Yk0",
-   "thumb": "https://i.ytimg.com/vi/jFIS7T99Yk0/mqdefault.jpg",
-   "shares": 3,
-   "first_shared": "2026-08-25",
-   "last_shared": "2026-08-25",
    "sources": [
     "kakao"
    ]
@@ -731,24 +731,24 @@
    ]
   },
   {
-   "id": "z-cxE0yus4g",
-   "title": "클로드 계약서 검토부터 내용증명 까지 | Claude code 한국 법령 MCP 실전 활용 | Korean Law MCP",
-   "channel": "AI싱크클럽",
-   "url": "https://www.youtube.com/watch?v=z-cxE0yus4g",
-   "thumb": "https://i.ytimg.com/vi/z-cxE0yus4g/mqdefault.jpg",
-   "shares": 1,
-   "first_shared": "2026-08-19",
-   "last_shared": "2026-08-19",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
    "id": "8ucoskmA1yg",
    "title": "이게 진짜 HTML이라고?",
    "channel": "노마드 코더 Nomad Coders",
    "url": "https://www.youtube.com/watch?v=8ucoskmA1yg",
    "thumb": "https://i.ytimg.com/vi/8ucoskmA1yg/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-08-20",
+   "last_shared": "2026-08-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "z-cxE0yus4g",
+   "title": "클로드 계약서 검토부터 내용증명 까지 | Claude code 한국 법령 MCP 실전 활용 | Korean Law MCP",
+   "channel": "AI싱크클럽",
+   "url": "https://www.youtube.com/watch?v=z-cxE0yus4g",
+   "thumb": "https://i.ytimg.com/vi/z-cxE0yus4g/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-08-19",
    "last_shared": "2026-08-19",
@@ -796,6 +796,19 @@
    ]
   },
   {
+   "id": "Ly_YHLSrKI0",
+   "title": "미국 과학판을 갈아엎는 트럼프의 진짜 목표는?",
+   "channel": "안될과학 Unrealscience",
+   "url": "https://www.youtube.com/watch?v=Ly_YHLSrKI0",
+   "thumb": "https://i.ytimg.com/vi/Ly_YHLSrKI0/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-08-16",
+   "last_shared": "2026-08-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "id": "1mLC7tqeBEY",
    "title": "'사피엔스' 저자 유발 하라리의 48분 AI 진단 — 권력은 은행과 법정에서 먼저 넘어갑니다",
    "channel": "AgentOS",
@@ -814,19 +827,6 @@
    "channel": "연구원 최C",
    "url": "https://www.youtube.com/watch?v=vM2ADaSZcMc",
    "thumb": "https://i.ytimg.com/vi/vM2ADaSZcMc/mqdefault.jpg",
-   "shares": 1,
-   "first_shared": "2026-08-15",
-   "last_shared": "2026-08-15",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "id": "Ly_YHLSrKI0",
-   "title": "미국 과학판을 갈아엎는 트럼프의 진짜 목표는?",
-   "channel": "안될과학 Unrealscience",
-   "url": "https://www.youtube.com/watch?v=Ly_YHLSrKI0",
-   "thumb": "https://i.ytimg.com/vi/Ly_YHLSrKI0/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-08-15",
    "last_shared": "2026-08-15",
@@ -939,6 +939,19 @@
    ]
   },
   {
+   "id": "tfrDp6FnhZc",
+   "title": "구글이 웹사이트를 AI용으로 바꾸기 시작했다",
+   "channel": "노마드 코더 Nomad Coders",
+   "url": "https://www.youtube.com/watch?v=tfrDp6FnhZc",
+   "thumb": "https://i.ytimg.com/vi/tfrDp6FnhZc/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-08-10",
+   "last_shared": "2026-08-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "id": "eKle2BovJLc",
    "title": "인공지능 단톡방에 \"진짜 사람\"을 숨겼다",
    "channel": "타임리스",
@@ -984,20 +997,7 @@
    "url": "https://www.youtube.com/watch?v=xuCGvqG6_SE",
    "thumb": "https://i.ytimg.com/vi/xuCGvqG6_SE/mqdefault.jpg",
    "shares": 2,
-   "first_shared": "2026-08-06",
-   "last_shared": "2026-08-09",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "id": "tfrDp6FnhZc",
-   "title": "구글이 웹사이트를 AI용으로 바꾸기 시작했다",
-   "channel": "노마드 코더 Nomad Coders",
-   "url": "https://www.youtube.com/watch?v=tfrDp6FnhZc",
-   "thumb": "https://i.ytimg.com/vi/tfrDp6FnhZc/mqdefault.jpg",
-   "shares": 1,
-   "first_shared": "2026-08-09",
+   "first_shared": "2026-08-07",
    "last_shared": "2026-08-09",
    "sources": [
     "kakao"

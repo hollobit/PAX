@@ -17,7 +17,6 @@ import mapbox_vector_tile as mvt
 import shapely
 from shapely.geometry import LineString, MultiPolygon, Polygon, box, shape
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import CACHE, CITIES, OUT, PAX_DATA, Frame  # noqa: E402
 
 EXTENT = 4096
