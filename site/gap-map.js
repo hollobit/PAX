@@ -1,5 +1,7 @@
 'use strict';
 
+import { el, fetchJson, fetchJsonOr } from './pax-dom.js?v=6dfb9f58';
+
 /** 격차 지도 — 지역·기관유형 관측 현황판과 레거시 연동 수요 보드 (로드맵 2-4) */
 
 const REGIONS = ['서울', '부산', '대구', '인천', '광주', '대전', '울산', '세종',
@@ -20,13 +22,6 @@ const LEGACY_DEMANDS = [
   { system: '국외 API 차단(행정망)', area: '공통',
     demand: 'GitHub·주요 배포 플랫폼 차단으로 exe 위장 우회가 관행화 — 보안 리스크가 오히려 증가하는 역설' },
 ];
-
-function el(tag, cls, text) {
-  const node = document.createElement(tag);
-  if (cls) node.className = cls;
-  if (text != null) node.textContent = text;
-  return node;
-}
 
 // 중앙행정기관 목록은 ministries.js(공용)에서 로드
 
@@ -62,24 +57,19 @@ function renderMinistries(cases, affOfCase) {
 }
 
 async function main() {
-  const [res, champRes] = await Promise.all([
-    fetch('./data/cases-lite.json', { cache: 'no-cache' }),
-    fetch('./data/champions.json', { cache: 'no-cache' }).catch(() => null),
+  const [casesDoc, champDoc] = await Promise.all([
+    fetchJson('./data/cases-lite.json'),
+    fetchJsonOr('./data/champions.json'), // 없으면 소속 보강 없이 기관 표기만으로 집계한다
   ]);
-  const cases = (await res.json()).cases;
+  const cases = casesDoc.cases;
   // 사례 id → 챔피언 소속 문자열 (부처 식별 보강 — 기관 표기에 없는 소속을 챔피언 정보로 보완)
   const affOfCase = new Map();
-  if (champRes && champRes.ok) {
-    try {
-      const champDoc = await champRes.json();
-      for (const ch of champDoc.champions) {
-        const aff = (ch.affiliation && ch.affiliation.value) || '';
-        if (!aff) continue;
-        for (const cid of ch.cases) {
-          affOfCase.set(cid, `${affOfCase.get(cid) || ''} ${aff}`);
-        }
-      }
-    } catch { /* 소속 보강 실패는 집계 범위만 줄인다 */ }
+  for (const ch of (champDoc && champDoc.champions) || []) {
+    const aff = (ch.affiliation && ch.affiliation.value) || '';
+    if (!aff) continue;
+    for (const cid of ch.cases) {
+      affOfCase.set(cid, `${affOfCase.get(cid) || ''} ${aff}`);
+    }
   }
 
   renderMinistries(cases, affOfCase);

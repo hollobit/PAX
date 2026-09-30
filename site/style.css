@@ -851,17 +851,12 @@ main {
   color: var(--ink-soft);
 }
 
-.site-footer__sources a,
-.site-footer__source-name {
+.site-footer__sources a {
   font-weight: 600;
   color: var(--accent-2);
 }
 
 /* ── 태그 버튼 패널 ──────────────────────────────────────── */
-
-.control--tags {
-  grid-column: 1 / -1;
-}
 
 .tag-buttons {
   display: flex;
@@ -1799,7 +1794,6 @@ main {
   }
 }
 
-
 /* ---- 표본 고지 (로드맵 0-3) ---- */
 .sample-note {
   max-width: 40rem;
@@ -1833,7 +1827,6 @@ main {
   0%, 70% { outline-color: var(--accent); }
   100% { outline-color: transparent; }
 }
-
 
 /* ---- 업무 분류 칩 (로드맵 1-1) ---- */
 .task-chips {
@@ -1881,12 +1874,6 @@ main {
 .task-chips--inline {
   margin: 0;
   align-items: center;
-}
-
-.control--row {
-  flex-direction: row;
-  align-items: center;
-  gap: 0.6rem;
 }
 
 .controls--inline {
@@ -2204,7 +2191,6 @@ main {
   outline-offset: 3px;
 }
 
-
 /* ---- 관측소·격차·플레이북 공통 (로드맵 2-2~2-5·2-8) ---- */
 .obs-section {
   /* 다른 메뉴 화면과 동일하게 main(80vw) 폭을 그대로 사용한다 */
@@ -2302,7 +2288,6 @@ main {
 
 .site-footer { max-width: 56rem; margin: 3rem auto 2rem; padding: 1rem 1.5rem; color: var(--ink-faint); font-size: 0.85rem; text-align: center; border-top: 1px solid var(--rule); }
 
-
 /* ---- 2줄 내비: 외부 링크 줄 ---- */
 .site-nav--external {
   margin-top: 0.45rem;
@@ -2314,24 +2299,12 @@ main {
   color: var(--ink-soft);
 }
 
-
 .obs-subheading { font-size: 1.02rem; margin: 1.4rem 0 0.6rem; }
 .obs-issues { padding-left: 1.2rem; list-style: disc; }
 .obs-issues li { margin-bottom: 0.55rem; font-size: 0.92rem; color: var(--ink-soft); }
 .obs-issues strong { color: var(--ink); }
 
-
-.ministry-group-label {
-  margin: 1.1rem 0 0.4rem;
-  color: var(--ink-faint);
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-}
-
 #ministry-grid > .region-grid { margin: 0.2rem 0 0.4rem; }
-
 
 /* ---- 커뮤니티 활력 미니 차트 ---- */
 .mini-chart {

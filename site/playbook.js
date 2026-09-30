@@ -1,5 +1,7 @@
 'use strict';
 
+import { el, fetchJson } from './pax-dom.js?v=6dfb9f58';
+
 /** 자가진단 위저드 (로드맵 2-5) — C×H×P×R 좌표 판정 → 유사 사례 + 다음 관문 체크리스트 */
 
 const QUESTIONS = [
@@ -45,13 +47,6 @@ const QUESTIONS = [
 
 const answers = {};
 
-function el(tag, cls, text) {
-  const node = document.createElement(tag);
-  if (cls) node.className = cls;
-  if (text != null) node.textContent = text;
-  return node;
-}
-
 function judge() {
   const { c, h, p, r, t } = answers;
   // AX 단계 근사: 관문 우선 — 높은 완결성도 통제·권한 서술 없이는 상향하지 않는다
@@ -70,12 +65,12 @@ function judge() {
 
 async function similarCases(target) {
   try {
-    const [casesRes, evalRes] = await Promise.all([
-      fetch('./data/cases-lite.json', { cache: 'no-cache' }),
-      fetch('./data/evals-lite.json', { cache: 'no-cache' }),
+    const [casesDoc, evalDoc] = await Promise.all([
+      fetchJson('./data/cases-lite.json'),
+      fetchJson('./data/evals-lite.json'),
     ]);
-    const cases = (await casesRes.json()).cases;
-    const evals = (await evalRes.json()).cases;
+    const cases = casesDoc.cases;
+    const evals = evalDoc.cases;
     const byId = new Map(cases.map((c) => [c.id, c]));
     const cGrade = `C${Math.min(target.c, 3)}`;
     const pPrefix = `P${Math.min(target.p, 2)}`;

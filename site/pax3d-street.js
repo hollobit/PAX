@@ -1,6 +1,7 @@
 // 3D PAX 거리 산책 — 지도에서 고른 자리로 내려가 1인칭으로 걷는다 (sakura-crossing의 한국 거리판).
 // 조작: 클릭하면 시점 고정(마우스로 둘러보기) · W A S D/방향키 걷기 · Shift 달리기 · E 또는 클릭으로 간판의 사례 열기
 //       · Esc 시점 풀기. 터치 기기는 끌어서 둘러보고 화면 방향 단추로 걷는다. '자동 산책'은 사례 가게를 차례로 찾아간다.
+import { el } from './pax-dom.js?v=6dfb9f58';
 import * as THREE from 'three';
 import { toonGradient, skyTexture, createPostPass } from './pax3d-look.js?v=a66df86b';
 import { rng } from './pax3d-geom.js?v=f13514eb';
@@ -12,13 +13,6 @@ const EYE = 1.6;
 const WALK = 3.4;
 const RUN = 7.5;
 const BODY = 0.35;
-
-function el(tag, cls, text) {
-  const n = document.createElement(tag);
-  if (cls) n.className = cls;
-  if (text != null) n.textContent = text;
-  return n;
-}
 
 function makeCollider(rings) {
   const cells = new Map();
@@ -57,8 +51,8 @@ function makeCollider(rings) {
  * @param stage 지도 무대 요소(겹쳐 띄울 자리)
  * @param opts {target:{mode, lon, lat, label, address}, cases, focusId, colorOf, shortTitle, onPickCase, onClose}
  */
-export async function openStreet(stage, opts) {
-  const { target, cases, colorOf, shortTitle, onPickCase, onClose } = opts;
+/** 거리 화면의 틀 — 캔버스·안내·도구·방향 버튼. stage 안에 붙이고 조작할 요소들을 돌려준다. */
+function buildStreetDom(stage, target) {
   const root = el('div', 'pax3d-street');
   const canvas = el('canvas');
   canvas.setAttribute('aria-label', `${target.label} 거리 1인칭 산책 화면`);
@@ -84,8 +78,11 @@ export async function openStreet(stage, opts) {
   }
   root.append(canvas, hud, tools, hint, help, attrib, pad);
   stage.appendChild(root);
+  return { root, canvas, status, walkBtn, backBtn, hint, attrib, pad };
+}
 
-  // ---- 장면 -------------------------------------------------------------------
+/** 1인칭 거리 장면 — 렌더러·하늘·안개·빛·후처리. 전국 지도와 따로 두어 거리를 닫으면 통째로 버린다. */
+function createStreetScene(canvas) {
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, stencil: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   renderer.shadowMap.enabled = true;
@@ -108,7 +105,33 @@ export async function openStreet(stage, opts) {
   const post = createPostPass(renderer);
   post.uniforms.tilt.value = 0; // 1인칭에서는 틸트시프트를 끈다
   post.uniforms.inkRange.value.set(0.035, 0.11); // 비스듬한 벽의 깊이 잡음은 넘기고 윤곽만
+  return { renderer, scene, grad, camera, sun, post };
+}
 
+/** 가게 앞 설 자리: 간판에서 바깥으로 밀어 가며 건물에 걸리지 않는 첫 자리(9m 안팎)를 고른다. */
+function placeShopStands(shops, blocked) {
+  for (const s of shops) {
+    const out = s.stand.clone().sub(s.look).setY(0).normalize();
+    const side = new THREE.Vector3(-out.z, 0, out.x);
+    // 정면보다 비스듬히 — 간판과 함께 길이 보이도록 옆으로 5m 비켜 선다
+    search: for (const d of [9, 7, 11, 5, 13, 15, 4]) {
+      for (const lateral of [5, -5, 0]) {
+        const p = s.look.clone().setY(EYE).addScaledVector(out, d).addScaledVector(side, lateral);
+        if (!blocked(p.x, p.z)) {
+          s.stand.copy(p);
+          break search;
+        }
+      }
+    }
+  }
+}
+
+export async function openStreet(stage, opts) {
+  const { target, cases, colorOf, shortTitle, onPickCase, onClose } = opts;
+  const { root, canvas, status, walkBtn, backBtn, hint, attrib, pad } = buildStreetDom(stage, target);
+
+  // ---- 장면 -------------------------------------------------------------------
+  const { renderer, scene, grad, camera, sun, post } = createStreetScene(canvas);
   let world;
   let fallbackNote = '';
   const common = { cases, grad, rng, colorOf, shortTitle, placeName: target.label.split(' ')[0] };
@@ -126,21 +149,7 @@ export async function openStreet(stage, opts) {
   attrib.textContent = world.attribution + fallbackNote;
   status.textContent = `사례 가게 ${world.shops.length}곳 · 노란 마름모가 사례 가게입니다`;
   const blocked = makeCollider(world.colliders);
-  // 가게 앞 설 자리: 간판에서 바깥으로 밀어 가며 건물에 걸리지 않는 첫 자리(9m 안팎)를 고른다
-  for (const s of world.shops) {
-    const out = s.stand.clone().sub(s.look).setY(0).normalize();
-    const side = new THREE.Vector3(-out.z, 0, out.x);
-    // 정면보다 비스듬히 — 간판과 함께 길이 보이도록 옆으로 5m 비켜 선다
-    search: for (const d of [9, 7, 11, 5, 13, 15, 4]) {
-      for (const lateral of [5, -5, 0]) {
-        const p = s.look.clone().setY(EYE).addScaledVector(out, d).addScaledVector(side, lateral);
-        if (!blocked(p.x, p.z)) {
-          s.stand.copy(p);
-          break search;
-        }
-      }
-    }
-  }
+  placeShopStands(world.shops, blocked);
   if (world.shops[0]) world.spawn.pos.copy(world.shops[0].stand);
   const signs = world.shops.map((s) => s.sign);
 

@@ -1,5 +1,7 @@
 'use strict';
 
+import { el, fetchJson } from './pax-dom.js?v=6dfb9f58';
+
 /** MCP 검증 매트릭스 — site/data/mcp-review.json 렌더 (스펙 2026-08-28). */
 
 const AXIS_ORDER = ['permission_surface', 'secrets', 'supply_chain',
@@ -14,13 +16,6 @@ const VERDICT_CLASS = {
   '해당 없음': 'mcp-badge--na',
 };
 
-function el(tag, cls, text) {
-  const node = document.createElement(tag);
-  if (cls) node.className = cls;
-  if (text != null) node.textContent = text;
-  return node;
-}
-
 function badge(verdict, note) {
   const span = el('span', `mcp-badge ${VERDICT_CLASS[verdict] || ''}`,
     verdict === '심각(비공개 처리 중)' ? '심각·처리 중' : verdict);
@@ -29,8 +24,7 @@ function badge(verdict, note) {
 }
 
 async function main() {
-  const res = await fetch('./data/mcp-review.json', { cache: 'no-cache' });
-  const doc = await res.json();
+  const doc = await fetchJson('./data/mcp-review.json');
 
   const summary = document.getElementById('mcp-summary');
   const counts = doc.summary.counts || {};

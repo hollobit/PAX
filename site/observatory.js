@@ -1,5 +1,7 @@
 'use strict';
 
+import { el, fetchJson, fetchJsonOr } from './pax-dom.js?v=6dfb9f58';
+
 /**
  * 관측소 — 공공 AX 지수 · 데이터 AI 접근성 매트릭스 · 공공 깃랩 브릿지
  * index.json(빌드 산출)과 cases.json을 읽어 렌더링한다.
@@ -41,13 +43,6 @@ function matchesDomain(c, domain) {
   return domain.keywords.some((k) => text.includes(k));
 }
 
-function el(tag, cls, text) {
-  const node = document.createElement(tag);
-  if (cls) node.className = cls;
-  if (text != null) node.textContent = text;
-  return node;
-}
-
 function pct(v) {
   return v == null ? '—' : `${Math.round(v * 1000) / 10}%`;
 }
@@ -60,422 +55,420 @@ function indexCard(label, value, note) {
   return card;
 }
 
-async function main() {
-  const [idxRes, casesRes] = await Promise.all([
-    fetch('./data/index.json', { cache: 'no-cache' }),
-    fetch('./data/cases.json', { cache: 'no-cache' }),
+/** 관측소가 쓰는 자료를 한 번씩만 받는다(예전엔 cases·community를 섹션마다 따로 받았다). */
+async function loadData() {
+  const [idx, casesDoc, community, champions, history] = await Promise.all([
+    fetchJson('./data/index.json'),
+    fetchJson('./data/cases.json'),
+    fetchJsonOr('./data/community.json'),        // 없으면 해당 타일·섹션만 비운다
+    fetchJsonOr('./data/champions.json'),        // 없으면 제목·요약·기관명만으로 분야를 판정한다
+    fetchJsonOr('./data/dashboard-history.json'), // 없으면 증감 배지만 빠진다
   ]);
-  const idx = await idxRes.json();
+  return { idx, cases: casesDoc.cases || [], community, champions, history };
+}
 
-  // ── PAX 현황판 (2026-09-09, 그래픽 개편 09-09) ──
-  // 형태 배정: 비율=링 게이지, 추세 있는 규모=스파크라인, 비교 가능한 규모=쌍 막대.
-  // 색: 카테고리 색 없음(각 지표는 독립) — 단일 강조색 + 상태색(라벨 병기).
-  //     별 합계는 규모 차가 커(17만 vs 330) 같은 축에 올리지 않고 값으로 병기한다.
-  (async function renderDashboard() {
-    // 증감 표시용 일자별 원장(scripts/build_dashboard_history.py). 없으면 배지만 빠지고 나머지는 그대로 뜬다.
-    let hist = null, histPrev = null, histPrevDate = '';
-    try {
-      const hres = await fetch('./data/dashboard-history.json', { cache: 'no-cache' });
-      if (hres.ok) {
-        const hdoc = await hres.json();
-        const ds = Object.keys(hdoc.days || {}).sort();
-        if (ds.length) {
-          hist = hdoc.days[ds[ds.length - 1]];
-          for (let i = ds.length - 2; i >= 0; i -= 1) {
-            const row = hdoc.days[ds[i]];
-            if (row && Object.keys(row).length > 1) { histPrev = row; histPrevDate = ds[i]; break; }
-          }
-        }
+async function main() {
+  const data = await loadData();
+  const { idx } = data;
+  renderDashboard(data);
+  renderModelStatus(idx);
+  renderIndexCards(idx);
+  renderCommunity(data.community);
+  renderDataMatrix(data.cases);
+  renderMcp(idx);
+  renderPlatforms(idx);
+  renderLicenses(idx);
+  renderBridge(idx);
+}
+
+// ── PAX 현황판 (2026-09-09, 그래픽 개편 09-09) ──
+// 형태 배정: 비율=링 게이지, 추세 있는 규모=스파크라인, 비교 가능한 규모=쌍 막대.
+// 색: 카테고리 색 없음(각 지표는 독립) — 단일 강조색 + 상태색(라벨 병기).
+//     별 합계는 규모 차가 커(17만 vs 330) 같은 축에 올리지 않고 값으로 병기한다.
+function renderDashboard({ idx, cases: allCases, community, champions, history }) {
+  // 증감 표시용 일자별 원장(scripts/build_dashboard_history.py). 없으면 배지만 빠지고 나머지는 그대로 뜬다.
+  let hist = null, histPrev = null, histPrevDate = '';
+  if (history) {
+    const ds = Object.keys(history.days || {}).sort();
+    if (ds.length) {
+      hist = history.days[ds[ds.length - 1]];
+      for (let i = ds.length - 2; i >= 0; i -= 1) {
+        const row = history.days[ds[i]];
+        if (row && Object.keys(row).length > 1) { histPrev = row; histPrevDate = ds[i]; break; }
       }
-    } catch (e) { /* 이력이 없어도 현황판은 떠야 한다 */ }
-
-    // 분야 판정에 만든 사람의 소속을 함께 넣는다 — 첫 화면과 같은 방식으로 엮어야 숫자가 맞는다.
-    let champAff = new Map();
-    try {
-      const cres = await fetch('./data/champions.json', { cache: 'no-cache' });
-      if (cres.ok) champAff = buildChampAffMap(await cres.json());
-    } catch (e) { /* 소속을 못 얻어도 제목·요약·기관명만으로 판정한다 */ }
-
-    const grid = document.getElementById('dash-grid');
-    if (!grid) return;
-    const NS = 'http://www.w3.org/2000/svg';
-    const svgEl = (tag, attrs) => {
-      const n = document.createElementNS(NS, tag);
-      Object.entries(attrs || {}).forEach(([k, v]) => n.setAttribute(k, v));
-      return n;
-    };
-    const num = (v) => (v == null ? '—' : Number(v).toLocaleString('ko-KR'));
-    const rate = (v) => (v == null ? '—' : `${(v * 100).toFixed(1)}%`);
-
-    let community = null;
-    try {
-      const r = await fetch('./data/community.json', { cache: 'no-cache' });
-      community = await r.json();
-    } catch (e) { /* 없으면 해당 타일만 값 생략 */ }
-
-    // 타일 골격
-    function tile(label, opts) {
-      const box = document.createElement(opts && opts.href ? 'a' : 'div');
-      box.className = 'dash-tile' + (opts && opts.tone ? ` dash-tile--${opts.tone}` : '');
-      if (opts && opts.href) box.href = opts.href;
-      const head = el('p', 'dash-tile__label', label);
-      box.appendChild(head);
-      return box;
     }
-    function sub(box, text) { box.appendChild(el('p', 'dash-tile__sub', text)); }
+  }
 
-    // 직전 기록일 대비 증감. 값이 같거나 비교할 이전 값이 없으면 아무것도 붙이지 않는다 —
-    // '0'이나 '—'를 채워 넣으면 변화가 없다는 뜻인지 자료가 없다는 뜻인지 구분되지 않는다.
-    function delta2(box, key, opts) { delta(box, key, opts); return box; }
+  // 분야 판정에 만든 사람의 소속을 함께 넣는다 — 첫 화면과 같은 방식으로 엮어야 숫자가 맞는다.
+  const champAff = champions ? buildChampAffMap(champions) : new Map();
 
-    function delta(box, key, opts) {
-      const o = opts || {};
-      if (!hist || !histPrev) return;
-      const now = hist[key];
-      const was = histPrev[key];
-      if (now == null || was == null) return;
-      const diff = now - was;
-      if (!diff) return;
-      const up = diff > 0;
-      const txt = o.pct
-        ? `${up ? '▲' : '▼'}${Math.abs(diff * 100).toFixed(1)}%p`
-        : `${up ? '▲' : '▼'}${num(Math.abs(diff))}`;
-      const badge = el('span', `dash-delta ${up ? 'dash-delta--up' : 'dash-delta--down'}`, txt);
-      badge.title = `직전 기록(${histPrevDate}) 대비 ${up ? '증가' : '감소'}`
-        + (hist.source === '복원' || (histPrev.source === '복원') ? ' · 복원값 포함' : '');
-      const head = box.querySelector('.dash-tile__label');
-      if (head) head.appendChild(badge);
-    }
+  const grid = document.getElementById('dash-grid');
+  if (!grid) return;
+  const NS = 'http://www.w3.org/2000/svg';
+  const svgEl = (tag, attrs) => {
+    const n = document.createElementNS(NS, tag);
+    Object.entries(attrs || {}).forEach(([k, v]) => n.setAttribute(k, v));
+    return n;
+  };
+  const num = (v) => (v == null ? '—' : Number(v).toLocaleString('ko-KR'));
+  const rate = (v) => (v == null ? '—' : `${(v * 100).toFixed(1)}%`);
 
-    // ① 링 게이지 — 0~100% 비율
-    function gauge(label, value, subText, opts) {
-      const o = opts || {};
-      const box = tile(label, o);
-      const size = 104, r = 42, cx = size / 2, cy = size / 2;
-      const circ = 2 * Math.PI * r;
-      const pctv = value == null ? 0 : Math.max(0, Math.min(1, value));
-      const svg = svgEl('svg', { viewBox: `0 0 ${size} ${size}`, class: 'dash-gauge', role: 'img',
-        'aria-label': `${label} ${rate(value)}` });
-      svg.appendChild(svgEl('title', {})).textContent = `${label} — ${rate(value)} (${subText})`;
-      svg.appendChild(svgEl('circle', { cx, cy, r, fill: 'none', class: 'dash-gauge__track', 'stroke-width': 9 }));
-      const arc = svgEl('circle', { cx, cy, r, fill: 'none', 'stroke-width': 9, 'stroke-linecap': 'round',
-        class: 'dash-gauge__value', transform: `rotate(-90 ${cx} ${cy})`,
-        'stroke-dasharray': `${(circ * pctv).toFixed(2)} ${circ.toFixed(2)}` });
-      svg.appendChild(arc);
-      const t = svgEl('text', { x: cx, y: cy + 1, class: 'dash-gauge__text', 'text-anchor': 'middle',
-        'dominant-baseline': 'middle' });
-      t.textContent = rate(value);
-      svg.appendChild(t);
+  // 타일 골격
+  function tile(label, opts) {
+    const box = document.createElement(opts && opts.href ? 'a' : 'div');
+    box.className = 'dash-tile' + (opts && opts.tone ? ` dash-tile--${opts.tone}` : '');
+    if (opts && opts.href) box.href = opts.href;
+    const head = el('p', 'dash-tile__label', label);
+    box.appendChild(head);
+    return box;
+  }
+  function sub(box, text) { box.appendChild(el('p', 'dash-tile__sub', text)); }
+
+  // 직전 기록일 대비 증감. 값이 같거나 비교할 이전 값이 없으면 아무것도 붙이지 않는다 —
+  // '0'이나 '—'를 채워 넣으면 변화가 없다는 뜻인지 자료가 없다는 뜻인지 구분되지 않는다.
+  function delta2(box, key, opts) { delta(box, key, opts); return box; }
+
+  function delta(box, key, opts) {
+    const o = opts || {};
+    if (!hist || !histPrev) return;
+    const now = hist[key];
+    const was = histPrev[key];
+    if (now == null || was == null) return;
+    const diff = now - was;
+    if (!diff) return;
+    const up = diff > 0;
+    const txt = o.pct
+      ? `${up ? '▲' : '▼'}${Math.abs(diff * 100).toFixed(1)}%p`
+      : `${up ? '▲' : '▼'}${num(Math.abs(diff))}`;
+    const badge = el('span', `dash-delta ${up ? 'dash-delta--up' : 'dash-delta--down'}`, txt);
+    badge.title = `직전 기록(${histPrevDate}) 대비 ${up ? '증가' : '감소'}`
+      + (hist.source === '복원' || (histPrev.source === '복원') ? ' · 복원값 포함' : '');
+    const head = box.querySelector('.dash-tile__label');
+    if (head) head.appendChild(badge);
+  }
+
+  // ① 링 게이지 — 0~100% 비율
+  function gauge(label, value, subText, opts) {
+    const o = opts || {};
+    const box = tile(label, o);
+    const size = 104, r = 42, cx = size / 2, cy = size / 2;
+    const circ = 2 * Math.PI * r;
+    const pctv = value == null ? 0 : Math.max(0, Math.min(1, value));
+    const svg = svgEl('svg', { viewBox: `0 0 ${size} ${size}`, class: 'dash-gauge', role: 'img',
+      'aria-label': `${label} ${rate(value)}` });
+    svg.appendChild(svgEl('title', {})).textContent = `${label} — ${rate(value)} (${subText})`;
+    svg.appendChild(svgEl('circle', { cx, cy, r, fill: 'none', class: 'dash-gauge__track', 'stroke-width': 9 }));
+    const arc = svgEl('circle', { cx, cy, r, fill: 'none', 'stroke-width': 9, 'stroke-linecap': 'round',
+      class: 'dash-gauge__value', transform: `rotate(-90 ${cx} ${cy})`,
+      'stroke-dasharray': `${(circ * pctv).toFixed(2)} ${circ.toFixed(2)}` });
+    svg.appendChild(arc);
+    const t = svgEl('text', { x: cx, y: cy + 1, class: 'dash-gauge__text', 'text-anchor': 'middle',
+      'dominant-baseline': 'middle' });
+    t.textContent = rate(value);
+    svg.appendChild(t);
+    box.appendChild(svg);
+    sub(box, subText);
+    if (o.flag) box.appendChild(el('p', 'dash-flag', o.flag));
+    return box;
+  }
+
+  // ② 스파크라인 — 추세가 있는 규모
+  function spark(label, value, unit, series, subText, opts) {
+    const box = tile(label, opts);
+    const v = el('p', 'dash-tile__value', num(value));
+    if (unit) v.appendChild(el('span', 'dash-tile__unit', unit));
+    box.appendChild(v);
+    if (series && series.length > 1) {
+      const w = 132, h = 34, pad = 2;
+      const ys = series.map((d) => d[1]);
+      const min = Math.min(...ys), max = Math.max(...ys), span = (max - min) || 1;
+      const pt = (d, i) => [
+        pad + (i * (w - pad * 2)) / (series.length - 1),
+        h - pad - ((d[1] - min) / span) * (h - pad * 2),
+      ];
+      const pts = series.map(pt);
+      const svg = svgEl('svg', { viewBox: `0 0 ${w} ${h}`, class: 'dash-spark', role: 'img',
+        'aria-label': `${label} 추이 — ${series[0][0]} ${num(series[0][1])} → ${series[series.length - 1][0]} ${num(value)}` });
+      svg.appendChild(svgEl('title', {})).textContent =
+        `${series[0][0]} ${num(series[0][1])} → ${series[series.length - 1][0]} ${num(value)}`;
+      svg.appendChild(svgEl('path', { class: 'dash-spark__area',
+        d: `M ${pts.map((p) => p.join(' ')).join(' L ')} L ${pts[pts.length - 1][0]} ${h} L ${pts[0][0]} ${h} Z` }));
+      svg.appendChild(svgEl('path', { class: 'dash-spark__line', fill: 'none', 'stroke-width': 2,
+        'stroke-linejoin': 'round', 'stroke-linecap': 'round',
+        d: `M ${pts.map((p) => p.join(' ')).join(' L ')}` }));
+      const last = pts[pts.length - 1];
+      svg.appendChild(svgEl('circle', { cx: last[0], cy: last[1], r: 3, class: 'dash-spark__dot' }));
       box.appendChild(svg);
-      sub(box, subText);
-      if (o.flag) box.appendChild(el('p', 'dash-flag', o.flag));
-      return box;
     }
+    sub(box, subText);
+    return box;
+  }
 
-    // ② 스파크라인 — 추세가 있는 규모
-    function spark(label, value, unit, series, subText, opts) {
-      const box = tile(label, opts);
-      const v = el('p', 'dash-tile__value', num(value));
-      if (unit) v.appendChild(el('span', 'dash-tile__unit', unit));
-      box.appendChild(v);
-      if (series && series.length > 1) {
-        const w = 132, h = 34, pad = 2;
-        const ys = series.map((d) => d[1]);
-        const min = Math.min(...ys), max = Math.max(...ys), span = (max - min) || 1;
-        const pt = (d, i) => [
-          pad + (i * (w - pad * 2)) / (series.length - 1),
-          h - pad - ((d[1] - min) / span) * (h - pad * 2),
-        ];
-        const pts = series.map(pt);
-        const svg = svgEl('svg', { viewBox: `0 0 ${w} ${h}`, class: 'dash-spark', role: 'img',
-          'aria-label': `${label} 추이 — ${series[0][0]} ${num(series[0][1])} → ${series[series.length - 1][0]} ${num(value)}` });
-        svg.appendChild(svgEl('title', {})).textContent =
-          `${series[0][0]} ${num(series[0][1])} → ${series[series.length - 1][0]} ${num(value)}`;
-        svg.appendChild(svgEl('path', { class: 'dash-spark__area',
-          d: `M ${pts.map((p) => p.join(' ')).join(' L ')} L ${pts[pts.length - 1][0]} ${h} L ${pts[0][0]} ${h} Z` }));
-        svg.appendChild(svgEl('path', { class: 'dash-spark__line', fill: 'none', 'stroke-width': 2,
-          'stroke-linejoin': 'round', 'stroke-linecap': 'round',
-          d: `M ${pts.map((p) => p.join(' ')).join(' L ')}` }));
-        const last = pts[pts.length - 1];
-        svg.appendChild(svgEl('circle', { cx: last[0], cy: last[1], r: 3, class: 'dash-spark__dot' }));
-        box.appendChild(svg);
-      }
-      sub(box, subText);
-      return box;
-    }
+  // ③ 쌍 막대 — 같은 척도로 비교 가능한 두 값 (별 합계는 축 밖 값으로 병기)
+  function pairBars(label, rows, subText, opts) {
+    const box = tile(label, opts);
+    const max = Math.max(...rows.map((r) => r.v)) || 1;
+    const wrap = el('div', 'dash-bars');
+    rows.forEach((r) => {
+      const row = el('div', 'dash-bars__row');
+      row.appendChild(el('span', 'dash-bars__name', r.name));
+      const track = el('span', 'dash-bars__track');
+      const fill = el('span', 'dash-bars__fill');
+      fill.style.width = `${Math.max(4, (r.v / max) * 100)}%`;
+      track.appendChild(fill);
+      track.title = `${r.name} ${num(r.v)}개 · 스타 ${num(r.stars)}`;
+      row.appendChild(track);
+      row.appendChild(el('span', 'dash-bars__val', `${num(r.v)}개`));
+      row.appendChild(el('span', 'dash-bars__star', `★${num(r.stars)}`));
+      wrap.appendChild(row);
+    });
+    box.appendChild(wrap);
+    sub(box, subText);
+    return box;
+  }
 
-    // ③ 쌍 막대 — 같은 척도로 비교 가능한 두 값 (별 합계는 축 밖 값으로 병기)
-    function pairBars(label, rows, subText, opts) {
-      const box = tile(label, opts);
-      const max = Math.max(...rows.map((r) => r.v)) || 1;
-      const wrap = el('div', 'dash-bars');
-      rows.forEach((r) => {
-        const row = el('div', 'dash-bars__row');
-        row.appendChild(el('span', 'dash-bars__name', r.name));
-        const track = el('span', 'dash-bars__track');
-        const fill = el('span', 'dash-bars__fill');
-        fill.style.width = `${Math.max(4, (r.v / max) * 100)}%`;
-        track.appendChild(fill);
-        track.title = `${r.name} ${num(r.v)}개 · 스타 ${num(r.stars)}`;
-        row.appendChild(track);
-        row.appendChild(el('span', 'dash-bars__val', `${num(r.v)}개`));
-        row.appendChild(el('span', 'dash-bars__star', `★${num(r.stars)}`));
-        wrap.appendChild(row);
+  const repo = idx.repo_stats || {};
+  const gh = repo.github || {}; const gl = repo.gitlab || {};
+  const glLic = (idx.license_by_source || {}).gitlab || { total: 0, stated: 0 };
+  const glNone = glLic.total ? (glLic.total - glLic.stated) / glLic.total : null;
+  const mcpRate = idx.total_cases ? idx.mcp_cases / idx.total_cases : null;
+  const members = community && community.members;
+
+  // 사례 누적 추이 — collected_at 기준
+  const byDay = {};
+  allCases.forEach((c) => { const d = (c.collected_at || '').slice(0, 10); if (d) byDay[d] = (byDay[d] || 0) + 1; });
+  let cum = 0;
+  const caseSeries = Object.keys(byDay).sort().map((d) => { cum += byDay[d]; return [d, cum]; });
+
+  grid.appendChild(delta2(spark('공공AX 아카이브 누적', idx.total_cases, '건', caseSeries,
+    caseSeries ? `${caseSeries[0][0]} 관측 시작` : '아카이브 총계', { tone: 'key' }), 'total_cases', null));
+  grid.appendChild(delta2(gauge('MCP 사례 비율', mcpRate, `${num(idx.mcp_cases)}건 / 전체 ${num(idx.total_cases)}건`,
+    { href: '#mcp' }), 'mcp_rate', { pct: true }));
+  grid.appendChild(delta2(spark('챔피언', idx.total_champions, '명', null, '프로젝트가 식별된 인원', { href: 'champions.html' }), 'total_champions', null));
+  grid.appendChild(delta2(spark('오픈톡 가입자', members ? members.latest : null, '명',
+    members ? members.series : null, members ? `${members.first_date} ${num(members.first)}명에서 관측 시작` : '—',
+    { href: '#community' }), 'members', null));
+  grid.appendChild(delta2(gauge('국산 모델 채택률', idx.domestic_model_rate,
+    `LLM 런타임 ${num(idx.model_known)}건 기준`, { href: '#models', tone: 'watch', flag: '낮음' }), 'domestic_model_rate', { pct: true }));
+  grid.appendChild(delta2(gauge('로컬 오픈웨이트 실행률', idx.local_model_rate,
+    '데이터를 내보내지 않는 실행', { href: '#models' }), 'local_model_rate', { pct: true }));
+  grid.appendChild(pairBars('저장소 규모', [
+    { name: 'GitHub', v: gh.count || 0, stars: gh.stars_sum || 0 },
+    { name: '공공 깃랩', v: gl.count || 0, stars: gl.stars_sum || 0 },
+  ], '막대는 저장소 수 · ★는 스타 합계(척도가 달라 같은 축에 두지 않음)', { href: '#repos' }));
+  grid.appendChild(delta2(gauge('깃랩 라이선스 미표시', glNone,
+    `${num(glLic.total)}건 중 ${num(glLic.total - glLic.stated)}건 미표시`,
+    { href: '#licenses', tone: 'watch', flag: '주의' }), 'gitlab_license_none_rate', { pct: true }));
+
+  // ── 분류 구성 패널 ──
+  // 형태: 순위 막대. 10~20개 항목에 카테고리 색을 쓰면 팔레트가 무너지므로
+  // 색은 크기 한 가지 뜻만 담고, 구분은 각 행의 이름표가 맡는다.
+  const panelsBox = document.getElementById('dash-panels');
+  if (panelsBox && allCases.length) {
+    function tally(key) {
+      const m = new Map();
+      allCases.forEach((c) => {
+        const v = c[key];
+        if (v) m.set(v, (m.get(v) || 0) + 1);
       });
-      box.appendChild(wrap);
-      sub(box, subText);
+      return [...m.entries()].sort((a, b) => b[1] - a[1]);
+    }
+
+    function panel(title, rows, total, note, opts) {
+      const o = opts || {};
+      const box = el('div', 'dash-panel');
+      const h = el('p', 'dash-panel__title', title);
+      if (o.href) {
+        const a = el('a', 'dash-panel__more', '자세히 ↓');
+        a.href = o.href;
+        h.appendChild(a);
+      }
+      box.appendChild(h);
+      const max = Math.max(...rows.map((r) => r[1]), 1);
+      const list = el('div', 'dash-rank');
+      rows.forEach(([name, n]) => {
+        const share = total ? (n / total) * 100 : 0;
+        const row = el('div', 'dash-rank__row');
+        row.appendChild(el('span', 'dash-rank__name', name));
+        const track = el('span', 'dash-rank__track');
+        const fill = el('span', 'dash-rank__fill');
+        fill.style.width = `${Math.max(2, (n / max) * 100)}%`;
+        track.appendChild(fill);
+        track.title = `${name} — ${n}건 (${share.toFixed(1)}%)`;
+        row.appendChild(track);
+        row.appendChild(el('span', 'dash-rank__val', `${n}`));
+        row.appendChild(el('span', 'dash-rank__pct', `${share.toFixed(1)}%`));
+        list.appendChild(row);
+      });
+      box.appendChild(list);
+      box.appendChild(el('p', 'dash-panel__note', note));
       return box;
     }
 
-    const repo = idx.repo_stats || {};
-    const gh = repo.github || {}; const gl = repo.gitlab || {};
-    const glLic = (idx.license_by_source || {}).gitlab || { total: 0, stated: 0 };
-    const glNone = glLic.total ? (glLic.total - glLic.stated) / glLic.total : null;
-    const mcpRate = idx.total_cases ? idx.mcp_cases / idx.total_cases : null;
-    const members = community && community.members;
+    const totalC = allCases.length;
+    panelsBox.appendChild(panel('기관 유형별 구성', tally('org_type'), totalC,
+      `전체 ${num(totalC)}건 기준 · 사례마다 한 가지 유형`, { href: '#ax-index' }));
+    panelsBox.appendChild(panel('업무 분류별 구성', tally('task_category'), totalC,
+      `전체 ${num(totalC)}건 기준 · 도구가 없애는 업무 기준`, { href: 'index.html' }));
 
-    // 사례 누적 추이 — collected_at 기준 (cases는 아래에서 다시 쓰므로 여기선 별도 조회)
-    let caseSeries = null;
-    let allCases = [];
-    try {
-      const cr = await fetch('./data/cases.json', { cache: 'no-cache' });
-      const list = (await cr.json()).cases || [];
-      allCases = list;
-      const byDay = {};
-      list.forEach((c) => { const d = (c.collected_at || '').slice(0, 10); if (d) byDay[d] = (byDay[d] || 0) + 1; });
-      let cum = 0;
-      caseSeries = Object.keys(byDay).sort().map((d) => { cum += byDay[d]; return [d, cum]; });
-    } catch (e) { /* 스파크라인만 생략 */ }
+    // 분야별 구성 — 첫 화면 분야 칩과 같은 정의(site/case-domains.js)를 쓴다.
+    // 업무 축과 달리 한 사례가 여러 분야에 걸치고 어느 분야에도 안 걸리는 사례도 많아,
+    // 합이 100%를 넘는다는 것과 미분류 수를 함께 밝힌다.
+    const affOf = (c) => champAff.get(c.id) || '';
+    const domainCaseRows = CASE_DOMAINS
+      .map((d) => [d.name, allCases.filter((c) => matchesCaseDomain(c, d.name, affOf(c))).length])
+      .filter(([, n]) => n > 0)
+      .sort((a, b) => b[1] - a[1]);
+    const unclassified = allCases.filter((c) => caseDomainCount(c, affOf(c)) === 0).length;
+    panelsBox.appendChild(panel('분야별 구성', domainCaseRows, totalC,
+      `전체 ${num(totalC)}건 기준 · 도구가 다루는 내용과 기관·만든 사람의 소속을 함께 봅니다 · ` +
+      '한 사례가 여러 분야에 걸칠 수 있어 비율 합은 100%를 넘습니다 · ' +
+      `어느 분야에도 걸리지 않은 사례 ${num(unclassified)}건`,
+      { href: 'index.html' }));
 
-    grid.appendChild(delta2(spark('공공AX 아카이브 누적', idx.total_cases, '건', caseSeries,
-      caseSeries ? `${caseSeries[0][0]} 관측 시작` : '아카이브 총계', { tone: 'key' }), 'total_cases', null));
-    grid.appendChild(delta2(gauge('MCP 사례 비율', mcpRate, `${num(idx.mcp_cases)}건 / 전체 ${num(idx.total_cases)}건`,
-      { href: '#mcp' }), 'mcp_rate', { pct: true }));
-    grid.appendChild(delta2(spark('챔피언', idx.total_champions, '명', null, '프로젝트가 식별된 인원', { href: 'champions.html' }), 'total_champions', null));
-    grid.appendChild(delta2(spark('오픈톡 가입자', members ? members.latest : null, '명',
-      members ? members.series : null, members ? `${members.first_date} ${num(members.first)}명에서 관측 시작` : '—',
-      { href: '#community' }), 'members', null));
-    grid.appendChild(delta2(gauge('국산 모델 채택률', idx.domestic_model_rate,
-      `LLM 런타임 ${num(idx.model_known)}건 기준`, { href: '#models', tone: 'watch', flag: '낮음' }), 'domestic_model_rate', { pct: true }));
-    grid.appendChild(delta2(gauge('로컬 오픈웨이트 실행률', idx.local_model_rate,
-      '데이터를 내보내지 않는 실행', { href: '#models' }), 'local_model_rate', { pct: true }));
-    grid.appendChild(pairBars('저장소 규모', [
-      { name: 'GitHub', v: gh.count || 0, stars: gh.stars_sum || 0 },
-      { name: '공공 깃랩', v: gl.count || 0, stars: gl.stars_sum || 0 },
-    ], '막대는 저장소 수 · ★는 스타 합계(척도가 달라 같은 축에 두지 않음)', { href: '#repos' }));
-    grid.appendChild(delta2(gauge('깃랩 라이선스 미표시', glNone,
-      `${num(glLic.total)}건 중 ${num(glLic.total - glLic.stated)}건 미표시`,
-      { href: '#licenses', tone: 'watch', flag: '주의' }), 'gitlab_license_none_rate', { pct: true }));
+    // 공공데이터 도메인별 MCP — 접근성 매트릭스와 같은 도메인 정의·매칭 규칙을 쓴다
+    const mcpList = allCases.filter(isMcpCase);
+    const domainRows = DATA_DOMAINS
+      .map((d) => [d.name, mcpList.filter((c) => matchesDomain(c, d)).length])
+      .filter(([, n]) => n > 0)
+      .sort((a, b) => b[1] - a[1]);
+    const covered = domainRows.length;
+    const uncovered = DATA_DOMAINS
+      .filter((d) => !mcpList.some((c) => matchesDomain(c, d)))
+      .map((d) => d.name);
+    panelsBox.appendChild(panel('공공데이터 도메인별 MCP', domainRows, mcpList.length,
+      `MCP ${num(mcpList.length)}건 기준 · 도메인 ${covered}/${DATA_DOMAINS.length} 관측 · ` +
+      '한 사례가 여러 도메인에 걸칠 수 있어 비율 합은 100%를 넘습니다' +
+      (uncovered.length ? ` · 미관측: ${uncovered.join('·')}` : ''),
+      { href: '#data-access' }));
+  }
 
-    // ── 분류 구성 패널 ──
-    // 형태: 순위 막대. 10~20개 항목에 카테고리 색을 쓰면 팔레트가 무너지므로
-    // 색은 크기 한 가지 뜻만 담고, 구분은 각 행의 이름표가 맡는다.
-    const panelsBox = document.getElementById('dash-panels');
-    if (panelsBox && allCases.length) {
-      function tally(key) {
-        const m = new Map();
-        allCases.forEach((c) => {
-          const v = c[key];
-          if (v) m.set(v, (m.get(v) || 0) + 1);
-        });
-        return [...m.entries()].sort((a, b) => b[1] - a[1]);
-      }
+  const asof = document.getElementById('dash-asof');
+  if (asof && idx.generated_at) asof.textContent = `${idx.generated_at} 기준`;
+}
 
-      function panel(title, rows, total, note, opts) {
-        const o = opts || {};
-        const box = el('div', 'dash-panel');
-        const h = el('p', 'dash-panel__title', title);
-        if (o.href) {
-          const a = el('a', 'dash-panel__more', '자세히 ↓');
-          a.href = o.href;
-          h.appendChild(a);
-        }
-        box.appendChild(h);
-        const max = Math.max(...rows.map((r) => r[1]), 1);
-        const list = el('div', 'dash-rank');
-        rows.forEach(([name, n]) => {
-          const share = total ? (n / total) * 100 : 0;
-          const row = el('div', 'dash-rank__row');
-          row.appendChild(el('span', 'dash-rank__name', name));
-          const track = el('span', 'dash-rank__track');
-          const fill = el('span', 'dash-rank__fill');
-          fill.style.width = `${Math.max(2, (n / max) * 100)}%`;
-          track.appendChild(fill);
-          track.title = `${name} — ${n}건 (${share.toFixed(1)}%)`;
-          row.appendChild(track);
-          row.appendChild(el('span', 'dash-rank__val', `${n}`));
-          row.appendChild(el('span', 'dash-rank__pct', `${share.toFixed(1)}%`));
-          list.appendChild(row);
-        });
-        box.appendChild(list);
-        box.appendChild(el('p', 'dash-panel__note', note));
-        return box;
-      }
+// ── 모델 현황 — 의존 분포·구체 모델·국산 채택 (2026-08-29) ──
+function renderModelStatus(idx) {
+  const dist = idx.model_dependency || {};
+  const stats = idx.model_stats || { models_top: [], domestic_cases: [] };
+  const cards = document.getElementById('model-cards');
+  if (!cards) return;
+  const known = idx.model_known || 0;
+  const mkCard = (v, l) => {
+    const d = el('div', 'obs-card');
+    d.appendChild(el('p', 'obs-card__value', v));
+    d.appendChild(el('p', 'obs-card__label', l));
+    cards.appendChild(d);
+  };
+  mkCard(idx.domestic_model_rate != null ? `${(idx.domestic_model_rate * 100).toFixed(1)}%` : '—',
+    `국산 모델 채택률 (LLM 런타임 ${known}건 기준)`);
+  mkCard(idx.local_model_rate != null ? `${(idx.local_model_rate * 100).toFixed(1)}%` : '—',
+    '로컬 오픈웨이트 실행률');
+  mkCard(`${dist['모델 중립(BYO)'] || 0}건`, '모델 중립(BYO) — 클라이언트 모델 위 구동');
+  mkCard(`${dist['없음(비LLM)'] || 0}건`, '비LLM 도구 (규칙 기반)');
 
-      const totalC = allCases.length;
-      panelsBox.appendChild(panel('기관 유형별 구성', tally('org_type'), totalC,
-        `전체 ${num(totalC)}건 기준 · 사례마다 한 가지 유형`, { href: '#ax-index' }));
-      panelsBox.appendChild(panel('업무 분류별 구성', tally('task_category'), totalC,
-        `전체 ${num(totalC)}건 기준 · 도구가 없애는 업무 기준`, { href: 'index.html' }));
+  const ORDER = ['국산 독자모델', '국산 오픈웨이트', '혼합', '해외 상용 API',
+    '해외 오픈웨이트(로컬)', '모델 중립(BYO)', '없음(비LLM)', '미확인'];
+  const MEANING = {
+    '국산 독자모델': '국내 파운데이션 모델 런타임 호출',
+    '국산 오픈웨이트': '국산 공개 가중치 모델 로컬 실행',
+    '혼합': '국산·해외 또는 상용·로컬 병행',
+    '해외 상용 API': 'GPT·Claude·Gemini 등 해외 API 호출',
+    '해외 오픈웨이트(로컬)': 'Llama·Gemma 등 로컬 실행(데이터 미유출)',
+    '모델 중립(BYO)': 'MCP 서버 등 — 모델 교체 무관, 국산 이식 용이 층',
+    '없음(비LLM)': '규칙 기반 도구 — 개발에만 AI 활용',
+    '미확인': 'AI 기능은 있으나 모델 증거 미확보 — 수집 과제',
+  };
+  const total = Object.values(dist).reduce((a, b) => a + b, 0) || 1;
+  const dtbody = document.querySelector('#model-dist-table tbody');
+  for (const key of ORDER) {
+    const n = dist[key] || 0;
+    if (!n) continue;
+    const tr = document.createElement('tr');
+    tr.appendChild(el('td', 'obs-strong', key));
+    tr.appendChild(el('td', null, `${n}건`));
+    const detail = (stats.dist_detail || {})[key === '미확인' ? '미확인' : key];
+    const spec = detail ? detail.specified : 0;
+    const LLM_KEYS = ['국산 독자모델', '국산 오픈웨이트', '해외 상용 API', '해외 오픈웨이트(로컬)', '혼합'];
+    tr.appendChild(el('td', null, LLM_KEYS.includes(key) ? `${spec}/${n}건` : '해당 없음'));
+    const barTd = document.createElement('td');
+    const wrap = el('div', 'model-bar');
+    const fill = el('div', 'model-bar__fill' + (key.startsWith('국산') ? ' model-bar__fill--domestic' : ''));
+    fill.style.width = `${Math.max((n / total) * 100, 2)}%`;
+    wrap.appendChild(fill);
+    wrap.appendChild(el('span', 'model-bar__pct', `${((n / total) * 100).toFixed(1)}%`));
+    barTd.appendChild(wrap);
+    tr.appendChild(barTd);
+    tr.appendChild(el('td', null, MEANING[key] || ''));
+    dtbody.appendChild(tr);
+  }
 
-      // 분야별 구성 — 첫 화면 분야 칩과 같은 정의(site/case-domains.js)를 쓴다.
-      // 업무 축과 달리 한 사례가 여러 분야에 걸치고 어느 분야에도 안 걸리는 사례도 많아,
-      // 합이 100%를 넘는다는 것과 미분류 수를 함께 밝힌다.
-      const affOf = (c) => champAff.get(c.id) || '';
-      const domainCaseRows = CASE_DOMAINS
-        .map((d) => [d.name, allCases.filter((c) => matchesCaseDomain(c, d.name, affOf(c))).length])
-        .filter(([, n]) => n > 0)
-        .sort((a, b) => b[1] - a[1]);
-      const unclassified = allCases.filter((c) => caseDomainCount(c, affOf(c)) === 0).length;
-      panelsBox.appendChild(panel('분야별 구성', domainCaseRows, totalC,
-        `전체 ${num(totalC)}건 기준 · 도구가 다루는 내용과 기관·만든 사람의 소속을 함께 봅니다 · ` +
-        '한 사례가 여러 분야에 걸칠 수 있어 비율 합은 100%를 넘습니다 · ' +
-        `어느 분야에도 걸리지 않은 사례 ${num(unclassified)}건`,
-        { href: 'index.html' }));
-
-      // 공공데이터 도메인별 MCP — 접근성 매트릭스와 같은 도메인 정의·매칭 규칙을 쓴다
-      const mcpList = allCases.filter(isMcpCase);
-      const domainRows = DATA_DOMAINS
-        .map((d) => [d.name, mcpList.filter((c) => matchesDomain(c, d)).length])
-        .filter(([, n]) => n > 0)
-        .sort((a, b) => b[1] - a[1]);
-      const covered = domainRows.length;
-      const uncovered = DATA_DOMAINS
-        .filter((d) => !mcpList.some((c) => matchesDomain(c, d)))
-        .map((d) => d.name);
-      panelsBox.appendChild(panel('공공데이터 도메인별 MCP', domainRows, mcpList.length,
-        `MCP ${num(mcpList.length)}건 기준 · 도메인 ${covered}/${DATA_DOMAINS.length} 관측 · ` +
-        '한 사례가 여러 도메인에 걸칠 수 있어 비율 합은 100%를 넘습니다' +
-        (uncovered.length ? ` · 미관측: ${uncovered.join('·')}` : ''),
-        { href: '#data-access' }));
-    }
-
-    const asof = document.getElementById('dash-asof');
-    if (asof && idx.generated_at) asof.textContent = `${idx.generated_at} 기준`;
-  }());
-
-  // ── 모델 현황 — 의존 분포·구체 모델·국산 채택 (2026-08-29) ──
-  (function renderModelStatus() {
-    const dist = idx.model_dependency || {};
-    const stats = idx.model_stats || { models_top: [], domestic_cases: [] };
-    const cards = document.getElementById('model-cards');
-    if (!cards) return;
-    const known = idx.model_known || 0;
-    const mkCard = (v, l) => {
-      const d = el('div', 'obs-card');
-      d.appendChild(el('p', 'obs-card__value', v));
-      d.appendChild(el('p', 'obs-card__label', l));
-      cards.appendChild(d);
-    };
-    mkCard(idx.domestic_model_rate != null ? `${(idx.domestic_model_rate * 100).toFixed(1)}%` : '—',
-      `국산 모델 채택률 (LLM 런타임 ${known}건 기준)`);
-    mkCard(idx.local_model_rate != null ? `${(idx.local_model_rate * 100).toFixed(1)}%` : '—',
-      '로컬 오픈웨이트 실행률');
-    mkCard(`${dist['모델 중립(BYO)'] || 0}건`, '모델 중립(BYO) — 클라이언트 모델 위 구동');
-    mkCard(`${dist['없음(비LLM)'] || 0}건`, '비LLM 도구 (규칙 기반)');
-
-    const ORDER = ['국산 독자모델', '국산 오픈웨이트', '혼합', '해외 상용 API',
-      '해외 오픈웨이트(로컬)', '모델 중립(BYO)', '없음(비LLM)', '미확인'];
-    const MEANING = {
-      '국산 독자모델': '국내 파운데이션 모델 런타임 호출',
-      '국산 오픈웨이트': '국산 공개 가중치 모델 로컬 실행',
-      '혼합': '국산·해외 또는 상용·로컬 병행',
-      '해외 상용 API': 'GPT·Claude·Gemini 등 해외 API 호출',
-      '해외 오픈웨이트(로컬)': 'Llama·Gemma 등 로컬 실행(데이터 미유출)',
-      '모델 중립(BYO)': 'MCP 서버 등 — 모델 교체 무관, 국산 이식 용이 층',
-      '없음(비LLM)': '규칙 기반 도구 — 개발에만 AI 활용',
-      '미확인': 'AI 기능은 있으나 모델 증거 미확보 — 수집 과제',
-    };
-    const total = Object.values(dist).reduce((a, b) => a + b, 0) || 1;
-    const dtbody = document.querySelector('#model-dist-table tbody');
-    for (const key of ORDER) {
-      const n = dist[key] || 0;
-      if (!n) continue;
+  const mtbody = document.querySelector('#models-used-table tbody');
+  for (const group of stats.models_by_dep || []) {
+    // 분류 소계 행 — 분포 표의 건수와 문자 그대로 일치한다
+    const gtr = document.createElement('tr');
+    gtr.className = 'model-group-row';
+    const gtd = document.createElement('td');
+    gtd.colSpan = 3;
+    gtd.appendChild(el('strong', null, `${group.dep} — 사례 ${group.n}건`));
+    gtr.appendChild(gtd);
+    mtbody.appendChild(gtr);
+    for (const m of group.families) {
       const tr = document.createElement('tr');
-      tr.appendChild(el('td', 'obs-strong', key));
-      tr.appendChild(el('td', null, `${n}건`));
-      const detail = (stats.dist_detail || {})[key === '미확인' ? '미확인' : key];
-      const spec = detail ? detail.specified : 0;
-      const LLM_KEYS = ['국산 독자모델', '국산 오픈웨이트', '해외 상용 API', '해외 오픈웨이트(로컬)', '혼합'];
-      tr.appendChild(el('td', null, LLM_KEYS.includes(key) ? `${spec}/${n}건` : '해당 없음'));
-      const barTd = document.createElement('td');
-      const wrap = el('div', 'model-bar');
-      const fill = el('div', 'model-bar__fill' + (key.startsWith('국산') ? ' model-bar__fill--domestic' : ''));
-      fill.style.width = `${Math.max((n / total) * 100, 2)}%`;
-      wrap.appendChild(fill);
-      wrap.appendChild(el('span', 'model-bar__pct', `${((n / total) * 100).toFixed(1)}%`));
-      barTd.appendChild(wrap);
-      tr.appendChild(barTd);
-      tr.appendChild(el('td', null, MEANING[key] || ''));
-      dtbody.appendChild(tr);
-    }
-
-    const mtbody = document.querySelector('#models-used-table tbody');
-    for (const group of stats.models_by_dep || []) {
-      // 분류 소계 행 — 분포 표의 건수와 문자 그대로 일치한다
-      const gtr = document.createElement('tr');
-      gtr.className = 'model-group-row';
-      const gtd = document.createElement('td');
-      gtd.colSpan = 3;
-      gtd.appendChild(el('strong', null, `${group.dep} — 사례 ${group.n}건`));
-      gtr.appendChild(gtd);
-      mtbody.appendChild(gtr);
-      for (const m of group.families) {
-        const tr = document.createElement('tr');
-        const nameTd = el('td', 'model-family-cell', m.name);
-        if (m.variants && m.variants.length > 1) {
-          nameTd.appendChild(el('span', 'model-variants', ` (표기 ${m.variants.length}종)`));
-          nameTd.title = m.variants.join('\n');
-        }
-        tr.appendChild(nameTd);
-        const countTd = document.createElement('td');
-        const btn = el('button', 'model-count-btn', `${m.n}건 ▾`);
-        btn.type = 'button';
-        btn.setAttribute('aria-expanded', 'false');
-        countTd.appendChild(btn);
-        tr.appendChild(countTd);
-        tr.appendChild(el('td', m.domestic ? 'obs-covered' : null, m.domestic ? '국산 ✓' : '—'));
-        mtbody.appendChild(tr);
-        const detail = document.createElement('tr');
-        detail.className = 'model-detail-row';
-        detail.hidden = true;
-        const dtd = document.createElement('td');
-        dtd.colSpan = 3;
-        const ul = el('ul', 'model-case-list');
-        for (const cse of m.cases || []) {
-          const li = document.createElement('li');
-          const a = el('a', null, cse.title);
-          a.href = `case/${encodeURIComponent(cse.id)}.html`;
-          li.appendChild(a);
-          ul.appendChild(li);
-        }
-        dtd.appendChild(ul);
-        detail.appendChild(dtd);
-        mtbody.appendChild(detail);
-        btn.addEventListener('click', () => {
-          detail.hidden = !detail.hidden;
-          btn.setAttribute('aria-expanded', String(!detail.hidden));
-          btn.textContent = `${m.n}건 ${detail.hidden ? '▾' : '▴'}`;
-        });
+      const nameTd = el('td', 'model-family-cell', m.name);
+      if (m.variants && m.variants.length > 1) {
+        nameTd.appendChild(el('span', 'model-variants', ` (표기 ${m.variants.length}종)`));
+        nameTd.title = m.variants.join('\n');
       }
+      tr.appendChild(nameTd);
+      const countTd = document.createElement('td');
+      const btn = el('button', 'model-count-btn', `${m.n}건 ▾`);
+      btn.type = 'button';
+      btn.setAttribute('aria-expanded', 'false');
+      countTd.appendChild(btn);
+      tr.appendChild(countTd);
+      tr.appendChild(el('td', m.domestic ? 'obs-covered' : null, m.domestic ? '국산 ✓' : '—'));
+      mtbody.appendChild(tr);
+      const detail = document.createElement('tr');
+      detail.className = 'model-detail-row';
+      detail.hidden = true;
+      const dtd = document.createElement('td');
+      dtd.colSpan = 3;
+      const ul = el('ul', 'model-case-list');
+      for (const cse of m.cases || []) {
+        const li = document.createElement('li');
+        const a = el('a', null, cse.title);
+        a.href = `case/${encodeURIComponent(cse.id)}.html`;
+        li.appendChild(a);
+        ul.appendChild(li);
+      }
+      dtd.appendChild(ul);
+      detail.appendChild(dtd);
+      mtbody.appendChild(detail);
+      btn.addEventListener('click', () => {
+        detail.hidden = !detail.hidden;
+        btn.setAttribute('aria-expanded', String(!detail.hidden));
+        btn.textContent = `${m.n}건 ${detail.hidden ? '▾' : '▴'}`;
+      });
     }
+  }
 
 
-    const dl = document.getElementById('domestic-model-list');
-    for (const d of stats.domestic_cases) {
-      const li = document.createElement('li');
-      const a = el('a', null, d.title);
-      a.href = `case/${encodeURIComponent(d.id)}.html`;
-      li.appendChild(a);
-      if (d.models && d.models.length) li.append(` — ${d.models.join(', ')}`);
-      dl.appendChild(li);
-    }
-    if (!stats.domestic_cases.length) {
-      dl.appendChild(el('li', null, '아직 관측되지 않음 — 이 빈칸 자체가 관측 결과입니다'));
-    }
-  })();
-  const cases = (await casesRes.json()).cases;
+  const dl = document.getElementById('domestic-model-list');
+  for (const d of stats.domestic_cases) {
+    const li = document.createElement('li');
+    const a = el('a', null, d.title);
+    a.href = `case/${encodeURIComponent(d.id)}.html`;
+    li.appendChild(a);
+    if (d.models && d.models.length) li.append(` — ${d.models.join(', ')}`);
+    dl.appendChild(li);
+  }
+  if (!stats.domestic_cases.length) {
+    dl.appendChild(el('li', null, '아직 관측되지 않음 — 이 빈칸 자체가 관측 결과입니다'));
+  }
+}
 
+function renderIndexCards(idx) {
   document.getElementById('obs-quarter').textContent =
     `${idx.quarter} · ${idx.generated_at} 기준`;
 
@@ -504,82 +497,83 @@ async function main() {
   cards.appendChild(indexCard('전이 퍼널',
     `기관 공식 ${funnel['기관 공식'] || 0} · 타기관 재사용 ${funnel['타 기관 재사용'] || 0} · 범정부 ${funnel['범정부 탑재'] || 0}`,
     `미확인 ${funnel['미확인'] || 0}건 — 다음 관측 과제`));
+}
 
-  // ── 커뮤니티 활력 ──
+// ── 커뮤니티 활력 ──
+function renderCommunity(com) {
+  if (!com) return; // community.json이 없으면 이 섹션만 비운다
   try {
-    const comRes = await fetch('./data/community.json', { cache: 'no-cache' });
-    if (comRes.ok) {
-      const com = await comRes.json();
-      const cc = document.getElementById('community-cards');
-      cc.appendChild(indexCard('오픈톡 가입자', `${(com.members.latest || 0).toLocaleString()}명`,
-        com.members.first && com.members.latest !== com.members.first
-          ? `${com.members.first_date} ${com.members.first.toLocaleString()}명 이후 ${com.members.latest - com.members.first >= 0 ? '+' : ''}${(com.members.latest - com.members.first).toLocaleString()}`
-          : `${com.members.latest_date} 기준 — 변화 추적 시작`));
-      cc.appendChild(indexCard('대화 (오늘)', `${com.kakao.today.toLocaleString()}건`, null));
-      cc.appendChild(indexCard('대화 (7일)', `${com.kakao.week.toLocaleString()}건`,
-        `일평균 ${Math.round(com.kakao.week / 7).toLocaleString()}건`));
-      cc.appendChild(indexCard('대화 (30일)', `${com.kakao.month.toLocaleString()}건`, null));
-      cc.appendChild(indexCard('대화 (관측 전체)', `${com.kakao.total.toLocaleString()}건`,
-        `${com.kakao.observed_days}일 관측 누적`));
-      cc.appendChild(indexCard('Threads 관측 게시물', `${com.threads.observed_total || 0}건`,
-        '태그 검색 관측 누적'));
-      // 가입자 일별 추이 — 누적 막대 + 수치 표
-      const md = com.members_daily || [];
-      if (md.length) {
-        const mchart = document.getElementById('member-chart');
-        const mmax = Math.max(...md.map((r) => r.cumulative), 1);
-        const mmin = Math.min(...md.map((r) => r.cumulative));
-        for (const r of md) {
-          const bar = el('div', 'mini-chart__bar');
-          const fill = el('div', 'mini-chart__fill mini-chart__fill--members');
-          const ratio = (r.cumulative - mmin * 0.9) / (mmax - mmin * 0.9);
-          fill.style.height = `${Math.max(Math.round(ratio * 100), 4)}%`;
-          const yoil = ['일', '월', '화', '수', '목', '금', '토'][new Date(`${r.date}T00:00:00+09:00`).getDay()];
-          bar.title = `${r.date} (${yoil}): 누적 ${r.cumulative.toLocaleString()}명 (+${r.joins}/-${r.leaves})`;
-          bar.appendChild(fill);
-          const label = el('span', 'mini-chart__label', r.date.slice(8));
-          label.appendChild(document.createElement('br'));
-          label.append(`(${yoil})`);
-          if (yoil === '토' || yoil === '일') label.classList.add('mini-chart__label--weekend');
-          bar.appendChild(label);
-          mchart.appendChild(bar);
-        }
-        const mbody = document.querySelector('#member-table tbody');
-        for (const r of [...md].reverse()) {
-          const tr = document.createElement('tr');
-          const net = r.joins - r.leaves;
-          tr.appendChild(el('td', null, r.date));
-          tr.appendChild(el('td', null, `+${r.joins}`));
-          tr.appendChild(el('td', null, `-${r.leaves}`));
-          tr.appendChild(el('td', net >= 0 ? 'obs-covered' : 'obs-uncovered',
-            `${net >= 0 ? '+' : ''}${net}`));
-          tr.appendChild(el('td', 'obs-strong', r.cumulative.toLocaleString()));
-          mbody.appendChild(tr);
-        }
-      }
-
-      const chart = document.getElementById('kakao-chart');
-      const max = Math.max(...com.kakao_recent.map(([, n]) => n), 1);
-      for (const [date, n] of com.kakao_recent) {
+    const cc = document.getElementById('community-cards');
+    cc.appendChild(indexCard('오픈톡 가입자', `${(com.members.latest || 0).toLocaleString()}명`,
+      com.members.first && com.members.latest !== com.members.first
+        ? `${com.members.first_date} ${com.members.first.toLocaleString()}명 이후 ${com.members.latest - com.members.first >= 0 ? '+' : ''}${(com.members.latest - com.members.first).toLocaleString()}`
+        : `${com.members.latest_date} 기준 — 변화 추적 시작`));
+    cc.appendChild(indexCard('대화 (오늘)', `${com.kakao.today.toLocaleString()}건`, null));
+    cc.appendChild(indexCard('대화 (7일)', `${com.kakao.week.toLocaleString()}건`,
+      `일평균 ${Math.round(com.kakao.week / 7).toLocaleString()}건`));
+    cc.appendChild(indexCard('대화 (30일)', `${com.kakao.month.toLocaleString()}건`, null));
+    cc.appendChild(indexCard('대화 (관측 전체)', `${com.kakao.total.toLocaleString()}건`,
+      `${com.kakao.observed_days}일 관측 누적`));
+    cc.appendChild(indexCard('Threads 관측 게시물', `${com.threads.observed_total || 0}건`,
+      '태그 검색 관측 누적'));
+    // 가입자 일별 추이 — 누적 막대 + 수치 표
+    const md = com.members_daily || [];
+    if (md.length) {
+      const mchart = document.getElementById('member-chart');
+      const mmax = Math.max(...md.map((r) => r.cumulative), 1);
+      const mmin = Math.min(...md.map((r) => r.cumulative));
+      for (const r of md) {
         const bar = el('div', 'mini-chart__bar');
-        const fill = el('div', 'mini-chart__fill');
-        fill.style.height = `${Math.round((n / max) * 100)}%`;
-        const yoil = ['일', '월', '화', '수', '목', '금', '토'][new Date(`${date}T00:00:00+09:00`).getDay()];
-        bar.title = `${date} (${yoil}): ${n}건`;
+        const fill = el('div', 'mini-chart__fill mini-chart__fill--members');
+        const ratio = (r.cumulative - mmin * 0.9) / (mmax - mmin * 0.9);
+        fill.style.height = `${Math.max(Math.round(ratio * 100), 4)}%`;
+        const yoil = ['일', '월', '화', '수', '목', '금', '토'][new Date(`${r.date}T00:00:00+09:00`).getDay()];
+        bar.title = `${r.date} (${yoil}): 누적 ${r.cumulative.toLocaleString()}명 (+${r.joins}/-${r.leaves})`;
         bar.appendChild(fill);
-        const label = el('span', 'mini-chart__label', date.slice(8));
+        const label = el('span', 'mini-chart__label', r.date.slice(8));
         label.appendChild(document.createElement('br'));
         label.append(`(${yoil})`);
         if (yoil === '토' || yoil === '일') label.classList.add('mini-chart__label--weekend');
         bar.appendChild(label);
-        chart.appendChild(bar);
+        mchart.appendChild(bar);
       }
+      const mbody = document.querySelector('#member-table tbody');
+      for (const r of [...md].reverse()) {
+        const tr = document.createElement('tr');
+        const net = r.joins - r.leaves;
+        tr.appendChild(el('td', null, r.date));
+        tr.appendChild(el('td', null, `+${r.joins}`));
+        tr.appendChild(el('td', null, `-${r.leaves}`));
+        tr.appendChild(el('td', net >= 0 ? 'obs-covered' : 'obs-uncovered',
+          `${net >= 0 ? '+' : ''}${net}`));
+        tr.appendChild(el('td', 'obs-strong', r.cumulative.toLocaleString()));
+        mbody.appendChild(tr);
+      }
+    }
+
+    const chart = document.getElementById('kakao-chart');
+    const max = Math.max(...com.kakao_recent.map(([, n]) => n), 1);
+    for (const [date, n] of com.kakao_recent) {
+      const bar = el('div', 'mini-chart__bar');
+      const fill = el('div', 'mini-chart__fill');
+      fill.style.height = `${Math.round((n / max) * 100)}%`;
+      const yoil = ['일', '월', '화', '수', '목', '금', '토'][new Date(`${date}T00:00:00+09:00`).getDay()];
+      bar.title = `${date} (${yoil}): ${n}건`;
+      bar.appendChild(fill);
+      const label = el('span', 'mini-chart__label', date.slice(8));
+      label.appendChild(document.createElement('br'));
+      label.append(`(${yoil})`);
+      if (yoil === '토' || yoil === '일') label.classList.add('mini-chart__label--weekend');
+      bar.appendChild(label);
+      chart.appendChild(bar);
     }
   } catch (err) {
     console.error('커뮤니티 지표 로드 실패:', err);
   }
+}
 
-  // ── 데이터 매트릭스 ──
+// ── 데이터 매트릭스 ──
+function renderDataMatrix(cases) {
   const mcpCases = cases.filter(isMcpCase);
   const tbody = document.querySelector('#data-matrix tbody');
   for (const domain of DATA_DOMAINS) {
@@ -600,8 +594,10 @@ async function main() {
     tr.appendChild(caseTd);
     tbody.appendChild(tr);
   }
+}
 
-  // ── MCP 현황과 이슈 ──
+// ── MCP 현황과 이슈 ──
+function renderMcp(idx) {
   const m = idx.mcp_stats;
   const mcpCards = document.getElementById('mcp-cards');
   mcpCards.appendChild(indexCard('MCP 사례', `${m.total}건`,
@@ -633,8 +629,10 @@ async function main() {
     '어떤 MCP가 무엇을 읽고 쓸 수 있는지 서술하는 관행 자체가 없습니다 — 에이전트 확산의 최대 리스크.');
   issue(`유지보수 개인 의존 (정체·방치 ${(m.maintenance['정체'] || 0) + (m.maintenance['방치'] || 0)}건).`,
     'MCP 3건 중 1건은 최근 활동이 멈췄습니다 — 데이터 스키마가 바뀌면 조용히 깨지는 도구들입니다.');
+}
 
-  // ── 저장소 지표 (플랫폼 분리) ──
+// ── 저장소 지표 (플랫폼 분리) ──
+function renderPlatforms(idx) {
   const renderPlatform = (key) => {
     const s = idx.repo_stats[key];
     const cards = document.getElementById(`repo-cards-${key}`);
@@ -677,8 +675,10 @@ async function main() {
   };
   renderPlatform('github');
   renderPlatform('gitlab');
+}
 
-  // ── 라이선스 현황 ──
+// ── 라이선스 현황 ──
+function renderLicenses(idx) {
   const licCards = document.getElementById('license-cards');
   licCards.appendChild(indexCard('저장소 확인', `${idx.license_tagged}건`,
     `전체 ${idx.total_cases}건 중 저장소 기반 사례`));
@@ -708,8 +708,10 @@ async function main() {
     tr.appendChild(el('td', null, LICENSE_MEANING[name] || '개별 확인 필요'));
     licBody.appendChild(tr);
   }
+}
 
-  // ── 깃랩 브릿지 ──
+// ── 깃랩 브릿지 ──
+function renderBridge(idx) {
   const bridge = document.getElementById('bridge-cards');
   bridge.appendChild(indexCard('공공 깃랩 사례', `${idx.gitlab_cases}건`, null));
   bridge.appendChild(indexCard('GitHub 미러 쌍', `${idx.gitlab_mirror_pairs}쌍`, null));

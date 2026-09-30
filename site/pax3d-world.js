@@ -1,7 +1,7 @@
 // 3D PAX 미니어처 세계 — 시도 지형·시군구 경계·실제 지도 타일, 사례 건물, 카메라와 선택.
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { toon, toonGradient, skyTexture, signSprite, createPostPass } from './pax3d-look.js?v=a66df86b';
+import { toon, signSprite, createPostPass } from './pax3d-look.js?v=a66df86b';
 import { ISLANDS, SEATS, TASK_COLORS, FALLBACK_COLOR, shapeOf, cityKeyOf } from './pax3d-data.js?v=d2c6ecd8';
 import { buildingGeometries, mountains, trees, clouds, pin, dokdo } from './pax3d-props.js?v=83d5cb9b';
 import {
@@ -12,6 +12,8 @@ import { createTileLayer, markLandStencil } from './pax3d-tiles.js?v=0eceea68';
 import { MODES, skyTexture as citySky, sunDirection } from './city3d/js/modes.js';
 import { createLandmarkFlight } from './city3d/js/flight.js';
 import { createCityLayer } from './pax3d-city.js?v=fc47b561';
+import { createStage, HOME } from './pax3d-stage.js?v=749c5dd6';
+import { groupCases } from './pax3d-places.js?v=7783fed8';
 
 // 간판 자리 — 무게중심은 경기(서울 구멍 포함)처럼 엉뚱한 곳에 떨어져 손으로 정했다.
 const LABEL_AT = {
@@ -71,14 +73,6 @@ function screenSign(lines, h, opts) {
   return sign;
 }
 
-/** 사례 한 건이 설 자리(zone)의 열쇠 — 기관 소재지 > 시군구 > 시·도청 앞 > 섬. */
-function zoneKey(loc) {
-  if (loc.inst) return `inst:${loc.inst.name}`;
-  if (loc.sgg) return `sgg:${loc.place}/${loc.sgg.name}`;
-  if (SEATS[loc.place]) return `seat:${loc.place}`;
-  return `isl:${loc.place}`;
-}
-
 /**
  * @param canvas 그릴 캔버스
  * @param opts {geo, sggDoc, cases, located, onHover, onPickCase, onPickPlace, onTiles, labelRoot, onCity}
@@ -87,63 +81,10 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
   // 실제 지형(수치표고)이 있으면 모든 것이 그 높이 위에 선다 — 없으면 평평한 판
   const hAt = (x, z) => (terrain ? terrain.heightAt(x, z) : 0);
   const onGround = (v, lift = 0) => toWorld(v, LAND_H + lift + hAt(v.x, -v.y));
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, stencil: true, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-  renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-
-  const scene = new THREE.Scene();
-  scene.background = skyTexture();
-  scene.fog = new THREE.Fog(0xe6eee8, 26, 60);
-  const grad = toonGradient();
-
-  const camera = new THREE.PerspectiveCamera(30, 1, 0.05, 100);
-  const HOME = { target: new THREE.Vector3(0.2, 0, 0.9), pos: new THREE.Vector3(0.2, 17.5, 16) };
-  camera.position.copy(HOME.pos);
-  const controls = new OrbitControls(camera, canvas);
-  controls.target.copy(HOME.target);
-  controls.enableDamping = true;
-  controls.dampingFactor = 0.08;
-  controls.minDistance = 0.45;
-  controls.maxDistance = 34;
-  controls.minPolarAngle = 0.12;
-  controls.maxPolarAngle = 1.22;
-  controls.screenSpacePanning = false;
-  controls.autoRotateSpeed = 0.5;
-
-  const hemi = new THREE.HemisphereLight(0xfff4e0, 0x8aa3a0, 1.4);
-  scene.add(hemi);
-  const sun = new THREE.DirectionalLight(0xfff1d6, 2.4);
-  sun.position.set(-7, 14, 8);
-  sun.castShadow = true;
-  sun.shadow.mapSize.set(2048, 2048);
-  Object.assign(sun.shadow.camera, { left: -12, right: 12, top: 12, bottom: -12, near: 1, far: 40 });
-  sun.shadow.bias = -0.0006;
-  sun.shadow.normalBias = 0.02;
-  scene.add(sun, sun.target); // 도시 모드에서는 그림자 상자가 시점을 따라간다(target을 장면에 넣어야 갱신된다)
-  const SUN_HOME = { pos: sun.position.clone(), span: 12, near: 1, far: 40, normalBias: 0.02 };
-  const SUN_DIR = sun.position.clone().normalize(); // 도시 모드 그림자 상자 방향 — 시간대가 바꾼다
-  // 전국 미니어처의 모습(종이 디오라마) — 도시 모드를 벗어나면 이것으로 돌아간다
-  const HOME_LOOK = { sky: scene.background, fog: scene.fog.color.clone(), hemi: [hemi.color.clone(), hemi.groundColor.clone(), hemi.intensity],
-    sun: [sun.color.clone(), sun.intensity], dir: SUN_DIR.clone() };
-
-  const sea = new THREE.Mesh(new THREE.CircleGeometry(40, 64), toon(0x8ec6cc, grad));
-  sea.rotateX(-Math.PI / 2);
-  sea.position.y = -0.02;
-  sea.receiveShadow = true;
-  scene.add(sea);
+  const { renderer, scene, grad, camera, controls, hemi, sun, SUN_HOME, SUN_DIR, HOME_LOOK, sea } = createStage(canvas);
 
   // ---- 자리별 사례 --------------------------------------------------------------
-  const byPlace = new Map();
-  const byZone = new Map();
-  for (const c of cases) {
-    const loc = located.get(c.id);
-    if (!byPlace.has(loc.place)) byPlace.set(loc.place, []);
-    byPlace.get(loc.place).push(c);
-    const k = zoneKey(loc);
-    if (!byZone.has(k)) byZone.set(k, { loc, list: [] });
-    byZone.get(k).list.push(c);
-  }
+  const { byPlace, byZone } = groupCases(cases, located);
 
   // ---- 시도 지형 (윗면이 스텐실 1 — 실제 지도 타일은 여기에만 깔린다) ----------------
   const regionPolys = new Map();

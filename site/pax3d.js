@@ -1,23 +1,11 @@
 // 3D PAX — 미니어처 대한민국에서 공공AX 사례를 탐험하는 화면.
 // 3D는 덧입힌 층이다: WebGL이 없어도 오른쪽 목록(검색·축 → 값 → 사례 → 상세 링크)만으로 전부 쓸 수 있다.
+import { el, fetchJson } from './pax-dom.js?v=6dfb9f58';
 import { buildAxes, placeText, TASK_COLORS, SHAPES, SEATS, caseTargetUrl } from './pax3d-data.js?v=d2c6ecd8';
 import { createTour } from './pax3d-tour.js?v=9e8d6421';
 import { loadBookmarks, toggleBookmark, onBookmarksChanged } from './pax-bookmarks.js?v=c1fdc503';
 
 const $ = (sel) => document.querySelector(sel);
-function el(tag, cls, text) {
-  const node = document.createElement(tag);
-  if (cls) node.className = cls;
-  if (text != null) node.textContent = text;
-  return node;
-}
-
-async function loadJson(path) {
-  const res = await fetch(path, { cache: 'no-cache' });
-  if (!res.ok) throw new Error(`${path} ${res.status}`);
-  return res.json();
-}
-
 const RESULT_PAGE = 120;
 
 /** 검색어를 <mark>로 감싼 노드 목록 — innerHTML 없이 텍스트만 다룬다. */
@@ -49,7 +37,7 @@ async function main() {
   let docs;
   try {
     docs = await Promise.all(['cases', 'champions', 'korea-geo', 'korea-sgg', 'org-locations']
-      .map((n) => loadJson(`data/${n}.json`)));
+      .map((n) => fetchJson(`data/${n}.json`)));
   } catch (err) {
     $('#pax3d-status').textContent = `자료를 불러오지 못했습니다 (${err.message}). 잠시 뒤 새로고침해 주세요.`;
     return;
@@ -145,7 +133,7 @@ async function main() {
   }
   const tip = $('#pax3d-tip');
   try {
-    const { createWorld } = await import('./pax3d-world.js?v=c5468ac9');
+    const { createWorld } = await import('./pax3d-world.js?v=7897ff36');
     // 실제 지형(수치표고) — 못 받으면 평평한 판으로 그대로 간다
     const terrain = await import('./pax3d-terrain.js?v=a3bd09aa').then((t) => t.loadTerrain()).catch(() => null);
     world = createWorld($('#pax3d-canvas'), {
@@ -522,7 +510,7 @@ async function main() {
     tour.stop();
     if (world) world.setPaused(true);
     try {
-      const { openStreet } = await import('./pax3d-street.js?v=8504691b');
+      const { openStreet } = await import('./pax3d-street.js?v=9dd5dd5a');
       street = await openStreet($('#pax3d-stage'), {
         ...sel,
         focusId: state.caseId,

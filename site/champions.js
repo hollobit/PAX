@@ -1,5 +1,8 @@
 'use strict';
 
+import { fetchJson } from './pax-dom.js?v=6dfb9f58';
+import { loadBookmarkCounts } from './pax-bookmarks.js?v=c1fdc503';
+
 /**
  * 공공AX 챔피언 디렉토리 — champions.json + cases-lite.json을 읽어 카드 그리드를 그린다.
  * 데이터 삽입은 전부 textContent/createElement (XSS 방지). 외부 라이브러리 없음.
@@ -10,8 +13,6 @@ const AX_BADGE = { 1: 'ax-ready', 2: 'ax-enabled', 3: 'ax-first', 4: 'ax-native'
 const AX_WEIGHT = { 0: 0, 1: 1, 2: 2, 3: 4, 4: 8 };
 const PLATFORM_LABEL = { github: 'GitHub', gitlab: '공공 GitLab', threads: 'Threads' };
 
-const COUNTER_URL = 'https://pdkpqrxcqiznsetxcvaq.supabase.co';
-const COUNTER_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBka3BxcnhjcWl6bnNldHhjdmFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxMTA2MTAsImV4cCI6MjEwMTY4NjYxMH0.Rj7cnt9dHcQ7O-CuGeGwAyVxVdWFwQYuiCetOUbEHzI';
 
 const SORTS = ['name', 'score', 'cases'];
 const TIERS = ['green', 'blue', 'black'];
@@ -37,14 +38,11 @@ function syncUrl() {
 
 async function load() {
   try {
-    const [champRes, caseRes, counts] = await Promise.all([
-      fetch('./data/champions.json', { cache: 'no-cache' }),
-      fetch('./data/cases-lite.json', { cache: 'no-cache' }),
-      loadBookmarkCounts(),
+    const [champDoc, caseDoc, counts] = await Promise.all([
+      fetchJson('./data/champions.json'),
+      fetchJson('./data/cases-lite.json'),
+      loadBookmarkCounts(), // 누적 북마크 수 — 공용 모듈(pax-bookmarks.js)이 키와 주소를 갖고 있다
     ]);
-    if (!champRes.ok || !caseRes.ok) throw new Error('HTTP 오류');
-    const champDoc = await champRes.json();
-    const caseDoc = await caseRes.json();
     state.champions = champDoc.champions;
     state.cases = new Map(caseDoc.cases.map((c) => [c.id, c]));
     state.bookmarks = counts;
@@ -62,19 +60,6 @@ async function load() {
   } catch (err) {
     console.error('챔피언 데이터 로드 실패:', err);
     document.getElementById('error-state').hidden = false;
-  }
-}
-
-async function loadBookmarkCounts() {
-  try {
-    const res = await fetch(`${COUNTER_URL}/rest/v1/bookmark_counts?select=case_id,count`, {
-      headers: { apikey: COUNTER_KEY, Authorization: `Bearer ${COUNTER_KEY}` },
-      cache: 'no-cache',
-    });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return new Map((await res.json()).map((r) => [r.case_id, r.count]));
-  } catch {
-    return new Map();
   }
 }
 
