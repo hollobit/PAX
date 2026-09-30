@@ -56,6 +56,12 @@ def test_plan_drops_thumbs_when_not_needed():
 
 def test_ledger_check_runs_first():
     assert POST_COLLECT[0].name == "ledger"
+    assert POST_COLLECT[0].argv[-2:] == ("--stage", "inputs")  # 평가 파일은 아직 옛것이다
+
+
+def test_built_evaluations_are_checked_before_anything_reads_them():
+    names = [s.name for s in POST_COLLECT]
+    assert names.index("eval_data") + 1 == names.index("eval_check")
 
 
 def test_plan_can_resume_from_a_step():

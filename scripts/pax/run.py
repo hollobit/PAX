@@ -34,9 +34,11 @@ class Step:
 
 
 POST_COLLECT: tuple[Step, ...] = (
-    Step("ledger", ("pax.ledger",), "원장 교차 점검(사례·평가·추가분·MCP) — 깨졌으면 여기서 멈춘다"),
+    Step("ledger", ("pax.ledger", "--stage", "inputs"),
+         "원장 교차 점검(사례·평가 추가분·MCP) — 깨졌거나 추가분을 잊었으면 여기서 멈춘다"),
     Step("licenses", ("scripts/tag_licenses.py",), "새 저장소 라이선스 태깅(기존은 건너뜀)"),
     Step("eval_data", ("scripts/build_eval_data.py", EVAL_XLSX), "평가 원본 + 추가분 → evaluations.json"),
+    Step("eval_check", ("pax.ledger",), "빌드된 평가에 모든 사례가 들어갔는지 — 공개 전에 멈춘다"),
     Step("mcp_review", ("scripts/build_mcp_review.py",), "MCP 검증 공개본"),
     Step("thumbs", ("scripts/make_thumbs.sh",), "없는 썸네일만 생성(+WebP)"),
     Step("publish", ("pax.publish",), "사이트 사본·경량판·thumb_v·WebP 짝"),

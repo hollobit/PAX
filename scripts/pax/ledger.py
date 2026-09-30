@@ -3,7 +3,10 @@
 병합(pax.merge)만 사례를 검증하고, 라이선스·헬스 점검처럼 원장 전체를 다시 쓰는 스크립트와
 사람이 손으로 늘리는 평가 추가분에는 검사가 없었다. 이 모듈이 그 빈틈을 한 곳에서 막는다:
     PYTHONPATH=scripts python3 -m pax.ledger   # 문제 목록, 있으면 종료 코드 1
-check_repo.py(CI)와 pax.run post-collect의 첫 단계가 부른다.
+check_repo.py(CI)와 pax.run post-collect가 두 번 부른다:
+  --stage inputs  첫 단계. 수집 직후라 site/data/evaluations.json은 아직 옛것이므로, 새 사례는
+                  평가 추가분(eval_additions.json)에 있는지로 본다(추가분을 잊었으면 여기서 멈춘다).
+  --stage built   (기본) build_eval_data 뒤. 공개될 평가 파일에 모든 사례가 들어갔는지 본다.
 """
 from __future__ import annotations
 
@@ -30,7 +33,13 @@ def _dups(values) -> list:
     return sorted(v for v, n in Counter(values).items() if n > 1)
 
 
-def check_ledgers(cases: list, evaluations: list, additions: list, reviews: list) -> list[str]:
+STAGES = ("inputs", "built")
+
+
+def check_ledgers(cases: list, evaluations: list, additions: list, reviews: list,
+                  stage: str = "built") -> list[str]:
+    if stage not in STAGES:
+        raise ValueError(f"알 수 없는 단계: {stage}")
     problems = []
     case_ids = [c.get("id") for c in cases]
     known = set(case_ids)
@@ -50,8 +59,12 @@ def check_ledgers(cases: list, evaluations: list, additions: list, reviews: list
         problems.append(f"평가 추가분이 없는 사례를 가리킴: {cid}")
 
     eval_ids = {e.get("id") for e in evaluations}
-    for cid in sorted(known - eval_ids):
-        problems.append(f"평가 없는 사례: {cid} — eval_additions.json에 항목을 더하고 build_eval_data를 돌린다")
+    if stage == "inputs":
+        for cid in sorted(known - eval_ids - set(add_ids)):
+            problems.append(f"평가 추가분이 없는 사례: {cid} — eval_additions.json 끝에 항목을 더한다")
+    else:
+        for cid in sorted(known - eval_ids):
+            problems.append(f"평가 없는 사례: {cid} — build_eval_data가 추가분을 반영하지 못했다")
     for cid in sorted(eval_ids - known):
         problems.append(f"사례에 없는 평가: {cid}")
 
@@ -71,16 +84,19 @@ def require_valid_cases(doc: dict) -> None:
         raise LedgerError("사례 원장을 쓰지 않음 — " + " / ".join(problems[:5]))
 
 
-def check_repository() -> list[str]:
+def check_repository(stage: str = "built") -> list[str]:
     cases = read_json(CASES)["cases"]
     evaluations = load_json(EVALUATIONS, default={}).get("cases", [])
     additions = load_json(ADDITIONS, default=[])
     reviews = load_json(REVIEWS, default={}).get("reviews", [])
-    return check_ledgers(cases, evaluations, additions, reviews)
+    return check_ledgers(cases, evaluations, additions, reviews, stage=stage)
 
 
-def main() -> int:
-    problems = check_repository()
+def main(argv: list[str] | None = None) -> int:
+    import argparse
+    ap = argparse.ArgumentParser(description="원장 교차 점검")
+    ap.add_argument("--stage", choices=STAGES, default="built")
+    problems = check_repository(ap.parse_args(argv).stage)
     for p in problems:
         print(p, file=sys.stderr)
     print(f"원장 점검: 문제 {len(problems)}건")

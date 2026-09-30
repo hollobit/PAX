@@ -58,3 +58,41 @@ def test_eval_additions_duplicates_are_skipped_not_appended_twice():
     assert [c["id"] for c in merged] == ["a", "b"]
     assert any("b" in w and "중복" in w for w in warnings)
     assert any("a" in w and "엑셀" in w for w in warnings)
+
+
+def test_new_case_with_eval_addition_passes_input_stage_before_build():
+    # 절차: 병합 → 평가 추가분 추가 → pax.run. 첫 단계에서는 evaluations.json이 아직 옛것이다.
+    old = [_case(1), _case(2)]
+    new = _case(3)
+    stale_evals = [{"id": c["id"]} for c in old]
+    additions = [_add(71, new["id"])]
+    assert check_ledgers(old + [new], stale_evals, additions, [], stage="inputs") == []
+    # 빌드 뒤 대조에서는 평가 파일에 없으면 잡는다(빌드가 추가분을 반영하지 못한 경우)
+    built = check_ledgers(old + [new], stale_evals, additions, [], stage="built")
+    assert any("평가 없는 사례" in p for p in built)
+
+
+def test_input_stage_still_catches_a_forgotten_eval_addition():
+    old = [_case(1)]
+    new = _case(2)
+    problems = check_ledgers(old + [new], [{"id": old[0]["id"]}], [], [], stage="inputs")
+    assert any("평가 추가분이 없는 사례" in p and new["id"] in p for p in problems)
+
+
+def test_collection_flow_on_real_ledgers_passes_both_stages():
+    """수집 한 회차를 실제 원장 사본으로 흉내 낸다: 병합 → 추가분 → (inputs) → build_eval_data → (built)."""
+    import build_eval_data as bed
+    from pax.ledger import ADDITIONS, CASES, EVALUATIONS
+    from pax.jsonio import read_json
+    cases = read_json(CASES)["cases"]
+    evals = read_json(EVALUATIONS)["cases"]
+    additions = read_json(ADDITIONS)
+    assert check_ledgers(cases, evals, additions, []) == []  # 커밋된 상태는 깨끗하다
+
+    new = make_case(id="f" * 16, title="이번 회차 새 사례")
+    template = {k: v for k, v in additions[-1].items() if k not in ("id", "no")}
+    add = {**template, "id": new["id"], "no": max(a["no"] for a in additions) + 1}
+    cases2, additions2 = cases + [new], additions + [add]
+    assert check_ledgers(cases2, evals, additions2, [], stage="inputs") == []
+    rebuilt, _ = bed.merge_additions([e for e in evals if e["id"] not in {a["id"] for a in additions}], additions2)
+    assert check_ledgers(cases2, rebuilt, additions2, [], stage="built") == []

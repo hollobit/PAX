@@ -135,7 +135,7 @@ PYTHONPATH=scripts python3 -m pax.merge data/incoming/TODAY.json
 ```bash
 PYTHONPATH=scripts python3 -m pax.run post-collect   # 순서만 보려면 --dry-run
 ```
-원장 교차 점검 → 라이선스 태깅 → 평가 빌드 → MCP 공개본 → (없는 썸네일만) 썸네일 → 사이트 사본·경량판·WebP →
+원장 교차 점검(추가분 기준) → 라이선스 태깅 → 평가 빌드 → 평가 대조 → MCP 공개본 → (없는 썸네일만) 썸네일 → 사이트 사본·경량판·WebP →
 챔피언 → 사례 페이지 → 대화량·가입자 → 동영상 → 뉴스 → 지수 → 현황판 이력 → 메뉴 동기화 → 자산 스탬프.
 순서는 `scripts/pax/run.py`의 POST_COLLECT가 정본이고 테스트가 지킨다(읽는 쪽이 만드는 쪽보다
 먼저 돌면 새 사례가 한 회차 동안 '평가 데이터 없음'으로 공개된다). 한 단계가 실패하면 거기서
