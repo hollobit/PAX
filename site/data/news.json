@@ -1,7 +1,176 @@
 {
- "updated_at": "2026-09-30T13:56:41Z",
- "count": 668,
+ "updated_at": "2026-09-30T22:34:32Z",
+ "count": 679,
  "articles": [
+  {
+   "url": "https://www.yna.co.kr/view/AKR20260929124000009",
+   "title": "\"엔비디아, 'AI칩 담보대출' 보험 추진…AI 인프라 위험 분산\"",
+   "outlet": "연합뉴스",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-30",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215766",
+   "title": "과기부, AI중심대학 18개교·AX대학원 15개교 출범",
+   "outlet": "AI타임스",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-30",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.unite.ai/ko/google-announces-gemini-4-argon-frontier-model-for-coding-cyber-defense",
+   "title": "Google, 코딩 및 사이버 방어를 위한 Gemini 4 Argon 프론티어 모델 발표",
+   "outlet": "Unite.AI",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.tokenpost.kr/news/breaking/416167",
+   "title": "GPT-6.1 Sol, 출시 일주일 만에 Astra 성능 근접",
+   "outlet": "토큰포스트",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.techm.kr/news/articleView.html?idxno=155727",
+   "title": "\"로그인과 결제 연결해줘\" 컴투스플랫폼, AI 게임 백엔드 플랫폼 '하이브 액실' 출시",
+   "outlet": "테크M",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newstap.co.kr/news/articleView.html?idxno=334959",
+   "title": "챗GPT로 한국 미술 찾고 구매까지…아르투, 오픈AI 본사서 ‘GPT 큐레이터’ 선봬",
+   "outlet": "뉴스탭",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4085885",
+   "title": "대구시, 생성형 AI로 ‘행정 혁신’…공직자 실무역량 높인다",
+   "outlet": "경북일보",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=241916",
+   "title": "AWS, 아마존 베드록 서울 리전에 ‘클로드 오퍼스 5·소넷 5’ 출시",
+   "outlet": "아이티데일리",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.etnews.com/20260930000343",
+   "title": "플리토, AI 통번역 '보글'로 통합…“개인화·데이터로 언어장벽 허문다”",
+   "outlet": "미래를 보는 창 - 전자신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.economytribune.co.kr/news/articleView.html?idxno=3904037",
+   "title": "국민연금도 카톡으로…카카오, ‘AI 정부창구’로 공공 AI 영토 넓힌다",
+   "outlet": "이코노미트리뷴",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-01-px-복지-통합-대시보드",
+   "title": "[공공AX 네트워크] 공공AX에 올라온 복지 통합 대시보드, 「파악 안돼서 AI 돌리기 시작했던게 챗봇이 되었죠」 경험담이 통합돌봄 논의로 이어졌다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-01-px-kordoc-goal-루프",
+   "title": "[공공AX 네트워크] kordoc 표 99.8378%라는 참가자 보고, 「0.0001이라도 있으면 커밋」하는 goal 루프도 소개됐다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-01-cross-gpt-사용량-축소-플랜-재편",
+   "title": "[에르메스단·공공AX 네트워크] GPT 200달러 플랜 사용량 축소 발표 당일 밤, 에르메스단은 갈아탈 플랜을 재고 공공AX 네트워크는 크레딧 설명을 나눴다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://share.google/LgZk4r9IxKbDBzOLO",
    "title": "[기고] 공무원이 만든 AI 행정 프로그램, 사고 나면 누가 책임지나",
@@ -20,19 +189,6 @@
    "title": "북구, 인공지능(AI) 활용 행정 효율 높인다",
    "outlet": "연합뉴스",
    "published": "2026-09-28",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-30",
-   "last_shared": "2026-09-30",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.yna.co.kr/view/AKR20260929124000009",
-   "title": "\"엔비디아, 'AI칩 담보대출' 보험 추진…AI 인프라 위험 분산\"",
-   "outlet": "연합뉴스",
-   "published": "2026-09-29",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-30",
@@ -110,19 +266,6 @@
    "url": "https://www.aitimes.kr/news/articleView.html?idxno=42098",
    "title": "LG전자, 블록처럼 연결하는 모듈러 솔루션...AI 데이터센터 냉각 시장 공략",
    "outlet": "인공지능신문",
-   "published": "2026-09-29",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-30",
-   "last_shared": "2026-09-30",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.aitimes.com/news/articleView.html?idxno=215766",
-   "title": "과기부, AI중심대학 18개교·AX대학원 15개교 출범",
-   "outlet": "AI타임스",
    "published": "2026-09-29",
    "kind": "기사",
    "shares": 1,
