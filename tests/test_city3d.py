@@ -290,9 +290,8 @@ def test_seat_of_finds_the_real_hall_inside_the_district():
 
 CITYKEY_NODE = """
 import fs from 'fs';
-// 위치 판정 모듈 import·재수출(export … from)은 cityKeyOf와 무관해 떼어 낸다(data: URL에서는 상대 경로를 풀 수 없다)
-const src = fs.readFileSync('site/pax3d-data.js', 'utf8').replace(/^(import .*|export \{[^}]*\} from .*)$/gm, '');
-const mod = await import('data:text/javascript,' + encodeURIComponent(src));
+// 파일 주소로 불러오면 node가 상대 import(?v= 스탬프 포함)를 그대로 푼다 — 코드를 고쳐 끼우지 않는다
+const mod = await import(new URL('site/pax3d-data.js', 'file://' + process.cwd() + '/').href);
 const k = mod.cityKeyOf;
 console.log(JSON.stringify([
   k({ place: '서울' }), k({ place: '부산', sgg: { name: '연제구' } }), k({ place: '세종' }), k({ place: '대구' }),

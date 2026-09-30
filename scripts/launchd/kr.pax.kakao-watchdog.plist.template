@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- 카카오 워치독(scripts/kakao_watchdog.sh)을 10분마다 돌린다. 저장소 경로는 install_watchdog.sh가 채운다. -->
+<plist version="1.0"><dict>
+  <key>Label</key><string>kr.pax.kakao-watchdog</string>
+  <key>ProgramArguments</key><array>
+    <string>/bin/bash</string>
+    <string>__REPO__/scripts/kakao_watchdog.sh</string>
+  </array>
+  <key>StartInterval</key><integer>600</integer>
+  <key>RunAtLoad</key><true/>
+</dict></plist>

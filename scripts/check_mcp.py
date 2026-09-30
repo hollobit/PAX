@@ -8,7 +8,6 @@
 - 침묵 통과 금지: 클론 실패·도구 부재는 "미검증(사유)"로 남긴다
 """
 import argparse
-import datetime
 import json
 import re
 import subprocess
@@ -240,7 +239,7 @@ def main() -> int:
         r = next(x for x in ledger["reviews"] if x["case_id"] == t["case_id"])
         verdicts = {k: v["verdict"] for k, v in r["axes"].items()}
         print(f"  {t['title'][:40]:40s} {verdicts}")
-    save_reviews(LEDGER, ledger)
+    save_reviews(LEDGER, ledger, set(by_id))  # 사례에 없는 판정·잘못된 값은 쓰기 전에 막는다
     print(f"검사 완료 {len(targets)}건 → {LEDGER}")
     return 0
 

@@ -16,7 +16,6 @@
 from __future__ import annotations
 
 import datetime
-import json
 import os
 import sys
 
@@ -31,10 +30,8 @@ CHAMPIONS = os.path.join(ROOT, "site", "data", "champions.json")
 INDEX = os.path.join(ROOT, "site", "data", "index.json")
 OUT = os.path.join(ROOT, "site", "data", "dashboard-history.json")
 
-# build_index.py와 같은 정의를 쓴다 — 분모가 어긋나면 증감이 거짓말을 한다.
-LLM_DEPS = {"국산 독자모델", "국산 오픈웨이트", "해외 상용 API", "해외 오픈웨이트(로컬)", "혼합"}
-DOMESTIC = {"국산 독자모델", "국산 오픈웨이트"}
-LOCAL = {"국산 오픈웨이트", "해외 오픈웨이트(로컬)"}
+# 채택률 분모는 build_index.py와 같은 정의를 가져다 쓴다 — 분모가 어긋나면 증감이 거짓말을 한다.
+from build_index import DOMESTIC_DEPS as DOMESTIC, LLM_DEPS, LOCAL_DEPS as LOCAL  # noqa: E402
 
 
 def is_mcp(c: dict) -> bool:

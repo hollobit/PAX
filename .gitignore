@@ -17,3 +17,5 @@ data/private/
 data/reviews/
 # 남의 코드 검토 리포트 — data/reviews/와 같은 성격(공개 여부는 사용자가 정한다)
 data/review.html
+# pax.run post-collect가 실패하면 남기는 표식 — 있는 동안은 커밋하지 않는다
+.pax-run-failed

@@ -18,15 +18,14 @@ import concurrent.futures
 import datetime
 import glob
 import html
-import json
 import os
 import re
-import subprocess
 import sys
 from collections import defaultdict
 from urllib.parse import urlparse, urlunparse, parse_qsl, urlencode
 
 from pax.jsonio import load_json, write_json, write_json_if_changed  # noqa: E402
+from pax.http import curl  # noqa: E402
 from pax.timeutil import kst_date, kst_today  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -145,13 +144,8 @@ def decode_body(raw: bytes) -> str:
 
 def probe(url: str) -> dict | None:
     """페이지를 열어 기사 표지를 확인한다. 기사가 아니거나 못 열면 None."""
-    try:
-        res = subprocess.run(
-            ["/usr/bin/curl", "-sL", "--max-time", "20", "--max-filesize", "3000000",
-             "-A", "Mozilla/5.0 (compatible; PAX-archive/1.0)", url],
-            capture_output=True, timeout=30,
-        )
-    except (OSError, subprocess.TimeoutExpired):
+    res = curl(url, "--max-filesize", "3000000", binary=True)
+    if res is None:
         return None  # 못 여는 페이지는 기사로 보지 않는다(캐시에 실패일을 남긴다)
     body = decode_body(res.stdout)
     if not body:

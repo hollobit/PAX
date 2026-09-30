@@ -10,19 +10,15 @@
 """
 import concurrent.futures
 import datetime
-import json
 import re
-from pathlib import Path
-import subprocess
-import sys
 import urllib.parse
 
 
 from pax.jsonio import read_json, write_json  # noqa: E402
+from pax.http import curl, curl_json, gh_api  # noqa: E402
+from pax.ledger import require_valid_cases  # noqa: E402
 from pax.timeutil import kst_today  # noqa: E402
 
-# 조회 실패로 볼 오류 — 네트워크·도구 부재·응답 형식. 그 밖의 예외(코드 결함)는 드러나게 둔다.
-PROBE_ERRORS = (OSError, subprocess.TimeoutExpired, json.JSONDecodeError, AttributeError, ValueError)
 
 CASES = "data/cases.json"
 ACTIVE_DAYS, STALE_DAYS = 60, 180
@@ -30,16 +26,13 @@ ACTIVE_DAYS, STALE_DAYS = 60, 180
 
 def http_status(url: str) -> int:
     for method in (["-I"], []):  # HEAD 먼저, 405 등이면 GET
+        r = curl(url, "-o", "/dev/null", "-w", "%{http_code}", *method, timeout=12)
         try:
-            r = subprocess.run(
-                ["curl", "-sL", "--max-time", "12", "-o", "/dev/null",
-                 "-w", "%{http_code}", *method, url],
-                capture_output=True, text=True, timeout=20)
-            code = int(r.stdout or 0)
-            if code and code != 405:
-                return code
-        except PROBE_ERRORS:
-            pass
+            code = int(r.stdout or 0) if r else 0
+        except ValueError:
+            code = 0
+        if code and code != 405:
+            return code
     return 0
 
 
@@ -47,27 +40,17 @@ def repo_activity(url: str):
     """저장소 (최근 활동 ISO, 스타 수) 또는 (None, None)."""
     m = re.match(r"https://github\.com/([\w.\-]+/[\w.\-]+)", url)
     if m:
-        try:
-            r = subprocess.run(["gh", "api", f"repos/{m.group(1)}", "--jq",
-                                '{p: .pushed_at, s: .stargazers_count}'],
-                               capture_output=True, text=True, timeout=30)
-            if r.returncode == 0:
-                info = json.loads(r.stdout)
-                return info.get("p"), info.get("s")
-        except PROBE_ERRORS:
-            pass  # 한 저장소의 시간 초과가 주간 점검 전체를 멈추지 않게
-        return None, None
+        info = gh_api(f"repos/{m.group(1)}", jq="{p: .pushed_at, s: .stargazers_count}")
+        if isinstance(info, dict):
+            return info.get("p"), info.get("s")
+        return None, None  # 한 저장소의 실패가 주간 점검 전체를 멈추지 않게
     m = re.match(r"https://gitlab\.aigov\.go\.kr/([\w.\-/]+?)/?$", url)
     if m:
         pid = urllib.parse.quote(m.group(1), safe="")
-        try:
-            r = subprocess.run(["curl", "-sL", "--max-time", "12",
-                                f"https://gitlab.aigov.go.kr/api/v4/projects/{pid}"],
-                               capture_output=True, text=True, timeout=20)
-            info = json.loads(r.stdout)
+        info = curl_json(f"https://gitlab.aigov.go.kr/api/v4/projects/{pid}", timeout=12)
+        if isinstance(info, dict):
             return info.get("last_activity_at"), info.get("star_count")
-        except PROBE_ERRORS:
-            return None, None
+        return None, None
     return None, None
 
 
@@ -122,6 +105,7 @@ def main():
         if not ok:
             dead += 1
             print(f"  링크 끊김: {c['title'][:40]} ← {c.get('case_url') or c.get('link')}")
+    require_valid_cases(data)  # 원장 전체를 다시 쓰기 전에 — 한 건이라도 깨졌으면 쓰지 않는다
     write_json(CASES, data)
     print(f"점검 완료 — 끊김 {dead}건 / 유지보수: 활발 {active}·정체 {stale}·방치 {idle}")
 

@@ -7,8 +7,6 @@ site/data/index.json에 쓰고, --snapshot 시 snapshots/<분기>.json으로 버
 지표 원칙: 정부가 자기 자료로 만들 수 없는 숫자를, 일관된 척도로 반복 산출한다.
 표본 한계(자기선택)는 지표에도 상속된다 — 소비 측에서 항상 함께 표기할 것.
 """
-import datetime
-import json
 import sys
 from collections import Counter
 from pathlib import Path
@@ -26,8 +24,137 @@ def c_score(c_grade: str) -> int | None:
         return None
     try:
         return int(c_grade[1])
-    except ValueError:
+    except (ValueError, IndexError):  # 'C'만 적힌 평가가 지수 빌드 전체를 멈추지 않게
         return None
+
+
+# 모델 채택률 정의 — 관측소 게이지(이 파일)와 증감 배지(build_dashboard_history)가 함께 쓴다
+LLM_DEPS = {"국산 독자모델", "국산 오픈웨이트", "해외 상용 API", "해외 오픈웨이트(로컬)", "혼합"}  # 분모
+DOMESTIC_DEPS = {"국산 독자모델", "국산 오픈웨이트"}
+# '로컬 오픈웨이트 실행' — 공개 가중치를 로컬에서 돌리는 두 분류(관측소 용어 설명과 같다:
+# 국산 오픈웨이트 = 국산 공개 가중치 모델 로컬 실행). 지수가 국산 쪽을 빠뜨려 1건 적게 셌던 것을 바로잡았다.
+LOCAL_DEPS = {"국산 오픈웨이트", "해외 오픈웨이트(로컬)"}
+TOP_REPOS = 10
+
+
+def is_mcp(c: dict) -> bool:
+    return "MCP" in c["title"] or "MCP" in " ".join(c["tags"])
+
+
+def overview(today, cases: list, champ_doc: dict, community: dict) -> dict:
+    return {
+        "generated_at": today.isoformat(),
+        "quarter": f"{today.year}Q{(today.month - 1) // 3 + 1}",
+        "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
+        "total_cases": len(cases),
+        "total_champions": champ_doc.get("total", 0),
+        "community": {
+            "members": community.get("members", {}).get("latest"),
+            "kakao_week": community.get("kakao", {}).get("week"),
+            "kakao_total_observed": community.get("kakao", {}).get("total"),
+            "threads_observed": community.get("threads", {}).get("observed_total"),
+        },
+        "certified_champions": sum(1 for ch in champ_doc.get("champions", []) if ch.get("certification")),
+        "unattributed_cases": len(champ_doc.get("unattributed", [])),
+    }
+
+
+def evaluation_axes(evals: list) -> dict:
+    c_scores = [s for e in evals if (s := c_score(e.get("c"))) is not None]
+    return {
+        "ax_distribution": dict(Counter(e["ax"] for e in evals if e.get("ax"))),
+        "c_axis_mean": round(sum(c_scores) / len(c_scores), 2) if c_scores else None,
+        "p_distribution": dict(Counter((e.get("p") or "미확인").split(" ")[0] for e in evals)),
+    }
+
+
+def model_rates(cases: list) -> dict:
+    """모델 채택률 — 분모는 LLM을 직접 쓰는 사례(비LLM·모델 중립은 뺀다, AGENTS.md §5)."""
+    dist = Counter(c.get("model_dependency") or "미확인" for c in cases)
+    known = sum(v for k, v in dist.items() if k in LLM_DEPS)
+    domestic = sum(dist.get(k, 0) for k in DOMESTIC_DEPS)
+    local = sum(dist.get(k, 0) for k in LOCAL_DEPS)
+    return {
+        "model_dependency": dict(dist),
+        "model_stats": model_stats(cases),
+        "domestic_model_rate": round(domestic / known, 3) if known else None,
+        "local_model_rate": round(local / known, 3) if known else None,
+        "model_known": known,
+    }
+
+
+def gitlab_bridge(cases: list) -> tuple[dict, list]:
+    """공공 깃랩 브릿지(2-7): 미러 쌍과 개방율. (지표, 미러 쌍 사례)"""
+    gitlab_cases = [c for c in cases if any("gitlab.aigov" in u for u in urls(c))]
+    pairs = [c for c in gitlab_cases if any("github.com" in u for u in urls(c))]
+    return {
+        "gitlab_cases": len(gitlab_cases),
+        "gitlab_mirror_pairs": len(pairs),
+        "gitlab_open_rate": round(len(pairs) / len(gitlab_cases), 3) if gitlab_cases else None,
+    }, pairs
+
+
+def unknown_rates(evals: list) -> dict:
+    n = len(evals)
+    return {
+        "approval_gate": round(sum(1 for e in evals if e.get("approval_gate") == "미확인") / n, 3),
+        "feedback": round(sum(1 for e in evals if e.get("feedback") == "미확인") / n, 3),
+    }
+
+
+def platform_repos(cases: list, champ_of_case: dict, star_field: str, host: str) -> dict:
+    """플랫폼별 저장소 지표 — 미러 사례는 양쪽에 모두 나타나되 각 플랫폼 자기 스타를 쓴다."""
+    plat = [c for c in cases if any(host in u for u in urls(c))]
+    starred = [c for c in plat if c.get(star_field) is not None]
+    return {
+        "count": len(plat),
+        "starred": len(starred),
+        "stars_sum": sum(c.get(star_field) or 0 for c in plat),
+        "maintenance": dict(Counter(c.get("maintenance") for c in plat if c.get("maintenance"))),
+        "top": [
+            {"id": c["id"], "title": c["title"], "stars": c[star_field],
+             "maintenance": c.get("maintenance"), "license": c.get("license"),
+             # 챔피언 귀속명 우선, 미귀속이면 저장소 계정명
+             "developer": " · ".join(champ_of_case.get(c["id"], [])[:2])
+                          or next((u.split("/")[3] for u in urls(c)
+                                   if "github.com" in u or "gitlab.aigov" in u), "미상")}
+            for c in sorted(starred, key=lambda x: -x[star_field])[:TOP_REPOS]
+        ],
+    }
+
+
+def license_details(cases: list) -> dict:
+    tagged = [c for c in cases if c.get("license")]
+    dist = dict(Counter(c["license"] for c in tagged).most_common())
+    return {
+        "license_distribution": dist,
+        # 라이선스 × 플랫폼 매트릭스 (github-pages는 GitHub로 합산)
+        "license_matrix": {
+            name: {"github": sum(1 for c in tagged if c["license"] == name
+                                 and c.get("license_source") in ("github", "github-pages")),
+                   "gitlab": sum(1 for c in tagged if c["license"] == name
+                                 and c.get("license_source") == "gitlab")}
+            for name in dist
+        },
+        "license_by_source": {
+            src: {"total": sum(1 for c in cases if c.get("license_source") == src),
+                  "stated": sum(1 for c in cases if c.get("license_source") == src
+                                and c["license"] != "명시 없음")}
+            for src in ("github", "github-pages", "gitlab")
+        },
+    }
+
+
+def mcp_summary(mcp_cases: list, ev_by_id: dict) -> dict:
+    """MCP 현황 — 공급/소비·공식/비공식·완결성."""
+    return {
+        "total": len(mcp_cases),
+        "official": sum(1 for c in mcp_cases if c.get("mcp_official") is True),
+        "unofficial": sum(1 for c in mcp_cases if c.get("mcp_official") is False),
+        "roles": dict(Counter((ev_by_id.get(c["id"], {}).get("mcp_role") or "미상") for c in mcp_cases)),
+        "c_grades": dict(Counter((ev_by_id.get(c["id"], {}).get("c") or "미상") for c in mcp_cases)),
+        "maintenance": dict(Counter(c.get("maintenance") for c in mcp_cases if c.get("maintenance"))),
+    }
 
 
 def build() -> dict:
@@ -40,125 +167,30 @@ def build() -> dict:
         for cid in ch.get("cases", []):
             champ_of_case.setdefault(cid, []).append(ch["name"])
     ev_by_id = {e["id"]: e for e in evals}
-
-    ax_dist = Counter(e["ax"] for e in evals if e.get("ax"))
-    c_scores = [s for e in evals if (s := c_score(e.get("c"))) is not None]
-    p_dist = Counter((e.get("p") or "미확인").split(" ")[0] for e in evals)
-
-    model_dist = Counter(c.get("model_dependency") or "미확인" for c in cases)
-    llm_deps = {"국산 독자모델", "국산 오픈웨이트", "해외 상용 API", "해외 오픈웨이트(로컬)", "혼합"}
-    known_model = sum(v for k, v in model_dist.items() if k in llm_deps)  # 채택률 분모 = LLM 런타임 보유 사례
-    domestic = model_dist.get("국산 독자모델", 0) + model_dist.get("국산 오픈웨이트", 0)
-    local = model_dist.get("해외 오픈웨이트(로컬)", 0)
-
+    mcp_cases = [c for c in cases if is_mcp(c)]
     lic = sum(1 for c in cases if c.get("license"))
     lic_stated = sum(1 for c in cases if c.get("license") and c["license"] != "명시 없음")
-
-    # 공공 깃랩 브릿지 (2-7): 미러 쌍과 개방율
-    gitlab_cases = [c for c in cases if any("gitlab.aigov" in u for u in urls(c))]
-    mirror_pairs = [c for c in gitlab_cases
-                    if any("github.com" in u for u in urls(c))]
-
-    mcp_cases = [c for c in cases if "MCP" in c["title"] or "MCP" in " ".join(c["tags"])]
-    transition = Counter(c.get("transition_stage") or "미확인" for c in cases)
-
-    unknown_gate = sum(1 for e in evals if e.get("approval_gate") == "미확인")
-    unknown_feedback = sum(1 for e in evals if e.get("feedback") == "미확인")
-
+    bridge, mirror_pairs = gitlab_bridge(cases)
+    # 키 순서가 곧 공개 파일의 순서다 — 섹션을 원래 순서대로 잇는다
     return {
-        "generated_at": today.isoformat(),
-        "quarter": f"{today.year}Q{(today.month - 1) // 3 + 1}",
-        "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
-        "total_cases": len(cases),
-        "total_champions": champ_doc.get("total", 0),
-        "community": (lambda c: {
-            "members": c.get("members", {}).get("latest"),
-            "kakao_week": c.get("kakao", {}).get("week"),
-            "kakao_total_observed": c.get("kakao", {}).get("total"),
-            "threads_observed": c.get("threads", {}).get("observed_total"),
-        })(load_json("site/data/community.json", default={})),
-        "certified_champions": sum(
-            1 for ch in champ_doc.get("champions", []) if ch.get("certification")),
-        "unattributed_cases": len(champ_doc.get("unattributed", [])),
-        "ax_distribution": dict(ax_dist),
-        "c_axis_mean": round(sum(c_scores) / len(c_scores), 2) if c_scores else None,
-        "p_distribution": dict(p_dist),
-        "model_dependency": dict(model_dist),
-        "model_stats": model_stats(cases),
-        "domestic_model_rate": round(domestic / known_model, 3) if known_model else None,
-        "local_model_rate": round(local / known_model, 3) if known_model else None,
-        "model_known": known_model,
+        **overview(today, cases, champ_doc, load_json("site/data/community.json", default={})),
+        **evaluation_axes(evals),
+        **model_rates(cases),
         "license_tagged": lic,
         "license_stated_rate": round(lic_stated / lic, 3) if lic else None,
-        "gitlab_cases": len(gitlab_cases),
-        "gitlab_mirror_pairs": len(mirror_pairs),
-        "gitlab_open_rate": round(len(mirror_pairs) / len(gitlab_cases), 3) if gitlab_cases else None,
+        **bridge,
         "mcp_cases": len(mcp_cases),
-        "transition_funnel": dict(transition),
-        "unknown_rates": {
-            "approval_gate": round(unknown_gate / len(evals), 3),
-            "feedback": round(unknown_feedback / len(evals), 3),
-        },
+        "transition_funnel": dict(Counter(c.get("transition_stage") or "미확인" for c in cases)),
+        "unknown_rates": unknown_rates(evals),
         # 저장소 지표 (관측소 확장): 스타·유지보수 — GitHub/공공 깃랩 분리 집계
-        "maintenance_distribution": dict(Counter(
-            c.get("maintenance") for c in cases if c.get("maintenance"))),
+        "maintenance_distribution": dict(Counter(c.get("maintenance") for c in cases if c.get("maintenance"))),
         "stars_collected": sum(1 for c in cases if c.get("stars") is not None),
-        # 플랫폼별 지표 — 미러 사례는 양쪽에 모두 나타나되 각 플랫폼 자기 스타를 쓴다
         "repo_stats": {
-            platform: {
-                "count": len(plat_cases),
-                "starred": sum(1 for c in plat_cases if c.get(star_field) is not None),
-                "stars_sum": sum(c.get(star_field) or 0 for c in plat_cases),
-                "maintenance": dict(Counter(
-                    c.get("maintenance") for c in plat_cases if c.get("maintenance"))),
-                "top": [
-                    {"id": c["id"], "title": c["title"], "stars": c[star_field],
-                     "maintenance": c.get("maintenance"), "license": c.get("license"),
-                     # 챔피언 귀속명 우선, 미귀속이면 저장소 계정명
-                     "developer": " · ".join(champ_of_case.get(c["id"], [])[:2])
-                                  or next((u.split("/")[3] for u in urls(c)
-                                           if "github.com" in u or "gitlab.aigov" in u), "미상")}
-                    for c in sorted([x for x in plat_cases if x.get(star_field) is not None],
-                                    key=lambda x: -x[star_field])[:10]
-                ],
-            }
-            for platform, star_field, plat_cases in (
-                ("gitlab", "stars_gitlab",
-                 [c for c in cases if any("gitlab.aigov" in u for u in urls(c))]),
-                ("github", "stars_github",
-                 [c for c in cases if any("github.com" in u for u in urls(c))]),
-            )
+            "gitlab": platform_repos(cases, champ_of_case, "stars_gitlab", "gitlab.aigov"),
+            "github": platform_repos(cases, champ_of_case, "stars_github", "github.com"),
         },
-        # 라이선스 현황
-        "license_distribution": dict(Counter(
-            c["license"] for c in cases if c.get("license")).most_common()),
-        # 라이선스 × 플랫폼 매트릭스 (github-pages는 GitHub로 합산)
-        "license_matrix": {
-            name: {"github": sum(1 for c in cases if c.get("license") == name
-                                 and c.get("license_source") in ("github", "github-pages")),
-                   "gitlab": sum(1 for c in cases if c.get("license") == name
-                                 and c.get("license_source") == "gitlab")}
-            for name in dict(Counter(
-                c["license"] for c in cases if c.get("license")).most_common())
-        },
-        "license_by_source": {
-            src: {"total": sum(1 for c in cases if c.get("license_source") == src),
-                  "stated": sum(1 for c in cases if c.get("license_source") == src
-                                and c["license"] != "명시 없음")}
-            for src in ("github", "github-pages", "gitlab")
-        },
-        # MCP 현황 — 공급/소비·공식/비공식·완결성
-        "mcp_stats": {
-            "total": len(mcp_cases),
-            "official": sum(1 for c in mcp_cases if c.get("mcp_official") is True),
-            "unofficial": sum(1 for c in mcp_cases if c.get("mcp_official") is False),
-            "roles": dict(Counter(
-                (ev_by_id.get(c["id"], {}).get("mcp_role") or "미상") for c in mcp_cases)),
-            "c_grades": dict(Counter(
-                (ev_by_id.get(c["id"], {}).get("c") or "미상") for c in mcp_cases)),
-            "maintenance": dict(Counter(
-                c.get("maintenance") for c in mcp_cases if c.get("maintenance"))),
-        },
+        **license_details(cases),
+        "mcp_stats": mcp_summary(mcp_cases, ev_by_id),
         "mirror_pair_cases": [
             {"id": c["id"], "title": c["title"],
              "github": next(u for u in urls(c) if "github.com" in u),

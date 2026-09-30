@@ -6,13 +6,14 @@
 있어서, 읽는 스크립트가 만드는 스크립트보다 먼저 도는 사고가 났다(새 사례가 한 회차 동안
 '평가 데이터 없음'으로 공개). 이제 순서는 POST_COLLECT 한 곳에 있고 tests/test_run.py가 지킨다.
 
-신규 사례 유무로 갈래를 나누지 않는다 — 5-A 단계도 멱등이라(라이선스·썸네일은 이미 있는 것을 건너뜀)
+신규 사례 유무로 갈래를 나누지 않는다 — 병합 뒤 빌드 단계도 멱등이라(라이선스·썸네일은 이미 있는 것을 건너뜀)
 매 회차 전부 돌리는 쪽이 '신규가 있을 때만'을 판단하다 빠뜨리는 것보다 안전하다.
 병합(pax.merge)과 changelog·커밋은 판단이 필요해 여기 넣지 않는다.
 """
 from __future__ import annotations
 
 import argparse
+import os
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -33,6 +34,7 @@ class Step:
 
 
 POST_COLLECT: tuple[Step, ...] = (
+    Step("ledger", ("pax.ledger",), "원장 교차 점검(사례·평가·추가분·MCP) — 깨졌으면 여기서 멈춘다"),
     Step("licenses", ("scripts/tag_licenses.py",), "새 저장소 라이선스 태깅(기존은 건너뜀)"),
     Step("eval_data", ("scripts/build_eval_data.py", EVAL_XLSX), "평가 원본 + 추가분 → evaluations.json"),
     Step("mcp_review", ("scripts/build_mcp_review.py",), "MCP 검증 공개본"),
@@ -55,8 +57,18 @@ def needs_thumbs(cases: list, thumbs_dir: Path) -> bool:
     return any(preferred_url(c) and not (Path(thumbs_dir) / f"{c['id']}.jpg").exists() for c in cases)
 
 
-def plan(thumbs_needed: bool) -> list[Step]:
-    return [s for s in POST_COLLECT if s.name != "thumbs" or thumbs_needed]
+FAIL_MARKER = ".pax-run-failed"  # 실패한 단계 이름 — 있는 동안은 커밋하지 않는다(.gitignore 대상)
+
+
+def plan(thumbs_needed: bool, start: str | None = None) -> list[Step]:
+    steps = [s for s in POST_COLLECT if s.name != "thumbs" or thumbs_needed]
+    if start is None:
+        return steps
+    names = [s.name for s in POST_COLLECT]
+    if start not in names:
+        raise ValueError(f"없는 단계: {start} (가능: {', '.join(names)})")
+    first = names.index(start)
+    return [s for s in steps if names.index(s.name) >= first]
 
 
 def command(step: Step) -> list[str]:
@@ -68,20 +80,27 @@ def command(step: Step) -> list[str]:
     return [sys.executable, "-m", target, *args]
 
 
-def post_collect(dry_run: bool = False) -> int:
-    cases = read_json(ROOT / "data" / "cases.json")["cases"]
-    steps = plan(needs_thumbs(cases, ROOT / "site" / "thumbs"))
-    env = {**__import__("os").environ, "PYTHONPATH": str(ROOT / "scripts")}
+def post_collect(dry_run: bool = False, start: str | None = None, root: Path = ROOT,
+                 runner=subprocess.run) -> int:
+    cases = read_json(root / "data" / "cases.json")["cases"]
+    steps = plan(needs_thumbs(cases, root / "site" / "thumbs"), start)
+    env = {**os.environ, "PYTHONPATH": str(root / "scripts")}
+    marker = root / FAIL_MARKER
     for i, step in enumerate(steps, 1):
         print(f"[{i}/{len(steps)}] {step.name} — {step.note}", flush=True)
         if dry_run:
             print("    $ " + " ".join(command(step)))
             continue
-        result = subprocess.run(command(step), cwd=ROOT, env=env)
+        result = runner(command(step), cwd=root, env=env)
         if result.returncode != 0:
-            # 뒤 단계는 앞 단계 산출물을 읽는다 — 실패한 채 이어 가면 틀린 값이 공개된다
-            print(f"중단: {step.name} 종료 코드 {result.returncode}", file=sys.stderr)
+            # 뒤 단계는 앞 단계 산출물을 읽는다 — 실패한 채 이어 가면 틀린 값이 공개된다.
+            # 이미 쓴 산출물은 새것과 옛것이 섞여 있으므로 표식을 남겨 커밋을 막는다.
+            marker.write_text(f"{step.name}\n종료 코드 {result.returncode}\n", encoding="utf-8")
+            print(f"중단: {step.name} 종료 코드 {result.returncode} — 고친 뒤 "
+                  f"`python3 -m pax.run post-collect --from {step.name}`로 이어서 돌린다", file=sys.stderr)
             return result.returncode
+    if not dry_run:
+        marker.unlink(missing_ok=True)
     return 0
 
 
@@ -89,8 +108,9 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="python3 -m pax.run")
     ap.add_argument("task", choices=["post-collect"])
     ap.add_argument("--dry-run", action="store_true", help="실행하지 않고 순서만 보인다")
+    ap.add_argument("--from", dest="start", metavar="STEP", help="이 단계부터 이어서 돌린다(실패 뒤 재개)")
     args = ap.parse_args(argv)
-    return post_collect(dry_run=args.dry_run)
+    return post_collect(dry_run=args.dry_run, start=args.start)
 
 
 if __name__ == "__main__":

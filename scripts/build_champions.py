@@ -9,11 +9,11 @@
 """
 import json
 import re
-import subprocess
 import sys
 from pathlib import Path
 
 from pax.jsonio import write_json
+from pax.http import curl_json, gh_api
 
 CASES = Path("data/cases.json")
 EVALS = Path("site/data/evaluations.json")
@@ -70,25 +70,13 @@ def account_url(acct: str) -> str:
 def fetch_profile(acct: str) -> dict | None:
     """공개 프로필(표시이름·소속)을 조회한다. 실패 시 None."""
     platform, name = acct.split(":", 1)
-    try:
-        if platform == "github":
-            out = subprocess.run(
-                ["gh", "api", f"users/{name}", "--jq",
-                 '{name: .name, company: .company, bio: .bio}'],
-                capture_output=True, text=True, timeout=20)
-            if out.returncode == 0:
-                return json.loads(out.stdout)
-        elif platform == "gitlab":
-            out = subprocess.run(
-                ["curl", "-sL", "--max-time", "15",
-                 f"https://gitlab.aigov.go.kr/api/v4/users?username={name}"],
-                capture_output=True, text=True, timeout=25)
-            if out.returncode == 0:
-                users = json.loads(out.stdout)
-                if isinstance(users, list) and users:
-                    return {"name": users[0].get("name"), "company": None, "bio": None}
-    except (subprocess.TimeoutExpired, json.JSONDecodeError, OSError):
-        pass
+    if platform == "github":
+        info = gh_api(f"users/{name}", jq="{name: .name, company: .company, bio: .bio}")
+        return info if isinstance(info, dict) else None
+    if platform == "gitlab":
+        users = curl_json(f"https://gitlab.aigov.go.kr/api/v4/users?username={name}", timeout=15)
+        if isinstance(users, list) and users:
+            return {"name": users[0].get("name"), "company": None, "bio": None}
     return None
 
 
@@ -136,34 +124,28 @@ def load_json(path: Path, default):
         return default
 
 
-def main() -> int:
-    no_fetch = "--no-fetch" in sys.argv
-    cases = load_json(CASES, {}).get("cases", [])
-    evals = {c["id"]: c for c in load_json(EVALS, {}).get("cases", [])}
-    if not cases:
-        print("오류: cases.json을 읽을 수 없습니다", file=sys.stderr)
-        return 1
-
-    # 1) 사례별 계정 추출 — 저장소 계정이 있으면 그 계정이 사례를 소유,
-    #    스레드 핸들은 저장소 계정이 없는 사례에서만 단독 소유자가 된다.
+def collect_owners(cases: list) -> tuple[dict, dict, set]:
+    """1) 사례별 계정 추출 — 저장소 계정이 있으면 그 계정이 사례를 소유하고,
+    스레드 핸들은 저장소 계정이 없는 사례에서만 단독 소유자가 된다. (소유자, 사례별 스레드, 전체 계정)"""
     case_owners: dict[str, set] = {}
-    all_accounts: set = set()
     threads_of_case: dict[str, set] = {}
+    all_accounts: set = set()
     for c in cases:
         if not is_champion_source(c):
             case_owners[c["id"]] = set()
             threads_of_case[c["id"]] = set()
             continue
         repo, threads = extract_accounts(c)
-        owners = repo if repo else threads
-        case_owners[c["id"]] = owners
+        case_owners[c["id"]] = repo if repo else threads
         threads_of_case[c["id"]] = threads
         all_accounts |= repo | threads
+    return case_owners, threads_of_case, all_accounts
 
-    # 1.5) 동일 계정명 프로브 — GitHub 계정과 같은 ID가 공공 GitLab에 있으면
-    #      같은 사람으로 자동 연결하고 GitLab 프로필을 우선 사용한다 (캐시: probe: 접두)
-    cache = load_json(CACHE, {})
-    auto_links: dict[str, str] = {}  # github:<n> → gitlab:<n>
+
+def probe_same_names(all_accounts: set, cache: dict, no_fetch: bool) -> dict[str, str]:
+    """1.5) 동일 계정명 프로브 — GitHub 계정과 같은 ID가 공공 GitLab에 있으면 같은 사람으로 자동 연결하고
+    GitLab 프로필을 우선 쓴다(캐시: probe: 접두). all_accounts·cache를 갱신하고 github→gitlab 연결을 돌려준다."""
+    auto_links: dict[str, str] = {}
     for acct in sorted(a for a in all_accounts if a.startswith("github:")):
         name = acct.split(":", 1)[1]
         probe_key = f"probe:gitlab:{name}"
@@ -175,10 +157,12 @@ def main() -> int:
             cache.setdefault(gl, {k: v for k, v in probe.items() if k != "missing"})
             all_accounts.add(gl)
             auto_links[acct] = gl
+    return auto_links
 
-    # 2) 승인된 연결로 챔피언 단위 병합 (근거 필수)
-    links = load_json(LINKS, [])
-    merged: dict[str, dict] = {}   # champion id → {accounts, affiliation}
+
+def merge_champions(links: list, auto_links: dict, all_accounts: set) -> tuple[dict, dict]:
+    """2) 승인된 연결(근거 필수)과 자동 연결로 계정을 챔피언 단위로 묶는다. (챔피언별 정보, 계정→챔피언)"""
+    merged: dict[str, dict] = {}   # champion id → {accounts, affiliation, name, extra_cases}
     acct_to_champion: dict[str, str] = {}
     for entry in links:
         if not entry.get("evidence"):
@@ -200,9 +184,12 @@ def main() -> int:
             entry["accounts"].append(gl_acct)
     for a in sorted(all_accounts):
         acct_to_champion.setdefault(a, a)  # 미연결 계정은 단독 챔피언
+    return merged, acct_to_champion
 
-    # 3) 챔피언별 사례 귀속 — 병합된 스레드 핸들은 저장소 사례도 함께 소유.
-    #    연결 파일의 extra_cases(수동 귀속, 근거 필수)도 해당 챔피언에 귀속된다.
+
+def attribute_cases(cases, case_owners, threads_of_case, merged, acct_to_champion) -> tuple[dict, dict]:
+    """3) 챔피언별 사례 귀속 — 병합된 스레드 핸들은 저장소 사례도 함께 소유하고,
+    연결 파일의 extra_cases(수동 귀속, 근거 필수)도 해당 챔피언에 귀속된다. (챔피언별 사례, 수동 귀속)"""
     manual_case_of: dict[str, str] = {}
     for cid, info in merged.items():
         for case_id in info.get("extra_cases", []):
@@ -219,73 +206,85 @@ def main() -> int:
             champs.add(manual_case_of[c["id"]])
         for ch in champs:
             champ_cases.setdefault(ch, []).append(c)
+    return champ_cases, manual_case_of
 
-    # 4) 프로필 조회 (캐시 우선)
+
+def fetch_missing_profiles(all_accounts: set, cache: dict, no_fetch: bool) -> int:
+    """4) 프로필 조회(캐시 우선). 스레드는 프로필 API가 없다. 새로 조회한 건수를 돌려준다."""
     fetched = 0
     for acct in sorted(all_accounts):
-        if acct.startswith("threads:"):
-            continue  # 스레드는 프로필 API 없음
-        if acct in cache or no_fetch:
+        if acct.startswith("threads:") or acct in cache or no_fetch:
             continue
-        profile = fetch_profile(acct)
-        cache[acct] = profile or {}
+        cache[acct] = fetch_profile(acct) or {}
         fetched += 1
-    write_json(CACHE, cache)
+    return fetched
 
-    # 5) 챔피언 레코드 생성
-    champions = []
-    for cid, clist in champ_cases.items():
-        accounts = merged.get(cid, {}).get("accounts") or [cid]
-        # 표시이름·소속: 공공 GitLab 프로필 우선(실명·기관 정확도가 가장 높음),
-        # 없으면 GitHub 프로필, 그다음 계정명
-        gitlab_name = None
-        github_name = None
-        company = None
-        for a in accounts:
-            p = cache.get(a) or {}
-            if a.startswith("gitlab:") and p.get("name"):
-                gitlab_name = gitlab_name or p["name"]
-            if a.startswith("github:"):
-                github_name = github_name or p.get("name")
-                company = company or p.get("company")
-        aff = merged.get(cid, {}).get("affiliation")
-        curated_name = merged.get(cid, {}).get("name")
-        name = (curated_name or gitlab_name or github_name or cid.split(":", 1)[-1]).strip()
-        if gitlab_name:
-            org, person = split_gitlab_name(gitlab_name)
-            name = person
-            if org:
-                if not aff or aff.get("inferred"):
-                    aff = {"value": org, "inferred": False,
-                           "evidence": "공공 GitLab 공개 프로필 표시명"}
-        if not aff and company:
-            aff = {"value": company.lstrip("@").strip(), "inferred": False,
-                   "evidence": "GitHub 공개 프로필 소속란"}
-        top_ax = max((AX_LEVEL.get(evals.get(c["id"], {}).get("ax"), 0) for c in clist), default=0)
-        stars = sum(c.get("popularity") or 0 for c in clist)
-        champions.append({
-            "id": cid,
-            "name": name,
-            "accounts": [{"platform": a.split(":")[0], "id": a.split(":", 1)[1],
-                          "url": account_url(a)} for a in accounts],
-            "affiliation": aff,
-            "cases": [c["id"] for c in sorted(clist, key=lambda x: x["date"], reverse=True)],
-            "stats": {"case_count": len(clist), "top_ax": top_ax, "stars": stars},
-        })
-    # 5.5) 외부 인증(AI 챔피언 기록 저장소) 연결 — 성명·기관 일치 확인분만
-    certs_doc = load_json(CERTS, {})
+
+def champion_record(cid: str, clist: list, merged: dict, cache: dict, evals: dict) -> dict:
+    """5) 챔피언 한 명의 공개 레코드. 표시이름·소속은 공공 GitLab 프로필 우선(실명·기관 정확도가 가장 높음),
+    없으면 GitHub 프로필, 그다음 계정명."""
+    info = merged.get(cid, {})
+    accounts = info.get("accounts") or [cid]
+    gitlab_name = github_name = company = None
+    for a in accounts:
+        p = cache.get(a) or {}
+        if a.startswith("gitlab:") and p.get("name"):
+            gitlab_name = gitlab_name or p["name"]
+        if a.startswith("github:"):
+            github_name = github_name or p.get("name")
+            company = company or p.get("company")
+    aff = info.get("affiliation")
+    name = (info.get("name") or gitlab_name or github_name or cid.split(":", 1)[-1]).strip()
+    if gitlab_name:
+        org, person = split_gitlab_name(gitlab_name)
+        name = person
+        if org and (not aff or aff.get("inferred")):
+            aff = {"value": org, "inferred": False, "evidence": "공공 GitLab 공개 프로필 표시명"}
+    if not aff and company:
+        aff = {"value": company.lstrip("@").strip(), "inferred": False,
+               "evidence": "GitHub 공개 프로필 소속란"}
+    top_ax = max((AX_LEVEL.get(evals.get(c["id"], {}).get("ax"), 0) for c in clist), default=0)
+    stars = sum(c.get("popularity") or 0 for c in clist)
+    return {
+        "id": cid,
+        "name": name,
+        "accounts": [{"platform": a.split(":")[0], "id": a.split(":", 1)[1],
+                      "url": account_url(a)} for a in accounts],
+        "affiliation": aff,
+        "cases": [c["id"] for c in sorted(clist, key=lambda x: x["date"], reverse=True)],
+        "stats": {"case_count": len(clist), "top_ax": top_ax, "stars": stars},
+    }
+
+
+def attach_certifications(champions: list, certs_doc: dict) -> None:
+    """5.5) 외부 인증(AI 챔피언 기록 저장소) 연결 — 성명·기관 일치를 확인한 것만 연결 파일에 있다."""
     cert_by_champ = {c["champion"]: c for c in certs_doc.get("certified", [])}
-    cert_source = certs_doc.get("source", {})
+    source = certs_doc.get("source", {})
     for ch in champions:
         cert = cert_by_champ.get(ch["id"])
         if cert:
-            ch["certification"] = {
-                "tier": cert["tier"],
-                "listed_as": cert.get("listed_as"),
-                "source_name": cert_source.get("name"),
-                "source_url": cert_source.get("url"),
-            }
+            ch["certification"] = {"tier": cert["tier"], "listed_as": cert.get("listed_as"),
+                                   "source_name": source.get("name"), "source_url": source.get("url")}
 
+
+def main() -> int:
+    no_fetch = "--no-fetch" in sys.argv
+    cases = load_json(CASES, {}).get("cases", [])
+    evals = {c["id"]: c for c in load_json(EVALS, {}).get("cases", [])}
+    if not cases:
+        print("오류: cases.json을 읽을 수 없습니다", file=sys.stderr)
+        return 1
+
+    case_owners, threads_of_case, all_accounts = collect_owners(cases)
+    cache = load_json(CACHE, {})
+    auto_links = probe_same_names(all_accounts, cache, no_fetch)
+    merged, acct_to_champion = merge_champions(load_json(LINKS, []), auto_links, all_accounts)
+    champ_cases, manual_case_of = attribute_cases(cases, case_owners, threads_of_case, merged, acct_to_champion)
+    fetched = fetch_missing_profiles(all_accounts, cache, no_fetch)
+    write_json(CACHE, cache)
+
+    champions = [champion_record(cid, clist, merged, cache, evals) for cid, clist in champ_cases.items()]
+    attach_certifications(champions, load_json(CERTS, {}))
     champions.sort(key=lambda x: x["name"])
 
     # 참조 무결성 경고
@@ -301,13 +300,9 @@ def main() -> int:
          "url": c.get("case_url") or c.get("link")}
         for c in cases if not case_owners[c["id"]] and c["id"] not in manual_case_of
     ]
-
-    doc = {"total": len(champions), "champions": champions,
-           "unattributed": unattributed}
-    write_json(OUT, doc)
+    write_json(OUT, {"total": len(champions), "champions": champions, "unattributed": unattributed})
     print(f"{OUT} ← 챔피언 {len(champions)}명 (프로필 신규 조회 {fetched}건)")
     return 0
-
 
 if __name__ == "__main__":
     sys.exit(main())

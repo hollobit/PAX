@@ -18,6 +18,11 @@ def test_post_collect_order_respects_data_dependencies():
     assert before("champions", "index")
     assert before("index", "dashboard_history")    # 이력은 오늘의 지수·챔피언 값을 적는다
     assert before("champions", "dashboard_history")
+    assert before("licenses", "publish")           # 라이선스 태깅이 원장을 고치고 publish가 복사한다
+    assert before("eval_data", "index")            # 지수·이력도 evaluations.json을 읽는다
+    assert before("eval_data", "dashboard_history")
+    assert before("case_pages", "sync_nav") and before("sync_nav", "stamp_assets")
+    assert order[-1] == "stamp_assets"             # 스탬프는 모든 파일이 확정된 뒤에
 
 
 def test_every_step_is_a_known_script_or_module():
@@ -47,3 +52,40 @@ def test_plan_drops_thumbs_when_not_needed():
     names = _names(plan(thumbs_needed=False))
     assert "thumbs" not in names
     assert "publish" in names  # WebP 짝 맞추기·thumb_v는 publish가 계속 맡는다
+
+
+def test_ledger_check_runs_first():
+    assert POST_COLLECT[0].name == "ledger"
+
+
+def test_plan_can_resume_from_a_step():
+    names = _names(plan(thumbs_needed=True, start="index"))
+    assert names[0] == "index" and "licenses" not in names
+    import pytest
+    with pytest.raises(ValueError):
+        plan(thumbs_needed=True, start="없는단계")
+
+
+def test_failure_leaves_marker_and_success_clears_it(tmp_path):
+    # 중간에 멈추면 산출물이 반만 새것이다 — 표식이 있는 동안은 커밋하지 않는다(collect_prompt §6)
+    import json
+    from pax import run as r
+    (tmp_path / "data").mkdir()
+    (tmp_path / "data" / "cases.json").write_text(json.dumps({"cases": []}), encoding="utf-8")
+    calls = []
+
+    class Done:
+        def __init__(self, code):
+            self.returncode = code
+
+    def failing(cmd, **kw):
+        calls.append(cmd)
+        return Done(1 if any("build_index.py" in c for c in cmd) else 0)
+
+    assert r.post_collect(root=tmp_path, runner=failing) == 1
+    marker = tmp_path / r.FAIL_MARKER
+    assert marker.read_text(encoding="utf-8").startswith("index")
+    assert not any("build_dashboard_history.py" in c for cmd in calls for c in cmd)  # 뒤 단계는 돌지 않는다
+
+    assert r.post_collect(root=tmp_path, runner=lambda cmd, **kw: Done(0), start="index") == 0
+    assert not marker.exists()

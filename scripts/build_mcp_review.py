@@ -5,8 +5,6 @@
 disclosure 미해결 리뷰의 '심각' 축 note는 어떤 경우에도 고정 문구로 치환된다.
 사용: PYTHONPATH=scripts python3 scripts/build_mcp_review.py
 """
-import datetime
-import json
 import sys
 from collections import Counter
 from pathlib import Path

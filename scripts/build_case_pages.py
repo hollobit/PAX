@@ -7,12 +7,19 @@ site/case/<id>.html — og 태그를 갖춘 고정 페이지. "결재에 이 URL
 사용: python3 scripts/build_case_pages.py  (매 병합 후 실행 — 전량 재생성, 수 초)
 """
 import html
-import json
 from pathlib import Path
 from pax.jsonio import load_json, read_json
 from pax.urls import preferred_url
+from stamp_assets import digest
+from sync_nav import render_external, render_nav
 
 BASE = "https://hollobit.github.io/PAX"
+
+
+def safe_href(url):
+    """사례 주소를 링크로 쓸 때 https만 허용한다 — 병합은 스키마가 막지만 손으로 보강하는 경로에는
+    검사가 없어, javascript: 같은 주소가 들어오면 공개 페이지에서 실행될 수 있다."""
+    return url if isinstance(url, str) and url.startswith("https://") else None
 OUT_DIR = Path("site/case")
 
 TEMPLATE = """<!DOCTYPE html>
@@ -28,35 +35,14 @@ TEMPLATE = """<!DOCTYPE html>
   <meta property="og:description" content="{desc}">
   <meta property="og:url" content="{base}/case/{cid}.html">
   <meta property="og:site_name" content="모두의 공공AX 사례 아카이브">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?v={css_v}">
 </head>
 <body>
   <header class="site-header">
     <p class="eyebrow">PUBLIC SECTOR AX CASE · 사례 {cid}</p>
     <h1>{title}</h1>
-<nav class="site-nav" aria-label="주요 메뉴">
-      <a href="../">사례 아카이브</a>
-      <a href="../pax3d.html">3D PAX</a>
-      <a href="../dashboard.html">AX 평가</a>
-      <a href="../champions.html">챔피언</a>
-      <a href="../ax-maturity-infographic.html">AX 성숙도 개념</a>
-      <a href="../observatory.html">관측소</a>
-      <a href="../gap-map.html">격차 지도</a>
-      <a href="../mcp-review.html">MCP 검증</a>
-      <a href="../playbook.html">전이 플레이북</a>
-      <a href="../guidelines.html">안내서·가이드라인</a>
-      <a href="../videos.html">공유 동영상</a>
-      <a href="../news.html">공유 뉴스</a>
-      <a href="../changelog.html">변경 기록</a>
-    </nav>
-    <nav class="site-nav site-nav--external" aria-label="관련 사이트">
-      <a href="https://hollobit.github.io/GAPI2/ecosystem.html" target="_blank" rel="noopener">MCP·AI 도구 ↗</a>
-      <a href="https://ax360.kr/national-ax-project/card" target="_blank" rel="noopener">AX 사업 찾기 ↗</a>
-      <a href="https://ax360.kr/national-ai-resource/model" target="_blank" rel="noopener">AX 자원 찾기 ↗</a>
-      <a href="https://ax360.kr/private-ai-company/heatmap" target="_blank" rel="noopener">AI 기업 찾기 ↗</a>
-      <a href="https://axboard.aigov.go.kr/" target="_blank" rel="noopener">AI 정부실험실 ↗</a>
-      <a href="https://aitestbed.kr/main-page" target="_blank" rel="noopener">모두의 AI 실험실 ↗</a>
-    </nav>
+{nav}
+{external}
   </header>
   <main class="case-page">
     <section class="obs-section">
@@ -154,6 +140,9 @@ def main():
                    for r in load_json("site/data/mcp-review.json", default={}).get("reviews", [])}
     evals = {e["id"]: e for e in read_json("site/data/evaluations.json")["cases"]}
     OUT_DIR.mkdir(exist_ok=True)
+    # 메뉴는 sync_nav의 목록을 그대로 쓴다(한 단계 아래라 '../'), 스타일은 콘텐츠 해시로 캐시를 무효화한다
+    nav, external = render_nav("case", "    ", "../"), render_external("    ")
+    css_v = digest(Path("site/style.css"))
     for c in cases:
         ev = evals.get(c["id"])
         related = [x for x in cases
@@ -162,13 +151,13 @@ def main():
             f'<li><a href="{esc(r["id"])}.html">{esc(r["title"])}</a></li>' for r in related
         ) or "<li>같은 분류의 다른 사례가 아직 없습니다</li>"
         links = []
-        target = preferred_url(c)
+        target = safe_href(preferred_url(c))
         if target:
             links.append(f'<a href="{esc(target)}" target="_blank" rel="noopener">사례 대상 바로가기</a>')
-        if c.get("link"):
+        if safe_href(c.get("link")):
             label = "원문 게시물" if "threads.com" in c["link"] else "공유 링크"
             links.append(f'<a href="{esc(c["link"])}" target="_blank" rel="noopener">{label}</a>')
-        if c.get("mirror_url"):
+        if safe_href(c.get("mirror_url")):
             mlabel = "공공 깃랩 미러" if "gitlab.aigov" in c["mirror_url"] else "미러 저장소"
             links.append(f'<a href="{esc(c["mirror_url"])}" target="_blank" rel="noopener">{mlabel}</a>')
         links.append(f'<a href="../?case={esc(c["id"])}">아카이브에서 보기</a>')
@@ -178,7 +167,7 @@ def main():
                 f'<a href="../mcp-review.html">MCP 검증: {esc(review["overall"])}'
                 f' ({esc(review.get("checked_at") or "")})</a>')
         page = TEMPLATE.format(
-            base=BASE, cid=esc(c["id"]), title=esc(c["title"]),
+            nav=nav, external=external, css_v=css_v, base=BASE, cid=esc(c["id"]), title=esc(c["title"]),
             desc=esc(c["summary"][:150]), org=esc(c["org"]), org_type=esc(c["org_type"]),
             region=f" · {esc(c['region'])}" if c.get("region") else "",
             task=esc(c.get("task_category") or "분류 없음"), date=esc(c["date"]),

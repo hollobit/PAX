@@ -31,20 +31,40 @@ NAV: tuple[tuple[str, str], ...] = (
     ("changelog.html", "변경 기록"),
 )
 
+# 관련 사이트(외부) 메뉴 — 새 창으로 연다
+EXTERNAL: tuple[tuple[str, str], ...] = (
+    ("https://hollobit.github.io/GAPI2/ecosystem.html", "MCP·AI 도구 ↗"),
+    ("https://ax360.kr/national-ax-project/card", "AX 사업 찾기 ↗"),
+    ("https://ax360.kr/national-ai-resource/model", "AX 자원 찾기 ↗"),
+    ("https://ax360.kr/private-ai-company/heatmap", "AI 기업 찾기 ↗"),
+    ("https://axboard.aigov.go.kr/", "AI 정부실험실 ↗"),
+    ("https://aitestbed.kr/main-page", "모두의 AI 실험실 ↗"),
+)
+
+EXTERNAL_BLOCK = re.compile(r'(?P<indent>[ \t]*)<nav class="site-nav site-nav--external"[^>]*>.*?</nav>', re.S)
 NAV_BLOCK = re.compile(r'(?P<indent>[ \t]*)<nav class="site-nav"[^>]*>.*?</nav>', re.S)
 
 
-def render_nav(page_name: str, indent: str = "    ") -> str:
+def render_nav(page_name: str, indent: str = "    ", prefix: str = "") -> str:
+    """주요 메뉴. prefix는 하위 폴더 페이지용('../' — 사례 상세 페이지)."""
     current = "./" if page_name == "index.html" else page_name
     links = []
     for href, label in NAV:
         mark = ' aria-current="page"' if href == current else ""
-        links.append(f'{indent}  <a href="{href}"{mark}>{label}</a>')
+        target = (prefix or "./") if href == "./" else prefix + href
+        links.append(f'{indent}  <a href="{target}"{mark}>{label}</a>')
     return f'{indent}<nav class="site-nav" aria-label="주요 메뉴">\n' + "\n".join(links) + f"\n{indent}</nav>"
 
 
+def render_external(indent: str = "    ") -> str:
+    links = [f'{indent}  <a href="{href}" target="_blank" rel="noopener">{label}</a>' for href, label in EXTERNAL]
+    return (f'{indent}<nav class="site-nav site-nav--external" aria-label="관련 사이트">\n'
+            + "\n".join(links) + f"\n{indent}</nav>")
+
+
 def _synced(text: str, page_name: str) -> str:
-    return NAV_BLOCK.sub(lambda m: render_nav(page_name, m.group("indent")), text, count=1)
+    text = NAV_BLOCK.sub(lambda m: render_nav(page_name, m.group("indent")), text, count=1)
+    return EXTERNAL_BLOCK.sub(lambda m: render_external(m.group("indent")), text, count=1)
 
 
 def needs_sync(page: Path) -> bool:

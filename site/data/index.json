@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-09-30",
- "quarter": "2026Q3",
+ "generated_at": "2026-10-01",
+ "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
  "total_cases": 493,
  "total_champions": 215,
  "community": {
-  "members": 2341,
-  "kakao_week": 5196,
-  "kakao_total_observed": 42735,
+  "members": 2342,
+  "kakao_week": 4739,
+  "kakao_total_observed": 42740,
   "threads_observed": 317
  },
  "certified_champions": 5,
@@ -1638,7 +1638,7 @@
   ]
  },
  "domestic_model_rate": 0.065,
- "local_model_rate": 0.25,
+ "local_model_rate": 0.259,
  "model_known": 108,
  "license_tagged": 380,
  "license_stated_rate": 0.487,

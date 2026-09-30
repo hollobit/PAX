@@ -58,5 +58,8 @@ def load_reviews(path: Path, case_ids: set) -> dict:
     return doc
 
 
-def save_reviews(path: Path, doc: dict) -> None:
+def save_reviews(path: Path, doc: dict, case_ids: set | None = None) -> None:
+    """검증을 통과한 문서만 쓴다(case_ids를 주면 사례 대조까지). 읽을 때만 검증하면 깨진 판정이 원장에 남는다."""
+    for r in doc.get("reviews", []):
+        validate_review(r, case_ids if case_ids is not None else {r.get("case_id")})
     write_json(path, doc)

@@ -31,3 +31,20 @@ def test_repository_pages_are_in_sync():
 def test_every_nav_target_exists():
     for href, _ in sync_nav.NAV:
         assert (SITE / ("index.html" if href == "./" else href)).exists(), href
+
+
+def test_case_pages_use_the_same_menus_with_parent_prefix():
+    # 사례 페이지(site/case/*.html)는 한 단계 아래라 '../'를 붙인 같은 메뉴를 쓴다
+    html = sync_nav.render_nav("case", prefix="../")
+    assert '<a href="../">사례 아카이브</a>' in html and '<a href="../news.html">공유 뉴스</a>' in html
+    assert 'aria-current' not in html
+    import build_case_pages
+    assert sync_nav.render_nav("case", "    ", "../") in build_case_pages.TEMPLATE.replace("{{", "{").replace("}}", "}") \
+        or "{nav}" in build_case_pages.TEMPLATE
+
+
+def test_external_menu_is_single_sourced():
+    ext = sync_nav.render_external("    ")
+    assert ext.count('target="_blank" rel="noopener"') == len(sync_nav.EXTERNAL)
+    stale = [p.name for p in sorted(SITE.glob("*.html")) if sync_nav.needs_sync(p)]
+    assert not stale

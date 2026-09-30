@@ -2,7 +2,6 @@
 
 사용법: PYTHONPATH=scripts python3 scripts/build_eval_data.py <xlsx 경로>
 """
-import datetime
 import json
 import sys
 from pathlib import Path
@@ -92,6 +91,28 @@ def derive_audience(case: dict) -> str:
     return "미상"
 
 
+def merge_additions(cases: list, additions: list) -> tuple[list, list]:
+    """엑셀 평가 뒤에 보충 평가를 잇는다. 이미 있는 id(엑셀·앞선 보충분)는 건너뛰고 경고를 돌려준다 —
+    같은 id가 두 번 들어가면 대시보드에 한 사례가 두 줄로 보이고 집계가 부풀려진다."""
+    merged = list(cases)
+    seen = {c["id"] for c in cases}
+    from_excel = set(seen)
+    warnings = []
+    for raw in additions:
+        cid = raw["id"]
+        if cid in seen:
+            where = "엑셀에 이미 존재" if cid in from_excel else "보충분 안에서 중복"
+            warnings.append(f"보충 평가 {cid}(no {raw.get('no')})는 {where} — 건너뜀")
+            continue
+        seen.add(cid)
+        case = {f: raw[f] for f in FIELDS}
+        case["tool_type"] = derive_tool_type(case)
+        case["audience"] = derive_audience(case)
+        case["p"] = raw.get("p") or derive_p_axis(case)
+        merged.append(case)
+    return merged, warnings
+
+
 def main() -> int:
     if len(sys.argv) != 2:
         print("사용법: python3 scripts/build_eval_data.py <xlsx>", file=sys.stderr)
@@ -120,20 +141,14 @@ def main() -> int:
         except json.JSONDecodeError as exc:
             print(f"오류: 보충 평가 파일 파싱 실패 — {exc}", file=sys.stderr)
             return 1
-        existing_ids = {c["id"] for c in cases}
-        for raw in additions:
-            missing = [f for f in FIELDS if f not in raw]
-            if missing:
-                print(f"오류: 보충 평가 {raw.get('id', '?')} 필드 누락 — {missing}", file=sys.stderr)
-                return 1
-            if raw["id"] in existing_ids:
-                print(f"경고: 보충 평가 {raw['id']}는 엑셀에 이미 존재 — 건너뜀", file=sys.stderr)
-                continue
-            case = {f: raw[f] for f in FIELDS}
-            case["tool_type"] = derive_tool_type(case)
-            case["audience"] = derive_audience(case)
-            case["p"] = raw.get("p") or derive_p_axis(case)
-            cases.append(case)
+        missing = [(raw.get("id", "?"), [f for f in FIELDS if f not in raw]) for raw in additions]
+        missing = [(i, m) for i, m in missing if m]
+        if missing:
+            print(f"오류: 보충 평가 {missing[0][0]} 필드 누락 — {missing[0][1]}", file=sys.stderr)
+            return 1
+        cases, warnings = merge_additions(cases, additions)
+        for w in warnings:
+            print(f"경고: {w}", file=sys.stderr)
 
     # 안전 프로필 6항목 표준 골격 (로드맵 2-6): 서술이 없으면 '미확인'을 명시한다 —
     # 미확인 비율 자체가 대시보드 KPI가 된다.

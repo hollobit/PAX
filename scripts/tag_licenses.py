@@ -10,7 +10,6 @@
 """
 import json
 import re
-from pathlib import Path
 import subprocess
 import sys
 import urllib.parse
@@ -18,6 +17,8 @@ import urllib.request
 
 
 from pax.jsonio import read_json, write_json  # noqa: E402
+from pax.http import curl_json, gh_api  # noqa: E402
+from pax.ledger import require_valid_cases  # noqa: E402
 from pax.timeutil import kst_today  # noqa: E402
 
 # 조회 실패로 볼 오류 — 네트워크·도구 부재·응답 형식. 그 밖의 예외(코드 결함)는 드러나게 둔다.
@@ -29,14 +30,10 @@ GITLAB_HOST = "gitlab.aigov.go.kr"
 
 def github_license(repo: str):
     """owner/name → (spdx | '명시 없음' | None). None은 확인 실패."""
+    info = gh_api(f"repos/{repo}", jq="{spdx: .license.spdx_id, name: .license.name}")
+    if not isinstance(info, dict):
+        return None
     try:
-        out = subprocess.run(
-            ["gh", "api", f"repos/{repo}", "--jq",
-             '{spdx: .license.spdx_id, name: .license.name}'],
-            capture_output=True, text=True, timeout=30)
-        if out.returncode != 0:
-            return None
-        info = json.loads(out.stdout)
         spdx = info.get("spdx")
         if spdx is None:
             return "명시 없음"
@@ -53,12 +50,10 @@ def gitlab_license(url: str):
         return None
     path = urllib.parse.quote(m.group(1).rstrip("/"), safe="")
     api = f"https://{GITLAB_HOST}/api/v4/projects/{path}?license=true"
+    info = curl_json(api, timeout=15)
+    if not isinstance(info, dict):
+        return None
     try:
-        out = subprocess.run(["curl", "-sL", "--max-time", "15", api],
-                             capture_output=True, text=True, timeout=30)
-        if out.returncode != 0 or not out.stdout.strip():
-            return None
-        info = json.loads(out.stdout)
         if "id" not in info:  # 404/비공개 등
             return None
         lic = info.get("license")
@@ -119,6 +114,7 @@ def main():
         c["license_checked"] = today
         tagged += 1
         print(f"  {lic:<20} [{kind}] {c['title'][:44]}")
+    require_valid_cases(data)  # 원장 전체를 다시 쓰기 전에 — 한 건이라도 깨졌으면 쓰지 않는다
     write_json(CASES, data)
     print(f"태깅 {tagged}건 / 기존 유지 {skipped}건 / 확인 실패 {failed}건 / 총 {len(cases)}건")
 

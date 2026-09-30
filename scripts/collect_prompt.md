@@ -1,8 +1,9 @@
 # PAX 일일 수집 절차 (크론 세션용)
 
 작업 디렉토리: 이 저장소의 루트(모든 명령은 루트에서 실행한다).
-오늘 날짜를 `TODAY`(YYYY-MM-DD)로 둔다. 모든 단계는 실패해도 다음 단계로 진행하고,
-마지막에 log.md에 결과를 기록한다.
+오늘 날짜를 `TODAY`(YYYY-MM-DD, 한국 시간)로 둔다. 수집 단계(§1~§4)는 한 소스가 실패해도 다음 소스로
+진행하고 마지막에 log.md에 결과를 기록한다. 단, §5의 `pax.run post-collect`는 실패하면 멈추며,
+그때는 커밋하지 않는다(§6) — 산출물이 반만 새것이라 공개하면 수치가 서로 어긋난다.
 
 ## 0. 준비
 - **크론 점검 (매 실행 필수)**: 먼저 CronList로 실제 등록 상태를 본다 — 세션 크론은 세션이 끝나면
@@ -134,11 +135,12 @@ PYTHONPATH=scripts python3 -m pax.merge data/incoming/TODAY.json
 ```bash
 PYTHONPATH=scripts python3 -m pax.run post-collect   # 순서만 보려면 --dry-run
 ```
-라이선스 태깅 → 평가 빌드 → MCP 공개본 → (없는 썸네일만) 썸네일 → 사이트 사본·경량판·WebP →
-챔피언 → 사례 페이지 → 대화량·가입자 → 동영상 → 뉴스 → 지수 → 현황판 이력 → 자산 스탬프.
+원장 교차 점검 → 라이선스 태깅 → 평가 빌드 → MCP 공개본 → (없는 썸네일만) 썸네일 → 사이트 사본·경량판·WebP →
+챔피언 → 사례 페이지 → 대화량·가입자 → 동영상 → 뉴스 → 지수 → 현황판 이력 → 메뉴 동기화 → 자산 스탬프.
 순서는 `scripts/pax/run.py`의 POST_COLLECT가 정본이고 테스트가 지킨다(읽는 쪽이 만드는 쪽보다
 먼저 돌면 새 사례가 한 회차 동안 '평가 데이터 없음'으로 공개된다). 한 단계가 실패하면 거기서
-멈추고 종료 코드를 돌려준다 — 원인을 log에 적고, 고친 뒤 다시 돌린다. 분기 말에는
+멈추고 종료 코드를 돌려주며 저장소 루트에 `.pax-run-failed`(실패 단계)를 남긴다 — 원인을 log에 적고,
+고친 뒤 `python3 -m pax.run post-collect --from <단계>`로 이어서 돌린다. 끝까지 성공하면 표식이 지워진다. 분기 말에는
 `python3 scripts/build_index.py --snapshot`을 따로 한 번 더 돌린다.
 - 산출물은 시각만 바뀌면 다시 쓰지 않는다 — 사례·지표가 그대로인 회차는 커밋할 것이 없다(§6).
 - 썸네일 실패한 URL은 무시해도 된다 — 사이트가 설명문으로 폴백한다.
@@ -147,14 +149,15 @@ PYTHONPATH=scripts python3 -m pax.run post-collect   # 순서만 보려면 --dry
   형식: "OO 사례 N건 추가 — 대표 사례 2~3개 제목 (총 M건)". 닉네임 금지.
   기능 변경도 같은 자리에 적는다(사용자 지시 2026-09-11).
 
-### 주간 점검 (월요일 오전 실행분에서만)
+### 주간 점검 (월요일 오전 실행분에서만 — **`pax.run post-collect`보다 먼저** 한다)
+헬스 점검·MCP 재검은 원장을 고친다. 후처리 전에 해야 같은 회차에 사이트까지 반영된다.
 - `python3 scripts/check_health.py` — 전체 사례 링크 생존·유지보수 상태 재점검 (약 3분).
   끊긴 링크가 새로 나오면 log에 기록한다.
 - 카카오 대화량 백필: `kakaocli messages --chat-id <id> --since 8d --limit 20000 --json`으로
   지난주 전체를 재조회해 data/raw/TODAY-kakao-backfill.json으로 저장 —
   수집 창(1d·개수 제한)에 잘린 메시지를 원장에 보정한다(build_community_stats가 자동 반영).
-- MCP CVE 재검: `PYTHONPATH=scripts python3 scripts/check_mcp.py --audit-only` 후
-  build_mcp_review·build_case_pages 재실행 — 주의 항목 변화는 log에 기록.
+- MCP CVE 재검: `PYTHONPATH=scripts python3 scripts/check_mcp.py --audit-only` — 공개본·사례 배지는
+  이어지는 `pax.run post-collect`가 다시 만든다. 주의 항목 변화는 log에 기록.
 - 공공 깃랩 스타 조사: `https://gitlab.aigov.go.kr/api/v4/projects?order_by=star_count&sort=desc&per_page=100`
   을 curl로 조회하되 **스타순 상위 200개(2페이지)**를 훑어(2026-09-06 사용자 지시로 확대) ★1 이상 중 실체 있는 미등재(전체 사례의 link/case_url/mirror_url과 대조)를 찾는다.
   기등재 사례의 미러면 mirror_url로 병기하고, **순수 신규는 자동 등재한다**(사용자 지시 2026-08-31):
@@ -169,6 +172,7 @@ git add data/cases.json data/community_stats.json data/mcp_reviews.json docs/nat
 git commit -m "feat: 사례 N건 추가 — 대표 제목 (총 M건)"   # 신규 0건이면 "chore: 지표 갱신 (TODAY 오전|오후|야간) — 주요 수치"
 git push
 ```
+- **저장소 루트에 `.pax-run-failed`가 있으면 커밋하지 않는다** — 후처리가 중간에 멈춘 상태다(§5).
 - 변경이 없으면 커밋하지 않는다. 변경이 있으면 **푸시까지 반드시 완료**한다 — 사용자 지시(2026-08-30):
   회차를 미커밋·미푸시 상태로 끝내지 않는다. 절차서·스크립트를 고쳤으면 같은 회차에 함께 커밋한다.
   `main`도 동기화한다: `git push origin feat/pax-archive:main` (두 브랜치 동일 유지 관행).

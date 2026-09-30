@@ -15,14 +15,13 @@ from __future__ import annotations
 
 import datetime
 import glob
-import json
 import os
 import re
-import subprocess
 import sys
 from collections import defaultdict
 
 from pax.jsonio import load_json, write_json, write_json_if_changed  # noqa: E402
+from pax.http import curl_json  # noqa: E402
 from pax.timeutil import kst_date  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -78,13 +77,8 @@ def load_cache() -> dict:
 def fetch_meta(vid: str) -> dict | None:
     """oEmbed로 제목·채널을 받는다. 실패하면 None(비공개·삭제·지역제한)."""
     url = f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={vid}&format=json"
-    try:
-        out = subprocess.run(
-            ["/usr/bin/curl", "-s", "--max-time", "20", url],
-            capture_output=True, text=True, timeout=30,
-        ).stdout
-        data = json.loads(out)
-    except (OSError, subprocess.TimeoutExpired, json.JSONDecodeError):
+    data = curl_json(url)
+    if not isinstance(data, dict):
         return None  # 비공개·삭제·지역제한 영상은 oEmbed가 JSON을 주지 않는다
     title = (data.get("title") or "").strip()
     if not title:
