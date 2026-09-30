@@ -5,7 +5,7 @@ AI Transformation) 사례를 **하루 3회(07:00·15:00·23:00)** 수집하고, 
 결정적 스크립트가 검증·병합해 GitHub Pages로 공개하는 정적 아카이브입니다.
 
 - 사이트: **https://hollobit.github.io/PAX/**
-- 2026-08-30 기준 사례 240건 · 챔피언 109명 · 오픈채팅 참여자 1,400여 명
+- 사례·챔피언·오픈채팅 참여자 수는 사이트 첫 화면과 [관측소](https://hollobit.github.io/PAX/observatory.html)에 회차마다 갱신된다
 
 ## 사이트 구성
 

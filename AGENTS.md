@@ -16,7 +16,7 @@ PAX = Threads `공공AX` 태그 + 카카오톡 오픈채팅 "공공AX 네트워�
 |---|---|---|
 | `data/cases.json` | 사례 원장(append-only, `{updated_at, cases[]}`) | 공개 |
 | `data/community_stats.json` | 커뮤니티 활력 지표 원장 | 공개 |
-| `data/raw/`, `data/incoming/`, `data/rejected/`, `data/state.json`, `log.md`, `data/private/`, `data/champion_profiles.json`, `.claude/` | 수집 원문·중간 산출·세션 상태·운영 로그 | **비공개(.gitignore)** |
+| `data/raw/`, `data/incoming/`, `data/rejected/`, `data/state.json`, `log.md`, `data/private/`, `data/champion_profiles.json`, `data/reviews/`·`data/review.html`, `.claude/` | 수집 원문·중간 산출·세션 상태·운영 로그 | **비공개(.gitignore)** |
 | `scripts/collect_prompt.md` | **일일 수집 절차서(크론 세션이 그대로 따름)** | |
 | `scripts/mcp_audit_prompt.md` | MCP 사례 LLM 감사 절차(축 4·5) | |
 | `config/rooms.json` | 수집 대상(Threads 태그·카카오 방 이름) | |
@@ -51,7 +51,10 @@ PAX = Threads `공공AX` 태그 + 카카오톡 오픈채팅 "공공AX 네트워�
 ## 4. 파이프라인 명령
 
 순서·명령·주간 점검·MCP 검증은 `scripts/collect_prompt.md` §4~§5가 정본이다(크론 세션이 그대로 따르며,
-이 파일과 중복 유지하지 않는다). 테스트: `PYTHONPATH=scripts python3 -m pytest tests/`.
+이 파일과 중복 유지하지 않는다). 수집 후처리는 `PYTHONPATH=scripts python3 -m pax.run post-collect` 한 명령이고,
+빌드 순서는 `scripts/pax/run.py`가 정본이다. 테스트: `python3 -m pytest`. 공개 저장소 점검(비공개 경로·채팅방 ID·
+비밀 키·깨진 JSON): `python3 scripts/check_repo.py` — 둘 다 푸시마다 CI(`.github/workflows/ci.yml`)가 돌린다.
+상단 메뉴는 `scripts/sync_nav.py`의 NAV 한 곳에서 고친다.
 
 ## 5. 사례 스키마
 
