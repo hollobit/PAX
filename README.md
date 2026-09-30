@@ -12,12 +12,15 @@ AI Transformation) 사례를 **하루 3회(07:00·15:00·23:00)** 수집하고, 
 | 페이지 | 내용 |
 |---|---|
 | [사례 아카이브](https://hollobit.github.io/PAX/) | 카드·목록·태그 보기, 검색·필터(기관유형·업무·지역·실행환경), 북마크, CSV/PDF 내보내기 |
+| [3D PAX](https://hollobit.github.io/PAX/pax3d.html) · [도시 입체지도](https://hollobit.github.io/PAX/city3d/) | 미니어처 대한민국에서 사례를 건물로 탐험, 여섯 광역 도시·경기 시군의 실제 건물·지형 3D 지도와 거리 산책 |
 | [AX 수준 평가](https://hollobit.github.io/PAX/dashboard.html) | 4축 평가 방법론·성숙도 사다리·사례별 판정 |
 | [데이터 관측소](https://hollobit.github.io/PAX/observatory.html) | 공공AX 지수, MCP·저장소·라이선스·모델 현황, 커뮤니티 활력 지표 |
 | [격차 지도](https://hollobit.github.io/PAX/gap-map.html) | 광역·중앙행정기관별 관측 현황 |
 | [전이 플레이북](https://hollobit.github.io/PAX/playbook.html) | 사례의 타 기관 재사용 경로·자가진단 |
 | [챔피언](https://hollobit.github.io/PAX/champions.html) | 공개 프로필 기반 공공AX 개발자 디렉토리(인증 티어 연동) |
 | [MCP 검증](https://hollobit.github.io/PAX/mcp-review.html) | MCP 사례 6축 보안·안전 검증 매트릭스 |
+| [AX 성숙도 개념](https://hollobit.github.io/PAX/ax-maturity-infographic.html) | 공공 AX 단계(Ready→Enabled→First→Native) 인포그래픽 |
+| [공유 뉴스](https://hollobit.github.io/PAX/news.html) · [공유 동영상](https://hollobit.github.io/PAX/videos.html) | 커뮤니티에 공유된 기사·보도자료와 영상(공유 시점·횟수) |
 | [안내서·가이드라인](https://hollobit.github.io/PAX/guidelines.html) · [변경 기록](https://hollobit.github.io/PAX/changelog.html) | 기관 공개 문서 모음, 사례 추가 이력 |
 
 ## 익명화 정책

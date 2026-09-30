@@ -41,7 +41,7 @@ PAX = Threads `공공AX` 태그 + 카카오톡 오픈채팅 "공공AX 네트워�
 6. **크론은 세션 전용이다.** CronCreate 작업은 세션이 끝나면 사라지고 7일 후 만료된다.
    새 세션에서는 `data/state.json`의 `cron.registered_at`보다 **`CronList` 실측**을 먼저 보고,
    비어 있으면 07:00/15:00/23:00 세 건을 즉시 재등록하고 state·log에 기록한다.
-7. **커밋 규칙**: `<type>: <한국어 설명>` (feat/fix/docs/chore/perf/ci/test). 사례 추가 커밋은 끝에 `(총 N건)`.
+7. **커밋 규칙**: `<type>: <한국어 설명>` (feat/fix/refactor/docs/chore/perf/ci/test). 사례 추가 커밋은 끝에 `(총 N건)`.
    정기 수집 커밋은 `data/cases.json data/community_stats.json data/mcp_reviews.json docs/native/eval_additions.json
    site/data site/thumbs site/case`와, 그 회차에 고친 절차서·스크립트만 담는다. 변경 없으면 커밋하지 않는다.
    푸시 대상은 `main`(Pages 워크플로가 `site/**` 변경 시 배포).
@@ -54,7 +54,12 @@ PAX = Threads `공공AX` 태그 + 카카오톡 오픈채팅 "공공AX 네트워�
 이 파일과 중복 유지하지 않는다). 수집 후처리는 `PYTHONPATH=scripts python3 -m pax.run post-collect` 한 명령이고,
 빌드 순서는 `scripts/pax/run.py`가 정본이다. 테스트: `python3 -m pytest`. 공개 저장소 점검(비공개 경로·채팅방 ID·
 비밀 키·깨진 JSON): `python3 scripts/check_repo.py` — 둘 다 푸시마다 CI(`.github/workflows/ci.yml`)가 돌린다.
-상단 메뉴는 `scripts/sync_nav.py`의 NAV 한 곳에서 고친다.
+상단 메뉴(주요·관련 사이트)는 `scripts/sync_nav.py`의 NAV·EXTERNAL 한 곳에서 고친다(사례 상세 페이지도 같은 목록).
+원장 교차 점검: `PYTHONPATH=scripts python3 -m pax.ledger`. 카카오 워치독 등록(새 기기): `bash scripts/launchd/install_watchdog.sh`.
+`scripts/collect_receiver.py`는 브라우저 수집분을 로컬 파일로 받는 임시 수신 서버다(확장 출력 차단으로 본문을
+못 넘길 때의 대안 — 정기 절차에서는 쓰지 않는다).
+배포는 CI가 main에서 성공한 뒤에만 돈다(`pages.yml`). `freshness.yml`이 6시간마다 마지막 데이터 커밋이
+14시간을 넘었는지 보고, 넘으면 실패 알림을 보낸다 — 세션 크론이 사라졌다는 신호다.
 
 ## 5. 사례 스키마
 
