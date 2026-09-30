@@ -1,4 +1,5 @@
 // 목록 내보내기(CSV / PDF) — 메인 목록(app.js)이 지금 보이는 결과를 넘겨 부른다.
+import { todayKst } from './pax-dom.js?v=b57d2715';
 import { caseTargetUrl } from './pax-urls.js?v=1e5e0b4f';
 
 export function createExportToolbar(results, evalById) {
@@ -52,7 +53,7 @@ function exportCsv(results, evalById) {
   const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = `공공AX-사례목록-${new Date().toISOString().slice(0, 10)}.csv`;
+  a.download = `공공AX-사례목록-${todayKst()}.csv`;
   document.body.appendChild(a);
   a.click();
   a.remove();
@@ -71,7 +72,7 @@ function exportPdf(results) {
   const h1 = document.createElement('h1');
   h1.textContent = '모두의 공공AX 사례 아카이브';
   const meta = document.createElement('p');
-  meta.textContent = `${new Date().toISOString().slice(0, 10)} 기준 · ${results.length}건 · hollobit.github.io/PAX`;
+  meta.textContent = `${todayKst()} 기준 · ${results.length}건 · hollobit.github.io/PAX`;
   area.append(h1, meta);
 
   const table = document.createElement('table');

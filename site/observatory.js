@@ -1,6 +1,7 @@
 'use strict';
 
-import { el, fetchJson, fetchJsonOr } from './pax-dom.js?v=6dfb9f58';
+import { gauge, makeDelta, num, pairBars, spark } from './observatory-widgets.js?v=450c655b';
+import { el, fetchJson, fetchJsonOr } from './pax-dom.js?v=b57d2715';
 
 /**
  * 관측소 — 공공 AX 지수 · 데이터 AI 접근성 매트릭스 · 공공 깃랩 브릿지
@@ -41,6 +42,11 @@ function isMcpCase(c) {
 function matchesDomain(c, domain) {
   const text = (c.title + ' ' + c.summary + ' ' + (c.tags || []).join(' ')).toLowerCase();
   return domain.keywords.some((k) => text.includes(k));
+}
+
+/** 'YYYY-MM-DD'(한국 날짜)의 요일 한 글자 */
+function weekdayKo(ymd) {
+  return ['일', '월', '화', '수', '목', '금', '토'][new Date(`${ymd}T00:00:00+09:00`).getDay()];
 }
 
 function pct(v) {
@@ -104,128 +110,7 @@ function renderDashboard({ idx, cases: allCases, community, champions, history }
 
   const grid = document.getElementById('dash-grid');
   if (!grid) return;
-  const NS = 'http://www.w3.org/2000/svg';
-  const svgEl = (tag, attrs) => {
-    const n = document.createElementNS(NS, tag);
-    Object.entries(attrs || {}).forEach(([k, v]) => n.setAttribute(k, v));
-    return n;
-  };
-  const num = (v) => (v == null ? '—' : Number(v).toLocaleString('ko-KR'));
-  const rate = (v) => (v == null ? '—' : `${(v * 100).toFixed(1)}%`);
-
-  // 타일 골격
-  function tile(label, opts) {
-    const box = document.createElement(opts && opts.href ? 'a' : 'div');
-    box.className = 'dash-tile' + (opts && opts.tone ? ` dash-tile--${opts.tone}` : '');
-    if (opts && opts.href) box.href = opts.href;
-    const head = el('p', 'dash-tile__label', label);
-    box.appendChild(head);
-    return box;
-  }
-  function sub(box, text) { box.appendChild(el('p', 'dash-tile__sub', text)); }
-
-  // 직전 기록일 대비 증감. 값이 같거나 비교할 이전 값이 없으면 아무것도 붙이지 않는다 —
-  // '0'이나 '—'를 채워 넣으면 변화가 없다는 뜻인지 자료가 없다는 뜻인지 구분되지 않는다.
-  function delta2(box, key, opts) { delta(box, key, opts); return box; }
-
-  function delta(box, key, opts) {
-    const o = opts || {};
-    if (!hist || !histPrev) return;
-    const now = hist[key];
-    const was = histPrev[key];
-    if (now == null || was == null) return;
-    const diff = now - was;
-    if (!diff) return;
-    const up = diff > 0;
-    const txt = o.pct
-      ? `${up ? '▲' : '▼'}${Math.abs(diff * 100).toFixed(1)}%p`
-      : `${up ? '▲' : '▼'}${num(Math.abs(diff))}`;
-    const badge = el('span', `dash-delta ${up ? 'dash-delta--up' : 'dash-delta--down'}`, txt);
-    badge.title = `직전 기록(${histPrevDate}) 대비 ${up ? '증가' : '감소'}`
-      + (hist.source === '복원' || (histPrev.source === '복원') ? ' · 복원값 포함' : '');
-    const head = box.querySelector('.dash-tile__label');
-    if (head) head.appendChild(badge);
-  }
-
-  // ① 링 게이지 — 0~100% 비율
-  function gauge(label, value, subText, opts) {
-    const o = opts || {};
-    const box = tile(label, o);
-    const size = 104, r = 42, cx = size / 2, cy = size / 2;
-    const circ = 2 * Math.PI * r;
-    const pctv = value == null ? 0 : Math.max(0, Math.min(1, value));
-    const svg = svgEl('svg', { viewBox: `0 0 ${size} ${size}`, class: 'dash-gauge', role: 'img',
-      'aria-label': `${label} ${rate(value)}` });
-    svg.appendChild(svgEl('title', {})).textContent = `${label} — ${rate(value)} (${subText})`;
-    svg.appendChild(svgEl('circle', { cx, cy, r, fill: 'none', class: 'dash-gauge__track', 'stroke-width': 9 }));
-    const arc = svgEl('circle', { cx, cy, r, fill: 'none', 'stroke-width': 9, 'stroke-linecap': 'round',
-      class: 'dash-gauge__value', transform: `rotate(-90 ${cx} ${cy})`,
-      'stroke-dasharray': `${(circ * pctv).toFixed(2)} ${circ.toFixed(2)}` });
-    svg.appendChild(arc);
-    const t = svgEl('text', { x: cx, y: cy + 1, class: 'dash-gauge__text', 'text-anchor': 'middle',
-      'dominant-baseline': 'middle' });
-    t.textContent = rate(value);
-    svg.appendChild(t);
-    box.appendChild(svg);
-    sub(box, subText);
-    if (o.flag) box.appendChild(el('p', 'dash-flag', o.flag));
-    return box;
-  }
-
-  // ② 스파크라인 — 추세가 있는 규모
-  function spark(label, value, unit, series, subText, opts) {
-    const box = tile(label, opts);
-    const v = el('p', 'dash-tile__value', num(value));
-    if (unit) v.appendChild(el('span', 'dash-tile__unit', unit));
-    box.appendChild(v);
-    if (series && series.length > 1) {
-      const w = 132, h = 34, pad = 2;
-      const ys = series.map((d) => d[1]);
-      const min = Math.min(...ys), max = Math.max(...ys), span = (max - min) || 1;
-      const pt = (d, i) => [
-        pad + (i * (w - pad * 2)) / (series.length - 1),
-        h - pad - ((d[1] - min) / span) * (h - pad * 2),
-      ];
-      const pts = series.map(pt);
-      const svg = svgEl('svg', { viewBox: `0 0 ${w} ${h}`, class: 'dash-spark', role: 'img',
-        'aria-label': `${label} 추이 — ${series[0][0]} ${num(series[0][1])} → ${series[series.length - 1][0]} ${num(value)}` });
-      svg.appendChild(svgEl('title', {})).textContent =
-        `${series[0][0]} ${num(series[0][1])} → ${series[series.length - 1][0]} ${num(value)}`;
-      svg.appendChild(svgEl('path', { class: 'dash-spark__area',
-        d: `M ${pts.map((p) => p.join(' ')).join(' L ')} L ${pts[pts.length - 1][0]} ${h} L ${pts[0][0]} ${h} Z` }));
-      svg.appendChild(svgEl('path', { class: 'dash-spark__line', fill: 'none', 'stroke-width': 2,
-        'stroke-linejoin': 'round', 'stroke-linecap': 'round',
-        d: `M ${pts.map((p) => p.join(' ')).join(' L ')}` }));
-      const last = pts[pts.length - 1];
-      svg.appendChild(svgEl('circle', { cx: last[0], cy: last[1], r: 3, class: 'dash-spark__dot' }));
-      box.appendChild(svg);
-    }
-    sub(box, subText);
-    return box;
-  }
-
-  // ③ 쌍 막대 — 같은 척도로 비교 가능한 두 값 (별 합계는 축 밖 값으로 병기)
-  function pairBars(label, rows, subText, opts) {
-    const box = tile(label, opts);
-    const max = Math.max(...rows.map((r) => r.v)) || 1;
-    const wrap = el('div', 'dash-bars');
-    rows.forEach((r) => {
-      const row = el('div', 'dash-bars__row');
-      row.appendChild(el('span', 'dash-bars__name', r.name));
-      const track = el('span', 'dash-bars__track');
-      const fill = el('span', 'dash-bars__fill');
-      fill.style.width = `${Math.max(4, (r.v / max) * 100)}%`;
-      track.appendChild(fill);
-      track.title = `${r.name} ${num(r.v)}개 · 스타 ${num(r.stars)}`;
-      row.appendChild(track);
-      row.appendChild(el('span', 'dash-bars__val', `${num(r.v)}개`));
-      row.appendChild(el('span', 'dash-bars__star', `★${num(r.stars)}`));
-      wrap.appendChild(row);
-    });
-    box.appendChild(wrap);
-    sub(box, subText);
-    return box;
-  }
+  const delta2 = makeDelta({ hist, histPrev, histPrevDate });
 
   const repo = idx.repo_stats || {};
   const gh = repo.github || {}; const gl = repo.gitlab || {};
@@ -260,91 +145,93 @@ function renderDashboard({ idx, cases: allCases, community, champions, history }
     `${num(glLic.total)}건 중 ${num(glLic.total - glLic.stated)}건 미표시`,
     { href: '#licenses', tone: 'watch', flag: '주의' }), 'gitlab_license_none_rate', { pct: true }));
 
-  // ── 분류 구성 패널 ──
-  // 형태: 순위 막대. 10~20개 항목에 카테고리 색을 쓰면 팔레트가 무너지므로
-  // 색은 크기 한 가지 뜻만 담고, 구분은 각 행의 이름표가 맡는다.
-  const panelsBox = document.getElementById('dash-panels');
-  if (panelsBox && allCases.length) {
-    function tally(key) {
-      const m = new Map();
-      allCases.forEach((c) => {
-        const v = c[key];
-        if (v) m.set(v, (m.get(v) || 0) + 1);
-      });
-      return [...m.entries()].sort((a, b) => b[1] - a[1]);
-    }
-
-    function panel(title, rows, total, note, opts) {
-      const o = opts || {};
-      const box = el('div', 'dash-panel');
-      const h = el('p', 'dash-panel__title', title);
-      if (o.href) {
-        const a = el('a', 'dash-panel__more', '자세히 ↓');
-        a.href = o.href;
-        h.appendChild(a);
-      }
-      box.appendChild(h);
-      const max = Math.max(...rows.map((r) => r[1]), 1);
-      const list = el('div', 'dash-rank');
-      rows.forEach(([name, n]) => {
-        const share = total ? (n / total) * 100 : 0;
-        const row = el('div', 'dash-rank__row');
-        row.appendChild(el('span', 'dash-rank__name', name));
-        const track = el('span', 'dash-rank__track');
-        const fill = el('span', 'dash-rank__fill');
-        fill.style.width = `${Math.max(2, (n / max) * 100)}%`;
-        track.appendChild(fill);
-        track.title = `${name} — ${n}건 (${share.toFixed(1)}%)`;
-        row.appendChild(track);
-        row.appendChild(el('span', 'dash-rank__val', `${n}`));
-        row.appendChild(el('span', 'dash-rank__pct', `${share.toFixed(1)}%`));
-        list.appendChild(row);
-      });
-      box.appendChild(list);
-      box.appendChild(el('p', 'dash-panel__note', note));
-      return box;
-    }
-
-    const totalC = allCases.length;
-    panelsBox.appendChild(panel('기관 유형별 구성', tally('org_type'), totalC,
-      `전체 ${num(totalC)}건 기준 · 사례마다 한 가지 유형`, { href: '#ax-index' }));
-    panelsBox.appendChild(panel('업무 분류별 구성', tally('task_category'), totalC,
-      `전체 ${num(totalC)}건 기준 · 도구가 없애는 업무 기준`, { href: 'index.html' }));
-
-    // 분야별 구성 — 첫 화면 분야 칩과 같은 정의(site/case-domains.js)를 쓴다.
-    // 업무 축과 달리 한 사례가 여러 분야에 걸치고 어느 분야에도 안 걸리는 사례도 많아,
-    // 합이 100%를 넘는다는 것과 미분류 수를 함께 밝힌다.
-    const affOf = (c) => champAff.get(c.id) || '';
-    const domainCaseRows = CASE_DOMAINS
-      .map((d) => [d.name, allCases.filter((c) => matchesCaseDomain(c, d.name, affOf(c))).length])
-      .filter(([, n]) => n > 0)
-      .sort((a, b) => b[1] - a[1]);
-    const unclassified = allCases.filter((c) => caseDomainCount(c, affOf(c)) === 0).length;
-    panelsBox.appendChild(panel('분야별 구성', domainCaseRows, totalC,
-      `전체 ${num(totalC)}건 기준 · 도구가 다루는 내용과 기관·만든 사람의 소속을 함께 봅니다 · ` +
-      '한 사례가 여러 분야에 걸칠 수 있어 비율 합은 100%를 넘습니다 · ' +
-      `어느 분야에도 걸리지 않은 사례 ${num(unclassified)}건`,
-      { href: 'index.html' }));
-
-    // 공공데이터 도메인별 MCP — 접근성 매트릭스와 같은 도메인 정의·매칭 규칙을 쓴다
-    const mcpList = allCases.filter(isMcpCase);
-    const domainRows = DATA_DOMAINS
-      .map((d) => [d.name, mcpList.filter((c) => matchesDomain(c, d)).length])
-      .filter(([, n]) => n > 0)
-      .sort((a, b) => b[1] - a[1]);
-    const covered = domainRows.length;
-    const uncovered = DATA_DOMAINS
-      .filter((d) => !mcpList.some((c) => matchesDomain(c, d)))
-      .map((d) => d.name);
-    panelsBox.appendChild(panel('공공데이터 도메인별 MCP', domainRows, mcpList.length,
-      `MCP ${num(mcpList.length)}건 기준 · 도메인 ${covered}/${DATA_DOMAINS.length} 관측 · ` +
-      '한 사례가 여러 도메인에 걸칠 수 있어 비율 합은 100%를 넘습니다' +
-      (uncovered.length ? ` · 미관측: ${uncovered.join('·')}` : ''),
-      { href: '#data-access' }));
-  }
+  renderDashPanels(document.getElementById('dash-panels'), allCases, champAff);
 
   const asof = document.getElementById('dash-asof');
   if (asof && idx.generated_at) asof.textContent = `${idx.generated_at} 기준`;
+}
+
+// ── 분류 구성 패널 ──
+// 형태: 순위 막대. 10~20개 항목에 카테고리 색을 쓰면 팔레트가 무너지므로
+// 색은 크기 한 가지 뜻만 담고, 구분은 각 행의 이름표가 맡는다.
+function renderDashPanels(panelsBox, allCases, champAff) {
+  if (!panelsBox || !allCases.length) return;
+  function tally(key) {
+    const m = new Map();
+    allCases.forEach((c) => {
+      const v = c[key];
+      if (v) m.set(v, (m.get(v) || 0) + 1);
+    });
+    return [...m.entries()].sort((a, b) => b[1] - a[1]);
+  }
+
+  function panel(title, rows, total, note, opts) {
+    const o = opts || {};
+    const box = el('div', 'dash-panel');
+    const h = el('p', 'dash-panel__title', title);
+    if (o.href) {
+      const a = el('a', 'dash-panel__more', '자세히 ↓');
+      a.href = o.href;
+      h.appendChild(a);
+    }
+    box.appendChild(h);
+    const max = Math.max(...rows.map((r) => r[1]), 1);
+    const list = el('div', 'dash-rank');
+    rows.forEach(([name, n]) => {
+      const share = total ? (n / total) * 100 : 0;
+      const row = el('div', 'dash-rank__row');
+      row.appendChild(el('span', 'dash-rank__name', name));
+      const track = el('span', 'dash-rank__track');
+      const fill = el('span', 'dash-rank__fill');
+      fill.style.width = `${Math.max(2, (n / max) * 100)}%`;
+      track.appendChild(fill);
+      track.title = `${name} — ${n}건 (${share.toFixed(1)}%)`;
+      row.appendChild(track);
+      row.appendChild(el('span', 'dash-rank__val', `${n}`));
+      row.appendChild(el('span', 'dash-rank__pct', `${share.toFixed(1)}%`));
+      list.appendChild(row);
+    });
+    box.appendChild(list);
+    box.appendChild(el('p', 'dash-panel__note', note));
+    return box;
+  }
+
+  const totalC = allCases.length;
+  panelsBox.appendChild(panel('기관 유형별 구성', tally('org_type'), totalC,
+    `전체 ${num(totalC)}건 기준 · 사례마다 한 가지 유형`, { href: '#ax-index' }));
+  panelsBox.appendChild(panel('업무 분류별 구성', tally('task_category'), totalC,
+    `전체 ${num(totalC)}건 기준 · 도구가 없애는 업무 기준`, { href: 'index.html' }));
+
+  // 분야별 구성 — 첫 화면 분야 칩과 같은 정의(site/case-domains.js)를 쓴다.
+  // 업무 축과 달리 한 사례가 여러 분야에 걸치고 어느 분야에도 안 걸리는 사례도 많아,
+  // 합이 100%를 넘는다는 것과 미분류 수를 함께 밝힌다.
+  const affOf = (c) => champAff.get(c.id) || '';
+  const domainCaseRows = CASE_DOMAINS
+    .map((d) => [d.name, allCases.filter((c) => matchesCaseDomain(c, d.name, affOf(c))).length])
+    .filter(([, n]) => n > 0)
+    .sort((a, b) => b[1] - a[1]);
+  const unclassified = allCases.filter((c) => caseDomainCount(c, affOf(c)) === 0).length;
+  panelsBox.appendChild(panel('분야별 구성', domainCaseRows, totalC,
+    `전체 ${num(totalC)}건 기준 · 도구가 다루는 내용과 기관·만든 사람의 소속을 함께 봅니다 · ` +
+    '한 사례가 여러 분야에 걸칠 수 있어 비율 합은 100%를 넘습니다 · ' +
+    `어느 분야에도 걸리지 않은 사례 ${num(unclassified)}건`,
+    { href: 'index.html' }));
+
+  // 공공데이터 도메인별 MCP — 접근성 매트릭스와 같은 도메인 정의·매칭 규칙을 쓴다
+  const mcpList = allCases.filter(isMcpCase);
+  const domainRows = DATA_DOMAINS
+    .map((d) => [d.name, mcpList.filter((c) => matchesDomain(c, d)).length])
+    .filter(([, n]) => n > 0)
+    .sort((a, b) => b[1] - a[1]);
+  const covered = domainRows.length;
+  const uncovered = DATA_DOMAINS
+    .filter((d) => !mcpList.some((c) => matchesDomain(c, d)))
+    .map((d) => d.name);
+  panelsBox.appendChild(panel('공공데이터 도메인별 MCP', domainRows, mcpList.length,
+    `MCP ${num(mcpList.length)}건 기준 · 도메인 ${covered}/${DATA_DOMAINS.length} 관측 · ` +
+    '한 사례가 여러 도메인에 걸칠 수 있어 비율 합은 100%를 넘습니다' +
+    (uncovered.length ? ` · 미관측: ${uncovered.join('·')}` : ''),
+    { href: '#data-access' }));
 }
 
 // ── 모델 현황 — 의존 분포·구체 모델·국산 채택 (2026-08-29) ──
@@ -353,6 +240,14 @@ function renderModelStatus(idx) {
   const stats = idx.model_stats || { models_top: [], domestic_cases: [] };
   const cards = document.getElementById('model-cards');
   if (!cards) return;
+  renderModelCards(cards, idx, dist);
+  renderModelDistTable(dist, stats);
+  renderModelsUsedTable(stats);
+  renderDomesticModelList(stats);
+}
+
+/** 채택률·로컬 실행률·모델 중립·비LLM 네 장 */
+function renderModelCards(cards, idx, dist) {
   const known = idx.model_known || 0;
   const mkCard = (v, l) => {
     const d = el('div', 'obs-card');
@@ -366,7 +261,10 @@ function renderModelStatus(idx) {
     '로컬 오픈웨이트 실행률');
   mkCard(`${dist['모델 중립(BYO)'] || 0}건`, '모델 중립(BYO) — 클라이언트 모델 위 구동');
   mkCard(`${dist['없음(비LLM)'] || 0}건`, '비LLM 도구 (규칙 기반)');
+}
 
+/** 의존 분류별 건수와 뜻 */
+function renderModelDistTable(dist, stats) {
   const ORDER = ['국산 독자모델', '국산 오픈웨이트', '혼합', '해외 상용 API',
     '해외 오픈웨이트(로컬)', '모델 중립(BYO)', '없음(비LLM)', '미확인'];
   const MEANING = {
@@ -402,7 +300,10 @@ function renderModelStatus(idx) {
     tr.appendChild(el('td', null, MEANING[key] || ''));
     dtbody.appendChild(tr);
   }
+}
 
+/** 분류별 구체 모델(펼침) */
+function renderModelsUsedTable(stats) {
   const mtbody = document.querySelector('#models-used-table tbody');
   for (const group of stats.models_by_dep || []) {
     // 분류 소계 행 — 분포 표의 건수와 문자 그대로 일치한다
@@ -452,8 +353,10 @@ function renderModelStatus(idx) {
       });
     }
   }
+}
 
-
+/** 국산 모델을 쓰는 사례 목록 */
+function renderDomesticModelList(stats) {
   const dl = document.getElementById('domestic-model-list');
   for (const d of stats.domestic_cases) {
     const li = document.createElement('li');
@@ -504,15 +407,15 @@ function renderCommunity(com) {
   if (!com) return; // community.json이 없으면 이 섹션만 비운다
   try {
     const cc = document.getElementById('community-cards');
-    cc.appendChild(indexCard('오픈톡 가입자', `${(com.members.latest || 0).toLocaleString()}명`,
+    cc.appendChild(indexCard('오픈톡 가입자', `${(com.members.latest || 0).toLocaleString('ko-KR')}명`,
       com.members.first && com.members.latest !== com.members.first
-        ? `${com.members.first_date} ${com.members.first.toLocaleString()}명 이후 ${com.members.latest - com.members.first >= 0 ? '+' : ''}${(com.members.latest - com.members.first).toLocaleString()}`
+        ? `${com.members.first_date} ${com.members.first.toLocaleString('ko-KR')}명 이후 ${com.members.latest - com.members.first >= 0 ? '+' : ''}${(com.members.latest - com.members.first).toLocaleString('ko-KR')}`
         : `${com.members.latest_date} 기준 — 변화 추적 시작`));
-    cc.appendChild(indexCard('대화 (오늘)', `${com.kakao.today.toLocaleString()}건`, null));
-    cc.appendChild(indexCard('대화 (7일)', `${com.kakao.week.toLocaleString()}건`,
-      `일평균 ${Math.round(com.kakao.week / 7).toLocaleString()}건`));
-    cc.appendChild(indexCard('대화 (30일)', `${com.kakao.month.toLocaleString()}건`, null));
-    cc.appendChild(indexCard('대화 (관측 전체)', `${com.kakao.total.toLocaleString()}건`,
+    cc.appendChild(indexCard('대화 (오늘)', `${com.kakao.today.toLocaleString('ko-KR')}건`, null));
+    cc.appendChild(indexCard('대화 (7일)', `${com.kakao.week.toLocaleString('ko-KR')}건`,
+      `일평균 ${Math.round(com.kakao.week / 7).toLocaleString('ko-KR')}건`));
+    cc.appendChild(indexCard('대화 (30일)', `${com.kakao.month.toLocaleString('ko-KR')}건`, null));
+    cc.appendChild(indexCard('대화 (관측 전체)', `${com.kakao.total.toLocaleString('ko-KR')}건`,
       `${com.kakao.observed_days}일 관측 누적`));
     cc.appendChild(indexCard('Threads 관측 게시물', `${com.threads.observed_total || 0}건`,
       '태그 검색 관측 누적'));
@@ -527,8 +430,8 @@ function renderCommunity(com) {
         const fill = el('div', 'mini-chart__fill mini-chart__fill--members');
         const ratio = (r.cumulative - mmin * 0.9) / (mmax - mmin * 0.9);
         fill.style.height = `${Math.max(Math.round(ratio * 100), 4)}%`;
-        const yoil = ['일', '월', '화', '수', '목', '금', '토'][new Date(`${r.date}T00:00:00+09:00`).getDay()];
-        bar.title = `${r.date} (${yoil}): 누적 ${r.cumulative.toLocaleString()}명 (+${r.joins}/-${r.leaves})`;
+        const yoil = weekdayKo(r.date);
+        bar.title = `${r.date} (${yoil}): 누적 ${r.cumulative.toLocaleString('ko-KR')}명 (+${r.joins}/-${r.leaves})`;
         bar.appendChild(fill);
         const label = el('span', 'mini-chart__label', r.date.slice(8));
         label.appendChild(document.createElement('br'));
@@ -546,7 +449,7 @@ function renderCommunity(com) {
         tr.appendChild(el('td', null, `-${r.leaves}`));
         tr.appendChild(el('td', net >= 0 ? 'obs-covered' : 'obs-uncovered',
           `${net >= 0 ? '+' : ''}${net}`));
-        tr.appendChild(el('td', 'obs-strong', r.cumulative.toLocaleString()));
+        tr.appendChild(el('td', 'obs-strong', r.cumulative.toLocaleString('ko-KR')));
         mbody.appendChild(tr);
       }
     }
@@ -557,7 +460,7 @@ function renderCommunity(com) {
       const bar = el('div', 'mini-chart__bar');
       const fill = el('div', 'mini-chart__fill');
       fill.style.height = `${Math.round((n / max) * 100)}%`;
-      const yoil = ['일', '월', '화', '수', '목', '금', '토'][new Date(`${date}T00:00:00+09:00`).getDay()];
+      const yoil = weekdayKo(date);
       bar.title = `${date} (${yoil}): ${n}건`;
       bar.appendChild(fill);
       const label = el('span', 'mini-chart__label', date.slice(8));
@@ -639,7 +542,7 @@ function renderPlatforms(idx) {
     const label = key === 'gitlab' ? '공공 깃랩' : 'GitHub';
     cards.appendChild(indexCard('저장소', `${s.count}건`,
       `스타 실측 ${s.starred}건 — 표의 ★는 ${label} 자체 스타`));
-    cards.appendChild(indexCard('스타 합계', `${s.stars_sum.toLocaleString()}★`,
+    cards.appendChild(indexCard('스타 합계', `${s.stars_sum.toLocaleString('ko-KR')}★`,
       `${label} 저장소 ${s.starred}건의 합 (미러 사례는 플랫폼별 각각 집계)`));
     cards.appendChild(indexCard('유지보수 활발', `${s.maintenance['활발'] || 0}건`,
       '최근 60일 내 활동'));

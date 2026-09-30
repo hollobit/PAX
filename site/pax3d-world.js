@@ -2,7 +2,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { toon, signSprite, createPostPass } from './pax3d-look.js?v=a66df86b';
-import { ISLANDS, SEATS, TASK_COLORS, FALLBACK_COLOR, shapeOf, cityKeyOf } from './pax3d-data.js?v=d2c6ecd8';
+import { ISLANDS, SEATS, TASK_COLORS, FALLBACK_COLOR, shapeOf, cityKeyOf } from './pax3d-data.js?v=ad30f399';
 import { buildingGeometries, mountains, trees, clouds, pin, dokdo } from './pax3d-props.js?v=83d5cb9b';
 import {
   LAND_H, project, unproject, toWorld, projectPolys, rng, inPolys, polysArea, randomIn, scatter, blobRing,
@@ -13,7 +13,7 @@ import { MODES, skyTexture as citySky, sunDirection } from './city3d/js/modes.js
 import { createLandmarkFlight } from './city3d/js/flight.js';
 import { createCityLayer } from './pax3d-city.js?v=fc47b561';
 import { createStage, HOME } from './pax3d-stage.js?v=749c5dd6';
-import { groupCases } from './pax3d-places.js?v=7783fed8';
+import { groupCases } from './pax3d-places.js?v=2ac2ccfb';
 
 // 간판 자리 — 무게중심은 경기(서울 구멍 포함)처럼 엉뚱한 곳에 떨어져 손으로 정했다.
 const LABEL_AT = {

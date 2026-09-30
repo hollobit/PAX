@@ -11,7 +11,7 @@
   <meta property="og:description" content="아카이브 데이터 변경 기록">
   <meta property="og:url" content="https://hollobit.github.io/PAX/changelog.html">
   <meta property="og:site_name" content="모두의 공공AX 사례 아카이브">
-  <link rel="stylesheet" href="style.css?v=fca8f053">
+  <link rel="stylesheet" href="style.css?v=395e757c">
 </head>
 <body>
   <header class="site-header">
@@ -49,39 +49,7 @@
   <footer class="site-footer">
     <p class="site-footer__curator">Curated by Jonghong Jeon, <a href="mailto:hollobit@etri.re.kr">hollobit@etri.re.kr</a></p>
   </footer>
-  <script>
-    'use strict';
-    (async function () {
-      try {
-        const res = await fetch('./data/changelog.json', { cache: 'no-cache' });
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        const doc = await res.json();
-        const root = document.getElementById('changelog');
-        for (const entry of doc.entries) {
-          const article = document.createElement('article');
-          article.className = 'changelog__entry';
-
-          const heading = document.createElement('h2');
-          heading.className = 'changelog__date';
-          heading.textContent = entry.date;
-          article.appendChild(heading);
-
-          const list = document.createElement('ul');
-          list.className = 'changelog__items';
-          for (const item of entry.items) {
-            const li = document.createElement('li');
-            li.textContent = item;
-            list.appendChild(li);
-          }
-          article.appendChild(list);
-          root.appendChild(article);
-        }
-      } catch (err) {
-        console.error('changelog.json 로드 실패:', err);
-        document.getElementById('error-state').hidden = false;
-      }
-    })();
-  </script>
+  <script type="module" src="changelog.js?v=503b1c2e"></script>
   <script src="anchors.js?v=206e78f5"></script>
 </body>
 </html>

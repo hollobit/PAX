@@ -1,6 +1,6 @@
 'use strict';
 
-import { fetchJson } from './pax-dom.js?v=6dfb9f58';
+import { el, fetchJson } from './pax-dom.js?v=b57d2715';
 import { loadBookmarkCounts } from './pax-bookmarks.js?v=c1fdc503';
 
 /**
@@ -123,121 +123,109 @@ function render() {
 }
 
 function card(champ) {
-  const el = document.createElement('article');
-  el.className = 'champ-card';
-  el.id = `champ-${champ.id}`;
-  if (champ.certification) {
-    el.classList.add('champ-card--certified',
-      `champ-card--cert-${champ.certification.tier.toLowerCase()}`);
-  }
+  const article = el('article', 'champ-card');
+  article.id = `champ-${champ.id}`;
+  const cert = champ.certification;
+  if (cert) article.classList.add('champ-card--certified', `champ-card--cert-${cert.tier.toLowerCase()}`);
+  article.appendChild(cardHead(champ));
+  if (cert) article.appendChild(certLine(cert));
+  article.append(cardMeta(champ), cardAccounts(champ), cardCases(champ));
+  return article;
+}
 
-  const head = document.createElement('div');
-  head.className = 'champ-card__head';
-  const name = document.createElement('h2');
-  name.className = 'champ-card__name';
+/** 이름(인증이면 ✦)과 소속(추정이면 배지) */
+function cardHead(champ) {
+  const head = el('div', 'champ-card__head');
+  const name = el('h2', 'champ-card__name');
   if (champ.certification) {
-    const star = document.createElement('span');
-    star.className = 'champ-card__cert-mark';
-    star.textContent = '✦ ';
+    const star = el('span', 'champ-card__cert-mark', '✦ ');
     star.setAttribute('aria-hidden', 'true');
     name.appendChild(star);
   }
   name.appendChild(document.createTextNode(champ.name));
   head.appendChild(name);
-  if (champ.affiliation && champ.affiliation.value) {
-    const aff = document.createElement('span');
-    aff.className = 'champ-card__aff';
-    aff.textContent = champ.affiliation.value;
-    if (champ.affiliation.inferred) {
-      const badge = document.createElement('span');
-      badge.className = 'badge badge--inferred';
-      badge.textContent = '추정';
-      badge.title = champ.affiliation.evidence || '공개 자료 기반 추정';
-      aff.appendChild(badge);
+  const aff = champ.affiliation;
+  if (aff && aff.value) {
+    const span = el('span', 'champ-card__aff', aff.value);
+    if (aff.inferred) {
+      const badge = el('span', 'badge badge--inferred', '추정');
+      badge.title = aff.evidence || '공개 자료 기반 추정';
+      span.appendChild(badge);
     }
-    head.appendChild(aff);
+    head.appendChild(span);
   }
-  el.appendChild(head);
+  return head;
+}
 
-  if (champ.certification) {
-    const cert = document.createElement('p');
-    cert.className = 'champ-card__cert';
-    const link = document.createElement('a');
-    link.href = champ.certification.source_url;
-    link.target = '_blank';
-    link.rel = 'noopener';
-    link.className = `cert-badge cert-badge--${champ.certification.tier.toLowerCase()}`;
-    link.textContent = `✦ AI 챔피언 인증 ${champ.certification.tier}`;
-    link.title = `${champ.certification.source_name} — ${champ.certification.listed_as}`;
-    cert.appendChild(link);
-    el.appendChild(cert);
-  }
+function certLine(cert) {
+  const p = el('p', 'champ-card__cert');
+  const link = el('a', `cert-badge cert-badge--${cert.tier.toLowerCase()}`, `✦ AI 챔피언 인증 ${cert.tier}`);
+  link.href = cert.source_url;
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.title = `${cert.source_name} — ${cert.listed_as}`;
+  p.appendChild(link);
+  return p;
+}
 
-  const meta = document.createElement('p');
-  meta.className = 'champ-card__meta';
+/** 사례 수·최고 AX 단계·반응·북마크(점수순이면 점수) */
+function cardMeta(champ) {
+  const { case_count: count, top_ax: topAx, stars } = champ.stats;
   const bm = bookmarkSum(champ);
-  const parts = [`사례 ${champ.stats.case_count}건`];
-  if (champ.stats.top_ax > 0) parts.push(`최고 ${AX_NAME[champ.stats.top_ax]}`);
-  if (champ.stats.stars > 0) parts.push(`반응 ${champ.stats.stars.toLocaleString()}`);
+  const parts = [`사례 ${count}건`];
+  if (topAx > 0) parts.push(`최고 ${AX_NAME[topAx]}`);
+  if (stars > 0) parts.push(`반응 ${stars.toLocaleString('ko-KR')}`);
   if (bm > 0) parts.push(`북마크 ${bm}`);
   if (state.sort === 'score') parts.push(`점수 ${score(champ).toFixed(1)}`);
-  meta.textContent = parts.join(' · ');
-  if (champ.stats.top_ax > 0) {
-    const axb = document.createElement('span');
-    axb.className = `ax-badge ${AX_BADGE[champ.stats.top_ax]}`;
-    axb.textContent = AX_NAME[champ.stats.top_ax];
-    meta.appendChild(axb);
-  }
-  el.appendChild(meta);
+  const meta = el('p', 'champ-card__meta', parts.join(' · '));
+  if (topAx > 0) meta.appendChild(el('span', `ax-badge ${AX_BADGE[topAx]}`, AX_NAME[topAx]));
+  return meta;
+}
 
-  const accounts = document.createElement('p');
-  accounts.className = 'champ-card__accounts';
-  champ.accounts.forEach((a) => {
-    const link = document.createElement('a');
+function cardAccounts(champ) {
+  const accounts = el('p', 'champ-card__accounts');
+  for (const a of champ.accounts) {
+    const link = el('a', null, `${PLATFORM_LABEL[a.platform] || a.platform} @${a.id}`);
     link.href = a.url;
     link.target = '_blank';
     link.rel = 'noopener';
-    link.textContent = `${PLATFORM_LABEL[a.platform] || a.platform} @${a.id}`;
     accounts.appendChild(link);
-  });
-  el.appendChild(accounts);
+  }
+  return accounts;
+}
 
-  const list = document.createElement('ul');
-  list.className = 'champ-card__cases';
+/** 사례 목록 — 셋까지 보이고 나머지는 '모두 보기'로 펼친다 */
+function cardCases(champ) {
+  const list = el('ul', 'champ-card__cases');
   const caseItem = (id) => {
     const c = state.cases.get(id);
     if (!c) return null;
-    const li = document.createElement('li');
-    const link = document.createElement('a');
+    const li = el('li');
+    const link = el('a', null, c.title);
     link.href = `./?case=${encodeURIComponent(id)}`;
-    link.textContent = c.title;
     li.appendChild(link);
     return li;
   };
-  champ.cases.slice(0, 3).forEach((id) => {
+  for (const id of champ.cases.slice(0, 3)) {
     const li = caseItem(id);
     if (li) list.appendChild(li);
-  });
+  }
   if (champ.cases.length > 3) {
-    const li = document.createElement('li');
-    li.className = 'champ-card__more';
-    const btn = document.createElement('button');
+    const more = el('li', 'champ-card__more');
+    const btn = el('button', 'champ-card__more-btn', `외 ${champ.cases.length - 3}건 모두 보기`);
     btn.type = 'button';
-    btn.className = 'champ-card__more-btn';
-    btn.textContent = `외 ${champ.cases.length - 3}건 모두 보기`;
     btn.setAttribute('aria-expanded', 'false');
     btn.addEventListener('click', () => {
-      champ.cases.slice(3).forEach((id) => {
+      for (const id of champ.cases.slice(3)) {
         const item = caseItem(id);
-        if (item) list.insertBefore(item, li);
-      });
-      li.remove();
+        if (item) list.insertBefore(item, more);
+      }
+      more.remove();
     });
-    li.appendChild(btn);
-    list.appendChild(li);
+    more.appendChild(btn);
+    list.appendChild(more);
   }
-  el.appendChild(list);
-  return el;
+  return list;
 }
 
 function renderUnattributed(list) {

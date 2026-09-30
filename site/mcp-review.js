@@ -1,6 +1,6 @@
 'use strict';
 
-import { el, fetchJson } from './pax-dom.js?v=6dfb9f58';
+import { el, fetchJson } from './pax-dom.js?v=b57d2715';
 
 /** MCP 검증 매트릭스 — site/data/mcp-review.json 렌더 (스펙 2026-08-28). */
 

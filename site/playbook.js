@@ -1,6 +1,6 @@
 'use strict';
 
-import { el, fetchJson } from './pax-dom.js?v=6dfb9f58';
+import { el, fetchJson } from './pax-dom.js?v=b57d2715';
 
 /** 자가진단 위저드 (로드맵 2-5) — C×H×P×R 좌표 판정 → 유사 사례 + 다음 관문 체크리스트 */
 

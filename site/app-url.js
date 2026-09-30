@@ -1,7 +1,7 @@
 // 메인 목록 상태 ↔ 주소창 쿼리. 공유 링크로 같은 화면을 복원하려고 모든 설정을 쿼리로 표현한다:
 // q, type, src, tag, bm, task, domain, ni, region, ministry, view, sort("key.dir"), case, page.
 // 주소창 값이 localStorage 기본값보다 우선한다. 두 함수 모두 state를 바꾸지 않는다.
-import { ORG_TYPES, SOURCES, TASK_CATEGORIES, VIEWS } from './app-constants.js?v=c793f71d';
+import { ORG_TYPES, SOURCES, TASK_CATEGORIES, VIEWS } from './app-constants.js?v=60a81688';
 
 /**
  * 쿼리 문자열을 읽어 state에 덮어쓸 부분(filter·sort·view·page·focusCaseId)을 새 객체로 돌려준다.

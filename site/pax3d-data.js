@@ -2,26 +2,22 @@
 //
 // 분류 규칙은 새로 만들지 않는다. 분야는 case-domains.js, 중앙행정기관·지역 스코프는
 // ministries.js의 전역 정의를 그대로 쓴다 — 첫 화면·관측소·격차 지도와 같은 숫자가 나와야 한다.
+import { ORG_TYPES, TASK_COLORS } from './pax-vocab.js?v=c02c89d8';
 import { sggLabel, makeLocator, makeInstitutionFinder } from './pax3d-locate.js?v=6baaa238';
 
 /* global CASE_DOMAIN_NAMES, matchesCaseDomain, buildChampAffMap, MINISTRY_GROUPS, paxRegionScope */
 
+// 3D 메뉴의 업무 분류 표시 순서(사례가 많은 순) — 항목은 pax-vocab.js의 TASK_CATEGORIES와 같다(test_vocab.py)
 export const TASKS = ['데이터·통계', '문서·기안', '공통·범용', '감사·법무', '시설·안전',
   '기획·정책', '인사·복무', '민원', '회계·정산', '계약·조달'];
 
-// 업무 유형 = 건물 색. 미니어처 도료처럼 채도를 한 단계 눌렀다.
-export const TASK_COLORS = {
-  '데이터·통계': '#4f86c6', '문서·기안': '#e3a93f', '공통·범용': '#98a676',
-  '감사·법무': '#8c5a9e', '시설·안전': '#e0703a', '기획·정책': '#3f9c8f',
-  '인사·복무': '#d9738b', '민원': '#c9473f', '회계·정산': '#6f8f3a', '계약·조달': '#8a7560',
-};
+// 업무 유형 = 건물 색(어휘·색의 정본은 pax-vocab.js)
+export { ORG_TYPES, TASK_COLORS };
 export const FALLBACK_COLOR = '#b9ae9a';
 
 export const REGIONS = ['서울', '부산', '대구', '인천', '광주', '대전', '울산', '세종',
   '경기', '강원', '충북', '충남', '전북', '전남', '경북', '경남', '제주'];
 
-export const ORG_TYPES = ['중앙행정기관', '광역지자체', '기초지자체', '지방의회', '공공기관',
-  '교육기관', '공직 개인', '커뮤니티', '민간(참고)', '해외(참고)'];
 
 // 지역이 없는 사례(전체의 3/4)를 아무 시도에나 꽂지 않는다 — 왜 거기 있는지 이름으로 밝힌 섬에 둔다.
 // 좌표는 바다 위 빈자리(경도·위도)이고, 섬 크기는 사례 수로 정한다.

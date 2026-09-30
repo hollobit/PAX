@@ -29,3 +29,8 @@ export async function fetchJsonOr(path, fallback = null) {
     return fallback;
   }
 }
+
+/** 한국 시간 기준 오늘 'YYYY-MM-DD' — toISOString()은 UTC라 한국 00~09시에 전날이 된다. */
+export function todayKst(now = new Date()) {
+  return new Date(now.getTime() + 9 * 3600 * 1000).toISOString().slice(0, 10);
+}

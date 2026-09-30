@@ -1,7 +1,9 @@
+import { ORG_TYPES as VOCAB_ORG_TYPES, TASK_CATEGORIES } from './pax-vocab.js?v=c02c89d8';
+
 // 메인 목록의 분류 어휘와 검색 사전 — 필터·주소창·배지가 같은 값을 쓴다.
 
-export const ORG_TYPES = ['전체', '중앙행정기관', '광역지자체', '기초지자체', '지방의회',
-  '공공기관', '교육기관', '공직 개인', '커뮤니티', '민간(참고)', '해외(참고)'];
+// 분류 어휘의 정본은 pax-vocab.js(→ scripts/pax/schema.py) — 여기서는 '전체' 선택지만 덧붙인다
+export const ORG_TYPES = ['전체', ...VOCAB_ORG_TYPES];
 export const SOURCES = ['전체', 'Threads', '오픈채팅'];
 
 export const ORG_TYPE_BADGE_CLASS = {
@@ -17,8 +19,7 @@ export const ORG_TYPE_BADGE_CLASS = {
   '해외(참고)': 'badge--org-type-참고',
 };
 
-export const TASK_CATEGORIES = ['인사·복무', '회계·정산', '계약·조달', '민원', '문서·기안',
-  '감사·법무', '시설·안전', '데이터·통계', '기획·정책', '공통·범용'];
+export { TASK_CATEGORIES };
 
 // 검색 동의어 사전 (로드맵 1-1): 실무 어휘 ↔ 사례 표기의 간극을 메운다
 export const SYNONYMS = {

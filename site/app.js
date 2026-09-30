@@ -8,14 +8,17 @@
  */
 
 import { loadBookmarks, loadBookmarkCounts, toggleBookmark as storeToggleBookmark, onBookmarksChanged } from './pax-bookmarks.js?v=c1fdc503';
-import { createExportToolbar } from './app-export.js?v=fb98639b';
-import { ORG_TYPES, SOURCES, TASK_CATEGORIES, SYNONYMS, VIEWS } from './app-constants.js?v=c793f71d';
-import { readUrlState, buildUrlQuery } from './app-url.js?v=57ff3f9e';
-import { createCaseCard, createCaseTable, siteHostname } from './app-cards.js?v=afa344be';
+import { createExportToolbar } from './app-export.js?v=415e893b';
+import { ORG_TYPES, SOURCES, TASK_CATEGORIES, SYNONYMS, VIEWS } from './app-constants.js?v=60a81688';
+import { createPager as createSharedPager } from './pax-list.js?v=7dabbcbf';
+import { readUrlState, buildUrlQuery } from './app-url.js?v=ff02f796';
+import { createCaseCard, createCaseTable, siteHostname } from './app-cards.js?v=2f74c334';
 
 // 분야(도메인) 분류는 site/case-domains.js가 정본이다 — 관측소 현황판과 같은 정의를 쓴다.
 const DOMAIN_NAMES = CASE_DOMAIN_NAMES;
 const matchesDomain = matchesCaseDomain;
+
+const SEARCH_DELAY_MS = 120;
 
 /* ── 북마크 ── 내 북마크 저장과 전체 누적 카운터는 pax-bookmarks.js(3D PAX와 공용)가 맡는다. */
 // 인기 항목 수: 북마크 횟수 상위 N개
@@ -267,9 +270,14 @@ function buildFilterOptions() {
     state.filter = { ...state.filter, source: els.sourceFilter.value };
     render();
   });
+  // 입력이 잠시 멈춘 뒤에 다시 그린다 — 타자마다 업무·지역 칩과 인기 목록까지 새로 만들지 않게
+  let searchTimer = null;
   els.search.addEventListener('input', () => {
-    state.filter = { ...state.filter, q: els.search.value };
-    render();
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => {
+      state.filter = { ...state.filter, q: els.search.value };
+      render();
+    }, SEARCH_DELAY_MS);
   });
   els.viewCards.addEventListener('click', () => setView('cards'));
   els.viewList.addEventListener('click', () => setView('list'));
@@ -448,54 +456,16 @@ function resolvePage(total, results) {
   return { pages, start: (state.page - 1) * PAGE_SIZE };
 }
 
-function createPager(total, pages) {
-  const nav = document.createElement('nav');
-  nav.className = 'pager';
-  nav.setAttribute('aria-label', '쪽 이동');
-  const from = (state.page - 1) * PAGE_SIZE + 1;
-  const to = Math.min(state.page * PAGE_SIZE, total);
-  const range = document.createElement('span');
-  range.className = 'pager__range';
-  range.textContent = `${from}–${to} / ${total}건`;
-  nav.appendChild(range);
-
-  const go = (n, label, opts = {}) => {
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'pager__btn';
-    btn.textContent = label;
-    if (opts.current) btn.setAttribute('aria-current', 'page');
-    if (opts.disabled) btn.disabled = true;
-    else {
-      btn.addEventListener('click', () => {
-        state.page = n;
-        render();
-        // 쪽을 넘기면 목록 위로 — 넘긴 자리에서 이어 읽게 한다.
-        els.caseList.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    }
-    nav.appendChild(btn);
-  };
-
-  go(state.page - 1, '‹ 이전', { disabled: state.page === 1 });
-  // 쪽 수가 많아도 버튼은 현재 쪽 둘레만 — 나머지는 생략 표시로 줄인다.
-  const win = [];
-  for (let n = 1; n <= pages; n += 1) {
-    if (n === 1 || n === pages || Math.abs(n - state.page) <= 1) win.push(n);
-  }
-  let prev = 0;
-  for (const n of win) {
-    if (n - prev > 1) {
-      const gap = document.createElement('span');
-      gap.className = 'pager__gap';
-      gap.textContent = '…';
-      nav.appendChild(gap);
-    }
-    go(n, String(n), { current: n === state.page });
-    prev = n;
-  }
-  go(state.page + 1, '다음 ›', { disabled: state.page === pages });
-  return nav;
+function createPager(total) {
+  return createSharedPager({
+    total, page: state.page, pageSize: PAGE_SIZE, compact: true,
+    onGo: (n) => {
+      state.page = n;
+      render();
+      // 쪽을 넘기면 목록 위로 — 넘긴 자리에서 이어 읽게 한다.
+      els.caseList.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    },
+  });
 }
 
 function focusDeepLinkedCase() {
@@ -587,7 +557,7 @@ function render() {
       // 내려받기는 보이는 쪽이 아니라 걸러진 전체를 담는다 — 쪽 나누기는 표시 방식일 뿐이다.
       els.caseList.appendChild(createExportToolbar(sorted, state.evalById));
       els.caseList.appendChild(createCaseTable(sorted.slice(start, start + PAGE_SIZE), cardCtx()));
-      if (pages > 1) els.caseList.appendChild(createPager(sorted.length, pages));
+      if (pages > 1) els.caseList.appendChild(createPager(sorted.length));
     }
     return;
   }
@@ -621,7 +591,7 @@ function render() {
     card.style.setProperty('--i', String(i));
     els.caseList.appendChild(card);
   });
-  if (pages > 1) els.caseList.appendChild(createPager(results.length, pages));
+  if (pages > 1) els.caseList.appendChild(createPager(results.length));
   focusDeepLinkedCase();
 }
 

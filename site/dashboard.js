@@ -1,5 +1,8 @@
 'use strict';
 
+import { fetchJson } from './pax-dom.js?v=b57d2715';
+import { createPager } from './pax-list.js?v=7dabbcbf';
+
 /**
  * AX 수준 평가 대시보드 — evaluations.json을 읽어 사다리·위젯·표를 렌더링한다.
  * 데이터 삽입은 전부 textContent/createElement (XSS 방지). 외부 라이브러리 없음.
@@ -43,9 +46,7 @@ const EVAL_COLUMNS = [
 
 async function load() {
   try {
-    const res = await fetch('./data/evaluations.json', { cache: 'no-cache' });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const doc = await res.json();
+    const doc = await fetchJson('./data/evaluations.json');
     state.cases = doc.cases;
     document.getElementById('stats').textContent =
       `평가 대상 ${doc.total}건 · 평가 기준일 ${doc.evaluated_at}`;
@@ -491,75 +492,97 @@ function renderTable() {
   const pages = Math.max(1, Math.ceil(rows.length / EVAL_PAGE_SIZE));
   state.page = Math.min(Math.max(1, state.page), pages);
   const start = (state.page - 1) * EVAL_PAGE_SIZE;
-  for (const c of rows.slice(start, start + EVAL_PAGE_SIZE)) {
-    const tr = document.createElement('tr');
-    tr.className = 'eval-row';
-
-    const no = document.createElement('td');
-    no.textContent = String(c.no);
-
-    const title = document.createElement('td');
-    title.className = 'case-table__title';
-    if (c.service_url || c.post_url) {
-      const a = document.createElement('a');
-      a.href = c.service_url || c.post_url;
-      a.target = '_blank';
-      a.rel = 'noopener';
-      a.textContent = c.title;
-      title.appendChild(a);
-    } else {
-      title.textContent = c.title;
-    }
-
-    const org = document.createElement('td');
-    org.textContent = c.org;
-
-    const ax = document.createElement('td');
-    ax.appendChild(axBadge(c.ax));
-    if (c.ax_prev && c.ax_prev !== c.ax) {
-      const prev = document.createElement('span');
-      prev.className = 'ax-prev';
-      prev.textContent = ` (기존 ${c.ax_prev})`;
-      ax.appendChild(prev);
-    }
-
-    const scm = document.createElement('td');
-    scm.className = 'case-table__source';
-    scm.textContent = [c.s, c.c, /^M[1-5]$/.test(c.m) ? c.m : null].filter(Boolean).join(' / ');
-
-    const tool = document.createElement('td');
-    tool.textContent = c.tool_type || '';
-
-    const audience = document.createElement('td');
-    const scopeLabel = { Internal: '내부용', External: '외부용', Hybrid: '혼합' }[c.scope] || c.scope;
-    audience.textContent = c.audience ? `${c.audience} · ${scopeLabel}` : scopeLabel;
-
-    const ev = document.createElement('td');
-    ev.className = 'case-table__source';
-    ev.textContent = c.evidence.slice(0, 2);
-    ev.title = c.evidence;
-
-    const risk = document.createElement('td');
-    risk.textContent = c.risk || '';
-    risk.title = c.human && c.human !== '해당 없음' ? `인간 통제: ${c.human}` : '';
-
-    tr.append(no, title, org, ax, scm, tool, audience, ev, risk);
-    tbody.appendChild(tr);
-
-    // 상세(판정 근거) 행 — 처음 펼칠 때 만든다. 대부분 펼치지 않으므로 미리 그리지 않는다.
-    let detail = null;
-    tr.addEventListener('click', (e) => {
-      if (e.target.closest('a')) return; // 링크 클릭은 그대로
-      if (!detail) {
-        detail = evalDetailRow(c);
-        tr.after(detail);
-        return;
-      }
-      detail.hidden = !detail.hidden;
-    });
-  }
+  for (const c of rows.slice(start, start + EVAL_PAGE_SIZE)) tbody.appendChild(evalRow(c));
   table.appendChild(tbody);
-  renderEvalPager(rows.length, pages);
+  renderEvalPager(rows.length);
+}
+
+/** 평가표 한 줄 — 누르거나 Enter·Space로 판정 근거 행을 펼친다(처음 펼칠 때 만든다). */
+function evalRow(c) {
+  const tr = document.createElement('tr');
+  tr.className = 'eval-row';
+
+  const no = document.createElement('td');
+  no.textContent = String(c.no);
+
+  const title = document.createElement('td');
+  title.className = 'case-table__title';
+  if (c.service_url || c.post_url) {
+    const a = document.createElement('a');
+    a.href = c.service_url || c.post_url;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.textContent = c.title;
+    title.appendChild(a);
+  } else {
+    title.textContent = c.title;
+  }
+
+  const org = document.createElement('td');
+  org.textContent = c.org;
+
+  const ax = document.createElement('td');
+  ax.appendChild(axBadge(c.ax));
+  if (c.ax_prev && c.ax_prev !== c.ax) {
+    const prev = document.createElement('span');
+    prev.className = 'ax-prev';
+    prev.textContent = ` (기존 ${c.ax_prev})`;
+    ax.appendChild(prev);
+  }
+
+  const scm = document.createElement('td');
+  scm.className = 'case-table__source';
+  scm.textContent = [c.s, c.c, /^M[1-5]$/.test(c.m) ? c.m : null].filter(Boolean).join(' / ');
+
+  const tool = document.createElement('td');
+  tool.textContent = c.tool_type || '';
+
+  const audience = document.createElement('td');
+  const scopeLabel = { Internal: '내부용', External: '외부용', Hybrid: '혼합' }[c.scope] || c.scope;
+  audience.textContent = c.audience ? `${c.audience} · ${scopeLabel}` : scopeLabel;
+
+  const ev = document.createElement('td');
+  ev.className = 'case-table__source';
+  ev.textContent = c.evidence.slice(0, 2);
+  ev.title = c.evidence;
+
+  const risk = document.createElement('td');
+  risk.textContent = c.risk || '';
+  risk.title = c.human && c.human !== '해당 없음' ? `인간 통제: ${c.human}` : '';
+
+  tr.append(no, title, org, ax, scm, tool, audience, ev, risk);
+
+  // 상세(판정 근거) 행 — 처음 펼칠 때 만든다. 대부분 펼치지 않으므로 미리 그리지 않는다.
+  bindDetailToggle(tr, c);
+  return tr;
+}
+
+/** 행을 누르거나(마우스) 행에 초점을 두고 Enter·Space(키보드)로 판정 근거를 펼친다 */
+function bindDetailToggle(tr, c) {
+  let detail = null;
+  tr.tabIndex = 0;
+  tr.setAttribute('aria-expanded', 'false');
+  tr.title = '판정 근거 펼치기';
+  const toggle = () => {
+    if (!detail) {
+      detail = evalDetailRow(c);
+      detail.id = `eval-detail-${c.id}`;
+      tr.setAttribute('aria-controls', detail.id);
+      tr.after(detail);
+    } else {
+      detail.hidden = !detail.hidden;
+    }
+    tr.setAttribute('aria-expanded', String(!detail.hidden));
+  };
+  tr.addEventListener('click', (e) => {
+    if (e.target.closest('a')) return; // 링크 클릭은 그대로
+    toggle();
+  });
+  tr.addEventListener('keydown', (e) => {
+    if (e.target !== tr || (e.key !== 'Enter' && e.key !== ' ')) return;
+    e.preventDefault(); // Space로 쪽이 스크롤되지 않게
+    toggle();
+  });
 }
 
 function evalDetailRow(c) {
@@ -588,44 +611,20 @@ function evalDetailRow(c) {
   return detail;
 }
 
-function renderEvalPager(total, pages) {
-  let nav = document.getElementById('eval-pager');
-  if (!nav) {
-    nav = document.createElement('nav');
-    nav.id = 'eval-pager';
-    nav.className = 'pager';
-    nav.setAttribute('aria-label', '평가표 쪽 이동');
-    document.getElementById('eval-table').closest('.table-wrap').after(nav);
-  }
-  nav.hidden = pages <= 1;
-  const from = total ? (state.page - 1) * EVAL_PAGE_SIZE + 1 : 0;
-  const to = Math.min(state.page * EVAL_PAGE_SIZE, total);
-  const range = document.createElement('span');
-  range.className = 'pager__range';
-  range.textContent = `${from}–${to} / ${total}건`;
-  const buttons = [];
-  const go = (n, label, opts = {}) => {
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'pager__btn';
-    btn.textContent = label;
-    if (opts.current) btn.setAttribute('aria-current', 'page');
-    if (opts.disabled) btn.disabled = true;
-    else {
-      btn.addEventListener('click', () => {
-        state.page = n;
-        renderTable();
-        // 쪽을 넘기면 표 위로 — 넘긴 자리에서 이어 읽게 한다
-        document.getElementById('eval-table').scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    }
-    buttons.push(btn);
-  };
-  go(state.page - 1, '‹ 이전', { disabled: state.page === 1 });
-  for (let n = 1; n <= pages; n += 1) go(n, String(n), { current: n === state.page });
-  go(state.page + 1, '다음 ›', { disabled: state.page === pages });
-  nav.replaceChildren(range, ...buttons);
+function renderEvalPager(total) {
+  const nav = createPager({
+    total, page: state.page, pageSize: EVAL_PAGE_SIZE, label: '평가표 쪽 이동',
+    onGo: (n) => {
+      state.page = n;
+      renderTable();
+      // 쪽을 넘기면 표 위로 — 넘긴 자리에서 이어 읽게 한다
+      document.getElementById('eval-table').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    },
+  });
+  nav.id = 'eval-pager';
+  const old = document.getElementById('eval-pager');
+  if (old) old.replaceWith(nav);
+  else document.getElementById('eval-table').closest('.table-wrap').after(nav);
 }
-
 
 load();

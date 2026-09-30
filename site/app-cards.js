@@ -2,8 +2,9 @@
 // ctx: { evalById, champOfCase, sort, activeTag, isNew(c), isPopular(c), popularBadge(c), newBadge(),
 //        bookmarkButton(c), onSort(key), onTag(tag) }
 // 사례 데이터는 전부 textContent·createElement로 넣는다 — innerHTML에 문자열로 잇지 않는다(XSS 방지).
+import { el } from './pax-dom.js?v=b57d2715';
 import { caseTargetUrl } from './pax-urls.js?v=1e5e0b4f';
-import { ORG_TYPE_BADGE_CLASS } from './app-constants.js?v=c793f71d';
+import { ORG_TYPE_BADGE_CLASS } from './app-constants.js?v=60a81688';
 
 export function siteHostname(c) {
   const url = caseTargetUrl(c);
@@ -78,131 +79,100 @@ export function createCaseTable(results, ctx) {
 }
 
 function createCaseRow(c, ctx) {
-  const tr = document.createElement('tr');
-
-  const bookmarkTd = document.createElement('td');
-  bookmarkTd.className = 'case-table__bookmark';
-  bookmarkTd.appendChild(ctx.bookmarkButton(c));
-
-  const titleTd = document.createElement('td');
-  titleTd.className = 'case-table__title';
-  if (ctx.isPopular(c)) {
-    titleTd.appendChild(ctx.popularBadge(c));
-    titleTd.append(' ');
-  } else if (ctx.isNew(c)) {
-    titleTd.appendChild(ctx.newBadge());
-    titleTd.append(' ');
-  }
+  const tr = el('tr');
   const targetUrl = caseTargetUrl(c);
-  if (targetUrl) {
-    const a = document.createElement('a');
-    a.href = targetUrl;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    a.title = c.summary;
-    a.textContent = c.title;
-    titleTd.appendChild(a);
-  } else {
-    const span = document.createElement('span');
-    span.title = c.summary;
-    span.textContent = c.title;
-    titleTd.appendChild(span);
-  }
-
-  const summaryTd = document.createElement('td');
-  summaryTd.className = 'case-table__summary';
-  summaryTd.textContent = c.summary;
-
-  const orgTd = document.createElement('td');
-  orgTd.textContent = c.org;
-
-  const typeTd = document.createElement('td');
-  const badge = document.createElement('span');
-  badge.className = `badge ${ORG_TYPE_BADGE_CLASS[c.org_type] || 'badge--org-type-기타'}`;
-  badge.textContent = c.org_type;
-  typeTd.appendChild(badge);
-
-  const tagsTd = document.createElement('td');
-  tagsTd.className = 'case-table__tags';
-  for (const tag of c.tags) {
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'tag-chip tag-chip--small';
-    btn.textContent = `#${tag}`;
-    btn.setAttribute('aria-pressed', String(ctx.activeTag === tag));
-    btn.addEventListener('click', () => ctx.onTag(tag));
-    tagsTd.appendChild(btn);
-  }
-
-  const siteTd = document.createElement('td');
-  siteTd.className = 'case-table__site';
-  const host = siteHostname(c);
-  if (host && targetUrl) {
-    const siteLink = document.createElement('a');
-    siteLink.href = targetUrl;
-    siteLink.target = '_blank';
-    siteLink.rel = 'noopener';
-    siteLink.title = targetUrl;
-    siteLink.textContent = `${host} ↗`;
-    siteTd.appendChild(siteLink);
-  } else {
-    siteTd.textContent = '—';
-  }
-
-  const sourceTd = document.createElement('td');
-  sourceTd.className = 'case-table__source';
-  const sourceLabel = document.createElement('span');
-  sourceLabel.textContent = c.source === 'threads' ? 'Threads' : '오픈채팅';
-  sourceTd.appendChild(sourceLabel);
-  if (c.link) {
-    sourceTd.append(' ');
-    sourceTd.appendChild(createSourceLink(c.link, '↗'));
-  }
-
-  const dateTd = document.createElement('td');
-  dateTd.className = 'case-table__date';
-  dateTd.textContent = c.date;
-
-  tr.append(bookmarkTd, titleTd, summaryTd, orgTd, typeTd, tagsTd, siteTd, sourceTd, dateTd);
+  const bookmarkTd = el('td', 'case-table__bookmark');
+  bookmarkTd.appendChild(ctx.bookmarkButton(c));
+  const typeTd = el('td');
+  typeTd.appendChild(el('span', `badge ${ORG_TYPE_BADGE_CLASS[c.org_type] || 'badge--org-type-기타'}`, c.org_type));
+  tr.append(bookmarkTd, rowTitleCell(c, ctx, targetUrl), el('td', 'case-table__summary', c.summary),
+    el('td', null, c.org), typeTd, rowTagsCell(c, ctx), rowSiteCell(c, targetUrl), rowSourceCell(c),
+    el('td', 'case-table__date', c.date));
   return tr;
 }
 
-export function createCaseCard(c, ctx) {
-  const article = document.createElement('article');
-  article.className = 'case-card';
-  article.dataset.caseId = c.id;
-
-  const meta = document.createElement('div');
-  meta.className = 'case-card__meta';
-
-  const badge = document.createElement('span');
-  badge.className = `badge ${ORG_TYPE_BADGE_CLASS[c.org_type] || 'badge--org-type-기타'}`;
-  badge.textContent = c.org_type;
-
-  const org = document.createElement('span');
-  org.className = 'case-card__org';
-  org.textContent = c.org;
-
-  meta.appendChild(badge);
-  meta.appendChild(org);
-  if (ctx.isPopular(c)) {
-    meta.appendChild(ctx.popularBadge(c));
-  } else if (ctx.isNew(c)) {
-    meta.appendChild(ctx.newBadge());
+/** 제목 칸 — 인기/신규 배지와 대표 주소 링크(없으면 글자만) */
+function rowTitleCell(c, ctx, targetUrl) {
+  const td = el('td', 'case-table__title');
+  if (ctx.isPopular(c)) td.append(ctx.popularBadge(c), ' ');
+  else if (ctx.isNew(c)) td.append(ctx.newBadge(), ' ');
+  const label = el(targetUrl ? 'a' : 'span', null, c.title);
+  label.title = c.summary;
+  if (targetUrl) {
+    label.href = targetUrl;
+    label.target = '_blank';
+    label.rel = 'noopener';
   }
+  td.appendChild(label);
+  return td;
+}
+
+function rowTagsCell(c, ctx) {
+  const td = el('td', 'case-table__tags');
+  for (const tag of c.tags) {
+    const btn = el('button', 'tag-chip tag-chip--small', `#${tag}`);
+    btn.type = 'button';
+    btn.setAttribute('aria-pressed', String(ctx.activeTag === tag));
+    btn.addEventListener('click', () => ctx.onTag(tag));
+    td.appendChild(btn);
+  }
+  return td;
+}
+
+function rowSiteCell(c, targetUrl) {
+  const td = el('td', 'case-table__site');
+  const host = siteHostname(c);
+  if (!(host && targetUrl)) {
+    td.textContent = '—';
+    return td;
+  }
+  const a = el('a', null, `${host} ↗`);
+  a.href = targetUrl;
+  a.target = '_blank';
+  a.rel = 'noopener';
+  a.title = targetUrl;
+  td.appendChild(a);
+  return td;
+}
+
+function rowSourceCell(c) {
+  const td = el('td', 'case-table__source');
+  td.appendChild(el('span', null, c.source === 'threads' ? 'Threads' : '오픈채팅'));
+  if (c.link) td.append(' ', createSourceLink(c.link, '↗'));
+  return td;
+}
+
+export function createCaseCard(c, ctx) {
+  const article = el('article', 'case-card');
+  article.dataset.caseId = c.id;
+  const [summary, clampSummary] = cardSummary(c);
+  const badges = cardBadges(c, ctx);
+  const makerLine = cardMaker(c, ctx);
+  article.append(cardMeta(c, ctx), el('h3', 'case-card__title', c.title));
+  if (badges.childElementCount) article.appendChild(badges);
+  article.appendChild(summary);
+  if (clampSummary) article.appendChild(clampSummary);
+  if (makerLine) article.appendChild(makerLine);
+  article.append(cardTags(c, ctx), cardFooter(c));
+  return article;
+}
+
+/** 기관 유형 배지·기관명·인기/신규·북마크 */
+function cardMeta(c, ctx) {
+  const meta = el('div', 'case-card__meta');
+  meta.append(el('span', `badge ${ORG_TYPE_BADGE_CLASS[c.org_type] || 'badge--org-type-기타'}`, c.org_type),
+    el('span', 'case-card__org', c.org));
+  if (ctx.isPopular(c)) meta.appendChild(ctx.popularBadge(c));
+  else if (ctx.isNew(c)) meta.appendChild(ctx.newBadge());
   meta.appendChild(ctx.bookmarkButton(c));
+  return meta;
+}
 
-  const title = document.createElement('h3');
-  title.className = 'case-card__title';
-  title.textContent = c.title;
-
-  // 환경·평가·상태 배지 줄 (로드맵 1-2·1-3·1-6) — 파생된 값만 표시, 미확인은 생략
-  const badges = document.createElement('div');
-  badges.className = 'case-card__badges';
+/** 환경·평가·상태 배지 줄 (로드맵 1-2·1-3·1-6) — 파생된 값만 표시, 미확인은 생략 */
+function cardBadges(c, ctx) {
+  const badges = el('div', 'case-card__badges');
   const addBadge = (text, cls, tip) => {
-    const b = document.createElement('span');
-    b.className = `mini-badge ${cls || ''}`;
-    b.textContent = text;
+    const b = el('span', `mini-badge ${cls || ''}`, text);
     if (tip) b.title = tip;
     badges.appendChild(b);
   };
@@ -217,101 +187,83 @@ export function createCaseCard(c, ctx) {
   } else if (c.maintenance === '정체' || c.maintenance === '방치') {
     addBadge(`유지보수 ${c.maintenance}`, 'mini-badge--stale', '저장소 최근 활동 기준 (60일·180일 경계)');
   }
+  return badges;
+}
 
-  // 사례 대상 URL이 있으면 썸네일과 함께 요약도 병기한다 (로드맵 1-4 — 툴팁 의존 해소).
-  // 썸네일 이미지(site/thumbs/<id>.png)가 없으면 onerror로 설명문에 폴백.
+/**
+ * 사례 대상 URL이 있으면 썸네일과 함께 요약도 병기한다 (로드맵 1-4 — 툴팁 의존 해소).
+ * 썸네일이 없으면 onerror로 설명문에 폴백. [요약(또는 썸네일), 줄여 보이는 요약 | null]
+ */
+function cardSummary(c) {
   const targetUrl = caseTargetUrl(c);
-  let summary;
-  let clampSummary = null;
-  if (targetUrl) {
-    summary = createThumbElement(c, targetUrl);
-    clampSummary = document.createElement('p');
-    clampSummary.className = 'case-card__summary case-card__summary--clamp';
-    clampSummary.textContent = c.summary;
-  } else {
-    summary = document.createElement('p');
-    summary.className = 'case-card__summary';
-    summary.textContent = c.summary;
-  }
+  if (!targetUrl) return [el('p', 'case-card__summary', c.summary), null];
+  return [createThumbElement(c, targetUrl), el('p', 'case-card__summary case-card__summary--clamp', c.summary)];
+}
 
-  // 만든 사람 (로드맵 1-8): 챔피언 디렉토리와 양방향 연결
-  let makerLine = null;
+/** 만든 사람 (로드맵 1-8): 챔피언 디렉토리와 양방향 연결 */
+function cardMaker(c, ctx) {
   const owners = ctx.champOfCase.get(c.id) || [];
-  if (owners.length) {
-    makerLine = document.createElement('p');
-    makerLine.className = 'case-card__maker';
-    makerLine.append('만든 사람: ');
-    owners.slice(0, 3).forEach((o, i) => {
-      if (i > 0) makerLine.append(' · ');
-      const a = document.createElement('a');
-      a.href = `champions.html#champ-${encodeURIComponent(o.id)}`;
-      a.textContent = o.name;
-      makerLine.appendChild(a);
-    });
-  }
+  if (!owners.length) return null;
+  const line = el('p', 'case-card__maker');
+  line.append('만든 사람: ');
+  owners.slice(0, 3).forEach((o, i) => {
+    if (i > 0) line.append(' · ');
+    const a = el('a', null, o.name);
+    a.href = `champions.html#champ-${encodeURIComponent(o.id)}`;
+    line.appendChild(a);
+  });
+  return line;
+}
 
-  const tags = document.createElement('div');
-  tags.className = 'case-card__tags';
+function cardTags(c, ctx) {
+  const tags = el('div', 'case-card__tags');
   for (const tag of c.tags) {
-    const btn = document.createElement('button');
+    const btn = el('button', 'tag-chip', `#${tag}`);
     btn.type = 'button';
-    btn.className = 'tag-chip';
-    btn.textContent = `#${tag}`;
     btn.setAttribute('aria-pressed', String(ctx.activeTag === tag));
     btn.addEventListener('click', () => ctx.onTag(tag));
     tags.appendChild(btn);
   }
+  return tags;
+}
 
-  const footer = document.createElement('div');
-  footer.className = 'case-card__footer';
+/** 게시일·링크 복사·라이선스·출처 */
+function cardFooter(c) {
+  const footer = el('div', 'case-card__footer');
+  footer.append(el('span', 'case-card__date', c.date), copyLinkButton(c));
+  const lic = licenseBadge(c);
+  if (lic) footer.appendChild(lic);
+  footer.appendChild(createSourceElement(c));
+  return footer;
+}
 
-  const date = document.createElement('span');
-  date.className = 'case-card__date';
-  date.textContent = c.date;
-  footer.appendChild(date);
-
-  const copyBtn = document.createElement('button');
-  copyBtn.type = 'button';
-  copyBtn.className = 'copy-link-btn';
-  copyBtn.textContent = '🔗';
-  copyBtn.title = '이 사례의 고정 링크 복사';
-  copyBtn.setAttribute('aria-label', '사례 링크 복사');
-  copyBtn.addEventListener('click', async () => {
+function copyLinkButton(c) {
+  const btn = el('button', 'copy-link-btn', '🔗');
+  btn.type = 'button';
+  btn.title = '이 사례의 고정 링크 복사';
+  btn.setAttribute('aria-label', '사례 링크 복사');
+  btn.addEventListener('click', async () => {
     const url = `${location.origin}${location.pathname.replace(/index\.html$/, '')}case/${c.id}.html`;
     try {
       await navigator.clipboard.writeText(url);
-      copyBtn.textContent = '✓';
-      setTimeout(() => { copyBtn.textContent = '🔗'; }, 1200);
+      btn.textContent = '✓';
+      setTimeout(() => { btn.textContent = '🔗'; }, 1200);
     } catch {
       window.prompt('아래 링크를 복사하세요', url);
     }
   });
-  footer.appendChild(copyBtn);
+  return btn;
+}
 
-  // 저장소에서 확인된 라이선스만 표시한다 (미확인 사례는 배지 없음 — 미확인 원칙)
-  if (c.license) {
-    const lic = document.createElement('span');
-    const none = c.license === '명시 없음';
-    lic.className = 'license-badge' + (none ? ' license-badge--none' : '');
-    lic.textContent = none ? '라이선스 없음' : c.license;
-    lic.title = none
-      ? '저장소에 라이선스 파일이 없어 재사용 조건이 명시되지 않았습니다'
-      : `오픈소스 라이선스 ${c.license} — 저장소에서 확인됨 (${c.license_checked || ''})`;
-    footer.appendChild(lic);
-  }
-
-  footer.appendChild(createSourceElement(c));
-
-  article.appendChild(meta);
-  article.appendChild(title);
-  if (badges.childElementCount) article.appendChild(badges);
-  article.appendChild(summary);
-  if (clampSummary) article.appendChild(clampSummary);
-  if (makerLine) article.appendChild(makerLine);
-  article.appendChild(tags);
-  article.appendChild(footer);
-
-  return article;
+/** 저장소에서 확인된 라이선스만 표시한다 (미확인 사례는 배지 없음 — 미확인 원칙) */
+function licenseBadge(c) {
+  if (!c.license) return null;
+  const none = c.license === '명시 없음';
+  const lic = el('span', 'license-badge' + (none ? ' license-badge--none' : ''), none ? '라이선스 없음' : c.license);
+  lic.title = none
+    ? '저장소에 라이선스 파일이 없어 재사용 조건이 명시되지 않았습니다'
+    : `오픈소스 라이선스 ${c.license} — 저장소에서 확인됨 (${c.license_checked || ''})`;
+  return lic;
 }
 
 // 운영 사이트가 있으면 저장소보다 먼저 보여 준다(사용자 지시 2026-09-11).

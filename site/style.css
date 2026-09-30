@@ -1516,6 +1516,7 @@ main {
 
 .eval-row { cursor: pointer; }
 .eval-row:hover td { background: var(--bg-inset); }
+.eval-row:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 
 .ax-prev { font-size: 0.75rem; color: var(--ink-faint); }
 

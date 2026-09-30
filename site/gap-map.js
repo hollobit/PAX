@@ -1,6 +1,6 @@
 'use strict';
 
-import { el, fetchJson, fetchJsonOr } from './pax-dom.js?v=6dfb9f58';
+import { el, fetchJson, fetchJsonOr } from './pax-dom.js?v=b57d2715';
 
 /** 격차 지도 — 지역·기관유형 관측 현황판과 레거시 연동 수요 보드 (로드맵 2-4) */
 
@@ -73,8 +73,14 @@ async function main() {
   }
 
   renderMinistries(cases, affOfCase);
+  const observed = renderRegionGrid(cases);
+  renderScopeTable(cases, affOfCase, observed);
+  renderOrgTypeTable(cases);
+  renderLegacyBoard();
+}
 
-  // ── 지역 그리드 ──
+// ── 지역 그리드 ──
+function renderRegionGrid(cases) {
   const counts = new Map(REGIONS.map((r) => [r, 0]));
   let unknown = 0;
   for (const c of cases) {
@@ -96,9 +102,11 @@ async function main() {
     }
     grid.appendChild(cell);
   }
-  const observed = REGIONS.filter((r) => counts.get(r) > 0).length;
+  return REGIONS.filter((r) => counts.get(r) > 0).length; // 관측된 광역시도 수 — 아래 스코프 표 설명이 쓴다
+}
 
-  // ── 지도 밖 사례의 스코프 분류 — 중앙부처·공공기관(소속 포함)은 '전국 단위', 미상이 아니다 ──
+// ── 지도 밖 사례의 스코프 분류 — 중앙부처·공공기관(소속 포함)은 '전국 단위', 미상이 아니다 ──
+function renderScopeTable(cases, affOfCase, observed) {
   const scopeCount = { central: 0, public: 0, community: 0, reference: 0, unknown: 0 };
   for (const c of cases) {
     const s = paxRegionScope(c, affOfCase.get(c.id) || '');
@@ -131,8 +139,10 @@ async function main() {
   a.href = './?region=' + encodeURIComponent('미상');
   a.textContent = '아카이브에서 필터로 열기 →';
   note.appendChild(a);
+}
 
-  // ── 기관유형 표 ──
+// ── 기관유형 표 ──
+function renderOrgTypeTable(cases) {
   const typeCounts = new Map();
   for (const c of cases) {
     typeCounts.set(c.org_type, (typeCounts.get(c.org_type) || 0) + 1);
@@ -145,8 +155,10 @@ async function main() {
     tr.appendChild(el('td', null, `${Math.round((n / cases.length) * 1000) / 10}%`));
     tbody.appendChild(tr);
   });
+}
 
-  // ── 레거시 수요 보드 ──
+// ── 레거시 수요 보드 ──
+function renderLegacyBoard() {
   const ltbody = document.querySelector('#legacy-table tbody');
   for (const item of LEGACY_DEMANDS) {
     const tr = document.createElement('tr');

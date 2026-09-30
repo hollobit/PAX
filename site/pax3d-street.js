@@ -1,7 +1,7 @@
 // 3D PAX 거리 산책 — 지도에서 고른 자리로 내려가 1인칭으로 걷는다 (sakura-crossing의 한국 거리판).
 // 조작: 클릭하면 시점 고정(마우스로 둘러보기) · W A S D/방향키 걷기 · Shift 달리기 · E 또는 클릭으로 간판의 사례 열기
 //       · Esc 시점 풀기. 터치 기기는 끌어서 둘러보고 화면 방향 단추로 걷는다. '자동 산책'은 사례 가게를 차례로 찾아간다.
-import { el } from './pax-dom.js?v=6dfb9f58';
+import { el } from './pax-dom.js?v=b57d2715';
 import * as THREE from 'three';
 import { toonGradient, skyTexture, createPostPass } from './pax3d-look.js?v=a66df86b';
 import { rng } from './pax3d-geom.js?v=f13514eb';
