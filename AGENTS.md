@@ -58,8 +58,8 @@ PAX = Threads `공공AX` 태그 + 카카오톡 오픈채팅 "공공AX 네트워�
 원장 교차 점검: `PYTHONPATH=scripts python3 -m pax.ledger`. 카카오 워치독 등록(새 기기): `bash scripts/launchd/install_watchdog.sh`.
 `scripts/collect_receiver.py`는 브라우저 수집분을 로컬 파일로 받는 임시 수신 서버다(확장 출력 차단으로 본문을
 못 넘길 때의 대안 — 정기 절차에서는 쓰지 않는다).
-배포는 CI가 main에서 성공한 뒤에만 돈다(`pages.yml`). `freshness.yml`이 6시간마다 마지막 데이터 커밋이
-14시간을 넘었는지 보고, 넘으면 실패 알림을 보낸다 — 세션 크론이 사라졌다는 신호다.
+배포는 CI가 main에서 성공한 뒤에만 돈다(`pages.yml`). `freshness.yml`이 6시간마다 마지막 원장 커밋(cases·community_stats)이
+20시간을 넘었는지 보고, 넘으면 실패 알림을 보낸다 — 세션 크론이 사라졌다는 신호다.
 
 ## 5. 사례 스키마
 

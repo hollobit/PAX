@@ -22,11 +22,15 @@ from pax.timeutil import kst_today  # noqa: E402
 
 CASES = "data/cases.json"
 ACTIVE_DAYS, STALE_DAYS = 60, 180
+# 링크 생존 확인은 사례 수만큼 돈다 — 공통 재시도(2회·20초)를 그대로 쓰면 죽은 링크 하나에 80초 가까이 걸린다.
+# 한 번만 더 시도하고 10초에 끊는다(HEAD·GET 두 방식 합쳐 최악 40초 남짓).
+LINK_TIMEOUT_S, LINK_RETRIES = 10, 1
 
 
 def http_status(url: str) -> int:
     for method in (["-I"], []):  # HEAD 먼저, 405 등이면 GET
-        r = curl(url, "-o", "/dev/null", "-w", "%{http_code}", *method, timeout=12)
+        r = curl(url, "-o", "/dev/null", "-w", "%{http_code}", *method,
+                 timeout=LINK_TIMEOUT_S, retries=LINK_RETRIES)
         try:
             code = int(r.stdout or 0) if r else 0
         except ValueError:

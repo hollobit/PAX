@@ -114,3 +114,15 @@ def test_index_build_counts_from_ledgers(tmp_path, monkeypatch):
     assert doc["total_cases"] == 3 and doc["total_champions"] == 1
     assert doc["mcp_cases"] == 1
     assert doc["domestic_model_rate"] == 0.5  # 분모는 LLM을 쓰는 2건
+
+
+def test_http_status_uses_short_budget_and_falls_back_to_get(monkeypatch):
+    calls = []
+
+    def fake_curl(url, *extra, **kw):
+        calls.append((extra, kw))
+        return type("P", (), {"stdout": "405" if "-I" in extra else "200"})()
+    monkeypatch.setattr(ch, "curl", fake_curl)
+    assert ch.http_status("https://a.example/") == 200
+    assert len(calls) == 2  # HEAD가 405면 GET으로 다시
+    assert all(kw == {"timeout": ch.LINK_TIMEOUT_S, "retries": ch.LINK_RETRIES} for _, kw in calls)

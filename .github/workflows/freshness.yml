@@ -1,6 +1,8 @@
 name: Freshness
 # 정기 수집이 통째로 멈춘 것을 알린다 — 크론은 세션 전용이라 세션이 끝나면 조용히 사라진다.
-# 마지막 데이터 커밋이 14시간을 넘으면 실패하고, GitHub가 저장소 주인에게 실패 알림을 보낸다.
+# 마지막 데이터 커밋이 20시간을 넘으면 실패하고, GitHub가 저장소 주인에게 실패 알림을 보낸다.
+# 수집은 8시간 간격이고 변경이 없으면 커밋하지 않으므로, 두 회차 연속 무변경(16시간)은 정상이다.
+# 원장 두 파일만 센다 — site/data를 건드리는 리팩터 커밋이 시계를 되돌려 멈춤을 가리지 않게.
 on:
   schedule:
     - cron: "17 */6 * * *"
@@ -16,11 +18,13 @@ jobs:
           ref: main
           fetch-depth: 200
       - name: 마지막 데이터 커밋 나이
+        env:
+          MAX_AGE_H: 20
         run: |
-          last=$(git log -1 --format=%ct -- data/cases.json data/community_stats.json site/data)
+          last=$(git log -1 --format=%ct -- data/cases.json data/community_stats.json)
           age_h=$(( ( $(date +%s) - last ) / 3600 ))
           echo "마지막 데이터 커밋: ${age_h}시간 전"
-          if [ "$age_h" -gt 14 ]; then
+          if [ "$age_h" -gt "$MAX_AGE_H" ]; then
             echo "::error::정기 수집이 ${age_h}시간째 커밋이 없습니다 — 세션 크론(CronList)과 워치독을 확인하세요"
             exit 1
           fi

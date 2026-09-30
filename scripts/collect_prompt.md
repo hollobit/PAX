@@ -141,7 +141,7 @@ PYTHONPATH=scripts python3 -m pax.run post-collect   # 순서만 보려면 --dry
 먼저 돌면 새 사례가 한 회차 동안 '평가 데이터 없음'으로 공개된다). 한 단계가 실패하면 거기서
 멈추고 종료 코드를 돌려주며 저장소 루트에 `.pax-run-failed`(실패 단계)를 남긴다 — 원인을 log에 적고,
 고친 뒤 `python3 -m pax.run post-collect --from <단계>`로 이어서 돌린다. 끝까지 성공하면 표식이 지워진다. 분기 말에는
-`python3 scripts/build_index.py --snapshot`을 따로 한 번 더 돌린다.
+`PYTHONPATH=scripts python3 scripts/build_index.py --snapshot`을 따로 한 번 더 돌린다.
 - 산출물은 시각만 바뀌면 다시 쓰지 않는다 — 사례·지표가 그대로인 회차는 커밋할 것이 없다(§6).
 - 썸네일 실패한 URL은 무시해도 된다 — 사이트가 설명문으로 폴백한다.
 - 변경 기록: 신규 사례가 1건 이상 병합됐으면 site/data/changelog.json의 entries
