@@ -1,7 +1,189 @@
 {
- "updated_at": "2026-10-01T13:01:11Z",
- "count": 707,
+ "updated_at": "2026-10-01T22:34:40Z",
+ "count": 719,
  "articles": [
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42111",
+   "title": "앤트로픽, ‘클로드 소넷 5.5’ 공개…코딩 성능 대폭 향상·속도 30%↑, 비용 30%↓",
+   "outlet": "인공지능신문",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-30",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.blog.naver.com/PostView.naver?blogId=primeministerkr&logNo=224428527952&proxyReferer=https%3A%2F%2Ffacebook.com%2F&trackingCode=external",
+   "title": "AI 행정혁신 우수공직자 간담회 #혁신스토어",
+   "outlet": "네이버 블로그 | 국무총리실 공식 블로그",
+   "published": "",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261001018851530?input=fb",
+   "title": "공공기관 정보유출땐 기관장도 책임…초기비번 미변경도 징계(종합)",
+   "outlet": "연합뉴스",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=855139",
+   "title": "'AI 안전 밑그림' 민관이 함께 그린다…과기부, 마스터플랜 연내 수립",
+   "outlet": "뉴스웍스",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610011900095587",
+   "title": "복지·인허가 AI 판단도 사람이 최종 검토…정부 '공공 AI 윤리기준' 확정",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.etoday.co.kr/news/view/2630805",
+   "title": "서울시, '행정지원 AI 에이전트' 구축 착수⋯주요 업무 3종에 우선 적용",
+   "outlet": "이투데이",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=703722",
+   "title": "오픈AI, 챗GPT에 협업 공간·문서·슬라이드 기능 추가",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.bloter.net/news/articleView.html?idxno=674880",
+   "title": "세미파이브, 로봇용 AI 반도체 개발 속도...고객사 다변화 나선다",
+   "outlet": "블로터",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.bloter.net/news/articleView.html?idxno=674822",
+   "title": "이노그리드, GPU 추론·비용관리 'AI 플랫폼'으로 통합 [현장+]",
+   "outlet": "블로터",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42145",
+   "title": "LG전자, 글로벌 칠러 생산능력 확대... AI 데이터센터 냉각 솔루션 공급 늘린다",
+   "outlet": "인공지능신문",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42137",
+   "title": "구글, ‘1백만 토큰’ 제미나이 4 아르곤 공개…장기·복합 업무 AI로 진화",
+   "outlet": "인공지능신문",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-02-px-인사랑-초과근무-알림-확장",
+   "title": "[공공AX 네트워크] 인사랑 초과근무 알림 확장 프로그램 공유, 만든 이는 초과근무를 대신 기록하지 않는다고 못 박았다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-02-px-오픈크랩-폐쇄망-지식창고",
+   "title": "[공공AX 네트워크] 사업지침을 넣어 쓰는 지식창고 오픈크랩, 폐쇄망에서도 로컬 오픈소스 모델로 돌린다는 답이 나왔다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-02-cross-조직-ai-도입의-벽",
+   "title": "[3개 방 공통] AI는 개인 손에 먼저 들어왔고 조직은 아직 문 앞에 있다, 세 방이 같은 밤에 각자의 벽을 말했다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.yna.co.kr/view/AKR20260929124000009",
    "title": "\"엔비디아, 'AI칩 담보대출' 보험 추진…AI 인프라 위험 분산\"",
@@ -393,19 +575,6 @@
    ]
   },
   {
-   "url": "https://m.blog.naver.com/PostView.naver?blogId=primeministerkr&logNo=224428527952&proxyReferer=https%3A%2F%2Ffacebook.com%2F&trackingCode=external",
-   "title": "AI 행정혁신 우수공직자 간담회 #혁신스토어",
-   "outlet": "네이버 블로그 | 국무총리실 공식 블로그",
-   "published": "",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-10-01",
-   "last_shared": "2026-10-01",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
    "url": "https://m.ajunews.com/view/20260930141907584",
    "title": "美 국방부 \"전작권 전환, 韓 전투역량 강화\"…日엔 추가 방위부담 요구",
    "outlet": "아주경제",
@@ -604,19 +773,6 @@
    "url": "https://www.enewstoday.co.kr/news/articleView.html?idxno=2475198",
    "title": "서울교통공사, AI로 지하철 냉방 혁신, 행안부 장관상 ‘최우수상’ 수상",
    "outlet": "이뉴스투데이",
-   "published": "2026-09-29",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-30",
-   "last_shared": "2026-09-30",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42111",
-   "title": "앤트로픽, ‘클로드 소넷 5.5’ 공개…코딩 성능 대폭 향상·속도 30%↑, 비용 30%↓",
-   "outlet": "인공지능신문",
    "published": "2026-09-29",
    "kind": "기사",
    "shares": 1,
