@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-01T06:35:28Z",
- "count": 82,
+ "updated_at": "2026-10-01T14:36:17Z",
+ "count": 83,
  "videos": [
   {
    "id": "D7v9p78G78Q",
@@ -8,6 +8,19 @@
    "channel": "편집자P",
    "url": "https://www.youtube.com/watch?v=D7v9p78G78Q",
    "thumb": "https://i.ytimg.com/vi/D7v9p78G78Q/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "Ber1SVWzmdw",
+   "title": "온톨로지란? 2,300년 된 철학이 AI의 뼈대가 된 이유",
+   "channel": "Alex AI",
+   "url": "https://www.youtube.com/watch?v=Ber1SVWzmdw",
+   "thumb": "https://i.ytimg.com/vi/Ber1SVWzmdw/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-10-01",
    "last_shared": "2026-10-01",

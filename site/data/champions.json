@@ -5737,6 +5737,12 @@
    "title": "수업자료 저작권 신호등 — 교사·학생이 수업자료의 저작권 문제를 4단계로 판정하고 파일 속 확인 항목을 뽑아 주는 도구",
    "org": "초등학교 교사 연구팀(개인 개발)",
    "url": "https://hyunedulab.com/deliverables/copyright_traffic_light/"
+  },
+  {
+   "id": "014c4c76225d191b",
+   "title": "정부 은하 — 52개 중앙행정기관 공개문서 9만여 건을 기관·문서·공유 법령의 3D 은하로 엮은 문서 온톨로지",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://chris.gomdori.app/onegov"
   }
  ]
 }
