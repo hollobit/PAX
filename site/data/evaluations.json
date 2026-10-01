@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-10-01",
- "total": 494,
+ "total": 495,
  "cases": [
   {
    "no": 1,
@@ -16301,6 +16301,39 @@
    "tool_type": "웹 서비스",
    "audience": "G2C 공개",
    "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 497,
+   "id": "deb5c815ab40823d",
+   "org": "초등학교 교사 연구팀(개인 개발)",
+   "title": "수업자료 저작권 신호등 — 교사·학생이 수업자료의 저작권 문제를 4단계로 판정하고 파일 속 확인 항목을 뽑아 주는 도구",
+   "ax_prev": "AI-Enabled",
+   "ax": "AI-Enabled",
+   "s": "S2",
+   "s_name": "Tool bundle",
+   "c": "C1",
+   "c_name": "결과 제공",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Live service",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R1 낮음(법률 자문 아님 고지·근거 없으면 판단 보류)",
+   "human": "검토 후 사용(상담 창구 확인 권고 명시)",
+   "evidence": "E2 화면·서비스 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "규칙 기반 판정·파일 점검·학생 퀴즈를 한데 묶고 복합 사안만 AI 에이전트에 넘기는 구성이라 AI-Enabled·S2/C1이다. AI 답을 대조된 조문·폰트 목록에 다시 맞춰 근거가 없으면 보류하는 출력 검증 장치를 스스로 갖춘 교육 현장 첫 저작권 판정 사례이며, 공개 법령 도구를 재사용해 만들었다. 2단계 에이전트의 기반 모델과 학교 현장 사용 규모는 미확인이다.",
+   "feedback": "미확인",
+   "resilience": "미확인(2단계 AI 에이전트 기반 모델·외부 플랫폼 의존)",
+   "post_url": "",
+   "service_url": "https://hyunedulab.com/deliverables/copyright_traffic_light/",
+   "tool_type": "웹 서비스",
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }

@@ -5705,6 +5705,12 @@
    "title": "경성부일필매지형명세도(1929) 중첩 지도 — 1929년 필지 단위 고지도를 오늘의 서울 지도에 겹쳐 보는 웹 지도",
    "org": "경성부 고지도 중첩 지도(민간 개발)",
    "url": "https://vuski.github.io/gsmap1929/"
+  },
+  {
+   "id": "deb5c815ab40823d",
+   "title": "수업자료 저작권 신호등 — 교사·학생이 수업자료의 저작권 문제를 4단계로 판정하고 파일 속 확인 항목을 뽑아 주는 도구",
+   "org": "초등학교 교사 연구팀(개인 개발)",
+   "url": "https://hyunedulab.com/deliverables/copyright_traffic_light/"
   }
  ]
 }

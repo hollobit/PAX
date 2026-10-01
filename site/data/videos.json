@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-09-30T13:56:40Z",
- "count": 81,
+ "updated_at": "2026-10-01T06:35:28Z",
+ "count": 82,
  "videos": [
+  {
+   "id": "D7v9p78G78Q",
+   "title": "[시즌 4] GPT-6.1 Sol, 닷츠(Dots), 그록봇(GrokBot) 쏟아지는 서비스와 모델, 그리고 500달러 요금제",
+   "channel": "편집자P",
+   "url": "https://www.youtube.com/watch?v=D7v9p78G78Q",
+   "thumb": "https://i.ytimg.com/vi/D7v9p78G78Q/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "GPXmGSQZB3U",
    "title": "닷츠: OpenAI 데브데이 2026 총정리와 숨은 이야기",

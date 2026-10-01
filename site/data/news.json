@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-09-30T23:59:15Z",
- "count": 698,
+ "updated_at": "2026-10-01T06:35:29Z",
+ "count": 701,
  "articles": [
   {
    "url": "https://www.yna.co.kr/view/AKR20260929124000009",
@@ -23,6 +23,19 @@
    "kind": "기사",
    "shares": 2,
    "first_shared": "2026-09-30",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20260930159700017",
+   "title": "SKT·카카오·KT, 10월 중 '모두의 AI' 첫선…전국민 무료",
+   "outlet": "연합뉴스",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
    "last_shared": "2026-10-01",
    "sources": [
     "kakao"
@@ -150,6 +163,19 @@
    "title": "국민연금도 카톡으로…카카오, ‘AI 정부창구’로 공공 AI 영토 넓힌다",
    "outlet": "이코노미트리뷴",
    "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://naver.me/Gnty5ftZ",
+   "title": "신한은행서 2만 5천 명 고객정보 유출…정상혁 행장 \"손해 전액 보상\"",
+   "outlet": "naver.me",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-01",
@@ -396,6 +422,19 @@
    "url": "https://akwiki.org/article/2026-10-01-cross-gpt-사용량-축소-플랜-재편",
    "title": "[에르메스단·공공AX 네트워크] GPT 200달러 플랜 사용량 축소 발표 당일 밤, 에르메스단은 갈아탈 플랜을 재고 공공AX 네트워크는 크레딧 설명을 나눴다",
    "outlet": "akwiki.org",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "http://www.iminju.net/news/articleView.html?idxno=170248",
+   "title": "[단독] 서울시민 경제데이터 공개 하루 만에 중단…서울시 \"검증 부족\"",
+   "outlet": "민주신문",
    "published": "2026-10-01",
    "kind": "기사",
    "shares": 1,
