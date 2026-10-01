@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-01T06:35:29Z",
- "count": 701,
+ "updated_at": "2026-10-01T13:01:11Z",
+ "count": 707,
  "articles": [
   {
    "url": "https://www.yna.co.kr/view/AKR20260929124000009",
@@ -328,6 +328,19 @@
    ]
   },
   {
+   "url": "https://n.news.naver.com/article/015/0005338361?cds=news_edit",
+   "title": "\"AI인 줄 알았는데 진짜였다\"…공무원 60명 군무에 SNS '폭발'",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://n.news.naver.com/article/014/0005582951?sid=100",
    "title": "강신철 국방 \"적이 도발하면 주저 말고 단호히 대응\" 해군작전사령부 긴급 점검",
    "outlet": "n.news.naver.com",
@@ -380,6 +393,19 @@
    ]
   },
   {
+   "url": "https://m.blog.naver.com/PostView.naver?blogId=primeministerkr&logNo=224428527952&proxyReferer=https%3A%2F%2Ffacebook.com%2F&trackingCode=external",
+   "title": "AI 행정혁신 우수공직자 간담회 #혁신스토어",
+   "outlet": "네이버 블로그 | 국무총리실 공식 블로그",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://m.ajunews.com/view/20260930141907584",
    "title": "美 국방부 \"전작권 전환, 韓 전투역량 강화\"…日엔 추가 방위부담 요구",
    "outlet": "아주경제",
@@ -406,6 +432,32 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-10-01-px-보안성검토-중복인증-부담",
+   "title": "[공공AX 네트워크] 애니띵 보안성 검토 통과 소식에 기관마다 따로 받는 인증을 하나로 묶자는 제안이 따라붙었다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-01-px-모두의-ai-정부서비스",
+   "title": "[공공AX 네트워크] 모두의 AI 정부 서비스를 두고 슬로건보다 무엇을 담을지가 먼저라는 말이 이어졌다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-01-px-kordoc-goal-루프",
    "title": "[공공AX 네트워크] kordoc 표 99.8378%라는 참가자 보고, 「0.0001이라도 있으면 커밋」하는 goal 루프도 소개됐다",
    "outlet": "akwiki.org",
@@ -419,8 +471,34 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-10-01-cross-제미나이4-아르곤-공개",
+   "title": "[3개 방 공통] 제미나이 4 아르곤 공개 소식에 세 방이 다르게 반응했다, 수치에는 기대가 붙고 직접 써 보는 일에는 기다림이 붙었다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-01-cross-gpt-사용량-축소-플랜-재편",
    "title": "[에르메스단·공공AX 네트워크] GPT 200달러 플랜 사용량 축소 발표 당일 밤, 에르메스단은 갈아탈 플랜을 재고 공공AX 네트워크는 크레딧 설명을 나눴다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-01-cross-chatgpt-계정-로그인-연동",
+   "title": "[에이전트코리아·공공AX 네트워크] ChatGPT 구독으로 MCP 서버를, 한 시간 뒤엔 계정 로그인까지 — 두 방은 혁신과 락인, 무료 한도를 차례로 짚었다",
    "outlet": "akwiki.org",
    "published": "2026-10-01",
    "kind": "기사",

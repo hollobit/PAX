@@ -1,5 +1,5 @@
 {
- "total": 215,
+ "total": 216,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -2083,6 +2083,30 @@
    "stats": {
     "case_count": 1,
     "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:haijun93",
+   "name": "공혁준",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "haijun93",
+     "url": "https://gitlab.aigov.go.kr/haijun93"
+    }
+   ],
+   "affiliation": {
+    "value": "마포구청",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "471dabbd273eab34"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -4588,13 +4612,14 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "dc0632528765c694",
     "c5d9b943e082e8b3",
     "6e89aaf95f6ffbd9",
     "17ed2d7a88c03119",
     "856b4951cb5274d1"
    ],
    "stats": {
-    "case_count": 4,
+    "case_count": 5,
     "top_ax": 2,
     "stars": 0
    },
@@ -5014,11 +5039,12 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "158f8dd9032e5807",
     "4093246b3f316bd8",
     "b3294bcc65e7f2e7"
    ],
    "stats": {
-    "case_count": 2,
+    "case_count": 3,
     "top_ax": 2,
     "stars": 0
    }
