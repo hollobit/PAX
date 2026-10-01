@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-09-30T22:34:32Z",
- "count": 679,
+ "updated_at": "2026-09-30T23:59:15Z",
+ "count": 698,
  "articles": [
   {
    "url": "https://www.yna.co.kr/view/AKR20260929124000009",
@@ -45,6 +45,19 @@
    "url": "https://www.tokenpost.kr/news/breaking/416167",
    "title": "GPT-6.1 Sol, 출시 일주일 만에 Astra 성능 근접",
    "outlet": "토큰포스트",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.theguru.co.kr/mobile/article.html?no=107687",
+   "title": "\"도산안창호급 잠수함, 오커스 핵잠 대안\" 호주 외교 안보 전문지 K-잠수함 '주목'",
+   "outlet": "theguru.co.kr",
    "published": "2026-09-30",
    "kind": "기사",
    "shares": 1,
@@ -107,6 +120,19 @@
    ]
   },
   {
+   "url": "https://www.hidomin.com/news/articleView.html?idxno=723092",
+   "title": "국정원 \"젤렌스키, 韓 무기지원 기대해 北포로 송환 공개한 듯\"",
+   "outlet": "경북도민일보",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.etnews.com/20260930000343",
    "title": "플리토, AI 통번역 '보글'로 통합…“개인화·데이터로 언어장벽 허문다”",
    "outlet": "미래를 보는 창 - 전자신문",
@@ -123,6 +149,214 @@
    "url": "https://www.economytribune.co.kr/news/articleView.html?idxno=3904037",
    "title": "국민연금도 카톡으로…카카오, ‘AI 정부창구’로 공공 AI 영토 넓힌다",
    "outlet": "이코노미트리뷴",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/469/0000956967?sid=100",
+   "title": "[단독] DMZ 지뢰 폭발 지점에 北 제초작업 흔적... 최근 매설 정황 뚜렷했다",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/421/0009201971?sid=100",
+   "title": "北, 8~9월 50여차례 군사분계선 침범…이달엔 하루 한번 꼴",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/421/0009199267?sid=100",
+   "title": "軍 무기체계에 '인증 국방반도체' 우선 적용…양산·정비계약도 반영",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/081/0003684918?sid=104",
+   "title": "한국도 핵잠 추진하는데…美 핵잠, 충돌 뒤 5년째 발 묶인 이유 [밀리터리+]",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/079/0004194250?sid=100",
+   "title": "\"4발 모두 北지뢰\" vs \"1발만\" 군-유엔사 미묘한 온도차…'국경선화'에는 이견",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/052/0002412964?sid=100",
+   "title": "[단독] 'DMZ 사고' 부대, 무인 지뢰탐지 로봇 보유...왜 투입 안했나?",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/047/0002530752?sid=104",
+   "title": "카니 캐나다 총리 \"한국과 손잡고 대미 국방·기술 의존 끊어내야\"",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/029/0003050748?sid=100",
+   "title": "핵잠 법안 이어 이지스함 띄운 李…‘자주국방·방산 강국’ 두 마리 토끼 잡는다",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/021/0002822316?sid=100",
+   "title": "[단독]北, 서부전선 25사단 MDL에 지뢰지대 집중 조성·김여정이 동부전선 21사단 보복 언급 진짜 이유는?",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/020/0003751686?sid=100",
+   "title": "국정원 “김정은 140kg 초고도비만…주애 160cm, 50kg 넘어”",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/018/0006377536?sid=100",
+   "title": "軍, DMZ 지뢰사고 北 책임 공식화…\"사과·책임있는 조치 촉구\"",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/014/0005582951?sid=100",
+   "title": "강신철 국방 \"적이 도발하면 주저 말고 단호히 대응\" 해군작전사령부 긴급 점검",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/011/0004666965?sid=100",
+   "title": "내년 6척 이지스구축함 체제 완성…李 “핵잠·전력모함도 확보”",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/001/0016345218?sid=100",
+   "title": "[삶-특집] \"韓 현무 미사일 2000기로도 北 핵무기 1기 감당 못한다\"",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.knnews.co.kr/mView.php?idxno=1551904",
+   "title": "“한국판 팰컨9 만든다”…한화에어로 ‘재사용 로켓’ 도전",
+   "outlet": "경남신문",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.ajunews.com/view/20260930141907584",
+   "title": "美 국방부 \"전작권 전환, 韓 전투역량 강화\"…日엔 추가 방위부담 요구",
+   "outlet": "아주경제",
    "published": "2026-09-30",
    "kind": "기사",
    "shares": 1,
@@ -163,6 +397,19 @@
    "title": "[에르메스단·공공AX 네트워크] GPT 200달러 플랜 사용량 축소 발표 당일 밤, 에르메스단은 갈아탈 플랜을 재고 공공AX 네트워크는 크레딧 설명을 나눴다",
    "outlet": "akwiki.org",
    "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-01",
+   "last_shared": "2026-10-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=869129",
+   "title": "박완수 지사\"전투기의 심장,잡았다\"첨단항공엔진 국산화",
+   "outlet": "한스경제",
+   "published": "2026-09-30",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-01",
