@@ -12010,5 +12010,33 @@
   "human": "해당 없음",
   "rationale": "부처 공개문서와 근거 법령의 연결을 구조화한 온톨로지를 시각화로 제공하고 실행 중 AI를 쓰지 않아 AI-Ready·S1/C1이다. 같은 실무자의 제도 온톨로지 뷰어를 문서 단위로 확장해, 어느 부처가 어떤 법령을 공유하는지를 처음 한 화면에 보인 사례다. 원본 색인이 민간 서비스라 수집 범위·갱신 주기와 업무 활용 사례는 미확인이다.",
   "resilience": "미확인(원본 색인이 외부 민간 서비스 OneGov에 의존)"
+ },
+ {
+  "no": 502,
+  "id": "dcaff2b0be06da36",
+  "org": "미국 연방조달청(GSA)·National Design Studio",
+  "title": "America.gov — 미국 연방정부의 대화형 통합 창구, 질문하면 공식 정부 사이트만 근거로 답하는 AI 안내",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "evidence": "E3 운영·공식 URL 확인",
+  "confidence": "높음",
+  "feedback": "미확인",
+  "post_url": "",
+  "service_url": "https://america.gov/",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S3",
+  "s_name": "System",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "status": "Live service",
+  "scope": "External",
+  "risk": "R2 보통(대국민 안내 답변·공식 출처 한정과 원문 링크로 완화)",
+  "human": "해당 없음",
+  "rationale": "연방 전 기관의 공식 사이트를 근거로 대국민 질의에 답하는 정부 운영 시스템이라 S3이고, 1단계는 정보 안내까지만 하므로 C1·AI-Enabled다. 부처 소관을 몰라도 한 창구에서 묻는 구조를 국가 단위로 연 첫 관측 해외 사례로, 국내 범정부 AI 창구 논의의 비교 기준이 된다. 기반 모델·답변 정확도 검증 방식과 2027년 신청·등록 단계의 실현은 미확인이다.",
+  "resilience": "미확인(기반 모델·환각 검증 방식 비공개, 2단계는 계획)"
  }
 ]

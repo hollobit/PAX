@@ -5743,6 +5743,12 @@
    "title": "정부 은하 — 52개 중앙행정기관 공개문서 9만여 건을 기관·문서·공유 법령의 3D 은하로 엮은 문서 온톨로지",
    "org": "공직 현장(개인 개발)",
    "url": "https://chris.gomdori.app/onegov"
+  },
+  {
+   "id": "dcaff2b0be06da36",
+   "title": "America.gov — 미국 연방정부의 대화형 통합 창구, 질문하면 공식 정부 사이트만 근거로 답하는 AI 안내",
+   "org": "미국 연방조달청(GSA)·National Design Studio",
+   "url": "https://america.gov/"
   }
  ]
 }
