@@ -2286,6 +2286,7 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "f0138a7976f8e942",
     "7ad16f34cfb6cca7",
     "75b6a86d91aea955",
     "0d6b2a5a76072edf",
@@ -2299,7 +2300,7 @@
     "2c14f2adaa83a00e"
    ],
    "stats": {
-    "case_count": 11,
+    "case_count": 12,
     "top_ax": 2,
     "stars": 0
    }
@@ -5749,6 +5750,12 @@
    "title": "America.gov — 미국 연방정부의 대화형 통합 창구, 질문하면 공식 정부 사이트만 근거로 답하는 AI 안내",
    "org": "미국 연방조달청(GSA)·National Design Studio",
    "url": "https://america.gov/"
+  },
+  {
+   "id": "e47fbcb8c74b20f9",
+   "title": "초근알리미 — 초과근무 시작·종료와 확인 알림, 월 인정시간 누적을 PC 안에서 챙기는 Edge 확장",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://overtime.choshg.com/"
   }
  ]
 }

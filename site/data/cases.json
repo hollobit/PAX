@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-02T00:20:37+09:00",
+ "updated_at": "2026-10-02T15:35:04+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -14953,6 +14953,54 @@
    "network_req": "인터넷 필수",
    "id": "dcaff2b0be06da36",
    "thumb_v": 1790868117
+  },
+  {
+   "case_class": "커뮤니티",
+   "summary": "Windows에서 지운 파일의 남은 변경 기록과 디스크 구간을 추적해 원래 이름과 내용을 별도 위치에 저장하는 실험적 시제품이다. 같은 SSD에서 50건을 시험해 21건을 저장하고 12건이 원본과 바이트 단위로 일치했다는 결과와 함께, 시도한 방법 13가지와 해결하지 못한 한계를 그대로 공개했다. 생성형 AI 없이 로컬에서 동작한다.",
+   "org_type": "커뮤니티",
+   "case_url": "https://github.com/obundh/gonggong-ax-local-8",
+   "tags": [
+    "파일복구",
+    "로컬",
+    "오픈소스",
+    "실험"
+   ],
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-10-02",
+   "source": "threads",
+   "link": "https://www.threads.com/@chobu62/post/Dd-a5kMj8rT",
+   "task_category": "공통·범용",
+   "runtime_env": "설치 필요",
+   "date": "2026-10-02",
+   "title": "삭제 파일 복구 실험 도구 — 공공 AX 로컬 시리즈 8",
+   "org": "공직 커뮤니티",
+   "id": "f0138a7976f8e942",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-10-02",
+   "thumb_v": 1790922931
+  },
+  {
+   "case_class": "개인 개발",
+   "summary": "Edge 사이드바에서 초과근무 시작·종료를 누르면 확인 알림을 반복해 주고, 공제 규칙과 공휴일을 반영한 실제·인정시간을 날짜별로 쌓아 월 기준시간 도달률과 CSV를 제공한다. 기록은 PC에만 저장하고 인사 시스템에 자동 입력하지 않으며, 회원가입 없이 무료로 쓴다. 공무원 실무 도구 모음을 운영하는 개발자의 새 도구다.",
+   "org_type": "공직 개인",
+   "tags": [
+    "초과근무",
+    "복무관리",
+    "브라우저 확장",
+    "업무자동화"
+   ],
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-10-02",
+   "source": "kakao",
+   "link": "https://overtime.choshg.com/",
+   "task_category": "인사·복무",
+   "runtime_env": "설치 필요",
+   "date": "2026-10-02",
+   "title": "초근알리미 — 초과근무 시작·종료와 확인 알림, 월 인정시간 누적을 PC 안에서 챙기는 Edge 확장",
+   "org": "공직 현장(개인 개발)",
+   "id": "e47fbcb8c74b20f9",
+   "thumb_v": 1790922933
   }
  ]
 }

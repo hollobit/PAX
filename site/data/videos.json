@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-01T14:36:17Z",
- "count": 83,
+ "updated_at": "2026-10-02T06:35:39Z",
+ "count": 84,
  "videos": [
+  {
+   "id": "5k3yIllbR54",
+   "title": "[#시트콤 #화목빌라] 00 인트로",
+   "channel": "알로로로",
+   "url": "https://www.youtube.com/watch?v=5k3yIllbR54",
+   "thumb": "https://i.ytimg.com/vi/5k3yIllbR54/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "D7v9p78G78Q",
    "title": "[시즌 4] GPT-6.1 Sol, 닷츠(Dots), 그록봇(GrokBot) 쏟아지는 서비스와 모델, 그리고 500달러 요금제",

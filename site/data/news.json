@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-01T22:34:40Z",
- "count": 719,
+ "updated_at": "2026-10-02T06:35:40Z",
+ "count": 721,
  "articles": [
   {
    "url": "https://www.aitimes.kr/news/articleView.html?idxno=42111",
@@ -42,10 +42,36 @@
    ]
   },
   {
+   "url": "https://www.seoulfn.com/news/articleView.html?idxno=639242",
+   "title": "KB국민은행도 개인정보 유출···100여명 정보 털렸다",
+   "outlet": "서울파이낸스",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.newsworks.co.kr/news/articleView.html?idxno=855139",
    "title": "'AI 안전 밑그림' 민관이 함께 그린다…과기부, 마스터플랜 연내 수립",
    "outlet": "뉴스웍스",
    "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kyeonggi.com/article/20261002580044",
+   "title": "신한은행 고객정보 해킹에 ‘중국 AI’ 흔적 발견",
+   "outlet": "경기일보",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-02",
