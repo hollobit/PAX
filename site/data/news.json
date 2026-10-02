@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-02T06:35:40Z",
- "count": 721,
+ "updated_at": "2026-10-02T14:34:04Z",
+ "count": 726,
  "articles": [
   {
    "url": "https://www.aitimes.kr/news/articleView.html?idxno=42111",
@@ -23,6 +23,19 @@
    "kind": "기사",
    "shares": 2,
    "first_shared": "2026-10-01",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261002176000004",
+   "title": "경찰, '은행권 전방위 AI 해킹사건' 즉각 내사 착수",
+   "outlet": "연합뉴스",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
    "last_shared": "2026-10-02",
    "sources": [
     "kakao"
@@ -172,6 +185,32 @@
    ]
   },
   {
+   "url": "https://n.news.naver.com/mnews/article/366/0001195930",
+   "title": "브로드컴, 앤트로픽에 57조원 빌려준다… 구글 TPU 임대액 3분의 1 조달",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-02-px-퍼플렉시티-미국정부-챗봇",
+   "title": "[공공AX 네트워크] 퍼플렉시티의 신모델과 미국 정부 공식 챗봇, 업스테이지 Solar Mini 4 소식이 오후 늦게부터 저녁까지 줄지어 올라왔다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-02-px-인사랑-초과근무-알림-확장",
    "title": "[공공AX 네트워크] 인사랑 초과근무 알림 확장 프로그램 공유, 만든 이는 초과근무를 대신 기록하지 않는다고 못 박았다",
    "outlet": "akwiki.org",
@@ -198,8 +237,34 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-10-02-px-대출모집인-유출-권한관리",
+   "title": "[공공AX 네트워크] 대출모집인 시스템 유출 보도가 올라오자 공공AX 네트워크에서 에이전트에 어디까지 권한을 줄지 망분리 논쟁이 이어졌다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-02-cross-조직-ai-도입의-벽",
    "title": "[3개 방 공통] AI는 개인 손에 먼저 들어왔고 조직은 아직 문 앞에 있다, 세 방이 같은 밤에 각자의 벽을 말했다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-02-cross-사용량-리셋-예고",
+   "title": "[3개 방 공통] ChatGPT 전체 리셋 예고에 세 방이 모두 반응했다 — 새벽 2시 계산, 크레딧 소진, fast 모드 4배",
    "outlet": "akwiki.org",
    "published": "2026-10-02",
    "kind": "기사",
