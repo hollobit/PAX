@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-02T14:34:04Z",
+ "updated_at": "2026-10-02T22:33:48Z",
  "count": 726,
  "articles": [
+  {
+   "url": "https://www.kyeonggi.com/article/20261002580044",
+   "title": "신한은행 고객정보 해킹에 ‘중국 AI’ 흔적 발견",
+   "outlet": "경기일보",
+   "published": "",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-02",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.aitimes.kr/news/articleView.html?idxno=42111",
    "title": "앤트로픽, ‘클로드 소넷 5.5’ 공개…코딩 성능 대폭 향상·속도 30%↑, 비용 30%↓",
@@ -72,19 +85,6 @@
    "title": "'AI 안전 밑그림' 민관이 함께 그린다…과기부, 마스터플랜 연내 수립",
    "outlet": "뉴스웍스",
    "published": "2026-09-30",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-10-02",
-   "last_shared": "2026-10-02",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.kyeonggi.com/article/20261002580044",
-   "title": "신한은행 고객정보 해킹에 ‘중국 AI’ 흔적 발견",
-   "outlet": "경기일보",
-   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-02",
