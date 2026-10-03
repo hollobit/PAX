@@ -1,7 +1,124 @@
 {
- "updated_at": "2026-10-03T06:36:21Z",
- "count": 748,
+ "updated_at": "2026-10-03T22:34:23Z",
+ "count": 757,
  "articles": [
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261002124200017",
+   "title": "정부 AI 입법 체계화한다…42개 중앙행정기관 협의체 가동",
+   "outlet": "연합뉴스",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.tokenpost.kr/news/ai/417865",
+   "title": "클로드 코드 2.1.287, 놓친 정보 알리는 보조 에이전트 추가",
+   "outlet": "토큰포스트",
+   "published": "2026-10-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.khgames.co.kr/news/articleView.html?idxno=308952",
+   "title": "중국 생성형 AI 이용자 7억 명 돌파",
+   "outlet": "경향게임스",
+   "published": "2026-10-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610040044447214",
+   "title": "애플, 맥 개인정보 접근 문턱 높인다…AI 에이전트 위험 경고",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=704951",
+   "title": "트럼프, 신임 AI 차르에 제이 클레이턴 낙점하나",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215933",
+   "title": "딥시크, 데스크톱 앱 '딥시크 하네스' 출시...\"챗·코딩·문서 통합\"",
+   "outlet": "AI타임스",
+   "published": "2026-10-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215932",
+   "title": "'나만의 클로드 코드' 만든다...앤트로픽, 커스텀 확장 기능 '모드' 출시",
+   "outlet": "AI타임스",
+   "published": "2026-10-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aifnlife.co.kr/news/articleView.html?idxno=27847",
+   "title": "[AI 정부정책] AI가 키우는 ‘디지털 공공 주치의’…국가건강정보포털, 2030년까지 전면 개편",
+   "outlet": "AI라이프경제",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://dealsite.co.kr/articles/169905",
+   "title": "[AI 돌봄] NHN와플랫, AI 플랫폼화로 지자체 돌봄업무 효율성 높인다",
+   "outlet": "딜사이트",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.yna.co.kr/view/AKR20261001018851530?input=fb",
    "title": "공공기관 정보유출땐 기관장도 책임…초기비번 미변경도 징계(종합)",
