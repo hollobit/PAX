@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-02T15:35:04+09:00",
+ "updated_at": "2026-10-03T15:35:26+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -14511,6 +14511,54 @@
    "title": "초근알리미 — 초과근무 시작·종료와 확인 알림, 월 인정시간 누적을 PC 안에서 챙기는 Edge 확장",
    "org": "공직 현장(개인 개발)",
    "id": "e47fbcb8c74b20f9"
+  },
+  {
+   "org_type": "공직 개인",
+   "task_category": "문서·기안",
+   "summary": "기관 홈페이지 첨부 한글 문서를 AI 챗봇이 제대로 읽지 못한다는 문제에서 출발해, HWPX 문서를 쪽 배치와 서식, 이미지까지 담은 HTML 파일 하나로 변환한다. 문단·제목·표·목록을 HTML 구조로 보존해 검색과 AI 도구가 원문을 활용할 수 있고, 변환은 서버나 외부 AI 없이 PC 안에서 끝난다. 명령줄 프로그램과 오프라인 게시 도우미를 함께 제공한다.",
+   "source": "kakao",
+   "network_req": "로컬 완결",
+   "org": "공직 현장(개인 개발)",
+   "collected_at": "2026-10-03",
+   "link": "https://github.com/everydaymind/hwpx2html",
+   "case_class": "개인 개발",
+   "tags": [
+    "HWPX",
+    "웹접근성",
+    "AI 가독성",
+    "오픈소스"
+   ],
+   "runtime_env": "설치 필요",
+   "title": "hwpx2html — 공공기관 한글 문서를 사람·검색·AI가 함께 읽는 단일 HTML로 바꿔 게시하는 변환기",
+   "date": "2026-10-03",
+   "model_dependency": "없음(비LLM)",
+   "id": "823f4a69ee26e703",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-10-03"
+  },
+  {
+   "org_type": "기초지자체",
+   "task_category": "기획·정책",
+   "summary": "공개 회의록과 의안에서 의원 질의·집행부 답변을 찾고, 사업명으로 예산안·본예산·추경·집행액을 구분해 확인하며, 근거 조례와 시행규칙의 위임 근거·공포일·시행일을 점검한다. 지방의정포털·지방재정365·법제처 공개 API를 쓰고 답에 출처 링크와 미확인 사항을 붙인다. 구청 내부 AI 분과가 만들어 전국 지자체가 대화형 AI에 연결해 쓰도록 공개했다.",
+   "source": "kakao",
+   "network_req": "인터넷 필수",
+   "org": "전남광주통합특별시 서구",
+   "region": "광주",
+   "collected_at": "2026-10-03",
+   "link": "https://local-government-mcp.vercel.app",
+   "case_class": "기관 공식",
+   "tags": [
+    "MCP",
+    "지방의회",
+    "예산",
+    "조례"
+   ],
+   "runtime_env": "MCP·CLI 설정",
+   "title": "지방의회·예산·조례 MCP — 의회 질의·사업 예산·근거 조례를 한 흐름으로 찾고 절차를 점검하는 지자체 직원용 MCP",
+   "date": "2026-10-03",
+   "model_dependency": "모델 중립(BYO)",
+   "id": "f3a52d723e115ae6"
   }
  ]
 }

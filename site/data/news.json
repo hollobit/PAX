@@ -1,7 +1,306 @@
 {
- "updated_at": "2026-10-02T22:33:48Z",
- "count": 726,
+ "updated_at": "2026-10-03T06:36:21Z",
+ "count": 748,
  "articles": [
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261001018851530?input=fb",
+   "title": "공공기관 정보유출땐 기관장도 책임…초기비번 미변경도 징계(종합)",
+   "outlet": "연합뉴스",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-10-02",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://zdnet.co.kr/view?no=20261002145024",
+   "title": "정부, AI 협력체계 재가동…이해민 AI수석 \"부처 간 쟁점 챙길 것\"",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261001179700009",
+   "title": "日 최대 차량공유업체 개인정보 유출 '파문'…면허증 등 660만건",
+   "outlet": "연합뉴스",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/amp/view/AKR20261002164651051",
+   "title": "BNK부산은행도 해킹당해…외주 개발직원 정보 11건 유출(종합)",
+   "outlet": "연합뉴스",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/amp/view/AKR20261002086352002",
+   "title": "국민·하나·부산은행도 당했다…금융권 해킹 피해 확산(종합2보)",
+   "outlet": "연합뉴스",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/amp/view/AKR20261002042351017",
+   "title": "신한은행 해킹에 AI 동원됐나…서버서 '중국어 침투도구' 흔적(종합)",
+   "outlet": "연합뉴스",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mt.co.kr/amp/finance/2026/10/02/2026100221392267994",
+   "title": "금융권 해킹 피해 확산…예가람저축은행도 고객정보 털렸다",
+   "outlet": "머니투데이",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=241995",
+   "title": "더존비즈온, 서울시 ‘AI 에이전트‘ 사업에 ‘ONE AI PE’ 공급",
+   "outlet": "아이티데일리",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.hankookilbo.com/news/article/A2026100221240001350",
+   "title": "\"AI가 탈탈 털었다\"… 주요 은행 해킹 공격에 경찰 내사 착수-경제",
+   "outlet": "한국일보",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.energydaily.co.kr/news/articleView.html?idxno=203774",
+   "title": "한전, 변전소 AI 감시에 ‘국산 AI 반도체(NPU)’ 사용 검토",
+   "outlet": "에너지데일리",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=704572",
+   "title": "셀카 올리면 옷 입혀준다…챗GPT, 가상 피팅 기능 추가",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42158",
+   "title": "NIA, 대학과 기업이 협력하고 국가가 지원하는 K-AI 네트워크 경쟁력 강화 사업 박차",
+   "outlet": "인공지능신문",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215896",
+   "title": "오픈AI, '불량 에이전트' 무단 활동 100여곳 조직에 통보",
+   "outlet": "AI타임스",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215883",
+   "title": "캘리포니아주, '불량 에이전트' 관련 오픈AI에 수사 소환장 발부",
+   "outlet": "AI타임스",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://v.daum.net/v/20261003060343705",
+   "title": "신한보다 먼저 해킹 공격받은 KB국민은행, 보안 대응 ‘시험대’",
+   "outlet": "Daum | 국민일보",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://v.daum.net/v/20261002175003285",
+   "title": "하나은행도 해킹 당했다⋯고객 89명 주민번호·직장명 등 정보유출",
+   "outlet": "Daum | 이투데이",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://v.daum.net/v/20261002152056106",
+   "title": "'전북AI'로 대통령상 받은 윤성호 주무관 \"1년간 새벽 2시까지 작업\"",
+   "outlet": "Daum | 지디넷코리아",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/mnews/article/009/0005743416",
+   "title": "정부, AI 입법 ‘교통정리’ 나선다…42개 부처 머리 맞대",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-03-px-은행-개인정보-유출",
+   "title": "[공공AX 네트워크] 은행 개인정보 유출 기사가 공유되자 공공AX 네트워크의 몇몇 참가자는 보안 관리 수준을 원인으로 추측했다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-03-px-hwpx-한글문서",
+   "title": "[공공AX 네트워크] 한글 문서를 두고 푸념 섞인 말이 나왔던 공공AX 네트워크에서 hwpx 부터는 꽤 풀렸다는 말이 이어졌다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-03-cross-솔61-아스트라-체감",
+   "title": "[3개 방 공통] 6.1 솔 울트라 패스트의 가성비 호평, 그리고 시키기 전에는 시작하지 않는 습관 — 세 방의 금요일 밤 체감",
+   "outlet": "akwiki.org",
+   "published": "2026-10-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-03-cross-독파모-지원-방식",
+   "title": "[에이전트코리아·공공AX 네트워크] 독파모 지원, 에이전트코리아는 인재와 API를 말하고 공공AX는 몰아주기 현실론을 말했다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-03-cross-aside-로컬모델-컨텍스트",
+   "title": "[에이전트코리아·공공AX 네트워크] aside(어사이드)에 올라마(Ollama) 로컬 모델을 붙였더니 응답이 없다, 한 방은 되묻는 데서 멈췄고 다른 방에서는 컨텍스트 길이를 늘리라는 답이 나왔다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-03",
+   "last_shared": "2026-10-03",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.kyeonggi.com/article/20261002580044",
    "title": "신한은행 고객정보 해킹에 ‘중국 AI’ 흔적 발견",
@@ -46,19 +345,6 @@
    "title": "경찰, '은행권 전방위 AI 해킹사건' 즉각 내사 착수",
    "outlet": "연합뉴스",
    "published": "2026-10-02",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-10-02",
-   "last_shared": "2026-10-02",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.yna.co.kr/view/AKR20261001018851530?input=fb",
-   "title": "공공기관 정보유출땐 기관장도 책임…초기비번 미변경도 징계(종합)",
-   "outlet": "연합뉴스",
-   "published": "2026-10-01",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-02",

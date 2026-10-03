@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-09-28",
+ "generated_at": "2026-10-03",
  "summary": {
-  "total": 87,
+  "total": 88,
   "counts": {
-   "주의": 70,
+   "주의": 71,
    "양호": 15,
    "부분 검증": 2
   },
@@ -2369,6 +2369,32 @@
     "data_flow": {
      "verdict": "미검증",
      "note": "미검증(호스트형 — RAG·MCP·모델 등록 구조라 호출 대상이 설정에 따름)"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "f3a52d723e115ae6",
+   "title": "지방의회·예산·조례 MCP — 의회 질의·사업 예산·근거 조례를 한 흐름으로 찾고 절차를 점검하는 지자체 직원용 MCP",
+   "stars": null,
+   "checked_at": "2026-10-03",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
     }
    },
    "dynamic": null,

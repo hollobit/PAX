@@ -2,36 +2,36 @@
  "generated_at": "2026-10-03",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 502,
- "total_champions": 216,
+ "total_cases": 504,
+ "total_champions": 217,
  "community": {
-  "members": 2371,
-  "kakao_week": 4072,
-  "kakao_total_observed": 43645,
-  "threads_observed": 321
+  "members": 2374,
+  "kakao_week": 4480,
+  "kakao_total_observed": 44053,
+  "threads_observed": 322
  },
  "certified_champions": 5,
- "unattributed_cases": 104,
+ "unattributed_cases": 105,
  "ax_distribution": {
-  "AI-Ready": 334,
-  "AI-Enabled": 143,
+  "AI-Ready": 335,
+  "AI-Enabled": 144,
   "AX 단계 외": 19,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
  "c_axis_mean": 0.93,
  "p_distribution": {
-  "P0": 160,
-  "P1": 325,
+  "P0": 161,
+  "P1": 326,
   "P2": 17
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 242,
+  "없음(비LLM)": 243,
   "해외 오픈웨이트(로컬)": 27,
   "혼합": 13,
   "해외 상용 API": 61,
-  "모델 중립(BYO)": 75,
+  "모델 중립(BYO)": 76,
   "국산 독자모델": 6,
   "미상": 12,
   "국산 오픈웨이트": 1
@@ -767,7 +767,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 242,
+    "n": 243,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -783,7 +783,7 @@
     "specified": 46
    },
    "모델 중립(BYO)": {
-    "n": 75,
+    "n": 76,
     "specified": 3
    },
    "국산 독자모델": {
@@ -1640,15 +1640,15 @@
  "domestic_model_rate": 0.065,
  "local_model_rate": 0.259,
  "model_known": 108,
- "license_tagged": 384,
- "license_stated_rate": 0.482,
+ "license_tagged": 385,
+ "license_stated_rate": 0.483,
  "gitlab_cases": 261,
  "gitlab_mirror_pairs": 37,
  "gitlab_open_rate": 0.142,
- "mcp_cases": 87,
+ "mcp_cases": 88,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 420,
+  "미확인": 422,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1656,7 +1656,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.755
+  "feedback": 0.756
  },
  "maintenance_distribution": {
   "활발": 313,
@@ -1757,7 +1757,7 @@
    ]
   },
   "github": {
-   "count": 149,
+   "count": 150,
    "starred": 145,
    "stars_sum": 269507,
    "maintenance": {
@@ -1851,7 +1851,7 @@
  },
  "license_distribution": {
   "명시 없음": 199,
-  "MIT": 121,
+  "MIT": 122,
   "Apache-2.0": 30,
   "Other": 16,
   "GNU AGPLv3": 5,
@@ -1869,7 +1869,7 @@
    "gitlab": 146
   },
   "MIT": {
-   "github": 70,
+   "github": 71,
    "gitlab": 50
   },
   "Apache-2.0": {
@@ -1915,8 +1915,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 138,
-   "stated": 97
+   "total": 139,
+   "stated": 98
   },
   "github-pages": {
    "total": 16,
@@ -1928,18 +1928,18 @@
   }
  },
  "mcp_stats": {
-  "total": 87,
+  "total": 88,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
-   "Server": 75,
+   "Server": 76,
    "Client/Host": 7,
    "Unknown/None": 4
   },
   "c_grades": {
    "C0": 68,
-   "C2": 6,
+   "C2": 7,
    "C3": 1,
    "C1": 12
   },

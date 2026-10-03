@@ -3057,6 +3057,33 @@
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
    }
+  },
+  {
+   "case_id": "f3a52d723e115ae6",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-10-03",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   }
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
- "total": 216,
+ "total": 217,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -932,6 +932,26 @@
    "affiliation": null,
    "cases": [
     "4925d016e9377a50"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:everydaymind",
+   "name": "everydaymind",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "everydaymind",
+     "url": "https://github.com/everydaymind"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "823f4a69ee26e703"
    ],
    "stats": {
     "case_count": 1,
@@ -5756,6 +5776,12 @@
    "title": "초근알리미 — 초과근무 시작·종료와 확인 알림, 월 인정시간 누적을 PC 안에서 챙기는 Edge 확장",
    "org": "공직 현장(개인 개발)",
    "url": "https://overtime.choshg.com/"
+  },
+  {
+   "id": "f3a52d723e115ae6",
+   "title": "지방의회·예산·조례 MCP — 의회 질의·사업 예산·근거 조례를 한 흐름으로 찾고 절차를 점검하는 지자체 직원용 MCP",
+   "org": "전남광주통합특별시 서구",
+   "url": "https://local-government-mcp.vercel.app"
   }
  ]
 }
