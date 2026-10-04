@@ -1,13 +1,78 @@
 {
- "updated_at": "2026-10-04T06:34:16Z",
- "count": 86,
+ "updated_at": "2026-10-04T14:36:06Z",
+ "count": 90,
  "videos": [
+  {
+   "id": "4GA64_rb5VU",
+   "title": "범정부오피스 홍보용 영상",
+   "channel": "공무원코딩",
+   "url": "https://www.youtube.com/watch?v=4GA64_rb5VU",
+   "thumb": "https://i.ytimg.com/vi/4GA64_rb5VU/mqdefault.jpg",
+   "shares": 3,
+   "first_shared": "2026-09-03",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "yoCjXtCCrgo",
+   "title": "행성을 지운 건 망원경이 아니라 '정의'였다: 분류가 바뀌면 사실이 바뀐다",
+   "channel": "Alex AI",
+   "url": "https://www.youtube.com/watch?v=yoCjXtCCrgo",
+   "thumb": "https://i.ytimg.com/vi/yoCjXtCCrgo/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "w2phdt6WOaY",
+   "title": "충남도청 범정부오피스 시연용 영상",
+   "channel": "공무원코딩",
+   "url": "https://www.youtube.com/watch?v=w2phdt6WOaY",
+   "thumb": "https://i.ytimg.com/vi/w2phdt6WOaY/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "nKcT4NRBiAg",
+   "title": "현직 경찰, 'AI 성착취물' 제작 유포..잠입수사로 적발 / SBS",
+   "channel": "SBS 뉴스",
+   "url": "https://www.youtube.com/watch?v=nKcT4NRBiAg",
+   "thumb": "https://i.ytimg.com/vi/nKcT4NRBiAg/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "Rx6lWWpmeqg",
    "title": "\"코딩 대신 자동차 정비\"… AI 두려운 美 청년들, 직업 선택이 바뀌었다 / KNN",
    "channel": "KNN NEWS",
    "url": "https://www.youtube.com/watch?v=Rx6lWWpmeqg",
    "thumb": "https://i.ytimg.com/vi/Rx6lWWpmeqg/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "1PnRkZyS3Ds",
+   "title": "(한글자막) 일론 머스크 · 젠슨 황이 말하는 AI 전력과 풍요의 시대 _ 9월 30일 백악관",
+   "channel": "준이츠 JOONITS",
+   "url": "https://www.youtube.com/watch?v=1PnRkZyS3Ds",
+   "thumb": "https://i.ytimg.com/vi/1PnRkZyS3Ds/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-10-04",
    "last_shared": "2026-10-04",
@@ -309,19 +374,6 @@
    "thumb": "https://i.ytimg.com/vi/BM0oVk0aLAE/mqdefault.jpg",
    "shares": 3,
    "first_shared": "2026-09-16",
-   "last_shared": "2026-09-17",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "id": "4GA64_rb5VU",
-   "title": "범정부오피스 홍보용 영상",
-   "channel": "공무원코딩",
-   "url": "https://www.youtube.com/watch?v=4GA64_rb5VU",
-   "thumb": "https://i.ytimg.com/vi/4GA64_rb5VU/mqdefault.jpg",
-   "shares": 2,
-   "first_shared": "2026-09-03",
    "last_shared": "2026-09-17",
    "sources": [
     "kakao"

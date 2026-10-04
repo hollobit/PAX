@@ -1,5 +1,5 @@
 {
- "total": 217,
+ "total": 218,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -4988,6 +4988,26 @@
    "affiliation": null,
    "cases": [
     "65f9634aacca2170"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:lsh573928-rgb",
+   "name": "토목AX",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "lsh573928-rgb",
+     "url": "https://github.com/lsh573928-rgb"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "d0ab0506a35ee03a"
    ],
    "stats": {
     "case_count": 1,

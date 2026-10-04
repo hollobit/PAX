@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-04T06:34:19Z",
- "count": 762,
+ "updated_at": "2026-10-04T14:36:09Z",
+ "count": 767,
  "articles": [
   {
    "url": "https://www.yna.co.kr/view/AKR20261002124200017",
@@ -107,10 +107,36 @@
    ]
   },
   {
+   "url": "https://news.jkn.co.kr/post/1005204",
+   "title": "추석 암표 35건 수사 의뢰…AI 위조 승차권까지 등장, 코레일 '강력 대응'",
+   "outlet": "재경일보",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://dealsite.co.kr/articles/169905",
    "title": "[AI 돌봄] NHN와플랫, AI 플랫폼화로 지자체 돌봄업무 효율성 높인다",
    "outlet": "딜사이트",
    "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-04-px-지방정부-ai-보고서",
+   "title": "[공공AX 네트워크] 지방정부 AI 보고서 세 건과 민원 데이터 공개론",
+   "outlet": "akwiki.org",
+   "published": "2026-10-04",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-04",
@@ -161,6 +187,45 @@
   {
    "url": "https://akwiki.org/article/2026-10-04-px-공공-온톨로지-암묵지-검증",
    "title": "[공공AX 네트워크] 공공 온톨로지 사업은 PoC 뒤 검증과 판단 근거 앞에서 멈춘다는 말이 나왔고, 한 참여자는 검증된 데이터부터 만들자고 했다",
+   "outlet": "akwiki.org",
+   "published": "2026-10-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-04-px-ai-장시간-작업-효율화",
+   "title": "[공공AX 네트워크] 장시간 작업에서 AI가 멋대로 효율화하는 문제",
+   "outlet": "akwiki.org",
+   "published": "2026-10-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-04-px-ai-위조-ktx-티켓",
+   "title": "[공공AX 네트워크] AI로 위조한 KTX 티켓과 사문서위조 처벌 답변",
+   "outlet": "akwiki.org",
+   "published": "2026-10-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-04-cross-닷-한계와-mcp-확장",
+   "title": "[3개 방 공통] Dot(닷)이 닿는 곳과 닿지 못하는 곳",
    "outlet": "akwiki.org",
    "published": "2026-10-04",
    "kind": "기사",
