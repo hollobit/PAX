@@ -1,17 +1,17 @@
 {
- "generated_at": "2026-10-04",
+ "generated_at": "2026-10-05",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
  "total_cases": 505,
  "total_champions": 218,
  "community": {
-  "members": 2382,
-  "kakao_week": 3702,
-  "kakao_total_observed": 44508,
+  "members": 2384,
+  "kakao_week": 3200,
+  "kakao_total_observed": 44533,
   "threads_observed": 324
  },
  "certified_champions": 5,
- "unattributed_cases": 105,
+ "unattributed_cases": 106,
  "ax_distribution": {
   "AI-Ready": 336,
   "AI-Enabled": 144,
@@ -1626,8 +1626,8 @@
  "license_tagged": 386,
  "license_stated_rate": 0.482,
  "gitlab_cases": 261,
- "gitlab_mirror_pairs": 37,
- "gitlab_open_rate": 0.142,
+ "gitlab_mirror_pairs": 38,
+ "gitlab_open_rate": 0.146,
  "mcp_cases": 88,
  "transition_funnel": {
   "기관 공식": 34,
@@ -1642,21 +1642,29 @@
   "feedback": 0.754
  },
  "maintenance_distribution": {
-  "활발": 313,
-  "정체": 32,
+  "활발": 319,
+  "정체": 40,
   "방치": 13
  },
- "stars_collected": 358,
+ "stars_collected": 372,
  "repo_stats": {
   "gitlab": {
    "count": 261,
-   "starred": 248,
-   "stars_sum": 433,
+   "starred": 259,
+   "stars_sum": 463,
    "maintenance": {
-    "활발": 238,
-    "정체": 11
+    "활발": 241,
+    "정체": 19
    },
    "top": [
+    {
+     "id": "8ff758ac1d5e40eb",
+     "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
+     "stars": 14,
+     "maintenance": "활발",
+     "license": "MIT",
+     "developer": "류승인"
+    },
     {
      "id": "43dc7f4ab2500260",
      "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
@@ -1690,14 +1698,6 @@
      "developer": "정솔현"
     },
     {
-     "id": "8ff758ac1d5e40eb",
-     "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
-     "stars": 9,
-     "maintenance": "활발",
-     "license": "MIT",
-     "developer": "류승인"
-    },
-    {
      "id": "d6c35b2999da8ca0",
      "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱",
      "stars": 8,
@@ -1722,37 +1722,37 @@
      "developer": "우성균"
     },
     {
+     "id": "ac09bd2e1c0fbb29",
+     "title": "온AI Work — 공무원 보고서 AI 작성 도구",
+     "stars": 7,
+     "maintenance": "활발",
+     "license": "MIT",
+     "developer": "정준우"
+    },
+    {
      "id": "8c5458af8f13435d",
      "title": "한글 AI 도우미 — 로컬 LLM 웹한글 보고서 확장",
      "stars": 7,
      "maintenance": "활발",
      "license": "명시 없음",
      "developer": "정재경"
-    },
-    {
-     "id": "ac09bd2e1c0fbb29",
-     "title": "온AI Work — 공무원 보고서 AI 작성 도구",
-     "stars": 6,
-     "maintenance": "활발",
-     "license": "MIT",
-     "developer": "정준우"
     }
    ]
   },
   "github": {
    "count": 151,
-   "starred": 145,
-   "stars_sum": 269507,
+   "starred": 148,
+   "stars_sum": 284494,
    "maintenance": {
-    "활발": 111,
-    "정체": 22,
+    "활발": 112,
+    "정체": 24,
     "방치": 13
    },
    "top": [
     {
      "id": "c54ee4b5fb3ee4c5",
      "title": "Orca — 병렬 에이전트 플릿을 부리는 에이전트 개발 환경(ADE)",
-     "stars": 79509,
+     "stars": 84943,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "stablyai"
@@ -1760,7 +1760,7 @@
     {
      "id": "4f136eeeea72fe65",
      "title": "Archify — 코드베이스·시스템 설명을 검증 가능한 다이어그램으로 바꾸는 에이전트 스킬",
-     "stars": 72745,
+     "stars": 77399,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "tt-a1i"
@@ -1768,7 +1768,7 @@
     {
      "id": "2085370092f99007",
      "title": "God's Eye View — 항공기·선박·위성·지진·공개 카메라를 한 3D 지구본에 띄우는 오픈소스 공간정보 관제 참고 도구",
-     "stars": 44034,
+     "stars": 47498,
      "maintenance": "활발",
      "license": "Other",
      "developer": "bilawalsidhu"
@@ -1776,7 +1776,7 @@
     {
      "id": "f108979f0d8b2009",
      "title": "book-to-skill — 기술 서적 PDF를 Claude Code 스킬로 바꾸는 도구",
-     "stars": 32717,
+     "stars": 33688,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "virgiliojr94"
@@ -1784,7 +1784,7 @@
     {
      "id": "b64e832490a6c814",
      "title": "MCP Inspector — MCP 서버를 눈으로 검사하는 공식 테스트 도구",
-     "stars": 10965,
+     "stars": 11018,
      "maintenance": "활발",
      "license": "명시 없음",
      "developer": "modelcontextprotocol"
@@ -1792,7 +1792,7 @@
     {
      "id": "2f4ed1e68a6464c5",
      "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
-     "stars": 7699,
+     "stars": 7763,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "NomaDamas"
@@ -1800,7 +1800,7 @@
     {
      "id": "0292062a6328545a",
      "title": "public-apis-4Kr — 한국 공개 API 300+ 커뮤니티 큐레이션 목록",
-     "stars": 3255,
+     "stars": 3267,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "yoobin_mion"
@@ -1808,7 +1808,7 @@
     {
      "id": "157289f6e0cd7fd4",
      "title": "가재코드 치트시트 — 코딩 에이전트 사용법을 한 장으로 정리해 공식 저장소에 반영된 커뮤니티 기여물",
-     "stars": 2872,
+     "stars": 2906,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "Bellman"
@@ -1816,7 +1816,7 @@
     {
      "id": "43dc7f4ab2500260",
      "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
-     "stars": 2610,
+     "stars": 2634,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "류승인"
@@ -1824,7 +1824,7 @@
     {
      "id": "8d5d9da284a4f810",
      "title": "map3d — 오픈스트리트맵으로 도시를 3D 건물·도로 지도로 만들어 GLB로 내보내는 오픈소스",
-     "stars": 2434,
+     "stars": 2438,
      "maintenance": "정체",
      "license": "MIT",
      "developer": "cartesiancs"
@@ -2154,6 +2154,12 @@
    "title": "법의 궤도 — 조문 하나에서 뻗어 나가는 법령 인용 관계를 입체 지도로 펼치는 탐색기",
    "github": "https://github.com/gschamisle/law-orbit",
    "gitlab": "https://gitlab.aigov.go.kr/gslee0819/law-orbit"
+  },
+  {
+   "id": "d0ab0506a35ee03a",
+   "title": "소규모 건설공사 설계 자동화 — 읍면 토목직이 야장만 넣으면 도면·수량산출서·원가계산까지 만드는 도구",
+   "github": "https://github.com/lsh573928-rgb/sangju-estimate-public",
+   "gitlab": "https://gitlab.aigov.go.kr/lsh5739/sangju-estimate-public"
   }
  ]
 }

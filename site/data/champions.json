@@ -4016,13 +4016,12 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
-    "ef389de4efadc258",
     "798f4e6bef72fc13",
     "e160d086c0ce2b1b",
     "d08bc7e9a69190af"
    ],
    "stats": {
-    "case_count": 4,
+    "case_count": 3,
     "top_ax": 1,
     "stars": 0
    }
@@ -5586,6 +5585,12 @@
    "title": "AX 조직관리 레이더 — 공공·민간 조직관리와 혁신행동을 데이터로 비교",
    "org": "공직 현장(개인 개발)",
    "url": "https://public-private-innovation-dashboard.vercel.app/"
+  },
+  {
+   "id": "ef389de4efadc258",
+   "title": "조달법령 관리시스템 — 매일 최신성을 검증하는 조달 법령·행정규칙 통합 검색",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://procurement-law-system.milkbuttercheese.chatgpt.site/"
   },
   {
    "id": "8c461c4901e30775",
