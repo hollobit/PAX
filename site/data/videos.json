@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-03T06:36:18Z",
- "count": 85,
+ "updated_at": "2026-10-04T06:34:16Z",
+ "count": 86,
  "videos": [
+  {
+   "id": "Rx6lWWpmeqg",
+   "title": "\"코딩 대신 자동차 정비\"… AI 두려운 美 청년들, 직업 선택이 바뀌었다 / KNN",
+   "channel": "KNN NEWS",
+   "url": "https://www.youtube.com/watch?v=Rx6lWWpmeqg",
+   "thumb": "https://i.ytimg.com/vi/Rx6lWWpmeqg/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-04",
+   "last_shared": "2026-10-04",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "a5-0oVm6edg",
    "title": "딸깍이면 다 되는 시대, 인간의 마지막 가치 - 송길영 작가",

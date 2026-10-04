@@ -5,9 +5,9 @@
  "total_cases": 504,
  "total_champions": 217,
  "community": {
-  "members": 2381,
-  "kakao_week": 3321,
-  "kakao_total_observed": 44127,
+  "members": 2385,
+  "kakao_week": 3519,
+  "kakao_total_observed": 44325,
   "threads_observed": 324
  },
  "certified_champions": 5,
@@ -170,7 +170,7 @@
     "variants": [
      "ChatGPT GPTs",
      "ChatGPT(팀계정)",
-     "ChatGPT/Claude/Codex(승인 문서 조회)",
+     "ChatGPT/Claude/Codex(승인 문서 MCP 조회)",
      "GPT(OpenAI API)",
      "GPT-5.6 Luna",
      "GPT-5.6 Luna(OpenRouter, 동의 시)",
@@ -184,6 +184,7 @@
      "OpenAI/Anthropic(사용자 키)",
      "OpenAI/Claude(제공자 전환형)",
      "OpenAI·Claude·OpenRouter 계정 연결(BYO)",
+     "gpt-4.1-mini(조항 AI 검수)",
      "gpt-5.6-luna(기본 설정)"
     ],
     "cases": [
@@ -379,9 +380,9 @@
      "Ollama 로컬 모델(Spring AI)",
      "Ollama 로컬 모델(멀티 호스트)",
      "Ollama 오픈웨이트 모드(로컬 완결)",
-     "Ollama(로컬 실행)",
      "Ollama(로컬)",
      "Ollama/vLLM 로컬(기본)",
+     "Qwen3 8B(로컬 답변, Ollama)",
      "WebGPU 브라우저 모델",
      "vLLM/Ollama/LiteLLM 로컬(OpenAI 호환)",
      "자체호스팅 vLLM(모델 미명시)"
@@ -426,30 +427,6 @@
      {
       "id": "42267bcd8527ba4a",
       "title": "침해사고 신고 24시간 초과 검증 파이프라인 — 신고 자료에서 사실만 뽑고 과태료 대상 여부는 코드가 재계산"
-     }
-    ],
-    "domestic": false
-   },
-   {
-    "name": "Qwen",
-    "n": 3,
-    "variants": [
-     "Qwen(로컬 RAG 챗)",
-     "Qwen2.5-Coder-1.5B-Instruct(GGUF, llama.cpp)",
-     "Qwen3.5 2B(로컬 CPU)"
-    ],
-    "cases": [
-     {
-      "id": "ea2bce110972762e",
-      "title": "공공기관 규정 MCP 생성기"
-     },
-     {
-      "id": "3c5015d6c385a815",
-      "title": "KLEF 공람문서 요약 — K-에듀파인 공람 목록에 핵심·조치·기한을 붙이는 로컬 AI 도우미"
-     },
-     {
-      "id": "9719b550772ed1b2",
-      "title": "CODERX — 폐쇄망 기관 PC 안에서 한국어 요구사항만으로 코드 생성·개선·보안점검을 하는 온프레미스 AI 코딩 도구"
      }
     ],
     "domestic": false
@@ -516,6 +493,25 @@
      {
       "id": "d7422aa63cfaeb0e",
       "title": "Stream-Record — 의회 중계 영상의 한국어 녹음·전사·회의록 작성을 윈도우 PC에서 끝내는 앱"
+     }
+    ],
+    "domestic": false
+   },
+   {
+    "name": "Qwen",
+    "n": 2,
+    "variants": [
+     "Qwen2.5-Coder-1.5B-Instruct(GGUF, llama.cpp)",
+     "Qwen3.5 2B(로컬 CPU)"
+    ],
+    "cases": [
+     {
+      "id": "3c5015d6c385a815",
+      "title": "KLEF 공람문서 요약 — K-에듀파인 공람 목록에 핵심·조치·기한을 붙이는 로컬 AI 도우미"
+     },
+     {
+      "id": "9719b550772ed1b2",
+      "title": "CODERX — 폐쇄망 기관 PC 안에서 한국어 요구사항만으로 코드 생성·개선·보안점검을 하는 온프레미스 AI 코딩 도구"
      }
     ],
     "domestic": false
@@ -934,8 +930,8 @@
       "domestic": false,
       "variants": [
        "Ollama 오픈웨이트 모드(로컬 완결)",
-       "Ollama(로컬 실행)",
        "Ollama/vLLM 로컬(기본)",
+       "Qwen3 8B(로컬 답변, Ollama)",
        "vLLM/Ollama/LiteLLM 로컬(OpenAI 호환)"
       ]
      },
@@ -1029,20 +1025,6 @@
       ]
      },
      {
-      "name": "Qwen",
-      "n": 1,
-      "cases": [
-       {
-        "id": "ea2bce110972762e",
-        "title": "공공기관 규정 MCP 생성기"
-       }
-      ],
-      "domestic": false,
-      "variants": [
-       "Qwen(로컬 RAG 챗)"
-      ]
-     },
-     {
       "name": "GPT(OpenAI)",
       "n": 1,
       "cases": [
@@ -1053,7 +1035,8 @@
       ],
       "domestic": false,
       "variants": [
-       "ChatGPT/Claude/Codex(승인 문서 조회)"
+       "ChatGPT/Claude/Codex(승인 문서 MCP 조회)",
+       "gpt-4.1-mini(조항 AI 검수)"
       ]
      },
      {

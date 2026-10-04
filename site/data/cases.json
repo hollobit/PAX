@@ -692,7 +692,7 @@
    "source": "kakao",
    "link": "https://github.com/koul777/Public-Regulation-MCP-Builder",
    "org_type": "공직 개인",
-   "summary": "PDF, HWP, HWPX, DOCX 형식의 공공기관 규정을 기관, 규정, 개정 버전, 장·절·조문 구조로 정리하는 Windows용 빌더가 공유됐다. 사람이 승인한 내용만 검색 색인과 MCP 응답에 포함한다.",
+   "summary": "PDF·HWP·HWPX·DOCX 공공기관 규정을 기관·규정·개정 버전·장·절·조문 구조로 정리하는 Windows용 빌더로, 사람이 승인한 내용만 검색 색인과 MCP 응답에 넣는다. v1.2에서는 조항별 AI 검수 의견과 원문 대조 화면, 초보자 단계 안내, 내 PC의 로컬 모델로 근거 조문을 붙여 답하는 질의까지 갖췄다.",
    "org": "공직 현장(공공기관)",
    "tags": [
     "MCP",
@@ -718,9 +718,9 @@
    "stars_github": 44,
    "model_dependency": "혼합",
    "models_used": [
-    "Qwen(로컬 RAG 챗)",
-    "ChatGPT/Claude/Codex(승인 문서 조회)",
-    "Ollama(로컬 실행)"
+    "Qwen3 8B(로컬 답변, Ollama)",
+    "gpt-4.1-mini(조항 AI 검수)",
+    "ChatGPT/Claude/Codex(승인 문서 MCP 조회)"
    ],
    "mirror_url": "https://gitlab.aigov.go.kr/kyci/public-regulation-mcp-builder",
    "stars_gitlab": 1,
