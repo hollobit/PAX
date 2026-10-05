@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-10-05T14:33:51Z",
- "count": 92,
+ "updated_at": "2026-10-05T22:35:57Z",
+ "count": 94,
  "videos": [
+  {
+   "id": "GEWY1acaS_Y",
+   "title": "[단독] 토스뱅크, 1월부터 공격 시도..산업계 '비상 대응' / SBS 8뉴스",
+   "channel": "SBS 뉴스",
+   "url": "https://www.youtube.com/watch?v=GEWY1acaS_Y",
+   "thumb": "https://i.ytimg.com/vi/GEWY1acaS_Y/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "okdYTNYV0rI",
+   "title": "“병목은 사람, 이해가 병목이다” (안상현 메타 AX팀 시니어스태프 엔지니어)",
+   "channel": "티타임즈TV",
+   "url": "https://www.youtube.com/watch?v=okdYTNYV0rI",
+   "thumb": "https://i.ytimg.com/vi/okdYTNYV0rI/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "dhk-Hmx4Xb8",
    "title": "\"한 달 업무, 몇 시간 만에\"‥AI로 행정 혁신 (2026.10.05/뉴스투데이/MBC)",
