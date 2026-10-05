@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-05T06:35:17Z",
- "count": 785,
+ "updated_at": "2026-10-05T14:33:55Z",
+ "count": 792,
  "articles": [
   {
    "url": "https://www.yna.co.kr/view/MYH20261004008800038",
@@ -120,6 +120,19 @@
    ]
   },
   {
+   "url": "https://www.chosun.com/economy/tech_it/2026/10/05/24Y7U5EIHNCDDMBL7U5S6RPGMQ",
+   "title": "[단독] “소버린 AI 한다더니” 공무원용 AI에 외산 모델 과반수... 美 제재 中모델도 포함",
+   "outlet": "조선일보",
+   "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.aitimes.com/news/articleView.html?idxno=215949",
    "title": "\"클로드가 일하고, 클로드가 감시한다\"... 앤트로픽, 새 플러그인 공개",
    "outlet": "AI타임스",
@@ -198,8 +211,47 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-10-05-px-업무-화면-감시-법적-쟁점",
+   "title": "[공공AX 네트워크] AI 업무 화면 감시에 제기된 법적 의문",
+   "outlet": "akwiki.org",
+   "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-05-px-아래한글-자동화-범피스",
    "title": "[공공AX 네트워크] 내용은 AI에 서식은 범피스에 맡기는 아래한글 자동화",
+   "outlet": "akwiki.org",
+   "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-05-px-바이브코딩-제작물-특허",
+   "title": "[공공AX 네트워크] 지자체가 승계를 접은 바이브코딩 제작물의 특허",
+   "outlet": "akwiki.org",
+   "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-05-px-민원전화-ai-대체",
+   "title": "[공공AX 네트워크] 민원전화 AI 대체 소식이 불러낸 공공 인력 전망",
    "outlet": "akwiki.org",
    "published": "2026-10-05",
    "kind": "기사",
@@ -224,9 +276,48 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-10-05-px-cctv-통합-대시보드-보안",
+   "title": "[공공AX 네트워크] CCTV 통합 대시보드에 붙은 보안 조치 질문",
+   "outlet": "akwiki.org",
+   "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-05-cross-제미나이-무료층-제한-요금제",
    "title": "[3개 방 공통] 제미나이 무료층 제한에 요금제를 다시 따진 일요일 저녁",
    "outlet": "akwiki.org",
+   "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-05-cross-요금제-구독료-모델-선택",
+   "title": "[에이전트코리아·공공AX 네트워크] AI 구독료와 모델 선택을 따진 두 방",
+   "outlet": "akwiki.org",
+   "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "http://www.hellodd.com/news/articleView.html?idxno=113346",
+   "title": "산업 폐기물서 '꿈의 신소재'···가격장벽 깬 '제조혁신' 원료값 100분의 1 낮춘 '이노맥신' \"세계 1위 도전\"",
+   "outlet": "헬로디디",
    "published": "2026-10-05",
    "kind": "기사",
    "shares": 1,

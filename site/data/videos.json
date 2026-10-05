@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-05T06:35:14Z",
- "count": 91,
+ "updated_at": "2026-10-05T14:33:51Z",
+ "count": 92,
  "videos": [
   {
    "id": "dhk-Hmx4Xb8",
@@ -8,6 +8,19 @@
    "channel": "MBCNEWS",
    "url": "https://www.youtube.com/watch?v=dhk-Hmx4Xb8",
    "thumb": "https://i.ytimg.com/vi/dhk-Hmx4Xb8/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "KhzYS1jOCDE",
+   "title": "직원 0명, AI 6명으로 롱폼 유튜브 채널을 굴려 봤습니다 (6일 30편, 실패까지 공개)",
+   "channel": "Alex AI",
+   "url": "https://www.youtube.com/watch?v=KhzYS1jOCDE",
+   "thumb": "https://i.ytimg.com/vi/KhzYS1jOCDE/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-10-05",
    "last_shared": "2026-10-05",
