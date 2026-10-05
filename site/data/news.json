@@ -1,12 +1,233 @@
 {
- "updated_at": "2026-10-04T22:42:48Z",
- "count": 768,
+ "updated_at": "2026-10-05T06:35:17Z",
+ "count": 785,
  "articles": [
+  {
+   "url": "https://www.yna.co.kr/view/MYH20261004008800038",
+   "title": "사람에게 배우는 로봇…中 도시들 휴머노이드 속도전",
+   "outlet": "연합뉴스",
+   "published": "2026-10-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261001072400017",
+   "title": "웹페이지 요약부터 일정 관리까지…네이버 웨일 'AI Chat' 출시",
+   "outlet": "연합뉴스",
+   "published": "2026-10-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/amp/view/AKR20260928035400063",
+   "title": "충남도, 생성형 AI로 농업 업무지원 시스템 자체 개발",
+   "outlet": "연합뉴스",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mt.co.kr/tech/2026/10/05/2026100110475539537",
+   "title": "[단독]AI 해킹 '깜깜이' 정부 통계, AI 공격 '파악 불가'",
+   "outlet": "머니투데이",
+   "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.khan.co.kr/article/202604150600121",
+   "title": "[단독]삼성생명, ‘정보 유출 막는다’며 직원 PC에 모션인식 카메라 설치···“사실상 근태 감시” 와글",
+   "outlet": "경향신문",
+   "published": "2026-04-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.joongang.co.kr/article/25466947",
+   "title": "아직 절대강자는 없다…‘자율주행 열차’ 미중 앞설 수 있을까 [강갑생의 바퀴와 날개]",
+   "outlet": "중앙일보",
+   "published": "2026-10-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.hani.co.kr/arti/society/society_general/1265426.html",
+   "title": "직원 PC화면 초단위 캡처해 관리자에게…사업주 무기된 ‘AI 노동감시’",
+   "outlet": "한겨레",
+   "published": "2026-06-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610040610242461",
+   "title": "엔비디아·인텔·퀄컴 넘나든 노타…'칩 스펙' 넘어 AI 운영 설루션 속도",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=704836",
+   "title": "AI전략위, 범정부 'AI 입법 프레임워크' 논의…AI기본법 중심 입법",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215949",
+   "title": "\"클로드가 일하고, 클로드가 감시한다\"... 앤트로픽, 새 플러그인 공개",
+   "outlet": "AI타임스",
+   "published": "2026-10-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215948",
+   "title": "미 재무장관 \"AI 정부 규제 요구하는 CEO들은 한니발 렉터와 같아\"",
+   "outlet": "AI타임스",
+   "published": "2026-10-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.aitimes.com/news/articleView.html?idxno=215947",
    "title": "오픈AI 안전 총괄, 조직 문화 비판하며 사직...\"시행착오 시대 끝났다\"",
    "outlet": "AI타임스",
    "published": "2026-10-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.2news.co.kr/news/articleView.html?idxno=27541",
+   "title": "서울시와 해외 지자체, AI·도시로봇 기반 과학기술 협력 추진",
+   "outlet": "에너지뉴스",
+   "published": "2026-10-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://naver.me/FmG58PAZ",
+   "title": "AI, 비밀번호 5번 틀리면 잠기는 것 알고 4번씩만 시도",
+   "outlet": "naver.me",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://biz.chosun.com/topics/law_firm/2026/09/29/5IHBKAESFZAJPKDSZTMKTWTX74?outputType=amp",
+   "title": "[단독] 부산시 홍보대사라더니... ‘부캉이’ 상표권은 개인이 먼저 출원",
+   "outlet": "조선비즈",
+   "published": "2026-09-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-05-px-아래한글-자동화-범피스",
+   "title": "[공공AX 네트워크] 내용은 AI에 서식은 범피스에 맡기는 아래한글 자동화",
+   "outlet": "akwiki.org",
+   "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-05-px-공문-ai-입력-기준",
+   "title": "[공공AX 네트워크] 공문을 AI에 넣기 전 신입이 물은 기준",
+   "outlet": "akwiki.org",
+   "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-05",
+   "last_shared": "2026-10-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-05-cross-제미나이-무료층-제한-요금제",
+   "title": "[3개 방 공통] 제미나이 무료층 제한에 요금제를 다시 따진 일요일 저녁",
+   "outlet": "akwiki.org",
+   "published": "2026-10-05",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-05",
