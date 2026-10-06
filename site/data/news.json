@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-06T06:34:09Z",
- "count": 806,
+ "updated_at": "2026-10-06T12:09:13Z",
+ "count": 809,
  "articles": [
+  {
+   "url": "https://platum.kr/archives/262463",
+   "title": "AI는 없었다, 700명이 있었다 - 플래텀",
+   "outlet": "platum.kr",
+   "published": "2025-06-05",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-16",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261005104154",
    "title": "LGU+, 뱅고와 협력해 글로벌 AI·콘텐츠 구독 서비스 확대",
@@ -120,8 +133,34 @@
    ]
   },
   {
+   "url": "https://moaform.com/q/ajHagJ",
+   "title": "지식서비스업 종사자 대상 연구",
+   "outlet": "Moaform",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-06-px-문서배부-자동화-크롬확장",
    "title": "[공공AX 네트워크] 화면 요소를 읽는 문서배부 자동화 사례",
+   "outlet": "akwiki.org",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-06-px-기관-할당량-개인구독",
+   "title": "[공공AX 네트워크] 기관이 깔아 준 AI 플랫폼의 월 할당량과 개인 구독 지원",
    "outlet": "akwiki.org",
    "published": "2026-10-06",
    "kind": "기사",
@@ -174,6 +213,19 @@
   {
    "url": "https://akwiki.org/article/2026-10-06-cross-닷츠-한도-속도-체감",
    "title": "[3개 방 공통] 같은 밤 이어진 한도와 속도 체감",
+   "outlet": "akwiki.org",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-06-cross-sol-속도-클로드-역할분담",
+   "title": "[3개 방 공통] 세 방이 같은 날 따진 Sol 6.1과 클로드의 체감 차이",
    "outlet": "akwiki.org",
    "published": "2026-10-06",
    "kind": "기사",
@@ -4440,19 +4492,6 @@
    "title": "AI가 세계를 이해하는 방법: 월드 모델",
    "outlet": "카이스트신문",
    "published": "2026-09-15",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-09-16",
-   "last_shared": "2026-09-16",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://platum.kr/archives/262463",
-   "title": "AI는 없었다, 700명이 있었다 - 플래텀",
-   "outlet": "platum.kr",
-   "published": "2025-06-05",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-16",
