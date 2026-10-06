@@ -1,7 +1,111 @@
 {
- "updated_at": "2026-10-06T12:09:13Z",
- "count": 809,
+ "updated_at": "2026-10-06T22:33:58Z",
+ "count": 817,
  "articles": [
+  {
+   "url": "https://www.topdaily.kr/articles/112219",
+   "title": "KT, 챗GPT에 상품정보 플러그인 출시 外",
+   "outlet": "톱데일리",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.thelec.kr/news/articleView.html?idxno=63260",
+   "title": "퀄컴-화웨이, 5G부터 AI까지 특허 라이선스 체결",
+   "outlet": "디일렉(THE ELEC)",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.techm.kr/news/articleView.html?idxno=155875",
+   "title": "유락, 'AI 디지털 포렌식'으로 日 기업시장 공략...데이터 통제 수요 잡는다",
+   "outlet": "테크M",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5069246",
+   "title": "[2026 국감] 윤호중 장관 \"행안부, 안전·균형성장·AI·형사사법체계 집중\"",
+   "outlet": "신아일보",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=242031",
+   "title": "메가존클라우드, 엔터프라이즈 AI OS ‘AIR Studio v3’ 출시",
+   "outlet": "아이티데일리",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.greened.kr/news/articleView.html?idxno=351520",
+   "title": "세종 1조8000억 AI데이터센터 MOU…‘행정도시→AI 인프라 거점’ 전환 시험대",
+   "outlet": "녹색경제신문",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://biz.heraldcorp.com/article/10894666",
+   "title": "‘성북형 AI 행정’ 기반 마련…성북구, 현장 중심 AI 활용 확대 추진",
+   "outlet": "헤럴드경제",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-07-px-공공데이터-온톨로지-논쟁",
+   "title": "[공공AX 네트워크] 공공 데이터 구축, 온톨로지 요구 앞의 현장 난색",
+   "outlet": "akwiki.org",
+   "published": "2026-10-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-07",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://platum.kr/archives/262463",
    "title": "AI는 없었다, 700명이 있었다 - 플래텀",
