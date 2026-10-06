@@ -1,7 +1,189 @@
 {
- "updated_at": "2026-10-05T14:33:55Z",
- "count": 792,
+ "updated_at": "2026-10-06T06:34:09Z",
+ "count": 806,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261005104154",
+   "title": "LGU+, 뱅고와 협력해 글로벌 AI·콘텐츠 구독 서비스 확대",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261002109800017",
+   "title": "과기부, 독파모·프론티어 AI 사업 통합·개편…8천억원 투입",
+   "outlet": "연합뉴스",
+   "published": "2026-10-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.khan.co.kr/article/202610061357011",
+   "title": "[단독]은행 해킹 AI 도구 깔린 서버 52대 포착…80%가 미 LA 임대업체 서버",
+   "outlet": "경향신문",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.khan.co.kr/article/202609281340001/amp",
+   "title": "한국인 AI 사용률 40% 첫 돌파···주요국 중 상승폭 ‘최상위’",
+   "outlet": "khan.co.kr",
+   "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.hani.co.kr/arti/society/schooling/1280952.html",
+   "title": "AI·반도체 선호에…4대 과기원 수시 지원자 첫 3만명 돌파",
+   "outlet": "한겨레",
+   "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.businesskorea.co.kr/news/articleView.html?idxno=278192",
+   "title": "LG유플러스, 구독 플랫폼 '유독' 체질 개선...\"영상 편집부터 생성형 AI까지\"",
+   "outlet": "Businesskorea",
+   "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.ajunews.com/view/20261006121414509",
+   "title": "[단독] 공무원 겸직 허가 줄었는데 위반은 2배…절반이 행안부",
+   "outlet": "아주경제",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215978",
+   "title": "앤트로픽, 10월6일까지 '음성 인터뷰어' 가동…대화록 공개·음성 학습 수집 결합",
+   "outlet": "AI타임스",
+   "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=215971",
+   "title": "브로드컴, 앤트로픽에 80조 대출 보증…칩 판매 위해 금융 지원",
+   "outlet": "AI타임스",
+   "published": "2026-10-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-06-px-문서배부-자동화-크롬확장",
+   "title": "[공공AX 네트워크] 화면 요소를 읽는 문서배부 자동화 사례",
+   "outlet": "akwiki.org",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-06-px-공공ax-확산-웹툰",
+   "title": "[공공AX 네트워크] 공공AX 확산 웹툰에 붙은 지방 참가자의 말",
+   "outlet": "akwiki.org",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-06-px-공공ai-대전환-챌린지",
+   "title": "[공공AX 네트워크] 공공AI 대전환 챌린지의 자유주제와 지정주제 선택",
+   "outlet": "akwiki.org",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-06-px-ppt-스킬-ai-포트폴리오",
+   "title": "[공공AX 네트워크] PPT 생성 스킬과 gpt site로 쌓는 AI 포트폴리오",
+   "outlet": "akwiki.org",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-06-cross-닷츠-한도-속도-체감",
+   "title": "[3개 방 공통] 같은 밤 이어진 한도와 속도 체감",
+   "outlet": "akwiki.org",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-06",
+   "last_shared": "2026-10-06",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.yna.co.kr/view/MYH20261004008800038",
    "title": "사람에게 배우는 로봇…中 도시들 휴머노이드 속도전",
