@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-07T14:36:18Z",
- "count": 823,
+ "updated_at": "2026-10-07T22:34:09Z",
+ "count": 839,
  "articles": [
   {
    "url": "https://www.topdaily.kr/articles/112219",
@@ -8,9 +8,9 @@
    "outlet": "톱데일리",
    "published": "",
    "kind": "기사",
-   "shares": 1,
+   "shares": 2,
    "first_shared": "2026-10-07",
-   "last_shared": "2026-10-07",
+   "last_shared": "2026-10-08",
    "sources": [
     "kakao"
    ]
@@ -21,9 +21,9 @@
    "outlet": "디일렉(THE ELEC)",
    "published": "2026-10-06",
    "kind": "기사",
-   "shares": 1,
+   "shares": 2,
    "first_shared": "2026-10-07",
-   "last_shared": "2026-10-07",
+   "last_shared": "2026-10-08",
    "sources": [
     "kakao"
    ]
@@ -34,22 +34,9 @@
    "outlet": "테크M",
    "published": "2026-10-06",
    "kind": "기사",
-   "shares": 1,
+   "shares": 2,
    "first_shared": "2026-10-07",
-   "last_shared": "2026-10-07",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5069246",
-   "title": "[2026 국감] 윤호중 장관 \"행안부, 안전·균형성장·AI·형사사법체계 집중\"",
-   "outlet": "신아일보",
-   "published": "2026-10-06",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-10-07",
-   "last_shared": "2026-10-07",
+   "last_shared": "2026-10-08",
    "sources": [
     "kakao"
    ]
@@ -58,6 +45,227 @@
    "url": "https://www.itdaily.kr/news/articleView.html?idxno=242031",
    "title": "메가존클라우드, 엔터프라이즈 AI OS ‘AIR Studio v3’ 출시",
    "outlet": "아이티데일리",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.ytn.co.kr/_ln/0101_202610061908597784",
+   "title": "행안장관 \"정부망에 AI 이용 해킹 시도 아직 없어\"",
+   "outlet": "YTN",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261007168500004",
+   "title": "중랑구, AI 활용 행정혁신 박차…\"'AX 기준도시'로 도약\"",
+   "outlet": "연합뉴스",
+   "published": "2026-10-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.techm.kr/news/articleView.html?idxno=155893",
+   "title": "KT클라우드, 50MW 청라 AI 데이터센터 사업 참여...2030년 준공 목표",
+   "outlet": "테크M",
+   "published": "2026-10-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.techm.kr/news/articleView.html?idxno=155873",
+   "title": "이재명 \"사이버 보안 특화 AI 개발·보급 속도 내야\"...보안 패러다임 전면 혁신 지시",
+   "outlet": "테크M",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newsis.com/view/NISX20261006_0003815808",
+   "title": "AI 해킹 기승부리는데 예산은 27% 삭감…과기부 보안 예산 삭감 지적",
+   "outlet": "뉴시스",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=242067",
+   "title": "로그프레소, ‘챗GPT 엔터프라이즈’ 연동 앱 출시",
+   "outlet": "아이티데일리",
+   "published": "2026-10-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610071005117786",
+   "title": "금융보안원, AI 에이전트 보안 점검 강화…17개 평가항목 마련",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.etnews.com/20261007000010",
+   "title": "행안부, '청년 공공AX 서포터즈' 발대식 개최…내년 1월 우수 과제 시상",
+   "outlet": "미래를 보는 창 - 전자신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42187",
+   "title": "SKT, 지상군페스티벌 유일 민간기업 참가...AI 참모·저궤도 위성 등 국방 AX 기술 선봬",
+   "outlet": "인공지능신문",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216044",
+   "title": "앤트로픽, API 비용 최대 90% 낮춘 '클로드 하이쿠 5.5' 공개",
+   "outlet": "AI타임스",
+   "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216042",
+   "title": "AMD, 연내 국내 'AI 연구센터' 설립...정부와 메가프로젝트 협력 추진",
+   "outlet": "AI타임스",
+   "published": "2026-10-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216040",
+   "title": "앤트로픽, 구글 워크스페이스 연동...문서 안에서 '클로드' 직접 호출",
+   "outlet": "AI타임스",
+   "published": "2026-10-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216038",
+   "title": "구글, AI 데이터센터 전력 확보 위해 3.6GW 규모 원전 계약 체결",
+   "outlet": "AI타임스",
+   "published": "2026-10-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216014",
+   "title": "코히어, 에이전트 비용·보안 통제 플랫폼 '노스 2' 출시...알레프 알파 인수 후 첫 행보",
+   "outlet": "AI타임스",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-08-px-국회-회의록-전사",
+   "title": "[공공AX 네트워크] 국회 속기록 실시간 공개와 위스퍼 전사 실험",
+   "outlet": "akwiki.org",
+   "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-08-px-aside-웹자동화-망분리",
+   "title": "[공공AX 네트워크] 공공 업무 웹자동화, 망분리 앞에서 확장 프로그램 검토",
+   "outlet": "akwiki.org",
+   "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5069246",
+   "title": "[2026 국감] 윤호중 장관 \"행안부, 안전·균형성장·AI·형사사법체계 집중\"",
+   "outlet": "신아일보",
    "published": "2026-10-06",
    "kind": "기사",
    "shares": 1,
