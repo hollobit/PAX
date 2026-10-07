@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-06T22:33:58Z",
- "count": 817,
+ "updated_at": "2026-10-07T06:33:53Z",
+ "count": 819,
  "articles": [
   {
    "url": "https://www.topdaily.kr/articles/112219",
@@ -71,6 +71,32 @@
    "url": "https://www.greened.kr/news/articleView.html?idxno=351520",
    "title": "세종 1조8000억 AI데이터센터 MOU…‘행정도시→AI 인프라 거점’ 전환 시험대",
    "outlet": "녹색경제신문",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://naver.me/FhukhqIf",
+   "title": "[속보] 누리호, 역대 최다 ‘위성 15기’ 싣고 날아올랐다…1185초 비행 개시",
+   "outlet": "naver.me",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2",
+   "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+   "outlet": "Google",
    "published": "2026-10-06",
    "kind": "기사",
    "shares": 1,
