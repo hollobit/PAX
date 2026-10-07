@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-07T06:33:53Z",
- "count": 819,
+ "updated_at": "2026-10-07T14:36:18Z",
+ "count": 823,
  "articles": [
   {
    "url": "https://www.topdaily.kr/articles/112219",
@@ -107,6 +107,19 @@
    ]
   },
   {
+   "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content",
+   "title": "We're making it easier to identify AI-generated content globally.",
+   "outlet": "Google",
+   "published": "2026-10-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://biz.heraldcorp.com/article/10894666",
    "title": "‘성북형 AI 행정’ 기반 마련…성북구, 현장 중심 AI 활용 확대 추진",
    "outlet": "헤럴드경제",
@@ -122,6 +135,45 @@
   {
    "url": "https://akwiki.org/article/2026-10-07-px-공공데이터-온톨로지-논쟁",
    "title": "[공공AX 네트워크] 공공 데이터 구축, 온톨로지 요구 앞의 현장 난색",
+   "outlet": "akwiki.org",
+   "published": "2026-10-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-07-px-ai챔피언-선발-시험",
+   "title": "[공공AX 네트워크] AI챔피언 신청 탈락 후기와 이론 시험의 AI 차단",
+   "outlet": "akwiki.org",
+   "published": "2026-10-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-07-cross-순정-클로드코드-회귀",
+   "title": "[에이전트코리아·공공AX 네트워크] 하네스 튜닝 끝에 돌아온 순정 클로드 코드",
+   "outlet": "akwiki.org",
+   "published": "2026-10-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-07-cross-로컬모델-운용-설정",
+   "title": "[에이전트코리아·공공AX 네트워크] 로컬 모델 운용, 두 방이 같은 날 짚은 메모리 설정",
    "outlet": "akwiki.org",
    "published": "2026-10-07",
    "kind": "기사",

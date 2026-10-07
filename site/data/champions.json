@@ -1,5 +1,5 @@
 {
- "total": 218,
+ "total": 219,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -769,6 +769,26 @@
    "stats": {
     "case_count": 2,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "threads:byossam",
+   "name": "byossam",
+   "accounts": [
+    {
+     "platform": "threads",
+     "id": "byossam",
+     "url": "https://www.threads.com/@byossam"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "33d54dde6e9408b2"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 0,
     "stars": 0
    }
   },

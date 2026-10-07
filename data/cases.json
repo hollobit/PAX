@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-04T23:35:35+09:00",
+ "updated_at": "2026-10-07T23:35:44+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -14673,6 +14673,29 @@
    "maintenance": "활발",
    "region": "경북",
    "mirror_url": "https://gitlab.aigov.go.kr/lsh5739/sangju-estimate-public"
+  },
+  {
+   "collected_at": "2026-10-07",
+   "title": "품의도우미 — 쇼핑몰 장바구니에서 고른 상품을 K-에듀파인 품의 품목내역에 한 번에 입력하는 확장",
+   "region": "경기",
+   "tags": [
+    "K-에듀파인",
+    "품의",
+    "브라우저 확장",
+    "학교회계"
+   ],
+   "date": "2026-10-07",
+   "summary": "G마켓·11번가·SSG닷컴·아이스크림몰·쿠팡 장바구니에서 선택한 상품의 이름·수량·금액과 배송비를 읽어 K-에듀파인 품의등록 화면의 품목내역에 한꺼번에 채워 준다. 필요하면 단가를 천 원 단위로 올리고, 저장과 결재 요청은 담당자가 결과를 확인한 뒤 직접 하도록 남겨 두었다. 교사가 학교 물품 구입 품의의 반복 입력을 줄이려고 만들어 크롬 웹스토어에 공개했다.",
+   "org": "경기도교육청 교사(개인 개발)",
+   "source": "threads",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "runtime_env": "설치 필요",
+   "case_class": "개인 개발",
+   "task_category": "회계·정산",
+   "case_url": "https://chromewebstore.google.com/detail/mipldkkkhlefjlenldofdpfkcklaolem",
+   "link": "https://www.threads.com/@byossam/post/DeLp5I7AqRA",
+   "id": "33d54dde6e9408b2"
   }
  ]
 }

@@ -12178,5 +12178,33 @@
   "human": "검토 후 사용(수식 기록으로 검토자 근거 확인)",
   "rationale": "야장 입력부터 도면·수량산출서·원가계산까지 소규모 공사 설계 흐름을 결정론적 코드로 이어 실제 건과 원 단위로 맞추므로 S2/C2이고, AI는 개발과 규칙 정리에만 쓰고 실행 경로에는 없어 AI-Ready다. 읍면 토목직의 자체설계 업무를 다룬 첫 관측 사례로, 현장 규칙집과 정답지·테스트로 검증 근거를 남긴 점이 돋보인다. 다른 지자체 양식 적용과 배수 구조물 공종의 실제 건 검증은 미확인이다.",
   "resilience": "미확인(라이선스 미명시, 공종 확대 진행 중)"
+ },
+ {
+  "no": 508,
+  "id": "33d54dde6e9408b2",
+  "org": "경기도교육청 교사(개인 개발)",
+  "title": "품의도우미 — 쇼핑몰 장바구니에서 고른 상품을 K-에듀파인 품의 품목내역에 한 번에 입력하는 확장",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "feedback": "미확인",
+  "post_url": "https://www.threads.com/@byossam/post/DeLp5I7AqRA",
+  "service_url": "https://chromewebstore.google.com/detail/mipldkkkhlefjlenldofdpfkcklaolem",
+  "ax_prev": "AX 단계 외",
+  "ax": "AX 단계 외",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "status": "Published tool",
+  "scope": "Internal",
+  "risk": "R1 낮음(저장·결재는 담당자가 직접, 최종 금액은 쇼핑몰에서 확인 안내)",
+  "human": "검토 후 사용(입력 결과 확인 후 저장 명시)",
+  "rationale": "쇼핑몰 장바구니 정보를 K-에듀파인 품목내역에 옮겨 적는 규칙 기반 확장이라 AX 단계 외·S1/C1이다. 학교 물품 구입 품의의 반복 입력이라는 교육행정 현장의 흔한 손일을 겨냥했고, 저장·결재를 사람 몫으로 남겨 회계 책임 경계를 지켰다. 다른 시도교육청 화면 호환과 사용 규모는 미확인이다.",
+  "resilience": "미확인(경기도교육청 K-에듀파인 화면 기준, 쇼핑몰 화면 변경 시 동작)"
  }
 ]

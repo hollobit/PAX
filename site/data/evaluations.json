@@ -1,6 +1,6 @@
 {
- "evaluated_at": "2026-10-05",
- "total": 505,
+ "evaluated_at": "2026-10-07",
+ "total": 506,
  "cases": [
   {
    "no": 1,
@@ -16664,6 +16664,39 @@
    "tool_type": "도구·기타",
    "audience": "G2E 공직 내부",
    "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 508,
+   "id": "33d54dde6e9408b2",
+   "org": "경기도교육청 교사(개인 개발)",
+   "title": "품의도우미 — 쇼핑몰 장바구니에서 고른 상품을 K-에듀파인 품의 품목내역에 한 번에 입력하는 확장",
+   "ax_prev": "AX 단계 외",
+   "ax": "AX 단계 외",
+   "s": "S1",
+   "s_name": "Single tool",
+   "c": "C1",
+   "c_name": "결과 제공",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Published tool",
+   "scope": "Internal",
+   "mcp_role": "Unknown/None",
+   "risk": "R1 낮음(저장·결재는 담당자가 직접, 최종 금액은 쇼핑몰에서 확인 안내)",
+   "human": "검토 후 사용(입력 결과 확인 후 저장 명시)",
+   "evidence": "E2 화면·서비스 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "쇼핑몰 장바구니 정보를 K-에듀파인 품목내역에 옮겨 적는 규칙 기반 확장이라 AX 단계 외·S1/C1이다. 학교 물품 구입 품의의 반복 입력이라는 교육행정 현장의 흔한 손일을 겨냥했고, 저장·결재를 사람 몫으로 남겨 회계 책임 경계를 지켰다. 다른 시도교육청 화면 호환과 사용 규모는 미확인이다.",
+   "feedback": "미확인",
+   "resilience": "미확인(경기도교육청 K-에듀파인 화면 기준, 쇼핑몰 화면 변경 시 동작)",
+   "post_url": "https://www.threads.com/@byossam/post/DeLp5I7AqRA",
+   "service_url": "https://chromewebstore.google.com/detail/mipldkkkhlefjlenldofdpfkcklaolem",
+   "tool_type": "브라우저 확장",
+   "audience": "G2E 공직 내부",
+   "p": "P2 시스템 쓰기(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }
