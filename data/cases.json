@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-08T23:34:03+09:00",
+ "updated_at": "2026-10-09T02:45:48+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -14722,6 +14722,60 @@
    "license": "MIT",
    "license_source": "github",
    "license_checked": "2026-10-08"
+  },
+  {
+   "case_class": "참고",
+   "org": "업스테이지",
+   "title": "korean-tax-mcp — 국세청 해석·판례·통칙·시점별 조문을 문서번호와 함께 찾아 주는 세법 근거 MCP",
+   "task_category": "감사·법무",
+   "model_dependency": "모델 중립(BYO)",
+   "summary": "세법 쟁점을 AI에 물으면 국세청 질의회신·사전답변, 법원 판례·조세심판 결정, 기본통칙·집행기준, 그날 시행 중이던 조문과 위임 체계, 조세조약을 문서번호와 함께 찾아 준다. 초안에 인용된 문서번호·조문이 실제로 있는지 검증하고, 사실관계가 해석·판례와 맞는지 대조할 수도 있다. 공공 분야 업무 효율화를 위해 민간 기업이 공개한 읽기 전용 오픈소스다.",
+   "runtime_env": "MCP·CLI 설정",
+   "org_type": "민간(참고)",
+   "tags": [
+    "MCP",
+    "세법",
+    "판례",
+    "법령"
+   ],
+   "source": "kakao",
+   "models_used": [
+    "사용자 AI(기본)",
+    "Upstage Solar(선택 — 번역·사실관계 대조)"
+   ],
+   "date": "2026-10-08",
+   "link": "https://github.com/UpstageAI/korean-tax-mcp",
+   "network_req": "인터넷 필수",
+   "collected_at": "2026-10-09",
+   "id": "f540e0bf44948f2e",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-10-09"
+  },
+  {
+   "case_class": "참고",
+   "org": "업스테이지",
+   "title": "korean-tax-calc-mcp — 법인세·가산세·인정이자·원천징수를 연도별 세율표와 근거 조문으로 계산하는 MCP",
+   "task_category": "회계·정산",
+   "model_dependency": "모델 중립(BYO)",
+   "summary": "AI가 자주 틀리는 세금 계산을 코드로 처리해, 법인세 산출세액·기업업무추진비 한도·가지급금 인정이자·가산세·부과제척기간·퇴직소득세·부가가치세를 2016~2025년 연도별 세율표로 계산하고 결과마다 근거 조문을 붙인다. 표가 없는 해는 추정하지 않고 멈추며, API 키나 외부 전송 없이 PC 안에서 돈다. 민간 기업이 공공 분야 실무용으로 함께 공개한 오픈소스다.",
+   "runtime_env": "MCP·CLI 설정",
+   "org_type": "민간(참고)",
+   "tags": [
+    "MCP",
+    "세금계산",
+    "가산세",
+    "법인세"
+   ],
+   "source": "kakao",
+   "date": "2026-10-08",
+   "link": "https://github.com/UpstageAI/korean-tax-calc-mcp",
+   "network_req": "로컬 완결",
+   "collected_at": "2026-10-09",
+   "id": "029abc8befc1ed4b",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-10-09"
   }
  ]
 }

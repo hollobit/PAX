@@ -1,27 +1,27 @@
 {
- "generated_at": "2026-10-08",
+ "generated_at": "2026-10-09",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 507,
+ "total_cases": 509,
  "total_champions": 219,
  "community": {
   "members": 2401,
-  "kakao_week": 4045,
-  "kakao_total_observed": 47253,
+  "kakao_week": 3632,
+  "kakao_total_observed": 47271,
   "threads_observed": 327
  },
  "certified_champions": 5,
- "unattributed_cases": 107,
+ "unattributed_cases": 109,
  "ax_distribution": {
   "AI-Ready": 336,
-  "AI-Enabled": 145,
+  "AI-Enabled": 147,
   "AX 단계 외": 20,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
- "c_axis_mean": 0.93,
+ "c_axis_mean": 0.94,
  "p_distribution": {
-  "P0": 161,
+  "P0": 163,
   "P1": 327,
   "P2": 19
  },
@@ -31,7 +31,7 @@
   "해외 오픈웨이트(로컬)": 27,
   "혼합": 13,
   "해외 상용 API": 61,
-  "모델 중립(BYO)": 77,
+  "모델 중립(BYO)": 79,
   "국산 독자모델": 6,
   "미상": 12,
   "국산 오픈웨이트": 1
@@ -755,6 +755,14 @@
     "models": [
      "schift-ko-pii-v7(40M NER, 로컬)"
     ]
+   },
+   {
+    "id": "f540e0bf44948f2e",
+    "title": "korean-tax-mcp — 국세청 해석·판례·통칙·시점별 조문을 문서번호와 함께 찾아 주는 세법 근거 MCP",
+    "models": [
+     "사용자 AI(기본)",
+     "Upstage Solar(선택 — 번역·사실관계 대조)"
+    ]
    }
   ],
   "dist_detail": {
@@ -779,8 +787,8 @@
     "specified": 46
    },
    "모델 중립(BYO)": {
-    "n": 77,
-    "specified": 3
+    "n": 79,
+    "specified": 4
    },
    "국산 독자모델": {
     "n": 6,
@@ -1623,15 +1631,15 @@
  "domestic_model_rate": 0.065,
  "local_model_rate": 0.259,
  "model_known": 108,
- "license_tagged": 387,
- "license_stated_rate": 0.483,
+ "license_tagged": 389,
+ "license_stated_rate": 0.486,
  "gitlab_cases": 261,
  "gitlab_mirror_pairs": 39,
  "gitlab_open_rate": 0.149,
- "mcp_cases": 89,
+ "mcp_cases": 91,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 425,
+  "미확인": 427,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1639,7 +1647,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.753
+  "feedback": 0.75
  },
  "maintenance_distribution": {
   "활발": 319,
@@ -1740,7 +1748,7 @@
    ]
   },
   "github": {
-   "count": 153,
+   "count": 155,
    "starred": 148,
    "stars_sum": 284494,
    "maintenance": {
@@ -1834,7 +1842,7 @@
  },
  "license_distribution": {
   "명시 없음": 200,
-  "MIT": 123,
+  "MIT": 125,
   "Apache-2.0": 30,
   "Other": 16,
   "GNU AGPLv3": 5,
@@ -1852,7 +1860,7 @@
    "gitlab": 146
   },
   "MIT": {
-   "github": 72,
+   "github": 74,
    "gitlab": 50
   },
   "Apache-2.0": {
@@ -1898,8 +1906,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 141,
-   "stated": 99
+   "total": 143,
+   "stated": 101
   },
   "github-pages": {
    "total": 16,
@@ -1911,20 +1919,20 @@
   }
  },
  "mcp_stats": {
-  "total": 89,
+  "total": 91,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
-   "Server": 77,
+   "Server": 79,
    "Client/Host": 7,
    "Unknown/None": 4
   },
   "c_grades": {
    "C0": 68,
-   "C2": 8,
+   "C2": 9,
    "C3": 1,
-   "C1": 12
+   "C1": 13
   },
   "maintenance": {
    "활발": 51,

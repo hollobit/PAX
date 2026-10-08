@@ -5833,6 +5833,18 @@
    "title": "korean-report-hwpx — 메모를 기관 서식 공문서(보고서·보도자료) HWPX로 만드는 MCP",
    "org": "업스테이지",
    "url": "https://github.com/UpstageAI/korean-report-hwpx"
+  },
+  {
+   "id": "f540e0bf44948f2e",
+   "title": "korean-tax-mcp — 국세청 해석·판례·통칙·시점별 조문을 문서번호와 함께 찾아 주는 세법 근거 MCP",
+   "org": "업스테이지",
+   "url": "https://github.com/UpstageAI/korean-tax-mcp"
+  },
+  {
+   "id": "029abc8befc1ed4b",
+   "title": "korean-tax-calc-mcp — 법인세·가산세·인정이자·원천징수를 연도별 세율표와 근거 조문으로 계산하는 MCP",
+   "org": "업스테이지",
+   "url": "https://github.com/UpstageAI/korean-tax-calc-mcp"
   }
  ]
 }

@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-10-08",
+ "generated_at": "2026-10-09",
  "summary": {
-  "total": 89,
+  "total": 91,
   "counts": {
-   "주의": 72,
+   "주의": 74,
    "양호": 15,
    "부분 검증": 2
   },
@@ -2429,6 +2429,74 @@
     "data_flow": {
      "verdict": "통과",
      "note": "패키지에 네트워크 호출(requests·httpx·urllib·socket) 없음 — README의 '외부 전송 없음·API 키 불필요' 주장과 일치(근거: korean_report_hwpx/ 전체 검색, server.py:309 도구 설명)"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "f540e0bf44948f2e",
+   "title": "korean-tax-mcp — 국세청 해석·판례·통칙·시점별 조문을 문서번호와 함께 찾아 주는 세법 근거 MCP",
+   "stars": null,
+   "checked_at": "2026-10-09",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·파일 경로 파라미터 없음, 자유 입력 검색어는 URL 인코딩해 공개 API로만 보낸다(근거: korean_tax_mcp/law.py:48·117, ntis.py:55). TLS는 인증서 검증을 유지하고 X.509 엄격 플래그만 완화(law.py:16, ntis.py:24)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "조회 대상은 공개 출처(law.go.kr·open.law.go.kr·taxlaw.nts.go.kr)뿐이고, Upstage 클라우드 전송은 UPSTAGE_API_KEY를 설정했을 때만이며 도구 설명에 밝혀 둠(근거: server.py:271, solar.py:14-19). 사내 인증서용 검증 끄기는 환경변수로 직접 켤 때만(solar.py:39-40)"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "029abc8befc1ed4b",
+   "title": "korean-tax-calc-mcp — 법인세·가산세·인정이자·원천징수를 연도별 세율표와 근거 조문으로 계산하는 MCP",
+   "stars": null,
+   "checked_at": "2026-10-09",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸·eval·네트워크·파일 쓰기 패턴 없음 — 순수 계산 코드(근거: korean_tax_calc_mcp/ 소스 전수 패턴 스캔)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "네트워크 호출 없음 — README의 'API 키 없음·외부 전송 없음' 주장과 일치(근거: korean_tax_calc_mcp/ 전체 검색)"
     }
    },
    "dynamic": null,
