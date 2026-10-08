@@ -60,8 +60,8 @@
  "files": {
   "buildings.bin": {
    "bytes": 13718928,
-   "crc32": 4100459918,
-   "packed_bytes": 12131140
+   "crc32": 1888488344,
+   "packed_bytes": 12292588
   },
   "roads.bin": {
    "bytes": 1822520,

@@ -1,7 +1,7 @@
 // 여섯 도시 입체지도 — 화면 구성과 도시 불러오기(파일마다 레코드 수·길이·CRC32 검증).
 import { getJSON, loadCity as fetchCity } from './load.js?v=62517a49';
-import { createWorld, MODES } from './world.js?v=a6e284f3';
-import { ROAD_STYLE } from './layers.js?v=a697c85d';
+import { createWorld, MODES } from './world.js?v=3341007a';
+import { ROAD_STYLE } from './layers.js?v=422c9e4c';
 import { createLabelLayer, LABEL_GROUPS, LABEL_KINDS } from './maplabels.js?v=107a28bb';
 import { createMinimap } from './minimap.js?v=33146097';
 import { createLocator, externalLinks, seatOf, toLonLat, toLocal } from './geo.js?v=00345fad';
@@ -249,6 +249,7 @@ async function main() {
     const rows = [
       ['높이', fl & 2 ? `${fmt.format(b.h[i])} m — 추정(보정)` : est ? '5 m — 추정' : fl & 8 ? `${fmt.format(b.h[i])} m — 지상층수 × 3m` : `${fmt.format(b.h[i])} m`],
       ['자료', fl & 4 ? '국토교통부 GIS건물통합정보' : 'OpenStreetMap'],
+      ...(fl & 4 ? [['용도(외벽)', KIND_NAMES[(fl >> 4) & 7]]] : []),
       ...(b.h0[i] > 0 ? [['시작 높이', `${fmt.format(b.h0[i])} m`]] : []),
       ['바닥면적(원본 윤곽)', b.area[i] >= 65535 ? '65,535 ㎡ 이상' : `${fmt.format(b.area[i])} ㎡`],
       ['표시 상자', `${b.w[i].toFixed(1)} × ${b.d[i].toFixed(1)} m`],
@@ -261,6 +262,9 @@ async function main() {
       linksNode(lat, lon, placeRows(b.x[i], b.y[i]).label),
     );
   }
+
+  /** 건물통합정보 용도 → 외벽 종류 이름(layers.js 셰이더의 aKind와 같은 번호) */
+  const KIND_NAMES = ['미상(일반 외벽)', '공동주택', '단독주택', '근린생활·판매', '업무·숙박', '공장·창고', '공공·교육·의료·문화', '기타'];
 
   /** 높이를 어디서 정했는지 — 플래그 1 추정·2 보정·4 건물통합정보·8 층수 환산 */
   function buildingNote(fl) {

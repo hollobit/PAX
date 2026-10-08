@@ -1,6 +1,6 @@
 // 시간대(주간·일몰·야간) — 하늘·안개·빛·해 방향과 도시 재질(물·도로·물길·야간 창문). 독립 페이지와 3D PAX가 함께 쓴다.
 import * as THREE from 'three';
-import { WATER_COLOR } from './layers.js?v=a697c85d';
+import { WATER_COLOR } from './layers.js?v=422c9e4c';
 
 export const MODES = {
   day: { label: '주간', sky: ['#6fa6e0', '#d9e9f6'], fog: '#cfe0ec', sunEl: 55, sunAz: 135, sun: '#fff3dd', sunI: 2.4, hemi: ['#dcebfb', '#8c917c', 1.0], night: 0 },

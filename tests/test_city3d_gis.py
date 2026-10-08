@@ -57,3 +57,12 @@ def test_underground_facilities_are_not_raised_as_buildings():
     assert gb.is_underground({"bld_nm": "공항시장역(9호선)"})
     assert not gb.is_underground({"bld_nm": "서울역", "grnd_flr": "4"})        # 지상 층수가 있으면 남긴다
     assert not gb.is_underground({"bld_nm": "국내선청사", "grnd_flr": "0"})
+
+
+def test_use_codes_map_to_facade_kinds_in_free_flag_bits():
+    assert gb.use_kind({"usability": "02000"}) == 1     # 공동주택
+    assert gb.use_kind({"usability": "14000"}) == 4     # 업무
+    assert gb.use_kind({"usability": "17000"}) == 5     # 공장
+    assert gb.use_kind({"usability": ""}) == 0
+    assert max(gb.USE_KIND.values()) <= 7               # 3비트
+    assert (7 << gb.KIND_SHIFT) & (gb.F_EST | gb.F_CORR | gb.F_GIS | gb.F_FLOORS) == 0

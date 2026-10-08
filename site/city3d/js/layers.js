@@ -378,24 +378,109 @@ export function buildingColor(b, i, markEstimated, out) {
 }
 
 /**
- * 공유 상자 지오메트리 하나 + InstancedMesh. 밤에는 셰이더가 벽면에 층·칸 격자를 그리고
- * 인스턴스 번호로 칸마다 불 켜짐을 정한다(무작위지만 고정).
+ * 공유 상자 지오메트리 하나 + InstancedMesh. 셰이더가 벽면에 용도별 외벽(창·층 띠·커튼월·쇼윈도)을 그린다 —
+ * 텍스처 이미지 없이 건물마다의 실제 폭·높이(인스턴스 배율)로 층(3m 안팎)과 창 칸을 나눈다.
+ * aKind: 외벽 종류(0 일반 · 1 공동주택 · 2 단독주택 · 3 근린생활·판매 · 4 업무·숙박 · 5 공장·창고 · 6 공공), −1 = 무늬 없음(추정 회색).
+ * 밤에는 같은 창 칸에 불을 켠다(인스턴스 번호로 칸마다 무작위지만 고정).
  */
 export function createBuildingMesh(capacity, uniforms) {
   const geo = new THREE.BoxGeometry(1, 1, 1).translate(0, 0.5, 0);
+  const kind = new THREE.InstancedBufferAttribute(new Float32Array(capacity), 1);
+  kind.setUsage(THREE.DynamicDrawUsage);
+  geo.setAttribute('aKind', kind);
   const mat = new THREE.MeshLambertMaterial({ color: '#ffffff' });
   mat.onBeforeCompile = (sh) => {
     sh.uniforms.uNight = uniforms.uNight;
     sh.vertexShader = sh.vertexShader
-      .replace('#include <common>', '#include <common>\nvarying vec3 vWP;\nvarying vec3 vWN;\nflat varying float vId;')
+      .replace('#include <common>', `#include <common>
+attribute float aKind;
+varying vec3 vWP;
+varying vec3 vWN;
+varying vec2 vFace;
+flat varying float vId;
+flat varying float vKind;`)
       .replace('#include <project_vertex>', `#include <project_vertex>
         vWP = (modelMatrix * instanceMatrix * vec4(transformed, 1.0)).xyz;
         vWN = normalize(mat3(modelMatrix * instanceMatrix) * objectNormal);
-        vId = float(gl_InstanceID);`);
+        vec3 sc = vec3(length(instanceMatrix[0].xyz), length(instanceMatrix[1].xyz), length(instanceMatrix[2].xyz));
+        float along = abs(objectNormal.x) > 0.5 ? (transformed.z + 0.5) * sc.z : (transformed.x + 0.5) * sc.x;
+        vFace = vec2(along, transformed.y * sc.y);
+        vId = float(gl_InstanceID);
+        vKind = aKind;`);
     sh.fragmentShader = sh.fragmentShader
-      .replace('#include <common>', '#include <common>\nuniform float uNight;\nvarying vec3 vWP;\nvarying vec3 vWN;\nflat varying float vId;\nfloat hsh(vec3 p){ return fract(sin(dot(p, vec3(12.9898,78.233,37.719))) * 43758.5453); }')
+      .replace('#include <common>', `#include <common>
+uniform float uNight;
+varying vec3 vWP;
+varying vec3 vWN;
+varying vec2 vFace;
+flat varying float vId;
+flat varying float vKind;
+float hsh(vec3 p){ return fract(sin(dot(p, vec3(12.9898,78.233,37.719))) * 43758.5453); }
+// 종류별 [층 높이, 창 칸 폭, 창 가로 비율, 창 세로 비율]
+vec4 bayOf(float k){
+  if (k < 0.5) return vec4(3.2, 2.8, 0.55, 0.45);
+  if (k < 1.5) return vec4(2.9, 3.4, 0.62, 0.50);
+  if (k < 2.5) return vec4(2.8, 3.8, 0.38, 0.40);
+  if (k < 3.5) return vec4(3.4, 2.6, 0.60, 0.50);
+  if (k < 4.5) return vec4(3.8, 1.6, 0.90, 0.78);
+  if (k < 5.5) return vec4(6.0, 7.0, 0.80, 0.18);
+  return vec4(3.6, 3.0, 0.50, 0.52);
+}
+vec3 wallOf(float k, float r){
+  if (k < 0.5) return mix(vec3(0.86,0.84,0.80), vec3(0.78,0.76,0.72), r);
+  if (k < 1.5) return mix(vec3(0.94,0.92,0.88), vec3(0.88,0.86,0.82), r);
+  if (k < 2.5) return mix(vec3(0.86,0.74,0.60), vec3(0.74,0.52,0.42), r);
+  if (k < 3.5) return mix(vec3(0.90,0.86,0.78), vec3(0.80,0.84,0.86), r);
+  if (k < 4.5) return mix(vec3(0.55,0.62,0.68), vec3(0.62,0.66,0.66), r);
+  if (k < 5.5) return mix(vec3(0.74,0.76,0.78), vec3(0.70,0.74,0.72), r);
+  return mix(vec3(0.84,0.80,0.72), vec3(0.76,0.70,0.64), r);
+}`)
+      .replace('#include <color_fragment>', `#include <color_fragment>
+        float fk = floor(vKind + 0.5);
+        float facadeWin = 0.0;
+        float facadeFar = 0.0;   // 무늬를 걷은 정도(0 가까이 · 1 멀리) — 밤에는 창 평균 밝기로 남긴다
+        float facadeArea = 0.0;  // 창이 벽에서 차지하는 비율
+        vec2 facadeCell = vec2(0.0);
+        if (vKind > -0.5) {
+          float r = hsh(vec3(vId, 3.1, 7.7));
+          vec3 wall = mix(wallOf(fk, r), diffuseColor.rgb, 0.3);
+          if (abs(vWN.y) < 0.5) {
+            vec4 b = bayOf(fk);
+            vec2 g = vec2(vFace.x / b.y, vFace.y / b.x);
+            vec2 fw = fwidth(g);
+            float detail = 1.0 - smoothstep(0.45, 0.9, max(fw.x, fw.y));    // 창 칸이 1~2픽셀보다 작아지면 무늬를 걷어 자글거림을 막는다
+            vec2 f = fract(g);
+            float ex = (1.0 - b.z) * 0.5;
+            float ey = (1.0 - b.w) * 0.5 + 0.08;
+            float win = smoothstep(ex - 0.03, ex, f.x) * (1.0 - smoothstep(1.0 - ex, 1.0 - ex + 0.03, f.x))
+                      * smoothstep(ey - 0.03, ey, f.y) * (1.0 - smoothstep(1.0 - ey + 0.16, 1.0 - ey + 0.19, f.y));
+            vec3 glass = fk > 3.5 && fk < 4.5 ? vec3(0.30, 0.42, 0.52) : vec3(0.26, 0.31, 0.36);
+            vec3 col = wall;
+            if (fk > 0.5 && fk < 1.5) col = mix(col, col * 1.06, step(0.86, f.y));          // 아파트 발코니 띠
+            if (fk > 4.5 && fk < 5.5) col *= 0.94 + 0.06 * step(0.5, fract(vFace.x / 0.7)); // 공장 골판
+            if (fk > 2.5 && fk < 3.5 && vFace.y < 4.2) { win = step(0.08, f.x) * step(f.x, 0.92) * step(0.12, vFace.y / 4.2) * step(vFace.y / 4.2, 0.85); glass = vec3(0.22, 0.27, 0.30); } // 1층 쇼윈도
+            col = mix(col, glass, win * 0.85);
+            col *= 1.0 - 0.06 * step(0.94, f.y);                                            // 층 경계 그림자 줄
+            diffuseColor.rgb = mix(wall, col, detail);
+            facadeWin = win * detail;
+            facadeFar = 1.0 - detail;
+            facadeArea = b.z * (b.w - 0.16);
+            facadeCell = floor(g);
+            diffuseColor.rgb = mix(diffuseColor.rgb, mix(wall, glass, facadeArea * 0.6), facadeFar * 0.5); // 멀리서는 창이 섞인 평균 색
+          } else {
+            diffuseColor.rgb = mix(wall * 0.82, vec3(0.56, 0.58, 0.60), 0.35);                // 지붕
+          }
+        }`)
       .replace('#include <emissivemap_fragment>', `#include <emissivemap_fragment>
-        if (uNight > 0.0 && abs(vWN.y) < 0.5) {
+        if (uNight > 0.0 && abs(vWN.y) < 0.5 && vKind > -0.5) {
+          float share = fk > 4.5 && fk < 5.5 ? 0.12 : fk > 3.5 && fk < 4.5 ? 0.62 : fk > 1.5 && fk < 2.5 ? 0.35 : 0.5;
+          float hcell = hsh(vec3(facadeCell, vId));
+          float lit = step(1.0 - share, hcell);
+          float office = step(3.5, fk) * step(fk, 4.5);
+          float glow = mix(0.35, 1.0, fract(hcell * 7.31)) * mix(0.9, 0.45, office);   // 칸마다 밝기를 달리, 커튼월은 창이 넓어 절반만
+          vec3 warm = mix(vec3(1.0, 0.80, 0.50), vec3(0.92, 0.94, 1.0), office * 0.6);
+          totalEmissiveRadiance += (warm * facadeWin * lit * glow + vec3(1.0, 0.78, 0.45) * facadeFar * facadeArea * share * 0.25) * uNight * uNight * 0.9; // 일몰(반쯤)에는 불빛을 훨씬 약하게
+        } else if (uNight > 0.0 && abs(vWN.y) < 0.5) {
           vec2 t = normalize(vec2(-vWN.z, vWN.x));
           float along = dot(vWP.xz, t);
           vec2 cell = vec2(floor(along / 3.2), floor((vWP.y + 200.0) / 3.4));
@@ -411,4 +496,13 @@ export function createBuildingMesh(capacity, uniforms) {
   mesh.name = 'buildings';
   mesh.frustumCulled = false; // 행렬을 예산에 따라 다시 채우므로 경계구를 믿지 않는다
   return mesh;
+}
+
+/**
+ * 외벽 종류 — 레코드 플래그 4~6비트(건물통합정보 용도). 없으면(OSM 도시) 0 일반 외벽.
+ * 추정 높이를 회색으로 표시할 때는 −1(무늬 없이 단색)로 둬 회색의 뜻이 흐려지지 않게 한다.
+ */
+export function facadeKind(b, i, markEstimated) {
+  if (markEstimated && b.flags[i] & 3) return -1;
+  return (b.flags[i] >> 4) & 7;
 }

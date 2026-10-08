@@ -10,7 +10,7 @@ vworld.py가 받아 둔 칸 파일을 읽어 도시 로컬 좌표로 옮기고, 
 건물 하나는 최소 회전 직사각형 상자 하나로 그린다. 오목하거나 길쭉한 윤곽(상자를 55% 미만 채우고 한 변 40m 초과)은
 상자 하나로 그리면 마당·도로를 덮는 판이 되므로, 건물 방향 25m 격자로 잘라 조각마다 상자를 세운다(split_pieces).
 
-플래그 비트: 1 추정 높이 · 2 보정 높이(OSM) · 4 출처 = 건물통합정보 · 8 높이 = 지상층수 × 3m
+플래그 비트: 1 추정 높이 · 2 보정 높이(OSM) · 4 출처 = 건물통합정보 · 8 높이 = 지상층수 × 3m · 16~64 용도(외벽 종류 0~7)
 """
 from __future__ import annotations
 
@@ -35,6 +35,18 @@ LOW_RISE_MAX_H = 25.0            # 1~2층 건물(강당·체육관·공장)은 �
 PER_FLOOR_M = (2.0, 7.0)         # 3층 이상: 높이 ÷ 층수가 이 범위일 때만 대장 높이를 믿는다
 NO_FLOOR_MAX_H = 60.0            # 층수 없이 높이만 있으면 이 높이까지만 믿는다(작은 바닥에 300m 같은 오기)
 SPLIT_FILL, SPLIT_SIDE_M, SPLIT_CELL_M, SPLIT_MIN_M2 = 0.55, 40.0, 25.0, 4.0
+# 용도 → 외벽 종류(플래그 4~6비트, 0~7). 화면 셰이더(layers.js)가 같은 번호로 외벽을 그린다.
+# 0 미상(높이로 짐작) · 1 공동주택 · 2 단독주택 · 3 근린생활·판매 · 4 업무·숙박 · 5 공장·창고 · 6 공공·교육·의료·문화
+KIND_SHIFT = 4
+USE_KIND = {"01": 2, "02": 1, "03": 3, "04": 3, "07": 3, "16": 3, "14": 4, "15": 4,
+            "17": 5, "18": 5, "19": 5, "20": 5, "21": 5, "22": 5,
+            "05": 6, "06": 6, "08": 6, "09": 6, "10": 6, "11": 6, "12": 6, "13": 6, "23": 6, "24": 6, "26": 6}
+
+
+def use_kind(props: dict) -> int:
+    """건축물 용도 코드(usability, 예: 02000 공동주택)의 앞 두 자리 → 외벽 종류 번호."""
+    code = (props.get("usability") or "").strip()
+    return USE_KIND.get(code[:2], 0) if len(code) >= 2 else 0
 # 지상에 서지 않는 시설 — 높이·층수가 없을 때 이름으로 거른다(지하상가·지하철역·지하차도 윤곽이 광장·도로 위에 판으로 서지 않게)
 UNDERGROUND_NAME = re.compile(r"지하|\d호선|역\(|역$|지하차도|지하보도|주차장")
 BIG_FLAT_M2 = 2000  # 높이·층수·OSM 대응이 모두 없는 2,000㎡ 넘는 윤곽은 지하 구조물로 보고 뺀다
@@ -174,6 +186,7 @@ def build(city_key: str, frame, boundary, osm_parts: list, encode, stats: dict) 
                     osm_tree is None or not len(osm_tree.query(whole.centroid, predicate="within"))):
                 stats["gis_big_flat"] += 1  # 정보도 OSM 대응도 없는 큰 판 — 광장 지하상가 같은 지하 구조물
                 continue
+        flags |= use_kind(props) << KIND_SHIFT
         for p in parts:
             gis_polys.append(p)
             pieces = split_pieces(p)
