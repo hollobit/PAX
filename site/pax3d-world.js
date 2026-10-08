@@ -10,7 +10,7 @@ import { sggLabel } from './pax3d-locate.js?v=6baaa238';
 import { createTileLayer, markLandStencil } from './pax3d-tiles.js?v=0eceea68';
 import { MODES, skyTexture as citySky, sunDirection } from './city3d/js/modes.js?v=0b7e72ef';
 import { createLandmarkFlight } from './city3d/js/flight.js?v=21b1fb25';
-import { createCityLayer } from './pax3d-city.js?v=a0611393';
+import { createCityLayer } from './pax3d-city.js?v=c99e972d';
 import { createStage, HOME } from './pax3d-stage.js?v=749c5dd6';
 import { groupCases } from './pax3d-places.js?v=2ac2ccfb';
 

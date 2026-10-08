@@ -16,6 +16,7 @@ import { flightStops } from './city3d/js/flight.js?v=21b1fb25';
 import { selectBuildings, writeBuildingInstances } from './city3d/js/buildings.js?v=98d8bf23';
 import { createLabelLayer } from './city3d/js/maplabels.js?v=107a28bb';
 import { createLocator, seatOf } from './city3d/js/geo.js?v=00345fad';
+import { createStreetLayer } from './city3d/js/street.js?v=73651cc4';
 import { LAND_H, project, unproject } from './pax3d-geom.js?v=f13514eb';
 
 const BASE = 'city3d/data';
@@ -54,6 +55,7 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
   let lastSel = null;
   let look = MODES.day; // 시간대 — 도시 재질(물·도로·야간 창문)
   const uniforms = { uNight: { value: 0 } };
+  const street = createStreetLayer(uniforms); // 거리 소품 — 펼쳐진 도시 그룹 안으로 옮겨 단다(그룹 배율·위치를 그대로 받게)
   fetch(`${BASE}/cities.json`, { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : null))
     .then((j) => { index = j; if (j) onIndex(); }).catch(() => { index = null; });
 
@@ -172,6 +174,7 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
       const k = order.shift();
       const c = loaded.get(k);
       scene.remove(c.group);
+      c.group.remove(street.group); // 거리 소품은 도시마다 다시 다는 공용 층 — 같이 해제하지 않는다
       c.group.traverse((o) => { o.geometry?.dispose(); (Array.isArray(o.material) ? o.material : [o.material]).forEach((m) => m?.dispose()); });
       loaded.delete(k);
     }
@@ -186,6 +189,8 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
     if (key) {
       const c = loaded.get(key);
       c.group.visible = true;
+      c.group.add(street.group);
+      street.reset();
       labels.setLabels(c.data.mapinfo, c.frame, null);
       labels.setUnit(c.sz);
     } else labels.clear();
@@ -219,6 +224,8 @@ export function createCityLayer({ scene, labelRoot, onLabelClick, onChange, onSt
       if (!active) return;
       const c = loaded.get(active);
       selectVisible(c, camera, target);
+      const [sx, sn] = c.toLocal(target.x, target.z);
+      street.update(c.frame, c.data.roads, sx, sn, camera.position.distanceTo(target) / c.sz, 1);
       labels.update(camera, 1, width, height);
     },
     setLabelGroup(g, on) { labels.setGroup(g, on); },

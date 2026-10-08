@@ -1,6 +1,6 @@
 // 여섯 도시 입체지도 — 화면 구성과 도시 불러오기(파일마다 레코드 수·길이·CRC32 검증).
 import { getJSON, loadCity as fetchCity } from './load.js?v=62517a49';
-import { createWorld, MODES } from './world.js?v=3341007a';
+import { createWorld, MODES } from './world.js?v=88ac8fa2';
 import { ROAD_STYLE } from './layers.js?v=422c9e4c';
 import { createLabelLayer, LABEL_GROUPS, LABEL_KINDS } from './maplabels.js?v=107a28bb';
 import { createMinimap } from './minimap.js?v=33146097';

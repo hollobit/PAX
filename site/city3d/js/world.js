@@ -8,6 +8,7 @@ import {
 import { selectBuildings, writeBuildingInstances } from './buildings.js?v=98d8bf23';
 import { MODES, skyTexture, sunDirection, styleCityMaterials } from './modes.js?v=0b7e72ef';
 import { createLandmarkFlight, flightStops } from './flight.js?v=21b1fb25';
+import { createStreetLayer } from './street.js?v=73651cc4';
 
 const MOBILE = matchMedia('(pointer: coarse)').matches || Math.min(innerWidth, innerHeight) < 700;
 
@@ -44,6 +45,9 @@ export function createWorld(canvas, { onPick, onStats, onFrame, onTour = () => {
 
   const group = new THREE.Group();
   scene.add(group);
+  // 거리 소품(가로등·가로수·차량) — 가까이 확대했을 때만 시점 둘레에 놓는다(street.js)
+  const street = createStreetLayer(uniforms);
+  scene.add(street.group);
   let city = null;
   let mode = 'day';
   let vscale = 1;
@@ -193,6 +197,10 @@ export function createWorld(canvas, { onPick, onStats, onFrame, onTour = () => {
     controls.update();
     placeSun();
     selectVisible(false);
+    if (city) {
+      const [sx, sn] = city.frame.local(controls.target.x, controls.target.z);
+      street.update(city.frame, city.roads, sx, sn, camera.position.distanceTo(controls.target), vscale);
+    }
     renderer.render(scene, camera);
     if (city && onFrame) onFrame(api);
     frames++;
@@ -262,6 +270,7 @@ export function createWorld(canvas, { onPick, onStats, onFrame, onTour = () => {
   const api = {
     get camera() { return camera; },
     get vscale() { return vscale; },
+    streetCounts() { return street.counts(); },
     get size() { return [canvas.clientWidth, canvas.clientHeight]; },
     get frame() { return city?.frame; },
     footprint,
