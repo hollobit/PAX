@@ -1,7 +1,124 @@
 {
- "updated_at": "2026-10-08T14:37:03Z",
- "count": 844,
+ "updated_at": "2026-10-08T22:34:31Z",
+ "count": 853,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261008171002",
+   "title": "GIGABYTE AI TOP ATOM 64GB 통합 메모리 버전, 데스크톱 AI 개발 가능성 확대",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-09",
+   "last_shared": "2026-10-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.youthdaily.co.kr/mobile/article.html?no=228101",
+   "title": "[청년일보] 오픈AI·앤트로픽, 차세대 AI '정면승부'…GPT-6·클로드 하이쿠 5.5 '맞불'",
+   "outlet": "youthdaily.co.kr",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-09",
+   "last_shared": "2026-10-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.tokenpost.kr/news/breaking/420155",
+   "title": "GPT-6.1 Sol, 표준 모드보다 최대 8배 빠른 모드 출시",
+   "outlet": "토큰포스트",
+   "published": "2026-10-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-09",
+   "last_shared": "2026-10-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.straightnews.co.kr/news/articleView.html?idxno=312814",
+   "title": "AI에 떠밀려 일자리 잃는 일 없어야…최혁진, 공공기관법 개정안 발의",
+   "outlet": "스트레이트뉴스",
+   "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-09",
+   "last_shared": "2026-10-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newsworker.co.kr/news/articleView.html?idxno=507788",
+   "title": "서산시, 'AI·데이터 행정 혁신 가속'... 5개년 정보화 청사진 구체화",
+   "outlet": "뉴스워커",
+   "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-09",
+   "last_shared": "2026-10-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itworld.co.kr/article/4232222/%ec%b1%97gpt-%ed%98%91%ec%97%85-%eb%ac%b8%ec%84%9c-%ed%8e%b8%ec%a7%91%ea%b8%b0-%ed%8e%98%ec%9d%b4%ec%a7%80%ec%8a%a4-%ea%b3%b5%ea%b0%9cai-%ec%96%b4%ec%8b%9c%ec%8a%a4%ed%84%b4%ed%8a%b8.html",
+   "title": "챗GPT, 협업 문서 편집기 '페이지스' 공개…AI 어시스턴트, 오피스 영역 진출 선언",
+   "outlet": "ITWorld",
+   "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-09",
+   "last_shared": "2026-10-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=242102",
+   "title": "프로텐, NIA ‘인공지능(AI) 윤리 준수기관’ 확인마크 획득",
+   "outlet": "아이티데일리",
+   "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-09",
+   "last_shared": "2026-10-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42235",
+   "title": "카카오, 대규모 AI 모델 학습 최적화 방법, 모델 경량화 연구 기법 발표",
+   "outlet": "인공지능신문",
+   "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-09",
+   "last_shared": "2026-10-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42219",
+   "title": "레노버, 엔비디아와 ‘AI 익스프레스’ 출시…AI 팩토리 최단 15일 구축",
+   "outlet": "인공지능신문",
+   "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-09",
+   "last_shared": "2026-10-09",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.topdaily.kr/articles/112219",
    "title": "KT, 챗GPT에 상품정보 플러그인 출시 外",
