@@ -16,12 +16,15 @@ jobs:
       - uses: actions/setup-node@v4  # 브라우저 모듈 문법 검사와 node로 검증하는 테스트가 있다
         with:
           node-version: "20"
-      - run: pip install pytest pillow openpyxl
+      - run: pip install pytest pillow openpyxl pyyaml
       - name: 공개 저장소 점검(비공개 경로·채팅방 ID·비밀 키·깨진 JSON·원장 대조)
         run: python3 scripts/check_repo.py
       - name: 사이트 JS 문법
         # 브라우저 모듈은 ESM으로 검사한다 — 일반 node --check는 import가 있는 파일의 구문 오류를 놓친다(2026-10-08 실측)
-        run: for f in site/*.js site/city3d/js/*.js; do node --input-type=module --check < "$f" || { echo "구문 오류: $f"; exit 1; }; done
+        run: |
+          for f in site/*.js site/city3d/js/*.js; do
+            node --input-type=module --check < "$f" || { echo "구문 오류 — $f"; exit 1; }
+          done
       - name: 캐시 스탬프(빠진·옛 ?v=)
         run: python3 scripts/stamp_assets.py --check
       - name: 테스트
