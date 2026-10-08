@@ -371,7 +371,8 @@ const HIGH = new THREE.Color('#8fa9c6');
 const EST = new THREE.Color('#b9b3a8');
 
 export function buildingColor(b, i, markEstimated, out) {
-  if (markEstimated && b.flags[i]) return out.copy(EST);
+  // 플래그 1·2만 추정(회색) — 4(건물통합정보 출처)·8(층수 환산)은 출처 표시라 색에 쓰지 않는다
+  if (markEstimated && b.flags[i] & 3) return out.copy(EST);
   const t = Math.min(1, Math.log1p(b.h[i]) / Math.log1p(180));
   return out.copy(LOW).lerp(HIGH, t * t);
 }

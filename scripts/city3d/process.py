@@ -29,6 +29,7 @@ from shapely.geometry import LineString, MultiPolygon, Polygon, box, shape
 from common import (  # noqa: E402
     CACHE, CITIES, DEM_Z, MVT_Z, OUT, Frame, city_boundary, tile_lonlat, write_bin,
 )
+import gisbldg  # noqa: E402
 
 EXTENT = 4096
 DEFAULT_HEIGHT = 5          # OpenMapTiles가 height·levels가 모두 없을 때 넣는 값
@@ -277,6 +278,8 @@ def build_city(city, snapshot):
     shapely.prepare(near)
 
     bldg, roads, waterways = [], [], []
+    use_gis = city.get("buildings") == "vworld"
+    osm_parts = []  # 건물통합정보를 쓰는 도시: OSM 건물은 높이 보충·누락 보충용으로만 모은다
     water_v, water_i, green_v, green_i, green_c = [], [], [], [], []
     road_pts = ww_pts = 0
     stats = {"buildings_in_tiles": 0, "outside_city": 0, "hidden_3d": 0, "estimated_height": 0, "degenerate": 0}
@@ -312,6 +315,9 @@ def build_city(city, snapshot):
                     h = h0 + 3.0
                     flags |= 2
                     stats["corrected_height"] = stats.get("corrected_height", 0) + 1
+                if use_gis:
+                    osm_parts.append((loc, h, h0, flags))
+                    continue
                 rec = encode_building(loc, h, h0, flags)
                 if rec is None:
                     stats["degenerate"] += 1
@@ -377,6 +383,9 @@ def build_city(city, snapshot):
                         cls = "peak" if layer == "mountain_peak" else "airport" if layer == "aerodrome_label" else p.get("class")
                         pois.append((name, conv(px, py), cls, p.get("ele") if layer == "mountain_peak" else None))
 
+    if use_gis:
+        stats["osm_buildings"] = len(osm_parts)
+        bldg = gisbldg.build(city["key"], frame, boundary, osm_parts, encode_building, stats)
     out = OUT / city["key"]
     out.mkdir(parents=True, exist_ok=True)
     files = {}
@@ -412,7 +421,10 @@ def build_city(city, snapshot):
         "counts": {"buildings": len(bldg), "roads": len(roads), "road_points": road_pts,
                    "waterways": len(waterways), "waterway_points": ww_pts,
                    "water_triangles": water_tris, "green_triangles": green_tris,
-                   "estimated_height": stats["estimated_height"], "corrected_height": stats.get("corrected_height", 0)},
+                   "estimated_height": stats["estimated_height"], "corrected_height": stats.get("corrected_height", 0),
+                   **({"gis_height": stats["gis_height"], "gis_floors": stats["gis_floors"],
+                       "osm_height_join": stats["osm_height_join"], "osm_only": stats["osm_only"]} if use_gis else {})},
+        "building_source": "molit-gis" if use_gis else "osm",
         "build_stats": stats,
         "files": {k: {"bytes": v, "crc32": crc_of(out / k)} for k, v in files.items()},
         "landmarks": landmarks, "outline": outline,

@@ -82,9 +82,11 @@ def test_buildings_are_sane(city, tmp_path):
         assert 0 <= x <= w + 1 and 0 <= n <= h + 1
         assert bw >= 10 and bd >= 10          # 1m 이상(0.1m 단위)
         assert hh > h0 or (hh == h0 == 0)
-        if flags:
+        if flags & 3:                          # 4(건물통합정보 출처)·8(층수 환산)은 추정이 아니다
             est += 1
             assert hh == 50 or flags & 2       # 추정 = 기본값 5m, 또는 시작 높이보다 낮아 보정한 경우
+        if flags & 8:
+            assert flags & 4 and hh % 30 == 0  # 층수 환산은 건물통합정보에서만, 3m 배수
     assert est == meta["counts"]["estimated_height"]
 
 

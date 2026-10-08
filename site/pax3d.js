@@ -99,11 +99,15 @@ async function main() {
   let world = null;
   let tilesOn = false;
   let cityOn = false;
+  let cityGis = false; // 펼친 도시의 건물이 국토교통부 GIS건물통합정보인가(서울) — 저작권 표시가 달라진다
   const fmt = new Intl.NumberFormat('ko-KR');
   function renderAttrib() {
     const a = $('#pax3d-attrib');
     a.hidden = !(tilesOn || cityOn);
     a.dataset.mode = cityOn ? 'city' : 'tiles';
+    a.querySelector('.pax3d-attrib__city').textContent = cityOn && cityGis
+      ? '건물 국토교통부 GIS건물통합정보(VWorld) · 도로·이름·지형 OpenFreeMap(OpenMapTiles)·AWS Terrain Tiles ·'
+      : '건물·도로·이름 OpenFreeMap(OpenMapTiles) · 지형 AWS Terrain Tiles ·';
   }
   /** 랜드마크 비행 — 단추 상태와 지금 날아가는 곳 */
   function renderFlight(st) {
@@ -121,7 +125,11 @@ async function main() {
     else if (st.phase === 'error') badge.textContent = `${st.name} 입체지도를 불러오지 못했습니다: ${st.message}`;
     else if (st.phase === 'enter') {
       const c = st.meta.counts;
-      badge.textContent = `${st.name} 3D 입체지도 · 실제 건물 ${fmt.format(c.buildings)}채(높이 추정 ${Math.round((c.estimated_height / c.buildings) * 100)}%는 회색) · 사례는 실제 자리에 · OSM 스냅샷 ${st.meta.snapshot.slice(0, 4)}-${st.meta.snapshot.slice(4, 6)}-${st.meta.snapshot.slice(6, 8)}`;
+      const snap = `${st.meta.snapshot.slice(0, 4)}-${st.meta.snapshot.slice(4, 6)}-${st.meta.snapshot.slice(6, 8)}`;
+      const src = st.meta.building_source === 'molit-gis'
+        ? `건물 국토교통부 GIS건물통합정보 · 도로·이름 OSM 스냅샷 ${snap}` : `OSM 스냅샷 ${snap}`;
+      badge.textContent = `${st.name} 3D 입체지도 · 실제 건물 ${fmt.format(c.buildings)}채(높이 추정 ${Math.round((c.estimated_height / c.buildings) * 100)}%는 회색) · 사례는 실제 자리에 · ${src}`;
+      cityGis = st.meta.building_source === 'molit-gis';
     }
     if (st.phase === 'tour' || st.phase === 'tourEnd') { renderFlight(st); return; }
     cityOn = st.phase === 'enter' || (cityOn && st.phase !== 'leave');
@@ -133,7 +141,7 @@ async function main() {
   }
   const tip = $('#pax3d-tip');
   try {
-    const { createWorld } = await import('./pax3d-world.js?v=8d1fad53');
+    const { createWorld } = await import('./pax3d-world.js?v=33cd5a23');
     // 실제 지형(수치표고) — 못 받으면 평평한 판으로 그대로 간다
     const terrain = await import('./pax3d-terrain.js?v=a3bd09aa').then((t) => t.loadTerrain()).catch(() => null);
     world = createWorld($('#pax3d-canvas'), {

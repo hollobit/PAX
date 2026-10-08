@@ -3,14 +3,14 @@
  "cities": {
   "seoul": {
    "name": "서울",
-   "buildings": 167255,
+   "buildings": 817302,
    "bbox": [
     126.755,
     37.419000000000004,
     127.194,
     37.711
    ],
-   "packed_bytes": 6852472,
+   "packed_bytes": 16243108,
    "outline": [
     [
      [

@@ -1,0 +1,37 @@
+"""국토교통부 GIS건물통합정보 → 건물 높이 규칙(scripts/city3d/gisbldg.py)."""
+import sys
+from pathlib import Path
+
+import pytest
+
+pytest.importorskip("shapely")
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts" / "city3d"))
+import gisbldg as gb  # noqa: E402
+
+
+def test_height_prefers_registry_height_then_floors():
+    assert gb.gis_height({"height": "150.15", "grnd_flr": "37"}) == (150.15, gb.F_GIS)
+    assert gb.gis_height({"height": "0", "grnd_flr": "12"}) == (36.0, gb.F_GIS | gb.F_FLOORS)
+    assert gb.gis_height({"height": "", "grnd_flr": "0"}) is None
+
+
+def test_implausible_heights_fall_back_to_floors():
+    # 1m 같은 오기·600m 넘는 값은 믿지 않는다(국내 최고 555m)
+    assert gb.gis_height({"height": "1.0", "grnd_flr": "3"}) == (9.0, gb.F_GIS | gb.F_FLOORS)
+    assert gb.gis_height({"height": "1200", "grnd_flr": "0"}) is None
+    assert gb.gis_height({"height": "abc", "grnd_flr": "x"}) is None
+
+
+def test_flags_keep_estimate_bits_separate_from_source_bits():
+    # 화면은 flags & 3만 추정(회색)으로 칠한다 — 출처·층수 비트가 거기에 겹치면 안 된다
+    assert (gb.F_GIS | gb.F_FLOORS) & 3 == 0
+    assert gb.F_EST & 3 and gb.F_CORR & 3
+
+
+def test_underground_facilities_are_not_raised_as_buildings():
+    assert gb.is_underground({"grnd_flr": "0", "ugrnd_flr": "2"})            # 지하 전용
+    assert gb.is_underground({"bld_nm": "시청광장지하쇼핑센터", "grnd_flr": "0"})  # 층수 정보 없는 지하상가
+    assert gb.is_underground({"bld_nm": "합정역", "height": "0"})
+    assert gb.is_underground({"bld_nm": "공항시장역(9호선)"})
+    assert not gb.is_underground({"bld_nm": "서울역", "grnd_flr": "4"})        # 지상 층수가 있으면 남긴다
+    assert not gb.is_underground({"bld_nm": "국내선청사", "grnd_flr": "0"})

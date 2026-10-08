@@ -24,7 +24,8 @@ UA = "city3d-build (static 3D map demo; contact via github.com/hollobit/PAX)"
 
 # key, 표시 이름, 경계 규칙
 CITIES = [
-    {"key": "seoul", "name": "서울", "region": "서울"},
+    # 서울: 건물은 국토교통부 GIS건물통합정보(VWorld, vworld.py로 받음) — 나머지 도시는 아직 OSM(시범 후 확대)
+    {"key": "seoul", "name": "서울", "region": "서울", "buildings": "vworld"},
     {"key": "busan", "name": "부산", "region": "부산"},
     {"key": "sejong", "name": "세종", "region": "세종"},
     # 2023년 편입된 군위군은 도심에서 40km 떨어진 농촌이라 제외(README에 명시) — 좌표 범위를 65km 안에 둔다

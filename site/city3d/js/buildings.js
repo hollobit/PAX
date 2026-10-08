@@ -1,7 +1,7 @@
 // 건물 표시 예산 — 시점 둘레에서 가까운 순(높은 건물은 가산점)으로 고르고 InstancedMesh에 쓴다.
 // 독립 페이지(world.js)와 3D PAX(pax3d-city.js)가 같은 규칙을 쓴다.
 import * as THREE from 'three';
-import { buildingColor } from './layers.js?v=c8c8545d';
+import { buildingColor } from './layers.js?v=a697c85d';
 
 /** O(N) 히스토그램 선택 — 점수 = 거리 − min(높이, 300m)×15. 전부 들어가면 전부. */
 export function selectBuildings(b, tx, tn, budget, prev) {

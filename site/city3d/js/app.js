@@ -1,7 +1,7 @@
 // 여섯 도시 입체지도 — 화면 구성과 도시 불러오기(파일마다 레코드 수·길이·CRC32 검증).
 import { getJSON, loadCity as fetchCity } from './load.js?v=62517a49';
-import { createWorld, MODES } from './world.js?v=31130718';
-import { ROAD_STYLE } from './layers.js?v=c8c8545d';
+import { createWorld, MODES } from './world.js?v=a6e284f3';
+import { ROAD_STYLE } from './layers.js?v=a697c85d';
 import { createLabelLayer, LABEL_GROUPS, LABEL_KINDS } from './maplabels.js?v=107a28bb';
 import { createMinimap } from './minimap.js?v=33146097';
 import { createLocator, externalLinks, seatOf, toLonLat, toLocal } from './geo.js?v=00345fad';
@@ -212,7 +212,9 @@ async function main() {
       return d;
     }));
     const est = ((c.estimated_height / c.buildings) * 100).toFixed(0);
-    $('#est-note').textContent = `${meta.name} 건물의 ${est}%는 OSM에 높이·층수가 없어 OpenMapTiles 기본값 5m로 세운 추정 높이입니다(회색).`;
+    $('#est-note').textContent = meta.building_source === 'molit-gis'
+      ? `${meta.name} 건물은 국토교통부 GIS건물통합정보(건축물대장 높이·지상층수)로 세웠습니다. ${est}%는 높이·층수가 모두 없어 기본값 5m로 세운 추정 높이입니다(회색).`
+      : `${meta.name} 건물의 ${est}%는 OSM에 높이·층수가 없어 OpenMapTiles 기본값 5m로 세운 추정 높이입니다(회색).`;
     $('#city-note').textContent = meta.note ? `경계: ${meta.note}` : '';
     $('#landmarks').replaceChildren(...meta.landmarks.map((l) => {
       const b = el('button', 'chip', l.name);
@@ -240,11 +242,13 @@ async function main() {
     }
     const b = state.city.b;
     const f = state.city.meta.frame;
-    const est = b.flags[i];
+    const fl = b.flags[i];
+    const est = fl & 1;
     const lon = f.lon0 + b.x[i] / f.m_lon;
     const lat = f.lat0 + b.y[i] / f.m_lat;
     const rows = [
-      ['높이', b.flags[i] & 2 ? `${fmt.format(b.h[i])} m — 추정(보정)` : est ? '5 m — 추정' : `${fmt.format(b.h[i])} m`],
+      ['높이', fl & 2 ? `${fmt.format(b.h[i])} m — 추정(보정)` : est ? '5 m — 추정' : fl & 8 ? `${fmt.format(b.h[i])} m — 지상층수 × 3m` : `${fmt.format(b.h[i])} m`],
+      ['자료', fl & 4 ? '국토교통부 GIS건물통합정보' : 'OpenStreetMap'],
       ...(b.h0[i] > 0 ? [['시작 높이', `${fmt.format(b.h0[i])} m`]] : []),
       ['바닥면적(원본 윤곽)', b.area[i] >= 65535 ? '65,535 ㎡ 이상' : `${fmt.format(b.area[i])} ㎡`],
       ['표시 상자', `${b.w[i].toFixed(1)} × ${b.d[i].toFixed(1)} m`],
@@ -253,13 +257,21 @@ async function main() {
     ];
     box.replaceChildren(
       ...rows.map(([k, v]) => { const d = el('div', 'kv'); d.append(el('span', null, k), el('b', 'num', v)); return d; }),
-      el('p', 'muted small', b.flags[i] & 2
-        ? 'OSM에 시작 높이(min_height)만 있고 높이가 없어 기본값 5m가 시작 높이보다 낮았습니다. 시작 높이 + 3m로 세운 추정값입니다.'
-        : est
-        ? 'OSM에 height·building:levels가 없어 OpenMapTiles가 넣는 기본값입니다. 실제 높이와 다를 수 있습니다.'
-        : 'OSM height 태그(없으면 building:levels × 3.66m)를 OpenMapTiles가 정수로 반올림한 값입니다.'),
+      el('p', 'muted small', buildingNote(fl)),
       linksNode(lat, lon, placeRows(b.x[i], b.y[i]).label),
     );
+  }
+
+  /** 높이를 어디서 정했는지 — 플래그 1 추정·2 보정·4 건물통합정보·8 층수 환산 */
+  function buildingNote(fl) {
+    if (fl & 4) {
+      if (fl & 1) return '건물통합정보에 높이·층수가 없고 같은 자리 OSM 건물에도 높이가 없어 기본값 5m로 세운 추정값입니다.';
+      if (fl & 8) return '건물통합정보의 지상층수에 층고 3m를 곱한 값입니다. 실제 높이와 다를 수 있습니다.';
+      return '건물통합정보의 건축물대장 높이입니다(없으면 같은 자리 OSM 건물의 실제 높이). 윤곽·면적은 건물통합정보입니다.';
+    }
+    if (fl & 2) return 'OSM에 시작 높이(min_height)만 있고 높이가 없어 기본값 5m가 시작 높이보다 낮았습니다. 시작 높이 + 3m로 세운 추정값입니다.';
+    if (fl & 1) return 'OSM에 height·building:levels가 없어 OpenMapTiles가 넣는 기본값입니다. 실제 높이와 다를 수 있습니다.';
+    return 'OSM height 태그(없으면 building:levels × 3.66m)를 OpenMapTiles가 정수로 반올림한 값입니다.';
   }
 
   function placeRows(x, n) {
