@@ -5827,6 +5827,12 @@
    "title": "지방의회·예산·조례 MCP — 의회 질의·사업 예산·근거 조례를 한 흐름으로 찾고 절차를 점검하는 지자체 직원용 MCP",
    "org": "전남광주통합특별시 서구",
    "url": "https://local-government-mcp.vercel.app"
+  },
+  {
+   "id": "bd4f97e0b96cb04d",
+   "title": "korean-report-hwpx — 메모를 기관 서식 공문서(보고서·보도자료) HWPX로 만드는 MCP",
+   "org": "업스테이지",
+   "url": "https://github.com/UpstageAI/korean-report-hwpx"
   }
  ]
 }

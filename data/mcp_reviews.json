@@ -3084,6 +3084,42 @@
     "npm": "11.14.1",
     "pip_audit": "2.9.0"
    }
+  },
+  {
+   "case_id": "bd4f97e0b96cb04d",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 7건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "주의",
+     "note": "셸 호출은 모두 인자 목록 방식으로 주입 경로 없음(근거: korean_report_hwpx/engine/hancom.py:14·68). 다만 build_document의 out_path가 출력 폴더로 제한되지 않아 지정한 아무 경로에나 .hwpx·.json을 쓰고(근거: server.py:235-237·322), 그림 경로도 임의 로컬 파일을 읽어 문서에 넣는다(근거: engine/compose.py:478-479) — 로컬 범위"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "패키지에 네트워크 호출(requests·httpx·urllib·socket) 없음 — README의 '외부 전송 없음·API 키 불필요' 주장과 일치(근거: korean_report_hwpx/ 전체 검색, server.py:309 도구 설명)"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-10-08",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   },
+   "llm_audit_at": "2026-10-08"
   }
  ]
 }

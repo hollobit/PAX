@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-08T06:34:51Z",
- "count": 841,
+ "updated_at": "2026-10-08T14:37:03Z",
+ "count": 844,
  "articles": [
   {
    "url": "https://www.topdaily.kr/articles/112219",
@@ -263,6 +263,19 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-10-08-px-나라장터-가격비교-h200",
+   "title": "[공공AX 네트워크] 나라장터 가격 비교와 H200 서버 단가의 불투명",
+   "outlet": "akwiki.org",
+   "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-08-px-국회-회의록-전사",
    "title": "[공공AX 네트워크] 국회 속기록 실시간 공개와 위스퍼 전사 실험",
    "outlet": "akwiki.org",
@@ -278,6 +291,32 @@
   {
    "url": "https://akwiki.org/article/2026-10-08-px-aside-웹자동화-망분리",
    "title": "[공공AX 네트워크] 공공 업무 웹자동화, 망분리 앞에서 확장 프로그램 검토",
+   "outlet": "akwiki.org",
+   "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-08-cross-gpt6-확대-모델-체감",
+   "title": "[3개 방 공통] GPT-6 확대 소식이 돈 날 세 방이 저울질한 모델",
+   "outlet": "akwiki.org",
+   "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-08-cross-ai-일자리-생산성-역설",
+   "title": "[에이전트코리아·공공AX 네트워크] 정보통신업 생산성이 마이너스라는 전언, AI 일자리 우려로 이어지다",
    "outlet": "akwiki.org",
    "published": "2026-10-08",
    "kind": "기사",
