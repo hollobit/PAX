@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-07T22:34:09Z",
- "count": 839,
+ "updated_at": "2026-10-08T06:34:51Z",
+ "count": 841,
  "articles": [
   {
    "url": "https://www.topdaily.kr/articles/112219",
@@ -133,6 +133,19 @@
    ]
   },
   {
+   "url": "https://www.hibrain.net/research/researches/34/recruitments/108/categories/MJR/categories/ALL/recruits/3594743?pagekey=3594743&listType=ING&pagesize=10&sortType=AD&cntType=MJR&limit=25&displayType=TIT&siteid=1&page=1",
+   "title": "경북IT융합산업기술원 공공 AI 플랫폼 'Open AI Service Hub' 이용 안내",
+   "outlet": "하이브레인넷",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.fnnews.com/news/202610071005117786",
    "title": "금융보안원, AI 에이전트 보안 점검 강화…17개 평가항목 마련",
    "outlet": "파이낸셜뉴스",
@@ -228,6 +241,19 @@
    "title": "코히어, 에이전트 비용·보안 통제 플랫폼 '노스 2' 출시...알레프 알파 인수 후 첫 행보",
    "outlet": "AI타임스",
    "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-08",
+   "last_shared": "2026-10-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/055/0001393939?cds=news_edit",
+   "title": "한국 금융권 해킹범, 중국 광둥성 26세 추정…신원 단서 포착",
+   "outlet": "n.news.naver.com",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-08",

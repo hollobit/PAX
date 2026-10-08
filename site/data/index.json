@@ -5,10 +5,10 @@
  "total_cases": 506,
  "total_champions": 219,
  "community": {
-  "members": 2382,
-  "kakao_week": 3552,
-  "kakao_total_observed": 46760,
-  "threads_observed": 326
+  "members": 2401,
+  "kakao_week": 3823,
+  "kakao_total_observed": 47031,
+  "threads_observed": 327
  },
  "certified_champions": 5,
  "unattributed_cases": 106,
@@ -1626,8 +1626,8 @@
  "license_tagged": 386,
  "license_stated_rate": 0.482,
  "gitlab_cases": 261,
- "gitlab_mirror_pairs": 38,
- "gitlab_open_rate": 0.146,
+ "gitlab_mirror_pairs": 39,
+ "gitlab_open_rate": 0.149,
  "mcp_cases": 88,
  "transition_funnel": {
   "기관 공식": 34,
@@ -1740,11 +1740,11 @@
    ]
   },
   "github": {
-   "count": 151,
+   "count": 152,
    "starred": 148,
    "stars_sum": 284494,
    "maintenance": {
-    "활발": 112,
+    "활발": 113,
     "정체": 24,
     "방치": 13
    },
@@ -2154,6 +2154,12 @@
    "title": "법의 궤도 — 조문 하나에서 뻗어 나가는 법령 인용 관계를 입체 지도로 펼치는 탐색기",
    "github": "https://github.com/gschamisle/law-orbit",
    "gitlab": "https://gitlab.aigov.go.kr/gslee0819/law-orbit"
+  },
+  {
+   "id": "471dabbd273eab34",
+   "title": "한글편집 후처리 도구 — 보고서의 자간·서식·문두기호를 한글 프로그램 자동 조작으로 한 번에 다듬는 데스크톱 앱",
+   "github": "https://github.com/haijun93/hwp-auto-docfit",
+   "gitlab": "https://gitlab.aigov.go.kr/haijun93/hwp_autodocfit"
   },
   {
    "id": "d0ab0506a35ee03a",
