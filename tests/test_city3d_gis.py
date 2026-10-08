@@ -22,6 +22,28 @@ def test_implausible_heights_fall_back_to_floors():
     assert gb.gis_height({"height": "abc", "grnd_flr": "x"}) is None
 
 
+def test_registry_height_must_agree_with_floors():
+    # 실측 오기: 1층 305m, 9층 283m, 3층 123m — 층수 환산으로 내린다
+    assert gb.gis_height({"height": "305", "grnd_flr": "1"}) == (3.0, gb.F_GIS | gb.F_FLOORS)
+    assert gb.gis_height({"height": "283", "grnd_flr": "9"}) == (27.0, gb.F_GIS | gb.F_FLOORS)
+    assert gb.registry_height({"height": "245.5", "grnd_flr": "50"}) == 245.5   # 정상 초고층
+    assert gb.registry_height({"height": "18", "grnd_flr": "1"}) == 18.0        # 강당·체육관
+    assert gb.registry_height({"height": "150", "grnd_flr": "0"}) is None       # 층수 없는 큰 값
+    assert gb.floor_height({"grnd_flr": "116"}) is None                         # 80층 초과 층수 오기
+
+
+def test_concave_footprints_are_split_but_compact_ones_are_not():
+    from shapely.geometry import Polygon, box
+    compact = box(0, 0, 30, 20)
+    assert gb.split_pieces(compact) == [compact]
+    # ㄷ자(바깥 100×60, 가운데 마당 80×40) — 상자 하나면 마당까지 덮는다
+    u = Polygon([(0, 0), (100, 0), (100, 60), (90, 60), (90, 10), (10, 10), (10, 60), (0, 60)])
+    pieces = gb.split_pieces(u)
+    assert len(pieces) > 1
+    assert abs(sum(p.area for p in pieces) - u.area) < 1
+    assert all(p.area <= gb.SPLIT_CELL_M ** 2 + 1e-6 for p in pieces)
+
+
 def test_flags_keep_estimate_bits_separate_from_source_bits():
     # 화면은 flags & 3만 추정(회색)으로 칠한다 — 출처·층수 비트가 거기에 겹치면 안 된다
     assert (gb.F_GIS | gb.F_FLOORS) & 3 == 0

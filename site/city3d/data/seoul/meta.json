@@ -24,43 +24,44 @@
   "tiles": 70
  },
  "counts": {
-  "buildings": 817302,
+  "buildings": 857431,
   "roads": 79230,
   "road_points": 376392,
   "waterways": 721,
   "waterway_points": 8264,
   "water_triangles": 9483,
   "green_triangles": 93298,
-  "estimated_height": 164479,
+  "estimated_height": 171092,
   "corrected_height": 5,
-  "gis_height": 305206,
-  "gis_floors": 339229,
-  "osm_height_join": 7260,
-  "osm_only": 15588
+  "gis_height": 304368,
+  "gis_floors": 320327,
+  "osm_height_join": 27000,
+  "osm_only": 15648
  },
  "building_source": "molit-gis",
  "build_stats": {
   "buildings_in_tiles": 9308,
   "outside_city": 19090,
   "hidden_3d": 80,
-  "estimated_height": 164479,
-  "degenerate": 3946,
+  "estimated_height": 171092,
+  "degenerate": 4452,
   "corrected_height": 5,
   "osm_buildings": 167379,
   "gis_features": 912973,
   "gis_outside": 105808,
   "gis_underground": 1400,
   "gis_big_flat": 116,
-  "gis_height": 305206,
-  "gis_floors": 339229,
-  "osm_height_join": 7260,
-  "osm_only": 15588
+  "gis_height": 304368,
+  "gis_floors": 320327,
+  "osm_height_join": 27000,
+  "split_buildings": 8288,
+  "osm_only": 15648
  },
  "files": {
   "buildings.bin": {
-   "bytes": 13076864,
-   "crc32": 950506995,
-   "packed_bytes": 11601268
+   "bytes": 13718928,
+   "crc32": 4100459918,
+   "packed_bytes": 12131140
   },
   "roads.bin": {
    "bytes": 1822520,
