@@ -3320,6 +3320,7 @@
    "category": "기초지자체",
    "category_basis": "affiliation",
    "cases": [
+    "dcd1547e5f7b4c96",
     "ada7cb6b9fabac8f",
     "fa5ac519aca439f4",
     "43dc7f4ab2500260",
@@ -3338,7 +3339,7 @@
     "d40cc4a9cf6e29b6"
    ],
    "stats": {
-    "case_count": 16,
+    "case_count": 17,
     "top_ax": 3,
     "stars": 6800
    },
@@ -6450,6 +6451,12 @@
    "title": "korean-tax-calc-mcp — 법인세·가산세·인정이자·원천징수를 연도별 세율표와 근거 조문으로 계산하는 MCP",
    "org": "업스테이지",
    "url": "https://github.com/UpstageAI/korean-tax-calc-mcp"
+  },
+  {
+   "id": "5f90a904962efa87",
+   "title": "공공데이터 API 검색 — 공공데이터포털 오픈 API 1.2만 개를 분야·지역·승인 조건으로 찾는 사이트",
+   "org": "rimikimi studios",
+   "url": "https://public.rimikimi.com/"
   }
  ]
 }

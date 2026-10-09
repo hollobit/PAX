@@ -1,33 +1,33 @@
 {
- "generated_at": "2026-10-09",
+ "generated_at": "2026-10-10",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 522,
+ "total_cases": 524,
  "total_champions": 225,
  "community": {
-  "members": 2403,
-  "kakao_week": 3850,
-  "kakao_total_observed": 47489,
-  "threads_observed": 328
+  "members": 2402,
+  "kakao_week": 3557,
+  "kakao_total_observed": 47679,
+  "threads_observed": 330
  },
  "certified_champions": 5,
- "unattributed_cases": 109,
+ "unattributed_cases": 110,
  "ax_distribution": {
-  "AI-Ready": 342,
-  "AI-Enabled": 154,
+  "AI-Ready": 343,
+  "AI-Enabled": 155,
   "AX 단계 외": 20,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
  "c_axis_mean": 0.94,
  "p_distribution": {
-  "P0": 168,
-  "P1": 335,
+  "P0": 169,
+  "P1": 336,
   "P2": 19
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 251,
+  "없음(비LLM)": 253,
   "해외 오픈웨이트(로컬)": 29,
   "혼합": 14,
   "해외 상용 API": 62,
@@ -782,7 +782,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 251,
+    "n": 253,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -1658,10 +1658,10 @@
  "gitlab_cases": 275,
  "gitlab_mirror_pairs": 40,
  "gitlab_open_rate": 0.145,
- "mcp_cases": 91,
+ "mcp_cases": 92,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 440,
+  "미확인": 442,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1669,7 +1669,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.757
+  "feedback": 0.758
  },
  "maintenance_distribution": {
   "활발": 319,
@@ -1941,20 +1941,20 @@
   }
  },
  "mcp_stats": {
-  "total": 91,
+  "total": 92,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
    "Server": 79,
    "Client/Host": 7,
-   "Unknown/None": 4
+   "Unknown/None": 5
   },
   "c_grades": {
    "C0": 68,
    "C2": 9,
    "C3": 1,
-   "C1": 13
+   "C1": 14
   },
   "maintenance": {
    "활발": 51,

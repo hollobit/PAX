@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-09T09:13:58+09:00",
+ "updated_at": "2026-10-10T00:34:25+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -15104,6 +15104,48 @@
    "license": "명시 없음",
    "license_source": "gitlab",
    "license_checked": "2026-10-09"
+  },
+  {
+   "title": "공공데이터 API 검색 — 공공데이터포털 오픈 API 1.2만 개를 분야·지역·승인 조건으로 찾는 사이트",
+   "tags": [
+    "공공데이터",
+    "오픈API",
+    "검색"
+   ],
+   "collected_at": "2026-10-10",
+   "runtime_env": "브라우저만",
+   "summary": "공공데이터포털의 오픈 API 1만 2천여 개를 분야·지역(전국·시도)·자동승인·상업 이용 가능 여부로 거르고 활용신청·조회 순으로 비교하는 검색 사이트다. 매주 목록을 갱신하며, 이름을 누르면 포털 신청 페이지로 이어져 공공데이터 연계 도구를 만들 때 쓸 API를 고르기 쉽다.",
+   "model_dependency": "없음(비LLM)",
+   "source": "kakao",
+   "task_category": "데이터·통계",
+   "case_class": "참고",
+   "link": "https://public.rimikimi.com/",
+   "org": "rimikimi studios",
+   "org_type": "민간(참고)",
+   "date": "2026-10-09",
+   "id": "5f90a904962efa87"
+  },
+  {
+   "title": "딴짓하는 류주임 포트폴리오 — 공공 도메인 오픈소스 21개를 3D 마을로 둘러보는 소개 페이지",
+   "tags": [
+    "포트폴리오",
+    "3D",
+    "오픈소스",
+    "MCP"
+   ],
+   "collected_at": "2026-10-10",
+   "runtime_env": "브라우저만",
+   "summary": "기초지자체 주무관이 퇴근 후 만든 공공 도메인 오픈소스 21개(공공데이터 MCP 서버·웹 서비스·에이전트 도구·딸깍 시리즈)를 3D 마을을 걸으며 소개하는 포트폴리오다. 도구마다 건물과 간판으로 나타내고 자동 둘러보기와 목록 보기를 제공해, 흩어진 개인 개발물을 한곳에서 찾게 한다.",
+   "model_dependency": "없음(비LLM)",
+   "source": "kakao",
+   "task_category": "공통·범용",
+   "case_class": "개인 개발",
+   "link": "https://chris.gomdori.app/",
+   "org": "서울특별시 광진구(개인 개발)",
+   "org_type": "공직 개인",
+   "date": "2026-10-09",
+   "region": "서울",
+   "id": "dcd1547e5f7b4c96"
   }
  ]
 }

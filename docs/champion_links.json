@@ -10,7 +10,10 @@
    "inferred": true,
    "evidence": "본인 자기소개 게시물(DZgf3veiStV, '광진구청 8급')과 광진구 보도자료의 도구 목록 일치"
   },
-  "evidence": "게시물 DWbsucHCb2X·DZ10EToCbZ2에서 github.com/chrisryugj 저장소를 본인 개발물로 공유"
+  "evidence": "게시물 DWbsucHCb2X·DZ10EToCbZ2에서 github.com/chrisryugj 저장소를 본인 개발물로 공유 · 포트폴리오(chris.gomdori.app)는 본인 소개 페이지(광진구청 류승인 주무관 표기)",
+  "extra_cases": [
+   "dcd1547e5f7b4c96"
+  ]
  },
  {
   "champion": "hosungseo",
