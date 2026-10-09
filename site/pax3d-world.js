@@ -13,6 +13,8 @@ import { createLandmarkFlight } from './city3d/js/flight.js?v=21b1fb25';
 import { createCityLayer } from './pax3d-city.js?v=c99e972d';
 import { createStage, HOME } from './pax3d-stage.js?v=749c5dd6';
 import { groupCases } from './pax3d-places.js?v=2ac2ccfb';
+import { villageKind, planVillage } from './pax3d-village-plan.js?v=9eb236cc';
+import { VILLAGE_SIZE, KIND_TOP, villageGeometries, villageMaterial, villageDecor } from './pax3d-village.js?v=381def6d';
 
 // 간판 자리 — 무게중심은 경기(서울 구멍 포함)처럼 엉뚱한 곳에 떨어져 손으로 정했다.
 const LABEL_AT = {
@@ -61,6 +63,18 @@ function outline(polysList, y, color, opacity, hAt = () => 0) {
   const geo = new THREE.BufferGeometry();
   geo.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
   return new THREE.LineSegments(geo, new THREE.LineBasicMaterial({ color, transparent: true, opacity }));
+}
+
+/** 선분 묶음에서 가상 섬 안에 든 선분을 뺀다(중점 기준) */
+function clipInside(lines, polysList) {
+  const a = lines.geometry.attributes.position.array;
+  const keep = [];
+  const p = new THREE.Vector2();
+  for (let i = 0; i < a.length; i += 6) {
+    p.set((a[i] + a[i + 3]) / 2, -(a[i + 2] + a[i + 5]) / 2);
+    if (!polysList.some((polys) => inPolys(p, polys))) keep.push(...a.slice(i, i + 6));
+  }
+  lines.geometry.setAttribute('position', new THREE.Float32BufferAttribute(keep, 3));
 }
 
 /** 화면 크기가 일정한 작은 간판 — 확대해도 부풀지 않는다(시군구·기관). h는 화면 높이 대비 비율. */
@@ -132,15 +146,30 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
 
   // ---- 지역 밖 섬 ---------------------------------------------------------------
   const islandPolys = new Map();
+  const villages = new Map(); // 섬 이름 → {plan, decor}
+  const islandShores = []; // 가상 섬 바닷가 — 실제 섬(신안 앞바다 등)의 경계선이 마을 위에 그려지지 않게 잘라 낸다
   for (const isl of ISLANDS) {
     const n = (byPlace.get(isl.key) || []).length;
     if (!n) continue;
     const center = project(isl.lon, isl.lat);
     const radius = 0.34 + 0.085 * Math.sqrt(n);
     const polys = [[blobRing(center, radius, isl.key)]];
-    islandPolys.set(isl.key, [[blobRing(center, radius * 0.86, isl.key)]]);
+    const inner = [[blobRing(center, radius * 0.86, isl.key)]];
+    islandPolys.set(isl.key, inner);
+    // 섬 마을 — 광장·순환 도로·방사 도로를 깔고 사례를 길가에 내용별 건물로 세운다(참고: 3D 마을 포트폴리오)
+    const zoneList = (byZone.get(`isl:${isl.key}`) || { list: [] }).list;
+    const inside = (p) => inPolys(new THREE.Vector2(p.x, p.y), inner);
+    const plan = planVillage({
+      center, radius: radius * 0.86, inside, size: VILLAGE_SIZE, seed: isl.key,
+      items: zoneList.map((c) => ({ id: c.id, kind: villageKind(c) })),
+    });
+    const decor = villageDecor({ plan, inside, center, radius: radius * 0.86, name: isl.key, grad, y: LAND_H, rand: rng(`village-${isl.key}`) });
+    scene.add(decor.group);
+    villages.set(isl.key, { plan, decor });
     const mesh = landMesh(polys, '#cfdcb4', '#e8d9ae', grad, isl.key, false);
-    const beach = landMesh([[blobRing(center, radius * 1.08, `${isl.key}-beach`)]], '#eadfbe', '#eadfbe', grad, isl.key, false);
+    const shore = [[blobRing(center, radius * 1.08, `${isl.key}-beach`)]];
+    islandShores.push(shore);
+    const beach = landMesh(shore, '#eadfbe', '#eadfbe', grad, isl.key, false);
     beach.scale.y = 0.35;
     scene.add(beach, mesh, outline([polys], LAND_H + 0.003, 0x3a3226, 0.5));
     pickables.push(mesh, beach);
@@ -151,13 +180,15 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     labels.push(sign);
   }
   scene.add(dokdo(project(131.865, 37.242), grad, LAND_H));
+  for (const lines of [sggLines, regionLines]) clipInside(lines, islandShores);
 
   // 실제 지형이 있으면 원뿔 산은 세우지 않는다 — 산은 이제 수치표고가 말한다
   const { group: peaks, blocked } = terrain ? { group: null, blocked: [] } : mountains({ project, grad, landH: LAND_H });
   if (peaks) scene.add(peaks);
 
   // ---- 사례 건물 -----------------------------------------------------------------
-  const geos = buildingGeometries();
+  const geos = { ...buildingGeometries(), ...villageGeometries() };
+  const villageMat = villageMaterial(grad);
   const entries = [];
   for (const [key, { loc, list }] of byZone) {
     const n = list.length;
@@ -173,9 +204,23 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
       zone = { polys: regionPolys.get(loc.place), center: project(...SEATS[loc.place]), radius: 0.05 + 0.026 * Math.sqrt(n) };
       f = 0.55;
     } else {
-      zone = { polys: islandPolys.get(loc.place) };
-      if (!zone.polys) continue;
-      f = THREE.MathUtils.clamp(Math.sqrt(polysArea(zone.polys) / (n * 0.02)), 0.42, 1);
+      const village = villages.get(loc.place);
+      if (!village) continue;
+      const labelList = [];
+      for (const c of list) {
+        const slot = village.plan.slots.get(c.id);
+        const kind = villageKind(c);
+        const pos = onGround(new THREE.Vector2(slot.x, slot.y));
+        labelList.push({ id: c.id, title: c.title, accent: TASK_COLORS[c.task_category] || FALLBACK_COLOR,
+          pos: pos.clone().setY(pos.y + VILLAGE_SIZE * 0.95 * KIND_TOP[kind] + 0.004) });
+        entries.push({
+          c, loc, cityKey: null, city: null, shape: `v:${kind}`,
+          pos, s: VILLAGE_SIZE * 0.95, h: 1, rot: slot.rot,
+          color: new THREE.Color(TASK_COLORS[c.task_category] || FALLBACK_COLOR),
+        });
+      }
+      village.decor.setLabels(labelList);
+      continue;
     }
     if (!zone.polys) continue;
     const near = blocked.filter((b) => inPolys(b.p, zone.polys));
@@ -186,6 +231,7 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
         c,
         loc,
         cityKey: cityKeyOf(loc),
+        shape: shapeOf(c),
         city: null, // 도시 입체지도에서 설 자리 {pos, s, h} — 그 도시 자료를 받은 뒤 채운다
         pos: onGround(pts[i]),
         s: 0.075 * f,
@@ -230,10 +276,11 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
   const meshes = {};
   const byId = new Map();
   for (const shape of Object.keys(geos)) {
-    const list = entries.filter((e) => shapeOf(e.c) === shape);
+    const list = entries.filter((e) => e.shape === shape);
     if (!list.length) continue;
-    const mesh = new THREE.InstancedMesh(geos[shape],
-      new THREE.MeshToonMaterial({ color: 0xffffff, gradientMap: grad, vertexColors: true }), list.length);
+    const mat = shape.startsWith('v:') ? villageMat
+      : new THREE.MeshToonMaterial({ color: 0xffffff, gradientMap: grad, vertexColors: true });
+    const mesh = new THREE.InstancedMesh(geos[shape], mat, list.length);
     mesh.castShadow = true;
     mesh.receiveShadow = true;
     mesh.userData.entries = list;
@@ -615,6 +662,10 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
       cl.position.y = cl.userData.y0 + Math.sin(t * 0.3 + i) * 0.05;
     });
     if (beaconList.length) layBeacons(d, t);
+    for (const { decor } of villages.values()) {
+      decor.group.visible = !cityMode;
+      if (!cityMode) decor.update(t, d, camera.position);
+    }
     if (marker.visible) {
       marker.position.y = marker.userData.baseY + Math.sin(t * 3) * (marker.userData.bob ?? 0.03);
       marker.rotation.y = t * 1.5;

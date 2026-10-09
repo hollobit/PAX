@@ -2,6 +2,7 @@
 // 3D는 덧입힌 층이다: WebGL이 없어도 오른쪽 목록(검색·축 → 값 → 사례 → 상세 링크)만으로 전부 쓸 수 있다.
 import { el, fetchJson } from './pax-dom.js?v=b57d2715';
 import { buildAxes, placeText, TASK_COLORS, SHAPES, SEATS, caseTargetUrl } from './pax3d-data.js?v=ad30f399';
+import { VILLAGE_KINDS } from './pax3d-village-plan.js?v=9eb236cc';
 import { createTour } from './pax3d-tour.js?v=9e8d6421';
 import { loadBookmarks, toggleBookmark, onBookmarksChanged } from './pax-bookmarks.js?v=c1fdc503';
 
@@ -141,7 +142,7 @@ async function main() {
   }
   const tip = $('#pax3d-tip');
   try {
-    const { createWorld } = await import('./pax3d-world.js?v=235e2504');
+    const { createWorld } = await import('./pax3d-world.js?v=d223aa8d');
     // 실제 지형(수치표고) — 못 받으면 평평한 판으로 그대로 간다
     const terrain = await import('./pax3d-terrain.js?v=a3bd09aa').then((t) => t.loadTerrain()).catch(() => null);
     world = createWorld($('#pax3d-canvas'), {
@@ -605,6 +606,7 @@ function renderLegend() {
     return li;
   }));
   $('#pax3d-legend-shapes').replaceChildren(...Object.values(SHAPES).map((t) => el('li', null, t)));
+  $('#pax3d-legend-village').replaceChildren(...Object.values(VILLAGE_KINDS).map((t) => el('li', null, t)));
 }
 
 main();
