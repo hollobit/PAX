@@ -15,7 +15,7 @@ CATEGORIES = ("중앙행정기관", "광역지자체", "기초지자체", "공�
 UNKNOWN_PUBLIC, PRIVATE = "공직(소속 미상)", "민간·커뮤니티"
 
 EDU = re.compile(r"교육청|교육지원청|학교|대학|University|College", re.I)
-PUBLIC_BODY = re.compile(r"공사|공단|진흥원|정보원|협력단|연구원|연구소|재단|기준원|ETRI|Research Institute|^코레일", re.I)
+PUBLIC_BODY = re.compile(r"공사|공단|진흥원|정보원|협력단|연구원|연구소|시험원|재단|기준원|ETRI|Research Institute|^코레일", re.I)
 METRO_CITY = re.compile(r"(광역시|특별시|특별자치시)$")   # 시로 끝나도 기초가 아닌 것
 LOCAL_SUFFIX = re.compile(r"(청|의회)$")
 PROVINCE = re.compile(r"(도|광역시|특별시|특별자치시)$|소방본부$|소방서$")

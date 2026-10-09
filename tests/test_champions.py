@@ -38,7 +38,7 @@ def test_mixed_repo_and_threads():
 
 
 # --- 깃랩 표시명 분리·정규화 (2026-08-23 재검증) ---
-from build_champions import split_gitlab_name
+from build_champions import clean_person_name, split_gitlab_name
 
 
 def test_split_simple_org_name():
@@ -72,3 +72,27 @@ def test_reference_cases_excluded_from_champions():
     dom = {"org_type": "공직 개인", "link": "https://github.com/dev/tool", "case_url": None}
     assert not is_champion_source(ref)
     assert is_champion_source(dom)
+
+
+def test_split_org_path_with_bureau_and_library():
+    assert split_gitlab_name("경기도부천시 평생교육국 상동도서관 이완재") == (
+        "경기도부천시 평생교육국 상동도서관", "이완재")
+
+
+def test_split_leading_role_title():
+    assert split_gitlab_name("안전관리자 이호진") == (None, "이호진")
+    assert split_gitlab_name("정보보호 담당자 김철수") == (None, "김철수")
+
+
+def test_split_org_only_account():
+    assert split_gitlab_name("한국산업기술시험원") == ("한국산업기술시험원", "한국산업기술시험원")
+    assert split_gitlab_name("김지원") == (None, "김지원")  # '원'으로 끝나는 세 글자 이름은 기관이 아니다
+
+
+def test_clean_bilingual_names():
+    assert clean_person_name("백상현 / Sanghyeon Baek") == "백상현"
+    assert clean_person_name("서호성 (Hoseong Seo)") == "서호성"
+    assert clean_person_name("Sanghyeon Baek / 백상현") == "백상현"
+    assert clean_person_name("Chansung Park") == "Chansung Park"
+    assert clean_person_name("모두의AI") == "모두의AI"
+    assert clean_person_name("지식재산처 IP-AX 추진단") == "지식재산처 IP-AX 추진단"

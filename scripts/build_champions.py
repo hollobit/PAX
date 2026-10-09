@@ -85,7 +85,7 @@ def fetch_profile(acct: str) -> dict | None:
 ORG_TOKEN = re.compile(
     r"(?:시|군|구|도|청|처|부|원|공사|공단|협력단|사업단|유통|의회|재단|진흥원|연구원|교육청|"
     r"위원회|대학교?|소방서|경찰서|세관|우체국|보건소|본부|지청|지사|센터|실|과|팀|단|관|"
-    r"학교|연구소)$")
+    r"학교|연구소|국|도서관|시험원)$")
 # 광역시도 축약형('경남 양산시 …')도 조직 경로 토큰으로 인정
 REGION_TOKEN = re.compile(r"^(서울|부산|대구|인천|광주|대전|울산|세종|경기|강원|충북|충남|전북|전남|경북|경남|제주)$")
 # 표시명 말미의 직급은 이름이 아니다 — 분리 전에 떼어낸다
@@ -93,6 +93,24 @@ TITLE_TOKEN = re.compile(
     r"^(주무관|사무관|서기관|행정관|연구사|연구관|장학사|장학관|주사보?|서기|주임|팀장|과장|계장|"
     r"실장|소장|센터장|부장|차장|대리|사원|교사|교감|교장|분석관|전산\w*)$")
 KOREAN_NAME = re.compile(r"[가-힣]{2,4}$")
+# 표시명 앞의 직책·역할은 이름도 소속도 아니다 ('안전관리자 이호진', '정보보호 담당자 김철수')
+ROLE_TOKEN = re.compile(r"(관리자|담당자|책임자|담당|관리관)$")
+HANGUL = re.compile(r"[가-힣]")
+LATIN_NAME = re.compile(r"[A-Za-z][A-Za-z .'-]*")
+
+
+def clean_person_name(name: str) -> str:
+    """국문·영문 병기 이름에서 국문을 고른다 — '백상현 / Sanghyeon Baek', '서호성 (Hoseong Seo)'.
+    한쪽이 한글, 다른 쪽이 로마자 이름일 때만 고르고 나머지 표기는 그대로 둔다."""
+    name = name.strip()
+    m = re.fullmatch(r"(.+?)\s*\(([^()]+)\)", name)
+    parts = [m.group(1), m.group(2)] if m else [p for p in re.split(r"\s*[/|]\s*", name) if p]
+    if len(parts) == 2:
+        ko = [p.strip() for p in parts if HANGUL.search(p)]
+        en = [p.strip() for p in parts if LATIN_NAME.fullmatch(p.strip())]
+        if len(ko) == 1 and len(en) == 1 and KOREAN_NAME.fullmatch(ko[0].replace(" ", "")):
+            return ko[0].replace(" ", "")
+    return name
 
 
 def split_gitlab_name(full: str) -> tuple[str | None, str]:
@@ -105,6 +123,16 @@ def split_gitlab_name(full: str) -> tuple[str | None, str]:
     if m := re.fullmatch(r"(.+?)\s*\(([가-힣]{2,4})\)", full.strip()):
         return m.group(1).strip(), m.group(2)
     tokens = full.strip().split()
+    # 단일 어절 기관 계정('한국산업기술시험원') — 다섯 글자 이상만(세 글자 '김지원'은 사람 이름)
+    if len(tokens) == 1 and len(tokens[0]) >= 5 and ORG_TOKEN.search(tokens[0]):
+        return tokens[0], tokens[0]
+    # 앞쪽 직책·역할 제거 — 남는 소속이 없으면 이름만 남긴다
+    if len(tokens) >= 2 and KOREAN_NAME.fullmatch(tokens[-1]) and any(ROLE_TOKEN.search(t) for t in tokens[:-1]):
+        last_role = max(i for i, t in enumerate(tokens[:-1]) if ROLE_TOKEN.search(t))
+        org_tokens = tokens[:last_role]
+        if org_tokens and all(ORG_TOKEN.search(t) or REGION_TOKEN.fullmatch(t) for t in org_tokens):
+            return " ".join(org_tokens), tokens[-1]
+        return None, tokens[-1]
     # 말미 직급 제거 ('광양시 조재원 주무관' → '광양시 조재원')
     while len(tokens) >= 2 and TITLE_TOKEN.fullmatch(tokens[-1]):
         tokens = tokens[:-1]
@@ -235,10 +263,10 @@ def champion_record(cid: str, clist: list, merged: dict, cache: dict, evals: dic
             github_name = github_name or p.get("name")
             company = company or p.get("company")
     aff = info.get("affiliation")
-    name = (info.get("name") or gitlab_name or github_name or cid.split(":", 1)[-1]).strip()
+    name = clean_person_name(info.get("name") or gitlab_name or github_name or cid.split(":", 1)[-1])
     if gitlab_name:
         org, person = split_gitlab_name(gitlab_name)
-        name = person
+        name = clean_person_name(person)
         if org and (not aff or aff.get("inferred")):
             aff = {"value": org, "inferred": False, "evidence": "공공 GitLab 공개 프로필 표시명"}
     if not aff and company:

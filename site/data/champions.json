@@ -2301,29 +2301,6 @@
    }
   },
   {
-   "id": "gitlab:altarry",
-   "name": "경기도부천시 평생교육국 상동도서관 이완재",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "altarry",
-     "url": "https://gitlab.aigov.go.kr/altarry"
-    }
-   ],
-   "affiliation": null,
-   "category": "공직(소속 미상)",
-   "category_basis": "cases",
-   "cases": [
-    "4ac96b9f3ce12428",
-    "7f8dfb1eb051abe9"
-   ],
-   "stats": {
-    "case_count": 2,
-    "top_ax": 1,
-    "stars": 0
-   }
-  },
-  {
    "id": "gitlab:solu0904",
    "name": "고서준",
    "accounts": [
@@ -3707,7 +3684,7 @@
   },
   {
    "id": "github:Mrbaeksang",
-   "name": "백상현 / Sanghyeon Baek",
+   "name": "백상현",
    "accounts": [
     {
      "platform": "github",
@@ -3793,7 +3770,7 @@
   },
   {
    "id": "hosungseo",
-   "name": "서호성 (Hoseong Seo)",
+   "name": "서호성",
    "accounts": [
     {
      "platform": "github",
@@ -4203,35 +4180,6 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
-    "stars": 0
-   }
-  },
-  {
-   "id": "gitlab:safety",
-   "name": "안전관리자 이호진",
-   "accounts": [
-    {
-     "platform": "gitlab",
-     "id": "safety",
-     "url": "https://gitlab.aigov.go.kr/safety"
-    }
-   ],
-   "affiliation": null,
-   "category": "공직(소속 미상)",
-   "category_basis": "cases",
-   "cases": [
-    "1c9efba39708c4d5",
-    "2442dc859d5bac3a",
-    "2b3089577cceaa08",
-    "d141f5b3e0beb6a5",
-    "df836d25474724a0",
-    "d982e6e9b6f4022d",
-    "df4b43a32f613d04",
-    "87836993a2f6a874"
-   ],
-   "stats": {
-    "case_count": 8,
-    "top_ax": 2,
     "stars": 0
    }
   },
@@ -4765,6 +4713,33 @@
    }
   },
   {
+   "id": "gitlab:altarry",
+   "name": "이완재",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "altarry",
+     "url": "https://gitlab.aigov.go.kr/altarry"
+    }
+   ],
+   "affiliation": {
+    "value": "경기도부천시 평생교육국 상동도서관",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
+   "cases": [
+    "4ac96b9f3ce12428",
+    "7f8dfb1eb051abe9"
+   ],
+   "stats": {
+    "case_count": 2,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:lwl6300",
    "name": "이웅렬",
    "accounts": [
@@ -4969,6 +4944,35 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:safety",
+   "name": "이호진",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "safety",
+     "url": "https://gitlab.aigov.go.kr/safety"
+    }
+   ],
+   "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
+   "cases": [
+    "1c9efba39708c4d5",
+    "2442dc859d5bac3a",
+    "2b3089577cceaa08",
+    "d141f5b3e0beb6a5",
+    "df836d25474724a0",
+    "d982e6e9b6f4022d",
+    "df4b43a32f613d04",
+    "87836993a2f6a874"
+   ],
+   "stats": {
+    "case_count": 8,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -5655,9 +5659,13 @@
      "url": "https://gitlab.aigov.go.kr/gdbaek"
     }
    ],
-   "affiliation": null,
-   "category": "공직(소속 미상)",
-   "category_basis": "cases",
+   "affiliation": {
+    "value": "한국산업기술시험원",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "9fce3174edfb29bf",
     "0286b6f3a317807b",
