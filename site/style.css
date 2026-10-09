@@ -1819,16 +1819,15 @@ main {
 }
 
 /* ---- 사례 딥링크 (로드맵 0-4) ---- */
-.copy-link-btn {
+.permalink-link {
   padding: 0 0.25rem;
-  background: none;
-  border: none;
-  cursor: pointer;
   font-size: 0.85rem;
+  text-decoration: none;
   opacity: 0.55;
 }
 
-.copy-link-btn:hover {
+.permalink-link:hover,
+.permalink-link:focus-visible {
   opacity: 1;
 }
 

@@ -227,32 +227,25 @@ function cardTags(c, ctx) {
   return tags;
 }
 
-/** 게시일·링크 복사·라이선스·출처 */
+/** 게시일·고정링크·라이선스·출처 */
 function cardFooter(c) {
   const footer = el('div', 'case-card__footer');
-  footer.append(el('span', 'case-card__date', c.date), copyLinkButton(c));
+  footer.append(el('span', 'case-card__date', c.date), permalinkLink(c));
   const lic = licenseBadge(c);
   if (lic) footer.appendChild(lic);
   footer.appendChild(createSourceElement(c));
   return footer;
 }
 
-function copyLinkButton(c) {
-  const btn = el('button', 'copy-link-btn', '🔗');
-  btn.type = 'button';
-  btn.title = '이 사례의 고정 링크 복사';
-  btn.setAttribute('aria-label', '사례 링크 복사');
-  btn.addEventListener('click', async () => {
-    const url = `${location.origin}${location.pathname.replace(/index\.html$/, '')}case/${c.id}.html`;
-    try {
-      await navigator.clipboard.writeText(url);
-      btn.textContent = '✓';
-      setTimeout(() => { btn.textContent = '🔗'; }, 1200);
-    } catch {
-      window.prompt('아래 링크를 복사하세요', url);
-    }
-  });
-  return btn;
+/** 사례 상세 페이지(고정링크)를 새 창으로 연다 */
+function permalinkLink(c) {
+  const link = el('a', 'permalink-link', '🔗');
+  link.href = `case/${encodeURIComponent(c.id)}.html`;
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.title = '고정링크 바로가기 (새 창)';
+  link.setAttribute('aria-label', '고정링크 바로가기 — 새 창에서 열림');
+  return link;
 }
 
 /** 저장소에서 확인된 라이선스만 표시한다 (미확인 사례는 배지 없음 — 미확인 원칙) */

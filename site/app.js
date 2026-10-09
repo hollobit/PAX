@@ -12,7 +12,7 @@ import { createExportToolbar } from './app-export.js?v=415e893b';
 import { ORG_TYPES, SOURCES, TASK_CATEGORIES, SYNONYMS, VIEWS } from './app-constants.js?v=60a81688';
 import { createPager as createSharedPager } from './pax-list.js?v=7dabbcbf';
 import { readUrlState, buildUrlQuery } from './app-url.js?v=ff02f796';
-import { createCaseCard, createCaseTable, siteHostname } from './app-cards.js?v=2f74c334';
+import { createCaseCard, createCaseTable, siteHostname } from './app-cards.js?v=468ff74d';
 
 // 분야(도메인) 분류는 site/case-domains.js가 정본이다 — 관측소 현황판과 같은 정의를 쓴다.
 const DOMAIN_NAMES = CASE_DOMAIN_NAMES;
