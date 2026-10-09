@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-09T06:34:34Z",
- "count": 854,
+ "updated_at": "2026-10-09T14:35:38Z",
+ "count": 857,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261008171002",
@@ -94,6 +94,19 @@
    ]
   },
   {
+   "url": "https://www.idge.co.kr/edu?idx=174969430&bmode=view",
+   "title": "[GitHub] Copilot Dev Days (~10월 30일) : 잇지제주ㅣ강연·교육 프로그램",
+   "outlet": "idge.co.kr",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-09",
+   "last_shared": "2026-10-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.aitimes.kr/news/articleView.html?idxno=42235",
    "title": "카카오, 대규모 AI 모델 학습 최적화 방법, 모델 경량화 연구 기법 발표",
    "outlet": "인공지능신문",
@@ -124,6 +137,32 @@
    "title": "“미국서 취업하려면 1억 내” 트럼프 새 규정 발표…유학생 ‘비상’",
    "outlet": "n.news.naver.com",
    "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-09",
+   "last_shared": "2026-10-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-09-px-공문서-hwpx-도구",
+   "title": "[공공AX 네트워크] 공문서 AI 도구에 붙은 현장 피드백",
+   "outlet": "akwiki.org",
+   "published": "2026-10-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-09",
+   "last_shared": "2026-10-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-09-cross-ai-영상-제작-비용",
+   "title": "[3개 방 공통] 세 방에 한꺼번에 올라온 AI 영상 제작 경험담",
+   "outlet": "akwiki.org",
+   "published": "2026-10-09",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-09",

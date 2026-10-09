@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-09T06:34:34Z",
- "count": 97,
+ "updated_at": "2026-10-09T14:35:32Z",
+ "count": 98,
  "videos": [
+  {
+   "id": "fTHUtHvAUe4",
+   "title": "2026 고래축제가 망한 이유",
+   "channel": "울산남구 고래방송국",
+   "url": "https://www.youtube.com/watch?v=fTHUtHvAUe4",
+   "thumb": "https://i.ytimg.com/vi/fTHUtHvAUe4/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-09",
+   "last_shared": "2026-10-09",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "eJQrmTtb9H4",
    "title": "이 영상도 Haiku 5.5로 만들었습니다. Motion Graphics광고·유튜브·발표 영상을 만들었더니 (총비용 공개)",
