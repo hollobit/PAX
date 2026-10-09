@@ -4,10 +4,11 @@ import build_case_pages as bcp
 from conftest import make_case
 
 
-def _setup(tmp_path, monkeypatch, case):
+def _setup(tmp_path, monkeypatch, case, others=()):
     (tmp_path / "data").mkdir()
     (tmp_path / "site" / "data").mkdir(parents=True, exist_ok=True)
-    (tmp_path / "data" / "cases.json").write_text(json.dumps({"cases": [case]}, ensure_ascii=False), encoding="utf-8")
+    cases = [case, *others]
+    (tmp_path / "data" / "cases.json").write_text(json.dumps({"cases": cases}, ensure_ascii=False), encoding="utf-8")
     (tmp_path / "site" / "data" / "evaluations.json").write_text(json.dumps({"cases": []}), encoding="utf-8")
     (tmp_path / "site" / "style.css").write_text("body{}\n", encoding="utf-8")
     monkeypatch.chdir(tmp_path)
@@ -72,12 +73,12 @@ def test_page_without_thumbnail_has_no_figure(tmp_path, monkeypatch):
     assert "case-page__thumb" not in page and "og:image" not in page
 
 
-def _setup_full(tmp_path, monkeypatch, case, champions=None):
+def _setup_full(tmp_path, monkeypatch, case, champions=None, others=()):
     (tmp_path / "site" / "data").mkdir(parents=True, exist_ok=True)
     (tmp_path / "site" / "data" / "champions.json").write_text(
         json.dumps({"champions": champions or []}, ensure_ascii=False), encoding="utf-8")
     (tmp_path / "site" / "case-page.js").write_text("export {};\n", encoding="utf-8")
-    return _setup(tmp_path, monkeypatch, case)
+    return _setup(tmp_path, monkeypatch, case, others)
 
 
 def test_live_slot_carries_case_id_and_collected_date(tmp_path, monkeypatch):
@@ -110,10 +111,30 @@ def test_detail_rows_show_known_fields_only(tmp_path, monkeypatch):
     assert "<dt>망 요건</dt>" not in page  # 값이 없는 항목은 줄을 만들지 않는다
 
 
-def test_makers_link_to_champion_cards(tmp_path, monkeypatch):
-    champs = [{"id": "github:foo", "name": "홍길동", "cases": ["a" * 16],
-               "affiliation": {"value": "행정안전부"}},
-              {"id": "gitlab:bar", "name": "다른사람", "cases": ["b" * 16]}]
-    page = _setup_full(tmp_path, monkeypatch, make_case(), champs)
-    assert '<a href="../champions.html#champ-github%3Afoo">홍길동</a> (행정안전부)' in page
+def test_developer_section_shows_profile_and_other_projects(tmp_path, monkeypatch):
+    me, other = "a" * 16, "b" * 16
+    champs = [{"id": "github:foo", "name": "홍길동", "cases": [other, me],
+               "affiliation": {"value": "행정안전부", "inferred": True},
+               "category": "중앙행정기관", "category_basis": "affiliation",
+               "accounts": [{"platform": "github", "id": "foo", "url": "https://github.com/foo"},
+                            {"platform": "gitlab", "id": "foo", "url": "https://gitlab.aigov.go.kr/foo"}],
+               "stats": {"case_count": 2, "top_ax": 2, "stars": 0},
+               "certification": {"tier": "BLUE", "source_url": "https://cert.example/"}},
+              {"id": "gitlab:bar", "name": "다른사람", "cases": ["c" * 16]}]
+    page = _setup_full(tmp_path, monkeypatch, make_case(), champs,
+                       others=[make_case(id=other, title="<다른> 도구")])
+    assert '<h2 class="obs-heading" id="developer">개발자</h2>' in page
+    assert '<a href="../champions.html#champ-github%3Afoo">홍길동</a>' in page
+    assert "행정안전부" in page and "추정" in page and "중앙행정기관" in page
+    assert "AI 챔피언 인증 BLUE" in page
+    assert '<a href="https://github.com/foo" target="_blank" rel="noopener">GitHub @foo</a>' in page
+    assert '<a href="https://gitlab.aigov.go.kr/foo" target="_blank" rel="noopener">공공 GitLab @foo</a>' in page
+    assert "사례 2건 · 최고 AI-Enabled" in page
+    assert f'<a href="{other}.html">&lt;다른&gt; 도구</a>' in page
+    assert f'<a href="{me}.html">' not in page.split('id="developer"')[1]  # 지금 사례는 '다른 프로젝트'에 넣지 않는다
     assert "다른사람" not in page
+
+
+def test_no_developer_section_without_champion(tmp_path, monkeypatch):
+    page = _setup_full(tmp_path, monkeypatch, make_case())
+    assert 'id="developer"' not in page

@@ -2337,6 +2337,13 @@ a.case-page__thumb:hover, a.case-page__thumb:focus-visible { border-color: var(-
   .case-page__details { grid-template-columns: 1fr; gap: 0.1rem; }
   .case-page__details dd { margin-bottom: 0.5rem; }
 }
+.case-dev { padding: 0.8rem 0 0.6rem; border-bottom: 1px dashed var(--rule, #ddd); }
+.case-dev:last-of-type { border-bottom: none; }
+.case-dev__name { margin: 0 0 0.3rem; font-size: 1.1rem; }
+.case-dev__name .cert-badge { font-size: 0.75rem; margin-left: 0.4rem; vertical-align: middle; }
+.case-dev__line { margin: 0.2rem 0; font-size: 0.9rem; color: var(--ink-2, #555); }
+.case-dev__line a { margin-right: 0.2rem; }
+.case-dev__label { margin: 0.6rem 0 0.2rem; font-size: 0.85rem; color: var(--ink-faint); }
 .case-page__meta { color: var(--ink-faint); font-family: var(--font-mono); font-size: 0.82rem; }
 .case-page__summary { font-size: 1.02rem; line-height: 1.65; }
 .case-page__links a { margin-right: 0.4rem; }

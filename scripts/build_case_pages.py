@@ -8,7 +8,8 @@ site/case/<id>.html — og 태그를 갖춘 고정 페이지. "결재에 이 URL
 """
 import html
 from pathlib import Path
-from pax.case_details import detail_list, makers_of, rank_entry
+from pax.case_details import detail_list, rank_entry
+from pax.case_developer import developer_section
 from pax.jsonio import load_json, read_json, write_json
 from pax.urls import preferred_url
 from stamp_assets import digest, stamp_file
@@ -80,7 +81,7 @@ TEMPLATE = """<!DOCTYPE html>
     <section class="obs-section">
       <h2 class="obs-heading">상세 정보</h2>
       {details}
-    </section>
+    </section>{developer}
     <section class="obs-section">
       <h2 class="obs-heading">4축 평가</h2>
       {eval_table}
@@ -181,6 +182,7 @@ def main():
     page_js = (f'\n  <script type="module" src="../case-page.js?v={digest(PAGE_JS)}"></script>'
                if PAGE_JS.exists() else "")
     champions = load_json("site/data/champions.json", default={}).get("champions", [])
+    titles = {c["id"]: c["title"] for c in cases}
     write_json(RANK, {"cases": [rank_entry(c) for c in cases]}, compact=True)
     for c in cases:
         ev = evals.get(c["id"])
@@ -208,7 +210,7 @@ def main():
                 f' ({esc(review.get("checked_at") or "")})</a>')
         page = TEMPLATE.format(
             og_image=og_image, thumb=thumb, page_js=page_js, collected=esc(c.get("collected_at")),
-            details=detail_list(c, makers_of(c["id"], champions)), nav=nav, external=external, css_v=css_v, base=BASE, cid=esc(c["id"]), title=esc(c["title"]),
+            details=detail_list(c), developer=developer_section(c["id"], champions, titles), nav=nav, external=external, css_v=css_v, base=BASE, cid=esc(c["id"]), title=esc(c["title"]),
             desc=esc(c["summary"][:150]), org=esc(c["org"]), org_type=esc(c["org_type"]),
             region=f" · {esc(c['region'])}" if c.get("region") else "",
             task=esc(c.get("task_category") or "분류 없음"), date=esc(c["date"]),

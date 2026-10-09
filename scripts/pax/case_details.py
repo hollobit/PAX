@@ -25,16 +25,6 @@ def rank_entry(c: dict) -> dict:
     return {k: c[k] for k in RANK_FIELDS if c.get(k) is not None}
 
 
-def makers_of(case_id: str, champions: list) -> list:
-    return [ch for ch in champions if case_id in ch.get("cases", [])]
-
-
-def _maker_html(ch: dict) -> str:
-    link = f'<a href="../champions.html#champ-{quote(ch["id"], safe="")}">{esc(ch["name"])}</a>'
-    aff = (ch.get("affiliation") or {}).get("value")
-    return f"{link} ({esc(aff)})" if aff else link
-
-
 def _model(c: dict) -> str | None:
     dep, models = c.get("model_dependency"), c.get("models_used") or []
     if not dep and not models:
@@ -70,10 +60,9 @@ def _tags(c: dict) -> str | None:
     return " ".join(f'<a href="../?tag={quote(t, safe="")}">#{esc(t)}</a>' for t in tags) or None
 
 
-def detail_rows(c: dict, makers: list) -> list[tuple[str, str]]:
+def detail_rows(c: dict) -> list[tuple[str, str]]:
     """(항목, 이미 이스케이프된 HTML 값) — 값이 있는 것만."""
     rows = [
-        ("만든 사람", ", ".join(_maker_html(m) for m in makers) or None),
         ("사례 성격", esc(c.get("case_class")) or None),
         ("출처 채널", esc(SOURCE_LABEL.get(c.get("source"), c.get("source"))) or None),
         ("수집일", esc(c.get("collected_at")) or None),
@@ -91,8 +80,8 @@ def detail_rows(c: dict, makers: list) -> list[tuple[str, str]]:
     return [(k, v) for k, v in rows if v]
 
 
-def detail_list(c: dict, makers: list) -> str:
-    rows = detail_rows(c, makers)
+def detail_list(c: dict) -> str:
+    rows = detail_rows(c)
     if not rows:
         return '<p class="obs-note">추가로 확인된 정보가 없습니다.</p>'
     items = "".join(f"<dt>{esc(k)}</dt><dd>{v}</dd>" for k, v in rows)
