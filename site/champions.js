@@ -16,22 +16,27 @@ const PLATFORM_LABEL = { github: 'GitHub', gitlab: '공공 GitLab', threads: 'Th
 
 const SORTS = ['name', 'score', 'cases'];
 const TIERS = ['green', 'blue', 'black'];
+/* 소속 분류 — scripts/pax/affiliation.py CATEGORIES와 같은 순서 */
+const CATEGORIES = ['중앙행정기관', '광역지자체', '기초지자체', '공공기관', '교육기관', '공직(소속 미상)', '민간·커뮤니티'];
 
-const state = { champions: [], cases: new Map(), bookmarks: new Map(), sort: 'name', tier: null };
+const state = { champions: [], cases: new Map(), bookmarks: new Map(), sort: 'name', tier: null, cat: null };
 
-/* URL ↔ 상태 동기화: ?sort=score|cases&tier=green|blue|black (기본값은 생략) */
+/* URL ↔ 상태 동기화: ?sort=score|cases&tier=green|blue|black&cat=<소속 분류> (기본값은 생략) */
 function applyUrlToState() {
   const p = new URLSearchParams(location.search);
   const sort = p.get('sort');
   if (SORTS.includes(sort)) state.sort = sort;
   const tier = p.get('tier');
   if (TIERS.includes(tier)) state.tier = tier;
+  const cat = p.get('cat');
+  if (CATEGORIES.includes(cat)) state.cat = cat;
 }
 
 function syncUrl() {
   const p = new URLSearchParams();
   if (state.sort !== 'name') p.set('sort', state.sort);
   if (state.tier) p.set('tier', state.tier);
+  if (state.cat) p.set('cat', state.cat);
   const qs = p.toString();
   history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
 }
@@ -48,6 +53,7 @@ async function load() {
     state.bookmarks = counts;
     document.getElementById('stats').textContent =
       `챔피언 ${champDoc.total}명 · 사례 ${caseDoc.cases.length}건 기준 · 미확인 ${(champDoc.unattributed || []).length}건`;
+    renderCategoryFilter();
     render();
     renderUnattributed(champDoc.unattributed || []);
     if (location.hash.startsWith('#champ-')) {
@@ -79,6 +85,7 @@ function sorted() {
     list = list.filter((c) => c.certification &&
       c.certification.tier.toLowerCase() === state.tier);
   }
+  if (state.cat) list = list.filter((c) => c.category === state.cat);
   if (state.sort === 'score') {
     list.sort((a, b) => score(b) - score(a) || a.name.localeCompare(b.name, 'ko'));
   } else if (state.sort === 'cases') {
@@ -110,6 +117,35 @@ function syncSortButtons() {
 function setTier(tier) {
   state.tier = state.tier === tier ? null : tier; // 재클릭 시 해제
   syncSortButtons();
+  syncUrl();
+  render();
+}
+
+/** 소속 분류 칩 — 분류마다 인원 수, 다시 누르면 해제(인증 필터와 함께 걸린다) */
+function renderCategoryFilter() {
+  const root = document.getElementById('cat-filter');
+  const label = root.querySelector('.champ-toolbar__label');
+  root.replaceChildren(label);
+  const counts = new Map();
+  for (const c of state.champions) counts.set(c.category, (counts.get(c.category) || 0) + 1);
+  for (const cat of CATEGORIES) {
+    const n = counts.get(cat) || 0;
+    if (!n) continue;
+    const btn = el('button', null, cat);
+    btn.type = 'button';
+    btn.dataset.cat = cat;
+    btn.setAttribute('aria-pressed', String(state.cat === cat));
+    btn.appendChild(el('span', 'champ-toolbar__count', String(n)));
+    btn.addEventListener('click', () => setCategory(cat));
+    root.appendChild(btn);
+  }
+}
+
+function setCategory(cat) {
+  state.cat = state.cat === cat ? null : cat;
+  for (const btn of document.querySelectorAll('#cat-filter button')) {
+    btn.setAttribute('aria-pressed', String(btn.dataset.cat === state.cat));
+  }
   syncUrl();
   render();
 }
@@ -154,7 +190,19 @@ function cardHead(champ) {
     }
     head.appendChild(span);
   }
+  if (champ.category) head.appendChild(categoryTag(champ));
   return head;
+}
+
+/** 소속 분류 태그 — 누르면 그 분류만 본다. 사례 기준 분류는 점선 테두리 */
+function categoryTag(champ) {
+  const byCases = champ.category_basis === 'cases';
+  const tag = el('button', `champ-card__cat${byCases ? ' champ-card__cat--cases' : ''}`,
+    byCases ? `${champ.category} · 사례 기준` : champ.category);
+  tag.type = 'button';
+  tag.title = byCases ? '공개 프로필에 소속이 없어 등재 사례의 기관 분류로 정함' : '공개 프로필 소속 기준';
+  tag.addEventListener('click', () => setCategory(champ.category));
+  return tag;
 }
 
 function certLine(cert) {

@@ -13,6 +13,7 @@ import sys
 from pathlib import Path
 
 from pax.jsonio import write_json
+from pax.affiliation import champion_category
 from pax.http import curl_json, gh_api
 
 CASES = Path("data/cases.json")
@@ -245,12 +246,15 @@ def champion_record(cid: str, clist: list, merged: dict, cache: dict, evals: dic
                "evidence": "GitHub 공개 프로필 소속란"}
     top_ax = max((AX_LEVEL.get(evals.get(c["id"], {}).get("ax"), 0) for c in clist), default=0)
     stars = sum(c.get("popularity") or 0 for c in clist)
+    category, basis = champion_category(aff, [c["org_type"] for c in clist])
     return {
         "id": cid,
         "name": name,
         "accounts": [{"platform": a.split(":")[0], "id": a.split(":", 1)[1],
                       "url": account_url(a)} for a in accounts],
         "affiliation": aff,
+        "category": category,
+        "category_basis": basis,
         "cases": [c["id"] for c in sorted(clist, key=lambda x: x["date"], reverse=True)],
         "stats": {"case_count": len(clist), "top_ax": top_ax, "stars": stars},
     }

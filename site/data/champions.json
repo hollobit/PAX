@@ -16,6 +16,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "민간·커뮤니티",
+   "category_basis": "affiliation",
    "cases": [
     "157289f6e0cd7fd4"
    ],
@@ -36,6 +38,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "daab018ffea87c77"
    ],
@@ -60,6 +64,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "3615205d53567c32"
    ],
@@ -84,6 +90,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "민간·커뮤니티",
+   "category_basis": "affiliation",
    "cases": [
     "0a2535cadf2d621a"
    ],
@@ -104,6 +112,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "54d599932088897f"
    ],
@@ -124,6 +134,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "b37636486ec1dee4"
    ],
@@ -148,6 +160,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "민간·커뮤니티",
+   "category_basis": "affiliation",
    "cases": [
     "1f5e21b854f0aa3a"
    ],
@@ -172,6 +186,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "민간·커뮤니티",
+   "category_basis": "affiliation",
    "cases": [
     "3a211aec27b69d0a"
    ],
@@ -192,6 +208,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "c6317f20659e8ad1",
     "9d19e64aa30f5332"
@@ -213,6 +231,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "11cbf10247642c9f"
    ],
@@ -233,6 +253,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "13342535139dd7a0"
    ],
@@ -253,6 +275,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "b9da6eddda89513d"
    ],
@@ -273,6 +297,8 @@
     }
    ],
    "affiliation": null,
+   "category": "교육기관",
+   "category_basis": "cases",
    "cases": [
     "13e5e75fbf179ebf"
    ],
@@ -297,6 +323,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "56c2bb56426019ec"
    ],
@@ -321,6 +349,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "dfe9d069e330d1c8"
    ],
@@ -341,6 +371,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "e07be0004494e652"
    ],
@@ -361,6 +393,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "847dfef5759dbcac"
    ],
@@ -385,6 +419,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "4c918008fd4eff60"
    ],
@@ -405,6 +441,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "09f079e1424f6992"
    ],
@@ -429,6 +467,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "민간·커뮤니티",
+   "category_basis": "affiliation",
    "cases": [
     "f20250742f06ccb5"
    ],
@@ -449,6 +489,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "2beb100ecc126fb2"
    ],
@@ -469,6 +511,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "a7abbaedd53db684"
    ],
@@ -489,6 +533,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "ec4f975c809401cb"
    ],
@@ -509,6 +555,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "2f4ed1e68a6464c5"
    ],
@@ -529,6 +577,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "75b9815de6b6dcf5"
    ],
@@ -549,6 +599,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "1128dadf532a4f06"
    ],
@@ -569,6 +621,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "c864500e8cf1d78d",
     "198bf13b6b986dd6"
@@ -594,6 +648,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "민간·커뮤니티",
+   "category_basis": "affiliation",
    "cases": [
     "48a2fe695d62b13f",
     "4ce9fa1c75ec36b5",
@@ -617,6 +673,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "b6f4cc079eb86f11"
    ],
@@ -641,6 +699,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "민간·커뮤니티",
+   "category_basis": "affiliation",
    "cases": [
     "8f1e3c48b2baa6d2"
    ],
@@ -661,6 +721,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "edf9a8632ff74a99"
    ],
@@ -681,6 +743,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "dee1a1ceb4432cd3"
    ],
@@ -701,6 +765,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "3ba829c8e42e7cc7"
    ],
@@ -721,6 +787,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "7ac3b301c1a8f79d",
     "aa58f3a62af622b6"
@@ -742,6 +810,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "664112a0d4b58f20"
    ],
@@ -762,6 +832,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "bef8ee3811d115e4",
     "971a8738f6563214"
@@ -783,6 +855,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "33d54dde6e9408b2"
    ],
@@ -803,6 +877,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "ccee126dc9e23cf6"
    ],
@@ -823,6 +899,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "3c5015d6c385a815",
     "539f90471f451d80",
@@ -845,6 +923,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "9deddc356d5102b2"
    ],
@@ -869,6 +949,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "민간·커뮤니티",
+   "category_basis": "affiliation",
    "cases": [
     "5de0d36c1b37fe58"
    ],
@@ -889,6 +971,8 @@
     }
    ],
    "affiliation": null,
+   "category": "기초지자체",
+   "category_basis": "cases",
    "cases": [
     "145008482da81f0a",
     "01963ce2b093182c"
@@ -910,6 +994,8 @@
     }
    ],
    "affiliation": null,
+   "category": "중앙행정기관",
+   "category_basis": "cases",
    "cases": [
     "a2eaaf9f454da37f"
    ],
@@ -930,6 +1016,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "2ebfec74844ad120"
    ],
@@ -950,6 +1038,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "4925d016e9377a50"
    ],
@@ -970,6 +1060,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "823f4a69ee26e703"
    ],
@@ -994,6 +1086,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "민간·커뮤니티",
+   "category_basis": "affiliation",
    "cases": [
     "22be065e9c257d93"
    ],
@@ -1014,6 +1108,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "a3b9afb1d17d15a0"
    ],
@@ -1034,6 +1130,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "1c77044568e730de"
    ],
@@ -1054,6 +1152,8 @@
     }
    ],
    "affiliation": null,
+   "category": "광역지자체",
+   "category_basis": "cases",
    "cases": [
     "02656bf9d2589964"
    ],
@@ -1074,6 +1174,8 @@
     }
    ],
    "affiliation": null,
+   "category": "중앙행정기관",
+   "category_basis": "cases",
    "cases": [
     "9f6be40ee87d4b84"
    ],
@@ -1094,6 +1196,8 @@
     }
    ],
    "affiliation": null,
+   "category": "기초지자체",
+   "category_basis": "cases",
    "cases": [
     "c38b78c5d8370920"
    ],
@@ -1114,6 +1218,8 @@
     }
    ],
    "affiliation": null,
+   "category": "중앙행정기관",
+   "category_basis": "cases",
    "cases": [
     "54c2561cf3e1a268"
    ],
@@ -1134,6 +1240,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "ed42c0e326a6d068"
    ],
@@ -1154,6 +1262,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "bc609dfe7f04d6ed",
     "92bbbba967365291"
@@ -1175,6 +1285,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "c39ae1dfd84a207a"
    ],
@@ -1195,6 +1307,8 @@
     }
    ],
    "affiliation": null,
+   "category": "광역지자체",
+   "category_basis": "cases",
    "cases": [
     "40817faf1381bf1b",
     "2682065ff13cd4dd",
@@ -1225,6 +1339,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "민간·커뮤니티",
+   "category_basis": "affiliation",
    "cases": [
     "0561ecd39ea94051"
    ],
@@ -1245,6 +1361,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "0011a7e888431aeb"
    ],
@@ -1265,6 +1383,8 @@
     }
    ],
    "affiliation": null,
+   "category": "중앙행정기관",
+   "category_basis": "cases",
    "cases": [
     "83dd1411a30c6653"
    ],
@@ -1285,6 +1405,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "5c3cb7251749ab2e"
    ],
@@ -1305,6 +1427,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공공기관",
+   "category_basis": "cases",
    "cases": [
     "c9a5f8edba7c5a14"
    ],
@@ -1325,6 +1449,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "e7949c7bc45ca8e6"
    ],
@@ -1345,6 +1471,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "1c54d608228e0845",
     "65e1983235232514"
@@ -1366,6 +1494,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "952ab7cccb367db6"
    ],
@@ -1386,6 +1516,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공공기관",
+   "category_basis": "cases",
    "cases": [
     "6a9c5da9f1d3210f"
    ],
@@ -1406,6 +1538,8 @@
     }
    ],
    "affiliation": null,
+   "category": "중앙행정기관",
+   "category_basis": "cases",
    "cases": [
     "0af085f0e51a1a7e"
    ],
@@ -1426,6 +1560,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "146501d37df93aa2"
    ],
@@ -1451,6 +1587,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "cb0abc29707cc710"
    ],
@@ -1471,6 +1609,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "59ff218c60039cc9"
    ],
@@ -1491,6 +1631,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "ad435a193856fac5"
    ],
@@ -1511,6 +1653,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "32d199fa9ad4f674"
    ],
@@ -1531,6 +1675,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "a25534e407326d76",
     "075fd5baf003c3b0"
@@ -1552,6 +1698,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "e718cc451c1a130a"
    ],
@@ -1572,6 +1720,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "386d7292c2c1f4dd"
    ],
@@ -1596,6 +1746,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "민간·커뮤니티",
+   "category_basis": "affiliation",
    "cases": [
     "05c30a6088be7960"
    ],
@@ -1616,6 +1768,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "991e9f9e7b324692"
    ],
@@ -1636,6 +1790,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "22bd8e0c137caa21"
    ],
@@ -1656,6 +1812,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "81c14797b7aaafa0",
     "10f6ec0f81090085"
@@ -1677,6 +1835,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "32eccfe07448d060"
    ],
@@ -1697,6 +1857,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "ee30aa1cae172991"
    ],
@@ -1717,6 +1879,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "136eb067c259c113",
     "2f27c87e6f7c7614",
@@ -1744,6 +1908,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "민간·커뮤니티",
+   "category_basis": "affiliation",
    "cases": [
     "9aee6bbb0c29dddb"
    ],
@@ -1768,6 +1934,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "27c2fd1b292cfcbf"
    ],
@@ -1788,6 +1956,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "42267bcd8527ba4a"
    ],
@@ -1808,6 +1978,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "966d6a2ae42587a4"
    ],
@@ -1828,6 +2000,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "ce2287d57e6bacaa"
    ],
@@ -1848,6 +2022,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "9c850ff3e7429a24"
    ],
@@ -1868,6 +2044,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "9d2b45d14879241e"
    ],
@@ -1892,6 +2070,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "05763974d3375178"
    ],
@@ -1912,6 +2092,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "c5b815f06013fe9f",
     "18cc34d0c2575113",
@@ -1936,6 +2118,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "ca5651ea46caa07f"
    ],
@@ -1956,6 +2140,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "9998aba2d1f55c24"
    ],
@@ -1976,6 +2162,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "afef30356a841dac",
     "f0a4485ba99e1417"
@@ -2001,6 +2189,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "민간·커뮤니티",
+   "category_basis": "affiliation",
    "cases": [
     "0292062a6328545a"
    ],
@@ -2021,6 +2211,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "5bfadfc3b8e2292f"
    ],
@@ -2045,6 +2237,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "afc5c1316c86db8e"
    ],
@@ -2069,6 +2263,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "광역지자체",
+   "category_basis": "affiliation",
    "cases": [
     "cc97b961232b079a"
    ],
@@ -2093,6 +2289,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "145a89799b1be340"
    ],
@@ -2113,6 +2311,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "4ac96b9f3ce12428",
     "7f8dfb1eb051abe9"
@@ -2138,6 +2338,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "b3a5a3f108b84716"
    ],
@@ -2162,6 +2364,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "471dabbd273eab34"
    ],
@@ -2186,6 +2390,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "2a1ab7f937e160a1"
    ],
@@ -2210,6 +2416,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "e18d5e018e0cd10d"
    ],
@@ -2234,6 +2442,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "43dcfc6559c0abf5"
    ],
@@ -2258,6 +2468,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "광역지자체",
+   "category_basis": "affiliation",
    "cases": [
     "26e5c5b2268bf5ee",
     "034b8bd869e0d6ea"
@@ -2283,6 +2495,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "29af2304c37b658b",
     "a8492663acf67b99",
@@ -2311,6 +2525,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "b1650b0206b8342c",
     "0d6d0bf3edf2b438"
@@ -2346,6 +2562,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "f0138a7976f8e942",
     "7ad16f34cfb6cca7",
@@ -2377,6 +2595,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "c161b0158876229b",
     "c110733ddf085d0d",
@@ -2411,6 +2631,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "fe2ce0f01fcc8bb0"
    ],
@@ -2435,6 +2657,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "d8c600e7880172e4"
    ],
@@ -2459,6 +2683,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "광역지자체",
+   "category_basis": "affiliation",
    "cases": [
     "3d3eaf8759345a3f",
     "9c850ff3e7429a24"
@@ -2484,6 +2710,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "aea43d543a0244e1"
    ],
@@ -2508,6 +2736,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "9719b550772ed1b2"
    ],
@@ -2532,6 +2762,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "7df3c5d297166cb2"
    ],
@@ -2561,6 +2793,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "fe0d33cc718246d6"
    ],
@@ -2585,6 +2819,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "75e003a20b698c53"
    ],
@@ -2609,6 +2845,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "48047741db1ff1cd"
    ],
@@ -2633,6 +2871,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "89a8d3b6f24a230d",
     "a248a4c37b4c8d4e"
@@ -2658,6 +2898,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "acd684108227b9c2"
    ],
@@ -2682,6 +2924,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "3fffed900372804c",
     "ca382091612780f6",
@@ -2709,6 +2953,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "0e434e0b2047847c"
    ],
@@ -2729,6 +2975,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "a3a18230c371b196"
    ],
@@ -2753,6 +3001,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "dada6ac641debe8f"
    ],
@@ -2777,6 +3027,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "27a61ac6fd278d72",
     "1f962fbf41a13407",
@@ -2805,6 +3057,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "fbdee1f08c2ca185",
     "000bb96831380931"
@@ -2835,6 +3089,8 @@
     "inferred": true,
     "evidence": "운영자 확인(2026-08-16)"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "655d61608d54c98a",
     "6e2574c0914f8813",
@@ -2867,6 +3123,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "7c989a8fe8dda878",
     "6e2574c0914f8813"
@@ -2892,6 +3150,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "5e4dca70708a1262"
    ],
@@ -2916,6 +3176,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "43e5292fa9a441b7"
    ],
@@ -2940,6 +3202,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "42ac1d043a40db1b"
    ],
@@ -2964,6 +3228,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "f29d4461ca101f9f",
     "cbdbd939523c230f"
@@ -2989,6 +3255,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "f2e5fa95789e73fb"
    ],
@@ -3009,6 +3277,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "fd81aa1b889ada2e"
    ],
@@ -3033,6 +3303,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "광역지자체",
+   "category_basis": "affiliation",
    "cases": [
     "31d4fa4a67ff393f",
     "34dc791884a2e0ce"
@@ -3068,6 +3340,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "ada7cb6b9fabac8f",
     "fa5ac519aca439f4",
@@ -3109,6 +3383,8 @@
     }
    ],
    "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
    "cases": [
     "c5aa260668941b92"
    ],
@@ -3133,6 +3409,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "e10607b74d8ffff6"
    ],
@@ -3153,6 +3431,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "ea8ce2a3d003400f"
    ],
@@ -3187,6 +3467,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명(코레일유통 박봉훈)"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "3e2ccb6c2da0e6ba",
     "0b9d4e9c2beed197",
@@ -3221,6 +3503,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "2349c4b45eb48e38",
     "8074c4bdae66b1d2",
@@ -3247,6 +3531,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "90f8afce65c6f327"
    ],
@@ -3271,6 +3557,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "25f9560f0a6fa203",
     "6cdb2a99b9fc3344",
@@ -3297,6 +3585,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "7af52cadb55f2391",
     "1de6fb50cc324684"
@@ -3322,6 +3612,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "1db4a17fca5b103c",
     "bebee8e2201944f0"
@@ -3347,6 +3639,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "b053dab5a5075549"
    ],
@@ -3371,6 +3665,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "91de989989c3888b",
     "892aa97552ead898",
@@ -3398,6 +3694,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "4555f669760ca370"
    ],
@@ -3422,6 +3720,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "민간·커뮤니티",
+   "category_basis": "affiliation",
    "cases": [
     "9070c4f923623855"
    ],
@@ -3446,6 +3746,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "2da44c532cd48ea4",
     "9ed53fd6dad0561a"
@@ -3477,6 +3779,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "7a033dbc575873a3",
     "81e87c38477c4016"
@@ -3507,6 +3811,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "4e577ad2f13f9ea4",
     "3d07b6da99f5e1ed",
@@ -3538,6 +3844,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "0fbe6800c85c1ae4"
    ],
@@ -3562,6 +3870,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "8cef6ce664a3e49b",
     "832674177ef4d247"
@@ -3587,6 +3897,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "0aaafa00490adad0",
     "0bbe8416a0aabb2f"
@@ -3612,6 +3924,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "광역지자체",
+   "category_basis": "affiliation",
    "cases": [
     "4d94bba36c1b16df"
    ],
@@ -3636,6 +3950,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "d2679e3d6555700c"
    ],
@@ -3660,6 +3976,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "2264c26461d1c4a8",
     "effdbda7b7136906"
@@ -3685,6 +4003,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "1e145932fab1b1f5",
     "d8da49c9dd6db753",
@@ -3711,6 +4031,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "2d37f3c2c8a2f80d"
    ],
@@ -3735,6 +4057,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "579ea06f8895ceee",
     "4b4c41e966b2968e",
@@ -3767,6 +4091,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "fae2a34ec3dfd6e0"
    ],
@@ -3791,6 +4117,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "a6834b493c566013"
    ],
@@ -3815,6 +4143,8 @@
     "inferred": true,
     "evidence": "기관 공식 사례 '화성특례시 신규자 지식창고'(gitlab hwanchulshin/hwaseong-kb)의 제작 주체가 시 AI스마트전략실 빅데이터팀으로 명시"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "10f18583c9e56e12"
    ],
@@ -3839,6 +4169,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "00411127055c4a07"
    ],
@@ -3863,6 +4195,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "342d96de10ee1c13"
    ],
@@ -3883,6 +4217,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "1c9efba39708c4d5",
     "2442dc859d5bac3a",
@@ -3910,6 +4246,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "539d5aacb03635db"
    ],
@@ -3940,6 +4278,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "d7422aa63cfaeb0e",
     "9bd5db0d42162a7b",
@@ -3967,6 +4307,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "b0b96e656d3572e9"
    ],
@@ -3996,6 +4338,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "01963ce2b093182c",
     "6c86b53c5323b10e"
@@ -4021,6 +4365,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "b194429543f8a93b"
    ],
@@ -4045,6 +4391,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "f6dc8da32adbe5dc"
    ],
@@ -4069,6 +4417,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "c1708f95ed0a54c1",
     "d00d45bbe02f222b"
@@ -4094,6 +4444,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "9643d5dfecbb5d79",
     "addc602fa82a6c66",
@@ -4130,6 +4482,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "798f4e6bef72fc13",
     "e160d086c0ce2b1b",
@@ -4156,6 +4510,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "784186cf130cad9f",
     "ce77601a3fa41786"
@@ -4186,6 +4542,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "광역지자체",
+   "category_basis": "affiliation",
    "cases": [
     "4032cd7b445543e6",
     "1c8fb0ad57992fe1"
@@ -4211,6 +4569,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "76c050a0c58a9760"
    ],
@@ -4235,6 +4595,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "c6a58cb9146d0694"
    ],
@@ -4259,6 +4621,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "ede8eebdd392590e",
     "05653c51718e68e6",
@@ -4285,6 +4649,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "f55339aeb1f417a2"
    ],
@@ -4309,6 +4675,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "861e4f85a1173965"
    ],
@@ -4333,6 +4701,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "6c0fa4c0c3508ff0"
    ],
@@ -4357,6 +4727,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "8e8782de32b8c90b",
     "0dd018f24ec9bf23"
@@ -4378,6 +4750,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "57eb8ec2a19ce423",
     "d8db05d121f05142",
@@ -4405,6 +4779,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "b68ba0f4078e91cb"
    ],
@@ -4429,6 +4805,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "fdd52c0a86c4d676"
    ],
@@ -4453,6 +4831,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "e72eed20d3744266"
    ],
@@ -4477,6 +4857,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "ff9136144a2af73a"
    ],
@@ -4501,6 +4883,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "93cdaad2433ab72a"
    ],
@@ -4525,6 +4909,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "fce3c395139e4b0f"
    ],
@@ -4549,6 +4935,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "77fc0140051bcb95"
    ],
@@ -4573,6 +4961,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "50e4aa3f24093d16"
    ],
@@ -4593,6 +4983,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "0fe5b5889c8a985f"
    ],
@@ -4617,6 +5009,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "1128dadf532a4f06"
    ],
@@ -4641,6 +5035,8 @@
     "inferred": false,
     "evidence": "GitHub 공개 프로필 소속란"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "aef95509b7611c96",
     "f8c9ae69a673c52a",
@@ -4670,6 +5066,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "eccb4bca5ea5776c"
    ],
@@ -4690,6 +5088,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "c11374b81da3918d"
    ],
@@ -4714,6 +5114,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "fde81c13336c45cd"
    ],
@@ -4743,6 +5145,8 @@
     "inferred": false,
     "evidence": "본인 서비스 4종 푸터 명시 — 'IP-AX 추진단 / Designed by Buyong JEONG', 개인 프로젝트 시범 운영 고지"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "4ccc2c692aed50aa",
     "cd965d88ba23849c",
@@ -4770,6 +5174,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "dc0632528765c694",
     "c5d9b943e082e8b3",
@@ -4804,6 +5210,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "8838e30428782f61"
    ],
@@ -4828,6 +5236,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "공공기관",
+   "category_basis": "affiliation",
    "cases": [
     "d2df149592c5622e",
     "e0bead338374d31a",
@@ -4854,6 +5264,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "ff202c516be11b82"
    ],
@@ -4878,6 +5290,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "ac09bd2e1c0fbb29"
    ],
@@ -4902,6 +5316,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "c1f58364f2c8c930"
    ],
@@ -4926,6 +5342,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "2dd83474d3fd2c4e",
     "f101dfca65b4144b",
@@ -4954,6 +5372,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
    "cases": [
     "9d6348ede8df84b9",
     "977a72eb576ddd84"
@@ -4979,6 +5399,8 @@
     "inferred": false,
     "evidence": "운영자 제공 — 주문호 서기관(개인정보보호위원회), 2026-08-22"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "bf04cec910b4755d"
    ],
@@ -5008,6 +5430,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "2dabf0fbae5c557b"
    ],
@@ -5028,6 +5452,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "4bea357dc245a257"
    ],
@@ -5052,6 +5478,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "759627ae9b724f89",
     "5af7491b4ca15345"
@@ -5077,6 +5505,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "6ab36df81d22fd07"
    ],
@@ -5101,6 +5531,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "d8b2afa5e72012a8"
    ],
@@ -5125,6 +5557,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "09f8bff3e9cc3b02",
     "2633ef9fbb2eeb96",
@@ -5151,6 +5585,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "65f9634aacca2170"
    ],
@@ -5171,6 +5607,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "d0ab0506a35ee03a"
    ],
@@ -5191,6 +5629,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "3228747115808243",
     "e996c18ebe1f7413",
@@ -5216,6 +5656,8 @@
     }
    ],
    "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
    "cases": [
     "9fce3174edfb29bf",
     "0286b6f3a317807b",
@@ -5244,6 +5686,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "ae0e4cab4a5cf47b",
     "158f8dd9032e5807",
@@ -5271,6 +5715,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
    "cases": [
     "d6c35b2999da8ca0"
    ],
@@ -5301,6 +5747,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "광역지자체",
+   "category_basis": "affiliation",
    "cases": [
     "6c94a4ce57e81fee"
    ],
@@ -5325,6 +5773,8 @@
     "inferred": false,
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
+   "category": "교육기관",
+   "category_basis": "affiliation",
    "cases": [
     "081ff1760ed44fd7",
     "4ff3227e6ec30331",

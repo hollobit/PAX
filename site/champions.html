@@ -11,7 +11,7 @@
   <meta property="og:description" content="공공AX 도구를 만든 공무원·시민 개발자 챔피언 디렉토리">
   <meta property="og:url" content="https://hollobit.github.io/PAX/champions.html">
   <meta property="og:site_name" content="모두의 공공AX 사례 아카이브">
-  <link rel="stylesheet" href="style.css?v=395e757c">
+  <link rel="stylesheet" href="style.css?v=7d0a51c0">
 </head>
 <body>
   <header class="site-header">
@@ -57,6 +57,9 @@
       <button type="button" id="tier-black" class="tier-btn tier-btn--black" aria-pressed="false" title="BLACK 인증 챔피언만 보기">★ BLACK</button>
     </div>
 
+    <div class="champ-toolbar champ-toolbar--cat" id="cat-filter" role="group" aria-label="소속 분류">
+      <span class="champ-toolbar__label">소속:</span>
+    </div>
     <section id="champion-list" class="champ-grid" aria-label="챔피언 목록"></section>
     <p id="error-state" class="empty-state" hidden>챔피언 데이터를 불러오지 못했습니다.</p>
 
@@ -73,7 +76,8 @@
       <p>이 디렉토리는 사례 아카이브에 등재된 개발 산출물의 <strong>GitHub·정부 공공 GitLab 공개
       프로필</strong>과 게시물 속 저장소 링크만을 근거로 만들어집니다. 공개 프로필에 본인이 게시하지
       않은 정보(실명·소속·연락처)는 싣지 않으며, 프로필 밖 자료로 유추한 소속에는
-      <span class="badge badge--inferred">추정</span> 배지를 붙입니다. 서로 다른 계정은 ① 같은 저장소를
+      <span class="badge badge--inferred">추정</span> 배지를 붙입니다. <strong>소속 분류</strong>는 공개 프로필 소속을
+      규칙으로 나누고, 소속이 공개되지 않은 챔피언은 등재 사례의 기관 분류로 정해 카드에 <em>사례 기준</em>으로 표시합니다. 서로 다른 계정은 ① 같은 저장소를
       본인 개발물로 공유한 공개 게시물이 확인되거나 ② GitHub와 공공 GitLab에 <strong>동일한 계정
       ID</strong>가 존재할 때만 한 사람으로 연결하며, 표시 이름과 소속은 실명·기관을 본인이 직접
       게시하는 공공 GitLab 프로필을 우선합니다.</p>
@@ -94,7 +98,7 @@
     <p class="site-footer__curator">Curated by Jonghong Jeon, <a href="mailto:hollobit@etri.re.kr">hollobit@etri.re.kr</a></p>
   </footer>
 
-  <script type="module" src="champions.js?v=e5f1502a"></script>
+  <script type="module" src="champions.js?v=538892ff"></script>
   <script src="anchors.js?v=206e78f5"></script>
 </body>
 </html>
