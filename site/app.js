@@ -8,6 +8,7 @@
  */
 
 import { loadBookmarks, loadBookmarkCounts, toggleBookmark as storeToggleBookmark, onBookmarksChanged } from './pax-bookmarks.js?v=c1fdc503';
+import { NEW_WINDOW_DAYS, comparePopularity, isNewCase, popularIds } from './pax-popular.js?v=709e6cf6';
 import { createExportToolbar } from './app-export.js?v=415e893b';
 import { ORG_TYPES, SOURCES, TASK_CATEGORIES, SYNONYMS, VIEWS } from './app-constants.js?v=60a81688';
 import { createPager as createSharedPager } from './pax-list.js?v=7dabbcbf';
@@ -21,8 +22,7 @@ const matchesDomain = matchesCaseDomain;
 const SEARCH_DELAY_MS = 120;
 
 /* ── 북마크 ── 내 북마크 저장과 전체 누적 카운터는 pax-bookmarks.js(3D PAX와 공용)가 맡는다. */
-// 인기 항목 수: 북마크 횟수 상위 N개
-const POPULAR_TOP_N = 20;
+// 인기·신규 판정 규칙은 pax-popular.js(사례 상세 페이지와 공용)에 있다.
 
 function bookmarkCount(c) {
   return state.bookmarkCounts.get(c.id) || 0;
@@ -38,22 +38,9 @@ const SORT_ACCESSORS = {
   date: (c) => c.date + c.collected_at,
 };
 
-// 신규: 최근 3일 이내에 수집된 사례
-const NEW_WINDOW_DAYS = 3;
-
-function isNewCase(c) {
-  const collected = new Date(`${c.collected_at}T00:00:00`);
-  const ageDays = (Date.now() - collected.getTime()) / 86400000;
-  return ageDays >= 0 && ageDays <= NEW_WINDOW_DAYS;
-}
-
 // 인기 지표 비교: 누적 북마크 수 → SNS 반응(popularity) → 최신 게시일순
 function comparePopularityMetrics(a, b) {
-  const bmDiff = bookmarkCount(b) - bookmarkCount(a);
-  if (bmDiff !== 0) return bmDiff;
-  const diff = (b.popularity || 0) - (a.popularity || 0);
-  if (diff !== 0) return diff;
-  return (b.date + b.collected_at).localeCompare(a.date + a.collected_at);
+  return comparePopularity(state.bookmarkCounts)(a, b);
 }
 
 // 기본 정렬: 인기(상위 N) → 신규(최근 수집) → 나머지 최신 게시일순.
@@ -71,14 +58,9 @@ function comparePopularFirst(a, b) {
   return (b.date + b.collected_at).localeCompare(a.date + a.collected_at);
 }
 
-// 인기 집합: 누적 북마크 순 상위 20개. 북마크된 사례를 횟수순으로 먼저 채우고,
-// 20개가 안 되는 동안은 SNS 반응 지표 보유 사례로 나머지를 채운다.
+// 인기 집합: 누적 북마크 순 상위 N개(pax-popular.js)
 function computePopularSet() {
-  const ranked = [...state.cases]
-    .filter((c) => bookmarkCount(c) > 0 || c.popularity)
-    .sort(comparePopularityMetrics)
-    .slice(0, POPULAR_TOP_N);
-  return new Set(ranked.map((c) => c.id));
+  return popularIds([...state.cases], state.bookmarkCounts);
 }
 
 function isPopularCase(c) {

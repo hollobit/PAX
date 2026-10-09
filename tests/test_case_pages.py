@@ -6,7 +6,7 @@ from conftest import make_case
 
 def _setup(tmp_path, monkeypatch, case):
     (tmp_path / "data").mkdir()
-    (tmp_path / "site" / "data").mkdir(parents=True)
+    (tmp_path / "site" / "data").mkdir(parents=True, exist_ok=True)
     (tmp_path / "data" / "cases.json").write_text(json.dumps({"cases": [case]}, ensure_ascii=False), encoding="utf-8")
     (tmp_path / "site" / "data" / "evaluations.json").write_text(json.dumps({"cases": []}), encoding="utf-8")
     (tmp_path / "site" / "style.css").write_text("body{}\n", encoding="utf-8")
@@ -70,3 +70,50 @@ def test_page_without_webp_uses_jpg_only(tmp_path, monkeypatch):
 def test_page_without_thumbnail_has_no_figure(tmp_path, monkeypatch):
     page = _setup(tmp_path, monkeypatch, make_case())
     assert "case-page__thumb" not in page and "og:image" not in page
+
+
+def _setup_full(tmp_path, monkeypatch, case, champions=None):
+    (tmp_path / "site" / "data").mkdir(parents=True, exist_ok=True)
+    (tmp_path / "site" / "data" / "champions.json").write_text(
+        json.dumps({"champions": champions or []}, ensure_ascii=False), encoding="utf-8")
+    (tmp_path / "site" / "case-page.js").write_text("export {};\n", encoding="utf-8")
+    return _setup(tmp_path, monkeypatch, case)
+
+
+def test_live_slot_carries_case_id_and_collected_date(tmp_path, monkeypatch):
+    page = _setup_full(tmp_path, monkeypatch, make_case())
+    assert f'id="case-live" data-case-id="{"a" * 16}" data-collected-at="2026-08-06"' in page
+    from stamp_assets import digest
+    v = digest(tmp_path / "site" / "case-page.js")
+    assert f'<script type="module" src="../case-page.js?v={v}"></script>' in page
+
+
+def test_rank_file_has_only_popularity_inputs(tmp_path, monkeypatch):
+    _setup_full(tmp_path, monkeypatch, make_case(popularity=120))
+    rank = json.loads((tmp_path / "site" / "data" / "case-rank.json").read_text(encoding="utf-8"))
+    assert rank["cases"] == [{"id": "a" * 16, "date": "2026-08-05", "collected_at": "2026-08-06",
+                              "popularity": 120}]
+
+
+def test_detail_rows_show_known_fields_only(tmp_path, monkeypatch):
+    case = make_case(case_class="기관 공식", runtime_env="브라우저만", model_dependency="해외 상용 API",
+                     models_used=["Gemini 2.5"], license="MIT", stars=42, maintenance="활발",
+                     link_ok=True, health_checked="2026-10-05", popularity=150,
+                     tags=["민원", "A&B"])
+    page = _setup_full(tmp_path, monkeypatch, case)
+    assert "<dt>사례 성격</dt><dd>기관 공식</dd>" in page
+    assert "<dt>AI 모델</dt><dd>해외 상용 API — Gemini 2.5</dd>" in page
+    assert "<dt>저장소</dt><dd>★ 42 · 유지보수 활발</dd>" in page
+    assert "<dt>링크 점검</dt><dd>정상 (2026-10-05)</dd>" in page
+    assert "<dt>출처 채널</dt><dd>Threads</dd>" in page
+    assert '<a href="../?tag=A%26B">#A&amp;B</a>' in page
+    assert "<dt>망 요건</dt>" not in page  # 값이 없는 항목은 줄을 만들지 않는다
+
+
+def test_makers_link_to_champion_cards(tmp_path, monkeypatch):
+    champs = [{"id": "github:foo", "name": "홍길동", "cases": ["a" * 16],
+               "affiliation": {"value": "행정안전부"}},
+              {"id": "gitlab:bar", "name": "다른사람", "cases": ["b" * 16]}]
+    page = _setup_full(tmp_path, monkeypatch, make_case(), champs)
+    assert '<a href="../champions.html#champ-github%3Afoo">홍길동</a> (행정안전부)' in page
+    assert "다른사람" not in page

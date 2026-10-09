@@ -8,9 +8,10 @@ site/case/<id>.html — og 태그를 갖춘 고정 페이지. "결재에 이 URL
 """
 import html
 from pathlib import Path
-from pax.jsonio import load_json, read_json
+from pax.case_details import detail_list, makers_of, rank_entry
+from pax.jsonio import load_json, read_json, write_json
 from pax.urls import preferred_url
-from stamp_assets import digest
+from stamp_assets import digest, stamp_file
 from sync_nav import render_external, render_nav
 
 BASE = "https://hollobit.github.io/PAX"
@@ -21,6 +22,8 @@ def safe_href(url):
     검사가 없어, javascript: 같은 주소가 들어오면 공개 페이지에서 실행될 수 있다."""
     return url if isinstance(url, str) and url.startswith("https://") else None
 OUT_DIR = Path("site/case")
+RANK = Path("site/data/case-rank.json")
+PAGE_JS = Path("site/case-page.js")
 THUMBS = Path("site/thumbs")
 THUMB_W, THUMB_H = 640, 400  # make_thumbs가 만드는 크기 — 자리를 미리 잡아 화면이 밀리지 않게
 
@@ -69,9 +72,14 @@ TEMPLATE = """<!DOCTYPE html>
   </header>
   <main class="case-page">
     <section class="obs-section case-page__intro">{thumb}
+      <div class="case-page__live" id="case-live" data-case-id="{cid}" data-collected-at="{collected}"></div>
       <p class="case-page__meta">{org} · {org_type}{region} · {task} · {date} 게시</p>
       <p class="case-page__summary">{summary}</p>
       <p class="case-page__links">{links}</p>
+    </section>
+    <section class="obs-section">
+      <h2 class="obs-heading">상세 정보</h2>
+      {details}
     </section>
     <section class="obs-section">
       <h2 class="obs-heading">4축 평가</h2>
@@ -95,7 +103,7 @@ TEMPLATE = """<!DOCTYPE html>
       <p>출처: 모두의 공공AX 사례 아카이브 · 자기선택 표본 · 근거 없는 항목은 '미확인'으로 표기 ·
       인용 시 이 페이지 URL을 사용하세요.</p>
     </footer>
-  </main>
+  </main>{page_js}
 </body>
 </html>
 """
@@ -166,6 +174,14 @@ def main():
     # 메뉴는 sync_nav의 목록을 그대로 쓴다(한 단계 아래라 '../'), 스타일은 콘텐츠 해시로 캐시를 무효화한다
     nav, external = render_nav("case", "    ", "../"), render_external("    ")
     css_v = digest(Path("site/style.css"))
+    # 인기·신규·북마크는 브라우저에서 그린다 — 스크립트가 없으면(테스트 등) 정적 내용만 낸다
+    # 상세 페이지는 stamp_assets 단계보다 먼저 만들어지므로, 스크립트의 import 스탬프를 여기서 먼저 굳힌다
+    if PAGE_JS.exists():
+        stamp_file(PAGE_JS, {})
+    page_js = (f'\n  <script type="module" src="../case-page.js?v={digest(PAGE_JS)}"></script>'
+               if PAGE_JS.exists() else "")
+    champions = load_json("site/data/champions.json", default={}).get("champions", [])
+    write_json(RANK, {"cases": [rank_entry(c) for c in cases]}, compact=True)
     for c in cases:
         ev = evals.get(c["id"])
         related = [x for x in cases
@@ -191,7 +207,8 @@ def main():
                 f'<a href="../mcp-review.html">MCP 검증: {esc(review["overall"])}'
                 f' ({esc(review.get("checked_at") or "")})</a>')
         page = TEMPLATE.format(
-            og_image=og_image, thumb=thumb, nav=nav, external=external, css_v=css_v, base=BASE, cid=esc(c["id"]), title=esc(c["title"]),
+            og_image=og_image, thumb=thumb, page_js=page_js, collected=esc(c.get("collected_at")),
+            details=detail_list(c, makers_of(c["id"], champions)), nav=nav, external=external, css_v=css_v, base=BASE, cid=esc(c["id"]), title=esc(c["title"]),
             desc=esc(c["summary"][:150]), org=esc(c["org"]), org_type=esc(c["org_type"]),
             region=f" · {esc(c['region'])}" if c.get("region") else "",
             task=esc(c.get("task_category") or "분류 없음"), date=esc(c["date"]),

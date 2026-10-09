@@ -2306,6 +2306,37 @@ main {
 }
 .case-page__thumb img { display: block; width: 100%; height: auto; }
 a.case-page__thumb:hover, a.case-page__thumb:focus-visible { border-color: var(--accent, #1a4b8c); }
+.case-page__live {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 1.9rem;
+  margin: 0 0 0.6rem;
+}
+.case-page__live:empty { display: none; }
+.bookmark-btn.case-page__bookmark {
+  margin-left: 0;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.88rem;
+  border: 1px solid var(--rule, #ccc);
+  border-radius: 999px;
+}
+.bookmark-btn.case-page__bookmark:hover { transform: none; border-color: var(--accent-gold); }
+.case-page__bookmark-count { color: var(--ink-faint); font-size: 0.85rem; }
+.case-page__details {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.35rem 1.2rem;
+  margin: 0;
+}
+.case-page__details dt { color: var(--ink-faint); font-size: 0.85rem; }
+.case-page__details dd { margin: 0; overflow-wrap: anywhere; }
+.case-page__details dd a { margin-right: 0.35rem; }
+@media (max-width: 520px) {
+  .case-page__details { grid-template-columns: 1fr; gap: 0.1rem; }
+  .case-page__details dd { margin-bottom: 0.5rem; }
+}
 .case-page__meta { color: var(--ink-faint); font-family: var(--font-mono); font-size: 0.82rem; }
 .case-page__summary { font-size: 1.02rem; line-height: 1.65; }
 .case-page__links a { margin-right: 0.4rem; }
