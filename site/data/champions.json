@@ -1,5 +1,5 @@
 {
- "total": 219,
+ "total": 225,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -1196,6 +1196,7 @@
    ],
    "affiliation": null,
    "cases": [
+    "40817faf1381bf1b",
     "2682065ff13cd4dd",
     "432f5ae5bc355914",
     "66711e6200439e4f",
@@ -1204,7 +1205,7 @@
     "e5e658e7a6c123a5"
    ],
    "stats": {
-    "case_count": 6,
+    "case_count": 7,
     "top_ax": 1,
     "stars": 0
    }
@@ -1536,6 +1537,26 @@
    ],
    "stats": {
     "case_count": 2,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:rag-chatbot",
+   "name": "rag-chatbot",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "rag-chatbot",
+     "url": "https://gitlab.aigov.go.kr/rag-chatbot"
+    }
+   ],
+   "affiliation": null,
+   "cases": [
+    "e718cc451c1a130a"
+   ],
+   "stats": {
+    "case_count": 1,
     "top_ax": 2,
     "stars": 0
    }
@@ -2757,13 +2778,14 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "27a61ac6fd278d72",
     "1f962fbf41a13407",
     "d33ebcfc0adca9f8",
     "2798c2e0b79ab291",
     "de45e7387cab1c62"
    ],
    "stats": {
-    "case_count": 4,
+    "case_count": 5,
     "top_ax": 2,
     "stars": 0
    }
@@ -3624,6 +3646,31 @@
    }
   },
   {
+   "id": "gitlab:mukju9",
+   "name": "손규하",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "mukju9",
+     "url": "https://gitlab.aigov.go.kr/mukju9"
+    }
+   ],
+   "affiliation": {
+    "value": "통일부",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "2264c26461d1c4a8",
+    "effdbda7b7136906"
+   ],
+   "stats": {
+    "case_count": 2,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:dovakin",
    "name": "손민성",
    "accounts": [
@@ -3702,6 +3749,30 @@
    "stats": {
     "case_count": 9,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:sonwk",
+   "name": "손원경",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "sonwk",
+     "url": "https://gitlab.aigov.go.kr/sonwk"
+    }
+   ],
+   "affiliation": {
+    "value": "경남 양산시",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "fae2a34ec3dfd6e0"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -3931,6 +4002,30 @@
    ],
    "stats": {
     "case_count": 2,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:aawoon",
+   "name": "오등운",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "aawoon",
+     "url": "https://gitlab.aigov.go.kr/aawoon"
+    }
+   ],
+   "affiliation": {
+    "value": "제주대학교",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "b194429543f8a93b"
+   ],
+   "stats": {
+    "case_count": 1,
     "top_ax": 2,
     "stars": 0
    }
@@ -4368,6 +4463,30 @@
    }
   },
   {
+   "id": "gitlab:dlwogud",
+   "name": "이재형",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "dlwogud",
+     "url": "https://gitlab.aigov.go.kr/dlwogud"
+    }
+   ],
+   "affiliation": {
+    "value": "국립농업과학원",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "ff9136144a2af73a"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:tmf0228",
    "name": "이지슬",
    "accounts": [
@@ -4710,11 +4829,12 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "d2df149592c5622e",
     "e0bead338374d31a",
     "8c5458af8f13435d"
    ],
    "stats": {
-    "case_count": 2,
+    "case_count": 3,
     "top_ax": 2,
     "stars": 0
    }
@@ -4835,10 +4955,11 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "9d6348ede8df84b9",
     "977a72eb576ddd84"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 1,
     "stars": 0
    }
@@ -4932,11 +5053,36 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "759627ae9b724f89",
     "5af7491b4ca15345"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:shchoi7",
+   "name": "최신형",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "shchoi7",
+     "url": "https://gitlab.aigov.go.kr/shchoi7"
+    }
+   ],
+   "affiliation": {
+    "value": "산림청",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "cases": [
+    "6ab36df81d22fd07"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -5099,12 +5245,13 @@
     "evidence": "공공 GitLab 공개 프로필 표시명"
    },
    "cases": [
+    "ae0e4cab4a5cf47b",
     "158f8dd9032e5807",
     "4093246b3f316bd8",
     "b3294bcc65e7f2e7"
    ],
    "stats": {
-    "case_count": 3,
+    "case_count": 4,
     "top_ax": 2,
     "stars": 0
    }

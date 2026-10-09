@@ -2,38 +2,38 @@
  "generated_at": "2026-10-09",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 509,
- "total_champions": 219,
+ "total_cases": 522,
+ "total_champions": 225,
  "community": {
   "members": 2400,
-  "kakao_week": 3634,
-  "kakao_total_observed": 47273,
-  "threads_observed": 327
+  "kakao_week": 3638,
+  "kakao_total_observed": 47277,
+  "threads_observed": 328
  },
  "certified_champions": 5,
  "unattributed_cases": 109,
  "ax_distribution": {
-  "AI-Ready": 336,
-  "AI-Enabled": 147,
+  "AI-Ready": 342,
+  "AI-Enabled": 154,
   "AX 단계 외": 20,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
  "c_axis_mean": 0.94,
  "p_distribution": {
-  "P0": 163,
-  "P1": 327,
+  "P0": 168,
+  "P1": 335,
   "P2": 19
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 245,
-  "해외 오픈웨이트(로컬)": 27,
-  "혼합": 13,
-  "해외 상용 API": 61,
-  "모델 중립(BYO)": 79,
+  "없음(비LLM)": 251,
+  "해외 오픈웨이트(로컬)": 29,
+  "혼합": 14,
+  "해외 상용 API": 62,
+  "모델 중립(BYO)": 80,
   "국산 독자모델": 6,
-  "미상": 12,
+  "미상": 14,
   "국산 오픈웨이트": 1
  },
  "model_stats": {
@@ -256,6 +256,76 @@
     "domestic": false
    },
    {
+    "name": "Gemini",
+    "n": 12,
+    "variants": [
+     "Chrome 내장 AI(Gemini Nano)",
+     "Claude Code/Codex/Gemini(스킬 팩)",
+     "Claude/Codex/Gemini(어댑터)",
+     "Gemini",
+     "Gemini 2.5 Flash-Lite",
+     "Gemini 3.5 Flash",
+     "Gemini API",
+     "Gemini GEM",
+     "Gemini(옵션 전환)",
+     "Gemini(옵션)",
+     "Google Gemini(NotebookLM)",
+     "OpenAI/Gemini/Claude(사용자 선택)",
+     "구글 제미나이(외부 연계)"
+    ],
+    "cases": [
+     {
+      "id": "de4b2dab339d69b7",
+      "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
+     },
+     {
+      "id": "48e33f2318bdffae",
+      "title": "클릭 과정을 PDF 가이드로 만드는 ClickGuide Local"
+     },
+     {
+      "id": "1502d338e8e99382",
+      "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
+     },
+     {
+      "id": "c5aa260668941b92",
+      "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커"
+     },
+     {
+      "id": "4c918008fd4eff60",
+      "title": "민원 답변 작성 스킬 팩 — Codex·Claude Code·Gemini CLI 겸용"
+     },
+     {
+      "id": "a384b647830b2bf7",
+      "title": "쉽다공문 — 제미나이 GEM 공문서 초안 생성기 무료 배포"
+     },
+     {
+      "id": "539d5aacb03635db",
+      "title": "민원 신고 스크리너 — 신고 7유형·근거법령·소관부서 자동 판별 모듈"
+     },
+     {
+      "id": "fcfac85b15998dee",
+      "title": "한국서부발전 위피봇 — 발전 현장 안전·설비 업무에 붙인 사내 생성형 AI 에이전트"
+     },
+     {
+      "id": "7df3c5d297166cb2",
+      "title": "교육행정 질의응답 사례 검색 도구"
+     },
+     {
+      "id": "2349c4b45eb48e38",
+      "title": "지역사회보장계획 작성지원 플랫폼 — 제6기 시·군·구 계획을 절 단위로 써서 한글 문서로 내는 도구"
+     },
+     {
+      "id": "b194429543f8a93b",
+      "title": "코러스AI 챗봇 — 국립대학자원관리시스템(KORUS) 매뉴얼·법령 안내 챗봇 3종"
+     },
+     {
+      "id": "2264c26461d1c4a8",
+      "title": "일일 언론 동향 요약기 — 신문 스크랩 PDF를 간부 보고용 개조식 요약으로"
+     }
+    ],
+    "domestic": false
+   },
+   {
     "name": "Gemma",
     "n": 10,
     "variants": [
@@ -308,65 +378,6 @@
      {
       "id": "c161b0158876229b",
       "title": "온나라 sAIde — 문서등록대장을 열어 보지 않고 목록에서 공문을 AI로 요약·분석하고 첨부를 일괄 내려받는 엣지 사이드패널"
-     }
-    ],
-    "domestic": false
-   },
-   {
-    "name": "Gemini",
-    "n": 10,
-    "variants": [
-     "Claude Code/Codex/Gemini(스킬 팩)",
-     "Claude/Codex/Gemini(어댑터)",
-     "Gemini",
-     "Gemini 2.5 Flash-Lite",
-     "Gemini 3.5 Flash",
-     "Gemini GEM",
-     "Gemini(옵션 전환)",
-     "Gemini(옵션)",
-     "OpenAI/Gemini/Claude(사용자 선택)",
-     "구글 제미나이(외부 연계)"
-    ],
-    "cases": [
-     {
-      "id": "de4b2dab339d69b7",
-      "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
-     },
-     {
-      "id": "48e33f2318bdffae",
-      "title": "클릭 과정을 PDF 가이드로 만드는 ClickGuide Local"
-     },
-     {
-      "id": "1502d338e8e99382",
-      "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
-     },
-     {
-      "id": "c5aa260668941b92",
-      "title": "MoAI Cowork — 비개발자용 한국 실무 AI 코워커"
-     },
-     {
-      "id": "4c918008fd4eff60",
-      "title": "민원 답변 작성 스킬 팩 — Codex·Claude Code·Gemini CLI 겸용"
-     },
-     {
-      "id": "a384b647830b2bf7",
-      "title": "쉽다공문 — 제미나이 GEM 공문서 초안 생성기 무료 배포"
-     },
-     {
-      "id": "539d5aacb03635db",
-      "title": "민원 신고 스크리너 — 신고 7유형·근거법령·소관부서 자동 판별 모듈"
-     },
-     {
-      "id": "fcfac85b15998dee",
-      "title": "한국서부발전 위피봇 — 발전 현장 안전·설비 업무에 붙인 사내 생성형 AI 에이전트"
-     },
-     {
-      "id": "7df3c5d297166cb2",
-      "title": "교육행정 질의응답 사례 검색 도구"
-     },
-     {
-      "id": "2349c4b45eb48e38",
-      "title": "지역사회보장계획 작성지원 플랫폼 — 제6기 시·군·구 계획을 절 단위로 써서 한글 문서로 내는 도구"
      }
     ],
     "domestic": false
@@ -771,23 +782,23 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 245,
+    "n": 251,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
-    "n": 27,
+    "n": 29,
     "specified": 16
    },
    "혼합": {
-    "n": 13,
-    "specified": 12
+    "n": 14,
+    "specified": 13
    },
    "해외 상용 API": {
-    "n": 61,
-    "specified": 46
+    "n": 62,
+    "specified": 47
    },
    "모델 중립(BYO)": {
-    "n": 79,
+    "n": 80,
     "specified": 4
    },
    "국산 독자모델": {
@@ -795,7 +806,7 @@
     "specified": 5
    },
    "미상": {
-    "n": 12,
+    "n": 14,
     "specified": 1
    },
    "국산 오픈웨이트": {
@@ -912,8 +923,38 @@
    },
    {
     "dep": "혼합",
-    "n": 13,
+    "n": 14,
     "families": [
+     {
+      "name": "Gemini",
+      "n": 4,
+      "cases": [
+       {
+        "id": "de4b2dab339d69b7",
+        "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
+       },
+       {
+        "id": "1502d338e8e99382",
+        "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
+       },
+       {
+        "id": "fcfac85b15998dee",
+        "title": "한국서부발전 위피봇 — 발전 현장 안전·설비 업무에 붙인 사내 생성형 AI 에이전트"
+       },
+       {
+        "id": "2264c26461d1c4a8",
+        "title": "일일 언론 동향 요약기 — 신문 스크랩 PDF를 간부 보고용 개조식 요약으로"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Chrome 내장 AI(Gemini Nano)",
+       "Gemini API",
+       "Gemini(옵션 전환)",
+       "Gemini(옵션)",
+       "구글 제미나이(외부 연계)"
+      ]
+     },
      {
       "name": "로컬 서빙(Ollama·vLLM 등)",
       "n": 4,
@@ -969,30 +1010,6 @@
        "Claude(대조·근거 작성)",
        "Codex CLI/Claude CLI(BYO 구독)",
        "상용 API 모드(Claude 등)"
-      ]
-     },
-     {
-      "name": "Gemini",
-      "n": 3,
-      "cases": [
-       {
-        "id": "de4b2dab339d69b7",
-        "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
-       },
-       {
-        "id": "1502d338e8e99382",
-        "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
-       },
-       {
-        "id": "fcfac85b15998dee",
-        "title": "한국서부발전 위피봇 — 발전 현장 안전·설비 업무에 붙인 사내 생성형 AI 에이전트"
-       }
-      ],
-      "domestic": false,
-      "variants": [
-       "Gemini(옵션 전환)",
-       "Gemini(옵션)",
-       "구글 제미나이(외부 연계)"
       ]
      },
      {
@@ -1163,7 +1180,7 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 61,
+    "n": 62,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
@@ -1349,7 +1366,7 @@
      },
      {
       "name": "Gemini",
-      "n": 7,
+      "n": 8,
       "cases": [
        {
         "id": "48e33f2318bdffae",
@@ -1378,6 +1395,10 @@
        {
         "id": "2349c4b45eb48e38",
         "title": "지역사회보장계획 작성지원 플랫폼 — 제6기 시·군·구 계획을 절 단위로 써서 한글 문서로 내는 도구"
+       },
+       {
+        "id": "b194429543f8a93b",
+        "title": "코러스AI 챗봇 — 국립대학자원관리시스템(KORUS) 매뉴얼·법령 안내 챗봇 3종"
        }
       ],
       "domestic": false,
@@ -1388,6 +1409,7 @@
        "Gemini 2.5 Flash-Lite",
        "Gemini 3.5 Flash",
        "Gemini GEM",
+       "Google Gemini(NotebookLM)",
        "OpenAI/Gemini/Claude(사용자 선택)"
       ]
      },
@@ -1465,7 +1487,7 @@
    },
    {
     "dep": "해외 오픈웨이트(로컬)",
-    "n": 27,
+    "n": 29,
     "families": [
      {
       "name": "Gemma",
@@ -1628,18 +1650,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.065,
- "local_model_rate": 0.259,
- "model_known": 108,
- "license_tagged": 389,
- "license_stated_rate": 0.486,
- "gitlab_cases": 261,
- "gitlab_mirror_pairs": 39,
- "gitlab_open_rate": 0.149,
+ "domestic_model_rate": 0.062,
+ "local_model_rate": 0.268,
+ "model_known": 112,
+ "license_tagged": 402,
+ "license_stated_rate": 0.483,
+ "gitlab_cases": 275,
+ "gitlab_mirror_pairs": 40,
+ "gitlab_open_rate": 0.145,
  "mcp_cases": 91,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 427,
+  "미확인": 440,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1647,7 +1669,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.75
+  "feedback": 0.757
  },
  "maintenance_distribution": {
   "활발": 319,
@@ -1657,11 +1679,11 @@
  "stars_collected": 372,
  "repo_stats": {
   "gitlab": {
-   "count": 261,
+   "count": 275,
    "starred": 259,
    "stars_sum": 463,
    "maintenance": {
-    "활발": 241,
+    "활발": 242,
     "정체": 19
    },
    "top": [
@@ -1841,9 +1863,9 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 200,
-  "MIT": 125,
-  "Apache-2.0": 30,
+  "명시 없음": 208,
+  "MIT": 127,
+  "Apache-2.0": 33,
   "Other": 16,
   "GNU AGPLv3": 5,
   "AGPL-3.0": 4,
@@ -1857,15 +1879,15 @@
  "license_matrix": {
   "명시 없음": {
    "github": 54,
-   "gitlab": 146
+   "gitlab": 154
   },
   "MIT": {
    "github": 74,
-   "gitlab": 50
+   "gitlab": 52
   },
   "Apache-2.0": {
    "github": 11,
-   "gitlab": 19
+   "gitlab": 22
   },
   "Other": {
    "github": 16,
@@ -1914,8 +1936,8 @@
    "stated": 4
   },
   "gitlab": {
-   "total": 229,
-   "stated": 83
+   "total": 242,
+   "stated": 88
   }
  },
  "mcp_stats": {
@@ -2060,6 +2082,12 @@
    "title": "건축HUB MCP — 건축물대장·인허가·필지 종합카드",
    "github": "https://github.com/chrisryugj/archhub-mcp",
    "gitlab": "https://gitlab.aigov.go.kr/chrisryugj/archhub-mcp"
+  },
+  {
+   "id": "6a9c5da9f1d3210f",
+   "title": "KORAIL 공공데이터 MCP 서버 모음",
+   "github": "https://github.com/lovelyquality/korail-mcp",
+   "gitlab": "https://gitlab.aigov.go.kr/mechuri/korail-mcp"
   },
   {
    "id": "75b6a86d91aea955",
