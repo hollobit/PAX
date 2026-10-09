@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-08T22:34:31Z",
- "count": 853,
+ "updated_at": "2026-10-09T06:34:34Z",
+ "count": 854,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261008171002",
@@ -111,6 +111,19 @@
    "title": "레노버, 엔비디아와 ‘AI 익스프레스’ 출시…AI 팩토리 최단 15일 구축",
    "outlet": "인공지능신문",
    "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-09",
+   "last_shared": "2026-10-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/mnews/article/056/0012269856?sid=104",
+   "title": "“미국서 취업하려면 1억 내” 트럼프 새 규정 발표…유학생 ‘비상’",
+   "outlet": "n.news.naver.com",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-09",
