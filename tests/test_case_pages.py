@@ -39,3 +39,34 @@ def test_safe_href():
     assert bcp.safe_href("https://a.example/") == "https://a.example/"
     for bad in ("http://a.example/", "javascript:alert(1)", None, 3):
         assert bcp.safe_href(bad) is None
+
+
+def _setup_with_thumb(tmp_path, monkeypatch, case, webp=True):
+    thumbs = tmp_path / "site" / "thumbs"
+    thumbs.mkdir(parents=True)
+    (thumbs / f"{case['id']}.jpg").write_bytes(b"jpg")
+    if webp:
+        (thumbs / f"{case['id']}.webp").write_bytes(b"webp")
+    return _setup(tmp_path, monkeypatch, case), thumbs
+
+
+def test_page_shows_thumbnail_with_webp_and_og_image(tmp_path, monkeypatch):
+    case = make_case(case_url="https://svc.example/")
+    page, thumbs = _setup_with_thumb(tmp_path, monkeypatch, case)
+    v = int((thumbs / f"{case['id']}.jpg").stat().st_mtime)
+    assert f'srcset="../thumbs/{case["id"]}.webp?v={v}"' in page
+    assert f'src="../thumbs/{case["id"]}.jpg?v={v}"' in page
+    assert 'width="640" height="400"' in page
+    assert f'<meta property="og:image" content="{bcp.BASE}/thumbs/{case["id"]}.jpg?v={v}">' in page
+    assert 'class="case-page__thumb" href="https://svc.example/" target="_blank"' in page
+
+
+def test_page_without_webp_uses_jpg_only(tmp_path, monkeypatch):
+    case = make_case()
+    page, _ = _setup_with_thumb(tmp_path, monkeypatch, case, webp=False)
+    assert ".webp" not in page and f'../thumbs/{case["id"]}.jpg' in page
+
+
+def test_page_without_thumbnail_has_no_figure(tmp_path, monkeypatch):
+    page = _setup(tmp_path, monkeypatch, make_case())
+    assert "case-page__thumb" not in page and "og:image" not in page

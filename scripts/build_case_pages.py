@@ -21,6 +21,29 @@ def safe_href(url):
     검사가 없어, javascript: 같은 주소가 들어오면 공개 페이지에서 실행될 수 있다."""
     return url if isinstance(url, str) and url.startswith("https://") else None
 OUT_DIR = Path("site/case")
+THUMBS = Path("site/thumbs")
+THUMB_W, THUMB_H = 640, 400  # make_thumbs가 만드는 크기 — 자리를 미리 잡아 화면이 밀리지 않게
+
+
+def thumb_parts(c, target, title):
+    """(og:image 태그, 본문 썸네일) — 썸네일이 없으면 둘 다 빈 문자열.
+    ?v=는 파일 mtime(publish의 thumb_v와 같은 값)이라 썸네일을 다시 찍으면 캐시가 풀린다."""
+    jpg = THUMBS / f"{c['id']}.jpg"
+    if not jpg.exists():
+        return "", ""
+    v = int(jpg.stat().st_mtime)
+    cid = esc(c["id"])
+    og = f'\n  <meta property="og:image" content="{BASE}/thumbs/{cid}.jpg?v={v}">'
+    img = (f'<img src="../thumbs/{cid}.jpg?v={v}" alt="{title} 화면" width="{THUMB_W}" '
+           f'height="{THUMB_H}" loading="eager" decoding="async">')
+    if (THUMBS / f"{c['id']}.webp").exists():
+        img = f'<picture><source type="image/webp" srcset="../thumbs/{cid}.webp?v={v}">{img}</picture>'
+    if target:
+        img = (f'<a class="case-page__thumb" href="{esc(target)}" target="_blank" rel="noopener" '
+               f'title="사례 대상 바로가기 (새 창)">{img}</a>')
+    else:
+        img = f'<div class="case-page__thumb">{img}</div>'
+    return og, f"\n      {img}"
 
 TEMPLATE = """<!DOCTYPE html>
 <html lang="ko">
@@ -34,7 +57,7 @@ TEMPLATE = """<!DOCTYPE html>
   <meta property="og:title" content="{title}">
   <meta property="og:description" content="{desc}">
   <meta property="og:url" content="{base}/case/{cid}.html">
-  <meta property="og:site_name" content="모두의 공공AX 사례 아카이브">
+  <meta property="og:site_name" content="모두의 공공AX 사례 아카이브">{og_image}
   <link rel="stylesheet" href="../style.css?v={css_v}">
 </head>
 <body>
@@ -45,7 +68,7 @@ TEMPLATE = """<!DOCTYPE html>
 {external}
   </header>
   <main class="case-page">
-    <section class="obs-section">
+    <section class="obs-section case-page__intro">{thumb}
       <p class="case-page__meta">{org} · {org_type}{region} · {task} · {date} 게시</p>
       <p class="case-page__summary">{summary}</p>
       <p class="case-page__links">{links}</p>
@@ -160,6 +183,7 @@ def main():
         if safe_href(c.get("mirror_url")):
             mlabel = "공공 깃랩 미러" if "gitlab.aigov" in c["mirror_url"] else "미러 저장소"
             links.append(f'<a href="{esc(c["mirror_url"])}" target="_blank" rel="noopener">{mlabel}</a>')
+        og_image, thumb = thumb_parts(c, target, esc(c["title"]))
         links.append(f'<a href="../?case={esc(c["id"])}">아카이브에서 보기</a>')
         review = mcp_reviews.get(c["id"])
         if review:
@@ -167,7 +191,7 @@ def main():
                 f'<a href="../mcp-review.html">MCP 검증: {esc(review["overall"])}'
                 f' ({esc(review.get("checked_at") or "")})</a>')
         page = TEMPLATE.format(
-            nav=nav, external=external, css_v=css_v, base=BASE, cid=esc(c["id"]), title=esc(c["title"]),
+            og_image=og_image, thumb=thumb, nav=nav, external=external, css_v=css_v, base=BASE, cid=esc(c["id"]), title=esc(c["title"]),
             desc=esc(c["summary"][:150]), org=esc(c["org"]), org_type=esc(c["org_type"]),
             region=f" · {esc(c['region'])}" if c.get("region") else "",
             task=esc(c.get("task_category") or "분류 없음"), date=esc(c["date"]),

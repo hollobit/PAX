@@ -2295,6 +2295,17 @@ main {
 .wizard-result__actions { display: flex; gap: 0.6rem; margin-top: 1rem; }
 
 /* 사례 상세 페이지 */
+.case-page__thumb {
+  display: block;
+  max-width: 640px;
+  margin: 0 0 1rem;
+  border: 1px solid var(--rule, #ddd);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface, #fff);
+}
+.case-page__thumb img { display: block; width: 100%; height: auto; }
+a.case-page__thumb:hover, a.case-page__thumb:focus-visible { border-color: var(--accent, #1a4b8c); }
 .case-page__meta { color: var(--ink-faint); font-family: var(--font-mono); font-size: 0.82rem; }
 .case-page__summary { font-size: 1.02rem; line-height: 1.65; }
 .case-page__links a { margin-right: 0.4rem; }
