@@ -14,7 +14,7 @@ import { createCityLayer } from './pax3d-city.js?v=c99e972d';
 import { createStage, HOME } from './pax3d-stage.js?v=749c5dd6';
 import { groupCases } from './pax3d-places.js?v=2ac2ccfb';
 import { villageKind, planVillage } from './pax3d-village-plan.js?v=9eb236cc';
-import { VILLAGE_SIZE, KIND_TOP, villageGeometries, villageMaterial, villageDecor } from './pax3d-village.js?v=381def6d';
+import { VILLAGE_SIZE, KIND_TOP, villageGeometries, villageMaterial, villageDecor } from './pax3d-village.js?v=482aaf45';
 
 // 간판 자리 — 무게중심은 경기(서울 구멍 포함)처럼 엉뚱한 곳에 떨어져 손으로 정했다.
 const LABEL_AT = {
@@ -701,6 +701,15 @@ export function createWorld(canvas, { geo, sggDoc, cases, located, terrain, onHo
     flyHome() { flyTo(HOME.target, HOME.pos.distanceTo(HOME.target)); },
     setInk(on) { post.uniforms.inkOn.value = on ? 1 : 0; },
     setTiles(on) { tiles.setEnabled(on); },
+    /** 섬 마을의 광장·문 자리(평면 좌표) — ?debug 점검용 */
+    villages: () => [...villages].map(([key, { plan }]) => ({ key, gate: plan.gate, plaza: plan.plaza, n: plan.slots.size })),
+    /** 평면 좌표 (x, y)를 dist 거리에서 본다 — az(라디안)를 주면 그 방위에서, polar는 천정각 */
+    flyToPoint(x, y, dist, az = null, polar = 0.95) {
+      const target = new THREE.Vector3(x, LAND_H, -y);
+      if (az === null) { flyTo(target, dist); return; }
+      const dir = new THREE.Vector3(Math.sin(az) * Math.sin(polar), Math.cos(polar), Math.cos(az) * Math.sin(polar));
+      flight = { t0: performance.now(), fromT: controls.target.clone(), fromP: camera.position.clone(), toT: target, toP: target.clone().add(dir.multiplyScalar(dist)) };
+    },
     debug: () => ({ tiles: tiles.stats(), city: cityLayer.stats(), d: camera.position.distanceTo(controls.target), target: controls.target.toArray(), near: camera.near }),
     setCityLabelGroup(g, on) { cityLayer.setLabelGroup(g, on); },
     /** 도시 입체지도 시간대: 'day' | 'sunset' | 'night' */

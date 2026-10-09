@@ -304,6 +304,7 @@ export function villageDecor({ plan, inside, center, radius, name, grad, y, rand
   }
   group.add(lamps);
   // 마을 문 — 바닷가 쪽 방사 도로 끝
+  const gateK = size * 1.6;
   const gate = instanced([
     part(box(0.07, 0.62, 0.07, -0.33, 0.31, 0), '#c97a5d'),
     part(box(0.07, 0.62, 0.07, 0.33, 0.31, 0), '#c97a5d'),
@@ -313,10 +314,11 @@ export function villageDecor({ plan, inside, center, radius, name, grad, y, rand
   gate.setMatrixAt(0, new THREE.Matrix4().compose(
     new THREE.Vector3(plan.gate.x, y, -plan.gate.y),
     new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), plan.gate.rot),
-    new THREE.Vector3(size * 1.6, size * 1.6, size * 1.6)));
+    new THREE.Vector3(gateK, gateK, gateK)));
   group.add(gate);
-  const sign = signSprite([name.replace(/섬$/, '마을')], { scale: size * 2.6, accent: '#2b6a4b' });
-  sign.position.set(plan.gate.x, y + size * 1.25, -plan.gate.y);
+  // 문 위 들보에 거는 마을 이름 — 문 폭만 하게(크게 띄우면 가까이서 화면을 덮는다)
+  const sign = signSprite([name.replace(/섬$/, '마을')], { scale: size * 0.4, accent: '#2b6a4b' });
+  sign.position.set(plan.gate.x, y + gateK * 0.66, -plan.gate.y);
   group.add(sign);
   // 나무 — 줄기는 갈색, 수관만 인스턴스 색
   const spots = treeSpots(plan, inside, center, radius, rand, size);
