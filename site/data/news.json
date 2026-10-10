@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-10T06:35:28Z",
- "count": 870,
+ "updated_at": "2026-10-10T14:34:05Z",
+ "count": 872,
  "articles": [
   {
    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2",
@@ -58,6 +58,19 @@
    "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000021397",
    "title": "[단독] ‘공공기관 AI’ 성과는 뻥튀기, 예산은 누락…공시 기준이 없다",
    "outlet": "국민일보",
+   "published": "2026-10-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-10",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.gukjenews.com/news/articleView.html?idxno=3717555",
+   "title": "[속보] 김경문 한화 감독, 지휘봉 내려놓는다...후임 감독은?",
+   "outlet": "국제뉴스",
    "published": "2026-10-10",
    "kind": "기사",
    "shares": 1,
@@ -138,6 +151,19 @@
    "outlet": "110.go.kr",
    "published": "",
    "kind": "공고·안내",
+   "shares": 1,
+   "first_shared": "2026-10-10",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008791276&plink=ORI&cooper=NAVER",
+   "title": "[단독] \"건당 2만 원\"에 가입자 정보를…공단 직원 반전",
+   "outlet": "SBS 뉴스",
+   "published": "2026-10-10",
+   "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-10",
    "last_shared": "2026-10-10",

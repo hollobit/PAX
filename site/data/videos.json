@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-10T06:35:26Z",
- "count": 99,
+ "updated_at": "2026-10-10T14:34:04Z",
+ "count": 100,
  "videos": [
   {
    "id": "yFdJJow8MyY",
@@ -8,6 +8,19 @@
    "channel": "김천시(feat. 김밥천국 아님)",
    "url": "https://www.youtube.com/watch?v=yFdJJow8MyY",
    "thumb": "https://i.ytimg.com/vi/yFdJJow8MyY/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-10",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "qW7I65fwizM",
+   "title": "신데렐라는 김성근 감독님 사랑해",
+   "channel": "하순모주",
+   "url": "https://www.youtube.com/watch?v=qW7I65fwizM",
+   "thumb": "https://i.ytimg.com/vi/qW7I65fwizM/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-10-10",
    "last_shared": "2026-10-10",
