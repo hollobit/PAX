@@ -1,7 +1,176 @@
 {
- "updated_at": "2026-10-10T14:34:05Z",
- "count": 872,
+ "updated_at": "2026-10-10T22:34:40Z",
+ "count": 885,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261010225607",
+   "title": "정부 주최 AI해킹 대회 12월 열린다...'ACDC' 예선 참가자 모집",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://zdnet.co.kr/view?no=20261010201449",
+   "title": "\"금융권 AI 해킹 대응\"…파이오링크, CTEM·웹방화벽 등 공급",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://zdnet.co.kr/view?no=20261010121050",
+   "title": "공무원 AI 플랫폼 탑재 LLM, 국산 4종·외산 6종…삼성SDS·네이버 구축",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.ppss.kr/news/articleView.html?idxno=314404",
+   "title": "지자체 도입 시 주민 무료... 투게더7500, AI 영어 학습 '청킹 영어말하기' 보급",
+   "outlet": "ㅍㅍㅅㅅ PPSS",
+   "published": "2026-10-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216117",
+   "title": "앤트로픽 AI, 경찰 미제사건 제보 사이트에 '허위 제보' 소동",
+   "outlet": "AI타임스",
+   "published": "2026-10-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216107",
+   "title": "MS, 에이전트 의사결정 특화 모델 ‘디시전-1’ 공개…오픈AI도 API 정식 출시",
+   "outlet": "AI타임스",
+   "published": "2026-10-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216097",
+   "title": "미국, 외국인 노동자 단속 강화…MS·어도비 영주권 신청 중단",
+   "outlet": "AI타임스",
+   "published": "2026-10-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://biz.heraldcorp.com/article/10898349",
+   "title": "테스트뮤 AI, 2026 가트너® 매직 쿼드런트™ 에이전틱 소프트웨어 품질 보증 플랫폼 부문 리더로 선정",
+   "outlet": "헤럴드경제",
+   "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-11-px-자율주행-휠체어-책임",
+   "title": "[공공AX 네트워크] 자율주행 휠체어 앞에 놓인 책임과 규제",
+   "outlet": "akwiki.org",
+   "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-11-px-공공-ax-사업-입찰-현장",
+   "title": "[공공AX 네트워크] 공공 AX 사업 현장의 업체 선정과 예산 고민",
+   "outlet": "akwiki.org",
+   "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-11-px-개인정보-탐지-ai-dlp",
+   "title": "[공공AX 네트워크] 룰베이스 다음의 LLM과 지자체 참가자의 AI DLP 수요",
+   "outlet": "akwiki.org",
+   "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-11-cross-직접-만든-도구-오픈소스-공개",
+   "title": "[3개 방 공통] 세 방에서 오간 오픈소스 공개와 공유",
+   "outlet": "akwiki.org",
+   "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-11-cross-닷-실사용-작업-소실과-연동",
+   "title": "[에르메스단·공공AX 네트워크] 닷으로 불린 서비스의 작업 소실 사례와 연동 소식",
+   "outlet": "akwiki.org",
+   "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2",
    "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
