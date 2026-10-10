@@ -1,7 +1,189 @@
 {
- "updated_at": "2026-10-09T14:35:38Z",
- "count": 857,
+ "updated_at": "2026-10-10T06:35:28Z",
+ "count": 870,
  "articles": [
+  {
+   "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2",
+   "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+   "outlet": "Google",
+   "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/RPR20261007005900353",
+   "title": "부산 남구, '인공지능(AI)과 함께하는 스마트 행정' 직장교육 개최",
+   "outlet": "연합뉴스",
+   "published": "2026-10-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-10",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261007189000003",
+   "title": "SK하이닉스, AI환경연구소 설립한다…반도체 환경문제 선제대응",
+   "outlet": "연합뉴스",
+   "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-10",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.nocutnews.co.kr/news/6589400",
+   "title": "경북도, 'AI 돌봄 로봇' 중간 점검…어린이집 등에 127대 보급",
+   "outlet": "노컷뉴스",
+   "published": "2026-10-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-10",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000021397",
+   "title": "[단독] ‘공공기관 AI’ 성과는 뻥튀기, 예산은 누락…공시 기준이 없다",
+   "outlet": "국민일보",
+   "published": "2026-10-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-10",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=706181",
+   "title": "AI가 암호 깰 수 있다고? 카르다노 창업자 \"비탈릭의 주장은 근거 없는 추측\"",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-10",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42241",
+   "title": "범용 AI 에이전트 ‘제미나이 에이전트’ 공개…구글 클라우드, 기업 업무 전 과정 자동화",
+   "outlet": "인공지능신문",
+   "published": "2026-10-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-10",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216101",
+   "title": "\"오픈소스 취약점 AI가 잡는다\"...앤트로픽, 무료 보안 검사 도구 공개",
+   "outlet": "AI타임스",
+   "published": "2026-10-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-10",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216095",
+   "title": "앤트로픽, ‘클로드 대시보드·모션’ 공개…\"기업 데이터 분석·영상 제작\"",
+   "outlet": "AI타임스",
+   "published": "2026-10-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-10",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216081",
+   "title": "저커버그 부부의 바이오허브, 미 정부·구글과 2.4조 AI 생물학 데이터 구축",
+   "outlet": "AI타임스",
+   "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-10",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.110.go.kr/data/counsel.do",
+   "title": "자주묻는질문 < 자료마당",
+   "outlet": "110.go.kr",
+   "published": "",
+   "kind": "공고·안내",
+   "shares": 1,
+   "first_shared": "2026-10-10",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-10-px-신규-공무원-지식창고",
+   "title": "[공공AX 네트워크] 신규 공무원용 지식창고 웹사이트 사례",
+   "outlet": "akwiki.org",
+   "published": "2026-10-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-10",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-10-px-공공기관-ai-도입-벽",
+   "title": "[공공AX 네트워크] 도구는 막히고 역량은 갈리는 공직의 AI",
+   "outlet": "akwiki.org",
+   "published": "2026-10-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-10",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-10-cross-촬영본에-ai-섞는-영상-제작",
+   "title": "[3개 방 공통] 촬영본에 AI를 섞는 영상 제작법",
+   "outlet": "akwiki.org",
+   "published": "2026-10-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-10",
+   "last_shared": "2026-10-10",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261008171002",
    "title": "GIGABYTE AI TOP ATOM 64GB 통합 메모리 버전, 데스크톱 AI 개발 가능성 확대",
@@ -527,19 +709,6 @@
    "title": "[속보] 누리호, 역대 최다 ‘위성 15기’ 싣고 날아올랐다…1185초 비행 개시",
    "outlet": "naver.me",
    "published": "",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-10-07",
-   "last_shared": "2026-10-07",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2",
-   "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
-   "outlet": "Google",
-   "published": "2026-10-06",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-07",
