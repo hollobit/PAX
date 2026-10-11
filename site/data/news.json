@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-11T06:35:09Z",
- "count": 889,
+ "updated_at": "2026-10-11T14:34:28Z",
+ "count": 892,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261010225607",
@@ -33,6 +33,19 @@
    "title": "공무원 AI 플랫폼 탑재 LLM, 국산 4종·외산 6종…삼성SDS·네이버 구축",
    "outlet": "zdnet.co.kr",
    "published": "2026-10-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.segye.com/newsView/20261011511992?OutUrl=naver",
+   "title": "[단독] 정보보안 예산 줄인 한전… 직원 개인정보 무더기 ‘홍콩’ 유출",
+   "outlet": "세계일보",
+   "published": "2026-10-11",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-11",
@@ -159,6 +172,19 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-10-11-px-폐쇄망-보안-논쟁",
+   "title": "[공공AX 네트워크] 폐쇄망은 정말 안전한가",
+   "outlet": "akwiki.org",
+   "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-11-px-자율주행-휠체어-책임",
    "title": "[공공AX 네트워크] 자율주행 휠체어 앞에 놓인 책임과 규제",
    "outlet": "akwiki.org",
@@ -187,6 +213,19 @@
   {
    "url": "https://akwiki.org/article/2026-10-11-px-개인정보-탐지-ai-dlp",
    "title": "[공공AX 네트워크] 룰베이스 다음의 LLM과 지자체 참가자의 AI DLP 수요",
+   "outlet": "akwiki.org",
+   "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-11-cross-코덱스-사용량-리셋-반응",
+   "title": "[3개 방 공통] 코덱스 사용량 일괄 리셋을 둘러싼 세 방의 셈법",
    "outlet": "akwiki.org",
    "published": "2026-10-11",
    "kind": "기사",
