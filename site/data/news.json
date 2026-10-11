@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-10T22:34:40Z",
- "count": 885,
+ "updated_at": "2026-10-11T06:35:09Z",
+ "count": 889,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261010225607",
@@ -46,6 +46,58 @@
    "title": "지자체 도입 시 주민 무료... 투게더7500, AI 영어 학습 '청킹 영어말하기' 보급",
    "outlet": "ㅍㅍㅅㅅ PPSS",
    "published": "2026-10-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.khan.co.kr/article/202610111100011",
+   "title": "[단독] 480억 들여 명장 기술 AI로 만드는데 월 66만 원에 넘기라고?···보상은 ‘헐값’ 우려",
+   "outlet": "경향신문",
+   "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.hankookilbo.com/news/article/amp/A2026082009050002783",
+   "title": "오픈AI \"내년 상장, 우리의 경주 한다\"...기업가치 방어에 집중-경제ㅣ한국일보",
+   "outlet": "hankookilbo.com",
+   "published": "2026-08-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.edaily.co.kr/News/Read?newsId=01397286645611936&mediaCodeNo=257",
+   "title": "[단독] “AI 인재 키운다며 104억 썼는데”…취업자 AI 업무 하는지도 몰라",
+   "outlet": "이데일리",
+   "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-11",
+   "last_shared": "2026-10-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.boannews.com/news/articleView.html?idxno=146295",
+   "title": "[단독] 또 터진 IT 서비스 공급망 해킹? 학회 홈페이지 6곳 개인정보 유출",
+   "outlet": "보안뉴스",
+   "published": "2026-10-11",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-11",
