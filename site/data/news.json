@@ -1,7 +1,111 @@
 {
- "updated_at": "2026-10-11T14:34:28Z",
- "count": 892,
+ "updated_at": "2026-10-11T22:40:18Z",
+ "count": 900,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261011103111",
+   "title": "KISA, 나주 신관 준공...AI보안산업본부 등 입주",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-12",
+   "last_shared": "2026-10-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newstown.co.kr/news/articleView.html?idxno=718149",
+   "title": "평택도시공사, AI 교통데이터 혁신으로 행안부장관상",
+   "outlet": "뉴스타운",
+   "published": "2026-10-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-12",
+   "last_shared": "2026-10-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.hani.co.kr/arti/opinion/column/1281860.html",
+   "title": "AI 에이전트 시대 ‘판단의 힘’ [뉴노멀-실리콘밸리]",
+   "outlet": "한겨레",
+   "published": "2026-10-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-12",
+   "last_shared": "2026-10-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610111300038202",
+   "title": "BC카드, 카드사 최초 챗GPT 연계 쇼핑 서비스 출시",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-12",
+   "last_shared": "2026-10-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=706239",
+   "title": "어도비 복제한 개발자, 이번엔 클로드로 엑셀·워드·파워포인트 대체 앱 공개",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-12",
+   "last_shared": "2026-10-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=706230",
+   "title": "엔비디아, 오픈웨이트 AI에 점점 과감한 베팅...리플렉션AI 인수까지 검토",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-12",
+   "last_shared": "2026-10-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.bloter.net/news/articleView.html?idxno=675336",
+   "title": "단순 시청에서 밀착 코칭으로…딥브레인AI가 그리는 에듀테크",
+   "outlet": "블로터",
+   "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-12",
+   "last_shared": "2026-10-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42252",
+   "title": "중기부·국세청, 2,559개 AI 중소·스타트업 집중 지원 ...“연계형 성장지원”으로",
+   "outlet": "인공지능신문",
+   "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-12",
+   "last_shared": "2026-10-12",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261010225607",
    "title": "정부 주최 AI해킹 대회 12월 열린다...'ACDC' 예선 참가자 모집",

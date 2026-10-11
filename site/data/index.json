@@ -1,39 +1,39 @@
 {
- "generated_at": "2026-10-11",
+ "generated_at": "2026-10-12",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 524,
+ "total_cases": 526,
  "total_champions": 225,
  "community": {
   "members": 2453,
-  "kakao_week": 4661,
-  "kakao_total_observed": 49177,
-  "threads_observed": 336
+  "kakao_week": 3836,
+  "kakao_total_observed": 49190,
+  "threads_observed": 337
  },
  "certified_champions": 5,
  "unattributed_cases": 110,
  "ax_distribution": {
-  "AI-Ready": 343,
-  "AI-Enabled": 155,
+  "AI-Ready": 344,
+  "AI-Enabled": 156,
   "AX 단계 외": 20,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
- "c_axis_mean": 0.94,
+ "c_axis_mean": 0.95,
  "p_distribution": {
   "P0": 169,
-  "P1": 336,
+  "P1": 338,
   "P2": 19
  },
  "model_dependency": {
   "미확인": 65,
   "없음(비LLM)": 253,
-  "해외 오픈웨이트(로컬)": 29,
+  "해외 오픈웨이트(로컬)": 30,
   "혼합": 14,
   "해외 상용 API": 62,
   "모델 중립(BYO)": 80,
   "국산 독자모델": 6,
-  "미상": 14,
+  "미상": 15,
   "국산 오픈웨이트": 1
  },
  "model_stats": {
@@ -327,7 +327,7 @@
    },
    {
     "name": "Gemma",
-    "n": 10,
+    "n": 11,
     "variants": [
      "Gemma 4",
      "Gemma 4 E2B(Ollama 기본 예시)",
@@ -335,6 +335,7 @@
      "Gemma 4 E2B(Ollama, 선택형 요약)",
      "Gemma 4 E4B(Ollama 권장)",
      "Gemma 4 E4B(Ollama)",
+     "Gemma(gemma4:e2b, Ollama 로컬)",
      "Gemma4 e2b",
      "LLM42-Gemma4(멀티모달 전환)"
     ],
@@ -378,6 +379,10 @@
      {
       "id": "c161b0158876229b",
       "title": "온나라 sAIde — 문서등록대장을 열어 보지 않고 목록에서 공문을 AI로 요약·분석하고 첨부를 일괄 내려받는 엣지 사이드패널"
+     },
+     {
+      "id": "14db134a31c11bf2",
+      "title": "DataFinder AI — 기획서를 넣으면 로컬 AI가 맞는 공공데이터 API와 연동 코드를 추천하는 도구"
      }
     ],
     "domestic": false
@@ -504,6 +509,24 @@
      {
       "id": "d7422aa63cfaeb0e",
       "title": "Stream-Record — 의회 중계 영상의 한국어 녹음·전사·회의록 작성을 윈도우 PC에서 끝내는 앱"
+     }
+    ],
+    "domestic": false
+   },
+   {
+    "name": "bge-m3",
+    "n": 2,
+    "variants": [
+     "bge-m3"
+    ],
+    "cases": [
+     {
+      "id": "204ab9b684be3cca",
+      "title": "myAI — 로컬 모델로 도는 업무 비서 웹앱"
+     },
+     {
+      "id": "14db134a31c11bf2",
+      "title": "DataFinder AI — 기획서를 넣으면 로컬 AI가 맞는 공공데이터 API와 연동 코드를 추천하는 도구"
      }
     ],
     "domestic": false
@@ -670,20 +693,6 @@
      }
     ],
     "domestic": true
-   },
-   {
-    "name": "Mi:dm 2.0 Mini 2.3B(Q4 로컬)",
-    "n": 1,
-    "variants": [
-     "Mi:dm 2.0 Mini 2.3B(Q4 로컬)"
-    ],
-    "cases": [
-     {
-      "id": "95635604261b7867",
-      "title": "국산 경량 오픈모델 3종 조례 심사 실측 — 전패, 그리고 답이 흔들린다"
-     }
-    ],
-    "domestic": false
    }
   ],
   "domestic_cases": [
@@ -786,8 +795,8 @@
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
-    "n": 29,
-    "specified": 16
+    "n": 30,
+    "specified": 17
    },
    "혼합": {
     "n": 14,
@@ -806,7 +815,7 @@
     "specified": 5
    },
    "미상": {
-    "n": 14,
+    "n": 15,
     "specified": 1
    },
    "국산 오픈웨이트": {
@@ -1487,11 +1496,11 @@
    },
    {
     "dep": "해외 오픈웨이트(로컬)",
-    "n": 29,
+    "n": 30,
     "families": [
      {
       "name": "Gemma",
-      "n": 8,
+      "n": 9,
       "cases": [
        {
         "id": "2c14f2adaa83a00e",
@@ -1524,6 +1533,10 @@
        {
         "id": "c161b0158876229b",
         "title": "온나라 sAIde — 문서등록대장을 열어 보지 않고 목록에서 공문을 AI로 요약·분석하고 첨부를 일괄 내려받는 엣지 사이드패널"
+       },
+       {
+        "id": "14db134a31c11bf2",
+        "title": "DataFinder AI — 기획서를 넣으면 로컬 AI가 맞는 공공데이터 API와 연동 코드를 추천하는 도구"
        }
       ],
       "domestic": false,
@@ -1533,6 +1546,7 @@
        "Gemma 4 E2B(Ollama, 선택형 요약)",
        "Gemma 4 E4B(Ollama 권장)",
        "Gemma 4 E4B(Ollama)",
+       "Gemma(gemma4:e2b, Ollama 로컬)",
        "Gemma4 e2b"
       ]
      },
@@ -1569,6 +1583,24 @@
        "Ollama 로컬 모델(멀티 호스트)",
        "Ollama(로컬)",
        "WebGPU 브라우저 모델"
+      ]
+     },
+     {
+      "name": "bge-m3",
+      "n": 2,
+      "cases": [
+       {
+        "id": "204ab9b684be3cca",
+        "title": "myAI — 로컬 모델로 도는 업무 비서 웹앱"
+       },
+       {
+        "id": "14db134a31c11bf2",
+        "title": "DataFinder AI — 기획서를 넣으면 로컬 AI가 맞는 공공데이터 API와 연동 코드를 추천하는 도구"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "bge-m3"
       ]
      },
      {
@@ -1619,20 +1651,6 @@
       ]
      },
      {
-      "name": "bge-m3",
-      "n": 1,
-      "cases": [
-       {
-        "id": "204ab9b684be3cca",
-        "title": "myAI — 로컬 모델로 도는 업무 비서 웹앱"
-       }
-      ],
-      "domestic": false,
-      "variants": [
-       "bge-m3"
-      ]
-     },
-     {
       "name": "LFM2.5 230M/1.2B(로컬)",
       "n": 1,
       "cases": [
@@ -1651,17 +1669,17 @@
   ]
  },
  "domestic_model_rate": 0.062,
- "local_model_rate": 0.268,
- "model_known": 112,
- "license_tagged": 402,
- "license_stated_rate": 0.483,
- "gitlab_cases": 275,
+ "local_model_rate": 0.274,
+ "model_known": 113,
+ "license_tagged": 404,
+ "license_stated_rate": 0.48,
+ "gitlab_cases": 277,
  "gitlab_mirror_pairs": 40,
- "gitlab_open_rate": 0.145,
- "mcp_cases": 92,
+ "gitlab_open_rate": 0.144,
+ "mcp_cases": 91,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 442,
+  "미확인": 444,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1669,28 +1687,28 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.758
+  "feedback": 0.759
  },
  "maintenance_distribution": {
-  "활발": 319,
-  "정체": 40,
+  "활발": 317,
+  "정체": 58,
   "방치": 13
  },
- "stars_collected": 372,
+ "stars_collected": 388,
  "repo_stats": {
   "gitlab": {
-   "count": 275,
-   "starred": 259,
-   "stars_sum": 463,
+   "count": 277,
+   "starred": 274,
+   "stars_sum": 624,
    "maintenance": {
-    "활발": 242,
-    "정체": 19
+    "활발": 243,
+    "정체": 31
    },
    "top": [
     {
      "id": "8ff758ac1d5e40eb",
      "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
-     "stars": 14,
+     "stars": 15,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "류승인"
@@ -1728,6 +1746,14 @@
      "developer": "정솔현"
     },
     {
+     "id": "ac09bd2e1c0fbb29",
+     "title": "온AI Work — 공무원 보고서 AI 작성 도구",
+     "stars": 8,
+     "maintenance": "활발",
+     "license": "MIT",
+     "developer": "정준우"
+    },
+    {
      "id": "d6c35b2999da8ca0",
      "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱",
      "stars": 8,
@@ -1752,14 +1778,6 @@
      "developer": "우성균"
     },
     {
-     "id": "ac09bd2e1c0fbb29",
-     "title": "온AI Work — 공무원 보고서 AI 작성 도구",
-     "stars": 7,
-     "maintenance": "활발",
-     "license": "MIT",
-     "developer": "정준우"
-    },
-    {
      "id": "8c5458af8f13435d",
      "title": "한글 AI 도우미 — 로컬 LLM 웹한글 보고서 확장",
      "stars": 7,
@@ -1771,18 +1789,18 @@
   },
   "github": {
    "count": 155,
-   "starred": 148,
-   "stars_sum": 284494,
+   "starred": 152,
+   "stars_sum": 299376,
    "maintenance": {
-    "활발": 113,
-    "정체": 24,
+    "정체": 30,
+    "활발": 110,
     "방치": 13
    },
    "top": [
     {
      "id": "c54ee4b5fb3ee4c5",
      "title": "Orca — 병렬 에이전트 플릿을 부리는 에이전트 개발 환경(ADE)",
-     "stars": 84943,
+     "stars": 89711,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "stablyai"
@@ -1790,7 +1808,7 @@
     {
      "id": "4f136eeeea72fe65",
      "title": "Archify — 코드베이스·시스템 설명을 검증 가능한 다이어그램으로 바꾸는 에이전트 스킬",
-     "stars": 77399,
+     "stars": 82031,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "tt-a1i"
@@ -1798,7 +1816,7 @@
     {
      "id": "2085370092f99007",
      "title": "God's Eye View — 항공기·선박·위성·지진·공개 카메라를 한 3D 지구본에 띄우는 오픈소스 공간정보 관제 참고 도구",
-     "stars": 47498,
+     "stars": 51538,
      "maintenance": "활발",
      "license": "Other",
      "developer": "bilawalsidhu"
@@ -1806,7 +1824,7 @@
     {
      "id": "f108979f0d8b2009",
      "title": "book-to-skill — 기술 서적 PDF를 Claude Code 스킬로 바꾸는 도구",
-     "stars": 33688,
+     "stars": 34549,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "virgiliojr94"
@@ -1814,7 +1832,7 @@
     {
      "id": "b64e832490a6c814",
      "title": "MCP Inspector — MCP 서버를 눈으로 검사하는 공식 테스트 도구",
-     "stars": 11018,
+     "stars": 11056,
      "maintenance": "활발",
      "license": "명시 없음",
      "developer": "modelcontextprotocol"
@@ -1822,7 +1840,7 @@
     {
      "id": "2f4ed1e68a6464c5",
      "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
-     "stars": 7763,
+     "stars": 7870,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "NomaDamas"
@@ -1830,7 +1848,7 @@
     {
      "id": "0292062a6328545a",
      "title": "public-apis-4Kr — 한국 공개 API 300+ 커뮤니티 큐레이션 목록",
-     "stars": 3267,
+     "stars": 3279,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "yoobin_mion"
@@ -1838,7 +1856,7 @@
     {
      "id": "157289f6e0cd7fd4",
      "title": "가재코드 치트시트 — 코딩 에이전트 사용법을 한 장으로 정리해 공식 저장소에 반영된 커뮤니티 기여물",
-     "stars": 2906,
+     "stars": 2946,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "Bellman"
@@ -1846,7 +1864,7 @@
     {
      "id": "43dc7f4ab2500260",
      "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
-     "stars": 2634,
+     "stars": 2670,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "류승인"
@@ -1854,7 +1872,7 @@
     {
      "id": "8d5d9da284a4f810",
      "title": "map3d — 오픈스트리트맵으로 도시를 3D 건물·도로 지도로 만들어 GLB로 내보내는 오픈소스",
-     "stars": 2438,
+     "stars": 2598,
      "maintenance": "정체",
      "license": "MIT",
      "developer": "cartesiancs"
@@ -1863,7 +1881,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 208,
+  "명시 없음": 210,
   "MIT": 127,
   "Apache-2.0": 33,
   "Other": 16,
@@ -1879,7 +1897,7 @@
  "license_matrix": {
   "명시 없음": {
    "github": 54,
-   "gitlab": 154
+   "gitlab": 156
   },
   "MIT": {
    "github": 74,
@@ -1936,30 +1954,30 @@
    "stated": 4
   },
   "gitlab": {
-   "total": 242,
+   "total": 244,
    "stated": 88
   }
  },
  "mcp_stats": {
-  "total": 92,
+  "total": 91,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
    "Server": 79,
    "Client/Host": 7,
-   "Unknown/None": 5
+   "Unknown/None": 4
   },
   "c_grades": {
    "C0": 68,
    "C2": 9,
    "C3": 1,
-   "C1": 14
+   "C1": 13
   },
   "maintenance": {
    "활발": 51,
-   "방치": 13,
-   "정체": 12
+   "정체": 15,
+   "방치": 13
   }
  },
  "mirror_pair_cases": [

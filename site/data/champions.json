@@ -2575,6 +2575,7 @@
    "category": "공직(소속 미상)",
    "category_basis": "cases",
    "cases": [
+    "14db134a31c11bf2",
     "c161b0158876229b",
     "c110733ddf085d0d",
     "f5668f521bb1d50a",
@@ -2588,7 +2589,7 @@
     "204ab9b684be3cca"
    ],
    "stats": {
-    "case_count": 11,
+    "case_count": 12,
     "top_ax": 2,
     "stars": 0
    }
@@ -5565,6 +5566,7 @@
    "category": "중앙행정기관",
    "category_basis": "affiliation",
    "cases": [
+    "a4b9d81df99626d2",
     "09f8bff3e9cc3b02",
     "2633ef9fbb2eeb96",
     "0dd22d6d0375bc39",
@@ -5574,7 +5576,7 @@
     "85e155bd270cafc9"
    ],
    "stats": {
-    "case_count": 7,
+    "case_count": 8,
     "top_ax": 2,
     "stars": 0
    }
