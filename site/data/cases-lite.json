@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-12T07:36:28+09:00",
+ "updated_at": "2026-10-12T15:34:11+09:00",
  "cases": [
   {
    "id": "a2eaaf9f454da37f",
@@ -1270,7 +1270,7 @@
   },
   {
    "id": "0d94258abac0b093",
-   "title": "TaskCalendar — 실무자용 Windows 일정·메모 관리 앱",
+   "title": "바로업무(TaskCalendar) — 일정·메모·문서·업무 관리와 AI 업무 도우미를 갖춘 실무자용 Windows 앱",
    "org": "공직 현장(개인 개발)",
    "org_type": "공직 개인",
    "region": "경기"
@@ -3450,6 +3450,12 @@
    "title": "DataFinder AI — 기획서를 넣으면 로컬 AI가 맞는 공공데이터 API와 연동 코드를 추천하는 도구",
    "org": "공직 현장(개인 개발)",
    "org_type": "공직 개인"
+  },
+  {
+   "id": "89ca93850e2851c7",
+   "title": "AI Doc Ready — 행안부 AI 친화적 보고서 원칙으로 HWPX·마크다운 보고서를 검사하는 도구",
+   "org": "로보코(ROBOCO)",
+   "org_type": "민간(참고)"
   }
  ]
 }

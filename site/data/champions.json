@@ -5359,7 +5359,7 @@
    ],
    "stats": {
     "case_count": 5,
-    "top_ax": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -6459,6 +6459,12 @@
    "title": "공공데이터 API 검색 — 공공데이터포털 오픈 API 1.2만 개를 분야·지역·승인 조건으로 찾는 사이트",
    "org": "rimikimi studios",
    "url": "https://public.rimikimi.com/"
+  },
+  {
+   "id": "89ca93850e2851c7",
+   "title": "AI Doc Ready — 행안부 AI 친화적 보고서 원칙으로 HWPX·마크다운 보고서를 검사하는 도구",
+   "org": "로보코(ROBOCO)",
+   "url": "https://github.com/roboco-io/aidocready"
   }
  ]
 }

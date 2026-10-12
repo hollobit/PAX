@@ -2,19 +2,19 @@
  "generated_at": "2026-10-12",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 526,
+ "total_cases": 527,
  "total_champions": 225,
  "community": {
-  "members": 2453,
-  "kakao_week": 3836,
-  "kakao_total_observed": 49190,
+  "members": 2451,
+  "kakao_week": 4030,
+  "kakao_total_observed": 49384,
   "threads_observed": 337
  },
  "certified_champions": 5,
- "unattributed_cases": 110,
+ "unattributed_cases": 111,
  "ax_distribution": {
-  "AI-Ready": 344,
-  "AI-Enabled": 156,
+  "AI-Ready": 343,
+  "AI-Enabled": 158,
   "AX 단계 외": 20,
   "AI-First": 5,
   "AI-Native 계획": 1
@@ -22,18 +22,18 @@
  "c_axis_mean": 0.95,
  "p_distribution": {
   "P0": 169,
-  "P1": 338,
+  "P1": 339,
   "P2": 19
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 253,
+  "없음(비LLM)": 252,
   "해외 오픈웨이트(로컬)": 30,
   "혼합": 14,
   "해외 상용 API": 62,
-  "모델 중립(BYO)": 80,
+  "모델 중립(BYO)": 81,
   "국산 독자모델": 6,
-  "미상": 15,
+  "미상": 16,
   "국산 오픈웨이트": 1
  },
  "model_stats": {
@@ -791,7 +791,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 253,
+    "n": 252,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -807,7 +807,7 @@
     "specified": 47
    },
    "모델 중립(BYO)": {
-    "n": 80,
+    "n": 81,
     "specified": 4
    },
    "국산 독자모델": {
@@ -815,7 +815,7 @@
     "specified": 5
    },
    "미상": {
-    "n": 15,
+    "n": 16,
     "specified": 1
    },
    "국산 오픈웨이트": {
@@ -1671,15 +1671,15 @@
  "domestic_model_rate": 0.062,
  "local_model_rate": 0.274,
  "model_known": 113,
- "license_tagged": 404,
- "license_stated_rate": 0.48,
+ "license_tagged": 405,
+ "license_stated_rate": 0.481,
  "gitlab_cases": 277,
- "gitlab_mirror_pairs": 40,
- "gitlab_open_rate": 0.144,
+ "gitlab_mirror_pairs": 41,
+ "gitlab_open_rate": 0.148,
  "mcp_cases": 91,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 444,
+  "미확인": 445,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1788,12 +1788,12 @@
    ]
   },
   "github": {
-   "count": 155,
+   "count": 157,
    "starred": 152,
    "stars_sum": 299376,
    "maintenance": {
     "정체": 30,
-    "활발": 110,
+    "활발": 111,
     "방치": 13
    },
    "top": [
@@ -1882,7 +1882,7 @@
  },
  "license_distribution": {
   "명시 없음": 210,
-  "MIT": 127,
+  "MIT": 128,
   "Apache-2.0": 33,
   "Other": 16,
   "GNU AGPLv3": 5,
@@ -1900,7 +1900,7 @@
    "gitlab": 156
   },
   "MIT": {
-   "github": 74,
+   "github": 75,
    "gitlab": 52
   },
   "Apache-2.0": {
@@ -1946,8 +1946,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 143,
-   "stated": 101
+   "total": 144,
+   "stated": 102
   },
   "github-pages": {
    "total": 16,
@@ -2112,6 +2112,12 @@
    "title": "AI지원담당 — 공공 실무용 로컬 AI 메신저 MVP (공공 AX 로컬 시리즈 1)",
    "github": "https://github.com/obundh/gonggong-ax-local-series-1-AISupportMessnger",
    "gitlab": "https://gitlab.aigov.go.kr/tyui22/gonggong-ax-local-series-1-AISupportMessnger"
+  },
+  {
+   "id": "0d94258abac0b093",
+   "title": "바로업무(TaskCalendar) — 일정·메모·문서·업무 관리와 AI 업무 도우미를 갖춘 실무자용 Windows 앱",
+   "github": "https://github.com/wookoon2024/TaskCalendar",
+   "gitlab": "https://gitlab.aigov.go.kr/westock/TaskCalendar"
   },
   {
    "id": "9c850ff3e7429a24",

@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-11T22:40:18Z",
- "count": 900,
+ "updated_at": "2026-10-12T06:34:56Z",
+ "count": 902,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261011103111",
@@ -20,6 +20,19 @@
    "title": "평택도시공사, AI 교통데이터 혁신으로 행안부장관상",
    "outlet": "뉴스타운",
    "published": "2026-10-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-12",
+   "last_shared": "2026-10-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.hankyung.com/article/202607318046g",
+   "title": "\"10월이 벌써 두렵다\"…이재용 특명에 삼성 임원들 '비상' [김대영의 노무스쿨]",
+   "outlet": "한국경제",
+   "published": "2026-08-01",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-12",
@@ -72,6 +85,19 @@
    "title": "엔비디아, 오픈웨이트 AI에 점점 과감한 베팅...리플렉션AI 인수까지 검토",
    "outlet": "디지털투데이 (DigitalToday)",
    "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-12",
+   "last_shared": "2026-10-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.ctee.com.tw/news/20261012700069-439901",
+   "title": "CPU漲聲不斷 英特爾、高通、AMD接力調價 台積電竟是幕後最大推手！",
+   "outlet": "工商時報",
+   "published": "2026-10-12",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-12",
