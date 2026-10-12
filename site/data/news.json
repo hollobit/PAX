@@ -1,7 +1,111 @@
 {
- "updated_at": "2026-10-12T14:34:31Z",
- "count": 905,
+ "updated_at": "2026-10-12T22:34:37Z",
+ "count": 914,
  "articles": [
+  {
+   "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4086889",
+   "title": "경북교육청 AI 조례 개정 추진…디지털 격차·오남용 대응",
+   "outlet": "경북일보",
+   "published": "2026-10-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4086881",
+   "title": "경북교육청, 수업·행정업무 개선한 ‘웍스 AI’ 사례 공모",
+   "outlet": "경북일보",
+   "published": "2026-10-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610120909580969",
+   "title": "안랩, 한국연구재단 업무망에 N2SF 적용…생성형 AI 활용 지원",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=706576",
+   "title": "메타, 프런티어 AI 모델 '뮤즈 원더' 공개...앤트로픽·오픈AI 정조준",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42270",
+   "title": "구글, 핏빗 에어·엣지에 AI 건강 관리 강화…운동 자동 감지 100종 이상으로 확대",
+   "outlet": "인공지능신문",
+   "published": "2026-10-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216170",
+   "title": "\"말 한마디로 작동하는 3D 기계 그려\"...클로드 코드용 '아나토미' 공개",
+   "outlet": "AI타임스",
+   "published": "2026-10-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216156",
+   "title": "네이버클라우드, 베트남 FPT와 아태 지역 AI 팩토리 사업 확대",
+   "outlet": "AI타임스",
+   "published": "2026-10-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4438703",
+   "title": "기후부-과기부, AI 폐기물 처리 돕는 앱 시범 운영 나선다",
+   "outlet": "연합인포맥스",
+   "published": "2026-10-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261011103111",
    "title": "KISA, 나주 신관 준공...AI보안산업본부 등 입주",
@@ -163,6 +267,19 @@
    "title": "Jeff Bezos says a 3-day workweek and more single-income households are on the way thanks to AI: ‘It’s going to be difficult to hire people’",
    "outlet": "Yahoo Finance",
    "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-12",
+   "last_shared": "2026-10-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://azure.microsoft.com/en-us/blog/deep-dive-into-azure-maia-300-architecture",
+   "title": "Deep dive into Azure Maia 300 architecture",
+   "outlet": "Microsoft Azure Blog",
+   "published": "2026-10-12",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-12",
