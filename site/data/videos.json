@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-10T14:34:04Z",
- "count": 100,
+ "updated_at": "2026-10-12T14:34:28Z",
+ "count": 101,
  "videos": [
+  {
+   "id": "rwCDPZP_Zk4",
+   "title": "소프트웨어는 끝났다는 REA 직접 검증해봤습니다 | GIthub 트렌딩 1위",
+   "channel": "개발동생",
+   "url": "https://www.youtube.com/watch?v=rwCDPZP_Zk4",
+   "thumb": "https://i.ytimg.com/vi/rwCDPZP_Zk4/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-12",
+   "last_shared": "2026-10-12",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "yFdJJow8MyY",
    "title": "???: 김천 홍보대사하면 이런 거 안 시킨댔잖아!",

@@ -6465,6 +6465,12 @@
    "title": "AI Doc Ready — 행안부 AI 친화적 보고서 원칙으로 HWPX·마크다운 보고서를 검사하는 도구",
    "org": "로보코(ROBOCO)",
    "url": "https://github.com/roboco-io/aidocready"
+  },
+  {
+   "id": "266b6ba96ddeb013",
+   "title": "삼호 라이프 — 울산 남구 삼호동 생활상황판(버스·날씨·도로·의료·복지자원·생활정보 한 화면)",
+   "org": "울산광역시 남구 삼호동행정복지센터",
+   "url": "https://samho-life.vercel.app/"
   }
  ]
 }

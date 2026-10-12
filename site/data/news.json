@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-12T06:34:56Z",
- "count": 902,
+ "updated_at": "2026-10-12T14:34:31Z",
+ "count": 905,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261011103111",
@@ -20,6 +20,19 @@
    "title": "평택도시공사, AI 교통데이터 혁신으로 행안부장관상",
    "outlet": "뉴스타운",
    "published": "2026-10-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-12",
+   "last_shared": "2026-10-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.hankyung.com/article/2026101144721",
+   "title": "\"일하면 손해\" 젊은 공무원들 짐 싸고…의사는 분만실 떠났다",
+   "outlet": "한국경제",
+   "published": "2026-10-11",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-12",
@@ -124,6 +137,32 @@
    "title": "중기부·국세청, 2,559개 AI 중소·스타트업 집중 지원 ...“연계형 성장지원”으로",
    "outlet": "인공지능신문",
    "published": "2026-10-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-12",
+   "last_shared": "2026-10-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.korea.kr/news/policyNewsView.do?newsId=148971656",
+   "title": "개인정보 반복·대규모 유출시 '매출액 10%' 내 징벌적 과징금",
+   "outlet": "정책브리핑",
+   "published": "2026-09-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-12",
+   "last_shared": "2026-10-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://finance.yahoo.com/technology/ai/articles/jeff-bezos-says-3-day-153637443.html",
+   "title": "Jeff Bezos says a 3-day workweek and more single-income households are on the way thanks to AI: ‘It’s going to be difficult to hire people’",
+   "outlet": "Yahoo Finance",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-12",
