@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-12T23:34:00+09:00",
+ "updated_at": "2026-10-13T10:19:38+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -15340,6 +15340,65 @@
    "title": "삼호 라이프 — 울산 남구 삼호동 생활상황판(버스·날씨·도로·의료·복지자원·생활정보 한 화면)",
    "date": "2026-10-12",
    "id": "266b6ba96ddeb013"
+  },
+  {
+   "collected_at": "2026-10-13",
+   "runtime_env": "브라우저만",
+   "link": "https://serithemage.github.io/korea-ai-foundation-model-verification/",
+   "task_category": "기획·정책",
+   "tags": [
+    "국가AI모델",
+    "파운데이션모델",
+    "검증",
+    "오픈소스"
+   ],
+   "case_class": "참고",
+   "model_dependency": "없음(비LLM)",
+   "title": "국가 AI 모델 From Scratch 검증 — 독자 AI 파운데이션 모델 2차 진출 3종의 학습 출발점 공개본 예비검증",
+   "case_url": "https://github.com/serithemage/korea-ai-foundation-model-verification",
+   "summary": "독자 AI 파운데이션 모델 사업 2차 평가에 진출한 세 모델의 공개본을 대상으로, 처음부터 학습했는지를 개발사 보고서·토크나이저 전체 비교·가중치 표본 유사도로 나눠 검증하고 확인한 근거와 미확인 사항을 구분해 공개한 보고서다. 공개본 예비검증이며 정부 평가나 사업 적격성 판정이 아님을 밝힌다.",
+   "org": "로보코(ROBOCO)",
+   "org_type": "민간(참고)",
+   "source": "kakao",
+   "date": "2026-10-12",
+   "id": "4de590125977ed61",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-10-13"
+  },
+  {
+   "collected_at": "2026-10-13",
+   "runtime_env": "브라우저만",
+   "link": "https://roboco.io/KSAT-AI-Benchmark/",
+   "task_category": "데이터·통계",
+   "tags": [
+    "벤치마크",
+    "모델비교",
+    "수능",
+    "비용"
+   ],
+   "case_class": "참고",
+   "model_dependency": "혼합",
+   "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교",
+   "models_used": [
+    "GPT-6 Astra",
+    "Claude Opus 5.5",
+    "Claude Fable 5.1",
+    "GPT-6.1 Sol",
+    "Claude Sonnet 5.5",
+    "Kimi K3",
+    "Claude Haiku 5.5"
+   ],
+   "case_url": "https://github.com/roboco-io/KSAT-AI-Benchmark",
+   "summary": "2026학년도 수능 국어·수학·영어 147문항을 AI 모델 11종에 풀게 해 정답률과 기권률, 풀이 시간, 토큰 사용량과 API 환산 비용을 함께 공개하고 문항별 답과 풀이를 열람하게 한 벤치마크다. 모르는 문제는 기권하게 하고 실행 오류도 숨기지 않아 기관이 업무용 모델을 고를 때 성능과 비용을 함께 비교하는 참고 자료가 된다.",
+   "org": "로보코(ROBOCO)",
+   "org_type": "민간(참고)",
+   "source": "kakao",
+   "date": "2026-10-12",
+   "id": "7c3c1b02b4a981ec",
+   "license": "Other",
+   "license_source": "github",
+   "license_checked": "2026-10-13"
   }
  ]
 }

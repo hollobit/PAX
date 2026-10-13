@@ -2,34 +2,34 @@
  "generated_at": "2026-10-13",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 528,
+ "total_cases": 530,
  "total_champions": 225,
  "community": {
-  "members": 2458,
-  "kakao_week": 4185,
-  "kakao_total_observed": 50146,
-  "threads_observed": 338
+  "members": 2461,
+  "kakao_week": 4399,
+  "kakao_total_observed": 50360,
+  "threads_observed": 339
  },
  "certified_champions": 5,
- "unattributed_cases": 112,
+ "unattributed_cases": 114,
  "ax_distribution": {
-  "AI-Ready": 344,
-  "AI-Enabled": 158,
+  "AI-Ready": 345,
+  "AI-Enabled": 159,
   "AX 단계 외": 20,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
  "c_axis_mean": 0.95,
  "p_distribution": {
-  "P0": 169,
-  "P1": 340,
+  "P0": 170,
+  "P1": 341,
   "P2": 19
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 253,
+  "없음(비LLM)": 254,
   "해외 오픈웨이트(로컬)": 30,
-  "혼합": 14,
+  "혼합": 15,
   "해외 상용 API": 62,
   "모델 중립(BYO)": 81,
   "국산 독자모델": 6,
@@ -40,12 +40,16 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 27,
+    "n": 28,
     "variants": [
      "Claude Code(BYO 구독)",
      "Claude Code(플러그인)",
      "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
      "Claude Code/Codex(플러그인)",
+     "Claude Fable 5.1",
+     "Claude Haiku 5.5",
+     "Claude Opus 5.5",
+     "Claude Sonnet 5.5",
      "Claude(대조·근거 작성)",
      "Claude(선택 기능)",
      "Codex CLI/Claude CLI(BYO 구독)",
@@ -160,13 +164,17 @@
      {
       "id": "fbdee1f08c2ca185",
       "title": "농해수위 국정감사 온톨로지 — 위원회 회의록을 발언·쟁점·이행약속 지식그래프로 엮어 국감 브리핑을 만드는 서비스"
+     },
+     {
+      "id": "7c3c1b02b4a981ec",
+      "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교"
      }
     ],
     "domestic": false
    },
    {
     "name": "GPT(OpenAI)",
-    "n": 16,
+    "n": 17,
     "variants": [
      "ChatGPT GPTs",
      "ChatGPT(팀계정)",
@@ -176,6 +184,7 @@
      "GPT-5.6 Luna(OpenRouter, 동의 시)",
      "GPT-5.6 Terra",
      "GPT-6 Astra",
+     "GPT-6.1 Sol",
      "OpenAI Codex",
      "OpenAI GPT 계열(예시 설정)",
      "OpenAI GPT-5(Responses API)",
@@ -251,6 +260,10 @@
      {
       "id": "48a2fe695d62b13f",
       "title": "소담 라이노 GH코드 Codex — Rhino 7 그래스호퍼 스크립트 노드 코드를 짜 주는 Codex 플러그인"
+     },
+     {
+      "id": "7c3c1b02b4a981ec",
+      "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교"
      }
     ],
     "domestic": false
@@ -791,7 +804,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 253,
+    "n": 254,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -799,8 +812,8 @@
     "specified": 17
    },
    "혼합": {
-    "n": 14,
-    "specified": 13
+    "n": 15,
+    "specified": 14
    },
    "해외 상용 API": {
     "n": 62,
@@ -932,8 +945,44 @@
    },
    {
     "dep": "혼합",
-    "n": 14,
+    "n": 15,
     "families": [
+     {
+      "name": "Claude/Codex(상용 에이전트)",
+      "n": 5,
+      "cases": [
+       {
+        "id": "acd684108227b9c2",
+        "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
+       },
+       {
+        "id": "9d19e64aa30f5332",
+        "title": "MiroFish-Ko 개인 수정판 — 로컬 LLM·Codex CLI로 돌리는 정책 여론 시뮬레이터"
+       },
+       {
+        "id": "8a47740d405286c4",
+        "title": "자치법규 정합성 실측 — 서울시 조례 942건의 법률 인용 2,996개를 현행 조문과 전수 대조"
+       },
+       {
+        "id": "133d7e9c594456be",
+        "title": "서울 자치구 조례 정합성 지도 — 본청과 25개 구 조례의 법률 인용을 현행 조문과 대조해 지도로"
+       },
+       {
+        "id": "7c3c1b02b4a981ec",
+        "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Claude Fable 5.1",
+       "Claude Haiku 5.5",
+       "Claude Opus 5.5",
+       "Claude Sonnet 5.5",
+       "Claude(대조·근거 작성)",
+       "Codex CLI/Claude CLI(BYO 구독)",
+       "상용 API 모드(Claude 등)"
+      ]
+     },
      {
       "name": "Gemini",
       "n": 4,
@@ -994,31 +1043,24 @@
       ]
      },
      {
-      "name": "Claude/Codex(상용 에이전트)",
-      "n": 4,
+      "name": "GPT(OpenAI)",
+      "n": 2,
       "cases": [
        {
-        "id": "acd684108227b9c2",
-        "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
+        "id": "ea2bce110972762e",
+        "title": "공공기관 규정 MCP 생성기"
        },
        {
-        "id": "9d19e64aa30f5332",
-        "title": "MiroFish-Ko 개인 수정판 — 로컬 LLM·Codex CLI로 돌리는 정책 여론 시뮬레이터"
-       },
-       {
-        "id": "8a47740d405286c4",
-        "title": "자치법규 정합성 실측 — 서울시 조례 942건의 법률 인용 2,996개를 현행 조문과 전수 대조"
-       },
-       {
-        "id": "133d7e9c594456be",
-        "title": "서울 자치구 조례 정합성 지도 — 본청과 25개 구 조례의 법률 인용을 현행 조문과 대조해 지도로"
+        "id": "7c3c1b02b4a981ec",
+        "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교"
        }
       ],
       "domestic": false,
       "variants": [
-       "Claude(대조·근거 작성)",
-       "Codex CLI/Claude CLI(BYO 구독)",
-       "상용 API 모드(Claude 등)"
+       "ChatGPT/Claude/Codex(승인 문서 MCP 조회)",
+       "GPT-6 Astra",
+       "GPT-6.1 Sol",
+       "gpt-4.1-mini(조항 AI 검수)"
       ]
      },
      {
@@ -1056,21 +1098,6 @@
       "domestic": false,
       "variants": [
        "Jev(TypeSafe AI 판정 모델)"
-      ]
-     },
-     {
-      "name": "GPT(OpenAI)",
-      "n": 1,
-      "cases": [
-       {
-        "id": "ea2bce110972762e",
-        "title": "공공기관 규정 MCP 생성기"
-       }
-      ],
-      "domestic": false,
-      "variants": [
-       "ChatGPT/Claude/Codex(승인 문서 MCP 조회)",
-       "gpt-4.1-mini(조항 AI 검수)"
       ]
      },
      {
@@ -1183,6 +1210,20 @@
       "domestic": false,
       "variants": [
        "상용 AI(판단)"
+      ]
+     },
+     {
+      "name": "Kimi K3",
+      "n": 1,
+      "cases": [
+       {
+        "id": "7c3c1b02b4a981ec",
+        "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Kimi K3"
       ]
      }
     ]
@@ -1668,18 +1709,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.062,
- "local_model_rate": 0.274,
- "model_known": 113,
- "license_tagged": 405,
- "license_stated_rate": 0.481,
+ "domestic_model_rate": 0.061,
+ "local_model_rate": 0.272,
+ "model_known": 114,
+ "license_tagged": 407,
+ "license_stated_rate": 0.482,
  "gitlab_cases": 277,
  "gitlab_mirror_pairs": 41,
  "gitlab_open_rate": 0.148,
  "mcp_cases": 91,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 446,
+  "미확인": 448,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1687,7 +1728,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.759
+  "feedback": 0.76
  },
  "maintenance_distribution": {
   "활발": 317,
@@ -1788,7 +1829,7 @@
    ]
   },
   "github": {
-   "count": 157,
+   "count": 159,
    "starred": 152,
    "stars_sum": 299376,
    "maintenance": {
@@ -1881,10 +1922,10 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 210,
+  "명시 없음": 211,
   "MIT": 128,
   "Apache-2.0": 33,
-  "Other": 16,
+  "Other": 17,
   "GNU AGPLv3": 5,
   "AGPL-3.0": 4,
   "기타(비표준)": 4,
@@ -1896,7 +1937,7 @@
  },
  "license_matrix": {
   "명시 없음": {
-   "github": 54,
+   "github": 55,
    "gitlab": 156
   },
   "MIT": {
@@ -1908,7 +1949,7 @@
    "gitlab": 22
   },
   "Other": {
-   "github": 16,
+   "github": 17,
    "gitlab": 0
   },
   "GNU AGPLv3": {
@@ -1946,8 +1987,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 144,
-   "stated": 102
+   "total": 146,
+   "stated": 103
   },
   "github-pages": {
    "total": 16,

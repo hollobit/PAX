@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-12T14:34:28Z",
- "count": 101,
+ "updated_at": "2026-10-13T01:20:12Z",
+ "count": 102,
  "videos": [
+  {
+   "id": "XfdIhd1g6EI",
+   "title": "Muse Wonder: Zuckerberg and Wang's $100B AI",
+   "channel": "Cheeky Pint",
+   "url": "https://www.youtube.com/watch?v=XfdIhd1g6EI",
+   "thumb": "https://i.ytimg.com/vi/XfdIhd1g6EI/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "rwCDPZP_Zk4",
    "title": "소프트웨어는 끝났다는 REA 직접 검증해봤습니다 | GIthub 트렌딩 1위",

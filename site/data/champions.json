@@ -6471,6 +6471,18 @@
    "title": "삼호 라이프 — 울산 남구 삼호동 생활상황판(버스·날씨·도로·의료·복지자원·생활정보 한 화면)",
    "org": "울산광역시 남구 삼호동행정복지센터",
    "url": "https://samho-life.vercel.app/"
+  },
+  {
+   "id": "4de590125977ed61",
+   "title": "국가 AI 모델 From Scratch 검증 — 독자 AI 파운데이션 모델 2차 진출 3종의 학습 출발점 공개본 예비검증",
+   "org": "로보코(ROBOCO)",
+   "url": "https://github.com/serithemage/korea-ai-foundation-model-verification"
+  },
+  {
+   "id": "7c3c1b02b4a981ec",
+   "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교",
+   "org": "로보코(ROBOCO)",
+   "url": "https://github.com/roboco-io/KSAT-AI-Benchmark"
   }
  ]
 }
