@@ -1332,7 +1332,7 @@
    "link_ok": true,
    "health_checked": "2026-10-12",
    "model_dependency": "없음(비LLM)",
-   "case_url": "https://gjdong.vercel.app/crowd"
+   "case_url": "https://crowd.pubax.org"
   },
   {
    "org_type": "커뮤니티",

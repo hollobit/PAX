@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-12T22:34:37Z",
- "count": 914,
+ "updated_at": "2026-10-13T06:34:47Z",
+ "count": 917,
  "articles": [
   {
    "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4086889",
@@ -94,10 +94,49 @@
    ]
   },
   {
+   "url": "https://v.daum.net/v/20261013084411877",
+   "title": "“AI한테 밥그릇 뺏겼다”…전 세계 언론사 울리던 ‘게티이미지’의 몰락",
+   "outlet": "Daum | 서울신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://tradeitbridge.com/%EB%B8%94%EB%A1%9C%EA%B7%B8",
+   "title": "TIB 무역 인사이트 | 수입·수출 가이드와 무료 업무 양식",
+   "outlet": "Trade it Bridge",
+   "published": "2025-12-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4438703",
    "title": "기후부-과기부, AI 폐기물 처리 돕는 앱 시범 운영 나선다",
    "outlet": "연합인포맥스",
    "published": "2026-10-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://cellcog.ai/blog/karpathy-llm-understanding-funnel",
+   "title": "Karpathy's AI Funnel: Only 5,000 See the Frontier",
+   "outlet": "CellCog",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-13",
