@@ -1,7 +1,137 @@
 {
- "updated_at": "2026-10-13T06:34:47Z",
- "count": 917,
+ "updated_at": "2026-10-13T22:34:19Z",
+ "count": 928,
  "articles": [
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=242133",
+   "title": "KT, 구글 AI 결합 구독 상품 8종 출시… 네이버페이 증정 이벤트도",
+   "outlet": "아이티데일리",
+   "published": "2026-10-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610131616432970",
+   "title": "개인정보위원장 \"공공기관도 AI 공격 증가…부처 평가에 정보보호 반영 검토\"",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.dt.co.kr/article/12088795",
+   "title": "더존비즈온-NIA-레플릿, 공무원 대상 ‘공공데이터 AI 메이커톤’ 개최",
+   "outlet": "디지털타임스",
+   "published": "2026-10-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=706755",
+   "title": "xAI, 그록·커서·X 프리미엄 통합 구독 출시…요금제 5단계로 개편",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=706427",
+   "title": "정부가 만든 AI 학습데이터 한곳에 모은다…'AI허브' 연계 의무화",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42276",
+   "title": "AMD, 에이전틱 AI 전용 랙스케일 인프라 ‘헬리온’ 공개…CPU 3만2768코어까지 확장",
+   "outlet": "인공지능신문",
+   "published": "2026-10-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216202",
+   "title": "크래프톤, 사상 최대 규모 'AI 네이티브' 신입 채용 나서",
+   "outlet": "AI타임스",
+   "published": "2026-10-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-14-바이브코딩-html-대시보드-보안성-검토-대상일까",
+   "title": "[공공AX 네트워크] 바이브코딩 HTML 대시보드와 보안성 검토",
+   "outlet": "akwiki.org",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-14-cross-grok-cursor-subscription",
+   "title": "[에이전트코리아·공공AX 네트워크] Grok·Cursor 묶음 구독과 첫 달 한정가",
+   "outlet": "akwiki.org",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-14-cross-gemini-argon-antigravity",
+   "title": "[에이전트코리아·공공AX 네트워크] 제미나이 4 아르곤의 안티그래비티 등장",
+   "outlet": "akwiki.org",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4086889",
    "title": "경북교육청 AI 조례 개정 추진…디지털 격차·오남용 대응",
@@ -124,6 +254,19 @@
    "title": "기후부-과기부, AI 폐기물 처리 돕는 앱 시범 운영 나선다",
    "outlet": "연합인포맥스",
    "published": "2026-10-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://claude.dev/blog/building-effective-agent-automations",
+   "title": "Building effective agent automations /",
+   "outlet": "claude.dev Blog",
+   "published": "2026-10-08",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-13",
