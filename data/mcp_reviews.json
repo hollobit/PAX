@@ -3192,6 +3192,42 @@
     "pip_audit": "2.9.0"
    },
    "llm_audit_at": "2026-10-09"
+  },
+  {
+   "case_id": "90017f701b103627",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 10건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "주의",
+     "note": "파일 경로는 realpath·심볼릭 링크 차단으로 프로젝트 폴더 안에 묶이나(근거: src/workspace/pathGuard.ts:42-66), 원격 지시로 로컬 명령을 샌드박스 없이 실행하는 설계라 승인 정책에 의존한다(근거: src/mcp/tools.ts:117, docs/PERMISSIONS_AND_APPROVALS.md:23 — 1시간 Full은 승인 없이 실행)"
+    },
+    "data_flow": {
+     "verdict": "주의",
+     "note": "파일 내용·명령 출력·스크린샷이 ChatGPT(OpenAI)로 전송되고 OAuth 모드 트래픽은 Cloudflare Quick Tunnel을 거친다 — 문서에 명시(근거: PRIVACY.md:3-4, src/transports/tunnel.ts:25), 자동 업데이트는 공공 깃랩 릴리스 폴더로 제한(근거: src/update/autoUpdate.ts:187)"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-10-13",
+   "tools": {
+    "npm": "11.14.1",
+    "pip_audit": "2.9.0"
+   },
+   "llm_audit_at": "2026-10-13"
   }
  ]
 }

@@ -2,38 +2,38 @@
  "generated_at": "2026-10-13",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 530,
- "total_champions": 225,
+ "total_cases": 557,
+ "total_champions": 226,
  "community": {
-  "members": 2461,
-  "kakao_week": 4399,
-  "kakao_total_observed": 50360,
+  "members": 2463,
+  "kakao_week": 4464,
+  "kakao_total_observed": 50425,
   "threads_observed": 339
  },
  "certified_champions": 5,
- "unattributed_cases": 114,
+ "unattributed_cases": 135,
  "ax_distribution": {
-  "AI-Ready": 345,
-  "AI-Enabled": 159,
-  "AX 단계 외": 20,
+  "AI-Ready": 358,
+  "AI-Enabled": 168,
+  "AX 단계 외": 25,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
- "c_axis_mean": 0.95,
+ "c_axis_mean": 0.94,
  "p_distribution": {
-  "P0": 170,
-  "P1": 341,
+  "P0": 181,
+  "P1": 357,
   "P2": 19
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 254,
+  "없음(비LLM)": 271,
   "해외 오픈웨이트(로컬)": 30,
-  "혼합": 15,
-  "해외 상용 API": 62,
-  "모델 중립(BYO)": 81,
+  "혼합": 16,
+  "해외 상용 API": 64,
+  "모델 중립(BYO)": 86,
   "국산 독자모델": 6,
-  "미상": 16,
+  "미상": 18,
   "국산 오픈웨이트": 1
  },
  "model_stats": {
@@ -174,9 +174,10 @@
    },
    {
     "name": "GPT(OpenAI)",
-    "n": 17,
+    "n": 18,
     "variants": [
      "ChatGPT GPTs",
+     "ChatGPT(웹)",
      "ChatGPT(팀계정)",
      "ChatGPT/Claude/Codex(승인 문서 MCP 조회)",
      "GPT(OpenAI API)",
@@ -264,6 +265,10 @@
      {
       "id": "7c3c1b02b4a981ec",
       "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교"
+     },
+     {
+      "id": "90017f701b103627",
+      "title": "Connect to Aside — 웹 ChatGPT가 PC 파일 편집과 Aside 브라우저 조작을 하게 하는 로컬 MCP 브리지"
      }
     ],
     "domestic": false
@@ -804,7 +809,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 254,
+    "n": 271,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -812,15 +817,15 @@
     "specified": 17
    },
    "혼합": {
-    "n": 15,
+    "n": 16,
     "specified": 14
    },
    "해외 상용 API": {
-    "n": 62,
-    "specified": 47
+    "n": 64,
+    "specified": 49
    },
    "모델 중립(BYO)": {
-    "n": 81,
+    "n": 86,
     "specified": 4
    },
    "국산 독자모델": {
@@ -828,7 +833,7 @@
     "specified": 5
    },
    "미상": {
-    "n": 16,
+    "n": 18,
     "specified": 1
    },
    "국산 오픈웨이트": {
@@ -945,7 +950,7 @@
    },
    {
     "dep": "혼합",
-    "n": 15,
+    "n": 16,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
@@ -1230,7 +1235,7 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 62,
+    "n": 64,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
@@ -1341,7 +1346,7 @@
      },
      {
       "name": "GPT(OpenAI)",
-      "n": 13,
+      "n": 14,
       "cases": [
        {
         "id": "6a2d1fa6e385ef2b",
@@ -1394,11 +1399,16 @@
        {
         "id": "48a2fe695d62b13f",
         "title": "소담 라이노 GH코드 Codex — Rhino 7 그래스호퍼 스크립트 노드 코드를 짜 주는 Codex 플러그인"
+       },
+       {
+        "id": "90017f701b103627",
+        "title": "Connect to Aside — 웹 ChatGPT가 PC 파일 편집과 Aside 브라우저 조작을 하게 하는 로컬 MCP 브리지"
        }
       ],
       "domestic": false,
       "variants": [
        "ChatGPT GPTs",
+       "ChatGPT(웹)",
        "ChatGPT(팀계정)",
        "GPT(OpenAI API)",
        "GPT-5.6 Luna",
@@ -1531,6 +1541,20 @@
       "domestic": false,
       "variants": [
        "Jev(TypeSafe AI System One, Vercel AI Gateway 경유)"
+      ]
+     },
+     {
+      "name": "Jev",
+      "n": 1,
+      "cases": [
+       {
+        "id": "f6683d8732c2c718",
+        "title": "Jev Search — 질문에 맞춰 검색처·기간·검색어를 고르고 결과 순위를 매기는 검색 서비스"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Jev"
       ]
      }
     ]
@@ -1709,18 +1733,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.061,
- "local_model_rate": 0.272,
- "model_known": 114,
- "license_tagged": 407,
- "license_stated_rate": 0.482,
- "gitlab_cases": 277,
+ "domestic_model_rate": 0.06,
+ "local_model_rate": 0.265,
+ "model_known": 117,
+ "license_tagged": 419,
+ "license_stated_rate": 0.487,
+ "gitlab_cases": 280,
  "gitlab_mirror_pairs": 41,
- "gitlab_open_rate": 0.148,
- "mcp_cases": 91,
+ "gitlab_open_rate": 0.146,
+ "mcp_cases": 92,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 448,
+  "미확인": 475,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1728,7 +1752,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.76
+  "feedback": 0.772
  },
  "maintenance_distribution": {
   "활발": 317,
@@ -1738,7 +1762,7 @@
  "stars_collected": 388,
  "repo_stats": {
   "gitlab": {
-   "count": 277,
+   "count": 280,
    "starred": 274,
    "stars_sum": 624,
    "maintenance": {
@@ -1829,7 +1853,7 @@
    ]
   },
   "github": {
-   "count": 159,
+   "count": 164,
    "starred": 152,
    "stars_sum": 299376,
    "maintenance": {
@@ -1922,12 +1946,12 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 211,
-  "MIT": 128,
+  "명시 없음": 215,
+  "MIT": 134,
   "Apache-2.0": 33,
-  "Other": 17,
+  "Other": 18,
+  "AGPL-3.0": 5,
   "GNU AGPLv3": 5,
-  "AGPL-3.0": 4,
   "기타(비표준)": 4,
   "BUSL-1.1": 1,
   "ISC": 1,
@@ -1937,28 +1961,28 @@
  },
  "license_matrix": {
   "명시 없음": {
-   "github": 55,
-   "gitlab": 156
+   "github": 57,
+   "gitlab": 158
   },
   "MIT": {
-   "github": 75,
-   "gitlab": 52
+   "github": 80,
+   "gitlab": 53
   },
   "Apache-2.0": {
    "github": 11,
    "gitlab": 22
   },
   "Other": {
-   "github": 17,
+   "github": 18,
    "gitlab": 0
+  },
+  "AGPL-3.0": {
+   "github": 4,
+   "gitlab": 1
   },
   "GNU AGPLv3": {
    "github": 0,
    "gitlab": 5
-  },
-  "AGPL-3.0": {
-   "github": 3,
-   "gitlab": 1
   },
   "기타(비표준)": {
    "github": 0,
@@ -1987,33 +2011,33 @@
  },
  "license_by_source": {
   "github": {
-   "total": 146,
-   "stated": 103
+   "total": 151,
+   "stated": 108
   },
   "github-pages": {
-   "total": 16,
-   "stated": 4
+   "total": 20,
+   "stated": 6
   },
   "gitlab": {
-   "total": 244,
-   "stated": 88
+   "total": 247,
+   "stated": 89
   }
  },
  "mcp_stats": {
-  "total": 91,
+  "total": 92,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
    "Server": 79,
    "Client/Host": 7,
-   "Unknown/None": 4
+   "Unknown/None": 5
   },
   "c_grades": {
    "C0": 68,
    "C2": 9,
    "C3": 1,
-   "C1": 13
+   "C1": 14
   },
   "maintenance": {
    "활발": 51,
