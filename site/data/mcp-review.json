@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-10-13",
+ "generated_at": "2026-10-14",
  "summary": {
-  "total": 92,
+  "total": 93,
   "counts": {
-   "주의": 75,
+   "주의": 76,
    "양호": 15,
    "부분 검증": 2
   },
@@ -2531,6 +2531,32 @@
     "data_flow": {
      "verdict": "주의",
      "note": "파일 내용·명령 출력·스크린샷이 ChatGPT(OpenAI)로 전송되고 OAuth 모드 트래픽은 Cloudflare Quick Tunnel을 거친다 — 문서에 명시(근거: PRIVACY.md:3-4, src/transports/tunnel.ts:25), 자동 업데이트는 공공 깃랩 릴리스 폴더로 제한(근거: src/update/autoUpdate.ts:187)"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "5727d0aa073a26c5",
+   "title": "복지정보MCP — 통합돌봄 대시보드의 복지사업·제도·예산·통계·매뉴얼을 AI 대화에서 근거와 함께 조회하는 MCP",
+   "stars": null,
+   "checked_at": "2026-10-14",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
     }
    },
    "dynamic": null,

@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-13T22:34:19Z",
- "count": 928,
+ "updated_at": "2026-10-14T06:35:16Z",
+ "count": 930,
  "articles": [
   {
    "url": "https://www.itdaily.kr/news/articleView.html?idxno=242133",
@@ -84,6 +84,32 @@
    "url": "https://www.aitimes.com/news/articleView.html?idxno=216202",
    "title": "크래프톤, 사상 최대 규모 'AI 네이티브' 신입 채용 나서",
    "outlet": "AI타임스",
+   "published": "2026-10-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://share.google/eoyBu3MLbtqW0IZg5",
+   "title": "[단독]국민연금, 내년 17% 손실나도 성과급 230억 받는다",
+   "outlet": "share.google",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://share.google/OKKwBRBsph83CAWmP",
+   "title": "FBI arrests Saudi OpenAI employee who allegedly planted recording device in conference room",
+   "outlet": "CNBC",
    "published": "2026-10-13",
    "kind": "기사",
    "shares": 1,

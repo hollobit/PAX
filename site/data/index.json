@@ -2,26 +2,26 @@
  "generated_at": "2026-10-14",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 557,
+ "total_cases": 558,
  "total_champions": 226,
  "community": {
-  "members": 2485,
-  "kakao_week": 4278,
-  "kakao_total_observed": 51000,
-  "threads_observed": 340
+  "members": 2486,
+  "kakao_week": 4616,
+  "kakao_total_observed": 51338,
+  "threads_observed": 341
  },
  "certified_champions": 5,
- "unattributed_cases": 135,
+ "unattributed_cases": 136,
  "ax_distribution": {
   "AI-Ready": 358,
-  "AI-Enabled": 168,
+  "AI-Enabled": 169,
   "AX 단계 외": 25,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
  "c_axis_mean": 0.94,
  "p_distribution": {
-  "P0": 181,
+  "P0": 182,
   "P1": 357,
   "P2": 19
  },
@@ -31,7 +31,7 @@
   "해외 오픈웨이트(로컬)": 30,
   "혼합": 16,
   "해외 상용 API": 64,
-  "모델 중립(BYO)": 86,
+  "모델 중립(BYO)": 87,
   "국산 독자모델": 6,
   "미상": 18,
   "국산 오픈웨이트": 1
@@ -825,7 +825,7 @@
     "specified": 49
    },
    "모델 중립(BYO)": {
-    "n": 86,
+    "n": 87,
     "specified": 4
    },
    "국산 독자모델": {
@@ -1741,10 +1741,10 @@
  "gitlab_cases": 280,
  "gitlab_mirror_pairs": 41,
  "gitlab_open_rate": 0.146,
- "mcp_cases": 92,
+ "mcp_cases": 93,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 475,
+  "미확인": 476,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -2024,12 +2024,12 @@
   }
  },
  "mcp_stats": {
-  "total": 92,
+  "total": 93,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
-   "Server": 79,
+   "Server": 80,
    "Client/Host": 7,
    "Unknown/None": 5
   },
@@ -2037,7 +2037,7 @@
    "C0": 68,
    "C2": 9,
    "C3": 1,
-   "C1": 14
+   "C1": 15
   },
   "maintenance": {
    "활발": 51,
