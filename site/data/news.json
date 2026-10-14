@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-14T06:35:16Z",
- "count": 930,
+ "updated_at": "2026-10-14T14:34:26Z",
+ "count": 937,
  "articles": [
+  {
+   "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000022575&cp=nv",
+   "title": "서울 동대문구청 옥상서 30대 직원 추락사",
+   "outlet": "국민일보",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.itdaily.kr/news/articleView.html?idxno=242133",
    "title": "KT, 구글 AI 결합 구독 상품 8종 출시… 네이버페이 증정 이벤트도",
@@ -120,8 +133,60 @@
    ]
   },
   {
+   "url": "https://news.tvchosun.com/site/data/html_dir/2026/10/14/2026101490198.html",
+   "title": "[단독] 서울 동대문구청 옥상에서 30대 남성 추락해 사망",
+   "outlet": "news.tvchosun.com",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-14-복지정보-mcp-공개-연결-오류-복구와-질의-검증",
+   "title": "[공공AX 네트워크] 복지정보 MCP 공개와 연결 오류 복구",
+   "outlet": "akwiki.org",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-14-바이브코딩-html-대시보드-보안성-검토-대상일까",
    "title": "[공공AX 네트워크] 바이브코딩 HTML 대시보드와 보안성 검토",
+   "outlet": "akwiki.org",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-14-공공-현장의-제약-공공깃랩-보안검토와-깃허브-폐쇄망",
+   "title": "[공공AX 네트워크] 공공깃랩 보안검토와 깃허브 차단 현장 제약",
+   "outlet": "akwiki.org",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-14-mcp는-웹페이지보다-나은가-도구-과다-연결의-토큰-비용",
+   "title": "[공공AX 네트워크] MCP 도구 과다 연결과 입력 토큰 비용",
    "outlet": "akwiki.org",
    "published": "2026-10-14",
    "kind": "기사",
@@ -148,6 +213,32 @@
   {
    "url": "https://akwiki.org/article/2026-10-14-cross-gemini-argon-antigravity",
    "title": "[에이전트코리아·공공AX 네트워크] 제미나이 4 아르곤의 안티그래비티 등장",
+   "outlet": "akwiki.org",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-14-cross-gemini-argon",
+   "title": "[3개 방 공통] 제미나이 4 아르곤, 세 방이 같은 날 꺼낸 첫인상",
+   "outlet": "akwiki.org",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-14",
+   "last_shared": "2026-10-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-14-cross-dentist-homelab",
+   "title": "[더배러·공공AX 네트워크] 치과의사 로컬 AI 구축 사례에 두 방이 감탄",
    "outlet": "akwiki.org",
    "published": "2026-10-14",
    "kind": "기사",
