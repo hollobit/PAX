@@ -5074,6 +5074,7 @@
    "category": "공공기관",
    "category_basis": "affiliation",
    "cases": [
+    "e52c133c58d0bc77",
     "389159eba8d1a308",
     "aef95509b7611c96",
     "f8c9ae69a673c52a",
@@ -5083,7 +5084,7 @@
     "7868cf416d6fe407"
    ],
    "stats": {
-    "case_count": 7,
+    "case_count": 8,
     "top_ax": 1,
     "stars": 0
    }
@@ -6646,6 +6647,12 @@
    "title": "복지정보MCP — 통합돌봄 대시보드의 복지사업·제도·예산·통계·매뉴얼을 AI 대화에서 근거와 함께 조회하는 MCP",
    "org": "공직 현장(개인 개발)",
    "url": "https://integrated-care-national-dashboard.xgfox54.chatgpt.site/welfaremcp"
+  },
+  {
+   "id": "889a6a09e68b20cd",
+   "title": "포항시 전산직 공무원 자체 개발 AI 행정 도구 — 초과근무·출장 정산, 노트북 예약, AI 질문 코칭 등과 연구모임",
+   "org": "경상북도 포항시",
+   "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4087294"
   }
  ]
 }

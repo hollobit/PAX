@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-14T22:34:22Z",
- "count": 103,
+ "updated_at": "2026-10-14T23:37:52Z",
+ "count": 104,
  "videos": [
+  {
+   "id": "YDjF5BoRbi8",
+   "title": "Codex로 만든 가상 건축시각화 | Corner Light 건축 모델링부터 AI 영상까지",
+   "channel": "소담 AI 스튜디오",
+   "url": "https://www.youtube.com/watch?v=YDjF5BoRbi8",
+   "thumb": "https://i.ytimg.com/vi/YDjF5BoRbi8/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "3AQQnkGa4Uc",
    "title": "AI를 가장 잘 쓰는 사람이 회사 AI 정착의 병목인 이유",

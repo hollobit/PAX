@@ -2,18 +2,18 @@
  "generated_at": "2026-10-15",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 558,
+ "total_cases": 560,
  "total_champions": 226,
  "community": {
-  "members": 2506,
-  "kakao_week": 4333,
-  "kakao_total_observed": 51586,
-  "threads_observed": 345
+  "members": 2508,
+  "kakao_week": 4342,
+  "kakao_total_observed": 51595,
+  "threads_observed": 347
  },
  "certified_champions": 5,
- "unattributed_cases": 136,
+ "unattributed_cases": 137,
  "ax_distribution": {
-  "AI-Ready": 358,
+  "AI-Ready": 360,
   "AI-Enabled": 169,
   "AX 단계 외": 25,
   "AI-First": 5,
@@ -22,18 +22,18 @@
  "c_axis_mean": 0.94,
  "p_distribution": {
   "P0": 182,
-  "P1": 357,
+  "P1": 359,
   "P2": 19
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 271,
+  "없음(비LLM)": 272,
   "해외 오픈웨이트(로컬)": 30,
   "혼합": 16,
   "해외 상용 API": 64,
   "모델 중립(BYO)": 87,
   "국산 독자모델": 6,
-  "미상": 18,
+  "미상": 19,
   "국산 오픈웨이트": 1
  },
  "model_stats": {
@@ -809,7 +809,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 271,
+    "n": 272,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -833,7 +833,7 @@
     "specified": 5
    },
    "미상": {
-    "n": 18,
+    "n": 19,
     "specified": 1
    },
    "국산 오픈웨이트": {
@@ -1736,15 +1736,15 @@
  "domestic_model_rate": 0.06,
  "local_model_rate": 0.265,
  "model_known": 117,
- "license_tagged": 419,
- "license_stated_rate": 0.487,
+ "license_tagged": 420,
+ "license_stated_rate": 0.486,
  "gitlab_cases": 280,
  "gitlab_mirror_pairs": 41,
  "gitlab_open_rate": 0.146,
  "mcp_cases": 93,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 476,
+  "미확인": 478,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1752,7 +1752,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.772
+  "feedback": 0.773
  },
  "maintenance_distribution": {
   "활발": 317,
@@ -1946,7 +1946,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 215,
+  "명시 없음": 216,
   "MIT": 134,
   "Apache-2.0": 33,
   "Other": 18,
@@ -1961,7 +1961,7 @@
  },
  "license_matrix": {
   "명시 없음": {
-   "github": 57,
+   "github": 58,
    "gitlab": 158
   },
   "MIT": {
@@ -2015,7 +2015,7 @@
    "stated": 108
   },
   "github-pages": {
-   "total": 20,
+   "total": 21,
    "stated": 6
   },
   "gitlab": {
