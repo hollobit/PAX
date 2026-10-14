@@ -1,7 +1,124 @@
 {
- "updated_at": "2026-10-14T14:34:26Z",
- "count": 937,
+ "updated_at": "2026-10-14T22:34:25Z",
+ "count": 946,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261014212553",
+   "title": "앤트로픽, 깃 대신 쓰는 자체 코드 관리 시스템 '사이언' 공개",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newsis.com/view/NISX20261014_0003824989",
+   "title": "병원 보안 허점 찾고 핵융합 수학 풀고…구글 최상위 AI '제미나이 4 아르곤' 출시",
+   "outlet": "뉴시스",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4087294",
+   "title": "포항시 공무원들이 직접 만든 AI 행정 도구…반복 업무 줄인다",
+   "outlet": "경북일보",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000022438",
+   "title": "고양시, AI 행정혁신 속도…옥외영업 인허가 기간 단축",
+   "outlet": "국민일보",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.edaily.co.kr/News/Read?newsId=04119686645612920",
+   "title": "조원갑 행안부 과장, 충남도 기획조정실장에 임명",
+   "outlet": "이데일리",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=707227",
+   "title": "애플, 미니언즈 개발...유휴 맥 GPU 모아 AI 클라우드 만든다",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42302",
+   "title": "LG전자, AI 가전·히트펌프·태양광 결합한 에너지 자립형 주택 선보여",
+   "outlet": "인공지능신문",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216253",
+   "title": "앤트로픽, 불법 증류 차단 고강도 방어 체계 도입...“추출 시도 최대 99% 감축”",
+   "outlet": "AI타임스",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216238",
+   "title": "LG CNS, 일본 통신사 KDDI와 동남아 에이전틱·피지컬 AI 시장 공조",
+   "outlet": "AI타임스",
+   "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000022575&cp=nv",
    "title": "서울 동대문구청 옥상서 30대 직원 추락사",
