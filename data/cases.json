@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-15T22:40:45+09:00",
+ "updated_at": "2026-10-15T23:33:54+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -16125,6 +16125,29 @@
    "case_url": "https://legislative-archive.codism.co.kr/",
    "task_category": "기획·정책",
    "id": "972d8e29171b8304"
+  },
+  {
+   "summary": "경상남도가 여러 기관에 흩어진 복지정보를 모아 도민 맞춤형 서비스를 안내하는 AI 기반 통합복지플랫폼을 개통했다. 복지 개별사업 5,600여 종과 법령·매뉴얼을 학습한 AI 상담에 복지서비스 찾기·온라인 신청·주변 시설 찾기·위기상황 도움요청을 더했고, 5개월 시범운영으로 답변 정확도와 사투리 음성 인식을 개선했다.",
+   "source": "kakao",
+   "title": "경남통합복지플랫폼 — 복지사업 5,600여 종을 학습한 AI 상담과 맞춤 복지 안내·신청 서비스",
+   "org_type": "광역지자체",
+   "runtime_env": "브라우저만",
+   "case_class": "기관 공식",
+   "tags": [
+    "복지",
+    "AI상담",
+    "통합플랫폼",
+    "광역지자체"
+   ],
+   "date": "2026-10-15",
+   "link": "https://welfare.gyeongnam.go.kr/main.gsnd",
+   "task_category": "민원",
+   "model_dependency": "미상",
+   "org": "경상남도",
+   "collected_at": "2026-10-15",
+   "region": "경남",
+   "case_url": "https://www.yna.co.kr/view/AKR20261015102500052",
+   "id": "58b7e67e212ad842"
   }
  ]
 }

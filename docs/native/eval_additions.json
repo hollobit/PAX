@@ -13774,5 +13774,33 @@
   "service_url": "https://legislative-archive.codism.co.kr/",
   "rationale": "국회 공공 API로 의안·표결·의원 정보를 모아 쟁점 설명·통과 법안 영향·의원 순위로 가공해 보여 주는 S2/C1 서비스다. 쟁점 설명 생성에 LLM을 쓰는지는 확인되지 않아 AI-Ready로 두며, 공공 의정 데이터를 시민 눈높이로 재구성한 참고 사례다. 운영 주체와 데이터 갱신 주기는 미확인이다.",
   "resilience": "미확인(개인 운영 지속 여부)"
+ },
+ {
+  "no": 565,
+  "id": "58b7e67e212ad842",
+  "org": "경상남도",
+  "title": "경남통합복지플랫폼 — 복지사업 5,600여 종을 학습한 AI 상담과 맞춤 복지 안내·신청 서비스",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S3",
+  "s_name": "System",
+  "c": "C2",
+  "c_name": "부분 완결",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Live service",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R2 보통(대민 복지 상담, 답변 오류가 수급에 영향)",
+  "human": "H1/H2 미확인",
+  "evidence": "E3 운영·공식 URL 확인",
+  "confidence": "높음",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "시범운영 5개월 동안 현장 전문가 TF로 답변 정확도·음성 인식 개선",
+  "post_url": "",
+  "service_url": "https://welfare.gyeongnam.go.kr/main.gsnd",
+  "rationale": "복지사업·법령·매뉴얼을 학습한 AI 상담과 서비스 찾기·온라인 신청·시설 찾기·위기 도움요청을 한 플랫폼에 묶어 대민 복지 안내를 부분 완결하는 S3/C2 시스템이며 AI-Enabled다. 광역자치단체가 복지 분야에 AI를 접목한 첫 사례로 밝혔고 운영 URL과 기관 발표로 E3 근거가 있다. 사용 모델과 상담 오류 대응 절차는 미확인이다.",
+  "resilience": "도가 정보 현행화를 운영 과제로 명시 — 갱신 주기는 미확인"
  }
 ]

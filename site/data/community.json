@@ -2,10 +2,10 @@
  "generated_at": "2026-10-15",
  "note": "카카오 수치는 수집 아카이브 기반 관측치(공백 구간 과소 집계), Threads는 태그 검색 관측 누적",
  "kakao": {
-  "today": 784,
-  "week": 5108,
-  "month": 19656,
-  "total": 52361,
+  "today": 893,
+  "week": 5217,
+  "month": 19765,
+  "total": 52470,
   "observed_days": 74
  },
  "kakao_recent": [
@@ -91,7 +91,7 @@
   ],
   [
    "2026-10-15",
-   784
+   893
   ]
  ],
  "members": {

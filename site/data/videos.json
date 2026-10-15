@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-10-15T13:40:55Z",
- "count": 105,
+ "updated_at": "2026-10-15T14:34:50Z",
+ "count": 107,
  "videos": [
+  {
+   "id": "ye50BbXEczo",
+   "title": "I ran Qwen3.8 27B on single 8GB Card! (Better than expected)",
+   "channel": "Red Stapler",
+   "url": "https://www.youtube.com/watch?v=ye50BbXEczo",
+   "thumb": "https://i.ytimg.com/vi/ye50BbXEczo/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "tByhXkxDKDo",
+   "title": "소프트웨어는 끝났다? 앱 통째로 복사하는 미친 오픈소스.. ㄷㄷ",
+   "channel": "성공지식백과",
+   "url": "https://www.youtube.com/watch?v=tByhXkxDKDo",
+   "thumb": "https://i.ytimg.com/vi/tByhXkxDKDo/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "o7WlANaRKL4",
    "title": "내 능력이 퇴보하지 않고 AI 쓰려면 이렇게 하세요 (이제현 KIST AIX 전략실장)",
