@@ -188,6 +188,21 @@ def main():
     # 디자인 패턴 분석 — scripts/sync_patterns.py가 PAX-DP 원본에서 가져온 자료(없으면 구역을 만들지 않는다)
     dp_catalog = load_json("data/patterns/catalog.json", default=None)
     dp_cases = load_json("data/patterns/case_patterns.json", default={}).get("cases", {})
+    dates = {c["id"]: c.get("date") or "" for c in cases}
+    by_primary: dict[str, list[str]] = {}
+    for cid, t in dp_cases.items():
+        prim = (t.get("workflow") or {}).get("primary")
+        if prim and cid in titles:
+            by_primary.setdefault(prim, []).append(cid)
+
+    def peers_of(cid: str) -> list:
+        """같은 주 패턴을 쓰는 다른 사례 — 서비스 유형이 같은 것부터, 그다음 최근 게시일순."""
+        t = dp_cases.get(cid) or {}
+        prim, st = (t.get("workflow") or {}).get("primary"), t.get("service_type")
+        others = [o for o in by_primary.get(prim, []) if o != cid]
+        others.sort(key=lambda o: dates.get(o, ""), reverse=True)  # 최근 게시일순으로 놓고
+        others.sort(key=lambda o: dp_cases[o].get("service_type") != st)  # 안정 정렬로 같은 서비스 유형을 앞으로
+        return [(o, titles[o]) for o in others]
     write_json(RANK, {"cases": [rank_entry(c) for c in cases]}, compact=True)
     for c in cases:
         ev = evals.get(c["id"])
@@ -216,7 +231,7 @@ def main():
         page = TEMPLATE.format(
             og_image=og_image, thumb=thumb, page_js=page_js, collected=esc(c.get("collected_at")),
             details=detail_list(c), developer=developer_section(c["id"], champions, titles),
-            patterns=pattern_section(c["id"], dp_cases.get(c["id"]), dp_catalog), nav=nav, external=external, css_v=css_v, base=BASE, cid=esc(c["id"]), title=esc(c["title"]),
+            patterns=pattern_section(c["id"], dp_cases.get(c["id"]), dp_catalog, peers=peers_of(c["id"])), nav=nav, external=external, css_v=css_v, base=BASE, cid=esc(c["id"]), title=esc(c["title"]),
             desc=esc(c["summary"][:150]), org=esc(c["org"]), org_type=esc(c["org_type"]),
             region=f" · {esc(c['region'])}" if c.get("region") else "",
             task=esc(c.get("task_category") or "분류 없음"), date=esc(c["date"]),

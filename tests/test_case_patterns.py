@@ -103,3 +103,101 @@ def test_reference_candidate_object_renders_as_chip_and_reason():
     html = pattern_section("a" * 16, tag, CATALOG)
     assert "{'component'" not in html
     assert 'href="#pat-C1"' in html and "검토 큐의 명확한 구현체" in html
+
+
+CAT2 = {**CATALOG, "constellation_url": "https://hollobit.github.io/PAX-DP/constellation/",
+        "patterns": {**CATALOG["patterns"],
+                     "B1": {**CATALOG["patterns"]["B1"], "usage_count": 120, "context": "형식이 정해진 문서 업무.",
+                            "forces": ["초안 속도 vs 검토 시간"], "variants": [{"name": "스킬 코파일럿", "desc": "BYO + A9"}],
+                            "structure": {"participants": [{"id": "A2", "name": "모델 서빙 계층", "role": "초안 생성"}]},
+                            "examples": [{"ref": "PAX gov-report-skill", "note": "참조 구현"}],
+                            "dir_url": "https://hollobit.github.io/PAX-DP/constellation/#dir-B1"}}}
+
+
+def test_constellation_links_usage_env_and_directory_fields():
+    tag = {**TAG, "env": ["배포:인터넷망", "권한:P1 산출물 생성"]}
+    html = pattern_section("a" * 16, tag, CAT2)
+    assert 'href="https://hollobit.github.io/PAX-DP/constellation/"' in html  # 구역 머리 링크
+    assert "배포:인터넷망" in html and "권한:P1 산출물 생성" in html
+    assert "PAX 사례 120건" in html
+    assert "형식이 정해진 문서 업무." in html and "초안 속도 vs 검토 시간" in html
+    assert "스킬 코파일럿" in html and "A2 모델 서빙 계층" in html and "PAX gov-report-skill" in html
+    assert 'href="https://hollobit.github.io/PAX-DP/constellation/#dir-B1"' in html
+
+
+def test_peer_cases_with_same_primary_pattern():
+    peers = [("b" * 16, "같은 B1 <사례>"), ("c" * 16, "또 다른 사례")]
+    html = pattern_section("a" * 16, TAG, CAT2, peers=peers)
+    assert "같은 주 패턴(B1)을 쓰는 다른 사례" in html
+    assert f'<a href="{"b" * 16}.html">같은 B1 &lt;사례&gt;</a>' in html
+
+
+def test_sync_merges_constellation_usage_slug_and_env():
+    data = {"usage": {"B|B1": 120, "Bp|B′1": 7, "E|배포:인터넷망": 3},
+            "cases": [{"id": "a" * 16, "L": {"E": ["배포:인터넷망"]}}],
+            "directory": {"layers": [{"id": "B", "name": "업무 컴포넌트", "desc": "d"}],
+                          "entries": [{"id": "B1", "context": "맥락", "forces": ["f"], "examples": [{"ref": "r"}],
+                                       "sources": ["내부"], "tagging": {"signals": ["s"]}}]}}
+    patterns = {"B1": {"id": "B1"}, "B′1": {"id": "B′1"}}
+    sp.merge_constellation(patterns, data, "https://x/constellation/")
+    assert patterns["B1"]["usage_count"] == 120 and patterns["B′1"]["usage_count"] == 7
+    assert patterns["B1"]["dir_url"] == "https://x/constellation/#dir-B1"
+    assert patterns["B′1"]["dir_url"] == "https://x/constellation/#dir-Bp1"
+    assert patterns["B1"]["context"] == "맥락" and patterns["B1"]["examples"] == [{"ref": "r"}]
+    assert "sources" not in patterns["B1"] and "tagging" not in patterns["B1"]
+    assert sp.case_env(data) == {"a" * 16: ["배포:인터넷망"]}
+
+
+def test_composition_diagram_svg():
+    from pax.case_pattern_svg import composition_svg
+    tag = {**TAG, "platform_planned": ["A2"], "missing_required": ["C5"]}
+    svg = composition_svg(tag, CAT2)
+    assert svg.startswith('<svg') and 'role="img"' in svg and "<title>" in svg
+    assert ">B1 코파일럿<" in svg and ">A9 업무 규범 스킬<" in svg and ">C1 검토 큐<" in svg
+    assert 'data-state="planned"' in svg and 'data-state="missing"' in svg  # 계획·보완 필요는 점선
+    assert svg.count('marker-end="url(#dp-arrow)"') == 2  # A9→B1, B1→C1
+    assert 'href="#pat-B1"' in svg  # 노드를 누르면 아래 상세로
+
+
+def test_section_includes_diagram_and_constellation_link():
+    html = pattern_section("a" * 16, TAG, CAT2)
+    assert '<figure class="dp-figure">' in html and "<svg" in html
+    assert "패턴 성좌" in html
+
+
+APPX_E = '''<h2>행정안전부·NIA</h2>
+<h3 id="e-mois-2026">공공부문 AI 도입·활용 가이드</h3>
+<p>행정안전부·NIA, 2026.6. 현행 핵심. 배포처: <a href="https://www.mois.go.kr/x?a=1&amp;b=2">보도자료</a></p>
+<dl><dt><b>담은 내용</b></dt><dd>다섯 단계 과업.</dd>
+<dt><b>쓰는 작업</b></dt><dd>사업계획서를 쓸 때 편다.</dd>
+<dt><b>주의</b></dt><dd>구판은 참고만.</dd>
+<dt><b>이어지는 패턴</b></dt><dd>RAG 우선은 <a class="pat" href="ch05.html#p-B3"><span class="pid">B3</span>지식 접지</a>와 <a href="ch08.html#p-C9"><span class="pid">C9</span>평가</a>.</dd></dl>
+<h3 id="e-nis-guidebook">AI보안 가이드북</h3>
+<p>국가정보원, 2025.1. 배포처 미확인.</p>
+<dl><dt><b>이어지는 패턴</b></dt><dd><span class="pid">S1</span> 입력 검증과 <span class="pid">B3</span>.</dd></dl>'''
+
+
+def test_sync_parses_guideline_appendix():
+    g = sp.parse_guidelines(APPX_E, "https://x/PAX-DP/")
+    assert [d["id"] for d in g] == ["e-mois-2026", "e-nis-guidebook"]
+    a = g[0]
+    assert a["title"] == "공공부문 AI 도입·활용 가이드" and a["group"] == "행정안전부·NIA"
+    assert a["meta"].startswith("행정안전부·NIA, 2026.6.") and a["source_url"] == "https://www.mois.go.kr/x?a=1&b=2"
+    assert a["task"] == "사업계획서를 쓸 때 편다." and a["caution"] == "구판은 참고만." and a["patterns"] == ["B3", "C9"]
+    assert a["url"] == "https://x/PAX-DP/appx-e.html#e-mois-2026"
+    assert "source_url" not in g[1] and g[1]["patterns"] == ["S1", "B3"]
+
+
+GUIDES = [{"id": "e-mois-2026", "title": "공공부문 AI 도입·활용 가이드", "meta": "행정안전부·NIA, 2026.6.",
+           "task": "사업계획서를 쓸 때 편다.", "caution": "구판은 참고만.", "patterns": ["B1", "C1"],
+           "url": "https://x/appx-e.html#e-mois-2026", "source_url": "https://www.mois.go.kr/x"},
+          {"id": "e-nis", "title": "AI보안 가이드북", "meta": "국가정보원", "patterns": ["S9"], "url": "https://x/appx-e.html#e-nis"}]
+
+
+def test_related_guidelines_ranked_by_shared_patterns():
+    cat = {**CAT2, "guidelines": GUIDES}
+    html = pattern_section("a" * 16, TAG, cat)
+    assert "관련 가이드라인" in html and "공공부문 AI 도입·활용 가이드" in html
+    assert 'href="https://x/appx-e.html#e-mois-2026"' in html and 'href="https://www.mois.go.kr/x"' in html
+    assert "사업계획서를 쓸 때 편다." in html
+    assert "AI보안 가이드북" not in html.split("이 사례에 쓰인 패턴")[0]  # 이 사례 부품과 겹치지 않으면 빼다

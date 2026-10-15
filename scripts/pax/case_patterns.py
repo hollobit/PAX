@@ -8,6 +8,10 @@ data/patterns/case_patterns.json(사례별 판정)과 data/patterns/catalog.json
 from __future__ import annotations
 
 from pax.case_details import esc
+from pax.case_pattern_svg import composition_svg
+
+GUIDE_MAX = 8  # 관련 가이드라인은 겹치는 부품이 많은 순으로 이만큼
+PEER_MAX = 8
 
 LAYER_NAMES = {"B": "업무 컴포넌트", "B′": "제어 흐름", "A": "공통 서비스", "C": "운영 컴포넌트", "S": "보안 패턴",
                "F": "상호작용 패턴", "D": "서비스 블록", "X": "안티패턴"}
@@ -23,6 +27,7 @@ class _Ctx:
     def __init__(self, catalog: dict):
         self.cat = catalog.get("patterns", {})
         self.used: list[str] = []
+        self.guides: list[dict] = catalog.get("guidelines") or []
 
     def chip(self, pid: str, note: str = "") -> str:
         if pid not in self.used:
@@ -30,7 +35,8 @@ class _Ctx:
         p = self.cat.get(pid, {})
         label = f"{pid} {p['name']}" if p.get("name") else pid
         extra = f' <span class="dp-chip__note">{esc(note)}</span>' if note else ""
-        title = esc(p.get("summary", ""))
+        used = f" · PAX 사례 {p['usage_count']}건이 쓰는 부품" if p.get("usage_count") else ""
+        title = esc(p.get("summary", "") + used)
         return f'<a class="dp-chip dp-chip--{_layer(pid)}" href="#pat-{esc(pid)}" title="{title}">{esc(label)}{extra}</a>'
 
     def chips(self, ids, note: str = "") -> str:
@@ -93,6 +99,9 @@ def _summary(tag: dict, cx: _Ctx) -> str:
     facts = [f for f in facts if f]
     if facts:
         parts.append(f'<p class="case-page__meta">{" · ".join(facts)}</p>')
+    if tag.get("env"):
+        env = " ".join(f'<span class="dp-env">{esc(e)}</span>' for e in tag["env"])
+        parts.append(f'<p class="dp-envrow"><span class="dp-lead__label">환경 축</span> {env}</p>')
     return "".join(parts)
 
 
@@ -141,6 +150,12 @@ def _detail(pid: str, cx: _Ctx) -> str:
     layer = LAYER_NAMES.get(p.get("layer", ""), p.get("layer", ""))
     cons = p.get("consequences") or {}
     body = [f'<p class="dp-text">{esc(p.get("summary", ""))}</p>']
+    if p.get("usage_count"):
+        body.append(f'<p class="dp-usage">PAX 사례 {int(p["usage_count"]):,}건이 이 부품을 쓴다</p>')
+    if p.get("context"):
+        body.append(f'<p class="dp-label">맥락</p><p class="dp-text">{esc(p["context"])}</p>')
+    if p.get("forces"):
+        body.append('<p class="dp-label">맞서는 힘(긴장)</p>' + _ul(p["forces"]))
     if p.get("solution"):
         body.append(f'<p class="dp-label">해법</p><p class="dp-text">{esc(p["solution"])}</p>')
     if p.get("when_to_use"):
@@ -151,38 +166,103 @@ def _detail(pid: str, cx: _Ctx) -> str:
         body.append('<p class="dp-label">얻는 것</p>' + _ul(cons["benefits"]))
     if (p.get("usage") or {}).get("checklist"):
         body.append('<p class="dp-label">점검표</p>' + _ul(p["usage"]["checklist"], "dp-check"))
+    parts = ((p.get("structure") or {}).get("participants") or []) if isinstance(p.get("structure"), dict) else []
+    if parts:
+        body.append('<p class="dp-label">구조 — 참여 부품</p>' + _ul(
+            f"{x.get('id') or ''} {x.get('name', '')} — {x.get('role', '')}".strip() for x in parts if isinstance(x, dict)))
+    if p.get("variants"):
+        body.append('<p class="dp-label">변형</p>' + _ul(
+            f"{v.get('name', '')}: {v.get('desc', '')}" if isinstance(v, dict) else str(v) for v in p["variants"]))
+    if p.get("examples"):
+        body.append('<p class="dp-label">참조 구현 예</p>' + _ul(
+            f"{e.get('ref', '')} — {e.get('note', '')}" if isinstance(e, dict) else str(e) for e in p["examples"]))
     if p.get("related"):
         rel = " · ".join(f"{esc(r.get('id') or '')} {esc(r.get('relation', ''))}" for r in p["related"] if isinstance(r, dict))
         body.append(f'<p class="dp-label">관련 부품</p><p class="dp-text">{rel}</p>')
     if p.get("resources"):
         body.append(f'<p class="dp-label">참고 자료</p><p class="dp-text">{esc(" · ".join(p["resources"]))}</p>')
+    guides = [g for g in cx.guides if pid in g.get("patterns", [])]
+    if guides:
+        body.append('<p class="dp-label">이 부품과 이어지는 가이드라인</p><ul>' + "".join(
+            f'<li><a href="{esc(g["url"])}" target="_blank" rel="noopener">{esc(g["title"])}</a>'
+            f' <span class="dp-guide__meta">{esc(g.get("meta", ""))}</span></li>' for g in guides) + "</ul>")
+    links = []
     if p.get("url"):
-        body.append(f'<p class="dp-text"><a href="{esc(p["url"])}" target="_blank" rel="noopener">웹북에서 전체 프로필 보기 ↗</a></p>')
+        links.append(f'<a href="{esc(p["url"])}" target="_blank" rel="noopener">웹북에서 전체 프로필 보기 ↗</a>')
+    if p.get("dir_url"):
+        links.append(f'<a href="{esc(p["dir_url"])}" target="_blank" rel="noopener">패턴 성좌 디렉터리에서 보기 ↗</a>')
+    if links:
+        body.append(f'<p class="dp-text">{" · ".join(links)}</p>')
     return (f'<details class="dp-detail" id="pat-{esc(pid)}"><summary><b>{esc(pid)} {esc(p.get("name", ""))}</b>'
             f' <span class="dp-detail__layer">{esc(layer)}</span></summary>{"".join(body)}</details>')
 
 
-def pattern_section(case_id: str, tag: dict | None, catalog: dict | None) -> str:
-    """카탈로그가 없으면 빈 문자열(구역을 만들지 않음), 태깅이 없으면 안내 한 줄."""
+def _guidelines(cx: _Ctx) -> str:
+    """이 사례 부품과 이어지는 가이드라인 문서 — 겹치는 부품 수가 많은 순."""
+    used = set(cx.used)
+    ranked = sorted(((len(used & set(g.get("patterns", []))), i, g) for i, g in enumerate(cx.guides)),
+                    key=lambda t: (-t[0], t[1]))
+    picked = [g for n, _, g in ranked if n][:GUIDE_MAX]
+    if not picked:
+        return ""
+    items = []
+    for g in picked:
+        shared = [pid for pid in g.get("patterns", []) if pid in used]
+        links = [f'<a href="{esc(g["url"])}" target="_blank" rel="noopener">해설 ↗</a>']
+        if g.get("source_url"):
+            links.append(f'<a href="{esc(g["source_url"])}" target="_blank" rel="noopener">원문 배포처 ↗</a>')
+        items.append(
+            f'<li class="dp-guide"><b>{esc(g["title"])}</b> <span class="dp-guide__meta">{esc(g.get("meta", ""))}</span>'
+            f'<div class="dp-guide__pats">이 사례와 겹치는 부품 {" ".join(cx.chip(x) for x in shared)}</div>'
+            + (f'<div class="dp-text">쓰는 작업: {esc(g["task"])}</div>' if g.get("task") else "")
+            + (f'<div class="dp-guide__caution">주의: {esc(g["caution"])}</div>' if g.get("caution") else "")
+            + f'<div class="dp-guide__links">{" · ".join(links)}</div></li>')
+    return ('<h3 class="dp-h3">관련 가이드라인</h3><p class="dp-text">이 사례가 쓰는 부품과 이어지는 공공 AX 안내서·지침이다 '
+            '(부록 E 공공 AX 가이드라인 문서 해설 기준, 겹치는 부품이 많은 순).</p>'
+            f'<ul class="dp-guides">{"".join(items)}</ul>')
+
+
+def _peers(tag: dict, peers, cx: _Ctx) -> str:
+    primary = (tag.get("workflow") or {}).get("primary")
+    if not peers or not primary:
+        return ""
+    items = "".join(f'<li><a href="{esc(cid)}.html">{esc(title)}</a></li>' for cid, title in peers[:PEER_MAX])
+    more = f" 외 {len(peers) - PEER_MAX}건" if len(peers) > PEER_MAX else ""
+    return (f'<h3 class="dp-h3">같은 주 패턴({esc(primary)})을 쓰는 다른 사례</h3>'
+            f'<p class="dp-text">같은 업무 패턴으로 조립된 사례를 서비스 유형이 같은 것부터 모았다{esc(more)}. 구현할 때 비교해 볼 수 있다.</p>'
+            f'<ul class="case-page__related">{items}</ul>')
+
+
+def pattern_section(case_id: str, tag: dict | None, catalog: dict | None, peers=None) -> str:
+    """카탈로그가 없으면 빈 문자열(구역을 만들지 않음), 태깅이 없으면 안내 한 줄.
+    peers: [(사례 id, 제목)] — 같은 주 패턴을 쓰는 다른 사례(빌더가 서비스 유형이 같은 것부터 정렬해 넘긴다)."""
     if not catalog:
         return ""
     book = esc(catalog.get("book_url", ""))
+    star = esc(catalog.get("constellation_url", ""))
     head = ('\n    <section class="obs-section" id="design-pattern">\n'
             '      <h2 class="obs-heading">디자인 패턴 분석</h2>\n')
+    star_link = f' · <a href="{star}" target="_blank" rel="noopener">패턴 성좌에서 전체 보기 ↗</a>' if star else ""
     src = (f'<p class="obs-note"><a href="{book}" target="_blank" rel="noopener">『모두의 공공AX 디자인 패턴』</a> '
-           f'카탈로그 {esc(catalog.get("version", ""))} 기준 — 사례를 기관이 함께 쓰는 AI 부품과 그 조립으로 읽은 결과입니다.</p>')
+           f'카탈로그 {esc(catalog.get("version", ""))} 기준 — 사례를 기관이 함께 쓰는 AI 부품과 그 조립으로 읽은 결과입니다.{star_link}</p>')
     if not tag:
         return (head + '      <p class="obs-note">이 사례는 아직 디자인 패턴 분석 전입니다. 패턴 카탈로그는 '
-                f'<a href="{book}" target="_blank" rel="noopener">웹북</a>에서 볼 수 있습니다.</p>\n    </section>')
+                f'<a href="{book}" target="_blank" rel="noopener">웹북</a>'
+                + (f'과 <a href="{star}" target="_blank" rel="noopener">패턴 성좌</a>' if star else "")
+                + '에서 볼 수 있습니다.</p>\n    </section>')
     cx = _Ctx(catalog)
     summary = _summary(tag, cx)
+    svg = composition_svg(tag, catalog)
+    figure = ('<figure class="dp-figure">' + svg + '<figcaption>패턴 구성도 — 층별 부품과 배선. 실선은 확인된 부품, 점선은 계획, '
+              '회색 점선은 보완이 필요한 필수 부품. 부품을 누르면 아래 상세로 간다.</figcaption></figure>') if svg else ""
     rows = "".join(f"<dt>{esc(k)}</dt><dd>{v}</dd>" for k, v in _rows(tag, cx))
     rationale = (f'<p class="dp-label">판정 근거</p><p class="dp-text">{esc(tag["rationale"])}</p>'
                  if tag.get("rationale") else "")
     guide = _guide(tag, cx)
+    guides = _guidelines(cx)
     details = "".join(_detail(pid, cx) for pid in cx.used)
-    return (head + f"      {src}{summary}"
+    return (head + f"      {src}{summary}{figure}"
             + (f'<dl class="case-page__details dp-rows">{rows}</dl>' if rows else "") + rationale
-            + (f'<h3 class="dp-h3">구현 가이드</h3>{guide}' if guide else "")
+            + (f'<h3 class="dp-h3">구현 가이드</h3>{guide}' if guide else "") + guides + _peers(tag, peers, cx)
             + (f'<h3 class="dp-h3">이 사례에 쓰인 패턴</h3><div class="dp-details">{details}</div>' if details else "")
             + "\n    </section>")
