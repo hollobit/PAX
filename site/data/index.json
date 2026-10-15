@@ -1,20 +1,20 @@
 {
- "generated_at": "2026-10-15",
+ "generated_at": "2026-10-16",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 563,
+ "total_cases": 564,
  "total_champions": 226,
  "community": {
-  "members": 2512,
-  "kakao_week": 5217,
-  "kakao_total_observed": 52470,
+  "members": 2513,
+  "kakao_week": 4867,
+  "kakao_total_observed": 52506,
   "threads_observed": 348
  },
  "certified_champions": 5,
- "unattributed_cases": 140,
+ "unattributed_cases": 141,
  "ax_distribution": {
   "AI-Ready": 362,
-  "AI-Enabled": 170,
+  "AI-Enabled": 171,
   "AX 단계 외": 25,
   "AI-First": 5,
   "AI-Native 계획": 1
@@ -23,7 +23,7 @@
  "p_distribution": {
   "P0": 182,
   "P1": 362,
-  "P2": 19
+  "P2": 20
  },
  "model_dependency": {
   "미확인": 65,
@@ -32,7 +32,7 @@
   "혼합": 16,
   "해외 상용 API": 64,
   "모델 중립(BYO)": 87,
-  "국산 독자모델": 6,
+  "국산 독자모델": 7,
   "미상": 21,
   "국산 오픈웨이트": 1
  },
@@ -801,6 +801,14 @@
      "사용자 AI(기본)",
      "Upstage Solar(선택 — 번역·사실관계 대조)"
     ]
+   },
+   {
+    "id": "8cb6daa7f1249b65",
+    "title": "Solar Planets — 업스테이지 Solar Pro 4로 만든 공공·세무 AI 도구를 행성으로 둘러보는 소개 공간",
+    "models": [
+     "Solar Pro 4",
+     "Solar Decide"
+    ]
    }
   ],
   "dist_detail": {
@@ -829,8 +837,8 @@
     "specified": 4
    },
    "국산 독자모델": {
-    "n": 6,
-    "specified": 5
+    "n": 7,
+    "specified": 6
    },
    "미상": {
     "n": 21,
@@ -844,7 +852,7 @@
   "models_by_dep": [
    {
     "dep": "국산 독자모델",
-    "n": 6,
+    "n": 7,
     "families": [
      {
       "name": "schift(자체 학습)",
@@ -896,6 +904,34 @@
       "domestic": true,
       "variants": [
        "Upstage Solar"
+      ]
+     },
+     {
+      "name": "Solar Pro 4",
+      "n": 1,
+      "cases": [
+       {
+        "id": "8cb6daa7f1249b65",
+        "title": "Solar Planets — 업스테이지 Solar Pro 4로 만든 공공·세무 AI 도구를 행성으로 둘러보는 소개 공간"
+       }
+      ],
+      "domestic": true,
+      "variants": [
+       "Solar Pro 4"
+      ]
+     },
+     {
+      "name": "Solar Decide",
+      "n": 1,
+      "cases": [
+       {
+        "id": "8cb6daa7f1249b65",
+        "title": "Solar Planets — 업스테이지 Solar Pro 4로 만든 공공·세무 AI 도구를 행성으로 둘러보는 소개 공간"
+       }
+      ],
+      "domestic": true,
+      "variants": [
+       "Solar Decide"
       ]
      }
     ]
@@ -1733,18 +1769,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.06,
- "local_model_rate": 0.265,
- "model_known": 117,
- "license_tagged": 420,
- "license_stated_rate": 0.486,
+ "domestic_model_rate": 0.068,
+ "local_model_rate": 0.263,
+ "model_known": 118,
+ "license_tagged": 421,
+ "license_stated_rate": 0.487,
  "gitlab_cases": 280,
  "gitlab_mirror_pairs": 41,
  "gitlab_open_rate": 0.146,
- "mcp_cases": 93,
+ "mcp_cases": 94,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 481,
+  "미확인": 482,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1853,7 +1889,7 @@
    ]
   },
   "github": {
-   "count": 164,
+   "count": 165,
    "starred": 152,
    "stars_sum": 299376,
    "maintenance": {
@@ -1947,7 +1983,7 @@
  },
  "license_distribution": {
   "명시 없음": 216,
-  "MIT": 134,
+  "MIT": 135,
   "Apache-2.0": 33,
   "Other": 18,
   "AGPL-3.0": 5,
@@ -1965,7 +2001,7 @@
    "gitlab": 158
   },
   "MIT": {
-   "github": 80,
+   "github": 81,
    "gitlab": 53
   },
   "Apache-2.0": {
@@ -2015,8 +2051,8 @@
    "stated": 108
   },
   "github-pages": {
-   "total": 21,
-   "stated": 6
+   "total": 22,
+   "stated": 7
   },
   "gitlab": {
    "total": 247,
@@ -2024,17 +2060,17 @@
   }
  },
  "mcp_stats": {
-  "total": 93,
+  "total": 94,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
    "Server": 80,
    "Client/Host": 7,
-   "Unknown/None": 5
+   "Unknown/None": 6
   },
   "c_grades": {
-   "C0": 68,
+   "C0": 69,
    "C2": 9,
    "C3": 1,
    "C1": 15

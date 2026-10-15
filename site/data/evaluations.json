@@ -1,6 +1,6 @@
 {
- "evaluated_at": "2026-10-15",
- "total": 563,
+ "evaluated_at": "2026-10-16",
+ "total": 564,
  "cases": [
   {
    "no": 1,
@@ -18578,6 +18578,39 @@
    "tool_type": "플랫폼·포털",
    "audience": "G2C 공개",
    "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 566,
+   "id": "8cb6daa7f1249b65",
+   "org": "업스테이지",
+   "title": "Solar Planets — 업스테이지 Solar Pro 4로 만든 공공·세무 AI 도구를 행성으로 둘러보는 소개 공간",
+   "ax_prev": "AI-Enabled",
+   "ax": "AI-Enabled",
+   "s": "S1",
+   "s_name": "Single tool",
+   "c": "C0",
+   "c_name": "기능 제공",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Published tool",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R0 최소",
+   "human": "해당 없음",
+   "evidence": "E2 화면·서비스 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "자사 모델로 만든 민원 분류·한글 서식·세무 근거·세액 계산 도구와 정부 업무 공간을 한 화면에 모은 소개 페이지라 도구 자체는 아니어서 S1/C0다. 국산 독자모델이 범정부 공통기반에 등록돼 있고 행정망 안 MCP·문서와 연결된다는 점을 보여 주는 민간 참고 사례이며, 묶인 도구 가운데 셋은 아카이브에 따로 등재돼 있다. 민원 분류 행성의 실제 기관 적용 여부는 미확인이다.",
+   "feedback": "미확인",
+   "resilience": "미확인(업체 운영 페이지)",
+   "post_url": "",
+   "service_url": "https://upstageai.github.io/solar-planets/",
+   "tool_type": "웹 서비스",
+   "audience": "G2C 공개",
+   "p": "P2 시스템 쓰기(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }

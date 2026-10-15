@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-15T13:40:58Z",
- "count": 963,
+ "updated_at": "2026-10-15T16:52:52Z",
+ "count": 964,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261014212553",
@@ -1905,6 +1905,19 @@
    "title": "세종 1조8000억 AI데이터센터 MOU…‘행정도시→AI 인프라 거점’ 전환 시험대",
    "outlet": "녹색경제신문",
    "published": "2026-10-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-07",
+   "last_shared": "2026-10-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://uisadang.dev/bills/PRC_I2J6R0P9Q1O4O0N7O5J7K1I8H8H3F6",
+   "title": "공직자 등의 병역사항 신고 및 공개에 관한 법률 일부개정법률안",
+   "outlet": "uisadang",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-07",

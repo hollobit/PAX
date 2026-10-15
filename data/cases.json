@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-15T23:33:54+09:00",
+ "updated_at": "2026-10-16T01:52:33+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -16148,6 +16148,35 @@
    "region": "경남",
    "case_url": "https://www.yna.co.kr/view/AKR20261015102500052",
    "id": "58b7e67e212ad842"
+  },
+  {
+   "collected_at": "2026-10-16",
+   "source": "kakao",
+   "case_class": "참고",
+   "tags": [
+    "Solar",
+    "MCP",
+    "민원분류",
+    "소개페이지"
+   ],
+   "runtime_env": "브라우저만",
+   "summary": "업스테이지가 자사 거대언어모델 Solar Pro 4를 태양으로, 그 위에서 만든 공공·세무 도구를 행성으로 엮은 소개 페이지다. 민원 유형·담당 부서를 판정해 답변 초안을 만드는 민원 분류, 기관 서식 한글 보고서 생성, 근거 문서번호와 함께 답하는 세무 법령 검색, 규정대로 세액을 계산하는 도구, 정부 업무 공간을 행성마다 해결한 불편과 함께 보여 준다.",
+   "task_category": "공통·범용",
+   "org": "업스테이지",
+   "date": "2026-10-15",
+   "link": "https://upstageai.github.io/solar-planets/",
+   "title": "Solar Planets — 업스테이지 Solar Pro 4로 만든 공공·세무 AI 도구를 행성으로 둘러보는 소개 공간",
+   "models_used": [
+    "Solar Pro 4",
+    "Solar Decide"
+   ],
+   "model_dependency": "국산 독자모델",
+   "org_type": "민간(참고)",
+   "id": "8cb6daa7f1249b65",
+   "license": "MIT",
+   "license_source": "github-pages",
+   "license_checked": "2026-10-16",
+   "case_url": "https://github.com/UpstageAI/solar-planets"
   }
  ]
 }

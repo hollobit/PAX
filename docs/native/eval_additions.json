@@ -13802,5 +13802,33 @@
   "service_url": "https://welfare.gyeongnam.go.kr/main.gsnd",
   "rationale": "복지사업·법령·매뉴얼을 학습한 AI 상담과 서비스 찾기·온라인 신청·시설 찾기·위기 도움요청을 한 플랫폼에 묶어 대민 복지 안내를 부분 완결하는 S3/C2 시스템이며 AI-Enabled다. 광역자치단체가 복지 분야에 AI를 접목한 첫 사례로 밝혔고 운영 URL과 기관 발표로 E3 근거가 있다. 사용 모델과 상담 오류 대응 절차는 미확인이다.",
   "resilience": "도가 정보 현행화를 운영 과제로 명시 — 갱신 주기는 미확인"
+ },
+ {
+  "no": 566,
+  "id": "8cb6daa7f1249b65",
+  "org": "업스테이지",
+  "title": "Solar Planets — 업스테이지 Solar Pro 4로 만든 공공·세무 AI 도구를 행성으로 둘러보는 소개 공간",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C0",
+  "c_name": "기능 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Published tool",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R0 최소",
+  "human": "해당 없음",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "post_url": "",
+  "service_url": "https://upstageai.github.io/solar-planets/",
+  "rationale": "자사 모델로 만든 민원 분류·한글 서식·세무 근거·세액 계산 도구와 정부 업무 공간을 한 화면에 모은 소개 페이지라 도구 자체는 아니어서 S1/C0다. 국산 독자모델이 범정부 공통기반에 등록돼 있고 행정망 안 MCP·문서와 연결된다는 점을 보여 주는 민간 참고 사례이며, 묶인 도구 가운데 셋은 아카이브에 따로 등재돼 있다. 민원 분류 행성의 실제 기관 적용 여부는 미확인이다.",
+  "resilience": "미확인(업체 운영 페이지)"
  }
 ]
