@@ -13746,5 +13746,33 @@
   "service_url": "https://procedural-seoul-open.vercel.app/",
   "rationale": "건물통합정보·수치지형도·수치표고·OSM·날씨 자료를 엮어 도시를 절차적으로 생성해 보여 주는 S2/C1 디지털 트윈이다. LLM을 쓰지 않아 AI-Ready이며, 공개 공간정보만으로 도시 단위 3D 트윈을 세울 수 있음을 보여 주는 참고 사례다. 만든 주체와 공공 업무 활용 여부는 미확인이다.",
   "resilience": "미확인(개인 운영·데이터 갱신 주기)"
+ },
+ {
+  "no": 564,
+  "id": "972d8e29171b8304",
+  "org": "폴리랭커(민간 개발)",
+  "title": "폴리랭커 — 국회 법안 발의·표결·처리 결과와 의원 의정활동을 기록·공개하는 비영리 서비스",
+  "ax_prev": "AI-Ready",
+  "ax": "AI-Ready",
+  "s": "S2",
+  "s_name": "Workflow",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Live service",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R1 낮음(공개 의정 자료 기반, 쟁점 설명은 해석 포함)",
+  "human": "해당 없음",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "post_url": "https://www.threads.com/@dev._.jay/post/DVvxCKogRAV",
+  "service_url": "https://legislative-archive.codism.co.kr/",
+  "rationale": "국회 공공 API로 의안·표결·의원 정보를 모아 쟁점 설명·통과 법안 영향·의원 순위로 가공해 보여 주는 S2/C1 서비스다. 쟁점 설명 생성에 LLM을 쓰는지는 확인되지 않아 AI-Ready로 두며, 공공 의정 데이터를 시민 눈높이로 재구성한 참고 사례다. 운영 주체와 데이터 갱신 주기는 미확인이다.",
+  "resilience": "미확인(개인 운영 지속 여부)"
  }
 ]

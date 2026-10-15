@@ -6659,6 +6659,12 @@
    "title": "디지털 트윈 코리아 — 건물통합정보·수치지형도·DEM으로 서울·세종을 절차적으로 세운 3D 도시",
    "org": "디지털 트윈 코리아(개인 개발)",
    "url": "https://procedural-seoul-open.vercel.app/"
+  },
+  {
+   "id": "972d8e29171b8304",
+   "title": "폴리랭커 — 국회 법안 발의·표결·처리 결과와 의원 의정활동을 기록·공개하는 비영리 서비스",
+   "org": "폴리랭커(민간 개발)",
+   "url": "https://legislative-archive.codism.co.kr/"
   }
  ]
 }

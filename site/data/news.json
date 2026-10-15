@@ -1,12 +1,25 @@
 {
- "updated_at": "2026-10-15T06:34:42Z",
- "count": 955,
+ "updated_at": "2026-10-15T13:40:58Z",
+ "count": 963,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261014212553",
    "title": "앤트로픽, 깃 대신 쓰는 자체 코드 관리 시스템 '사이언' 공개",
    "outlet": "zdnet.co.kr",
    "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/amp/view/AKR20261015102500052",
+   "title": "몰라서 못 받는 복지 없게…AI 기반 경남통합복지플랫폼 개통",
+   "outlet": "연합뉴스",
+   "published": "2026-10-15",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-15",
@@ -198,6 +211,58 @@
    ]
   },
   {
+   "url": "https://roboco.io/posts/security-accelerates-software-factory",
+   "title": "보안이 소프트웨어 팩토리 도입을 가속한다",
+   "outlet": "ROBOCO",
+   "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://console.upstage.ai/",
+   "title": "Start Using Upstage AI | Setup Guide for Developers",
+   "outlet": "Upstage Console",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-15-폐쇄망에서-명함-관리-중복자료-정리-로컬-ai-반입-시도",
+   "title": "[공공AX 네트워크] 폐쇄망에서 AI로 업무자료를 정리하려는 고민",
+   "outlet": "akwiki.org",
+   "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-15-클로드-데스크탑-통신-차단-사건과-공공-보안-망분리-논쟁",
+   "title": "[공공AX 네트워크] 클로드 데스크톱 외부 통신 차단과 공공 보안 논쟁",
+   "outlet": "akwiki.org",
+   "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-15-사이버교육-실효성과-웹툰-교육안-틀어놓고-딴일하는-교육을-바꿀-수-있나",
    "title": "[공공AX 네트워크] 사이버교육 실효성 논란과 웹툰 교육안",
    "outlet": "akwiki.org",
@@ -213,6 +278,45 @@
   {
    "url": "https://akwiki.org/article/2026-10-15-간부-대상-ai-교육-시연-소재-보고서-쓰기-말고-실제로-쓸-만한-것",
    "title": "[공공AX 네트워크] 간부 대상 AI 교육 시연 소재 찾기",
+   "outlet": "akwiki.org",
+   "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-15-cross-usage-reset",
+   "title": "[3개 방 공통] 코덱스 리셋 소동이 세 방의 갈아타기 고민으로",
+   "outlet": "akwiki.org",
+   "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-15-ai에-일을-대체당하면-어떻게-되나-공공-현장의-불안과-기대",
+   "title": "[공공AX 네트워크] AI가 일을 가져가면 남는 것은 판단과 책임",
+   "outlet": "akwiki.org",
+   "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-15-ai로-만든-디아2풍-웹게임과-개인용-앱-배포-이야기",
+   "title": "[공공AX 네트워크] AI로 만든 디아2풍 웹게임과 개인용 앱",
    "outlet": "akwiki.org",
    "published": "2026-10-15",
    "kind": "기사",

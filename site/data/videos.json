@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-14T23:37:52Z",
- "count": 104,
+ "updated_at": "2026-10-15T13:40:55Z",
+ "count": 105,
  "videos": [
+  {
+   "id": "o7WlANaRKL4",
+   "title": "내 능력이 퇴보하지 않고 AI 쓰려면 이렇게 하세요 (이제현 KIST AIX 전략실장)",
+   "channel": "티타임즈TV",
+   "url": "https://www.youtube.com/watch?v=o7WlANaRKL4",
+   "thumb": "https://i.ytimg.com/vi/o7WlANaRKL4/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "YDjF5BoRbi8",
    "title": "Codex로 만든 가상 건축시각화 | Corner Light 건축 모델링부터 AI 영상까지",
