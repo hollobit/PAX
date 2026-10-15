@@ -10,6 +10,7 @@ import html
 from pathlib import Path
 from pax.case_details import detail_list, rank_entry
 from pax.case_developer import developer_section
+from pax.case_patterns import pattern_section
 from pax.jsonio import load_json, read_json, write_json
 from pax.urls import preferred_url
 from stamp_assets import digest, stamp_file
@@ -87,6 +88,7 @@ TEMPLATE = """<!DOCTYPE html>
       {eval_table}
       <p class="obs-note">{rationale}</p>
     </section>
+{patterns}
     <section class="obs-section">
       <h2 class="obs-heading">실무 도입 카드</h2>
       <div class="obs-cards">
@@ -183,6 +185,9 @@ def main():
                if PAGE_JS.exists() else "")
     champions = load_json("site/data/champions.json", default={}).get("champions", [])
     titles = {c["id"]: c["title"] for c in cases}
+    # 디자인 패턴 분석 — scripts/sync_patterns.py가 PAX-DP 원본에서 가져온 자료(없으면 구역을 만들지 않는다)
+    dp_catalog = load_json("data/patterns/catalog.json", default=None)
+    dp_cases = load_json("data/patterns/case_patterns.json", default={}).get("cases", {})
     write_json(RANK, {"cases": [rank_entry(c) for c in cases]}, compact=True)
     for c in cases:
         ev = evals.get(c["id"])
@@ -210,7 +215,8 @@ def main():
                 f' ({esc(review.get("checked_at") or "")})</a>')
         page = TEMPLATE.format(
             og_image=og_image, thumb=thumb, page_js=page_js, collected=esc(c.get("collected_at")),
-            details=detail_list(c), developer=developer_section(c["id"], champions, titles), nav=nav, external=external, css_v=css_v, base=BASE, cid=esc(c["id"]), title=esc(c["title"]),
+            details=detail_list(c), developer=developer_section(c["id"], champions, titles),
+            patterns=pattern_section(c["id"], dp_cases.get(c["id"]), dp_catalog), nav=nav, external=external, css_v=css_v, base=BASE, cid=esc(c["id"]), title=esc(c["title"]),
             desc=esc(c["summary"][:150]), org=esc(c["org"]), org_type=esc(c["org_type"]),
             region=f" · {esc(c['region'])}" if c.get("region") else "",
             task=esc(c.get("task_category") or "분류 없음"), date=esc(c["date"]),

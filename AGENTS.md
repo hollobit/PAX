@@ -55,7 +55,8 @@ PAX = Threads `공공AX` 태그 + 카카오톡 오픈채팅 "공공AX 네트워�
 빌드 순서는 `scripts/pax/run.py`가 정본이다. 테스트: `python3 -m pytest`. 공개 저장소 점검(비공개 경로·채팅방 ID·
 비밀 키·깨진 JSON): `python3 scripts/check_repo.py` — 둘 다 푸시마다 CI(`.github/workflows/ci.yml`)가 돌린다.
 상단 메뉴(주요·관련 사이트)는 `scripts/sync_nav.py`의 NAV·EXTERNAL 한 곳에서 고친다(사례 상세 페이지도 같은 목록).
-원장 교차 점검: `PYTHONPATH=scripts python3 -m pax.ledger`. 카카오 워치독 등록(새 기기): `bash scripts/launchd/install_watchdog.sh`.
+원장 교차 점검: `PYTHONPATH=scripts python3 -m pax.ledger`.
+디자인 패턴 자료(PAX-DP 사례별 태깅·카탈로그) 갱신: `PYTHONPATH=scripts python3 scripts/sync_patterns.py --src <원본 작업 저장소>` → `data/patterns/` — 책이 개정될 때만 손으로 돌리고, 상세 페이지는 다음 후처리에서 반영된다. 카카오 워치독 등록(새 기기): `bash scripts/launchd/install_watchdog.sh`.
 `scripts/collect_receiver.py`는 브라우저 수집분을 로컬 파일로 받는 임시 수신 서버다(확장 출력 차단으로 본문을
 못 넘길 때의 대안 — 정기 절차에서는 쓰지 않는다).
 배포는 CI가 main에서 성공한 뒤에만 돈다(`pages.yml`). `freshness.yml`이 6시간마다 마지막 원장 커밋(cases·community_stats)이

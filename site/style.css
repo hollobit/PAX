@@ -2344,6 +2344,51 @@ a.case-page__thumb:hover, a.case-page__thumb:focus-visible { border-color: var(-
 .case-dev__line { margin: 0.2rem 0; font-size: 0.9rem; color: var(--ink-2, #555); }
 .case-dev__line a { margin-right: 0.2rem; }
 .case-dev__label { margin: 0.6rem 0 0.2rem; font-size: 0.85rem; color: var(--ink-faint); }
+/* ── 사례 상세: 디자인 패턴 분석(PAX-DP) ── */
+.dp-chip {
+  display: inline-block;
+  margin: 0.1rem 0.15rem 0.1rem 0;
+  padding: 0.08rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  text-decoration: none;
+  color: #2b2620;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #efe8d8;
+}
+.dp-chip:hover, .dp-chip:focus-visible { border-color: var(--accent, #8c2b23); }
+.dp-chip--B { background: #dfe9f5; }
+.dp-chip--Bp { background: #e6e0f3; }
+.dp-chip--A { background: #dcefe3; }
+.dp-chip--C { background: #f6ead2; }
+.dp-chip--S { background: #f6dcd8; }
+.dp-chip--F { background: #e3f1f1; }
+.dp-chip--D { background: #ece4d6; }
+.dp-chip--X { background: #3a3226; color: #fbf6ea; }
+.dp-chip__note { font-size: 0.72rem; opacity: 0.75; }
+.dp-lead { margin: 0.4rem 0; font-size: 1rem; }
+.dp-lead__label { font-weight: 700; margin-right: 0.3rem; }
+.dp-lead__sub { color: var(--ink-faint); font-size: 0.85rem; margin: 0 0.2rem; }
+.dp-rows { margin-top: 0.6rem; }
+.dp-h3 { margin: 1.4rem 0 0.4rem; font-size: 1.08rem; }
+.dp-h4 { margin: 1rem 0 0.3rem; font-size: 0.98rem; }
+.dp-label { margin: 0.6rem 0 0.15rem; font-size: 0.82rem; color: var(--ink-faint); font-weight: 600; }
+.dp-text { margin: 0.1rem 0 0.3rem; line-height: 1.6; }
+.dp-steps, .dp-check, .dp-list { margin: 0.2rem 0 0.4rem; padding-left: 1.3rem; line-height: 1.6; }
+.dp-check { list-style: "☐ "; }
+.dp-fix { display: block; color: var(--ink-2, #555); font-size: 0.9rem; }
+.dp-details { display: grid; gap: 0.4rem; }
+.dp-detail {
+  border: 1px solid var(--rule, #ddd);
+  border-radius: 8px;
+  padding: 0.45rem 0.8rem;
+  background: var(--surface, #fff);
+}
+.dp-detail > summary { cursor: pointer; }
+.dp-detail[open] > summary { margin-bottom: 0.3rem; }
+.dp-detail__layer { color: var(--ink-faint); font-size: 0.8rem; margin-left: 0.3rem; }
+.dp-detail:target { outline: 2px solid var(--accent, #8c2b23); }
 .case-page__meta { color: var(--ink-faint); font-family: var(--font-mono); font-size: 0.82rem; }
 .case-page__summary { font-size: 1.02rem; line-height: 1.65; }
 .case-page__links a { margin-right: 0.4rem; }
