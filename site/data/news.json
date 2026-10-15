@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-14T22:34:25Z",
- "count": 946,
+ "updated_at": "2026-10-15T00:35:27Z",
+ "count": 949,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261014212553",
@@ -111,6 +111,45 @@
    "title": "LG CNS, 일본 통신사 KDDI와 동남아 에이전틱·피지컬 AI 시장 공조",
    "outlet": "AI타임스",
    "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-15-사이버교육-실효성과-웹툰-교육안-틀어놓고-딴일하는-교육을-바꿀-수-있나",
+   "title": "[공공AX 네트워크] 사이버교육 실효성 논란과 웹툰 교육안",
+   "outlet": "akwiki.org",
+   "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-15-간부-대상-ai-교육-시연-소재-보고서-쓰기-말고-실제로-쓸-만한-것",
+   "title": "[공공AX 네트워크] 간부 대상 AI 교육 시연 소재 찾기",
+   "outlet": "akwiki.org",
+   "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-15-ai-공공ax-소식-공유-gpt-4-계열-api-종료와-공공ax-디자인-패턴-웹북",
+   "title": "[공공AX 네트워크] GPT-4 계열 API 종료와 공공AX 디자인 패턴 웹북",
+   "outlet": "akwiki.org",
+   "published": "2026-10-15",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-15",

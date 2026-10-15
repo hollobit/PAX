@@ -6653,6 +6653,12 @@
    "title": "포항시 전산직 공무원 자체 개발 AI 행정 도구 — 초과근무·출장 정산, 노트북 예약, AI 질문 코칭 등과 연구모임",
    "org": "경상북도 포항시",
    "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4087294"
+  },
+  {
+   "id": "1a7253f56971ef14",
+   "title": "디지털 트윈 코리아 — 건물통합정보·수치지형도·DEM으로 서울·세종을 절차적으로 세운 3D 도시",
+   "org": "디지털 트윈 코리아(개인 개발)",
+   "url": "https://procedural-seoul-open.vercel.app/"
   }
  ]
 }
