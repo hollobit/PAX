@@ -1,7 +1,176 @@
 {
- "updated_at": "2026-10-15T16:52:52Z",
- "count": 964,
+ "updated_at": "2026-10-15T22:34:06Z",
+ "count": 977,
  "articles": [
+  {
+   "url": "https://www.tokenpost.kr/news/ai/422660",
+   "title": "앤스로픽, 클로드 작업 추적 기능 공개 베타",
+   "outlet": "토큰포스트",
+   "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.seoul.co.kr/news/peoples/2026/10/16/20261016023003",
+   "title": "“AI 행정, 공무원이 검증하고 책임져야”",
+   "outlet": "서울신문",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=242213",
+   "title": "삼성전자, 7GHz 전송·AI-RAN 검증…6G 기술 성과 공개",
+   "outlet": "아이티데일리",
+   "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.energy-news.co.kr/news/articleView.html?idxno=228975",
+   "title": "가스안전공사, NIA 'AI윤리 준수기관' 확인마크 획득",
+   "outlet": "에너지신문",
+   "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.edaily.co.kr/News/Read?newsId=04395206645613248",
+   "title": "마인드로직, 월 5900원으로 챗GPT 등 80개 생성형 AI 사용  '베이즈' 출시",
+   "outlet": "이데일리",
+   "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42319",
+   "title": "카카오, 자율 AI 에이전트 윤리 체계 구축…‘SPIRIT·NORMA’로 전 주기 위험 관리",
+   "outlet": "인공지능신문",
+   "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216306",
+   "title": "미국 8개 주, 오픈AI 상대 집단 소송...“챗GPT가 자해·폭력 부추겨”",
+   "outlet": "AI타임스",
+   "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216297",
+   "title": "스페이스XSI, 최고 성능 '그록 보이스 3.0' 공개...\"실무 전화 해결률 1위\"",
+   "outlet": "AI타임스",
+   "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216277",
+   "title": "오픈AI 도청 혐의 엔지니어, 사우디행 포착...\"도주 우려 있었다\"",
+   "outlet": "AI타임스",
+   "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-16-px-해커톤-예산-b2g",
+   "title": "[공공AX 네트워크] 해커톤 상금과 10월 중순 예산 집행 이야기",
+   "outlet": "akwiki.org",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-16-px-폐쇄망-qwen-도입",
+   "title": "[공공AX 네트워크] 폐쇄망에 Qwen3.8을 올린 기관들의 증언",
+   "outlet": "akwiki.org",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-16-px-무료-gpt-mcp-연결",
+   "title": "[공공AX 네트워크] 무료 GPT 계정에 복지 MCP를 붙이자는 제안",
+   "outlet": "akwiki.org",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-16-px-경남-복지-ai-평가",
+   "title": "[공공AX 네트워크] 경남 복지 서비스 사이트를 둘러싼 엇갈린 평가",
+   "outlet": "akwiki.org",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261014212553",
    "title": "앤트로픽, 깃 대신 쓰는 자체 코드 관리 시스템 '사이언' 공개",
