@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-15T00:35:27Z",
- "count": 949,
+ "updated_at": "2026-10-15T06:34:42Z",
+ "count": 955,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261014212553",
@@ -55,10 +55,49 @@
    ]
   },
   {
+   "url": "https://www.kbmaeil.com/article/20261013500829",
+   "title": "영덕군의회 “미래대응기금 위해 지방교부세 줄여선 안 돼”",
+   "outlet": "경북매일",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.hani.co.kr/arti/economy/economy_general/1275651.html",
+   "title": "반도체 호황에 미래대응기금 162조 조성…58조 쓰고 104조 남겨둬",
+   "outlet": "한겨레",
+   "published": "2026-09-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.edaily.co.kr/News/Read?newsId=04119686645612920",
    "title": "조원갑 행안부 과장, 충남도 기획조정실장에 임명",
    "outlet": "이데일리",
    "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.doctorsnews.co.kr/news/articleView.html?idxno=166110&sc_word=&sc_word2=",
+   "title": "복지부 2027년도 예산, 지역·필수의료 특별회계 1조 2600억 신설",
+   "outlet": "의협신문",
+   "published": "2026-09-01",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-15",
@@ -111,6 +150,45 @@
    "title": "LG CNS, 일본 통신사 KDDI와 동남아 에이전틱·피지컬 AI 시장 공조",
    "outlet": "AI타임스",
    "published": "2026-10-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://v.daum.net/v/20261015112756896",
+   "title": "[단독] 음저협, 직원 PC는 '186만원' 회장실 맥북은 '1867만원'",
+   "outlet": "Daum | 더팩트",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://v.daum.net/v/20260917211509497",
+   "title": "한국음악저작권협회,작권료 분배 시스템 최대 1,200배 빨라졌다",
+   "outlet": "Daum | 스포츠경향",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-15",
+   "last_shared": "2026-10-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://share.google/iczbJsUNDy5uFKnox",
+   "title": "AI 활용 능력이 사회적 격차를 만든다?",
+   "outlet": "share.google",
+   "published": "2026-10-12",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-15",
