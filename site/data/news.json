@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-15T22:34:06Z",
- "count": 977,
+ "updated_at": "2026-10-16T06:35:22Z",
+ "count": 981,
  "articles": [
   {
    "url": "https://www.tokenpost.kr/news/ai/422660",
@@ -29,10 +29,36 @@
    ]
   },
   {
+   "url": "https://www.newsis.com/view/NISX20261013_0003823860",
+   "title": "챗GPT에 뚫린 '임상 자료'…식약처장 \"접근 차단\"",
+   "outlet": "뉴시스",
+   "published": "2026-10-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.itdaily.kr/news/articleView.html?idxno=242213",
    "title": "삼성전자, 7GHz 전송·AI-RAN 검증…6G 기술 성과 공개",
    "outlet": "아이티데일리",
    "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fmkorea.com/best/10451598942",
+   "title": "테슬라 신차 로드스터 라이브 근황 ㄷㄷ",
+   "outlet": "에펨코리아",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-16",
@@ -111,6 +137,32 @@
    "title": "오픈AI 도청 혐의 엔지니어, 사우디행 포착...\"도주 우려 있었다\"",
    "outlet": "AI타임스",
    "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://roboco.io/posts/legacy-php-vibe-coding-modernization",
+   "title": "바이브 코딩으로 레거시 현대화하기 (2/2): 웹의 역사와 함께 쌓인 PHP",
+   "outlet": "ROBOCO",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://roboco.io/posts/legacy-cpp-vibe-coding-modernization",
+   "title": "바이브 코딩으로 레거시 현대화하기 (1/2): 20년 된 C/C++ 애플리케이션",
+   "outlet": "ROBOCO",
+   "published": "2026-10-16",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-16",

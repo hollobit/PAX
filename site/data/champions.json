@@ -1,5 +1,5 @@
 {
- "total": 226,
+ "total": 227,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -1794,6 +1794,28 @@
    "category_basis": "cases",
    "cases": [
     "22bd8e0c137caa21"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:samhodong",
+   "name": "samhodong",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "samhodong",
+     "url": "https://github.com/samhodong"
+    }
+   ],
+   "affiliation": null,
+   "category": "기초지자체",
+   "category_basis": "cases",
+   "cases": [
+    "01880c27e51b8deb"
    ],
    "stats": {
     "case_count": 1,

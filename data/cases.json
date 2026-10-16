@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-16T01:52:33+09:00",
+ "updated_at": "2026-10-16T15:34:26+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -16177,6 +16177,32 @@
    "license_source": "github-pages",
    "license_checked": "2026-10-16",
    "case_url": "https://github.com/UpstageAI/solar-planets"
+  },
+  {
+   "title": "삼호동 3D 맵 — 행정복지센터 주변 1km 건물 1,224동을 용도별로 세운 3D 지도",
+   "runtime_env": "브라우저만",
+   "tags": [
+    "3D지도",
+    "건축물대장",
+    "공간정보",
+    "행정복지센터"
+   ],
+   "summary": "울산 남구 삼호동행정복지센터 주변 약 1km 안의 건물 1,224동을 VWorld 건물 윤곽과 건축물대장의 용도·높이로 세워, 공동주택·단독다가구·상업업무·공공의료교육 등 용도별 색으로 보여 주는 3D 지도다. 조감·평면·센터 앞·돌아보기 시점을 고를 수 있고 건물을 누르면 정보가 나오며, 대장과 연결되지 않은 건물은 층수로 높이를 환산했다.",
+   "model_dependency": "없음(비LLM)",
+   "org": "울산광역시 남구 삼호동행정복지센터",
+   "date": "2026-10-16",
+   "task_category": "데이터·통계",
+   "link": "https://samhodong.github.io/samho-3d-map/",
+   "case_class": "개인 개발",
+   "collected_at": "2026-10-16",
+   "source": "kakao",
+   "org_type": "기초지자체",
+   "case_url": "https://github.com/samhodong/samho-3d-map",
+   "region": "울산",
+   "id": "01880c27e51b8deb",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-10-16"
   }
  ]
 }

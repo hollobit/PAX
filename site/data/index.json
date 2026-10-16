@@ -2,18 +2,18 @@
  "generated_at": "2026-10-16",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 564,
- "total_champions": 226,
+ "total_cases": 565,
+ "total_champions": 227,
  "community": {
-  "members": 2512,
-  "kakao_week": 4883,
-  "kakao_total_observed": 52522,
+  "members": 2520,
+  "kakao_week": 5421,
+  "kakao_total_observed": 53060,
   "threads_observed": 348
  },
  "certified_champions": 5,
  "unattributed_cases": 141,
  "ax_distribution": {
-  "AI-Ready": 362,
+  "AI-Ready": 363,
   "AI-Enabled": 171,
   "AX 단계 외": 25,
   "AI-First": 5,
@@ -21,13 +21,13 @@
  },
  "c_axis_mean": 0.94,
  "p_distribution": {
-  "P0": 182,
+  "P0": 183,
   "P1": 362,
   "P2": 20
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 273,
+  "없음(비LLM)": 274,
   "해외 오픈웨이트(로컬)": 30,
   "혼합": 16,
   "해외 상용 API": 64,
@@ -817,7 +817,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 273,
+    "n": 274,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -1772,15 +1772,15 @@
  "domestic_model_rate": 0.068,
  "local_model_rate": 0.263,
  "model_known": 118,
- "license_tagged": 421,
- "license_stated_rate": 0.487,
+ "license_tagged": 422,
+ "license_stated_rate": 0.486,
  "gitlab_cases": 280,
  "gitlab_mirror_pairs": 41,
  "gitlab_open_rate": 0.146,
  "mcp_cases": 94,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 482,
+  "미확인": 483,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1788,7 +1788,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.773
+  "feedback": 0.772
  },
  "maintenance_distribution": {
   "활발": 317,
@@ -1889,7 +1889,7 @@
    ]
   },
   "github": {
-   "count": 165,
+   "count": 166,
    "starred": 152,
    "stars_sum": 299376,
    "maintenance": {
@@ -1982,7 +1982,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 216,
+  "명시 없음": 217,
   "MIT": 135,
   "Apache-2.0": 33,
   "Other": 18,
@@ -1997,7 +1997,7 @@
  },
  "license_matrix": {
   "명시 없음": {
-   "github": 58,
+   "github": 59,
    "gitlab": 158
   },
   "MIT": {
@@ -2047,7 +2047,7 @@
  },
  "license_by_source": {
   "github": {
-   "total": 151,
+   "total": 152,
    "stated": 108
   },
   "github-pages": {
