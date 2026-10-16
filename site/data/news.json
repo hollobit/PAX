@@ -1,7 +1,150 @@
 {
- "updated_at": "2026-10-16T14:35:22Z",
- "count": 989,
+ "updated_at": "2026-10-16T22:34:23Z",
+ "count": 1000,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261016201014",
+   "title": "화웨이, AI 데이터센터 중심의 전광 네트워크용 차세대 OTN 제안",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-17",
+   "last_shared": "2026-10-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261016163000017",
+   "title": "[AI픽] 클라우드 없이 AI 돌린다…엔비디아 'RTX 스파크' 출시",
+   "outlet": "연합뉴스",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-17",
+   "last_shared": "2026-10-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.techm.kr/news/articleView.html?idxno=156170",
+   "title": "국산 NPU 133억 사업 재조정...'공무원용 AI' 내년 가동 가능성↑",
+   "outlet": "테크M",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-17",
+   "last_shared": "2026-10-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newstap.co.kr/news/articleView.html?idxno=335873",
+   "title": "티오리, 오픈AI 이어 앤트로픽 보안 AI 접근권 확보…글로벌 AI 양강과 협력 기반 마련",
+   "outlet": "뉴스탭",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-17",
+   "last_shared": "2026-10-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mk.co.kr/news/it/12177648",
+   "title": "한층 더 자연스러워진 한국어 대화...오픈AI, 챗GPT 보이스 업데이트",
+   "outlet": "매일경제",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-17",
+   "last_shared": "2026-10-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.hansbiz.co.kr/news/articleView.html?idxno=873416",
+   "title": "트웰브랩스, 영상 AI ‘자키’ 정식 출시…챗GPT·클로드 앱 연동 지원",
+   "outlet": "한스경제",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-17",
+   "last_shared": "2026-10-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216347",
+   "title": "오픈AI 도청 혐의 직원, 사우디 왕세자 면담부터 투자사 활동까지 드러나",
+   "outlet": "AI타임스",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-17",
+   "last_shared": "2026-10-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://biz.heraldcorp.com/article/10905144",
+   "title": "부산시, 데이터·AI로 행정문제 해결",
+   "outlet": "헤럴드경제",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-17",
+   "last_shared": "2026-10-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-17-px-위기가구-공공데이터-발굴",
+   "title": "[공공AX 네트워크] 공공데이터로 위기가구를 찾는 아이디어와 한계",
+   "outlet": "akwiki.org",
+   "published": "2026-10-17",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-17",
+   "last_shared": "2026-10-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-17-px-아르곤4-오푸스55-사용감",
+   "title": "[공공AX 네트워크] 아르곤4와 오푸스 5.5를 두고 오간 사용감",
+   "outlet": "akwiki.org",
+   "published": "2026-10-17",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-17",
+   "last_shared": "2026-10-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-17-cross-gpt-크롬-탭-연동-반응",
+   "title": "[에이전트코리아·공공AX 네트워크] OpenAI 크롬 탭 연동 발표 전후 두 방의 대화",
+   "outlet": "akwiki.org",
+   "published": "2026-10-17",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-17",
+   "last_shared": "2026-10-17",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.tokenpost.kr/news/ai/422660",
    "title": "앤스로픽, 클로드 작업 추적 기능 공개 베타",
