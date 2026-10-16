@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-16T06:35:22Z",
- "count": 981,
+ "updated_at": "2026-10-16T14:35:22Z",
+ "count": 989,
  "articles": [
   {
    "url": "https://www.tokenpost.kr/news/ai/422660",
@@ -33,6 +33,32 @@
    "title": "챗GPT에 뚫린 '임상 자료'…식약처장 \"접근 차단\"",
    "outlet": "뉴시스",
    "published": "2026-10-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.news1.kr/bio/welfare-medical/6313941",
+   "title": "\"AI가 내 마음 읽는다?\"…10명 중 1명, AI 조언대로 이별·퇴사",
+   "outlet": "뉴스1",
+   "published": "2026-10-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.joongang.co.kr/article/25469854",
+   "title": "[단독] AI, 새책도 노리나…교보문고에 들어온 ‘10만권’ 주문",
+   "outlet": "중앙일보",
+   "published": "2026-10-15",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-16",
@@ -198,6 +224,32 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-10-16-px-외부-ai-api-반입-우려",
+   "title": "[공공AX 네트워크] 외국 클라우드와 외부 AI API 반입 우려",
+   "outlet": "akwiki.org",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-16-px-오픈소스-툴-저작권-논쟁",
+   "title": "[공공AX 네트워크] 어도비 닮은 오픈소스 툴과 저작권 논쟁",
+   "outlet": "akwiki.org",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-16-px-무료-gpt-mcp-연결",
    "title": "[공공AX 네트워크] 무료 GPT 계정에 복지 MCP를 붙이자는 제안",
    "outlet": "akwiki.org",
@@ -211,8 +263,60 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-10-16-px-기관-ax-확산-교육",
+   "title": "[공공AX 네트워크] 기관 안 AX 확산과 6시간 교육 설계 고민",
+   "outlet": "akwiki.org",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-16-px-공공-챗봇-rag-크롤링",
+   "title": "[공공AX 네트워크] 공공 챗봇 RAG 구성과 크롤링 허용 범위",
+   "outlet": "akwiki.org",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-16-px-공공-gpu-활용률-논쟁",
+   "title": "[공공AX 네트워크] 공공 GPU 활용률 51.8% 글이 부른 배분 논쟁",
+   "outlet": "akwiki.org",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-16-px-경남-복지-ai-평가",
    "title": "[공공AX 네트워크] 경남 복지 서비스 사이트를 둘러싼 엇갈린 평가",
+   "outlet": "akwiki.org",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-16-cross-구글-아르곤-개방-후기",
+   "title": "[3개 방 공통] 구글 아르곤 개방에 세 방이 내놓은 첫 체감",
    "outlet": "akwiki.org",
    "published": "2026-10-16",
    "kind": "기사",

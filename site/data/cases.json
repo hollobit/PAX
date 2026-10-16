@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-16T15:34:26+09:00",
+ "updated_at": "2026-10-16T23:35:10+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -16756,6 +16756,28 @@
    "license_source": "github",
    "license_checked": "2026-10-16",
    "thumb_v": 1792132466
+  },
+  {
+   "org": "공직 커뮤니티 공유(제작자 미확인)",
+   "collected_at": "2026-10-16",
+   "model_dependency": "없음(비LLM)",
+   "link": "https://culture-desk.vercel.app/",
+   "runtime_env": "브라우저만",
+   "summary": "공연예술통합전산망(KOPIS)과 문화포털 자료로 전국 230개 지역의 주요 공연 일정·공연장·관람료를 지역 선택과 지도·목록·3D 화면으로 찾게 하고 엑셀로 내보내는 검색 도구다. 전시는 빼고 공연만 다루며, 저장소 연결이 제한되면 저장 자료로 계속 조회하게 했다.",
+   "tags": [
+    "문화",
+    "공연",
+    "공공데이터",
+    "지도"
+   ],
+   "source": "kakao",
+   "case_class": "커뮤니티",
+   "org_type": "커뮤니티",
+   "title": "Culture Desk — KOPIS·문화포털 자료로 전국 230개 지역 공연을 지도·목록으로 찾는 검색 도구",
+   "task_category": "데이터·통계",
+   "date": "2026-10-16",
+   "id": "e3fd62cab55e2ef3",
+   "thumb_v": 1792161310
   }
  ]
 }

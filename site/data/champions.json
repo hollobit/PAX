@@ -6699,6 +6699,12 @@
    "title": "Solar Planets — 업스테이지 Solar Pro 4로 만든 공공·세무 AI 도구를 행성으로 둘러보는 소개 공간",
    "org": "업스테이지",
    "url": "https://github.com/UpstageAI/solar-planets"
+  },
+  {
+   "id": "e3fd62cab55e2ef3",
+   "title": "Culture Desk — KOPIS·문화포털 자료로 전국 230개 지역 공연을 지도·목록으로 찾는 검색 도구",
+   "org": "공직 커뮤니티 공유(제작자 미확인)",
+   "url": "https://culture-desk.vercel.app/"
   }
  ]
 }
