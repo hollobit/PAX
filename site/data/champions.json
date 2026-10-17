@@ -1,5 +1,5 @@
 {
- "total": 227,
+ "total": 228,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -24,6 +24,32 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:VerifiedIdiot",
+   "name": "Byeory Jeong",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "VerifiedIdiot",
+     "url": "https://github.com/VerifiedIdiot"
+    }
+   ],
+   "affiliation": {
+    "value": "TLC",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "category": "민간·커뮤니티",
+   "category_basis": "affiliation",
+   "cases": [
+    "60f137f66d3975af"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },

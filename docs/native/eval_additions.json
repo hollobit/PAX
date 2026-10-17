@@ -13970,5 +13970,33 @@
   "service_url": "https://jusobanyeong-map.vercel.app/",
   "rationale": "주소를 받아 OpenStreetMap 기반 3D 동네 장면을 만들고 그림체·시간을 바꿔 내보내는 결과 제공형 도구로 LLM을 쓰지 않아 S1/C1·AI-Ready다. 지역 홍보물·안내 삽화 배경 제작이라는 공공 활용 여지가 있는 민간 참고 사례이며, 제작자와 실제 공공 사용 여부는 미확인이다.",
   "resilience": "미확인(브라우저 렌더링만 확인)"
+ },
+ {
+  "no": 572,
+  "id": "60f137f66d3975af",
+  "org": "공직 커뮤니티 공유(민간 개발자)",
+  "title": "한국어 손글씨 OCR 모델 — PP-OCRv5를 손글씨·공문서 460만 단어로 추가 학습해 민원 서식 손글씨 인식률을 67%에서 97%로",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S1",
+  "s_name": "Primitive tool",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Published tool",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R1 낮음",
+  "human": "H1/H2 미확인",
+  "evidence": "E1 코드·도구 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "인식 모델 파일 하나를 바꿔 끼우는 원천 도구로, 손글씨 이미지를 글자로 바꿔 주는 데서 끝나 S1/C1·AI-Enabled다. 저장소 README에서 학습 데이터·평가 세트별 정확도(손글씨 97.4%, 미학습 정부 서식 99.2%)와 Apache-2.0을 확인했고, 공개 당일 기등재 문서 파싱 도구 Kordoc에 병합돼 공공 문서 도구 생태계로 이어진 사례다. 실제 기관 민원 업무 적용은 미확인이다.",
+  "feedback": "카카오 방에서 Kordoc 병합 소식·벤치마크 비교 반응 관측",
+  "resilience": "CPU·로컬 구동으로 외부 API 의존 없음 — 학습 데이터(AI Hub) 라벨 품질 지적 있음",
+  "post_url": "",
+  "service_url": "https://github.com/VerifiedIdiot/korean-handwriting-rec"
  }
 ]

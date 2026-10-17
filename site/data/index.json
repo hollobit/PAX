@@ -2,19 +2,19 @@
  "generated_at": "2026-10-17",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 569,
- "total_champions": 227,
+ "total_cases": 570,
+ "total_champions": 228,
  "community": {
-  "members": 2531,
-  "kakao_week": 4573,
-  "kakao_total_observed": 53460,
+  "members": 2533,
+  "kakao_week": 4659,
+  "kakao_total_observed": 53546,
   "threads_observed": 353
  },
  "certified_champions": 5,
  "unattributed_cases": 145,
  "ax_distribution": {
   "AI-Ready": 367,
-  "AI-Enabled": 171,
+  "AI-Enabled": 172,
   "AX 단계 외": 25,
   "AI-First": 5,
   "AI-Native 계획": 1
@@ -22,13 +22,13 @@
  "c_axis_mean": 0.94,
  "p_distribution": {
   "P0": 186,
-  "P1": 363,
+  "P1": 364,
   "P2": 20
  },
  "model_dependency": {
   "미확인": 65,
   "없음(비LLM)": 276,
-  "해외 오픈웨이트(로컬)": 30,
+  "해외 오픈웨이트(로컬)": 31,
   "혼합": 16,
   "해외 상용 API": 64,
   "모델 중립(BYO)": 87,
@@ -821,8 +821,8 @@
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
-    "n": 30,
-    "specified": 17
+    "n": 31,
+    "specified": 18
    },
    "혼합": {
     "n": 16,
@@ -1597,7 +1597,7 @@
    },
    {
     "dep": "해외 오픈웨이트(로컬)",
-    "n": 30,
+    "n": 31,
     "families": [
      {
       "name": "Gemma",
@@ -1764,23 +1764,37 @@
       "variants": [
        "LFM2.5 230M/1.2B(로컬)"
       ]
+     },
+     {
+      "name": "PP-OCRv5 한국어 인식 모델(파인튜닝, ONNX 15MB)",
+      "n": 1,
+      "cases": [
+       {
+        "id": "60f137f66d3975af",
+        "title": "한국어 손글씨 OCR 모델 — PP-OCRv5를 손글씨·공문서 460만 단어로 추가 학습해 민원 서식 손글씨 인식률을 67%에서 97%로"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "PP-OCRv5 한국어 인식 모델(파인튜닝, ONNX 15MB)"
+      ]
      }
     ]
    }
   ]
  },
- "domestic_model_rate": 0.068,
- "local_model_rate": 0.263,
- "model_known": 118,
- "license_tagged": 422,
- "license_stated_rate": 0.486,
+ "domestic_model_rate": 0.067,
+ "local_model_rate": 0.269,
+ "model_known": 119,
+ "license_tagged": 423,
+ "license_stated_rate": 0.487,
  "gitlab_cases": 280,
  "gitlab_mirror_pairs": 41,
  "gitlab_open_rate": 0.146,
  "mcp_cases": 94,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 487,
+  "미확인": 488,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1788,7 +1802,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.773
+  "feedback": 0.772
  },
  "maintenance_distribution": {
   "활발": 317,
@@ -1889,7 +1903,7 @@
    ]
   },
   "github": {
-   "count": 166,
+   "count": 167,
    "starred": 152,
    "stars_sum": 299376,
    "maintenance": {
@@ -1984,7 +1998,7 @@
  "license_distribution": {
   "명시 없음": 217,
   "MIT": 135,
-  "Apache-2.0": 33,
+  "Apache-2.0": 34,
   "Other": 18,
   "AGPL-3.0": 5,
   "GNU AGPLv3": 5,
@@ -2005,7 +2019,7 @@
    "gitlab": 53
   },
   "Apache-2.0": {
-   "github": 11,
+   "github": 12,
    "gitlab": 22
   },
   "Other": {
@@ -2047,8 +2061,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 152,
-   "stated": 108
+   "total": 153,
+   "stated": 109
   },
   "github-pages": {
    "total": 22,
