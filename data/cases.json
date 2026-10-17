@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-16T23:35:10+09:00",
+ "updated_at": "2026-10-17T15:37:24+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -16224,6 +16224,76 @@
    "task_category": "데이터·통계",
    "date": "2026-10-16",
    "id": "e3fd62cab55e2ef3"
+  },
+  {
+   "link": "https://deepsea.roontams.app/",
+   "collected_at": "2026-10-17",
+   "org": "roontams(민간 개발)",
+   "case_class": "참고",
+   "date": "2026-10-17",
+   "title": "심해탐사 시뮬레이터 — 생물 544종 도감에 출처를 달고 AI 생성 그림에 'AI생성'을 표시한 해양 교육 게임",
+   "task_category": "공통·범용",
+   "tags": [
+    "교육콘텐츠",
+    "생성형이미지",
+    "AI생성물표시",
+    "게임"
+   ],
+   "summary": "잠수정을 몰고 수면에서 최심부까지 내려가며 생물을 발견해 544종 도감을 채우는 브라우저 게임이다. 생물마다 과학·역사 자료 출처를 붙였고, 인공지능기본법의 생성물 표시 의무에 맞춰 AI로 만든 생물·장면·잠수정 그림에 'AI생성'을 표시해 공공 콘텐츠의 생성물 표기 참고가 된다.",
+   "source": "kakao",
+   "network_req": "인터넷 필수",
+   "models_used": [],
+   "runtime_env": "브라우저만",
+   "org_type": "민간(참고)",
+   "model_dependency": "미상",
+   "id": "ec86026537b966df"
+  },
+  {
+   "link": "https://algoland-village.netlify.app/",
+   "collected_at": "2026-10-17",
+   "org": "민간 개발자(제작자 미확인)",
+   "case_class": "참고",
+   "date": "2026-10-17",
+   "title": "알고랜드 마을 — 한남뉴타운·성수전략정비구역 지도 위 캐릭터 대화로 재개발 정보를 풀어 주는 설명 지도",
+   "task_category": "데이터·통계",
+   "tags": [
+    "공공데이터",
+    "지도",
+    "정비사업",
+    "시민소통"
+   ],
+   "summary": "서울시 정비구역 경계와 OpenStreetMap 도로 위에 캐릭터 주민들을 배치해 청약·분양가·토지거래허가·분담금 같은 20·40대 질문에 대화로 답하는 재개발 설명 지도다. 수치마다 정비사업 정보몽땅·구청 소식지·보도 출처와 확인 시점을 밝히고 목표·보도치는 확정치가 아니라고 표시해, 행정 정보를 시민 눈높이로 옮기는 방식의 참고가 된다.",
+   "source": "kakao",
+   "network_req": "인터넷 필수",
+   "region": "서울",
+   "models_used": [],
+   "runtime_env": "브라우저만",
+   "org_type": "민간(참고)",
+   "model_dependency": "미상",
+   "id": "bd8dca54dbbdfc2c"
+  },
+  {
+   "link": "https://jusobanyeong-map.vercel.app/",
+   "collected_at": "2026-10-17",
+   "org": "민간 개발자(제작자 미확인)",
+   "case_class": "참고",
+   "date": "2026-10-17",
+   "title": "주소반영 만화배경 지도 — 주소 하나로 반경 1~3km 실제 동네를 3D로 세워 그림체·시간·계절을 바꿔 내보내는 도구",
+   "task_category": "데이터·통계",
+   "tags": [
+    "3D지도",
+    "OpenStreetMap",
+    "디지털트윈",
+    "홍보콘텐츠"
+   ],
+   "summary": "주소를 넣으면 그 지점을 가운데 둔 1~3km 사각 범위의 건물을 3D로 세우고, 만화체·실사채색 등 그림체와 시간대·계절·구름을 바꿔 웹툰·화면 비율로 이미지를 내보내는 도구다. 주변 명소 목록과 장면 저장·링크 공유를 지원해, 지자체 홍보물·지역 안내 삽화의 배경 제작에 참고할 만하다.",
+   "source": "kakao",
+   "network_req": "인터넷 필수",
+   "models_used": [],
+   "runtime_env": "브라우저만",
+   "org_type": "민간(참고)",
+   "model_dependency": "없음(비LLM)",
+   "id": "dc3547b8fcd3cd44"
   }
  ]
 }
