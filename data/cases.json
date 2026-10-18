@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-18T23:36:56+09:00",
+ "updated_at": "2026-10-18T23:55:21+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -16370,6 +16370,108 @@
    "case_class": "참고",
    "model_dependency": "없음(비LLM)",
    "id": "cb3550a3a4ae9c87"
+  },
+  {
+   "summary": "교통 당국과 시 정부가 공개한 도로·항만 카메라 22만여 대를 출처와 함께 모으고, 항공기(ADS-B)·선박(AIS) 위치, 사진으로 검증된 분쟁 사건, 발전소·공항·해저케이블 같은 기반시설을 3D 지구본 한 장에 겹쳐 보여 주는 해외 서비스다. 지도 데이터에 자연어로 묻는 AI 기능이 있으나 쓰는 모델은 밝히지 않았다. 공개 데이터를 한 화면 상황판으로 엮는 방식의 참고 사례다.",
+   "model_dependency": "미상",
+   "task_category": "데이터·통계",
+   "date": "2026-10-18",
+   "network_req": "인터넷 필수",
+   "models_used": [],
+   "runtime_env": "브라우저만",
+   "link": "https://argosatlas.com/",
+   "org": "ARGOS ATLAS(해외 민간 서비스)",
+   "tags": [
+    "공공데이터",
+    "지도",
+    "상황판",
+    "OSINT"
+   ],
+   "collected_at": "2026-10-18",
+   "source": "kakao",
+   "title": "ARGOS ATLAS — 각국 교통 당국 공개 카메라 22만여 대와 항공·선박·분쟁·인프라 공개 데이터를 3D 지구본 하나에 모은 상황 지도",
+   "case_class": "참고",
+   "org_type": "해외(참고)",
+   "id": "4024556e05efa0f2"
+  },
+  {
+   "summary": "2023년부터 2026년까지 국내 대형 산불 14건을 골라, 정지궤도 천리안 위성의 10분 간격 탐지와 극궤도 위성 열점, 재분석 바람·습도, 산림청 기록과 보도를 한 시간축에 맞춰 불의 선두가 언제 어디로 얼마나 빨리 번졌는지 재생해 보여 준다. 확산 방향이 바람과 맞았는지, 열점이 닿은 읍면동의 고령 인구가 얼마인지도 함께 보여 주되, 실제 피해·대피 규모가 아님을 밝히고 있다.",
+   "model_dependency": "미상",
+   "task_category": "시설·안전",
+   "date": "2026-10-18",
+   "network_req": "인터넷 필수",
+   "models_used": [],
+   "runtime_env": "브라우저만",
+   "link": "https://seohosung.com/firetrace/",
+   "org": "민간 개발자(개인 사이트)",
+   "tags": [
+    "산불",
+    "위성",
+    "재난안전",
+    "공공데이터"
+   ],
+   "collected_at": "2026-10-18",
+   "source": "kakao",
+   "title": "산불추적기 — 천리안·VIIRS 위성 열점과 재분석 바람·산림청 기록·보도를 시간축으로 맞춰 국내 산불 14건의 확산을 되짚는 지도",
+   "case_class": "참고",
+   "org_type": "민간(참고)",
+   "id": "00a76ce677e60556"
+  },
+  {
+   "summary": "코딩을 모르는 치과의사가 다듬은 프롬프트 한 번을 코딩 에이전트에 넣어 사람 개입 없이 약 1시간 45분 만에 만든 원내 업무 웹 서비스다. 공지·인수인계, 재고와 발주서, 근무표·연차, 공문·회의록, 장비 점검 기록을 다루고 원내 매뉴얼을 근거로 답한다. 환자 정보 칸을 아예 두지 않고 AI로 보내기 전 주민번호·전화번호를 가리며, 쓴 프롬프트와 제작 과정을 모두 공개해 작은 기관이 내부 행정 도구를 직접 만드는 참고가 된다.",
+   "model_dependency": "모델 중립(BYO)",
+   "task_category": "공통·범용",
+   "date": "2026-10-16",
+   "network_req": "인터넷 필수",
+   "models_used": [
+    "Claude·OpenAI·Gemini 중 선택(API 키)",
+    "제작: Claude Code Opus 5.5"
+   ],
+   "runtime_env": "설치 필요",
+   "link": "https://github.com/GangJaeYu/DentalAX",
+   "org": "치과 개원의(민간 개발)",
+   "tags": [
+    "바이브코딩",
+    "원내행정",
+    "개인정보 보호",
+    "프롬프트 공개"
+   ],
+   "collected_at": "2026-10-18",
+   "source": "kakao",
+   "title": "DentalAX — 코딩을 모르는 치과의사가 프롬프트 한 번으로 만든 원내 행정 도우미(인수인계·재고·발주·근무표·문서)",
+   "case_class": "참고",
+   "org_type": "민간(참고)",
+   "id": "0a767bb6906996f4",
+   "license": "Unlicense",
+   "license_source": "github",
+   "license_checked": "2026-10-18"
+  },
+  {
+   "summary": "코딩 에이전트를 바꾸거나 동료에게 넘길 때마다 구조·실패한 시도·남은 질문을 다시 설명해야 하는 문제를, 직접 운영하는 서버의 공유 기억으로 푸는 오픈소스다. 20여 종 에이전트가 같은 기억을 쓰고 중단한 작업을 한 번만 인수하도록 넘기며, 원본은 git으로 관리되는 마크다운 문서라 사람이 읽고 고칠 수 있다. 기본 동작은 외부 모델 호출 없이 돌아가 망분리 환경의 개발 조직에도 참고할 만하다.",
+   "model_dependency": "모델 중립(BYO)",
+   "task_category": "공통·범용",
+   "date": "2026-05-21",
+   "network_req": "로컬 완결",
+   "models_used": [],
+   "runtime_env": "설치 필요",
+   "case_url": "https://aimemory.sh",
+   "link": "https://github.com/akitaonrails/ai-memory",
+   "org": "해외 오픈소스 개발자",
+   "tags": [
+    "코딩 에이전트",
+    "장기 기억",
+    "인수인계",
+    "오픈소스"
+   ],
+   "collected_at": "2026-10-18",
+   "source": "kakao",
+   "title": "ai-memory — 여러 코딩 에이전트가 하나의 장기 기억을 나눠 쓰고 작업을 넘겨받게 하는 자체 운영 메모리 서버(MIT)",
+   "case_class": "참고",
+   "org_type": "해외(참고)",
+   "id": "5cda81d84c79d926",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-10-18"
   }
  ]
 }
