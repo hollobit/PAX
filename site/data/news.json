@@ -1,7 +1,150 @@
 {
- "updated_at": "2026-10-18T14:37:58Z",
- "count": 1016,
+ "updated_at": "2026-10-18T22:34:05Z",
+ "count": 1027,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261018095644",
+   "title": "중국, AI 핵심 기술 수출 제한 추진…'독자 AI' 중요성 커졌다",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.news1.kr/diplomacy/defense-diplomacy/6323207",
+   "title": "軍, 무인 전력의 '뇌' 만든다…피지컬 AI '월드 모델' 표준연구 나서",
+   "outlet": "뉴스1",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610180912187492",
+   "title": "경북도, AI 직인관리시스템 개발…7000만원 절감",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.etnews.com/20261018000022",
+   "title": "공무원이 만든 AI 서비스, 지재권·인센티브 방안 만든다",
+   "outlet": "미래를 보는 창 - 전자신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.etnews.com/20261017000019",
+   "title": "정부, WHO 서태평양 총회서 'AI 기본의료 전략' 공유",
+   "outlet": "미래를 보는 창 - 전자신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216372",
+   "title": "메타, 언론사 콘텐츠 AI 학습 논란에 약관 수정…자동 수집 권한은 유지",
+   "outlet": "AI타임스",
+   "published": "2026-10-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216370",
+   "title": "딥시크, 코딩 성능 높인 ‘V4.1 플래시’ 업데이트…검색 API도 공개",
+   "outlet": "AI타임스",
+   "published": "2026-10-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-19-px-한글-양식-내부망-자동화",
+   "title": "[공공AX 네트워크] 한글 양식과 내부망 앞에서 걸린 업무 자동화",
+   "outlet": "akwiki.org",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-19-px-전자책-저자-표기",
+   "title": "[공공AX 네트워크] AI비서가 만든 전자책과 저자 표기 농담",
+   "outlet": "akwiki.org",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-19-px-안티그래비티-과학자-무료",
+   "title": "[공공AX 네트워크] 구글 안티그래비티 과학자 6개월 무료 소식",
+   "outlet": "akwiki.org",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-19-px-국감-실시간-자료-지원",
+   "title": "[공공AX 네트워크] 국감 답변 자료를 실무자가 밀어주는 도구",
+   "outlet": "akwiki.org",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://tech.jehyunlee.dev/2026/09/30/General-97_ai4scikorea2026",
    "title": "AI4Sci Korea 2026 - AI4S의 현재와 도전",
