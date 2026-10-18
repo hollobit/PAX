@@ -2,18 +2,18 @@
  "generated_at": "2026-10-18",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 570,
- "total_champions": 228,
+ "total_cases": 572,
+ "total_champions": 229,
  "community": {
-  "members": 2531,
-  "kakao_week": 4607,
-  "kakao_total_observed": 53786,
-  "threads_observed": 370
+  "members": 2537,
+  "kakao_week": 4934,
+  "kakao_total_observed": 54113,
+  "threads_observed": 372
  },
  "certified_champions": 5,
- "unattributed_cases": 145,
+ "unattributed_cases": 146,
  "ax_distribution": {
-  "AI-Ready": 367,
+  "AI-Ready": 369,
   "AI-Enabled": 172,
   "AX 단계 외": 25,
   "AI-First": 5,
@@ -21,13 +21,13 @@
  },
  "c_axis_mean": 0.94,
  "p_distribution": {
-  "P0": 186,
+  "P0": 188,
   "P1": 364,
   "P2": 20
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 276,
+  "없음(비LLM)": 278,
   "해외 오픈웨이트(로컬)": 31,
   "혼합": 16,
   "해외 상용 API": 64,
@@ -817,7 +817,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 276,
+    "n": 278,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -1794,7 +1794,7 @@
  "mcp_cases": 94,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 488,
+  "미확인": 490,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1802,7 +1802,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.772
+  "feedback": 0.769
  },
  "maintenance_distribution": {
   "활발": 317,

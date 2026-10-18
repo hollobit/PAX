@@ -1,5 +1,5 @@
 {
- "total": 228,
+ "total": 229,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -1435,6 +1435,28 @@
    "category_basis": "cases",
    "cases": [
     "5c3cb7251749ab2e"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "threads:kim.18041",
+   "name": "kim.18041",
+   "accounts": [
+    {
+     "platform": "threads",
+     "id": "kim.18041",
+     "url": "https://www.threads.com/@kim.18041"
+    }
+   ],
+   "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
+   "cases": [
+    "a5d67576fce94f77"
    ],
    "stats": {
     "case_count": 1,
@@ -6749,6 +6771,12 @@
    "title": "주소반영 만화배경 지도 — 주소 하나로 반경 1~3km 실제 동네를 3D로 세워 그림체·시간·계절을 바꿔 내보내는 도구",
    "org": "민간 개발자(제작자 미확인)",
    "url": "https://jusobanyeong-map.vercel.app/"
+  },
+  {
+   "id": "cb3550a3a4ae9c87",
+   "title": "우리 동네 학교 지도 2008–2026 — 학교알리미 공시로 전국 7천여 개 학교의 학생 수 증감·폐교를 지도와 순위로",
+   "org": "vw-lab(민간 개발)",
+   "url": "https://schoolinfo.vw-lab.com/"
   }
  ]
 }

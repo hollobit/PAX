@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-17T23:34:49+09:00",
+ "updated_at": "2026-10-18T23:36:56+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -16323,6 +16323,53 @@
    "license": "Apache-2.0",
    "license_source": "github",
    "license_checked": "2026-10-17"
+  },
+  {
+   "date": "2026-10-18",
+   "task_category": "기획·정책",
+   "case_url": "https://drive.google.com/file/d/1UB3dc-LzBd0bd8Gc-mcylxhygXlbU5le/view",
+   "tags": [
+    "국정감사",
+    "국회",
+    "오프라인",
+    "엑셀"
+   ],
+   "runtime_env": "브라우저만",
+   "summary": "국정감사장에서 답변서를 종이로 찾아 넘기던 일을 줄이려고, 엑셀로 쓴 예상 질의·답변을 그대로 읽어 초성·유사어로 찾고 표와 후속 질의까지 한 화면에 보여 주는 검색기다. 실무자 노트북과 기관장 화면을 나눠 답변만 띄울 수 있고, HTML 파일 하나로 인터넷 없이 돌아간다. 환경 분야 쟁점으로 만든 샘플 27행과 엑셀 양식을 함께 공개했다.",
+   "link": "https://www.threads.com/@kim.18041/post/DenkTDliLYm",
+   "org": "공직 현장(개인 개발)",
+   "source": "threads",
+   "collected_at": "2026-10-18",
+   "org_type": "공직 개인",
+   "title": "국정감사 답변 검색기 — 엑셀 예상질의답변을 HTML 한 파일로 바꿔 실무자는 검색하고 기관장 화면엔 답변만 띄우는 도구",
+   "network_req": "로컬 완결",
+   "models_used": [],
+   "case_class": "개인 개발",
+   "model_dependency": "없음(비LLM)",
+   "id": "a5d67576fce94f77"
+  },
+  {
+   "date": "2026-10-18",
+   "task_category": "데이터·통계",
+   "tags": [
+    "공공데이터",
+    "지도",
+    "학령인구",
+    "교육"
+   ],
+   "runtime_env": "브라우저만",
+   "summary": "학교알리미 공시와 교육통계, 학구도 자료를 엮어 전국 초·중·고 7천여 개교의 학생 수가 2015년 대비 얼마나 늘고 줄었는지, 어디가 폐교·휴교했는지를 지도 색과 전국·지역별 순위로 보여 주는 서비스다. 학교를 누르면 연도별 상세 정보를 볼 수 있어 학령인구 감소가 동네 단위로 어떻게 나타나는지 확인할 수 있다.",
+   "link": "https://schoolinfo.vw-lab.com/",
+   "org": "vw-lab(민간 개발)",
+   "source": "kakao",
+   "collected_at": "2026-10-18",
+   "org_type": "민간(참고)",
+   "title": "우리 동네 학교 지도 2008–2026 — 학교알리미 공시로 전국 7천여 개 학교의 학생 수 증감·폐교를 지도와 순위로",
+   "network_req": "인터넷 필수",
+   "models_used": [],
+   "case_class": "참고",
+   "model_dependency": "없음(비LLM)",
+   "id": "cb3550a3a4ae9c87"
   }
  ]
 }

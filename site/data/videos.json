@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-10-15T14:34:50Z",
- "count": 107,
+ "updated_at": "2026-10-18T14:37:56Z",
+ "count": 109,
  "videos": [
+  {
+   "id": "BZ1hPWhycd0",
+   "title": "유튜브 썸네일 어그로 끄는 노래",
+   "channel": "과나gwana",
+   "url": "https://www.youtube.com/watch?v=BZ1hPWhycd0",
+   "thumb": "https://i.ytimg.com/vi/BZ1hPWhycd0/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "1JBvtC-zcew",
+   "title": "Codex로 도심 복합건물 만들어봤습니다 | Blender · AI 건축시각화",
+   "channel": "소담 AI 스튜디오",
+   "url": "https://www.youtube.com/watch?v=1JBvtC-zcew",
+   "thumb": "https://i.ytimg.com/vi/1JBvtC-zcew/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "ye50BbXEczo",
    "title": "I ran Qwen3.8 27B on single 8GB Card! (Better than expected)",

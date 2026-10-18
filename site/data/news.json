@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-18T06:34:58Z",
- "count": 1012,
+ "updated_at": "2026-10-18T14:37:58Z",
+ "count": 1016,
  "articles": [
+  {
+   "url": "https://tech.jehyunlee.dev/2026/09/30/General-97_ai4scikorea2026",
+   "title": "AI4Sci Korea 2026 - AI4S의 현재와 도전",
+   "outlet": "Pega Devlog",
+   "published": "2026-09-30",
+   "kind": "기사",
+   "shares": 3,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261018031003",
    "title": "아트마켓의 아트프라이스: AI 시대 작가의 책임",
@@ -107,6 +120,19 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-10-18-px-이미지-생성-일관성-팁",
+   "title": "[공공AX 네트워크] 이미지·영상 생성 막힘과 일관성 유지 팁",
+   "outlet": "akwiki.org",
+   "published": "2026-10-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-18-px-비공개-자료-기관-ai",
    "title": "[공공AX 네트워크] 비공개 자료 때문에 우회로 찾는 기관 보고 자동화",
    "outlet": "akwiki.org",
@@ -124,6 +150,32 @@
    "title": "[공공AX 네트워크] 바이브코딩 입문은 책보다 귀찮은 업무부터",
    "outlet": "akwiki.org",
    "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-18-px-딥시크-v41-flash-가격",
+   "title": "[공공AX 네트워크] 딥시크 V4.1 Flash 공개에 쏠린 가격 비교",
+   "outlet": "akwiki.org",
+   "published": "2026-10-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-18-px-ai로-쓴-글-의심",
+   "title": "[공공AX 네트워크] AI로 썼냐는 의심에 직접 쓴 사람의 하소연",
+   "outlet": "akwiki.org",
+   "published": "2026-10-18",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-18",
