@@ -1,7 +1,163 @@
 {
- "updated_at": "2026-10-16T22:34:23Z",
- "count": 1000,
+ "updated_at": "2026-10-18T06:34:58Z",
+ "count": 1012,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261018031003",
+   "title": "아트마켓의 아트프라이스: AI 시대 작가의 책임",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://zdnet.co.kr/view?no=20261017163413",
+   "title": "센스톤, 정부 피지컬AI 보안 과제서 OT 설비 보안 전담",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-17",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.theguru.co.kr/news/article.html?no=108388",
+   "title": "현대차, 인도서 신형 SUV '바이욘' 공개…26일 공식 출시",
+   "outlet": "theguru.co.kr",
+   "published": "2026-10-17",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=242245",
+   "title": "넷스카우트, 대화형 AI 인터페이스 ‘엔지니어스 코파일럿’ 공개",
+   "outlet": "아이티데일리",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=242234",
+   "title": "[국감] 독파모 수학 데이터 ‘4개월 구축·2명 검토’ 지적에…NIA “전수 검증”",
+   "outlet": "아이티데일리",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216366",
+   "title": "오픈AI 도청 사건에 드러난 AI 첩보전…기업들은 이미 ‘스파이 경계’",
+   "outlet": "AI타임스",
+   "published": "2026-10-17",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216365",
+   "title": "GPT-6 아스트라, 미공개 물리 문제 98% 해결…전문가 오류도 발견",
+   "outlet": "AI타임스",
+   "published": "2026-10-17",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.2news.co.kr/news/articleView.html?idxno=29398",
+   "title": "생성형 AI의 시장 잠식, 저작권 침해로 볼 수 있나",
+   "outlet": "에너지뉴스",
+   "published": "2026-10-17",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-18-px-비공개-자료-기관-ai",
+   "title": "[공공AX 네트워크] 비공개 자료 때문에 우회로 찾는 기관 보고 자동화",
+   "outlet": "akwiki.org",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-18-px-바이브코딩-입문-조언",
+   "title": "[공공AX 네트워크] 바이브코딩 입문은 책보다 귀찮은 업무부터",
+   "outlet": "akwiki.org",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-18-cross-주말-한도-초기화-체감",
+   "title": "[에이전트코리아·공공AX 네트워크] 주말 한도 초기화 소식과 엇갈린 체감",
+   "outlet": "akwiki.org",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-18-cross-손글씨-ocr-병합셀-전선",
+   "title": "[에이전트코리아·공공AX 네트워크] 손글씨 OCR 진척과 아직 남은 악필의 벽",
+   "outlet": "akwiki.org",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-18",
+   "last_shared": "2026-10-18",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261016201014",
    "title": "화웨이, AI 데이터센터 중심의 전광 네트워크용 차세대 OTN 제안",
