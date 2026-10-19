@@ -1,7 +1,176 @@
 {
- "updated_at": "2026-10-19T16:47:22Z",
- "count": 1038,
+ "updated_at": "2026-10-19T22:34:22Z",
+ "count": 1051,
  "articles": [
+  {
+   "url": "https://www.techm.kr/news/articleView.html?idxno=156236",
+   "title": "[국감 26] '코인 사기부터 AI 해킹까지'…이찬진 금감원장 \"KISA 수준으로 보안 역량 강화할 것\"",
+   "outlet": "테크M",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newstap.co.kr/news/articleView.html?idxno=336072",
+   "title": "딥브레인AI, 15억 원 투입해 ‘AI 비디오 에이전트’ 개발…영상 제작부터 편집까지 자동화",
+   "outlet": "뉴스탭",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newstap.co.kr/news/articleView.html?idxno=336018",
+   "title": "퓨리오사AI·업스테이지·오케스트로 뭉쳤다…국산 기술로 '소버린 AI' 구축",
+   "outlet": "뉴스탭",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mk.co.kr/news/it/12179727",
+   "title": "말로 시키고 손으로 다듬고…챗GPT 속 어도비, ‘인터랙티브 편집’ 도입",
+   "outlet": "매일경제",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.job-post.co.kr/news/articleView.html?idxno=233238",
+   "title": "광진구, 11월 7일 허성범 초청 AI 진로 특강…청소년·학부모 300명 모집",
+   "outlet": "잡포스트(JOBPOST)",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.ddaily.co.kr/page/view/2026101912291014132",
+   "title": "지방정부 AX 길잡이 나왔다&hellip;KLID, 5대 공공분야 AI 서비스 가이드 발간",
+   "outlet": "디지털데일리",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42335",
+   "title": "앤트로픽, 기업 가치 커질수록 공익 지분 확대…주식 최대 7% 추가 배정 추진",
+   "outlet": "인공지능신문",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216412",
+   "title": "센드버드, 업스테이지와 기업용 AI 에이전트 영역서 협력",
+   "outlet": "AI타임스",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216399",
+   "title": "AI 도입 가속에 앤트로픽 초급 기술직 채용 '3분의 1'로 급감",
+   "outlet": "AI타임스",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-20-px-폐쇄망-클로드-행정망-구분",
+   "title": "[공공AX 네트워크] 폐쇄망 클로드라는 말과 행정망이라는 짐작",
+   "outlet": "akwiki.org",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-20-px-작업별-모델-설정-신규도구",
+   "title": "[공공AX 네트워크] 단순 작업에 어떤 모델을 쓰나 묻자 나온 조합",
+   "outlet": "akwiki.org",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-20-px-보도자료-검수앱-필요성",
+   "title": "[공공AX 네트워크] 보도자료 자동 검수 앱의 필요성 문답",
+   "outlet": "akwiki.org",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-20-px-교육영상-토큰부담",
+   "title": "[공공AX 네트워크] 교육 영상 제작에서 부딪힌 토큰 부담",
+   "outlet": "akwiki.org",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261018095644",
    "title": "중국, AI 핵심 기술 수출 제한 추진…'독자 AI' 중요성 커졌다",
