@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-20T01:45:35+09:00",
+ "updated_at": "2026-10-20T02:20:43+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -17410,6 +17410,63 @@
    "license_source": "gitlab",
    "license_checked": "2026-10-20",
    "thumb_v": 1792428413
+  },
+  {
+   "link": "https://cosan75.github.io/heritage-course-map/",
+   "tags": [
+    "지도",
+    "공공데이터",
+    "문화유산",
+    "관광"
+   ],
+   "network_req": "인터넷 필수",
+   "title": "국가유산 방문코스 지도 — 2026 방문 캠페인 15개 길 105곳을 내 위치·운영 여부·스탬프와 함께 보는 GPS 지도",
+   "case_class": "개인 개발",
+   "region": "충남",
+   "task_category": "민원",
+   "org": "교육 현장(개인 개발)",
+   "case_url": "https://github.com/cosan75/heritage-course-map",
+   "collected_at": "2026-10-20",
+   "org_type": "공직 개인",
+   "model_dependency": "없음(비LLM)",
+   "summary": "국가유산 방문 캠페인의 방문코스 1·2에 흩어진 105곳을 한 지도에 모아, 내 위치에서 가까운 곳과 오늘 운영 여부, 스탬프 위치, 주변 맛집을 함께 보여 준다. 국가유산청 공개 API·한국관광공사 TourAPI·OpenStreetMap 좌표와 캠페인 안내 자료를 엮은 정적 페이지로, 학교 업무 도구를 여럿 만든 교사가 공개했다.",
+   "date": "2026-10-19",
+   "runtime_env": "브라우저만",
+   "source": "kakao",
+   "id": "c557f164737f3be3",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-10-20",
+   "thumb_v": 1792430469
+  },
+  {
+   "link": "https://april-zhu.com/colorfigures",
+   "tags": [
+    "에이전트 스킬",
+    "인포그래픽",
+    "교육자료"
+   ],
+   "title": "Colorfigures — 사물을 한 문장으로 설명하면 버튼이 실제로 작동하는 손그림풍 아이소메트릭 그림을 HTML 한 파일로 그리는 Claude 스킬",
+   "case_class": "참고",
+   "task_category": "문서·기안",
+   "org": "April Zhu(개인 개발)",
+   "case_url": "https://github.com/MrBongoC/ai-iso-skill",
+   "models_used": [
+    "Claude(스킬)"
+   ],
+   "collected_at": "2026-10-20",
+   "org_type": "해외(참고)",
+   "model_dependency": "해외 상용 API",
+   "summary": "자판기·주전자·신호등처럼 일상 사물을 한 문장으로 설명하면 Claude가 손으로 그린 듯한 아이소메트릭 그림을 그리고, 동전 넣기·스위치 같은 조작이 실제로 움직이는 단일 HTML 파일로 만든다. Claude Code·Claude.ai용 설치 방법과 예시 작품 모음을 함께 공개했으며, 교육·홍보 자료의 작동 원리 설명용 그림을 만드는 데 참고할 수 있다.",
+   "popularity": 234,
+   "date": "2026-10-04",
+   "runtime_env": "AI 도구 설정",
+   "source": "kakao",
+   "id": "b52bd17cf637a1cc",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-10-20",
+   "thumb_v": 1792430472
   }
  ]
 }

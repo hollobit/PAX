@@ -2,35 +2,35 @@
  "generated_at": "2026-10-20",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 583,
- "total_champions": 233,
+ "total_cases": 585,
+ "total_champions": 234,
  "community": {
   "members": 2540,
-  "kakao_week": 3817,
-  "kakao_total_observed": 54779,
-  "threads_observed": 378
+  "kakao_week": 3820,
+  "kakao_total_observed": 54782,
+  "threads_observed": 382
  },
  "certified_champions": 5,
- "unattributed_cases": 151,
+ "unattributed_cases": 152,
  "ax_distribution": {
-  "AI-Ready": 375,
-  "AI-Enabled": 177,
+  "AI-Ready": 376,
+  "AI-Enabled": 178,
   "AX 단계 외": 25,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
  "c_axis_mean": 0.94,
  "p_distribution": {
-  "P0": 190,
-  "P1": 373,
+  "P0": 191,
+  "P1": 374,
   "P2": 20
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 281,
+  "없음(비LLM)": 282,
   "해외 오픈웨이트(로컬)": 31,
   "혼합": 16,
-  "해외 상용 API": 64,
+  "해외 상용 API": 65,
   "모델 중립(BYO)": 92,
   "국산 독자모델": 7,
   "미상": 26,
@@ -40,7 +40,7 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 32,
+    "n": 33,
     "variants": [
      "Claude Code 스킬(선택)",
      "Claude Code(BYO 구독)",
@@ -55,6 +55,7 @@
      "Claude Sonnet 5.5",
      "Claude(대조·근거 작성)",
      "Claude(선택 기능)",
+     "Claude(스킬)",
      "Codex CLI/Claude CLI(BYO 구독)",
      "Codex 이미지 생성(BYO 구독)",
      "상용 API 모드(Claude 등)",
@@ -188,6 +189,10 @@
      {
       "id": "3c88a43775f80a67",
       "title": "Scrolline — deck.yaml 한 장으로 스크롤형 발표 자료를 만들고 MP4로 내보내는 도구"
+     },
+     {
+      "id": "b52bd17cf637a1cc",
+      "title": "Colorfigures — 사물을 한 문장으로 설명하면 버튼이 실제로 작동하는 손그림풍 아이소메트릭 그림을 HTML 한 파일로 그리는 Claude 스킬"
      }
     ],
     "domestic": false
@@ -842,7 +847,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 281,
+    "n": 282,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -854,8 +859,8 @@
     "specified": 14
    },
    "해외 상용 API": {
-    "n": 64,
-    "specified": 49
+    "n": 65,
+    "specified": 50
    },
    "모델 중립(BYO)": {
     "n": 92,
@@ -1296,11 +1301,11 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 64,
+    "n": 65,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
-      "n": 23,
+      "n": 24,
       "cases": [
        {
         "id": "7acf5f25369c1401",
@@ -1393,6 +1398,10 @@
        {
         "id": "fbdee1f08c2ca185",
         "title": "농해수위 국정감사 온톨로지 — 위원회 회의록을 발언·쟁점·이행약속 지식그래프로 엮어 국감 브리핑을 만드는 서비스"
+       },
+       {
+        "id": "b52bd17cf637a1cc",
+        "title": "Colorfigures — 사물을 한 문장으로 설명하면 버튼이 실제로 작동하는 손그림풍 아이소메트릭 그림을 HTML 한 파일로 그리는 Claude 스킬"
        }
       ],
       "domestic": false,
@@ -1402,6 +1411,7 @@
        "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
        "Claude Code/Codex(플러그인)",
        "Claude(선택 기능)",
+       "Claude(스킬)",
        "Codex 이미지 생성(BYO 구독)"
       ]
      },
@@ -1809,9 +1819,9 @@
   ]
  },
  "domestic_model_rate": 0.067,
- "local_model_rate": 0.269,
- "model_known": 119,
- "license_tagged": 431,
+ "local_model_rate": 0.267,
+ "model_known": 120,
+ "license_tagged": 433,
  "license_stated_rate": 0.494,
  "gitlab_cases": 282,
  "gitlab_mirror_pairs": 41,
@@ -1819,7 +1829,7 @@
  "mcp_cases": 95,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 501,
+  "미확인": 503,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1827,7 +1837,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.77
+  "feedback": 0.771
  },
  "maintenance_distribution": {
   "활발": 290,
@@ -1928,7 +1938,7 @@
    ]
   },
   "github": {
-   "count": 172,
+   "count": 174,
    "starred": 169,
    "stars_sum": 717338,
    "maintenance": {
@@ -2021,8 +2031,8 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 218,
-  "MIT": 139,
+  "명시 없음": 219,
+  "MIT": 140,
   "Apache-2.0": 34,
   "Other": 20,
   "AGPL-3.0": 5,
@@ -2037,11 +2047,11 @@
  },
  "license_matrix": {
   "명시 없음": {
-   "github": 60,
+   "github": 61,
    "gitlab": 158
   },
   "MIT": {
-   "github": 83,
+   "github": 84,
    "gitlab": 55
   },
   "Apache-2.0": {
@@ -2091,8 +2101,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 158,
-   "stated": 114
+   "total": 160,
+   "stated": 115
   },
   "github-pages": {
    "total": 23,

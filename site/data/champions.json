@@ -1,5 +1,5 @@
 {
- "total": 233,
+ "total": 234,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -1002,6 +1002,28 @@
    "stats": {
     "case_count": 3,
     "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:cosan75",
+   "name": "cosan75",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "cosan75",
+     "url": "https://github.com/cosan75"
+    }
+   ],
+   "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
+   "cases": [
+    "c557f164737f3be3"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -6903,6 +6925,12 @@
    "title": "야!너두 스테이션 서울역 — 브이월드 3D 위에 매장·시설 변화를 덧입힌 참여형 역사 디지털 트윈",
    "org": "야!너두 스테이션(개인 개발)",
    "url": "https://yanerdstation.kr/"
+  },
+  {
+   "id": "b52bd17cf637a1cc",
+   "title": "Colorfigures — 사물을 한 문장으로 설명하면 버튼이 실제로 작동하는 손그림풍 아이소메트릭 그림을 HTML 한 파일로 그리는 Claude 스킬",
+   "org": "April Zhu(개인 개발)",
+   "url": "https://github.com/MrBongoC/ai-iso-skill"
   }
  ]
 }
