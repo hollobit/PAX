@@ -29,9 +29,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -65,9 +65,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -101,9 +101,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -137,9 +137,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -173,9 +173,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -209,9 +209,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -245,9 +245,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -281,9 +281,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -317,9 +317,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -353,9 +353,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -389,9 +389,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -425,9 +425,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -461,9 +461,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -497,9 +497,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -533,9 +533,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -569,9 +569,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -605,9 +605,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -641,9 +641,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -677,9 +677,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -713,9 +713,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -749,9 +749,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -785,9 +785,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -821,9 +821,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -857,9 +857,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -893,9 +893,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -929,9 +929,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -965,9 +965,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1001,9 +1001,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1037,9 +1037,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1073,9 +1073,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1109,9 +1109,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1145,9 +1145,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1181,9 +1181,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1217,9 +1217,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1253,9 +1253,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1289,9 +1289,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1325,9 +1325,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1361,9 +1361,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1397,9 +1397,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1433,9 +1433,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1469,9 +1469,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1505,9 +1505,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1541,9 +1541,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1577,9 +1577,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    },
@@ -1616,9 +1616,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1652,9 +1652,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1688,9 +1688,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1724,9 +1724,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1760,9 +1760,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1796,9 +1796,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1832,9 +1832,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1868,9 +1868,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1904,9 +1904,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1940,9 +1940,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -1976,9 +1976,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -2012,9 +2012,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -2048,9 +2048,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -2084,9 +2084,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -2120,9 +2120,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -2156,9 +2156,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -2192,9 +2192,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -2228,9 +2228,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -2264,9 +2264,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -2300,9 +2300,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -2336,9 +2336,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -2372,9 +2372,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -2408,9 +2408,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-28"
    }
@@ -2444,9 +2444,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    },
    "false_positives": [
@@ -2487,9 +2487,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-08-29"
    }
@@ -2523,9 +2523,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    }
   },
@@ -2538,9 +2538,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    }
   },
@@ -2573,9 +2573,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    },
    "llm_audited_at": "2026-09-02"
@@ -2609,9 +2609,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    },
    "llm_audited_at": "2026-09-02"
@@ -2645,9 +2645,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    },
    "llm_audited_at": "2026-09-02"
@@ -2681,9 +2681,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    },
    "llm_audited_at": "2026-09-06"
@@ -2717,9 +2717,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    },
    "llm_audited_at": "2026-09-06"
@@ -2733,9 +2733,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    }
   },
@@ -2760,9 +2760,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    }
   },
@@ -2787,9 +2787,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    }
   },
@@ -2822,9 +2822,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    }
   },
@@ -2832,16 +2832,16 @@
    "case_id": "2a1ab7f937e160a1",
    "axes": {
     "permission_surface": {
-     "verdict": "주의",
-     "note": "파일 쓰기 1건 — 호출자가 지정한 cache_file 경로에 화이트리스트 없음, 다만 존재하는 파일의 파이프 표 셀만 갱신 (근거: webcheck_mcp/server.py:655-686, 깃허브 미러 기준)"
+     "verdict": "미검증",
+     "note": "미검증(저장소 접근 불가)"
     },
     "secrets": {
-     "verdict": "통과",
-     "note": "하드코딩 자격증명 패턴 없음 (근거: 소스 전수 스캔, 단일 파일 695행)"
+     "verdict": "미검증",
+     "note": "미검증(저장소 접근 불가)"
     },
     "supply_chain": {
-     "verdict": "통과",
-     "note": "알려진 High 이상 CVE 없음"
+     "verdict": "미검증",
+     "note": "미검증(저장소 접근 불가)"
     },
     "hygiene": {
      "verdict": "통과",
@@ -2857,9 +2857,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-09-18(깃허브 미러 clone)"
    }
@@ -2893,9 +2893,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    }
   },
@@ -2928,9 +2928,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-09-20"
    }
@@ -2964,9 +2964,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-09-21"
    }
@@ -3000,9 +3000,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-09-23"
    }
@@ -3036,9 +3036,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0",
     "llm": "세션 감사 2026-09-25"
    }
@@ -3052,9 +3052,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    }
   },
@@ -3079,9 +3079,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    }
   },
@@ -3114,9 +3114,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    },
    "llm_audit_at": "2026-10-08"
@@ -3150,9 +3150,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    },
    "llm_audit_at": "2026-10-09"
@@ -3186,9 +3186,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-12",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    },
    "llm_audit_at": "2026-10-09"
@@ -3222,9 +3222,9 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-13",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    },
    "llm_audit_at": "2026-10-13"
@@ -3250,9 +3250,59 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-10-14",
+   "checked_at": "2026-10-20",
    "tools": {
-    "npm": "11.14.1",
+    "npm": "11.20.0",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "d4b32884df29e99a",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 1건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "주의",
+     "note": "셸 호출은 테스트 파일에만 있고 도구 핸들러에는 없으나(근거: tools/test.mjs:5, tools/mcp-server.mjs:27-149), 표·핀 파일 경로와 출력 폴더를 화이트리스트 없이 path.resolve로 받아 임의 로컬 파일을 읽고 임의 위치에 쓸 수 있다 — 로컬 단독 도구라 위험은 낮다(근거: tools/mcp-server.mjs:87, 129; tools/core.mjs:202, 358)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "MCP·명령줄 경로에는 외부 네트워크 호출이 없고 내장 통계로 로컬 완결된다(근거: tools/ 전체 fetch·http 호출 0건). 웹 화면의 주소→좌표 변환만 브라우저에서 OpenStreetMap Nominatim으로 주소를 보낸다(근거: web/pins.js:154)"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-10-20",
+   "tools": {
+    "npm": "11.20.0",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "8cb6daa7f1249b65",
+   "axes": {
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-10-20",
+   "tools": {
+    "npm": "11.20.0",
     "pip_audit": "2.9.0"
    }
   }

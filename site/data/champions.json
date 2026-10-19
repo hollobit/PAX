@@ -1,5 +1,5 @@
 {
- "total": 229,
+ "total": 233,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -291,6 +291,28 @@
    }
   },
   {
+   "id": "github:worlyung",
+   "name": "GOMGOM",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "worlyung",
+     "url": "https://github.com/worlyung"
+    }
+   ],
+   "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
+   "cases": [
+    "d4b32884df29e99a"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 215
+   }
+  },
+  {
    "id": "github:snaiws",
    "name": "Gyuho Lee",
    "accounts": [
@@ -453,6 +475,28 @@
    "stats": {
     "case_count": 1,
     "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:ktx-999",
+   "name": "KTX-999",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "ktx-999",
+     "url": "https://github.com/ktx-999"
+    }
+   ],
+   "affiliation": null,
+   "category": "공공기관",
+   "category_basis": "cases",
+   "cases": [
+    "a7dd2b00d47974c0"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -803,6 +847,28 @@
    }
   },
   {
+   "id": "github:altarry-prog",
+   "name": "altarry-prog",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "altarry-prog",
+     "url": "https://github.com/altarry-prog"
+    }
+   ],
+   "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
+   "cases": [
+    "4ac96b9f3ce12428"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
    "id": "github:amnotyoung",
    "name": "amnotyoung",
    "accounts": [
@@ -816,11 +882,12 @@
    "category": "민간·커뮤니티",
    "category_basis": "cases",
    "cases": [
+    "88b1fcdaf4e7a6dc",
     "7ac3b301c1a8f79d",
     "aa58f3a62af622b6"
    ],
    "stats": {
-    "case_count": 2,
+    "case_count": 3,
     "top_ax": 1,
     "stars": 0
    }
@@ -1522,13 +1589,15 @@
    "category": "민간·커뮤니티",
    "category_basis": "cases",
    "cases": [
+    "3241bc9ff9f0fa16",
+    "3c88a43775f80a67",
     "1c54d608228e0845",
     "65e1983235232514"
    ],
    "stats": {
-    "case_count": 2,
+    "case_count": 4,
     "top_ax": 2,
-    "stars": 517
+    "stars": 771
    }
   },
   {
@@ -2789,10 +2858,11 @@
    "category": "공공기관",
    "category_basis": "affiliation",
    "cases": [
+    "a7dd2b00d47974c0",
     "9719b550772ed1b2"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 2,
     "stars": 0
    }
@@ -4250,6 +4320,32 @@
    "category_basis": "affiliation",
    "cases": [
     "342d96de10ee1c13"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:anjm3145",
+   "name": "안준명",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "anjm3145",
+     "url": "https://gitlab.aigov.go.kr/anjm3145"
+    }
+   ],
+   "affiliation": {
+    "value": "조달청",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
+   "cases": [
+    "87d5e09f9e04b5ef"
    ],
    "stats": {
     "case_count": 1,
@@ -6801,6 +6897,12 @@
    "title": "ai-memory — 여러 코딩 에이전트가 하나의 장기 기억을 나눠 쓰고 작업을 넘겨받게 하는 자체 운영 메모리 서버(MIT)",
    "org": "해외 오픈소스 개발자",
    "url": "https://aimemory.sh"
+  },
+  {
+   "id": "6e6b420ced413c95",
+   "title": "야!너두 스테이션 서울역 — 브이월드 3D 위에 매장·시설 변화를 덧입힌 참여형 역사 디지털 트윈",
+   "org": "야!너두 스테이션(개인 개발)",
+   "url": "https://yanerdstation.kr/"
   }
  ]
 }

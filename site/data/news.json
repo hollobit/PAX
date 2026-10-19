@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-18T22:34:05Z",
- "count": 1027,
+ "updated_at": "2026-10-19T16:47:22Z",
+ "count": 1038,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261018095644",
@@ -94,8 +94,112 @@
    ]
   },
   {
+   "url": "https://roboco.io/posts/vibe-coding-multi-cloud-dr",
+   "title": "바이브 코딩 시대, 멀티클라우드 DR의 손익분기점이 내려왔다",
+   "outlet": "ROBOCO",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://platform.claude.com/docs/en/release-notes/overview",
+   "title": "Claude Platform release notes",
+   "outlet": "platform.claude.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008802684",
+   "title": "정부, 연내 '동일가치노동 동일임금' 실현 로드맵 낸다",
+   "outlet": "SBS 뉴스",
+   "published": "2026-10-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.hada.io/topic?id=35604",
+   "title": "Brain Sandwich - AI 작업 전후에 직접 사고하는 개발 방식",
+   "outlet": "GeekNews",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/031/0001067102?sid=105",
+   "title": "NIA, 제1회 AI 정부 포럼 개최⋯'공부원 AI 활용, 권리와 책임의 균형' 주제",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/003/0014260286?sid=102",
+   "title": "경북도, AI 직인관리시스템 개발…7000만원 절감",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://mnw.yna.co.kr/cid/AKR20261018027100002",
+   "title": "339조 굴리는 국부펀드, 사내AI 핵심은 중국산…\"보안의식 허술\"",
+   "outlet": "연합뉴스",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-19-px-한글-양식-내부망-자동화",
    "title": "[공공AX 네트워크] 한글 양식과 내부망 앞에서 걸린 업무 자동화",
+   "outlet": "akwiki.org",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-19-px-중국산-모델-백도어",
+   "title": "[공공AX 네트워크] 중국산 로컬 모델 백도어 우려와 미국산 반론",
    "outlet": "akwiki.org",
    "published": "2026-10-19",
    "kind": "기사",
@@ -133,9 +237,35 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-10-19-px-바이브코딩-보안성검토",
+   "title": "[공공AX 네트워크] 바이브코딩 산출물과 보안성 검토 지침 소문",
+   "outlet": "akwiki.org",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-19-px-국감-실시간-자료-지원",
    "title": "[공공AX 네트워크] 국감 답변 자료를 실무자가 밀어주는 도구",
    "outlet": "akwiki.org",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "http://www.hellodd.com/news/articleView.html?idxno=113387",
+   "title": "PDF 넣으니 한글 문서 '뚝딱'···공공기관 잡무 줄이는 AI 등장외부망 연결 없이 문서 작성·검색·수정까지···행정 현장 겨냥",
+   "outlet": "헬로디디",
    "published": "2026-10-19",
    "kind": "기사",
    "shares": 1,
@@ -6797,6 +6927,19 @@
    "shares": 1,
    "first_shared": "2026-09-20",
    "last_shared": "2026-09-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.clien.net/service/board/news/19265023",
+   "title": "앤트로픽, Cowork를 채팅으로 통합··· Claude Docs·Claude Slides 베타 출시",
+   "outlet": "클리앙",
+   "published": "2026-09-17",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-09-18",
+   "last_shared": "2026-09-19",
    "sources": [
     "kakao"
    ]

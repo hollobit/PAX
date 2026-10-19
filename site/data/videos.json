@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-18T14:37:56Z",
- "count": 109,
+ "updated_at": "2026-10-19T16:47:02Z",
+ "count": 110,
  "videos": [
+  {
+   "id": "CCUSpJkAfgU",
+   "title": "Claude + Three.js = Premium 3D Motion Graphics",
+   "channel": "Matt Penny | Applied AI",
+   "url": "https://www.youtube.com/watch?v=CCUSpJkAfgU",
+   "thumb": "https://i.ytimg.com/vi/CCUSpJkAfgU/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-10-19",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "BZ1hPWhycd0",
    "title": "유튜브 썸네일 어그로 끄는 노래",
