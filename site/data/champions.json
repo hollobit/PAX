@@ -1,5 +1,5 @@
 {
- "total": 234,
+ "total": 235,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -1342,6 +1342,28 @@
     "case_count": 1,
     "top_ax": 1,
     "stars": 134
+   }
+  },
+  {
+   "id": "github:hateduk",
+   "name": "hateduk",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "hateduk",
+     "url": "https://github.com/hateduk"
+    }
+   ],
+   "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
+   "cases": [
+    "d82a2fb69b71e3a0"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
    }
   },
   {

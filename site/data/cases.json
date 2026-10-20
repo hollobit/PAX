@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-20T15:34:39+09:00",
+ "updated_at": "2026-10-20T22:27:33+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -17513,6 +17513,33 @@
    "org": "공직 현장(개인 개발)",
    "id": "c7af06d4ecc6fb4f",
    "thumb_v": 1792478103
+  },
+  {
+   "source": "kakao",
+   "case_class": "커뮤니티",
+   "runtime_env": "브라우저만",
+   "org": "개발 커뮤니티",
+   "case_url": "https://github.com/hateduk/assembly-attendance",
+   "link": "https://hateduk.github.io/assembly-attendance/",
+   "task_category": "데이터·통계",
+   "date": "2026-10-20",
+   "title": "국회의원 출석부 — 22대 국회 본회의 전자표결 기록으로 의원별 표결 참여율·출석일을 매일 자동 집계하는 사이트",
+   "collected_at": "2026-10-20",
+   "network_req": "인터넷 필수",
+   "tags": [
+    "국회",
+    "공공데이터",
+    "OpenAPI",
+    "자동화"
+   ],
+   "model_dependency": "없음(비LLM)",
+   "org_type": "커뮤니티",
+   "summary": "국회가 의원별 출석부를 공개 API로 내놓지 않는 점을 보완해, 열린국회정보 API의 본회의 전자표결 기록으로 22대 국회의원의 표결 참여율과 출석일을 추정해 보여 주는 정적 사이트다. GitHub Actions가 매일 새벽 새 표결만 받아 데이터 파일에 더하므로 인증키가 공개되지 않고, 청가·공무출장 같은 불참 사유는 구분하지 못한다는 해석 주의도 함께 안내한다.",
+   "id": "d82a2fb69b71e3a0",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-10-20",
+   "thumb_v": 1792502875
   }
  ]
 }

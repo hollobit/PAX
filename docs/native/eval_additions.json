@@ -14474,5 +14474,33 @@
   "confidence": "중간",
   "rationale": "공공기관 PDF 쪽 이미지·정답 텍스트·채점 스크립트를 묶은 공개 벤치마크라 단일 자산 S1·C1이다. LLM을 호출하지 않는 평가용 데이터라 AI-Ready로 두었고, 문서 파싱 도구 kordoc의 OCR 회귀 벤치를 모델과 무관하게 옮긴 것이다. 정답이 사람 라벨이 아닌 텍스트층 추출이라는 한계는 README에 명시돼 있다.",
   "service_url": "https://huggingface.co/datasets/Chrisryugj/kordoc-ocr-bench"
+ },
+ {
+  "no": 590,
+  "id": "d82a2fb69b71e3a0",
+  "org": "개발 커뮤니티",
+  "title": "국회의원 출석부 — 22대 국회 본회의 전자표결 기록으로 의원별 표결 참여율·출석일을 매일 자동 집계하는 사이트",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "resilience": "미확인",
+  "post_url": "",
+  "ax_prev": "AI-Ready",
+  "ax": "AI-Ready",
+  "s": "S2",
+  "s_name": "Workflow",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "status": "Live service",
+  "scope": "External",
+  "risk": "R0 최소",
+  "human": "H2 Human-in-the-loop",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "rationale": "국회 API 수집(GitHub Actions 매일)부터 정적 사이트 표시까지 자동으로 이어지는 수집·게시 흐름이라 S2, 결과는 열람용이라 C1이다. LLM을 쓰지 않는 공공데이터 가공 사례라 AI-Ready로 두었고, 출석을 전자표결 기록으로 추정한다는 한계를 스스로 밝힌다.",
+  "service_url": "https://hateduk.github.io/assembly-attendance/"
  }
 ]

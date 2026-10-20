@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-19T16:47:02Z",
- "count": 110,
+ "updated_at": "2026-10-20T13:28:02Z",
+ "count": 111,
  "videos": [
+  {
+   "id": "Npk6nTDdlwY",
+   "title": "“리더는 지휘자가 아니라 청소부가 돼야 한다” (정도희 전 SKT 부사장)",
+   "channel": "티타임즈TV",
+   "url": "https://www.youtube.com/watch?v=Npk6nTDdlwY",
+   "thumb": "https://i.ytimg.com/vi/Npk6nTDdlwY/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "CCUSpJkAfgU",
    "title": "Claude + Three.js = Premium 3D Motion Graphics",

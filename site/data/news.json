@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-20T06:35:10Z",
- "count": 1052,
+ "updated_at": "2026-10-20T13:28:05Z",
+ "count": 1058,
  "articles": [
   {
    "url": "https://www.yna.co.kr/amp/view/AKR20261019131300017",
@@ -133,6 +133,32 @@
    ]
   },
   {
+   "url": "https://news.hada.io/topic?id=35647",
+   "title": "Superlite - Superpowers보다 빠른 Claude Code 플러그인",
+   "outlet": "GeekNews",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.blog.naver.com/cheonsa200/224369981615",
+   "title": "휴대폰 114 누르면 어디로 연결될까? (전화번호 안내 vs 통신사 고객센터 차이)",
+   "outlet": "네이버 블로그 | 천천히 걷는 감성일기",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-20-px-폐쇄망-클로드-행정망-구분",
    "title": "[공공AX 네트워크] 폐쇄망 클로드라는 말과 행정망이라는 짐작",
    "outlet": "akwiki.org",
@@ -174,6 +200,58 @@
   {
    "url": "https://akwiki.org/article/2026-10-20-px-교육영상-토큰부담",
    "title": "[공공AX 네트워크] 교육 영상 제작에서 부딪힌 토큰 부담",
+   "outlet": "akwiki.org",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-20-px-ocr-벤치-손글씨",
+   "title": "[공공AX 네트워크] OCR 벤치 공유 요청과 손글씨 인식 논의",
+   "outlet": "akwiki.org",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-20-px-ax-컨설팅-용역-발주",
+   "title": "[공공AX 네트워크] AX 컨설팅 용역 앞에서 갈린 공공기관의 고민",
+   "outlet": "akwiki.org",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-20-px-ai-활용-업무량-체감",
+   "title": "[공공AX 네트워크] AI를 쓰고 나니 업무가 늘었다는 체감",
+   "outlet": "akwiki.org",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-20-cross-코덱스-리셋-세-방-체감",
+   "title": "[3개 방 공통] 세 방에 비슷한 오후 올라온 사용량 리셋 이야기",
    "outlet": "akwiki.org",
    "published": "2026-10-20",
    "kind": "기사",
