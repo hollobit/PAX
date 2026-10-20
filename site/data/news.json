@@ -1,7 +1,98 @@
 {
- "updated_at": "2026-10-20T13:28:05Z",
- "count": 1058,
+ "updated_at": "2026-10-20T22:38:41Z",
+ "count": 1077,
  "articles": [
+  {
+   "url": "https://www.wikitree.co.kr/articles/1167716",
+   "title": "유성구, 생성형 AI 행정 활용 본격화",
+   "outlet": "위키트리",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.techm.kr/news/articleView.html?idxno=156297",
+   "title": "나루씨큐리티, AI 웹 방어 서비스 '제로티카 라이트 웹' 출시",
+   "outlet": "테크M",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.techm.kr/news/articleView.html?idxno=156293",
+   "title": "KT, 대내외 AX 행보 '가속'...'모두의 AI' 이어 '의료 AX' 진출",
+   "outlet": "테크M",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.specialtimes.co.kr/news/articleView.html?idxno=476264",
+   "title": "아부다비 디지털정부 타맘, 470만 명 쓰는 AI 플랫폼 세계 정부에 라이선스",
+   "outlet": "스페셜타임스",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.energydaily.co.kr/news/articleView.html?idxno=204212",
+   "title": "공공기관 AI 도입 전 ‘고용영향평가’ 의무화 추진…재교육·재배치 연계",
+   "outlet": "에너지데일리",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216446",
+   "title": "엔스케일, 앤트로픽과 추가 60조 규모 컴퓨팅 계약 협상…총 120조 육박",
+   "outlet": "AI타임스",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008805946",
+   "title": "\"단 한 명이 AI 에이전트 활용해 기업 100곳 해킹 성공\"",
+   "outlet": "SBS 뉴스",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.yna.co.kr/amp/view/AKR20261019131300017",
    "title": "연합뉴스, AI로 '취재 아카이브' 분석한다…'연합LM' 독자개발 | 연합뉴스",
@@ -1944,6 +2035,162 @@
    "title": "Karpathy's AI Funnel: Only 5,000 See the Frontier",
    "outlet": "CellCog",
    "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-13-px-해외-배포-csap-보안성검토",
+   "title": "해외 배포 서비스를 둘러싼 CSAP와 보안성검토 해석",
+   "outlet": "akwiki.org",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-13-px-한글-문서도구-벤치마크",
+   "title": "한글(HWPX) 문서 도구 라이선스와 모델 벤치마크",
+   "outlet": "akwiki.org",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-13-px-지자체-ai-포스터-표기",
+   "title": "[공공AX 네트워크] AI 제작 포스터의 생성 표기 쟁점",
+   "outlet": "akwiki.org",
+   "published": "2026-10-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-13-px-로컬-ai-입문-사양",
+   "title": "[공공AX 네트워크] 로컬 AI 입문자의 노트북 사양 문의",
+   "outlet": "akwiki.org",
+   "published": "2026-10-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-13-px-공공ax-챌린지-일정-변경",
+   "title": "[공공AX 네트워크] 공공AX 챌린지 일정 변경과 상금 반응",
+   "outlet": "akwiki.org",
+   "published": "2026-10-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-13-px-공공-ai-도입-dlp-논쟁",
+   "title": "공공 현장의 로컬 LLM과 클라우드 사이 고민",
+   "outlet": "akwiki.org",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-13-px-개인정보처리자-ip-기록",
+   "title": "서버에 남는 IP 기록을 둘러싼 설명과 현장의 온도차",
+   "outlet": "akwiki.org",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-13-px-강릉-its-혼잡도-데이터",
+   "title": "강릉 ITS 행사 앞두고 오간 혼잡도 데이터와 숙박비 불만",
+   "outlet": "akwiki.org",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-13-px-kordoc-설치-승인-병목",
+   "title": "[공공AX 네트워크] kordoc 설치를 AI에 맡기는 일과 승인 병목",
+   "outlet": "akwiki.org",
+   "published": "2026-10-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-13-cross-코덱스-한도-리셋-당일",
+   "title": "[3개 방 공통] 오후 2시께 코덱스 한도 리셋, 세 방의 하루",
+   "outlet": "akwiki.org",
+   "published": "2026-10-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-13-cross-어사이드-업무-활용과-우려",
+   "title": "세 방이 같은 날 저울질한 브라우저 에이전트 어사이드",
+   "outlet": "akwiki.org",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-13",
+   "last_shared": "2026-10-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-13-cross-rea-리버스엔지니어링-에이전트",
+   "title": "[공공AX 네트워크·더배러] Rea를 둘러싼 호기심과 저작권 경고",
+   "outlet": "akwiki.org",
+   "published": "2026-10-13",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-13",

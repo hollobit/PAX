@@ -3305,6 +3305,41 @@
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
    }
+  },
+  {
+   "case_id": "f4f1360681627431",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 179건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "패턴 일치 3건은 키 마스킹 함수 테스트의 모의 키 픽스처로 수동 확인(오탐) — 실제 자격증명 없음(근거: packages/agent-core/tests/sanitize-payload.test.ts:6, 58, 66)"
+    },
+    "supply_chain": {
+     "verdict": "주의",
+     "note": "High 이상 CVE 8건"
+    },
+    "hygiene": {
+     "verdict": "통과",
+     "note": "Apache-2.0·유지보수 미상(2026-10-21 최근 커밋 확인)"
+    },
+    "injection": {
+     "verdict": "주의",
+     "note": "도구 실행은 셸 없이 인자 배열로 프로세스를 띄우고(근거: packages/cli/src/commands/open.ts:87, packages/cli/src/formats/app-export.ts:61), 앱 내장 HTTP MCP는 127.0.0.1에만 열고 Host·Origin 검사와 세션 토큰을 둔다(근거: apps/shell/src/main/mcp/mcp-server.ts:153-155, 348-390, 453). 다만 파일 경로 인자는 화이트리스트 없이 절대·상대 경로를 그대로 받아 임의 로컬 파일을 읽고 쓸 수 있고(근거: packages/cli/src/mcp/deck.ts:279), read-url 도구가 외부 웹 내용을 응답으로 돌려주므로 프롬프트 인젝션 표면이 있다 — 로컬 단독 도구라 위험은 낮다"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "문서 명령은 PC 안에서 끝나고 외부로 나가는 도구는 search·image·media·read-url 네 가지뿐이라고 README가 밝히며, AI 요청은 사용자가 고른 제공업체(Claude Code·Codex 구독, OpenRouter·Gemini 등)로만 간다(근거: README.md 터미널 명령어·MCP 절, packages/ai-provider/src/claude-code-cli.ts:70 텔레메트리 끔). 사용 통계 전송 코드는 확인되지 않았다"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-10-21",
+   "tools": {
+    "npm": "11.20.0",
+    "pip_audit": "2.9.0"
+   }
   }
  ]
 }

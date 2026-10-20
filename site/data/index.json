@@ -1,28 +1,28 @@
 {
- "generated_at": "2026-10-20",
+ "generated_at": "2026-10-21",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 588,
- "total_champions": 235,
+ "total_cases": 589,
+ "total_champions": 236,
  "community": {
-  "members": 2554,
-  "kakao_week": 4532,
-  "kakao_total_observed": 55494,
+  "members": 2547,
+  "kakao_week": 3934,
+  "kakao_total_observed": 55511,
   "threads_observed": 384
  },
  "certified_champions": 5,
  "unattributed_cases": 154,
  "ax_distribution": {
   "AI-Ready": 379,
-  "AI-Enabled": 178,
+  "AI-Enabled": 179,
   "AX 단계 외": 25,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
- "c_axis_mean": 0.94,
+ "c_axis_mean": 0.95,
  "p_distribution": {
   "P0": 191,
-  "P1": 377,
+  "P1": 378,
   "P2": 20
  },
  "model_dependency": {
@@ -31,7 +31,7 @@
   "해외 오픈웨이트(로컬)": 31,
   "혼합": 16,
   "해외 상용 API": 65,
-  "모델 중립(BYO)": 92,
+  "모델 중립(BYO)": 93,
   "국산 독자모델": 7,
   "미상": 26,
   "국산 오픈웨이트": 1
@@ -40,7 +40,7 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 33,
+    "n": 34,
     "variants": [
      "Claude Code 스킬(선택)",
      "Claude Code(BYO 구독)",
@@ -48,6 +48,7 @@
      "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
      "Claude Code/Codex(플러그인)",
      "Claude Code·Codex 스킬",
+     "Claude Code·Codex(BYO 구독)",
      "Claude Code·Codex에서 MCP·CLI로 호출(선택)",
      "Claude Fable 5.1",
      "Claude Haiku 5.5",
@@ -193,6 +194,10 @@
      {
       "id": "b52bd17cf637a1cc",
       "title": "Colorfigures — 사물을 한 문장으로 설명하면 버튼이 실제로 작동하는 손그림풍 아이소메트릭 그림을 HTML 한 파일로 그리는 Claude 스킬"
+     },
+     {
+      "id": "f4f1360681627431",
+      "title": "이음오피스 — 한컴오피스 없이 한글·워드·엑셀·PDF를 한 창에서 고치고 옆 AI 창에 표 채우기를 맡기는 무료 오픈소스 오피스(MCP 포함)"
      }
     ],
     "domestic": false
@@ -300,7 +305,7 @@
    },
    {
     "name": "Gemini",
-    "n": 13,
+    "n": 14,
     "variants": [
      "Chrome 내장 AI(Gemini Nano)",
      "Claude Code/Codex/Gemini(스킬 팩)",
@@ -315,6 +320,7 @@
      "Gemini(옵션)",
      "Google Gemini(NotebookLM)",
      "OpenAI/Gemini/Claude(사용자 선택)",
+     "OpenRouter·Gemini 무료 한도(선택)",
      "구글 제미나이(외부 연계)"
     ],
     "cases": [
@@ -369,6 +375,10 @@
      {
       "id": "0a767bb6906996f4",
       "title": "DentalAX — 코딩을 모르는 치과의사가 프롬프트 한 번으로 만든 원내 행정 도우미(인수인계·재고·발주·근무표·문서)"
+     },
+     {
+      "id": "f4f1360681627431",
+      "title": "이음오피스 — 한컴오피스 없이 한글·워드·엑셀·PDF를 한 창에서 고치고 옆 AI 창에 표 채우기를 맡기는 무료 오픈소스 오피스(MCP 포함)"
      }
     ],
     "domestic": false
@@ -863,8 +873,8 @@
     "specified": 50
    },
    "모델 중립(BYO)": {
-    "n": 92,
-    "specified": 8
+    "n": 93,
+    "specified": 9
    },
    "국산 독자모델": {
     "n": 7,
@@ -1821,15 +1831,15 @@
  "domestic_model_rate": 0.067,
  "local_model_rate": 0.267,
  "model_known": 120,
- "license_tagged": 434,
- "license_stated_rate": 0.493,
+ "license_tagged": 435,
+ "license_stated_rate": 0.494,
  "gitlab_cases": 282,
  "gitlab_mirror_pairs": 41,
  "gitlab_open_rate": 0.145,
- "mcp_cases": 95,
+ "mcp_cases": 96,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 506,
+  "미확인": 507,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1938,7 +1948,7 @@
    ]
   },
   "github": {
-   "count": 175,
+   "count": 176,
    "starred": 169,
    "stars_sum": 717338,
    "maintenance": {
@@ -2033,7 +2043,7 @@
  "license_distribution": {
   "명시 없음": 220,
   "MIT": 140,
-  "Apache-2.0": 34,
+  "Apache-2.0": 35,
   "Other": 20,
   "AGPL-3.0": 5,
   "GNU AGPLv3": 5,
@@ -2055,7 +2065,7 @@
    "gitlab": 55
   },
   "Apache-2.0": {
-   "github": 12,
+   "github": 13,
    "gitlab": 22
   },
   "Other": {
@@ -2101,8 +2111,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 161,
-   "stated": 115
+   "total": 162,
+   "stated": 116
   },
   "github-pages": {
    "total": 23,
@@ -2114,18 +2124,18 @@
   }
  },
  "mcp_stats": {
-  "total": 95,
+  "total": 96,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
-   "Server": 81,
+   "Server": 82,
    "Client/Host": 7,
    "Unknown/None": 6
   },
   "c_grades": {
    "C0": 69,
-   "C2": 9,
+   "C2": 10,
    "C3": 1,
    "C1": 16
   },

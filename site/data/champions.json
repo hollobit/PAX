@@ -1,5 +1,5 @@
 {
- "total": 235,
+ "total": 236,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -1796,6 +1796,28 @@
    "category_basis": "cases",
    "cases": [
     "ad435a193856fac5"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:pblsketch",
+   "name": "pblsketch",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "pblsketch",
+     "url": "https://github.com/pblsketch"
+    }
+   ],
+   "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
+   "cases": [
+    "f4f1360681627431"
    ],
    "stats": {
     "case_count": 1,

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-20T22:27:33+09:00",
+ "updated_at": "2026-10-21T07:35:40+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -16964,6 +16964,35 @@
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-10-20"
+  },
+  {
+   "summary": "오픈소스 GenOffice를 바탕으로 한글(hwp·hwpx) 편집을 더한 데스크톱 오피스로, 워드·엑셀·파워포인트·PDF·마크다운 문서를 탭으로 열어 원래 형식 그대로 저장한다. 편집기 옆 AI 창은 사용자가 이미 로그인한 Claude Code나 Codex 구독으로 표 칸 채우기·누름틀·차례 넣기 같은 반복 작업을 처리하고 고친 내용을 되돌릴 수 있다. 터미널 명령과 MCP 서버도 함께 제공한다.",
+   "runtime_env": "설치 필요",
+   "source": "kakao",
+   "model_dependency": "모델 중립(BYO)",
+   "case_class": "개인 개발",
+   "org": "교육 현장(개인 개발)",
+   "org_type": "공직 개인",
+   "case_url": "https://github.com/pblsketch/openoffice",
+   "models_used": [
+    "Claude Code·Codex(BYO 구독)",
+    "OpenRouter·Gemini 무료 한도(선택)"
+   ],
+   "tags": [
+    "한글문서",
+    "오피스",
+    "MCP",
+    "오픈소스"
+   ],
+   "collected_at": "2026-10-21",
+   "task_category": "문서·기안",
+   "link": "https://ieumoffice.vercel.app/",
+   "title": "이음오피스 — 한컴오피스 없이 한글·워드·엑셀·PDF를 한 창에서 고치고 옆 AI 창에 표 채우기를 맡기는 무료 오픈소스 오피스(MCP 포함)",
+   "date": "2026-10-21",
+   "id": "f4f1360681627431",
+   "license": "Apache-2.0",
+   "license_source": "github",
+   "license_checked": "2026-10-21"
   }
  ]
 }
