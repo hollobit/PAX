@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kordoc 공문서 OCR 벤치 — 공공기관 PDF 38문서 72쪽의 쪽 이미지와 정답 텍스트로 OCR 정확도를 재는 공개 데이터셋 — 모두의 공공AX</title>
+  <meta name="description" content="보도자료·예산서·계획서·회의록 등 공공기관 PDF 38문서 72쪽을 216dpi 이미지로 렌더하고, 텍스트층에서 뽑은 쪽별 정답과 원본 PDF를 함께 묶은 한국 공문서 OCR 벤치마크다. 채점 스크립트에 예측 결과를 넣으면 문자 오류율과 글자 재현율이 나오며, kord">
+  <link rel="canonical" href="https://hollobit.github.io/PAX/case/c7af06d4ecc6fb4f.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="kordoc 공문서 OCR 벤치 — 공공기관 PDF 38문서 72쪽의 쪽 이미지와 정답 텍스트로 OCR 정확도를 재는 공개 데이터셋">
+  <meta property="og:description" content="보도자료·예산서·계획서·회의록 등 공공기관 PDF 38문서 72쪽을 216dpi 이미지로 렌더하고, 텍스트층에서 뽑은 쪽별 정답과 원본 PDF를 함께 묶은 한국 공문서 OCR 벤치마크다. 채점 스크립트에 예측 결과를 넣으면 문자 오류율과 글자 재현율이 나오며, kord">
+  <meta property="og:url" content="https://hollobit.github.io/PAX/case/c7af06d4ecc6fb4f.html">
+  <meta property="og:site_name" content="모두의 공공AX 사례 아카이브">
+  <meta property="og:image" content="https://hollobit.github.io/PAX/thumbs/c7af06d4ecc6fb4f.jpg?v=1792478103">
+  <link rel="stylesheet" href="../style.css?v=1039ec23">
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">PUBLIC SECTOR AX CASE · 사례 c7af06d4ecc6fb4f</p>
+    <h1>kordoc 공문서 OCR 벤치 — 공공기관 PDF 38문서 72쪽의 쪽 이미지와 정답 텍스트로 OCR 정확도를 재는 공개 데이터셋</h1>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="../">사례 아카이브</a>
+      <a href="../pax3d.html">3D PAX</a>
+      <a href="../dashboard.html">AX 평가</a>
+      <a href="../champions.html">챔피언</a>
+      <a href="../ax-maturity-infographic.html">AX 성숙도 개념</a>
+      <a href="../observatory.html">관측소</a>
+      <a href="../gap-map.html">격차 지도</a>
+      <a href="../mcp-review.html">MCP 검증</a>
+      <a href="../playbook.html">전이 플레이북</a>
+      <a href="../guidelines.html">안내서·가이드라인</a>
+      <a href="../videos.html">공유 동영상</a>
+      <a href="../news.html">공유 뉴스</a>
+      <a href="../changelog.html">변경 기록</a>
+    </nav>
+    <nav class="site-nav site-nav--external" aria-label="관련 사이트">
+      <a href="https://hollobit.github.io/GAPI2/ecosystem.html" target="_blank" rel="noopener">MCP·AI 도구 ↗</a>
+      <a href="https://ax360.kr/national-ax-project/card" target="_blank" rel="noopener">AX 사업 찾기 ↗</a>
+      <a href="https://ax360.kr/national-ai-resource/model" target="_blank" rel="noopener">AX 자원 찾기 ↗</a>
+      <a href="https://ax360.kr/private-ai-company/heatmap" target="_blank" rel="noopener">AI 기업 찾기 ↗</a>
+      <a href="https://axboard.aigov.go.kr/" target="_blank" rel="noopener">AI 정부실험실 ↗</a>
+      <a href="https://aitestbed.kr/main-page" target="_blank" rel="noopener">모두의 AI 실험실 ↗</a>
+    </nav>
+  </header>
+  <main class="case-page">
+    <section class="obs-section case-page__intro">
+      <a class="case-page__thumb" href="https://huggingface.co/datasets/Chrisryugj/kordoc-ocr-bench" target="_blank" rel="noopener" title="사례 대상 바로가기 (새 창)"><picture><source type="image/webp" srcset="../thumbs/c7af06d4ecc6fb4f.webp?v=1792478103"><img src="../thumbs/c7af06d4ecc6fb4f.jpg?v=1792478103" alt="kordoc 공문서 OCR 벤치 — 공공기관 PDF 38문서 72쪽의 쪽 이미지와 정답 텍스트로 OCR 정확도를 재는 공개 데이터셋 화면" width="640" height="400" loading="eager" decoding="async"></picture></a>
+      <div class="case-page__live" id="case-live" data-case-id="c7af06d4ecc6fb4f" data-collected-at="2026-10-20"></div>
+      <p class="case-page__meta">공직 현장(개인 개발) · 공직 개인 · 서울 · 문서·기안 · 2026-10-20 게시</p>
+      <p class="case-page__summary">보도자료·예산서·계획서·회의록 등 공공기관 PDF 38문서 72쪽을 216dpi 이미지로 렌더하고, 텍스트층에서 뽑은 쪽별 정답과 원본 PDF를 함께 묶은 한국 공문서 OCR 벤치마크다. 채점 스크립트에 예측 결과를 넣으면 문자 오류율과 글자 재현율이 나오며, kordoc 내장 OCR 기준선은 문자 오류율 0.033이다. 깨끗한 렌더라 실제 스캔보다 높게 나오는 상한치로 안내한다.</p>
+      <p class="case-page__links"><a href="https://huggingface.co/datasets/Chrisryugj/kordoc-ocr-bench" target="_blank" rel="noopener">사례 대상 바로가기</a> · <a href="https://huggingface.co/datasets/Chrisryugj/kordoc-ocr-bench" target="_blank" rel="noopener">공유 링크</a> · <a href="../?case=c7af06d4ecc6fb4f">아카이브에서 보기</a></p>
+    </section>
+    <section class="obs-section">
+      <h2 class="obs-heading">상세 정보</h2>
+      <dl class="case-page__details"><dt>사례 성격</dt><dd>개인 개발</dd><dt>출처 채널</dt><dd>오픈채팅</dd><dt>수집일</dt><dd>2026-10-20</dd><dt>태그</dt><dd><a href="../?tag=OCR">#OCR</a> <a href="../?tag=%EB%B2%A4%EC%B9%98%EB%A7%88%ED%81%AC">#벤치마크</a> <a href="../?tag=%EA%B3%B5%EB%AC%B8%EC%84%9C">#공문서</a> <a href="../?tag=%EC%98%A4%ED%94%88%EB%8D%B0%EC%9D%B4%ED%84%B0">#오픈데이터</a></dd><dt>실행 환경</dt><dd>설치 필요</dd><dt>AI 모델</dt><dd>없음(비LLM)</dd></dl>
+    </section>
+    <section class="obs-section">
+      <h2 class="obs-heading">4축 평가</h2>
+      <div class="table-wrap"><table class="obs-table"><tr><th scope="row">AX 단계</th><td>AI-Ready</td></tr><tr><th scope="row">업무 범위</th><td>S1 Single tool</td></tr><tr><th scope="row">업무 완결성</th><td>C1 결과 제공</td></tr><tr><th scope="row">권한(P축)</th><td>P1 산출물 생성(잠정)</td></tr><tr><th scope="row">위험도</th><td>R0 최소</td></tr><tr><th scope="row">인간 통제</th><td>H2 Human-in-the-loop</td></tr><tr><th scope="row">증거 등급</th><td>E2 화면·서비스 확인</td></tr><tr><th scope="row">신뢰도</th><td>중간</td></tr></table></div>
+      <p class="obs-note">공공기관 PDF 쪽 이미지·정답 텍스트·채점 스크립트를 묶은 공개 벤치마크라 단일 자산 S1·C1이다. LLM을 호출하지 않는 평가용 데이터라 AI-Ready로 두었고, 문서 파싱 도구 kordoc의 OCR 회귀 벤치를 모델과 무관하게 옮긴 것이다. 정답이 사람 라벨이 아닌 텍스트층 추출이라는 한계는 README에 명시돼 있다.</p>
+    </section>
+
+    <section class="obs-section" id="design-pattern">
+      <h2 class="obs-heading">디자인 패턴 분석</h2>
+      <p class="obs-note">이 사례는 아직 디자인 패턴 분석 전입니다. 패턴 카탈로그는 <a href="https://hollobit.github.io/PAX-DP/" target="_blank" rel="noopener">웹북</a>과 <a href="https://hollobit.github.io/PAX-DP/constellation/" target="_blank" rel="noopener">패턴 성좌</a>에서 볼 수 있습니다.</p>
+    </section>
+    <section class="obs-section">
+      <h2 class="obs-heading">실무 도입 카드</h2>
+      <div class="obs-cards">
+        <div class="obs-card"><p class="obs-card__label">필요한 것</p><p class="obs-card__note">실행환경: 설치 필요</p></div>
+        <div class="obs-card"><p class="obs-card__label">첫 3단계</p><p class="obs-card__note">① 설치 파일·요구 사양 확인 → ② 개인 환경에서 기능 검증 → ③ 부서 공유 전 관리자 권한 확인</p></div>
+        <div class="obs-card"><p class="obs-card__label">주의사항</p><p class="obs-card__note">실사용 피드백이 미확인입니다 — 도입 전 소규모 검증을 권합니다 · 성과 수치는 출처가 확인된 것만 신뢰하세요</p></div>
+      </div>
+      <p class="obs-note">전이 절차(보안검토→품의→배포)는 <a href="../playbook.html">전이 플레이북</a>을 참고하세요.</p>
+    </section>
+    <section class="obs-section">
+      <h2 class="obs-heading">비슷한 업무의 사례</h2>
+      <ul class="case-page__related"><li><a href="02656bf9d2589964.html">서울시, 기관 공용 AI 엔진 기반 AI 에이전트 구축 착수</a></li><li><a href="719692c2c31da09f.html">로컬 문서 검수 도구 공개 — 맞춤법·공공언어 검사</a></li><li><a href="075fd5baf003c3b0.html">AI 기반 업무 인수인계 관리 사례</a></li></ul>
+    </section>
+    <footer class="obs-note">
+      <p>출처: 모두의 공공AX 사례 아카이브 · 자기선택 표본 · 근거 없는 항목은 '미확인'으로 표기 ·
+      인용 시 이 페이지 URL을 사용하세요.</p>
+    </footer>
+  </main>
+  <script type="module" src="../case-page.js?v=ddbccffd"></script>
+</body>
+</html>

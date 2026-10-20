@@ -6937,6 +6937,12 @@
    "title": "atlas — 대법원 판례·헌재 결정례 약 6만 9천 건을 쟁점이 비슷할수록 가깝게 놓은 판례 지형도",
    "org": "yebni.cc(개인 개발)",
    "url": "https://atlas.app.yebni.cc/"
+  },
+  {
+   "id": "c7af06d4ecc6fb4f",
+   "title": "kordoc 공문서 OCR 벤치 — 공공기관 PDF 38문서 72쪽의 쪽 이미지와 정답 텍스트로 OCR 정확도를 재는 공개 데이터셋",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://huggingface.co/datasets/Chrisryugj/kordoc-ocr-bench"
   }
  ]
 }

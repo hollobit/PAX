@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-19T22:34:22Z",
- "count": 1051,
+ "updated_at": "2026-10-20T06:35:10Z",
+ "count": 1052,
  "articles": [
+  {
+   "url": "https://www.yna.co.kr/amp/view/AKR20261019131300017",
+   "title": "연합뉴스, AI로 '취재 아카이브' 분석한다…'연합LM' 독자개발 | 연합뉴스",
+   "outlet": "yna.co.kr",
+   "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-20",
+   "last_shared": "2026-10-20",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.techm.kr/news/articleView.html?idxno=156236",
    "title": "[국감 26] '코인 사기부터 AI 해킹까지'…이찬진 금감원장 \"KISA 수준으로 보안 역량 강화할 것\"",

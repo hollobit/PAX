@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-20T09:12:12+09:00",
+ "updated_at": "2026-10-20T15:34:39+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -17490,6 +17490,29 @@
    ],
    "id": "9c0ea96f760469e0",
    "thumb_v": 1792455208
+  },
+  {
+   "source": "kakao",
+   "link": "https://huggingface.co/datasets/Chrisryugj/kordoc-ocr-bench",
+   "model_dependency": "없음(비LLM)",
+   "runtime_env": "설치 필요",
+   "date": "2026-10-20",
+   "summary": "보도자료·예산서·계획서·회의록 등 공공기관 PDF 38문서 72쪽을 216dpi 이미지로 렌더하고, 텍스트층에서 뽑은 쪽별 정답과 원본 PDF를 함께 묶은 한국 공문서 OCR 벤치마크다. 채점 스크립트에 예측 결과를 넣으면 문자 오류율과 글자 재현율이 나오며, kordoc 내장 OCR 기준선은 문자 오류율 0.033이다. 깨끗한 렌더라 실제 스캔보다 높게 나오는 상한치로 안내한다.",
+   "case_class": "개인 개발",
+   "tags": [
+    "OCR",
+    "벤치마크",
+    "공문서",
+    "오픈데이터"
+   ],
+   "region": "서울",
+   "title": "kordoc 공문서 OCR 벤치 — 공공기관 PDF 38문서 72쪽의 쪽 이미지와 정답 텍스트로 OCR 정확도를 재는 공개 데이터셋",
+   "task_category": "문서·기안",
+   "org_type": "공직 개인",
+   "collected_at": "2026-10-20",
+   "org": "공직 현장(개인 개발)",
+   "id": "c7af06d4ecc6fb4f",
+   "thumb_v": 1792478103
   }
  ]
 }
