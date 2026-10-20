@@ -6931,6 +6931,12 @@
    "title": "Colorfigures — 사물을 한 문장으로 설명하면 버튼이 실제로 작동하는 손그림풍 아이소메트릭 그림을 HTML 한 파일로 그리는 Claude 스킬",
    "org": "April Zhu(개인 개발)",
    "url": "https://github.com/MrBongoC/ai-iso-skill"
+  },
+  {
+   "id": "9c0ea96f760469e0",
+   "title": "atlas — 대법원 판례·헌재 결정례 약 6만 9천 건을 쟁점이 비슷할수록 가깝게 놓은 판례 지형도",
+   "org": "yebni.cc(개인 개발)",
+   "url": "https://atlas.app.yebni.cc/"
   }
  ]
 }
