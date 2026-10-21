@@ -40,7 +40,7 @@ PAX = Threads `공공AX` 태그 + 카카오톡 오픈채팅 "공공AX 네트워�
    단, MCP 검증의 responsible-disclosure 공개(취약점 상세)는 사용자 승인 게이트를 거친다.
 6. **크론은 세션 전용이다.** CronCreate 작업은 세션이 끝나면 사라지고 7일 후 만료된다.
    새 세션에서는 `data/state.json`의 `cron.registered_at`보다 **`CronList` 실측**을 먼저 보고,
-   비어 있으면 07:00/15:00/23:00 세 건을 즉시 재등록하고 state·log에 기록한다.
+   비어 있으면 07:00/15:00/23:00 세 건과 오픈톡 현황 알림(06:00) 한 건을 즉시 재등록하고 state·log에 기록한다.
 7. **커밋 규칙**: `<type>: <한국어 설명>` (feat/fix/refactor/docs/chore/perf/ci/test). 사례 추가 커밋은 끝에 `(총 N건)`.
    정기 수집 커밋은 `data/cases.json data/community_stats.json data/mcp_reviews.json docs/native/eval_additions.json
    site/data site/thumbs site/case`와, 그 회차에 고친 절차서·스크립트만 담는다. 변경 없으면 커밋하지 않는다.
@@ -57,6 +57,10 @@ PAX = Threads `공공AX` 태그 + 카카오톡 오픈채팅 "공공AX 네트워�
 상단 메뉴(주요·관련 사이트)는 `scripts/sync_nav.py`의 NAV·EXTERNAL 한 곳에서 고친다(사례 상세 페이지도 같은 목록).
 원장 교차 점검: `PYTHONPATH=scripts python3 -m pax.ledger`.
 디자인 패턴 자료(PAX-DP 사례별 태깅·카탈로그) 갱신: `PYTHONPATH=scripts python3 scripts/sync_patterns.py --src <원본 작업 저장소>` → `data/patterns/` — 책이 개정될 때만 손으로 돌리고, 상세 페이지는 다음 후처리에서 반영된다. 카카오 워치독 등록(새 기기): `bash scripts/launchd/install_watchdog.sh`.
+오픈톡 현황 알림: `bash scripts/kakao_digest.sh` — 전날까지의 현황(사례·챔피언·가입자·동영상·뉴스)과 전날 변경 기록을
+"공공AX 네트워크" 방에 하루 한 번 보낸다(세션 크론 06:00, 사용자 지시 2026-10-21). 본문은 `scripts/kakao_digest.py`,
+전송은 `scripts/kakao_send.applescript`(이름 정확히 일치·창 제목 재확인), 보낸 뒤 로컬 DB에서 도착을 확인해 중복을 막는다.
+손쉬운 사용 권한이 필요해 launchd로는 못 돌린다. 시험은 `--me`(나와의 채팅). 이 경로 밖에서 오픈톡에 글을 보내지 않는다.
 `scripts/collect_receiver.py`는 브라우저 수집분을 로컬 파일로 받는 임시 수신 서버다(확장 출력 차단으로 본문을
 못 넘길 때의 대안 — 정기 절차에서는 쓰지 않는다).
 배포는 CI가 main에서 성공한 뒤에만 돈다(`pages.yml`). `freshness.yml`이 6시간마다 마지막 원장 커밋(cases·community_stats)이

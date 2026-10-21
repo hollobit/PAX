@@ -10,6 +10,9 @@
   사라지므로 `data/state.json`의 `cron.registered_at`만으로는 판단할 수 없다.
   비어 있으면 07:00/15:00/23:00 세 건을 같은 프롬프트로 즉시 CronCreate 재등록한다.
   남아 있으면 registered_at+5일 이상일 때(7일 만료 2일 전) CronDelete 후 같은 세 건을 재등록한다.
+  **오픈톡 현황 알림 크론(네 번째 건)도 같은 때 함께 재등록한다** — `30 5 * * *`(스케줄러 고정 지연 30분이
+  붙어 실제 06:00), 프롬프트는 state.json의 `cron.digest_prompt` 그대로(사용자 지시 2026-10-21: 매일 오전 6시 하루 한 번
+  "공공AX 네트워크" 방에 전날까지의 현황 발송, `scripts/kakao_digest.sh`).
   재등록했으면 state.json의 registered_at·ids를 갱신하고 log에 기록한다.
 - `config/rooms.json`을 읽어 수집 대상을 확인한다.
 - `data/state.json`을 읽는다. 없으면 `{"threads": {"seen_ids": []}, "kakao": {"last_read": null}}`로 시작한다.
