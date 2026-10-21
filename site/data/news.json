@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-20T22:38:41Z",
- "count": 1077,
+ "updated_at": "2026-10-21T06:34:40Z",
+ "count": 1081,
  "articles": [
   {
    "url": "https://www.wikitree.co.kr/articles/1167716",
@@ -55,6 +55,19 @@
    ]
   },
   {
+   "url": "https://www.rockefellerfoundation.org/cities-deliver-ai-solutions-for-public-services",
+   "title": "Cities Deliver: AI Solutions for Public Services",
+   "outlet": "rockefellerfoundation.org",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.energydaily.co.kr/news/articleView.html?idxno=204212",
    "title": "공공기관 AI 도입 전 ‘고용영향평가’ 의무화 추진…재교육·재배치 연계",
    "outlet": "에너지데일리",
@@ -85,6 +98,45 @@
    "title": "\"단 한 명이 AI 에이전트 활용해 기업 100곳 해킹 성공\"",
    "outlet": "SBS 뉴스",
    "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-21-px-기관-캐릭터-코덱스-펫",
+   "title": "[공공AX 네트워크] 기관 캐릭터를 업무 화면에 들이려는 시도들",
+   "outlet": "akwiki.org",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-21-px-mcp-설명-비유",
+   "title": "[공공AX 네트워크] 임원에게 MCP를 설명하는 두 가지 비유",
+   "outlet": "akwiki.org",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-21-px-ax-확산-유인책-성과지표",
+   "title": "[공공AX 네트워크] AX 확산에 필요한 유인책과 성과지표 논의",
+   "outlet": "akwiki.org",
+   "published": "2026-10-21",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-21",

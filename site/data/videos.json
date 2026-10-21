@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-20T13:28:02Z",
- "count": 111,
+ "updated_at": "2026-10-21T06:34:37Z",
+ "count": 112,
  "videos": [
+  {
+   "id": "LbL0JIZCoKc",
+   "title": "Learn Gaussian Splatting & Photogrammetry from Clinton Jones (Corridor Crew)",
+   "channel": "ActionVFX",
+   "url": "https://www.youtube.com/watch?v=LbL0JIZCoKc",
+   "thumb": "https://i.ytimg.com/vi/LbL0JIZCoKc/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "Npk6nTDdlwY",
    "title": "“리더는 지휘자가 아니라 청소부가 돼야 한다” (정도희 전 SKT 부사장)",
