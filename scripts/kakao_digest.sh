@@ -12,6 +12,8 @@
 #   도착을 확인하고, 없을 때만 다시 보낸다(최대 3회) — 중복 방지 장치.
 # - 하루 한 번: data/private/kakao_digest_state의 날짜 + 보내기 전 DB 도착 확인, 두 겹.
 # - 늦게 돌면(맥 잠자기 등) CUTOFF_HOUR 이후엔 그날은 건너뛴다 — 늦은 '아침 알림'은 소음이다.
+# - 화면이 잠겨 있으면 잠금 해제를 기다렸다가 보낸다(CUTOFF_HOUR까지) — 길게 걸릴 수 있으니 크론은
+#   이 스크립트를 백그라운드로 돌린다. 밤새 잠기지 않게 하는 쪽은 scripts/kakao_keepawake.sh.
 # 사용법: bash scripts/kakao_digest.sh [--me] [--force]
 #   --me     나와의 채팅으로 보낸다(시험용 — 하루 한 번 기록을 남기지 않는다)
 #   --force  오늘 이미 보냈거나 마감 시각이 지나도 보낸다
@@ -27,6 +29,8 @@ CUTOFF_HOUR=12
 MAX_ATTEMPTS=3
 SEND_TIMEOUT_S=120                    # 한 번에 15초 안팎
 VERIFY_WAIT_S=20
+UNLOCK_POLL_S=30
+UNLOCK_SETTLE_S=10                    # 잠금 해제 직후 데스크톱이 자리 잡을 시간
 
 TO_ME=0; FORCE=0; DAY_ARGS=()
 for a in "$@"; do
@@ -80,11 +84,29 @@ except ValueError: sys.exit(1)
 sys.exit(0 if any(m.get("is_from_me") and (m.get("text") or "").split("\n",1)[0]==head for m in msgs) else 1)'
 }
 
+locked() { ioreg -n Root -d1 -a 2>/dev/null | grep -A1 IOConsoleLocked | grep -q '<true/>'; }
+
+# 화면이 잠겨 있으면 UI 자동화가 멈춘 채 시간 초과만 난다(2026-10-22 실측) → 잠금이 풀릴 때까지
+# 기다렸다가 보낸다(사용자 지시 2026-10-22). 마감 시각까지 안 풀리면 그날은 건너뛴다.
+# 기다리는 동안 잠금 디렉터리를 갱신해 30분 묵음 판정으로 다른 실행이 끼어들지 않게 한다.
+wait_unlock() {
+  locked || return 0
+  log "$TARGET: 화면 잠김 — 잠금 해제를 기다림(${CUTOFF_HOUR}시까지)"
+  while locked; do
+    if [ "$FORCE" = 0 ] && [ "$((10#$(TZ=Asia/Seoul date '+%H')))" -ge "$CUTOFF_HOUR" ]; then
+      log "$TARGET: ${CUTOFF_HOUR}시까지 잠금이 풀리지 않음 — $TODAY 알림 건너뜀"; return 1
+    fi
+    touch "$LOCK"; sleep "$UNLOCK_POLL_S"
+  done
+  log "$TARGET: 잠금 해제 확인"; sleep "$UNLOCK_SETTLE_S"
+}
+
 ok=0
 if arrived; then
   log "$TARGET: 이미 도착해 있음 — 보내지 않음"; ok=1
 else
   for attempt in $(seq 1 $MAX_ATTEMPTS); do
+    wait_unlock || exit 0
     out=$(timeout "$SEND_TIMEOUT_S" osascript scripts/kakao_send.applescript "$SEND_ROOM" "$BODY" 2>&1); rc=$?
     log "시도 $attempt: rc=$rc ${out:0:120}"
     sleep "$VERIFY_WAIT_S"

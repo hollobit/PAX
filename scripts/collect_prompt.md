@@ -14,6 +14,8 @@
   붙어 실제 06:00), 프롬프트는 state.json의 `cron.digest_prompt` 그대로(사용자 지시 2026-10-21: 매일 오전 6시 하루 한 번
   "공공AX 네트워크" 방에 전날까지의 현황 발송, `scripts/kakao_digest.sh`).
   재등록했으면 state.json의 registered_at·ids를 갱신하고 log에 기록한다.
+- **화면 잠금 방지 (매 실행)**: `bash scripts/kakao_keepawake.sh` — 이 세션에 묶인 `caffeinate -di`가 없으면 띄운다
+  (06:00 오픈톡 알림이 자동 잠금에 막히지 않게, 사용자 지시 2026-10-22). 이미 돌고 있으면 아무것도 하지 않는다.
 - `config/rooms.json`을 읽어 수집 대상을 확인한다.
 - `data/state.json`을 읽는다. 없으면 `{"threads": {"seen_ids": []}, "kakao": {"last_read": null}}`로 시작한다.
   - threads.seen_ids: 이미 처리한 게시물 URL 목록 (최대 500개 유지)

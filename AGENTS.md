@@ -60,7 +60,9 @@ PAX = Threads `공공AX` 태그 + 카카오톡 오픈채팅 "공공AX 네트워�
 오픈톡 현황 알림: `bash scripts/kakao_digest.sh` — 전날까지의 현황(사례·챔피언·가입자·동영상·뉴스)과 전날 변경 기록을
 "공공AX 네트워크" 방에 하루 한 번 보낸다(세션 크론 06:00, 사용자 지시 2026-10-21). 본문은 `scripts/kakao_digest.py`,
 전송은 `scripts/kakao_send.applescript`(이름 정확히 일치·창 제목 재확인), 보낸 뒤 로컬 DB에서 도착을 확인해 중복을 막는다.
-손쉬운 사용 권한이 필요해 launchd로는 못 돌린다. 시험은 `--me`(나와의 채팅). 이 경로 밖에서 오픈톡에 글을 보내지 않는다.
+손쉬운 사용 권한이 필요해 launchd로는 못 돌린다. 잠긴 화면 뒤로는 UI 자동화가 안 되므로 `scripts/kakao_keepawake.sh`가
+세션에 묶인 `caffeinate -di`로 자동 잠금을 막고(수집 크론이 매 회차 확인), 그래도 잠겨 있으면 digest가 정오까지 잠금 해제를
+기다렸다 보낸다(크론은 백그라운드로 실행). 시험은 `--me`(나와의 채팅). 이 경로 밖에서 오픈톡에 글을 보내지 않는다.
 `scripts/collect_receiver.py`는 브라우저 수집분을 로컬 파일로 받는 임시 수신 서버다(확장 출력 차단으로 본문을
 못 넘길 때의 대안 — 정기 절차에서는 쓰지 않는다).
 배포는 CI가 main에서 성공한 뒤에만 돈다(`pages.yml`). `freshness.yml`이 6시간마다 마지막 원장 커밋(cases·community_stats)이
