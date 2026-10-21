@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-21T06:34:40Z",
- "count": 1081,
+ "updated_at": "2026-10-21T14:34:13Z",
+ "count": 1088,
  "articles": [
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261021154600098",
+   "title": "EU, 범용 프로그래밍 언어 PHP 보안 경계령…\"심각도 9.2\"",
+   "outlet": "연합뉴스",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.wikitree.co.kr/articles/1167716",
    "title": "유성구, 생성형 AI 행정 활용 본격화",
@@ -94,10 +107,49 @@
    ]
   },
   {
+   "url": "https://toss.tech/article/asset_management",
+   "title": "방해하지 않고, 눈에 띌 수 있을까",
+   "outlet": "토스 기술 블로그, 토스 테크",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008805946",
    "title": "\"단 한 명이 AI 에이전트 활용해 기업 100곳 해킹 성공\"",
    "outlet": "SBS 뉴스",
    "published": "2026-10-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://dentaldev26.tistory.com/4",
+   "title": "동네치과의 AX 전환기 3편. 결국 와이프한테 걸림. 당근에 금색 상자 올라오기 전에 다 풀고 감",
+   "outlet": "gatsbydds",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-21-px-의회-답변-지원-예상질의",
+   "title": "[공공AX 네트워크] 예상질의 답변서를 모니터로 띄우는 방식",
+   "outlet": "akwiki.org",
+   "published": "2026-10-21",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-21",
@@ -135,6 +187,45 @@
   {
    "url": "https://akwiki.org/article/2026-10-21-px-ax-확산-유인책-성과지표",
    "title": "[공공AX 네트워크] AX 확산에 필요한 유인책과 성과지표 논의",
+   "outlet": "akwiki.org",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-21-px-ai챔피언-시험-준비",
+   "title": "[공공AX 네트워크] AI챔피언 시험 중 AI 사용 범위를 묻는 질문들",
+   "outlet": "akwiki.org",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-21-px-ai-상호검토-워크슬롭",
+   "title": "[공공AX 네트워크] AI 검토를 거듭하면 일이 줄어드는가",
+   "outlet": "akwiki.org",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-21-cross-ai-구독-업그레이드-세-방",
+   "title": "[3개 방 공통] AI 구독 업그레이드를 바라보는 세 방의 시선",
    "outlet": "akwiki.org",
    "published": "2026-10-21",
    "kind": "기사",

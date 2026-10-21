@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-21T06:34:37Z",
- "count": 112,
+ "updated_at": "2026-10-21T14:34:10Z",
+ "count": 113,
  "videos": [
+  {
+   "id": "fC6C0Pqo85s",
+   "title": "스탠퍼드 Ontology 강연 AI온톨로지의 경계",
+   "channel": "Alex AI",
+   "url": "https://www.youtube.com/watch?v=fC6C0Pqo85s",
+   "thumb": "https://i.ytimg.com/vi/fC6C0Pqo85s/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-21",
+   "last_shared": "2026-10-21",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "LbL0JIZCoKc",
    "title": "Learn Gaussian Splatting & Photogrammetry from Clinton Jones (Corridor Crew)",
