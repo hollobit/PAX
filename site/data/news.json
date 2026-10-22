@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-22T06:35:45Z",
- "count": 1100,
+ "updated_at": "2026-10-22T14:34:14Z",
+ "count": 1101,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261021201217",
@@ -150,6 +150,19 @@
    "title": "유럽 정부 사이트 줄줄이 폐쇄…10년 묵은 보안구멍 바로 찾아낸 AI",
    "outlet": "n.news.naver.com",
    "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-22",
+   "last_shared": "2026-10-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://gitlog.kr/i/ebjcv",
+   "title": "Qwen3-Coder, 미국 사용자로 지정하면 보안이 약한 코드 생성",
+   "outlet": "gitlog",
+   "published": "2026-10-21",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-22",

@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-21T14:34:10Z",
- "count": 113,
+ "updated_at": "2026-10-22T14:34:12Z",
+ "count": 114,
  "videos": [
+  {
+   "id": "9hKQ8bnV7rM",
+   "title": "AI가 만든 결과물, 뭐가 좋은지 모르겠다면? 안목 있는 사람은 ‘이렇게’ 봅니다ㅣ정유진 오티스예술디자인대학 입학부처장ㅣAI 예술 미래 커리어 | 인생질문 364회",
+   "channel": "세바시 인생질문",
+   "url": "https://www.youtube.com/watch?v=9hKQ8bnV7rM",
+   "thumb": "https://i.ytimg.com/vi/9hKQ8bnV7rM/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-22",
+   "last_shared": "2026-10-22",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "fC6C0Pqo85s",
    "title": "스탠퍼드 Ontology 강연 AI온톨로지의 경계",
