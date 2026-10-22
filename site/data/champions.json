@@ -1,5 +1,5 @@
 {
- "total": 237,
+ "total": 249,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -956,6 +956,28 @@
    "stats": {
     "case_count": 1,
     "top_ax": 0,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:cbjworld",
+   "name": "cbjworld",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "cbjworld",
+     "url": "https://github.com/cbjworld"
+    }
+   ],
+   "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
+   "cases": [
+    "2241166da237fc71"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
     "stars": 0
    }
   },
@@ -1985,6 +2007,28 @@
    }
   },
   {
+   "id": "github:rfastball",
+   "name": "rfastball",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "rfastball",
+     "url": "https://github.com/rfastball"
+    }
+   ],
+   "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
+   "cases": [
+    "3dc441126cfdec9e"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
    "id": "github:rumins01",
    "name": "rumins01",
    "accounts": [
@@ -2145,6 +2189,28 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:sign-kids",
+   "name": "sign-kids",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "sign-kids",
+     "url": "https://gitlab.aigov.go.kr/sign-kids"
+    }
+   ],
+   "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
+   "cases": [
+    "d68b6b8053e8374a"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -2573,10 +2639,11 @@
    "category": "기초지자체",
    "category_basis": "affiliation",
    "cases": [
+    "1997a6ca4e8589f9",
     "471dabbd273eab34"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 1,
     "stars": 0
    }
@@ -2630,6 +2697,32 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:suhy2002",
+   "name": "권승협",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "suhy2002",
+     "url": "https://gitlab.aigov.go.kr/suhy2002"
+    }
+   ],
+   "affiliation": {
+    "value": "안양도시공사",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "공공기관",
+   "category_basis": "affiliation",
+   "cases": [
+    "8b2af7e4f7b1f1f0"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -2805,6 +2898,7 @@
    "category_basis": "cases",
    "cases": [
     "14db134a31c11bf2",
+    "a3536654c4057b12",
     "c161b0158876229b",
     "c110733ddf085d0d",
     "f5668f521bb1d50a",
@@ -2818,7 +2912,7 @@
     "204ab9b684be3cca"
    ],
    "stats": {
-    "case_count": 12,
+    "case_count": 13,
     "top_ax": 2,
     "stars": 0
    }
@@ -3466,10 +3560,11 @@
    "category": "공공기관",
    "category_basis": "affiliation",
    "cases": [
+    "4efcc1e5f8fcf032",
     "f2e5fa95789e73fb"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 2,
     "stars": 0
    }
@@ -3776,6 +3871,32 @@
    "stats": {
     "case_count": 3,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:parksihwan0917",
+   "name": "박시환",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "parksihwan0917",
+     "url": "https://gitlab.aigov.go.kr/parksihwan0917"
+    }
+   ],
+   "affiliation": {
+    "value": "한국항공우주연구원",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "공공기관",
+   "category_basis": "affiliation",
+   "cases": [
+    "a75a254a0e86d0f7"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -4355,10 +4476,11 @@
    "category": "기초지자체",
    "category_basis": "affiliation",
    "cases": [
+    "3fe6c70d335f5e12",
     "10f18583c9e56e12"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 2,
     "stars": 0
    }
@@ -4433,10 +4555,11 @@
    "category": "중앙행정기관",
    "category_basis": "affiliation",
    "cases": [
-    "87d5e09f9e04b5ef"
+    "87d5e09f9e04b5ef",
+    "3dc441126cfdec9e"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 1,
     "stars": 0
    }
@@ -4487,6 +4610,7 @@
    "category": "기초지자체",
    "category_basis": "affiliation",
    "cases": [
+    "6089801de094eaca",
     "90017f701b103627",
     "d7422aa63cfaeb0e",
     "de7fb6541092c200",
@@ -4495,7 +4619,7 @@
     "50b80ba457126d1f"
    ],
    "stats": {
-    "case_count": 6,
+    "case_count": 7,
     "top_ax": 2,
     "stars": 0
    }
@@ -4638,6 +4762,35 @@
    }
   },
   {
+   "id": "gitlab:CWS950922",
+   "name": "오태훈",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "CWS950922",
+     "url": "https://gitlab.aigov.go.kr/CWS950922"
+    }
+   ],
+   "affiliation": {
+    "value": "창원소방본부",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "광역지자체",
+   "category_basis": "affiliation",
+   "cases": [
+    "6c14cab6137b39e7",
+    "8d0a8dcc8aec3a77",
+    "9fb8bcfa5015c2d9",
+    "bedffde01f13c55e"
+   ],
+   "stats": {
+    "case_count": 4,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:datahj",
    "name": "오현준",
    "accounts": [
@@ -4759,6 +4912,32 @@
    "stats": {
     "case_count": 2,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:mecm3355",
+   "name": "유제풍",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "mecm3355",
+     "url": "https://gitlab.aigov.go.kr/mecm3355"
+    }
+   ],
+   "affiliation": {
+    "value": "통일부",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
+   "cases": [
+    "06eff148d1990930"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -4891,6 +5070,32 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:jin7907",
+   "name": "이동욱",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "jin7907",
+     "url": "https://gitlab.aigov.go.kr/jin7907"
+    }
+   ],
+   "affiliation": {
+    "value": "부산 북구보건소 보건행정과",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "민간·커뮤니티",
+   "category_basis": "affiliation",
+   "cases": [
+    "fc35def61f0d6128"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -5095,10 +5300,13 @@
    "category": "중앙행정기관",
    "category_basis": "affiliation",
    "cases": [
-    "ff9136144a2af73a"
+    "ff9136144a2af73a",
+    "3b0816caba6fe85c",
+    "5630dbd6101568fa",
+    "5474a04c8b684bc3"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 4,
     "top_ax": 2,
     "stars": 0
    }
@@ -5247,6 +5455,7 @@
    "category": "공직(소속 미상)",
    "category_basis": "cases",
    "cases": [
+    "4e177fd4249d2bab",
     "1c9efba39708c4d5",
     "2442dc859d5bac3a",
     "2b3089577cceaa08",
@@ -5257,7 +5466,33 @@
     "87836993a2f6a874"
    ],
    "stats": {
-    "case_count": 8,
+    "case_count": 9,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:lmj6706",
+   "name": "임민지",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "lmj6706",
+     "url": "https://gitlab.aigov.go.kr/lmj6706"
+    }
+   ],
+   "affiliation": {
+    "value": "한국인터넷진흥원 국민소통팀",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "공공기관",
+   "category_basis": "affiliation",
+   "cases": [
+    "35ae99141670c8bd"
+   ],
+   "stats": {
+    "case_count": 1,
     "top_ax": 2,
     "stars": 0
    }
@@ -5756,6 +5991,32 @@
    }
   },
   {
+   "id": "gitlab:conicon",
+   "name": "최병주",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "conicon",
+     "url": "https://gitlab.aigov.go.kr/conicon"
+    }
+   ],
+   "affiliation": {
+    "value": "용산구청",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
+   "cases": [
+    "2241166da237fc71"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:soonkun",
    "name": "최순군",
    "accounts": [
@@ -5827,6 +6088,32 @@
    "category_basis": "affiliation",
    "cases": [
     "d8b2afa5e72012a8"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:dpsdkfwl11",
+   "name": "최유관",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "dpsdkfwl11",
+     "url": "https://gitlab.aigov.go.kr/dpsdkfwl11"
+    }
+   ],
+   "affiliation": {
+    "value": "남양주시 주차관리과",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
+   "cases": [
+    "ed6bc584d40026ae"
    ],
    "stats": {
     "case_count": 1,
@@ -5986,13 +6273,14 @@
    "category": "중앙행정기관",
    "category_basis": "affiliation",
    "cases": [
+    "f09b6852266e39b7",
     "ae0e4cab4a5cf47b",
     "158f8dd9032e5807",
     "4093246b3f316bd8",
     "b3294bcc65e7f2e7"
    ],
    "stats": {
-    "case_count": 4,
+    "case_count": 5,
     "top_ax": 2,
     "stars": 0
    }
@@ -6027,6 +6315,32 @@
     "listed_as": "소방청 한종훈 — 분석관",
     "source_name": "AI 챔피언 기록 저장소 (공공 AI 챔피언 명예의 전당)",
     "source_url": "https://aichampion.site/"
+   }
+  },
+  {
+   "id": "gitlab:irize",
+   "name": "홍성민",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "irize",
+     "url": "https://gitlab.aigov.go.kr/irize"
+    }
+   ],
+   "affiliation": {
+    "value": "서초구청",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
+   "cases": [
+    "01a5022ab394a30e"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
    }
   },
   {

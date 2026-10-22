@@ -1,47 +1,48 @@
 {
- "generated_at": "2026-10-22",
+ "generated_at": "2026-10-23",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 590,
- "total_champions": 237,
+ "total_cases": 614,
+ "total_champions": 249,
  "community": {
-  "members": 2581,
-  "kakao_week": 4396,
-  "kakao_total_observed": 56876,
-  "threads_observed": 388
+  "members": 2584,
+  "kakao_week": 3511,
+  "kakao_total_observed": 56899,
+  "threads_observed": 390
  },
  "certified_champions": 5,
  "unattributed_cases": 154,
  "ax_distribution": {
-  "AI-Ready": 380,
-  "AI-Enabled": 179,
+  "AI-Ready": 393,
+  "AI-Enabled": 190,
   "AX 단계 외": 25,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
- "c_axis_mean": 0.95,
+ "c_axis_mean": 0.97,
  "p_distribution": {
-  "P0": 191,
-  "P1": 379,
+  "P0": 194,
+  "P1": 400,
   "P2": 20
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 286,
-  "해외 오픈웨이트(로컬)": 31,
-  "혼합": 16,
-  "해외 상용 API": 65,
-  "모델 중립(BYO)": 93,
+  "없음(비LLM)": 298,
+  "해외 오픈웨이트(로컬)": 34,
+  "혼합": 17,
+  "해외 상용 API": 68,
+  "모델 중립(BYO)": 96,
   "국산 독자모델": 7,
-  "미상": 26,
+  "미상": 28,
   "국산 오픈웨이트": 1
  },
  "model_stats": {
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 34,
+    "n": 35,
     "variants": [
+     "Claude Code",
      "Claude Code 스킬(선택)",
      "Claude Code(BYO 구독)",
      "Claude Code(플러그인)",
@@ -198,13 +199,17 @@
      {
       "id": "f4f1360681627431",
       "title": "이음오피스 — 한컴오피스 없이 한글·워드·엑셀·PDF를 한 창에서 고치고 옆 AI 창에 표 채우기를 맡기는 무료 오픈소스 오피스(MCP 포함)"
+     },
+     {
+      "id": "4efcc1e5f8fcf032",
+      "title": "ppt-j — 에이전트가 만든 HTML 발표자료를 웹 편집기에서 고치고 HTML·PDF·PPTX로 내보내는 Claude Code 플러그인"
      }
     ],
     "domestic": false
    },
    {
     "name": "GPT(OpenAI)",
-    "n": 18,
+    "n": 19,
     "variants": [
      "ChatGPT GPTs",
      "ChatGPT(웹)",
@@ -299,13 +304,17 @@
      {
       "id": "90017f701b103627",
       "title": "Connect to Aside — 웹 ChatGPT가 PC 파일 편집과 Aside 브라우저 조작을 하게 하는 로컬 MCP 브리지"
+     },
+     {
+      "id": "f09b6852266e39b7",
+      "title": "KRDS UI·UX 개선 스킬 — 정부 디자인 가이드 기준으로 웹·앱 화면을 진단·개선·검증하는 Codex 스킬"
      }
     ],
     "domestic": false
    },
    {
     "name": "Gemini",
-    "n": 14,
+    "n": 16,
     "variants": [
      "Chrome 내장 AI(Gemini Nano)",
      "Claude Code/Codex/Gemini(스킬 팩)",
@@ -315,6 +324,7 @@
      "Gemini 2.5 Flash-Lite",
      "Gemini 3.5 Flash",
      "Gemini API",
+     "Gemini API(File Search)",
      "Gemini GEM",
      "Gemini(옵션 전환)",
      "Gemini(옵션)",
@@ -379,20 +389,30 @@
      {
       "id": "f4f1360681627431",
       "title": "이음오피스 — 한컴오피스 없이 한글·워드·엑셀·PDF를 한 창에서 고치고 옆 AI 창에 표 채우기를 맡기는 무료 오픈소스 오피스(MCP 포함)"
+     },
+     {
+      "id": "fc35def61f0d6128",
+      "title": "AI 행정업무·민원 검색 — 자연어 질문으로 관련 업무와 담당 부서·직원을 찾아 주는 안내 도우미"
+     },
+     {
+      "id": "a75a254a0e86d0f7",
+      "title": "전자문서 AI 요약 — 공문 열람 화면에서 본문·첨부를 추출해 종류·조치 여부·기한을 정리하는 엣지 확장"
      }
     ],
     "domestic": false
    },
    {
     "name": "Gemma",
-    "n": 11,
+    "n": 13,
     "variants": [
      "Gemma 4",
      "Gemma 4 E2B(Ollama 기본 예시)",
      "Gemma 4 E2B(Ollama 번들)",
+     "Gemma 4 E2B(Ollama)",
      "Gemma 4 E2B(Ollama, 선택형 요약)",
      "Gemma 4 E4B(Ollama 권장)",
      "Gemma 4 E4B(Ollama)",
+     "Gemma 4(Ollama)",
      "Gemma(gemma4:e2b, Ollama 로컬)",
      "Gemma4 e2b",
      "LLM42-Gemma4(멀티모달 전환)"
@@ -441,13 +461,21 @@
      {
       "id": "14db134a31c11bf2",
       "title": "DataFinder AI — 기획서를 넣으면 로컬 AI가 맞는 공공데이터 API와 연동 코드를 추천하는 도구"
+     },
+     {
+      "id": "a75a254a0e86d0f7",
+      "title": "전자문서 AI 요약 — 공문 열람 화면에서 본문·첨부를 추출해 종류·조치 여부·기한을 정리하는 엣지 확장"
+     },
+     {
+      "id": "a3536654c4057b12",
+      "title": "온톡 sAIde — 온톡 메신저 옆 패널에서 쪽지 요약·할 일 정리·답변 초안을 로컬 AI로 돕는 윈도우 도우미"
      }
     ],
     "domestic": false
    },
    {
     "name": "로컬 서빙(Ollama·vLLM 등)",
-    "n": 10,
+    "n": 13,
     "variants": [
      "LM Studio 로컬 모델(OpenAI 호환)",
      "Ollama 로컬 모델",
@@ -456,7 +484,10 @@
      "Ollama 오픈웨이트 모드(로컬 완결)",
      "Ollama(로컬)",
      "Ollama/vLLM 로컬(기본)",
+     "Qwen(Ollama)",
+     "Qwen3 4B Instruct(Ollama)",
      "Qwen3 8B(로컬 답변, Ollama)",
+     "Qwen3.5(Ollama)",
      "WebGPU 브라우저 모델",
      "vLLM/Ollama/LiteLLM 로컬(OpenAI 호환)",
      "자체호스팅 vLLM(모델 미명시)"
@@ -501,6 +532,68 @@
      {
       "id": "42267bcd8527ba4a",
       "title": "침해사고 신고 24시간 초과 검증 파이프라인 — 신고 자료에서 사실만 뽑고 과태료 대상 여부는 코드가 재계산"
+     },
+     {
+      "id": "ed6bc584d40026ae",
+      "title": "스마트 인수인계 — 평소 업무 정리로 공식 인계·인수서와 후임자 매뉴얼을 만드는 로컬 LLM 데스크톱 프로그램"
+     },
+     {
+      "id": "06eff148d1990930",
+      "title": "통일 이음 AI — 음성 합성·전사·AI 브리핑·결과보고서 초안을 PC 안에서 처리하는 로컬 업무 도구"
+     },
+     {
+      "id": "a75a254a0e86d0f7",
+      "title": "전자문서 AI 요약 — 공문 열람 화면에서 본문·첨부를 추출해 종류·조치 여부·기한을 정리하는 엣지 확장"
+     }
+    ],
+    "domestic": false
+   },
+   {
+    "name": "bge-m3",
+    "n": 4,
+    "variants": [
+     "bge-m3"
+    ],
+    "cases": [
+     {
+      "id": "204ab9b684be3cca",
+      "title": "myAI — 로컬 모델로 도는 업무 비서 웹앱"
+     },
+     {
+      "id": "14db134a31c11bf2",
+      "title": "DataFinder AI — 기획서를 넣으면 로컬 AI가 맞는 공공데이터 API와 연동 코드를 추천하는 도구"
+     },
+     {
+      "id": "ed6bc584d40026ae",
+      "title": "스마트 인수인계 — 평소 업무 정리로 공식 인계·인수서와 후임자 매뉴얼을 만드는 로컬 LLM 데스크톱 프로그램"
+     },
+     {
+      "id": "a3536654c4057b12",
+      "title": "온톡 sAIde — 온톡 메신저 옆 패널에서 쪽지 요약·할 일 정리·답변 초안을 로컬 AI로 돕는 윈도우 도우미"
+     }
+    ],
+    "domestic": false
+   },
+   {
+    "name": "Whisper",
+    "n": 3,
+    "variants": [
+     "Whisper",
+     "Whisper(STT)",
+     "whisper.cpp 한국어 모델(번들)"
+    ],
+    "cases": [
+     {
+      "id": "edf9a8632ff74a99",
+      "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연"
+     },
+     {
+      "id": "d7422aa63cfaeb0e",
+      "title": "Stream-Record — 의회 중계 영상의 한국어 녹음·전사·회의록 작성을 윈도우 PC에서 끝내는 앱"
+     },
+     {
+      "id": "06eff148d1990930",
+      "title": "통일 이음 AI — 음성 합성·전사·AI 브리핑·결과보고서 초안을 PC 안에서 처리하는 로컬 업무 도구"
      }
     ],
     "domestic": false
@@ -551,43 +644,6 @@
      }
     ],
     "domestic": true
-   },
-   {
-    "name": "Whisper",
-    "n": 2,
-    "variants": [
-     "Whisper(STT)",
-     "whisper.cpp 한국어 모델(번들)"
-    ],
-    "cases": [
-     {
-      "id": "edf9a8632ff74a99",
-      "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연"
-     },
-     {
-      "id": "d7422aa63cfaeb0e",
-      "title": "Stream-Record — 의회 중계 영상의 한국어 녹음·전사·회의록 작성을 윈도우 PC에서 끝내는 앱"
-     }
-    ],
-    "domestic": false
-   },
-   {
-    "name": "bge-m3",
-    "n": 2,
-    "variants": [
-     "bge-m3"
-    ],
-    "cases": [
-     {
-      "id": "204ab9b684be3cca",
-      "title": "myAI — 로컬 모델로 도는 업무 비서 웹앱"
-     },
-     {
-      "id": "14db134a31c11bf2",
-      "title": "DataFinder AI — 기획서를 넣으면 로컬 AI가 맞는 공공데이터 API와 연동 코드를 추천하는 도구"
-     }
-    ],
-    "domestic": false
    },
    {
     "name": "Qwen",
@@ -857,23 +913,23 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 286,
+    "n": 298,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
-    "n": 31,
-    "specified": 18
+    "n": 34,
+    "specified": 21
    },
    "혼합": {
-    "n": 16,
-    "specified": 14
+    "n": 17,
+    "specified": 15
    },
    "해외 상용 API": {
-    "n": 65,
-    "specified": 50
+    "n": 68,
+    "specified": 53
    },
    "모델 중립(BYO)": {
-    "n": 93,
+    "n": 96,
     "specified": 9
    },
    "국산 독자모델": {
@@ -881,7 +937,7 @@
     "specified": 6
    },
    "미상": {
-    "n": 26,
+    "n": 28,
     "specified": 1
    },
    "국산 오픈웨이트": {
@@ -1026,8 +1082,76 @@
    },
    {
     "dep": "혼합",
-    "n": 16,
+    "n": 17,
     "families": [
+     {
+      "name": "Gemini",
+      "n": 5,
+      "cases": [
+       {
+        "id": "de4b2dab339d69b7",
+        "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
+       },
+       {
+        "id": "1502d338e8e99382",
+        "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
+       },
+       {
+        "id": "fcfac85b15998dee",
+        "title": "한국서부발전 위피봇 — 발전 현장 안전·설비 업무에 붙인 사내 생성형 AI 에이전트"
+       },
+       {
+        "id": "2264c26461d1c4a8",
+        "title": "일일 언론 동향 요약기 — 신문 스크랩 PDF를 간부 보고용 개조식 요약으로"
+       },
+       {
+        "id": "a75a254a0e86d0f7",
+        "title": "전자문서 AI 요약 — 공문 열람 화면에서 본문·첨부를 추출해 종류·조치 여부·기한을 정리하는 엣지 확장"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Chrome 내장 AI(Gemini Nano)",
+       "Gemini API",
+       "Gemini(옵션 전환)",
+       "Gemini(옵션)",
+       "구글 제미나이(외부 연계)"
+      ]
+     },
+     {
+      "name": "로컬 서빙(Ollama·vLLM 등)",
+      "n": 5,
+      "cases": [
+       {
+        "id": "de4b2dab339d69b7",
+        "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
+       },
+       {
+        "id": "ea2bce110972762e",
+        "title": "공공기관 규정 MCP 생성기"
+       },
+       {
+        "id": "1502d338e8e99382",
+        "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
+       },
+       {
+        "id": "acd684108227b9c2",
+        "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
+       },
+       {
+        "id": "a75a254a0e86d0f7",
+        "title": "전자문서 AI 요약 — 공문 열람 화면에서 본문·첨부를 추출해 종류·조치 여부·기한을 정리하는 엣지 확장"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Ollama 오픈웨이트 모드(로컬 완결)",
+       "Ollama/vLLM 로컬(기본)",
+       "Qwen3 8B(로컬 답변, Ollama)",
+       "Qwen3.5(Ollama)",
+       "vLLM/Ollama/LiteLLM 로컬(OpenAI 호환)"
+      ]
+     },
      {
       "name": "Claude/Codex(상용 에이전트)",
       "n": 5,
@@ -1065,62 +1189,27 @@
       ]
      },
      {
-      "name": "Gemini",
-      "n": 4,
+      "name": "Gemma",
+      "n": 3,
       "cases": [
        {
-        "id": "de4b2dab339d69b7",
-        "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
+        "id": "58420e002644542c",
+        "title": "행안부, 엑사원·Gemma4를 행정 내부망에 도입"
        },
        {
-        "id": "1502d338e8e99382",
-        "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
+        "id": "50ab356bb2ee3f4d",
+        "title": "범정부 내부망 AI 브라우저 사이드바 어시스턴트"
        },
        {
-        "id": "fcfac85b15998dee",
-        "title": "한국서부발전 위피봇 — 발전 현장 안전·설비 업무에 붙인 사내 생성형 AI 에이전트"
-       },
-       {
-        "id": "2264c26461d1c4a8",
-        "title": "일일 언론 동향 요약기 — 신문 스크랩 PDF를 간부 보고용 개조식 요약으로"
+        "id": "a75a254a0e86d0f7",
+        "title": "전자문서 AI 요약 — 공문 열람 화면에서 본문·첨부를 추출해 종류·조치 여부·기한을 정리하는 엣지 확장"
        }
       ],
       "domestic": false,
       "variants": [
-       "Chrome 내장 AI(Gemini Nano)",
-       "Gemini API",
-       "Gemini(옵션 전환)",
-       "Gemini(옵션)",
-       "구글 제미나이(외부 연계)"
-      ]
-     },
-     {
-      "name": "로컬 서빙(Ollama·vLLM 등)",
-      "n": 4,
-      "cases": [
-       {
-        "id": "de4b2dab339d69b7",
-        "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기"
-       },
-       {
-        "id": "ea2bce110972762e",
-        "title": "공공기관 규정 MCP 생성기"
-       },
-       {
-        "id": "1502d338e8e99382",
-        "title": "공문을 10초 만에 할 일 카드로 바꾸는 전자문서 요약 도구"
-       },
-       {
-        "id": "acd684108227b9c2",
-        "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
-       }
-      ],
-      "domestic": false,
-      "variants": [
-       "Ollama 오픈웨이트 모드(로컬 완결)",
-       "Ollama/vLLM 로컬(기본)",
-       "Qwen3 8B(로컬 답변, Ollama)",
-       "vLLM/Ollama/LiteLLM 로컬(OpenAI 호환)"
+       "Gemma 4",
+       "Gemma 4(Ollama)",
+       "LLM42-Gemma4(멀티모달 전환)"
       ]
      },
      {
@@ -1142,25 +1231,6 @@
        "GPT-6 Astra",
        "GPT-6.1 Sol",
        "gpt-4.1-mini(조항 AI 검수)"
-      ]
-     },
-     {
-      "name": "Gemma",
-      "n": 2,
-      "cases": [
-       {
-        "id": "58420e002644542c",
-        "title": "행안부, 엑사원·Gemma4를 행정 내부망에 도입"
-       },
-       {
-        "id": "50ab356bb2ee3f4d",
-        "title": "범정부 내부망 AI 브라우저 사이드바 어시스턴트"
-       }
-      ],
-      "domestic": false,
-      "variants": [
-       "Gemma 4",
-       "LLM42-Gemma4(멀티모달 전환)"
       ]
      },
      {
@@ -1311,11 +1381,11 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 65,
+    "n": 68,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
-      "n": 24,
+      "n": 25,
       "cases": [
        {
         "id": "7acf5f25369c1401",
@@ -1412,10 +1482,15 @@
        {
         "id": "b52bd17cf637a1cc",
         "title": "Colorfigures — 사물을 한 문장으로 설명하면 버튼이 실제로 작동하는 손그림풍 아이소메트릭 그림을 HTML 한 파일로 그리는 Claude 스킬"
+       },
+       {
+        "id": "4efcc1e5f8fcf032",
+        "title": "ppt-j — 에이전트가 만든 HTML 발표자료를 웹 편집기에서 고치고 HTML·PDF·PPTX로 내보내는 Claude Code 플러그인"
        }
       ],
       "domestic": false,
       "variants": [
+       "Claude Code",
        "Claude Code(BYO 구독)",
        "Claude Code(플러그인)",
        "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
@@ -1427,7 +1502,7 @@
      },
      {
       "name": "GPT(OpenAI)",
-      "n": 14,
+      "n": 15,
       "cases": [
        {
         "id": "6a2d1fa6e385ef2b",
@@ -1484,6 +1559,10 @@
        {
         "id": "90017f701b103627",
         "title": "Connect to Aside — 웹 ChatGPT가 PC 파일 편집과 Aside 브라우저 조작을 하게 하는 로컬 MCP 브리지"
+       },
+       {
+        "id": "f09b6852266e39b7",
+        "title": "KRDS UI·UX 개선 스킬 — 정부 디자인 가이드 기준으로 웹·앱 화면을 진단·개선·검증하는 Codex 스킬"
        }
       ],
       "domestic": false,
@@ -1507,7 +1586,7 @@
      },
      {
       "name": "Gemini",
-      "n": 8,
+      "n": 9,
       "cases": [
        {
         "id": "48e33f2318bdffae",
@@ -1540,6 +1619,10 @@
        {
         "id": "b194429543f8a93b",
         "title": "코러스AI 챗봇 — 국립대학자원관리시스템(KORUS) 매뉴얼·법령 안내 챗봇 3종"
+       },
+       {
+        "id": "fc35def61f0d6128",
+        "title": "AI 행정업무·민원 검색 — 자연어 질문으로 관련 업무와 담당 부서·직원을 찾아 주는 안내 도우미"
        }
       ],
       "domestic": false,
@@ -1549,6 +1632,7 @@
        "Gemini",
        "Gemini 2.5 Flash-Lite",
        "Gemini 3.5 Flash",
+       "Gemini API(File Search)",
        "Gemini GEM",
        "Google Gemini(NotebookLM)",
        "OpenAI/Gemini/Claude(사용자 선택)"
@@ -1642,11 +1726,11 @@
    },
    {
     "dep": "해외 오픈웨이트(로컬)",
-    "n": 31,
+    "n": 34,
     "families": [
      {
       "name": "Gemma",
-      "n": 9,
+      "n": 10,
       "cases": [
        {
         "id": "2c14f2adaa83a00e",
@@ -1683,12 +1767,17 @@
        {
         "id": "14db134a31c11bf2",
         "title": "DataFinder AI — 기획서를 넣으면 로컬 AI가 맞는 공공데이터 API와 연동 코드를 추천하는 도구"
+       },
+       {
+        "id": "a3536654c4057b12",
+        "title": "온톡 sAIde — 온톡 메신저 옆 패널에서 쪽지 요약·할 일 정리·답변 초안을 로컬 AI로 돕는 윈도우 도우미"
        }
       ],
       "domestic": false,
       "variants": [
        "Gemma 4 E2B(Ollama 기본 예시)",
        "Gemma 4 E2B(Ollama 번들)",
+       "Gemma 4 E2B(Ollama)",
        "Gemma 4 E2B(Ollama, 선택형 요약)",
        "Gemma 4 E4B(Ollama 권장)",
        "Gemma 4 E4B(Ollama)",
@@ -1698,7 +1787,7 @@
      },
      {
       "name": "로컬 서빙(Ollama·vLLM 등)",
-      "n": 5,
+      "n": 7,
       "cases": [
        {
         "id": "fe3bb0d913e27677",
@@ -1719,6 +1808,14 @@
        {
         "id": "e65b0800852d5e5f",
         "title": "RuleLens AI — 기준 법령·지침과 내 자료를 로컬 Ollama로 대조하는 적합성 검토 도구"
+       },
+       {
+        "id": "ed6bc584d40026ae",
+        "title": "스마트 인수인계 — 평소 업무 정리로 공식 인계·인수서와 후임자 매뉴얼을 만드는 로컬 LLM 데스크톱 프로그램"
+       },
+       {
+        "id": "06eff148d1990930",
+        "title": "통일 이음 AI — 음성 합성·전사·AI 브리핑·결과보고서 초안을 PC 안에서 처리하는 로컬 업무 도구"
        }
       ],
       "domestic": false,
@@ -1728,12 +1825,14 @@
        "Ollama 로컬 모델(Spring AI)",
        "Ollama 로컬 모델(멀티 호스트)",
        "Ollama(로컬)",
+       "Qwen(Ollama)",
+       "Qwen3 4B Instruct(Ollama)",
        "WebGPU 브라우저 모델"
       ]
      },
      {
       "name": "bge-m3",
-      "n": 2,
+      "n": 4,
       "cases": [
        {
         "id": "204ab9b684be3cca",
@@ -1742,11 +1841,38 @@
        {
         "id": "14db134a31c11bf2",
         "title": "DataFinder AI — 기획서를 넣으면 로컬 AI가 맞는 공공데이터 API와 연동 코드를 추천하는 도구"
+       },
+       {
+        "id": "ed6bc584d40026ae",
+        "title": "스마트 인수인계 — 평소 업무 정리로 공식 인계·인수서와 후임자 매뉴얼을 만드는 로컬 LLM 데스크톱 프로그램"
+       },
+       {
+        "id": "a3536654c4057b12",
+        "title": "온톡 sAIde — 온톡 메신저 옆 패널에서 쪽지 요약·할 일 정리·답변 초안을 로컬 AI로 돕는 윈도우 도우미"
        }
       ],
       "domestic": false,
       "variants": [
        "bge-m3"
+      ]
+     },
+     {
+      "name": "Whisper",
+      "n": 2,
+      "cases": [
+       {
+        "id": "edf9a8632ff74a99",
+        "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연"
+       },
+       {
+        "id": "06eff148d1990930",
+        "title": "통일 이음 AI — 음성 합성·전사·AI 브리핑·결과보고서 초안을 PC 안에서 처리하는 로컬 업무 도구"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Whisper",
+       "Whisper(STT)"
       ]
      },
      {
@@ -1766,20 +1892,6 @@
       "variants": [
        "Qwen2.5-Coder-1.5B-Instruct(GGUF, llama.cpp)",
        "Qwen3.5 2B(로컬 CPU)"
-      ]
-     },
-     {
-      "name": "Whisper",
-      "n": 1,
-      "cases": [
-       {
-        "id": "edf9a8632ff74a99",
-        "title": "망분리 환경용 로컬 AI 에이전트, 국가통계포털 MCP 연동 시연"
-       }
-      ],
-      "domestic": false,
-      "variants": [
-       "Whisper(STT)"
       ]
      },
      {
@@ -1823,23 +1935,51 @@
       "variants": [
        "PP-OCRv5 한국어 인식 모델(파인튜닝, ONNX 15MB)"
       ]
+     },
+     {
+      "name": "MMS",
+      "n": 1,
+      "cases": [
+       {
+        "id": "06eff148d1990930",
+        "title": "통일 이음 AI — 음성 합성·전사·AI 브리핑·결과보고서 초안을 PC 안에서 처리하는 로컬 업무 도구"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "MMS"
+      ]
+     },
+     {
+      "name": "Piper",
+      "n": 1,
+      "cases": [
+       {
+        "id": "06eff148d1990930",
+        "title": "통일 이음 AI — 음성 합성·전사·AI 브리핑·결과보고서 초안을 PC 안에서 처리하는 로컬 업무 도구"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Piper"
+      ]
      }
     ]
    }
   ]
  },
- "domestic_model_rate": 0.067,
- "local_model_rate": 0.267,
- "model_known": 120,
- "license_tagged": 436,
+ "domestic_model_rate": 0.063,
+ "local_model_rate": 0.276,
+ "model_known": 127,
+ "license_tagged": 460,
  "license_stated_rate": 0.493,
- "gitlab_cases": 282,
- "gitlab_mirror_pairs": 41,
- "gitlab_open_rate": 0.145,
+ "gitlab_cases": 306,
+ "gitlab_mirror_pairs": 42,
+ "gitlab_open_rate": 0.137,
  "mcp_cases": 96,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 508,
+  "미확인": 532,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1847,7 +1987,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.773
+  "feedback": 0.782
  },
  "maintenance_distribution": {
   "활발": 290,
@@ -1857,7 +1997,7 @@
  "stars_collected": 409,
  "repo_stats": {
   "gitlab": {
-   "count": 282,
+   "count": 306,
    "starred": 279,
    "stars_sum": 650,
    "maintenance": {
@@ -1948,7 +2088,7 @@
    ]
   },
   "github": {
-   "count": 176,
+   "count": 177,
    "starred": 169,
    "stars_sum": 717338,
    "maintenance": {
@@ -2041,28 +2181,30 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 221,
-  "MIT": 140,
+  "명시 없음": 233,
+  "MIT": 149,
   "Apache-2.0": 35,
   "Other": 20,
   "AGPL-3.0": 5,
+  "기타(비표준)": 5,
   "GNU AGPLv3": 5,
-  "기타(비표준)": 4,
   "BUSL-1.1": 1,
   "ISC": 1,
   "POLYFORM-NONCOMMERCIAL-1.0.0": 1,
   "GPL-3.0+": 1,
   "CC0-1.0": 1,
-  "Unlicense": 1
+  "Unlicense": 1,
+  "CC-BY-NC-SA-4.0": 1,
+  "X11-DISTRIBUTE-MODIFICATIONS-VARIANT": 1
  },
  "license_matrix": {
   "명시 없음": {
    "github": 63,
-   "gitlab": 158
+   "gitlab": 170
   },
   "MIT": {
-   "github": 84,
-   "gitlab": 55
+   "github": 85,
+   "gitlab": 63
   },
   "Apache-2.0": {
    "github": 13,
@@ -2076,13 +2218,13 @@
    "github": 4,
    "gitlab": 1
   },
-  "GNU AGPLv3": {
+  "기타(비표준)": {
    "github": 0,
    "gitlab": 5
   },
-  "기타(비표준)": {
+  "GNU AGPLv3": {
    "github": 0,
-   "gitlab": 4
+   "gitlab": 5
   },
   "BUSL-1.1": {
    "github": 0,
@@ -2107,20 +2249,28 @@
   "Unlicense": {
    "github": 1,
    "gitlab": 0
+  },
+  "CC-BY-NC-SA-4.0": {
+   "github": 0,
+   "gitlab": 1
+  },
+  "X11-DISTRIBUTE-MODIFICATIONS-VARIANT": {
+   "github": 0,
+   "gitlab": 1
   }
  },
  "license_by_source": {
   "github": {
-   "total": 162,
-   "stated": 116
+   "total": 163,
+   "stated": 117
   },
   "github-pages": {
    "total": 24,
    "stated": 7
   },
   "gitlab": {
-   "total": 249,
-   "stated": 91
+   "total": 272,
+   "stated": 102
   }
  },
  "mcp_stats": {
@@ -2391,6 +2541,12 @@
    "title": "소규모 건설공사 설계 자동화 — 읍면 토목직이 야장만 넣으면 도면·수량산출서·원가계산까지 만드는 도구",
    "github": "https://github.com/lsh573928-rgb/sangju-estimate-public",
    "gitlab": "https://gitlab.aigov.go.kr/lsh5739/sangju-estimate-public"
+  },
+  {
+   "id": "3dc441126cfdec9e",
+   "title": "문서나르미 — 엑셀·CSV 행을 누름틀 서식에 채워 HWPX 문서를 일괄 생성하는 윈도우 앱",
+   "github": "https://github.com/rfastball/hwpx-filler",
+   "gitlab": "https://gitlab.aigov.go.kr/anjm3145/hwpx-filler"
   }
  ]
 }

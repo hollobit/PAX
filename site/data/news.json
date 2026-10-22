@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-22T14:34:14Z",
- "count": 1101,
+ "updated_at": "2026-10-22T16:34:57Z",
+ "count": 1102,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261021201217",
@@ -6039,6 +6039,19 @@
    "title": "\"한국 생성형 AI 사용률 세계 12위...주요 경제권서 가장 빠른 증가세\"",
    "outlet": "디지털투데이 (DigitalToday)",
    "published": "2026-09-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-29",
+   "last_shared": "2026-09-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.clien.net/service/board/kin/19166613",
+   "title": "윈도우 앱을 배포하는데 OV/EV 코드사인을 100만원 넘게주고 구입해야하나요?",
+   "outlet": "클리앙",
+   "published": "2026-03-23",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-09-29",
