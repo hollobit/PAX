@@ -1,5 +1,5 @@
 {
- "total": 249,
+ "total": 250,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -5649,6 +5649,32 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:jmh5145",
+   "name": "정명현",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "jmh5145",
+     "url": "https://gitlab.aigov.go.kr/jmh5145"
+    }
+   ],
+   "affiliation": {
+    "value": "한국수자원공사",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "공공기관",
+   "category_basis": "affiliation",
+   "cases": [
+    "f6380187bd3cef67"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },

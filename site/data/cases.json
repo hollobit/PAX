@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-23T01:31:18+09:00",
+ "updated_at": "2026-10-23T01:45:37+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -18245,6 +18245,36 @@
    "license_source": "gitlab",
    "license_checked": "2026-10-23",
    "thumb_v": 1792686823
+  },
+  {
+   "case_class": "개인 개발",
+   "tags": [
+    "점심",
+    "생활정보",
+    "Gemini",
+    "PWA"
+   ],
+   "collected_at": "2026-10-23",
+   "summary": "현재 위치나 동·역 이름 기준 반경 안의 식당과 카페를 카카오 로컬 API로 찾아 룰렛이나 직접 고르기로 정한다. 식사 인원·동행자 직위·예산·요청사항을 넣으면 Gemini가 후보를 미리 거른 뒤 식당 1~3곳을 이유와 함께 추천하고, 팀원이 남긴 별점을 공유해 추천에 반영한다.",
+   "org": "한국수자원공사(개인 개발)",
+   "org_type": "공직 개인",
+   "model_dependency": "해외 상용 API",
+   "task_category": "공통·범용",
+   "network_req": "인터넷 필수",
+   "models_used": [
+    "Gemini API"
+   ],
+   "link": "https://gitlab.aigov.go.kr/jmh5145/What-lunch",
+   "title": "오늘 뭐 먹지 — 주변 식당을 찾아 룰렛으로 정하고 동행자에 맞춰 AI가 추천하는 점심 웹앱",
+   "source": "kakao",
+   "runtime_env": "브라우저만",
+   "case_url": "https://kwater-lunch.web.app",
+   "date": "2026-10-14",
+   "id": "f6380187bd3cef67",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-10-23",
+   "thumb_v": 1792687558
   }
  ]
 }

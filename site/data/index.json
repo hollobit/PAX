@@ -2,8 +2,8 @@
  "generated_at": "2026-10-23",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 614,
- "total_champions": 249,
+ "total_cases": 615,
+ "total_champions": 250,
  "community": {
   "members": 2584,
   "kakao_week": 3511,
@@ -14,7 +14,7 @@
  "unattributed_cases": 154,
  "ax_distribution": {
   "AI-Ready": 393,
-  "AI-Enabled": 190,
+  "AI-Enabled": 191,
   "AX 단계 외": 25,
   "AI-First": 5,
   "AI-Native 계획": 1
@@ -22,7 +22,7 @@
  "c_axis_mean": 0.97,
  "p_distribution": {
   "P0": 194,
-  "P1": 400,
+  "P1": 401,
   "P2": 20
  },
  "model_dependency": {
@@ -30,7 +30,7 @@
   "없음(비LLM)": 298,
   "해외 오픈웨이트(로컬)": 34,
   "혼합": 17,
-  "해외 상용 API": 68,
+  "해외 상용 API": 69,
   "모델 중립(BYO)": 96,
   "국산 독자모델": 7,
   "미상": 28,
@@ -314,7 +314,7 @@
    },
    {
     "name": "Gemini",
-    "n": 16,
+    "n": 17,
     "variants": [
      "Chrome 내장 AI(Gemini Nano)",
      "Claude Code/Codex/Gemini(스킬 팩)",
@@ -397,6 +397,10 @@
      {
       "id": "a75a254a0e86d0f7",
       "title": "전자문서 AI 요약 — 공문 열람 화면에서 본문·첨부를 추출해 종류·조치 여부·기한을 정리하는 엣지 확장"
+     },
+     {
+      "id": "f6380187bd3cef67",
+      "title": "오늘 뭐 먹지 — 주변 식당을 찾아 룰렛으로 정하고 동행자에 맞춰 AI가 추천하는 점심 웹앱"
      }
     ],
     "domestic": false
@@ -925,8 +929,8 @@
     "specified": 15
    },
    "해외 상용 API": {
-    "n": 68,
-    "specified": 53
+    "n": 69,
+    "specified": 54
    },
    "모델 중립(BYO)": {
     "n": 96,
@@ -1381,7 +1385,7 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 68,
+    "n": 69,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
@@ -1586,7 +1590,7 @@
      },
      {
       "name": "Gemini",
-      "n": 9,
+      "n": 10,
       "cases": [
        {
         "id": "48e33f2318bdffae",
@@ -1623,6 +1627,10 @@
        {
         "id": "fc35def61f0d6128",
         "title": "AI 행정업무·민원 검색 — 자연어 질문으로 관련 업무와 담당 부서·직원을 찾아 주는 안내 도우미"
+       },
+       {
+        "id": "f6380187bd3cef67",
+        "title": "오늘 뭐 먹지 — 주변 식당을 찾아 룰렛으로 정하고 동행자에 맞춰 AI가 추천하는 점심 웹앱"
        }
       ],
       "domestic": false,
@@ -1632,6 +1640,7 @@
        "Gemini",
        "Gemini 2.5 Flash-Lite",
        "Gemini 3.5 Flash",
+       "Gemini API",
        "Gemini API(File Search)",
        "Gemini GEM",
        "Google Gemini(NotebookLM)",
@@ -1968,18 +1977,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.063,
- "local_model_rate": 0.276,
- "model_known": 127,
- "license_tagged": 460,
- "license_stated_rate": 0.493,
- "gitlab_cases": 306,
+ "domestic_model_rate": 0.062,
+ "local_model_rate": 0.273,
+ "model_known": 128,
+ "license_tagged": 461,
+ "license_stated_rate": 0.492,
+ "gitlab_cases": 307,
  "gitlab_mirror_pairs": 42,
  "gitlab_open_rate": 0.137,
  "mcp_cases": 96,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 532,
+  "미확인": 533,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1997,7 +2006,7 @@
  "stars_collected": 409,
  "repo_stats": {
   "gitlab": {
-   "count": 306,
+   "count": 307,
    "starred": 279,
    "stars_sum": 650,
    "maintenance": {
@@ -2181,7 +2190,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 233,
+  "명시 없음": 234,
   "MIT": 149,
   "Apache-2.0": 35,
   "Other": 20,
@@ -2200,7 +2209,7 @@
  "license_matrix": {
   "명시 없음": {
    "github": 63,
-   "gitlab": 170
+   "gitlab": 171
   },
   "MIT": {
    "github": 85,
@@ -2269,7 +2278,7 @@
    "stated": 7
   },
   "gitlab": {
-   "total": 272,
+   "total": 273,
    "stated": 102
   }
  },

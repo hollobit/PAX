@@ -15230,5 +15230,33 @@
   "service_url": "",
   "rationale": "온톡 쪽지 요약·뜻 검색·답변 초안을 로컬 Gemma로 하는 업무 패널이라 AI-Enabled·S2/C1이다. sAIde 연작을 정부 메신저로 넓힌 개발 소스다.",
   "resilience": "미확인(온톡 호환 범위)"
+ },
+ {
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "feedback": "미확인",
+  "post_url": "",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "scope": "Internal",
+  "risk": "R0 최소",
+  "human": "해당 없음",
+  "no": 617,
+  "id": "f6380187bd3cef67",
+  "org": "한국수자원공사(개인 개발)",
+  "title": "오늘 뭐 먹지 — 주변 식당을 찾아 룰렛으로 정하고 동행자에 맞춰 AI가 추천하는 점심 웹앱",
+  "status": "Live service",
+  "service_url": "https://kwater-lunch.web.app",
+  "rationale": "동행자 조건으로 후보를 거른 뒤 Gemini가 식당을 추천하고 적합도 낮은 답을 다시 걸러 AI-Enabled·S1/C1이다. 업무 외 생활 편의 도구지만 점심 딸깍에 이어 공공기관 직원의 일상 AI 활용 사례로 둔다.",
+  "resilience": "미확인(사내 이용 규모)"
  }
 ]
