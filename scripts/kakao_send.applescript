@@ -20,9 +20,12 @@ on run argv
 	tell application "KakaoTalk" to activate
 	delay 0.5
 	tell application "System Events" to tell process "KakaoTalk"
+		-- 창은 이름으로 다시 잡는다: `repeat with w in windows`의 w는 'item k of every window'(순번 참조)라서
+		-- AXRaise로 창 순서가 바뀌면 다른 창을 가리킨다(2026-10-23 실측: 1:1 대화창이 여럿 열려 있을 때
+		-- '창 제목 불일치'·'Enter가 들어가지 않음'으로 실패).
 		set mainWin to missing value
 		repeat with w in windows
-			if value of attribute "AXIdentifier" of w is "Main Window" then set mainWin to w
+			if value of attribute "AXIdentifier" of w is "Main Window" then set mainWin to window (name of w)
 		end repeat
 		if mainWin is missing value then error "메인 창 없음"
 		set t to table 1 of scroll area 1 of mainWin
@@ -60,7 +63,7 @@ on run argv
 		-- 2) 방 창 열기(이미 열려 있으면 그 창을 쓴다)
 		set chatWin to missing value
 		repeat with w in windows
-			if name of w is targetName then set chatWin to w
+			if name of w is targetName then set chatWin to window targetName
 		end repeat
 		-- 직전 전송 직후에는 첫 Enter가 헛도는 일이 잦다(2026-10-21 실측: 성공·실패가 번갈아) → 최대 3번
 		repeat OPEN_TRIES times
@@ -78,7 +81,7 @@ on run argv
 			repeat WAIT_STEPS times
 				delay 0.5
 				repeat with w in windows
-					if name of w is targetName then set chatWin to w
+					if name of w is targetName then set chatWin to window targetName
 				end repeat
 				if chatWin is not missing value then exit repeat
 			end repeat
