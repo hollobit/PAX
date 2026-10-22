@@ -1,7 +1,163 @@
 {
- "updated_at": "2026-10-21T14:34:13Z",
- "count": 1088,
+ "updated_at": "2026-10-22T06:35:45Z",
+ "count": 1100,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261021201217",
+   "title": "'KTX 매크로' 자랑했다가…국가AI전략위 위원 해촉",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-22",
+   "last_shared": "2026-10-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610211719424578",
+   "title": "행안부, 공무원 개발 AI 도구 활용 경진대회 개최",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-22",
+   "last_shared": "2026-10-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=708805",
+   "title": "18만 공무원에 AI 에이전트 도입…日 정부, 행정업무 자동화 추진",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-22",
+   "last_shared": "2026-10-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=708710",
+   "title": "오픈AI, 챗GPT '잠금 대화' 도입…PIN·생체인증으로 민감한 채팅 보호",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-22",
+   "last_shared": "2026-10-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.asiatoday.co.kr/kn/view.php?key=20261021010007283",
+   "title": "크래프톤, 300억개 매개변수 LLM 공개…성능·비용 효율 잡는다",
+   "outlet": "아시아투데이",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-22",
+   "last_shared": "2026-10-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42375",
+   "title": "구글, 제미나이 차량용 AI에 개인화 지능 탑재…안드로이드 오토 전 세계 출시",
+   "outlet": "인공지능신문",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-22",
+   "last_shared": "2026-10-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216499",
+   "title": "웹사이트 70% 쓰는 PHP서 AI가 결함 발견…각국 정부 사이트 중단",
+   "outlet": "AI타임스",
+   "published": "2026-10-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-22",
+   "last_shared": "2026-10-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216484",
+   "title": "이스트소프트, 제주국제자유도시개발센터 ‘사내 생성 AI 언어모델 구축 사업’ 수주",
+   "outlet": "AI타임스",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-22",
+   "last_shared": "2026-10-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216483",
+   "title": "인셉션, 최고 성능 dLLM '머큐리 3' 공개...\"오픈AI·앤트로픽 맞먹어\"",
+   "outlet": "AI타임스",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-22",
+   "last_shared": "2026-10-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216464",
+   "title": "\"고객센터 응대부터 영업 전화까지\"...채널톡, 음성 AI 상담 '보이스 알프' 출시",
+   "outlet": "AI타임스",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-22",
+   "last_shared": "2026-10-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.hada.io/topic?id=35722",
+   "title": "eMudhra 중간 CA 개인 키 유출",
+   "outlet": "GeekNews",
+   "published": "2026-10-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-22",
+   "last_shared": "2026-10-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/009/0005752175?sid=105",
+   "title": "유럽 정부 사이트 줄줄이 폐쇄…10년 묵은 보안구멍 바로 찾아낸 AI",
+   "outlet": "n.news.naver.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-22",
+   "last_shared": "2026-10-22",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.yna.co.kr/view/AKR20261021154600098",
    "title": "EU, 범용 프로그래밍 언어 PHP 보안 경계령…\"심각도 9.2\"",

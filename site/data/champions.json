@@ -1,5 +1,5 @@
 {
- "total": 236,
+ "total": 237,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -1157,6 +1157,28 @@
    "category_basis": "cases",
    "cases": [
     "4925d016e9377a50"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:euo-oma",
+   "name": "euo-oma",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "euo-oma",
+     "url": "https://github.com/euo-oma"
+    }
+   ],
+   "affiliation": null,
+   "category": "기초지자체",
+   "category_basis": "cases",
+   "cases": [
+    "bdc08caa04f3c308"
    ],
    "stats": {
     "case_count": 1,

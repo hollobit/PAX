@@ -2,18 +2,18 @@
  "generated_at": "2026-10-22",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 589,
- "total_champions": 236,
+ "total_cases": 590,
+ "total_champions": 237,
  "community": {
-  "members": 2570,
-  "kakao_week": 3835,
-  "kakao_total_observed": 56315,
-  "threads_observed": 386
+  "members": 2580,
+  "kakao_week": 4167,
+  "kakao_total_observed": 56647,
+  "threads_observed": 387
  },
  "certified_champions": 5,
  "unattributed_cases": 154,
  "ax_distribution": {
-  "AI-Ready": 379,
+  "AI-Ready": 380,
   "AI-Enabled": 179,
   "AX 단계 외": 25,
   "AI-First": 5,
@@ -22,12 +22,12 @@
  "c_axis_mean": 0.95,
  "p_distribution": {
   "P0": 191,
-  "P1": 378,
+  "P1": 379,
   "P2": 20
  },
  "model_dependency": {
   "미확인": 65,
-  "없음(비LLM)": 285,
+  "없음(비LLM)": 286,
   "해외 오픈웨이트(로컬)": 31,
   "혼합": 16,
   "해외 상용 API": 65,
@@ -857,7 +857,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 285,
+    "n": 286,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -1831,15 +1831,15 @@
  "domestic_model_rate": 0.067,
  "local_model_rate": 0.267,
  "model_known": 120,
- "license_tagged": 435,
- "license_stated_rate": 0.494,
+ "license_tagged": 436,
+ "license_stated_rate": 0.493,
  "gitlab_cases": 282,
  "gitlab_mirror_pairs": 41,
  "gitlab_open_rate": 0.145,
  "mcp_cases": 96,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 507,
+  "미확인": 508,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -1847,7 +1847,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.772
+  "feedback": 0.773
  },
  "maintenance_distribution": {
   "활발": 290,
@@ -2041,7 +2041,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 220,
+  "명시 없음": 221,
   "MIT": 140,
   "Apache-2.0": 35,
   "Other": 20,
@@ -2057,7 +2057,7 @@
  },
  "license_matrix": {
   "명시 없음": {
-   "github": 62,
+   "github": 63,
    "gitlab": 158
   },
   "MIT": {
@@ -2115,7 +2115,7 @@
    "stated": 116
   },
   "github-pages": {
-   "total": 23,
+   "total": 24,
    "stated": 7
   },
   "gitlab": {

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-21T07:35:40+09:00",
+ "updated_at": "2026-10-22T15:35:11+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -17570,6 +17570,33 @@
    "license_source": "github",
    "license_checked": "2026-10-21",
    "thumb_v": 1792535890
+  },
+  {
+   "source": "kakao",
+   "link": "https://jayang.angeldd.chatgpt.site/",
+   "title": "자양동 한마음축제 — 동 행정복지센터와 축제추진위원회의 AI 제작 축제 안내·봉사 신청 사이트",
+   "region": "대전",
+   "org": "대전 동구 자양동 행정복지센터",
+   "case_class": "기관 공식",
+   "case_url": "https://euo-oma.github.io/jayang-festival-2026/",
+   "summary": "대전 동구 자양동의 제2회 한마음축제(10월 24일)를 알리는 웹사이트로, ChatGPT 사이트 기능으로 만든 초대장 화면이 GitHub Pages의 본 홈페이지로 이어진다. 일정·장소 지도·프로그램·후원 소개와 봉사활동 참여 신청을 한국어·영어로 한 화면에 담았고, 문의처는 동 행정복지센터다.",
+   "date": "2026-10-22",
+   "org_type": "기초지자체",
+   "network_req": "인터넷 필수",
+   "runtime_env": "브라우저만",
+   "tags": [
+    "행사홍보",
+    "바이브코딩",
+    "주민참여"
+   ],
+   "task_category": "공통·범용",
+   "collected_at": "2026-10-22",
+   "model_dependency": "없음(비LLM)",
+   "id": "bdc08caa04f3c308",
+   "license": "명시 없음",
+   "license_source": "github-pages",
+   "license_checked": "2026-10-22",
+   "thumb_v": 1792650936
   }
  ]
 }

@@ -14530,5 +14530,33 @@
   "confidence": "중간",
   "rationale": "데스크톱 편집기·AI 창·터미널 명령·MCP 서버로 같은 문서 편집 기능을 묶은 S2 묶음이다. AI가 앱의 편집 도구로 열린 문서를 직접 고치고 사람이 변경 내역을 보고 되돌리는 구조라 C2(부분 완결)로 두었고, 에이전트가 MCP로 한글·오피스 파일을 다루게 하는 재사용형(M2)이다. 오픈소스 GenOffice를 바탕으로 한 파생작이며, 기관 실사용 여부는 미확인.",
   "service_url": "https://ieumoffice.vercel.app/"
+ },
+ {
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "feedback": "미확인",
+  "post_url": "",
+  "ax_prev": "AI-Ready",
+  "ax": "AI-Ready",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "scope": "External",
+  "risk": "R0 최소",
+  "human": "해당 없음",
+  "no": 592,
+  "id": "bdc08caa04f3c308",
+  "org": "대전 동구 자양동 행정복지센터",
+  "title": "자양동 한마음축제 — 동 행정복지센터와 축제추진위원회의 AI 제작 축제 안내·봉사 신청 사이트",
+  "status": "Operational",
+  "service_url": "https://jayang.angeldd.chatgpt.site/",
+  "rationale": "동 단위 축제 안내와 봉사 신청을 AI로 만든 정적 웹사이트로, AI는 제작에만 쓰여 AI-Ready·S1/C1이다. 실제 행사(10월 24일)를 앞두고 공개 운영 중인 화면과 행정복지센터 문의처를 확인했다. 동 행정 단위에서도 디자이너 없이 이중 언어 행사 사이트를 꾸릴 수 있음을 보여 준다.",
+  "resilience": "미확인(행사 이후 유지 여부)"
  }
 ]
