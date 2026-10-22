@@ -7349,6 +7349,12 @@
    "title": "kordoc 공문서 OCR 벤치 — 공공기관 PDF 38문서 72쪽의 쪽 이미지와 정답 텍스트로 OCR 정확도를 재는 공개 데이터셋",
    "org": "공직 현장(개인 개발)",
    "url": "https://huggingface.co/datasets/Chrisryugj/kordoc-ocr-bench"
+  },
+  {
+   "id": "cea1df717b6d57f2",
+   "title": "공공깃랩 디스커버 — 정부 공공 깃랩 프로젝트를 분야·태그·트렌딩·카드 뽑기로 둘러보게 정리한 소개 페이지",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://aigov-discover.onpremisehuman.org/"
   }
  ]
 }

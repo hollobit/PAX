@@ -15258,5 +15258,33 @@
   "service_url": "https://kwater-lunch.web.app",
   "rationale": "동행자 조건으로 후보를 거른 뒤 Gemini가 식당을 추천하고 적합도 낮은 답을 다시 걸러 AI-Enabled·S1/C1이다. 업무 외 생활 편의 도구지만 점심 딸깍에 이어 공공기관 직원의 일상 AI 활용 사례로 둔다.",
   "resilience": "미확인(사내 이용 규모)"
+ },
+ {
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "feedback": "미확인",
+  "post_url": "",
+  "ax_prev": "AI-Ready",
+  "ax": "AI-Ready",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "scope": "External",
+  "risk": "R0 최소",
+  "human": "해당 없음",
+  "no": 618,
+  "id": "cea1df717b6d57f2",
+  "org": "공직 현장(개인 개발)",
+  "title": "공공깃랩 디스커버 — 정부 공공 깃랩 프로젝트를 분야·태그·트렌딩·카드 뽑기로 둘러보게 정리한 소개 페이지",
+  "status": "Live service",
+  "service_url": "https://aigov-discover.onpremisehuman.org/",
+  "rationale": "공공 깃랩 저장소를 분야·태그·트렌딩·카드 뽑기로 묶어 보여 주는 탐색 페이지로, 운영 화면을 확인해 Live service·E2로 둔다. 분류·소개문 생성에 LLM을 쓰는지는 공개 정보로 확인되지 않아, 공직자 AI 도구의 재사용을 돕는 기반 도구로 보고 AI-Ready·S1/C1로 판정한다.",
+  "resilience": "미확인(분류 방식·갱신 주기)"
  }
 ]
