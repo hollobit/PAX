@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-22T22:36:01Z",
- "count": 1115,
+ "updated_at": "2026-10-23T06:35:29Z",
+ "count": 1118,
  "articles": [
   {
    "url": "https://www.yna.co.kr/view/AKR20261021086000530",
@@ -20,6 +20,19 @@
    "title": "구글 클라우드, 모델 가든에 오픈AI 모델 3종 출시",
    "outlet": "테크M",
    "published": "2026-10-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-23",
+   "last_shared": "2026-10-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fmkorea.com/best/10474608465",
+   "title": "현재 미쳐버린 php서버 관련 해커들 근황",
+   "outlet": "에펨코리아",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-23",
@@ -111,6 +124,32 @@
    "title": "앤트로픽, 업무용 AI 에이전트 '클로드 듀엣' 공개",
    "outlet": "재경일보",
    "published": "2026-10-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-23",
+   "last_shared": "2026-10-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.hada.io/topic?id=35825",
+   "title": "Amazon, PHP2Shell 공개 나흘 전의 공격 시도 흔적 확인",
+   "outlet": "GeekNews",
+   "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-23",
+   "last_shared": "2026-10-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://ianpark.vc/p/instinct-10b",
+   "title": "5개월 만에 14조원이 된 스타트업: 명문대 출신도 아닌 23살 연구원이 만든 AI 비서",
+   "outlet": "주간 실리콘밸리",
+   "published": "2026-09-17",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-23",
