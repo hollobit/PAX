@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-23T06:35:29Z",
- "count": 1118,
+ "updated_at": "2026-10-23T14:34:20Z",
+ "count": 1121,
  "articles": [
   {
    "url": "https://www.yna.co.kr/view/AKR20261021086000530",
@@ -185,8 +185,47 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-10-23-px-복지-상담-mcp-정확도-점검",
+   "title": "[공공AX 네트워크] GPT 사이트 기능으로 만든 복지 상담 MCP 사례",
+   "outlet": "akwiki.org",
+   "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-23",
+   "last_shared": "2026-10-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-23-px-보안-취약점-연쇄-패치-점검",
    "title": "[공공AX 네트워크] 이틀 새 이어진 PHP·Node.js·GitLab 취약점 소식",
+   "outlet": "akwiki.org",
+   "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-23",
+   "last_shared": "2026-10-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-23-px-php-취약점-대응비-유지보수-범위",
+   "title": "[공공AX 네트워크] PHP 취약점 대응비를 두고 갈린 유지보수 범위",
+   "outlet": "akwiki.org",
+   "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-23",
+   "last_shared": "2026-10-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-23-cross-코덱스-리셋-세-방",
+   "title": "[3개 방 공통] 코덱스 리셋 소식이 또 들리자 갈린 세 방의 반응",
    "outlet": "akwiki.org",
    "published": "2026-10-23",
    "kind": "기사",

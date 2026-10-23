@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-23T06:35:27Z",
- "count": 116,
+ "updated_at": "2026-10-23T14:34:17Z",
+ "count": 117,
  "videos": [
+  {
+   "id": "v2c-YU_zTv4",
+   "title": "행정안전부 홍보",
+   "channel": "김선태",
+   "url": "https://www.youtube.com/watch?v=v2c-YU_zTv4",
+   "thumb": "https://i.ytimg.com/vi/v2c-YU_zTv4/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-23",
+   "last_shared": "2026-10-23",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "RzoU_6v9sgo",
    "title": "ChatGPT에 국가법령정보MCP 연결하기 korean-law-mcp",
