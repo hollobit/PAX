@@ -15314,5 +15314,33 @@
   "service_url": "https://cozy-figolla-34cad1.netlify.app/",
   "rationale": "공모사업으로 구축할 도시데이터 플랫폼의 요구를 용역사에 전달하려고 담당자가 만든 웹 화면 시안으로, 민원 예측·이상징후 탐지 같은 AI 기능은 아직 구현 전 구성안이다. 화면을 확인해 E2로 두되 실제 AI 기능이 없어 AI-Ready·S1/C0·Prototype으로 판정한다.",
   "resilience": "미확인(본 사업 구축 결과)"
+ },
+ {
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "feedback": "미확인",
+  "post_url": "",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S2",
+  "s_name": "Workflow",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "scope": "External",
+  "risk": "R1 낮음",
+  "human": "해당 없음",
+  "no": 620,
+  "id": "31d885ce7241ceae",
+  "org": "잘하나(민간 개발)",
+  "title": "잘하나 행감팩 — 지방의회 회의록을 AI로 사안별로 엮어 행정사무감사 질문·자료를 지역별로 정리한 서비스",
+  "status": "Live service",
+  "service_url": "https://jalhana.com/",
+  "rationale": "회의록 수집·AI 요약·사안 단위 묶음·원문 근거 연결을 거쳐 공개 화면으로 내보내는 흐름이 운영 중이어서 AI-Enabled·S2/C1·Live service로 둔다. 요약 오류 가능성을 스스로 고지하고 모든 문장에 원문 링크를 달아 위험은 낮음으로 본다. 민간 시빅테크라 참고 사례다.",
+  "resilience": "미확인(운영 주체·갱신 주기)"
  }
 ]
