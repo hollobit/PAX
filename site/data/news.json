@@ -1,7 +1,176 @@
 {
- "updated_at": "2026-10-24T06:34:23Z",
- "count": 1133,
+ "updated_at": "2026-10-24T22:34:48Z",
+ "count": 1146,
  "articles": [
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261024035400003",
+   "title": "[2027 산업] 내년 사업계획 시동…AI '성과내기'·중국과는 생존경쟁",
+   "outlet": "연합뉴스",
+   "published": "2026-10-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-25",
+   "last_shared": "2026-10-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newstap.co.kr/news/articleView.html?idxno=336449",
+   "title": "젠스파크, ‘CMS 2026’서 마케터 위한 차세대 AI 협업 전략 공개",
+   "outlet": "뉴스탭",
+   "published": "2026-10-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-25",
+   "last_shared": "2026-10-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mt.co.kr/politics/2026/10/23/2026102310380184837",
+   "title": "\"검게 가려도 AI가 다 읽어\"…과기부 산하기관 15곳 비공개정보 노출",
+   "outlet": "머니투데이",
+   "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-25",
+   "last_shared": "2026-10-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.job-post.co.kr/news/articleView.html?idxno=234270",
+   "title": "광진구, 제6회 영상 공모전 수상작 12편 선정…AI 활용 작품 대상",
+   "outlet": "잡포스트(JOBPOST)",
+   "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-25",
+   "last_shared": "2026-10-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42418",
+   "title": "오픈AI, “AI 안전성, 기업 혼자서는 확보 못 한다”…폴란드와 공동 검증체계 구축",
+   "outlet": "인공지능신문",
+   "published": "2026-10-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-25",
+   "last_shared": "2026-10-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216615",
+   "title": "오픈AI, 보안 우회로 중단했던 첨단 모델 학습 재개…인터넷 차단 강화",
+   "outlet": "AI타임스",
+   "published": "2026-10-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-25",
+   "last_shared": "2026-10-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216613",
+   "title": "앤트로픽, 구글 클라우드서 최신 기능 쓰는 '관리형 클로드' 출시",
+   "outlet": "AI타임스",
+   "published": "2026-10-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-25",
+   "last_shared": "2026-10-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216606",
+   "title": "딥시크·미니맥스, 중국 정부 AI 모델 해외 수출 승인 획득",
+   "outlet": "AI타임스",
+   "published": "2026-10-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-25",
+   "last_shared": "2026-10-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216562",
+   "title": "에임인텔리전스, 오픈AI 연계 앱 보안 평가 서비스 출시",
+   "outlet": "AI타임스",
+   "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-25",
+   "last_shared": "2026-10-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-25-px-감사-준비-자료-묶음-개발",
+   "title": "[공공AX 네트워크] 의회별 감사 준비 자료 묶음을 만든 참가자",
+   "outlet": "akwiki.org",
+   "published": "2026-10-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-25",
+   "last_shared": "2026-10-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-25-px-ai-활용-직원-동료-시선",
+   "title": "[공공AX 네트워크] AI로 일하는 직원을 고깝게 보는 동료 시선",
+   "outlet": "akwiki.org",
+   "published": "2026-10-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-25",
+   "last_shared": "2026-10-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-25-px-ai-코딩-도구-보안-기준-요구",
+   "title": "[공공AX 네트워크] 정보기관 AI 채용 소식에 나온 보안 기준 요구",
+   "outlet": "akwiki.org",
+   "published": "2026-10-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-25",
+   "last_shared": "2026-10-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-25-cross-영상-제작-클로드-코덱스-선택",
+   "title": "[에이전트코리아·공공AX 네트워크] 영상 제작 AI 선택에 두 방이 낸 같은 방향의 답",
+   "outlet": "akwiki.org",
+   "published": "2026-10-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-25",
+   "last_shared": "2026-10-25",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261023181004",
    "title": "CGTN, AI 기반 뉴스 도우미 News Pal 출시",
