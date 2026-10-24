@@ -12,6 +12,32 @@ property MAX_ROWS : 40
 property WAIT_STEPS : 8 -- 0.5초 × 8 = 창이 뜰 때까지 시도마다 최대 4초
 property OPEN_TRIES : 3
 
+-- 이름 없는 창(팝업·임시 창)을 닫는다. 2026-10-24 06:00 실측: 이름 없는 창이 떠 있을 때 방 창·입력창은
+-- 제대로 잡고도 Enter만 세 번 다 헛돌았고, 그 창이 사라진 뒤 같은 상태로 다시 돌리자 바로 보내졌다.
+-- 키 입력을 가로채는 것으로 보고 보내기 전에 치운다. 메인 창은 이름이 있어 대상이 아니다.
+-- 뒤에서부터 순번으로 돈다(닫으면 순번이 당겨지므로). 닫기 버튼이 없으면 앞으로 올려 Esc.
+on closeUnnamedWindows()
+	tell application "System Events" to tell process "KakaoTalk"
+		repeat with i from (count of windows) to 1 by -1
+			try
+				set w to window i
+				set nm to name of w
+				if nm is missing value then set nm to ""
+				if nm is "" and (value of attribute "AXIdentifier" of w) is not "Main Window" then
+					try
+						click (first button of w whose subrole is "AXCloseButton")
+					on error
+						perform action "AXRaise" of w
+						delay 0.2
+						key code 53
+					end try
+					delay 0.3
+				end if
+			end try
+		end repeat
+	end tell
+end closeUnnamedWindows
+
 on run argv
 	set roomName to item 1 of argv
 	set body to read POSIX file (item 2 of argv) as «class utf8»
@@ -19,6 +45,7 @@ on run argv
 
 	tell application "KakaoTalk" to activate
 	delay 0.5
+	closeUnnamedWindows()
 	tell application "System Events" to tell process "KakaoTalk"
 		-- 창은 이름으로 다시 잡는다: `repeat with w in windows`의 w는 'item k of every window'(순번 참조)라서
 		-- AXRaise로 창 순서가 바뀌면 다른 창을 가리킨다(2026-10-23 실측: 1:1 대화창이 여럿 열려 있을 때
@@ -100,6 +127,8 @@ on run argv
 
 		-- 4) 입력 직전에 창 제목을 다시 확인하고 보낸다
 		-- Enter는 앞 창·주 창에만 들어간다: 앱을 앞으로, 방 창을 주 창으로 올린 뒤 보낸다
+		-- 방 창을 연 사이에 뜬 이름 없는 창도 다시 치운다(입력창에 본문을 넣기 전이라 Esc가 헛돌아도 잃을 것이 없다)
+		my closeUnnamedWindows()
 		set frontmost to true
 		perform action "AXRaise" of chatWin
 		set value of attribute "AXMain" of chatWin to true
