@@ -55,6 +55,26 @@ on run argv
 			if value of attribute "AXIdentifier" of w is "Main Window" then set mainWin to window (name of w)
 		end repeat
 		if mainWin is missing value then error "메인 창 없음"
+		-- 채팅 목록 검색칸에 글자가 남아 있으면 목록이 검색 결과로 줄어 방을 못 찾는다(2026-10-24 실측:
+		-- 검색어가 남아 행이 2개뿐이라 '나와의 채팅을 찾지 못함'). 비어 있지 않으면 지운다(사용자 지시 2026-10-24).
+		-- 값만 바꾸면 목록 필터가 갱신되지 않을 수 있어, 칸에 포커스를 주고 전체 선택 + 지우기 키로 지운다.
+		try
+			set searchField to text field 1 of mainWin
+			if (value of searchField as text) is not "" then
+				set frontmost to true
+				perform action "AXRaise" of mainWin
+				set value of attribute "AXMain" of mainWin to true
+				delay 0.3
+				set focused of searchField to true
+				delay 0.2
+				keystroke "a" using command down
+				key code 51
+				delay 1
+				if (value of searchField as text) is not "" then error "검색칸을 비우지 못함 — 중단"
+			end if
+		on error errMsg
+			if errMsg contains "검색칸" then error errMsg
+		end try
 		set t to table 1 of scroll area 1 of mainWin
 		set n to count of rows of t
 		if n > MAX_ROWS then set n to MAX_ROWS
