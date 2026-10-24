@@ -38,6 +38,39 @@ on closeUnnamedWindows()
 	end tell
 end closeUnnamedWindows
 
+-- 방 창의 입력창: 표(메시지 목록)가 없는 스크롤 영역 안의 텍스트 영역 중 맨 아래 것.
+-- 새 메시지가 오면 입력창 바로 위에 미리보기 말풍선(역시 텍스트 영역)이 떠서, 첫 것을 고르면 말풍선에
+-- 본문을 넣고 Enter가 헛돈다(2026-10-23~25 새벽 실패의 원인 — 06시 직전 자동 게시글 미리보기).
+-- 반환값은 'scroll area k' 순번 참조라 말풍선이 사라지면 다른 칸을 가리킨다 → 쓸 때마다 다시 부른다.
+on findInput(chatWin)
+	tell application "System Events"
+		set found to missing value
+		set bestY to -1
+		repeat with sa in scroll areas of chatWin
+			try
+				if (count of tables of sa) is 0 and (count of text areas of sa) > 0 then
+					set y to item 2 of (position of sa as list)
+					if y > bestY then
+						set bestY to y
+						set found to text area 1 of sa
+					end if
+				end if
+			end try
+		end repeat
+		return found
+	end tell
+end findInput
+
+-- '전송' 버튼(입력창이 비면 꺼진다). 없으면 missing value — 그때는 버튼 검증을 건너뛴다.
+on findSendButton(chatWin)
+	tell application "System Events"
+		try
+			return first button of chatWin whose title is "전송"
+		end try
+		return missing value
+	end tell
+end findSendButton
+
 on run argv
 	set roomName to item 1 of argv
 	set body to read POSIX file (item 2 of argv) as «class utf8»
@@ -51,8 +84,12 @@ on run argv
 		-- AXRaise로 창 순서가 바뀌면 다른 창을 가리킨다(2026-10-23 실측: 1:1 대화창이 여럿 열려 있을 때
 		-- '창 제목 불일치'·'Enter가 들어가지 않음'으로 실패).
 		set mainWin to missing value
+		-- 입력 소스 표시기(입력창 아래 'A' 동그라미)는 이 프로세스의 이름 없는 작은 창으로 잡히고 AXIdentifier가
+		-- 없어 읽으면 오류가 난다(2026-10-25 실측) → 창마다 try로 건너뛴다.
 		repeat with w in windows
-			if value of attribute "AXIdentifier" of w is "Main Window" then set mainWin to window (name of w)
+			try
+				if value of attribute "AXIdentifier" of w is "Main Window" then set mainWin to window (name of w)
+			end try
 		end repeat
 		if mainWin is missing value then error "메인 창 없음"
 		-- 채팅 목록 검색칸에 글자가 남아 있으면 목록이 검색 결과로 줄어 방을 못 찾는다(2026-10-24 실측:
@@ -135,14 +172,8 @@ on run argv
 		end repeat
 		if chatWin is missing value then error "방 창이 열리지 않음: " & targetName
 
-		-- 3) 입력창: 표(메시지 목록)가 없는 스크롤 영역 안의 텍스트 영역
-		set inputField to missing value
-		repeat with sa in scroll areas of chatWin
-			if (count of tables of sa) is 0 and (count of text areas of sa) > 0 then
-				set inputField to text area 1 of sa
-				exit repeat
-			end if
-		end repeat
+		-- 3) 입력창(맨 아래 텍스트 영역 — findInput 참고)
+		set inputField to my findInput(chatWin)
 		if inputField is missing value then error "입력창 없음: " & targetName
 
 		-- 4) 입력 직전에 창 제목을 다시 확인하고 보낸다
@@ -157,23 +188,35 @@ on run argv
 		set focused of inputField to true
 		set value of inputField to body
 		delay 0.5
+		-- 진짜 입력창이면 내용이 들어가는 순간 '전송' 버튼이 켜진다 — 안 켜지면 엉뚱한 칸이므로 보내지 않는다
+		set sendBtn to my findSendButton(chatWin)
+		if sendBtn is not missing value then
+			if not (enabled of sendBtn) then
+				try
+					set value of inputField to ""
+				end try
+				error "입력창 판별 실패(전송 버튼 꺼짐) — 중단"
+			end if
+		end if
 		-- Enter가 먹었는지는 입력창이 비었는지로 본다. 안 비었으면 다시 앞으로 올려 누르고,
 		-- 끝내 안 되면 입력창을 비워(임시 저장 글로 남지 않게) 실패로 끝낸다.
 		set sentOk to false
 		repeat 3 times
 			set frontmost to true
 			set value of attribute "AXMain" of chatWin to true
+			set inputField to my findInput(chatWin)
 			set focused of inputField to true
 			delay 0.3
 			key code 36
 			delay 1
+			set inputField to my findInput(chatWin)
 			if (value of inputField) is "" then
 				set sentOk to true
 				exit repeat
 			end if
 		end repeat
 		if not sentOk then
-			set value of inputField to ""
+			set value of (my findInput(chatWin)) to ""
 			error "Enter가 들어가지 않음 — 입력창을 비우고 중단"
 		end if
 		-- 5) 방 창 닫기(닫기 버튼)
