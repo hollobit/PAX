@@ -1,7 +1,124 @@
 {
- "updated_at": "2026-10-23T22:33:51Z",
- "count": 1123,
+ "updated_at": "2026-10-24T06:34:23Z",
+ "count": 1133,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261023181004",
+   "title": "CGTN, AI 기반 뉴스 도우미 News Pal 출시",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-24",
+   "last_shared": "2026-10-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mhns.co.kr/news/articleView.html?idxno=765654",
+   "title": "밀양시, 공공부문 AI 도입 앞두고 위험요인 32개 항목 점검",
+   "outlet": "더쎈뉴스(The CEN News)",
+   "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-24",
+   "last_shared": "2026-10-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610231411003792",
+   "title": "양산시 '국민돌봄 AI', 전국 적극행정 우수사례 수상",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-24",
+   "last_shared": "2026-10-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610230935038461",
+   "title": "수원시, 공직자 AI 코딩 대회…\"행정 혁신 아이디어 찾는다\"",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-24",
+   "last_shared": "2026-10-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216597",
+   "title": "우버, 업계 최초 전 직원 3만명에 '챗GPT 워크' 도입",
+   "outlet": "AI타임스",
+   "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-24",
+   "last_shared": "2026-10-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216589",
+   "title": "캔바, 프론티어급 이미지 모델 '크래프트' 공개…디자인 아레나 4위 올라",
+   "outlet": "AI타임스",
+   "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-24",
+   "last_shared": "2026-10-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216581",
+   "title": "오픈AI, 분류·선택 특화 ‘디시전스 API’ 정식 출시…최대 10배 빠르게",
+   "outlet": "AI타임스",
+   "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-24",
+   "last_shared": "2026-10-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216560",
+   "title": "AI 에이전트도 '빨리빨리'...한국, 오픈AI '닷츠' 이용 세계 3위",
+   "outlet": "AI타임스",
+   "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-24",
+   "last_shared": "2026-10-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://factory.roboco.io/",
+   "title": "The Software Factory",
+   "outlet": "factory.roboco.io",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-24",
+   "last_shared": "2026-10-24",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://akwiki.org/article/2026-10-24-px-보안-업데이트-피싱-경계",
    "title": "[공공AX 네트워크] 업데이트 범위 경고와 업체 사칭 의심 메일",
@@ -20,6 +137,19 @@
    "title": "[공공AX 네트워크] 공공 부문 종사자의 AX 이직 고민 상담",
    "outlet": "akwiki.org",
    "published": "2026-10-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-24",
+   "last_shared": "2026-10-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "http://www.biztribune.co.kr/news/articleView.html?idxno=361170",
+   "title": "중부발전, 글로벌 HRD 수상… 생성형 AI ‘하이코미’도 국제 인증",
+   "outlet": "비즈트리뷴",
+   "published": "2026-10-23",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-24",
