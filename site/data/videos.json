@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-25T06:35:42Z",
- "count": 118,
+ "updated_at": "2026-10-25T14:34:20Z",
+ "count": 119,
  "videos": [
   {
    "id": "mlhKEy-2bgI",
@@ -8,6 +8,19 @@
    "channel": "코드깎는노인",
    "url": "https://www.youtube.com/watch?v=mlhKEy-2bgI",
    "thumb": "https://i.ytimg.com/vi/mlhKEy-2bgI/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-25",
+   "last_shared": "2026-10-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "0ZTV3et501I",
+   "title": "\"죄송합니다\" 메모 남기고 숨진 청년 연구사 | 전주MBC 260921 방송",
+   "channel": "전주MBC News",
+   "url": "https://www.youtube.com/watch?v=0ZTV3et501I",
+   "thumb": "https://i.ytimg.com/vi/0ZTV3et501I/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-10-25",
    "last_shared": "2026-10-25",
