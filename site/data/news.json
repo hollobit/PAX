@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-24T22:34:48Z",
- "count": 1146,
+ "updated_at": "2026-10-25T06:35:43Z",
+ "count": 1147,
  "articles": [
   {
    "url": "https://www.yna.co.kr/view/AKR20261024035400003",
@@ -111,6 +111,19 @@
    "title": "에임인텔리전스, 오픈AI 연계 앱 보안 평가 서비스 출시",
    "outlet": "AI타임스",
    "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-25",
+   "last_shared": "2026-10-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.hada.io/topic?id=35927",
+   "title": "HTTP2Shell - Node.js에서 Python까지, Brotli 의존성으로 퍼진 원",
+   "outlet": "GeekNews",
+   "published": "2026-10-25",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-25",

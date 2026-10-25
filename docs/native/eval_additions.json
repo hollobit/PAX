@@ -15342,5 +15342,33 @@
   "service_url": "https://jalhana.com/",
   "rationale": "회의록 수집·AI 요약·사안 단위 묶음·원문 근거 연결을 거쳐 공개 화면으로 내보내는 흐름이 운영 중이어서 AI-Enabled·S2/C1·Live service로 둔다. 요약 오류 가능성을 스스로 고지하고 모든 문장에 원문 링크를 달아 위험은 낮음으로 본다. 민간 시빅테크라 참고 사례다.",
   "resilience": "미확인(운영 주체·갱신 주기)"
+ },
+ {
+  "no": 621,
+  "id": "81a87483a0a544cc",
+  "org": "지자체 시민리더 강사(개인 개발)",
+  "title": "AI 윤리 탐정단 — 초·중등생 대상 AI 윤리 7대 원칙 수사 게임",
+  "ax_prev": "AX 단계 외",
+  "ax": "AX 단계 외",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C0",
+  "c_name": "기능 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Live service",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R0 최소",
+  "human": "해당 없음",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "post_url": "",
+  "service_url": "https://cayson-ai-ethics.vercel.app/",
+  "rationale": "AI 윤리를 가르치는 교육용 게임으로, 게임 안에서 AI 모델을 호출하지 않고(랭킹 저장만 외부 DB) 업무 도구도 아니어서 AX 단계 외·S1/C0로 둔다. 배포 화면과 스크립트를 확인했고, 지자체 담당자가 시민 교육 활용 사례로 공유해 참고 사례로 등재한다.",
+  "resilience": "미확인(개인 운영 지속 여부)"
  }
 ]

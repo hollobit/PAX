@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-23T14:34:17Z",
- "count": 117,
+ "updated_at": "2026-10-25T06:35:42Z",
+ "count": 118,
  "videos": [
+  {
+   "id": "mlhKEy-2bgI",
+   "title": "바이브코더가 반드시 알아야 할 필수 용어 24가지",
+   "channel": "코드깎는노인",
+   "url": "https://www.youtube.com/watch?v=mlhKEy-2bgI",
+   "thumb": "https://i.ytimg.com/vi/mlhKEy-2bgI/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-25",
+   "last_shared": "2026-10-25",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "v2c-YU_zTv4",
    "title": "행정안전부 홍보",
