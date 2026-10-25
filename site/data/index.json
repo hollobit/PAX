@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-10-25",
+ "generated_at": "2026-10-26",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
  "total_cases": 619,
  "total_champions": 250,
  "community": {
   "members": 2644,
-  "kakao_week": 4753,
-  "kakao_total_observed": 58876,
+  "kakao_week": 4186,
+  "kakao_total_observed": 58915,
   "threads_observed": 396
  },
  "certified_champions": 5,
@@ -2009,19 +2009,19 @@
   "feedback": 0.784
  },
  "maintenance_distribution": {
-  "활발": 290,
-  "정체": 105,
+  "활발": 308,
+  "정체": 118,
   "방치": 14
  },
- "stars_collected": 409,
+ "stars_collected": 440,
  "repo_stats": {
   "gitlab": {
    "count": 307,
-   "starred": 279,
-   "stars_sum": 650,
+   "starred": 306,
+   "stars_sum": 684,
    "maintenance": {
-    "활발": 203,
-    "정체": 76
+    "활발": 220,
+    "정체": 86
    },
    "top": [
     {
@@ -2035,7 +2035,7 @@
     {
      "id": "43dc7f4ab2500260",
      "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
-     "stars": 15,
+     "stars": 16,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "류승인"
@@ -2108,18 +2108,18 @@
   },
   "github": {
    "count": 177,
-   "starred": 169,
-   "stars_sum": 717338,
+   "starred": 174,
+   "stars_sum": 785994,
    "maintenance": {
-    "정체": 38,
-    "활발": 118,
+    "정체": 41,
+    "활발": 120,
     "방치": 14
    },
    "top": [
     {
      "id": "3f7b3180bf404e54",
      "title": "rea — 에이전트로 앱 동작부터 네이티브 바이너리까지 역공학하는 오픈소스",
-     "stars": 333572,
+     "stars": 384309,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "morluto"
@@ -2127,7 +2127,7 @@
     {
      "id": "c54ee4b5fb3ee4c5",
      "title": "Orca — 병렬 에이전트 플릿을 부리는 에이전트 개발 환경(ADE)",
-     "stars": 97887,
+     "stars": 105738,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "stablyai"
@@ -2135,7 +2135,7 @@
     {
      "id": "4f136eeeea72fe65",
      "title": "Archify — 코드베이스·시스템 설명을 검증 가능한 다이어그램으로 바꾸는 에이전트 스킬",
-     "stars": 85761,
+     "stars": 89150,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "tt-a1i"
@@ -2143,7 +2143,7 @@
     {
      "id": "2085370092f99007",
      "title": "God's Eye View — 항공기·선박·위성·지진·공개 카메라를 한 3D 지구본에 띄우는 오픈소스 공간정보 관제 참고 도구",
-     "stars": 58190,
+     "stars": 60034,
      "maintenance": "활발",
      "license": "Other",
      "developer": "bilawalsidhu"
@@ -2151,7 +2151,7 @@
     {
      "id": "04af7fa6f99a64e4",
      "title": "CL4R1T4S — 주요 AI 서비스의 시스템 프롬프트를 모아 공개한 투명성 저장소",
-     "stars": 51372,
+     "stars": 51501,
      "maintenance": "활발",
      "license": "AGPL-3.0",
      "developer": "elder-plinius"
@@ -2159,31 +2159,31 @@
     {
      "id": "f108979f0d8b2009",
      "title": "book-to-skill — 기술 서적 PDF를 Claude Code 스킬로 바꾸는 도구",
-     "stars": 35350,
+     "stars": 36073,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "virgiliojr94"
     },
     {
-     "id": "b64e832490a6c814",
-     "title": "MCP Inspector — MCP 서버를 눈으로 검사하는 공식 테스트 도구",
-     "stars": 11101,
-     "maintenance": "활발",
-     "license": "명시 없음",
-     "developer": "modelcontextprotocol"
-    },
-    {
      "id": "5cda81d84c79d926",
      "title": "ai-memory — 여러 코딩 에이전트가 하나의 장기 기억을 나눠 쓰고 작업을 넘겨받게 하는 자체 운영 메모리 서버(MIT)",
-     "stars": 11066,
+     "stars": 13504,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "akitaonrails"
     },
     {
+     "id": "b64e832490a6c814",
+     "title": "MCP Inspector — MCP 서버를 눈으로 검사하는 공식 테스트 도구",
+     "stars": 11149,
+     "maintenance": "활발",
+     "license": "명시 없음",
+     "developer": "modelcontextprotocol"
+    },
+    {
      "id": "2f4ed1e68a6464c5",
      "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
-     "stars": 7967,
+     "stars": 8118,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "NomaDamas"
@@ -2191,7 +2191,7 @@
     {
      "id": "0292062a6328545a",
      "title": "public-apis-4Kr — 한국 공개 API 300+ 커뮤니티 큐레이션 목록",
-     "stars": 3289,
+     "stars": 3306,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "yoobin_mion"
@@ -2309,8 +2309,8 @@
    "C1": 16
   },
   "maintenance": {
-   "활발": 52,
-   "정체": 17,
+   "정체": 22,
+   "활발": 48,
    "방치": 13
   }
  },

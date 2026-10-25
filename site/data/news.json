@@ -1,7 +1,150 @@
 {
- "updated_at": "2026-10-25T14:34:23Z",
- "count": 1151,
+ "updated_at": "2026-10-25T22:39:15Z",
+ "count": 1162,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261024143929",
+   "title": "\"GPT-6보다 코딩 잘한다\"…중국 문샷AI, '키미 K3.1 프로' 출시",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mk.co.kr/news/stock/12185148",
+   "title": "\"AI 반도체 고도화 맞춰 MLCC·기판 성장 주목\"",
+   "outlet": "매일경제",
+   "published": "2026-10-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4088383",
+   "title": "AI가 바꾼 시군 행정…경북 정보화 경진대회 경주·영양 최우수",
+   "outlet": "경북일보",
+   "published": "2026-10-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.koreapost.co.kr/news/articleView.html?idxno=89720",
+   "title": "[특집/한국에서 AI 출현으로 없어지는 직업 제13편: 공무원·행정 사무직] 민원서류 읽고 보고서 쓰는 AI…공공부문도 업무·인력 재편의 기로",
+   "outlet": "코리아포스트 한글판",
+   "published": "2026-10-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.joongdo.co.kr/web/view.php?key=20261025010007019",
+   "title": "\"생성형 AI로 지자체 행정 체질 개선\"…인천시, 스마트빌리지 사업 사활",
+   "outlet": "중도일보",
+   "published": "2026-10-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.etoday.co.kr/news/view/2638874",
+   "title": "삼성전자, 반도체 설계부터 생산까지 AI 혁신…글로벌 협력 확대 [혁신경영]",
+   "outlet": "이투데이",
+   "published": "2026-10-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=709769",
+   "title": "앤트로픽, 클로드 시큐리티 업데이트...코드 저장소 상시 점검",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=709765",
+   "title": "금융 AI부터 스테이블코인까지…'서울 핀테크 위크 2026' 개막",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-26-px-캐릭터-영상-버스-노선-시각화",
+   "title": "[공공AX 네트워크] 캐릭터 영상과 버스 노선도에 붙은 활용 아이디어",
+   "outlet": "akwiki.org",
+   "published": "2026-10-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-26-px-ax-용어-자동화-지능화-구분",
+   "title": "[공공AX 네트워크] AX를 자동화라 부르는 말에 대한 고민",
+   "outlet": "akwiki.org",
+   "published": "2026-10-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-26-cross-병렬-에이전트-기계와-사람-부하",
+   "title": "[에이전트코리아·공공AX 네트워크] 여러 갈래 AI 작업이 기계와 사람에게 준 부하",
+   "outlet": "akwiki.org",
+   "published": "2026-10-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.yna.co.kr/view/AKR20261024035400003",
    "title": "[2027 산업] 내년 사업계획 시동…AI '성과내기'·중국과는 생존경쟁",
