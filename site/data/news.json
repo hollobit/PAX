@@ -1,7 +1,124 @@
 {
- "updated_at": "2026-10-26T14:34:31Z",
- "count": 1170,
+ "updated_at": "2026-10-26T22:34:15Z",
+ "count": 1179,
  "articles": [
+  {
+   "url": "https://www.lawissue.co.kr/view.php?ud=20261026154021217267191f6c6e_12",
+   "title": "HUG, 행안부 ‘AI 챔피언’ 10명 배출…전사 AX 추진 본격화",
+   "outlet": "로이슈",
+   "published": "2026-10-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-27",
+   "last_shared": "2026-10-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1305306",
+   "title": "추미애 경기도지사, 공직자 AI 역량 강화로 행정혁신 추진",
+   "outlet": "jeonmae.co.kr",
+   "published": "2026-10-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-27",
+   "last_shared": "2026-10-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610261600181762",
+   "title": "\"AI로 만든 게임, 출시·운영까지\"…컴투스플랫폼, 챗GPT 플러그인 제공",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-27",
+   "last_shared": "2026-10-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610261559563514",
+   "title": "경북도, 퓨리오사AI와 AI 반도체 산업 생태계 만든다",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-27",
+   "last_shared": "2026-10-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=709998",
+   "title": "정부, AI 청소년 보호 강화…심의·법제 정비 본격화",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-27",
+   "last_shared": "2026-10-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42430",
+   "title": "“AI가 사람 대신 전화하고 업무까지 처리”…머스크, 그록 자율 통화 기능 공개",
+   "outlet": "인공지능신문",
+   "published": "2026-10-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-27",
+   "last_shared": "2026-10-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216665",
+   "title": "제논, 기업용 AI 가드레일 솔루션 '젠가드' 출시",
+   "outlet": "AI타임스",
+   "published": "2026-10-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-27",
+   "last_shared": "2026-10-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216645",
+   "title": "셀렉트스타, 의사결정 AI '다비' 출시...판단 능력 높이고 비용 줄여",
+   "outlet": "AI타임스",
+   "published": "2026-10-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-27",
+   "last_shared": "2026-10-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216607",
+   "title": "구글, 터미널서 AI 에이전트 다루는 '제미나이 API CLI' 오픈소스 공개",
+   "outlet": "AI타임스",
+   "published": "2026-10-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-27",
+   "last_shared": "2026-10-27",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261024143929",
    "title": "\"GPT-6보다 코딩 잘한다\"…중국 문샷AI, '키미 K3.1 프로' 출시",
