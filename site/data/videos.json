@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-25T14:34:20Z",
- "count": 119,
+ "updated_at": "2026-10-26T11:06:33Z",
+ "count": 120,
  "videos": [
+  {
+   "id": "3p5uFEHhVwo",
+   "title": "지키는 사람들이 믿는 단 한가지 | 유다혜 토스플레이스 CISO 보안 총괄 | Ground Truth",
+   "channel": "토스",
+   "url": "https://www.youtube.com/watch?v=3p5uFEHhVwo",
+   "thumb": "https://i.ytimg.com/vi/3p5uFEHhVwo/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "mlhKEy-2bgI",
    "title": "바이브코더가 반드시 알아야 할 필수 용어 24가지",

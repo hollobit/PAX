@@ -1,12 +1,25 @@
 {
- "updated_at": "2026-10-26T06:34:53Z",
- "count": 1164,
+ "updated_at": "2026-10-26T11:06:36Z",
+ "count": 1168,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261024143929",
    "title": "\"GPT-6보다 코딩 잘한다\"…중국 문샷AI, '키미 K3.1 프로' 출시",
    "outlet": "zdnet.co.kr",
    "published": "2026-10-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yes24.com/product/goods/199441544",
+   "title": "딴짓하는 류주임처럼 바이브 코딩 시작하기 | 류승인 | 한빛미디어",
+   "outlet": "예스24",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-26",
@@ -133,6 +146,19 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-10-26-px-테일스케일-ssh-취약점-점검",
+   "title": "[공공AX 네트워크] 테일스케일 SSH 취약점, 쓰는지부터 보라는 점검 안내",
+   "outlet": "akwiki.org",
+   "published": "2026-10-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-26-px-캐릭터-영상-버스-노선-시각화",
    "title": "[공공AX 네트워크] 캐릭터 영상과 버스 노선도에 붙은 활용 아이디어",
    "outlet": "akwiki.org",
@@ -161,6 +187,32 @@
   {
    "url": "https://akwiki.org/article/2026-10-26-cross-병렬-에이전트-기계와-사람-부하",
    "title": "[에이전트코리아·공공AX 네트워크] 여러 갈래 AI 작업이 기계와 사람에게 준 부하",
+   "outlet": "akwiki.org",
+   "published": "2026-10-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-26-cross-로컬-llm-장비와-기관-도입",
+   "title": "[에이전트코리아·공공AX 네트워크] 로컬 LLM 장비 고르기와 기관 도입 고민",
+   "outlet": "akwiki.org",
+   "published": "2026-10-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-26-cross-되풀이된-사용량-초기화",
+   "title": "[공공AX 네트워크·에이전트코리아] 되풀이된 사용량 초기화에 엇갈린 두 방의 반응",
    "outlet": "akwiki.org",
    "published": "2026-10-26",
    "kind": "기사",

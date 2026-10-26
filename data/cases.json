@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-25T15:34:46+09:00",
+ "updated_at": "2026-10-26T20:05:34+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -17935,6 +17935,58 @@
    "id": "81a87483a0a544cc",
    "link_ok": true,
    "health_checked": "2026-10-26"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "title": "가디언 아일랜드 — 어린이 대상 AI 보안·윤리 체험 섬 탐험 게임",
+   "link": "https://sejongai-guardian-island.netlify.app/",
+   "task_category": "공통·범용",
+   "network_req": "인터넷 필수",
+   "models_used": [],
+   "summary": "세종 지역 AI 연구센터가 만든 어린이용 AI 안전 교육 게임이다. 여섯 개 섬을 돌며 AI 보안·윤리 미션을 풀고 모의침해 체험 공간에서 공격 유형을 직접 겪어 보며 수호대 기록을 모은다. 공공 정보보호·AI 윤리 교육 현장에서 쓸 수 있는 참고 교구로 공유됐다.",
+   "org": "세종에이아이연구센터",
+   "runtime_env": "브라우저만",
+   "source": "kakao",
+   "collected_at": "2026-10-26",
+   "case_class": "참고",
+   "org_type": "민간(참고)",
+   "tags": [
+    "AI윤리",
+    "정보보안",
+    "교육",
+    "게임"
+   ],
+   "date": "2026-10-26",
+   "id": "9dd8005f0663ddf2"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "title": "세금추적단(Money Tracker) — 나라장터 공개 계약·국회 공개 기록을 모아 보여 주는 시민 감시 사이트",
+   "link": "https://91cleaner.github.io/money-tracker/",
+   "task_category": "계약·조달",
+   "network_req": "인터넷 필수",
+   "models_used": [],
+   "case_url": "https://github.com/91cleaner/money-tracker",
+   "summary": "조달청 나라장터 공개 데이터로 전국 85개 시의 공공 계약·입찰·예산을 매시간 수집해 지출 내역과 데이터상 이상 징후를 지도와 순위로 보여 준다. 국회의원 국외활동·표결, 미국 의회 주식 거래, 국민연금 지분도 공개 기록 원문 링크 중심으로 제공하며 개인 이름은 가린다.",
+   "org": "시민 개발자(개인)",
+   "runtime_env": "브라우저만",
+   "source": "kakao",
+   "collected_at": "2026-10-26",
+   "case_class": "참고",
+   "org_type": "민간(참고)",
+   "tags": [
+    "공공데이터",
+    "나라장터",
+    "계약",
+    "예산",
+    "시민감시",
+    "GitHub Actions"
+   ],
+   "date": "2026-10-26",
+   "id": "a842ab3a245c95d0",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-10-26"
   }
  ]
 }

@@ -7373,6 +7373,18 @@
    "title": "AI 윤리 탐정단 — 초·중등생 대상 AI 윤리 7대 원칙 수사 게임",
    "org": "지자체 시민리더 강사(개인 개발)",
    "url": "https://cayson-ai-ethics.vercel.app/"
+  },
+  {
+   "id": "9dd8005f0663ddf2",
+   "title": "가디언 아일랜드 — 어린이 대상 AI 보안·윤리 체험 섬 탐험 게임",
+   "org": "세종에이아이연구센터",
+   "url": "https://sejongai-guardian-island.netlify.app/"
+  },
+  {
+   "id": "a842ab3a245c95d0",
+   "title": "세금추적단(Money Tracker) — 나라장터 공개 계약·국회 공개 기록을 모아 보여 주는 시민 감시 사이트",
+   "org": "시민 개발자(개인)",
+   "url": "https://github.com/91cleaner/money-tracker"
   }
  ]
 }
