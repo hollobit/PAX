@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-25T22:39:15Z",
- "count": 1162,
+ "updated_at": "2026-10-26T06:34:53Z",
+ "count": 1164,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261024143929",
@@ -68,6 +68,19 @@
    ]
   },
   {
+   "url": "https://www.hankyung.com/article/2026102534821",
+   "title": "\"AI 맘껏 쓰세요\" 했다가…대학가 토큰 동났다",
+   "outlet": "한국경제",
+   "published": "2026-10-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.etoday.co.kr/news/view/2638874",
    "title": "삼성전자, 반도체 설계부터 생산까지 AI 혁신…글로벌 협력 확대 [혁신경영]",
    "outlet": "이투데이",
@@ -98,6 +111,19 @@
    "title": "금융 AI부터 스테이블코인까지…'서울 핀테크 위크 2026' 개막",
    "outlet": "디지털투데이 (DigitalToday)",
    "published": "2026-10-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://claude.com/ko/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop",
+   "title": "Building agents: When to fold subagents into your main agent loop",
+   "outlet": "Claude",
+   "published": "2026-10-22",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-26",
