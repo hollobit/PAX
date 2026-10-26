@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-26T11:06:36Z",
- "count": 1168,
+ "updated_at": "2026-10-26T14:34:31Z",
+ "count": 1170,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261024143929",
@@ -124,6 +124,32 @@
    "title": "금융 AI부터 스테이블코인까지…'서울 핀테크 위크 2026' 개막",
    "outlet": "디지털투데이 (DigitalToday)",
    "published": "2026-10-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://share.google/r4WXKk3BoAsvjN47s",
+   "title": "[단독]‘**’ 찍힌 AI 보고서도 못 잡아냈다…공무원 국내외 연수보고서 3160건 중 적발은 14건뿐",
+   "outlet": "share.google",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-26",
+   "last_shared": "2026-10-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://en.sedaily.com/technology/2026/10/26/korea-launches-joint-probe-into-douzone-bizon-hacking",
+   "title": "Korea Launches Joint Probe Into Douzone Bizon Hacking",
+   "outlet": "Seoul Economic Daily",
+   "published": "2026-10-26",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-26",
