@@ -1,7 +1,137 @@
 {
- "updated_at": "2026-10-27T14:33:54Z",
- "count": 1188,
+ "updated_at": "2026-10-27T22:34:59Z",
+ "count": 1198,
  "articles": [
+  {
+   "url": "https://www.techm.kr/news/articleView.html?idxno=156560",
+   "title": "네이버, 브룩필드와 '90억달러' 계약 체결...AI 팩토리 사업 본격 '시동'",
+   "outlet": "테크M",
+   "published": "2026-10-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.straightnews.co.kr/news/articleView.html?idxno=314026",
+   "title": "서부발전, 행정안전부와 ‘AI 빌드 캠프’ 개최…현장 주도형 AI 업무혁신 가속",
+   "outlet": "스트레이트뉴스",
+   "published": "2026-10-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.inven.co.kr/board/party/6568/126",
+   "title": "컴투스플랫폼, 챗GPT서 게임백엔드 연동",
+   "outlet": "inven.co.kr",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610270952326180",
+   "title": "경북, 대한민국 SNS 대상 4년 연속 수상…AI 홍보송도 입상",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610270846347348",
+   "title": "헥토파이낸셜-t54, AI 에이전트 결제 분야 MOU",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=710421",
+   "title": "애플, M6 칩 기반 맥북 프로·아이맥 동시 공개...AI 지원 강화",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42453",
+   "title": "앤트로픽, 美 증권거래위원회에 기업공개 신청…나스닥 종목코드 ‘ANT’ 확정",
+   "outlet": "인공지능신문",
+   "published": "2026-10-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216690",
+   "title": "오픈AI, ‘GPT-6.1 테라’ 출시…자동화 성능 높이고 가격  낮춰",
+   "outlet": "AI타임스",
+   "published": "2026-10-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.tf.co.kr/read/life/2381481.htm",
+   "title": "AI 일상화 시대, 공무원 교육 미래는…행안부 '글로벌 포럼' - 사회 | 기사",
+   "outlet": "더팩트",
+   "published": "2026-10-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-28-cross-정부-지원-gpu와-api-쓰임새",
+   "title": "[공공AX 네트워크·에이전트코리아] 공공 API 토큰 지원과 정부 GPU 대여 소식을 둘러싼 두 방",
+   "outlet": "akwiki.org",
+   "published": "2026-10-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.straitstimes.com/world/europe/dutch-government-plans-to-cut-25000-jobs-in-ai-led-overhaul-eventually-saving-5b-a-year",
    "title": "Dutch government plans to cut 25,000 jobs in AI-led overhaul, eventually saving $5b a year",
