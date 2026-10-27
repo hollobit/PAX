@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-27T06:35:58Z",
- "count": 1185,
+ "updated_at": "2026-10-27T14:33:54Z",
+ "count": 1188,
  "articles": [
   {
    "url": "https://www.straitstimes.com/world/europe/dutch-government-plans-to-cut-25000-jobs-in-ai-led-overhaul-eventually-saving-5b-a-year",
@@ -159,6 +159,32 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-10-27-px-피클-초대코드와-권한-위임-우려",
+   "title": "[공공AX 네트워크] 초대코드로 퍼진 피클과 권한을 둘러싼 망설임",
+   "outlet": "akwiki.org",
+   "published": "2026-10-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-27",
+   "last_shared": "2026-10-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-27-px-웍스ai-도입과-내부망-제약",
+   "title": "[공공AX 네트워크] 웍스AI 도입을 둘러싼 보안성검토와 내부망 제약",
+   "outlet": "akwiki.org",
+   "published": "2026-10-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-27",
+   "last_shared": "2026-10-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-27-px-ai-보고서-별표-흔적-논란",
    "title": "[공공AX 네트워크] 연수보고서에 남은 AI 흔적을 보는 시선",
    "outlet": "akwiki.org",
@@ -174,6 +200,19 @@
   {
    "url": "https://akwiki.org/article/2026-10-27-px-ai-fomo와-늘어나는-일",
    "title": "[공공AX 네트워크] 새 AI 기술의 설렘과 늘어나는 일",
+   "outlet": "akwiki.org",
+   "published": "2026-10-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-27",
+   "last_shared": "2026-10-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-27-cross-직접-돌려-본-모델-비교",
+   "title": "[에이전트코리아·공공AX 네트워크] 직접 돌려 본 임베딩·OCR과 로컬 모델 체감",
    "outlet": "akwiki.org",
    "published": "2026-10-27",
    "kind": "기사",
