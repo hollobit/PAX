@@ -3340,6 +3340,42 @@
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
    }
+  },
+  {
+   "case_id": "f04cf283edfdd8aa",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스, 저장소는 소개 문서만)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스, 저장소는 소개 문서만)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스, 저장소는 소개 문서만)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "data_flow": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스, README상 GitHub OAuth·개인 토큰 인증, 서버 도메인 k-union.kr) (근거: README.md 표)"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-10-27",
+   "tools": {
+    "npm": "11.20.0",
+    "pip_audit": "2.9.0",
+    "llm": "세션 감사 2026-10-27"
+   }
   }
  ]
 }

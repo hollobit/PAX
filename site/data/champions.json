@@ -1,5 +1,5 @@
 {
- "total": 250,
+ "total": 251,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -1616,6 +1616,28 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:kised",
+   "name": "kised",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "kised",
+     "url": "https://gitlab.aigov.go.kr/kised"
+    }
+   ],
+   "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
+   "cases": [
+    "f04cf283edfdd8aa"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },

@@ -1,6 +1,6 @@
 {
- "evaluated_at": "2026-10-26",
- "total": 621,
+ "evaluated_at": "2026-10-27",
+ "total": 622,
  "cases": [
   {
    "no": 1,
@@ -20492,6 +20492,39 @@
    "tool_type": "웹 서비스",
    "audience": "G2C 대국민",
    "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 624,
+   "id": "f04cf283edfdd8aa",
+   "org": "창업진흥원 실무자(개인 개발)",
+   "title": "K-Startup MCP — 창업지원사업 공고 3만여 건을 AI 대화에서 검색·비교·집계하는 원격 MCP 서비스",
+   "ax_prev": "AI-Enabled",
+   "ax": "AI-Enabled",
+   "s": "S2",
+   "s_name": "Tool bundle",
+   "c": "C1",
+   "c_name": "결과 제공",
+   "m": "M2",
+   "m_name": "재사용형",
+   "native_scope": "해당 없음",
+   "status": "Live service",
+   "scope": "External",
+   "mcp_role": "Server",
+   "risk": "R1 낮음",
+   "human": "검토 후 사용(지원 가능 여부는 원문 확인 명시)",
+   "evidence": "E2 화면·서비스 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "공고·첨부를 수집·변환·색인한 발행본을 원격 MCP로 노출해 이용자가 고른 AI가 검색·원문 열람·집계·파일 내보내기를 이어 하도록 묶은 도구 묶음이라 S2·AI-Enabled로 둔다. 결과는 근거가 붙은 비교표·통계로 제공되고 지원 여부 판단은 이용자 몫이라 C1이며, 포털 응답과 MCP 엔드포인트(인증 요구)·공공 깃랩 소개 문서를 확인했다(서버 소스 비공개).",
+   "feedback": "미확인",
+   "resilience": "서버 소스·DB 비공개(개인 도메인 운영), 공공 깃랩에 이용 문서 공개",
+   "post_url": "",
+   "service_url": "https://kstartup.k-union.kr/portal",
+   "tool_type": "MCP 서버·도구",
+   "audience": "G2B 기업",
+   "p": "P0 읽기 전용(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }

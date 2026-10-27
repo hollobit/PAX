@@ -2,26 +2,26 @@
  "generated_at": "2026-10-27",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 621,
- "total_champions": 250,
+ "total_cases": 622,
+ "total_champions": 251,
  "community": {
-  "members": 2658,
-  "kakao_week": 4235,
-  "kakao_total_observed": 59736,
+  "members": 2662,
+  "kakao_week": 4917,
+  "kakao_total_observed": 60418,
   "threads_observed": 398
  },
  "certified_champions": 5,
  "unattributed_cases": 160,
  "ax_distribution": {
   "AI-Ready": 395,
-  "AI-Enabled": 192,
+  "AI-Enabled": 193,
   "AX 단계 외": 28,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
  "c_axis_mean": 0.96,
  "p_distribution": {
-  "P0": 194,
+  "P0": 195,
   "P1": 407,
   "P2": 20
  },
@@ -31,7 +31,7 @@
   "해외 오픈웨이트(로컬)": 34,
   "혼합": 17,
   "해외 상용 API": 70,
-  "모델 중립(BYO)": 96,
+  "모델 중립(BYO)": 97,
   "국산 독자모델": 7,
   "미상": 29,
   "국산 오픈웨이트": 1
@@ -938,7 +938,7 @@
     "specified": 55
    },
    "모델 중립(BYO)": {
-    "n": 96,
+    "n": 97,
     "specified": 9
    },
    "국산 독자모델": {
@@ -1990,15 +1990,15 @@
  "domestic_model_rate": 0.062,
  "local_model_rate": 0.271,
  "model_known": 129,
- "license_tagged": 462,
- "license_stated_rate": 0.491,
- "gitlab_cases": 307,
+ "license_tagged": 463,
+ "license_stated_rate": 0.49,
+ "gitlab_cases": 308,
  "gitlab_mirror_pairs": 42,
- "gitlab_open_rate": 0.137,
- "mcp_cases": 96,
+ "gitlab_open_rate": 0.136,
+ "mcp_cases": 97,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 539,
+  "미확인": 540,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -2006,7 +2006,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.784
+  "feedback": 0.785
  },
  "maintenance_distribution": {
   "활발": 308,
@@ -2016,7 +2016,7 @@
  "stars_collected": 440,
  "repo_stats": {
   "gitlab": {
-   "count": 307,
+   "count": 308,
    "starred": 306,
    "stars_sum": 684,
    "maintenance": {
@@ -2200,7 +2200,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 235,
+  "명시 없음": 236,
   "MIT": 149,
   "Apache-2.0": 35,
   "Other": 20,
@@ -2219,7 +2219,7 @@
  "license_matrix": {
   "명시 없음": {
    "github": 64,
-   "gitlab": 171
+   "gitlab": 172
   },
   "MIT": {
    "github": 85,
@@ -2288,17 +2288,17 @@
    "stated": 7
   },
   "gitlab": {
-   "total": 273,
+   "total": 274,
    "stated": 102
   }
  },
  "mcp_stats": {
-  "total": 96,
+  "total": 97,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
-   "Server": 82,
+   "Server": 83,
    "Client/Host": 7,
    "Unknown/None": 6
   },
@@ -2306,7 +2306,7 @@
    "C0": 69,
    "C2": 10,
    "C3": 1,
-   "C1": 16
+   "C1": 17
   },
   "maintenance": {
    "정체": 22,

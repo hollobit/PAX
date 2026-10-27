@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-26T20:05:34+09:00",
+ "updated_at": "2026-10-27T15:34:40+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -17987,6 +17987,33 @@
    "license": "명시 없음",
    "license_source": "github",
    "license_checked": "2026-10-26"
+  },
+  {
+   "models_used": [],
+   "summary": "2012년 이후 K-Startup 사업공고·공지와 첨부 문서를 수집·변환해 색인하고, ChatGPT·Claude·CLI에서 원격 MCP로 연결해 지원요건·가점·연도별 변화를 원문 근거와 함께 비교·집계한다. 개발자는 지역·청년 가점 사업 분석과 요구자료 대응 자료 작성에 활용했으며, 결과를 엑셀·CSV로 내보낼 수 있다.",
+   "source": "kakao",
+   "date": "2026-10-27",
+   "case_class": "개인 개발",
+   "org": "창업진흥원 실무자(개인 개발)",
+   "tags": [
+    "MCP",
+    "창업지원",
+    "공고분석",
+    "RAG"
+   ],
+   "model_dependency": "모델 중립(BYO)",
+   "link": "https://gitlab.aigov.go.kr/kised/kstartup-mcp-info",
+   "org_type": "공직 개인",
+   "case_url": "https://kstartup.k-union.kr/portal",
+   "collected_at": "2026-10-27",
+   "network_req": "인터넷 필수",
+   "task_category": "기획·정책",
+   "title": "K-Startup MCP — 창업지원사업 공고 3만여 건을 AI 대화에서 검색·비교·집계하는 원격 MCP 서비스",
+   "runtime_env": "MCP·CLI 설정",
+   "id": "f04cf283edfdd8aa",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-10-27"
   }
  ]
 }
