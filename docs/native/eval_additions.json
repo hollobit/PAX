@@ -15454,5 +15454,33 @@
   "service_url": "https://kstartup.k-union.kr/portal",
   "rationale": "공고·첨부를 수집·변환·색인한 발행본을 원격 MCP로 노출해 이용자가 고른 AI가 검색·원문 열람·집계·파일 내보내기를 이어 하도록 묶은 도구 묶음이라 S2·AI-Enabled로 둔다. 결과는 근거가 붙은 비교표·통계로 제공되고 지원 여부 판단은 이용자 몫이라 C1이며, 포털 응답과 MCP 엔드포인트(인증 요구)·공공 깃랩 소개 문서를 확인했다(서버 소스 비공개).",
   "resilience": "서버 소스·DB 비공개(개인 도메인 운영), 공공 깃랩에 이용 문서 공개"
+ },
+ {
+  "no": 625,
+  "id": "94b5f173ebc5880e",
+  "org": "공직 커뮤니티",
+  "title": "AX-SOS — 공공AX 오픈채팅의 기존 질의응답을 정리하고 새 질문을 받는 커뮤니티 지식인 PoC",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "PoC",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R1 낮음(대화 재사용 동의·개인정보 검수 필요)",
+  "human": "검토 후 사용(답변에 근거·AI 사용 여부 표시, 개인정보 제거 검수)",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "post_url": "",
+  "service_url": "https://ax-sos.web.app/",
+  "rationale": "단톡방 질의응답을 지식으로 정리하고 Gemini 기반 답변에 근거와 AI 사용 여부를 표시하는 단일 웹앱이라 AI-Enabled·S1로 둔다. 답변을 결과로 제공하고 판단은 이용자 몫이라 C1이며, 배포 화면과 번들 스크립트(Firebase·Gemini 연동, 검수 문구)를 확인했다. 개발자가 PoC로 소개했다.",
+  "resilience": "미확인(개인 운영 PoC, 커뮤니티 운영진 채택 여부 미정)"
  }
 ]

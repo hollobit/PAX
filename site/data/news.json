@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-28T06:34:20Z",
- "count": 1202,
+ "updated_at": "2026-10-28T14:35:43Z",
+ "count": 1206,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261028092113",
@@ -146,6 +146,19 @@
    ]
   },
   {
+   "url": "https://opensourcemalware.com/blog/ghostaction-copycats-polinrider-by-hiding-a-stealer-in-a-fake-font-file",
+   "title": "GhostAction Copycats PolinRider by Hiding a Stealer in a Fake Font File",
+   "outlet": "opensourcemalware.com",
+   "published": "2026-10-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://news.tf.co.kr/read/life/2381481.htm",
    "title": "AI 일상화 시대, 공무원 교육 미래는…행안부 '글로벌 포럼' - 사회 | 기사",
    "outlet": "더팩트",
@@ -172,8 +185,47 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-10-28-px-로컬-ai-구축과-모델-격차",
+   "title": "[공공AX 네트워크] 퍼온 로컬 AI 구축 실패담이 꺼낸 모델 격차",
+   "outlet": "akwiki.org",
+   "published": "2026-10-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-28-px-ai-챔피언-시험-규정-문의",
+   "title": "[공공AX 네트워크] 시험 직전 캡처 금지 규정을 두고 이어진 문의",
+   "outlet": "akwiki.org",
+   "published": "2026-10-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-28-cross-정부-지원-gpu와-api-쓰임새",
    "title": "[공공AX 네트워크·에이전트코리아] 공공 API 토큰 지원과 정부 GPU 대여 소식을 둘러싼 두 방",
+   "outlet": "akwiki.org",
+   "published": "2026-10-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-28-cross-잦아진-사용량-초기화-체감",
+   "title": "[3개 방 공통] 잦아진 사용량 초기화를 바라보는 세 방의 체감",
    "outlet": "akwiki.org",
    "published": "2026-10-28",
    "kind": "기사",

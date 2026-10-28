@@ -7407,6 +7407,12 @@
    "title": "세금추적단(Money Tracker) — 나라장터 공개 계약·국회 공개 기록을 모아 보여 주는 시민 감시 사이트",
    "org": "시민 개발자(개인)",
    "url": "https://github.com/91cleaner/money-tracker"
+  },
+  {
+   "id": "94b5f173ebc5880e",
+   "title": "AX-SOS — 공공AX 오픈채팅의 기존 질의응답을 정리하고 새 질문을 받는 커뮤니티 지식인 PoC",
+   "org": "공직 커뮤니티",
+   "url": "https://ax-sos.web.app/"
   }
  ]
 }
