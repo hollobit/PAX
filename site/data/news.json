@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-27T22:34:59Z",
- "count": 1198,
+ "updated_at": "2026-10-28T06:34:20Z",
+ "count": 1202,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261028092113",
+   "title": "[AI는 지금] 코히어, 알리바바 '큐원' 보안 우려 제기…中 AI 신뢰성 논란 확산",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.techm.kr/news/articleView.html?idxno=156560",
    "title": "네이버, 브룩필드와 '90억달러' 계약 체결...AI 팩토리 사업 본격 '시동'",
@@ -21,6 +34,19 @@
    "outlet": "스트레이트뉴스",
    "published": "2026-10-27",
    "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=128940",
+   "title": "복잡한 표·그림 대신 고품질 텍스트로 행안부, 인공지능(AI) 친화적 보고서 전면 도입",
+   "outlet": "행정안전부",
+   "published": "",
+   "kind": "보도자료",
    "shares": 1,
    "first_shared": "2026-10-28",
    "last_shared": "2026-10-28",
@@ -107,9 +133,35 @@
    ]
   },
   {
+   "url": "https://roboco.io/posts/vibe-coding-documentation",
+   "title": "바이브 코딩 시대의 문서 관리: 무엇을 남기고, 어떻게 읽게 할 것인가",
+   "outlet": "ROBOCO",
+   "published": "2026-09-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://news.tf.co.kr/read/life/2381481.htm",
    "title": "AI 일상화 시대, 공무원 교육 미래는…행안부 '글로벌 포럼' - 사회 | 기사",
    "outlet": "더팩트",
+   "published": "2026-10-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://biz.chosun.com/topics/law_firm/2026/10/28/SLFVTGPURNAMVK5IRUHRPFDNGI",
+   "title": "[단독] 전국 중수청 내부 도면 59장 나라장터에 노출… 청장실·서버·수사실까지",
+   "outlet": "조선비즈",
    "published": "2026-10-27",
    "kind": "기사",
    "shares": 1,
