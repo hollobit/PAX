@@ -1,7 +1,124 @@
 {
- "updated_at": "2026-10-28T14:35:43Z",
- "count": 1206,
+ "updated_at": "2026-10-28T22:36:01Z",
+ "count": 1215,
  "articles": [
+  {
+   "url": "https://www.tokenpost.kr/news/ai/428758",
+   "title": "앤트로픽, 사전학습 한 달 넘게 늦춰…안전 승인 구조 공개",
+   "outlet": "토큰포스트",
+   "published": "2026-10-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-29",
+   "last_shared": "2026-10-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.s-journal.co.kr/news/articleView.html?idxno=44865",
+   "title": "[현대차 인사이드] 테슬라 속도전에 '엔비디아 협력'과 '자체 AI 개발' 병행…정의선의 자율주행 전략 통할까?",
+   "outlet": "S저널",
+   "published": "2026-10-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-29",
+   "last_shared": "2026-10-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4088910",
+   "title": "AI 격차 줄인다…NIA, ‘디지털 ESG’ 민관 공동과제 모색",
+   "outlet": "경북일보",
+   "published": "2026-10-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-29",
+   "last_shared": "2026-10-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610281723166418",
+   "title": "경기도, 아·태 지방정부간 AI 국제협력 확대",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-29",
+   "last_shared": "2026-10-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610281553450073",
+   "title": "말레이 공항서 160억치 AI 반도체 압수…'전자제품 가장' 밀수",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-29",
+   "last_shared": "2026-10-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610281400412683",
+   "title": "AI가 가스터빈 돌리고 항공사고 위험 잡는다…공공기관 AI 혁신 30건 선정",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-29",
+   "last_shared": "2026-10-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216753",
+   "title": "챗GPT, 이제 애플 아이클라우드 메일·캘린더까지 연동",
+   "outlet": "AI타임스",
+   "published": "2026-10-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-29",
+   "last_shared": "2026-10-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216736",
+   "title": "메타, AI 인프라 대규모 자금 조달…엔비디아 4조·AMD 1.3조 베팅",
+   "outlet": "AI타임스",
+   "published": "2026-10-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-29",
+   "last_shared": "2026-10-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.jkn.co.kr/post/1055165",
+   "title": "“작업별 최적 AI 자동 선택”…깃허브, ‘코파일럿 퓨전’ 전격 출시",
+   "outlet": "재경일보",
+   "published": "2026-10-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-29",
+   "last_shared": "2026-10-29",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261028092113",
    "title": "[AI는 지금] 코히어, 알리바바 '큐원' 보안 우려 제기…中 AI 신뢰성 논란 확산",
