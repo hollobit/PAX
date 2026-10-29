@@ -1,7 +1,163 @@
 {
- "updated_at": "2026-10-29T14:35:12Z",
- "count": 1217,
+ "updated_at": "2026-10-29T22:34:06Z",
+ "count": 1229,
  "articles": [
+  {
+   "url": "https://www.newspim.com/news/view/20261029000154",
+   "title": "행안부, AI 행정·과학수사·햇빛소득마을 우수정책 세계에 알린다",
+   "outlet": "뉴스핌",
+   "published": "2026-10-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=242538",
+   "title": "퓨리오사AI, 8200억 원 규모 시리즈 D ‘유치’",
+   "outlet": "아이티데일리",
+   "published": "2026-10-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=711166",
+   "title": "미스트랄, 사이버보안 겨냥 1조 매개변수 AI 모델 '라지4' 가중치 공개",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=710922",
+   "title": "오픈AI, 닷츠에 '문자 기능' 추가…챗GPT 열지 않고도 AI 에이전트와 소통",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-10-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.cwn.kr/news/articleView.html?idxno=60477",
+   "title": "중소 제조업 AI 전환 속도 낸다…정부, 2030년까지 5조원 이상 투입",
+   "outlet": "CWN뉴스",
+   "published": "2026-10-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42480",
+   "title": "“구글 미쳤다”…2주 만에 또 최강 AI 공개, 지능지수 59점 세계 1위 '제미나이 4 카본' 출시",
+   "outlet": "인공지능신문",
+   "published": "2026-10-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216789",
+   "title": "오픈AI·앤트로픽, 캘리포니아주에 AI 규제 강화 촉구...'킬 스위치'는 입장 엇갈려",
+   "outlet": "AI타임스",
+   "published": "2026-10-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216775",
+   "title": "SK AX, AI 기반 역량진단 솔루션 ‘지핏 스튜디오’ 출시...AI 인재 선발 지원",
+   "outlet": "AI타임스",
+   "published": "2026-10-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-30-px-온톨로지-ax-사업-회의론",
+   "title": "[공공AX 네트워크] 온톨로지가 붙은 AX 사업에 쏟아진 의문",
+   "outlet": "akwiki.org",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-30-px-보고서-수준과-문서-작성-도구",
+   "title": "[공공AX 네트워크] 정형 문서 도구 문답과 보고서 수준 논쟁",
+   "outlet": "akwiki.org",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-30-cross-램-값과-로컬-장비-품귀",
+   "title": "[에이전트코리아·공공AX 네트워크] 램 값과 로컬 장비 품귀를 두고 오간 두 방의 말",
+   "outlet": "akwiki.org",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "http://www.newslock.co.kr/news/articleView.html?idxno=138840",
+   "title": "KT, 생성형 AI 기반 고객센터 고도화... 상담완결률 81%로 개선",
+   "outlet": "뉴스락",
+   "published": "2026-10-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261029100156",
    "title": "카카오, '카나나' 임베딩 모델 공개…개인화 AI 에이전트 개발 활용 가능",
