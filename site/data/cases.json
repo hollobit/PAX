@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-28T23:34:59+09:00",
+ "updated_at": "2026-10-29T15:34:02+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -18650,6 +18650,34 @@
    "task_category": "공통·범용",
    "id": "94b5f173ebc5880e",
    "thumb_v": 1793198133
+  },
+  {
+   "runtime_env": "설치 필요",
+   "model_dependency": "모델 중립(BYO)",
+   "summary": "OpenClaw 제어 화면 안에 3D 사무실을 띄워, 여러 컴퓨터에서 돌고 있는 AI 에이전트와 Claude Code·Codex 세션을 책상 앞 직원처럼 상태별로 보여 준다. 직원을 눌러 같은 세션에 이어서 지시하고, 권한 요청을 버튼으로 승인·거부하며, 새 작업을 폴더 단위로 맡길 수 있다. MIT 라이선스로 공개됐고 설치 순서를 그림으로 함께 정리했다.",
+   "org": "공직 커뮤니티",
+   "case_class": "커뮤니티",
+   "title": "Claw Office — 여러 컴퓨터의 AI 코딩 에이전트 세션을 3D 사무실 직원으로 보여 주고 지휘하는 오픈소스 플러그인",
+   "link": "https://github.com/jkf87/claw-office",
+   "models_used": [
+    "Claude Code·Codex 세션(사용자 계정)"
+   ],
+   "collected_at": "2026-10-29",
+   "source": "kakao",
+   "date": "2026-10-29",
+   "tags": [
+    "AI에이전트",
+    "에이전트관리",
+    "오픈소스",
+    "개발도구"
+   ],
+   "task_category": "공통·범용",
+   "org_type": "커뮤니티",
+   "id": "7ec0b61bbdad48ba",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-10-29",
+   "thumb_v": 1793255678
   }
  ]
 }

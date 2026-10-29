@@ -1017,12 +1017,13 @@
    "category": "공직(소속 미상)",
    "category_basis": "cases",
    "cases": [
+    "7ec0b61bbdad48ba",
     "3c5015d6c385a815",
     "539f90471f451d80",
     "cbda9aefec586c48"
    ],
    "stats": {
-    "case_count": 3,
+    "case_count": 4,
     "top_ax": 2,
     "stars": 0
    }

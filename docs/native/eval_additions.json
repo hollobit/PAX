@@ -15482,5 +15482,33 @@
   "service_url": "https://ax-sos.web.app/",
   "rationale": "단톡방 질의응답을 지식으로 정리하고 Gemini 기반 답변에 근거와 AI 사용 여부를 표시하는 단일 웹앱이라 AI-Enabled·S1로 둔다. 답변을 결과로 제공하고 판단은 이용자 몫이라 C1이며, 배포 화면과 번들 스크립트(Firebase·Gemini 연동, 검수 문구)를 확인했다. 개발자가 PoC로 소개했다.",
   "resilience": "미확인(개인 운영 PoC, 커뮤니티 운영진 채택 여부 미정)"
+ },
+ {
+  "no": 626,
+  "id": "7ec0b61bbdad48ba",
+  "org": "공직 커뮤니티",
+  "title": "Claw Office — 여러 컴퓨터의 AI 코딩 에이전트 세션을 3D 사무실 직원으로 보여 주고 지휘하는 오픈소스 플러그인",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S2",
+  "s_name": "Tool bundle",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Published tool",
+  "scope": "Internal",
+  "mcp_role": "Unknown/None",
+  "risk": "R1 낮음(로컬 에이전트 권한 모드 일괄 변경 시 주의)",
+  "human": "권한 요청 승인 후 실행(허용·거부 버튼, 세션별 권한 모드)",
+  "evidence": "E2 저장소·README 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "post_url": "",
+  "service_url": "https://github.com/jkf87/claw-office",
+  "rationale": "OpenClaw 플러그인·Paseo 데몬·여러 에이전트 세션을 묶어 한 화면에서 다루는 도구 묶음이라 S2로 둔다. 실제 작업은 각 에이전트가 하고 이 도구는 상태 표시·지시 전달·권한 응답을 맡으므로 C1이다. 공개 저장소의 README·설치 절차·MIT 라이선스를 확인했다.",
+  "resilience": "미확인(공개 직후 개인 저장소, 공직 업무 적용 사례 미확인)"
  }
 ]

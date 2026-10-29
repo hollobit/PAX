@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-28T22:36:01Z",
- "count": 1215,
+ "updated_at": "2026-10-29T06:34:47Z",
+ "count": 1216,
  "articles": [
   {
    "url": "https://www.tokenpost.kr/news/ai/428758",
@@ -111,6 +111,19 @@
    "title": "“작업별 최적 AI 자동 선택”…깃허브, ‘코파일럿 퓨전’ 전격 출시",
    "outlet": "재경일보",
    "published": "2026-10-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-29",
+   "last_shared": "2026-10-29",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/374/0000540440?type=breakingnews",
+   "title": "PHP 취약점 공격에 전세계 서버 25대 장악…한국도 공격 대상",
+   "outlet": "n.news.naver.com",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-29",

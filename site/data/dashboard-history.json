@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-28T22:36:01Z",
+ "updated_at": "2026-10-29T06:34:47Z",
  "note": "복원 = 지금 원장으로 되돌아본 값이라 그날 화면의 숫자와 다를 수 있다(나중에 지운 중복·고친 분류가 소급된다). 관측 = 그날 적어 둔 실측값.",
  "days": {
   "2026-08-07": {
@@ -976,16 +976,16 @@
    "total_champions": 251
   },
   "2026-10-29": {
-   "source": "관측",
-   "members": 2710,
-   "total_cases": 623,
+   "total_cases": 624,
    "mcp_cases": 97,
-   "mcp_rate": 0.1557,
+   "mcp_rate": 0.1554,
    "domestic_model_rate": 0.0615,
    "local_model_rate": 0.2692,
    "gitlab_cases": 308,
-   "github_cases": 178,
+   "github_cases": 179,
    "gitlab_license_none_rate": 0.5909,
+   "source": "관측",
+   "members": 2719,
    "total_champions": 251
   }
  }

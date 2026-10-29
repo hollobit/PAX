@@ -2,19 +2,19 @@
  "generated_at": "2026-10-29",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 623,
+ "total_cases": 624,
  "total_champions": 251,
  "community": {
-  "members": 2710,
-  "kakao_week": 4666,
-  "kakao_total_observed": 61542,
+  "members": 2719,
+  "kakao_week": 5028,
+  "kakao_total_observed": 61904,
   "threads_observed": 406
  },
  "certified_champions": 5,
  "unattributed_cases": 161,
  "ax_distribution": {
   "AI-Ready": 395,
-  "AI-Enabled": 194,
+  "AI-Enabled": 195,
   "AX 단계 외": 28,
   "AI-First": 5,
   "AI-Native 계획": 1
@@ -22,7 +22,7 @@
  "c_axis_mean": 0.96,
  "p_distribution": {
   "P0": 195,
-  "P1": 408,
+  "P1": 409,
   "P2": 20
  },
  "model_dependency": {
@@ -31,7 +31,7 @@
   "해외 오픈웨이트(로컬)": 34,
   "혼합": 17,
   "해외 상용 API": 71,
-  "모델 중립(BYO)": 97,
+  "모델 중립(BYO)": 98,
   "국산 독자모델": 7,
   "미상": 29,
   "국산 오픈웨이트": 1
@@ -40,7 +40,7 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 36,
+    "n": 37,
     "variants": [
      "Claude",
      "Claude Code",
@@ -49,6 +49,7 @@
      "Claude Code(플러그인)",
      "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
      "Claude Code/Codex(플러그인)",
+     "Claude Code·Codex 세션(사용자 계정)",
      "Claude Code·Codex 스킬",
      "Claude Code·Codex(BYO 구독)",
      "Claude Code·Codex에서 MCP·CLI로 호출(선택)",
@@ -208,6 +209,10 @@
      {
       "id": "31d885ce7241ceae",
       "title": "잘하나 행감팩 — 지방의회 회의록을 AI로 사안별로 엮어 행정사무감사 질문·자료를 지역별로 정리한 서비스"
+     },
+     {
+      "id": "7ec0b61bbdad48ba",
+      "title": "Claw Office — 여러 컴퓨터의 AI 코딩 에이전트 세션을 3D 사무실 직원으로 보여 주고 지휘하는 오픈소스 플러그인"
      }
     ],
     "domestic": false
@@ -942,8 +947,8 @@
     "specified": 56
    },
    "모델 중립(BYO)": {
-    "n": 97,
-    "specified": 9
+    "n": 98,
+    "specified": 10
    },
    "국산 독자모델": {
     "n": 7,
@@ -1998,15 +2003,15 @@
  "domestic_model_rate": 0.062,
  "local_model_rate": 0.269,
  "model_known": 130,
- "license_tagged": 463,
- "license_stated_rate": 0.49,
+ "license_tagged": 464,
+ "license_stated_rate": 0.491,
  "gitlab_cases": 308,
  "gitlab_mirror_pairs": 42,
  "gitlab_open_rate": 0.136,
  "mcp_cases": 97,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 541,
+  "미확인": 542,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -2115,7 +2120,7 @@
    ]
   },
   "github": {
-   "count": 178,
+   "count": 179,
    "starred": 174,
    "stars_sum": 785994,
    "maintenance": {
@@ -2209,7 +2214,7 @@
  },
  "license_distribution": {
   "명시 없음": 236,
-  "MIT": 149,
+  "MIT": 150,
   "Apache-2.0": 35,
   "Other": 20,
   "AGPL-3.0": 5,
@@ -2230,7 +2235,7 @@
    "gitlab": 172
   },
   "MIT": {
-   "github": 85,
+   "github": 86,
    "gitlab": 63
   },
   "Apache-2.0": {
@@ -2288,8 +2293,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 164,
-   "stated": 117
+   "total": 165,
+   "stated": 118
   },
   "github-pages": {
    "total": 24,
