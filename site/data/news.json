@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-29T06:34:47Z",
- "count": 1216,
+ "updated_at": "2026-10-29T14:35:12Z",
+ "count": 1217,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261029100156",
+   "title": "카카오, '카나나' 임베딩 모델 공개…개인화 AI 에이전트 개발 활용 가능",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-29",
+   "last_shared": "2026-10-29",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.tokenpost.kr/news/ai/428758",
    "title": "앤트로픽, 사전학습 한 달 넘게 늦춰…안전 승인 구조 공개",
