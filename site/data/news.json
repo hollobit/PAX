@@ -1,7 +1,150 @@
 {
- "updated_at": "2026-10-30T14:34:28Z",
- "count": 1236,
+ "updated_at": "2026-10-30T22:35:16Z",
+ "count": 1247,
  "articles": [
+  {
+   "url": "https://www.techm.kr/news/articleView.html?idxno=156713",
+   "title": "삼성전기, AI 서버용 MLCC LTA 확대...8800억원 계약 추가",
+   "outlet": "테크M",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-31",
+   "last_shared": "2026-10-31",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.sijung.co.kr/news/articleView.html?idxno=440319",
+   "title": "광진구, 어린이대공원 후문 공중화장실에 ‘AI 24시간 불법촬영 탐지시스템’ 전격 도입",
+   "outlet": "시정일보",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-31",
+   "last_shared": "2026-10-31",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.madtimes.co.kr/news/articleView.html?idxno=29488",
+   "title": "클립아트코리아, 챗GPT, 클로드 연동 이미지 검색 서비스 출시",
+   "outlet": "매드타임스(MADTimes)",
+   "published": "2026-10-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-31",
+   "last_shared": "2026-10-31",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=242566",
+   "title": "삼성전자, 42만원대 ‘갤럭시 A18 LTE’ 출시…AI·대화면 갖춰",
+   "outlet": "아이티데일리",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-31",
+   "last_shared": "2026-10-31",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202610301532202245",
+   "title": "울산 중구, AI로 행정업무 효율 높인다…통·반 조회 시스템 개발",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-31",
+   "last_shared": "2026-10-31",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216831",
+   "title": "LG CNS, 3분기 매출 1.7조원…AI·클라우드 성장 견인",
+   "outlet": "AI타임스",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-31",
+   "last_shared": "2026-10-31",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216824",
+   "title": "앤트로픽, '클로드' 자기 대화 감시 기술 도입…유해 사용 78% 탐지",
+   "outlet": "AI타임스",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-31",
+   "last_shared": "2026-10-31",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216823",
+   "title": "오픈AI, 프로·기업용 AI 사용량 최대 2배 확대…연속 업데이트 막바지",
+   "outlet": "AI타임스",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-31",
+   "last_shared": "2026-10-31",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216822",
+   "title": "앤트로픽, 스페이스X 매출 34.5% 차지…미 정부 넘어 최대 고객",
+   "outlet": "AI타임스",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-31",
+   "last_shared": "2026-10-31",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-31-px-ai-교육-현장의-수강생-편차",
+   "title": "[공공AX 네트워크] AI 교육 현장에서 드러난 수강생 편차",
+   "outlet": "akwiki.org",
+   "published": "2026-10-31",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-31",
+   "last_shared": "2026-10-31",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-31-cross-ocr-체험-페이지에-쏟아진-반응",
+   "title": "[에이전트코리아·공공AX 네트워크] OCR 체험 페이지에 쏟아진 두 방의 반응",
+   "outlet": "akwiki.org",
+   "published": "2026-10-31",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-31",
+   "last_shared": "2026-10-31",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.yottalabs.ai/post/qwen-4-27b-release-date-specs-hardware-what-is-known-2026",
    "title": "Qwen 4 27B: Release Date, What’s Confirmed, and the Hardware to Prepare (2026)",
