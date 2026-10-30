@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-30T06:34:25Z",
- "count": 1231,
+ "updated_at": "2026-10-30T14:34:28Z",
+ "count": 1236,
  "articles": [
   {
    "url": "https://www.yottalabs.ai/post/qwen-4-27b-release-date-specs-hardware-what-is-known-2026",
@@ -133,6 +133,58 @@
    ]
   },
   {
+   "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise",
+   "title": "Official Claude Code Extension Compromise: Security Advisory | Phorion",
+   "outlet": "phorion.io",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://opensourcemalware.com/blog/trojanized-claude-code-extension-plants-persistent-ssh-backdoor",
+   "title": "Trojanized Claude Code Extension Plants an SSH Backdoor",
+   "outlet": "opensourcemalware.com",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.blog.naver.com/eastwestdoc/224458868012",
+   "title": "“약 다시 먹을까?” 챗GPT에 물었던 30대 여성, 결국 숨졌다",
+   "outlet": "네이버 블로그 | 동서의학박사",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-30-px-폐쇄망-중국-모델과-보안-우려",
+   "title": "[공공AX 네트워크] 폐쇄망 중국 모델을 둘러싼 엇갈린 보안 판단",
+   "outlet": "akwiki.org",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-10-30-px-온톨로지-ax-사업-회의론",
    "title": "[공공AX 네트워크] 온톨로지가 붙은 AX 사업에 쏟아진 의문",
    "outlet": "akwiki.org",
@@ -161,6 +213,19 @@
   {
    "url": "https://akwiki.org/article/2026-10-30-cross-램-값과-로컬-장비-품귀",
    "title": "[에이전트코리아·공공AX 네트워크] 램 값과 로컬 장비 품귀를 두고 오간 두 방의 말",
+   "outlet": "akwiki.org",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-10-30-cross-ai-교육-과정과-강사-찾기",
+   "title": "[공공AX 네트워크·에이전트코리아] AI 교육 과정과 강사 찾기를 둘러싼 두 방의 말",
    "outlet": "akwiki.org",
    "published": "2026-10-30",
    "kind": "기사",
