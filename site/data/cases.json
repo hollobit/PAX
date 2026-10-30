@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-29T15:34:02+09:00",
+ "updated_at": "2026-10-30T15:33:51+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -18678,6 +18678,32 @@
    "license_source": "github",
    "license_checked": "2026-10-29",
    "thumb_v": 1793255678
+  },
+  {
+   "date": "2026-10-30",
+   "link": "https://roboco.io/govcode-harness-guide/",
+   "tags": [
+    "보안",
+    "바이브코딩",
+    "거버넌스",
+    "오픈소스"
+   ],
+   "task_category": "감사·법무",
+   "case_url": "https://github.com/roboco-io/govcode-harness",
+   "org": "로보코(ROBOCO)",
+   "title": "GovCode Harness — 비개발 공무원의 바이브 코딩에 보안 점검·검토 승인·증적을 붙이는 오픈소스 개발 하네스",
+   "runtime_env": "설치 필요",
+   "case_class": "참고",
+   "org_type": "민간(참고)",
+   "source": "kakao",
+   "summary": "공공 프로젝트에서 비개발자가 AI로 업무 도구를 만들 때 보안 기준 검사, 수정 지원, 재검사, 담당자 승인과 증적 기록을 한 흐름으로 묶는 오픈소스 하네스다. 민원 원문이 불필요하게 로그에 남는 문제를 첫 사례로 합성 자료에서 검증했고, 아카이브에 소개된 오철칙과 AI Doc Ready를 활용했다. 모델·에이전트 중립으로 만든 v0.10.0 프리뷰가 Apache-2.0으로 공개된 파일럿 단계다.",
+   "collected_at": "2026-10-30",
+   "model_dependency": "모델 중립(BYO)",
+   "id": "f3c3fba3dbc90b30",
+   "license": "Apache-2.0",
+   "license_source": "github",
+   "license_checked": "2026-10-30",
+   "thumb_v": 1793342054
   }
  ]
 }

@@ -15510,5 +15510,33 @@
   "service_url": "https://github.com/jkf87/claw-office",
   "rationale": "OpenClaw 플러그인·Paseo 데몬·여러 에이전트 세션을 묶어 한 화면에서 다루는 도구 묶음이라 S2로 둔다. 실제 작업은 각 에이전트가 하고 이 도구는 상태 표시·지시 전달·권한 응답을 맡으므로 C1이다. 공개 저장소의 README·설치 절차·MIT 라이선스를 확인했다.",
   "resilience": "미확인(공개 직후 개인 저장소, 공직 업무 적용 사례 미확인)"
+ },
+ {
+  "no": 627,
+  "id": "f3c3fba3dbc90b30",
+  "org": "로보코(ROBOCO)",
+  "title": "GovCode Harness — 비개발 공무원의 바이브 코딩에 보안 점검·검토 승인·증적을 붙이는 오픈소스 개발 하네스",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S2",
+  "s_name": "Workflow",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "PoC",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R1 낮음(합성 자료 프리뷰, 실제 기관 도입은 별도 검토)",
+  "human": "승인 필수(작성자·승인자 분리, 정책 엔진 판정 후 담당자 승인·서명 증적)",
+  "evidence": "E2 저장소·안내 페이지 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "post_url": "",
+  "service_url": "https://roboco.io/govcode-harness-guide/",
+  "rationale": "검사·수정 지원·재검사·승인·증적을 하나의 개발 흐름으로 묶은 워크플로라 S2로 둔다. AI는 설명과 수정안을 제안하고 판정은 정책 엔진과 필수 검사, 승인은 담당자가 하므로 C1이다. 공개 저장소 README와 안내 페이지에서 합성 자료 기반 v0.10.0 프리뷰와 파일럿 단계임을 확인했다.",
+  "resilience": "미확인(공개 이틀째 파일럿, 실제 기관 시험 운영 전)"
  }
 ]

@@ -7414,6 +7414,12 @@
    "title": "AX-SOS — 공공AX 오픈채팅의 기존 질의응답을 정리하고 새 질문을 받는 커뮤니티 지식인 PoC",
    "org": "공직 커뮤니티",
    "url": "https://ax-sos.web.app/"
+  },
+  {
+   "id": "f3c3fba3dbc90b30",
+   "title": "GovCode Harness — 비개발 공무원의 바이브 코딩에 보안 점검·검토 승인·증적을 붙이는 오픈소스 개발 하네스",
+   "org": "로보코(ROBOCO)",
+   "url": "https://github.com/roboco-io/govcode-harness"
   }
  ]
 }

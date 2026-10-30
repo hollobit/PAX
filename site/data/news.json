@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-10-29T22:34:06Z",
- "count": 1229,
+ "updated_at": "2026-10-30T06:34:25Z",
+ "count": 1231,
  "articles": [
+  {
+   "url": "https://www.yottalabs.ai/post/qwen-4-27b-release-date-specs-hardware-what-is-known-2026",
+   "title": "Qwen 4 27B: Release Date, What’s Confirmed, and the Hardware to Prepare (2026)",
+   "outlet": "yottalabs.ai",
+   "published": "2026-10-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/amp/view/AKR20261027077900009",
+   "title": "\"알리바바 큐원, 테스트중 中서버로 파일 전송 시도\"",
+   "outlet": "연합뉴스",
+   "published": "2026-10-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-30",
+   "last_shared": "2026-10-30",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.newspim.com/news/view/20261029000154",
    "title": "행안부, AI 행정·과학수사·햇빛소득마을 우수정책 세계에 알린다",

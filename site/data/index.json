@@ -2,19 +2,19 @@
  "generated_at": "2026-10-30",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 624,
+ "total_cases": 625,
  "total_champions": 251,
  "community": {
-  "members": 2731,
-  "kakao_week": 4783,
-  "kakao_total_observed": 62138,
+  "members": 2744,
+  "kakao_week": 5133,
+  "kakao_total_observed": 62488,
   "threads_observed": 408
  },
  "certified_champions": 5,
- "unattributed_cases": 161,
+ "unattributed_cases": 162,
  "ax_distribution": {
   "AI-Ready": 395,
-  "AI-Enabled": 195,
+  "AI-Enabled": 196,
   "AX 단계 외": 28,
   "AI-First": 5,
   "AI-Native 계획": 1
@@ -22,7 +22,7 @@
  "c_axis_mean": 0.96,
  "p_distribution": {
   "P0": 195,
-  "P1": 409,
+  "P1": 410,
   "P2": 20
  },
  "model_dependency": {
@@ -31,7 +31,7 @@
   "해외 오픈웨이트(로컬)": 34,
   "혼합": 17,
   "해외 상용 API": 71,
-  "모델 중립(BYO)": 98,
+  "모델 중립(BYO)": 99,
   "국산 독자모델": 7,
   "미상": 29,
   "국산 오픈웨이트": 1
@@ -947,7 +947,7 @@
     "specified": 56
    },
    "모델 중립(BYO)": {
-    "n": 98,
+    "n": 99,
     "specified": 10
    },
    "국산 독자모델": {
@@ -2003,15 +2003,15 @@
  "domestic_model_rate": 0.062,
  "local_model_rate": 0.269,
  "model_known": 130,
- "license_tagged": 464,
- "license_stated_rate": 0.491,
+ "license_tagged": 465,
+ "license_stated_rate": 0.492,
  "gitlab_cases": 308,
  "gitlab_mirror_pairs": 42,
  "gitlab_open_rate": 0.136,
  "mcp_cases": 97,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 542,
+  "미확인": 543,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -2019,7 +2019,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.785
+  "feedback": 0.786
  },
  "maintenance_distribution": {
   "활발": 308,
@@ -2120,7 +2120,7 @@
    ]
   },
   "github": {
-   "count": 179,
+   "count": 180,
    "starred": 174,
    "stars_sum": 785994,
    "maintenance": {
@@ -2215,7 +2215,7 @@
  "license_distribution": {
   "명시 없음": 236,
   "MIT": 150,
-  "Apache-2.0": 35,
+  "Apache-2.0": 36,
   "Other": 20,
   "AGPL-3.0": 5,
   "기타(비표준)": 5,
@@ -2239,7 +2239,7 @@
    "gitlab": 63
   },
   "Apache-2.0": {
-   "github": 13,
+   "github": 14,
    "gitlab": 22
   },
   "Other": {
@@ -2293,8 +2293,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 165,
-   "stated": 118
+   "total": 166,
+   "stated": 119
   },
   "github-pages": {
    "total": 24,
