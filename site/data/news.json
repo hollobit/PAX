@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-31T06:34:02Z",
- "count": 1248,
+ "updated_at": "2026-10-31T14:34:38Z",
+ "count": 1249,
  "articles": [
   {
    "url": "https://www.techm.kr/news/articleView.html?idxno=156713",
@@ -32,6 +32,19 @@
    "url": "https://www.madtimes.co.kr/news/articleView.html?idxno=29488",
    "title": "클립아트코리아, 챗GPT, 클로드 연동 이미지 검색 서비스 출시",
    "outlet": "매드타임스(MADTimes)",
+   "published": "2026-10-29",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-31",
+   "last_shared": "2026-10-31",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4088932",
+   "title": "상주 공무원이 만든 ‘토목AX’…AI로 설계업무 줄인다",
+   "outlet": "경북일보",
    "published": "2026-10-29",
    "kind": "기사",
    "shares": 1,
