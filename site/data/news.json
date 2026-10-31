@@ -1,7 +1,85 @@
 {
- "updated_at": "2026-10-31T14:34:38Z",
- "count": 1249,
+ "updated_at": "2026-10-31T22:34:40Z",
+ "count": 1256,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261031160238",
+   "title": "삼성 사장단, 올트먼과 'AI 미래전략' 논의",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-10-31",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-01",
+   "last_shared": "2026-11-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newstap.co.kr/news/articleView.html?idxno=336723",
+   "title": "생성형 AI 넘어 ‘스스로 일하는 AI’로…GS네오텍, AWS 에이전틱 AI 인증 획득",
+   "outlet": "뉴스탭",
+   "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-01",
+   "last_shared": "2026-11-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202611010530465970",
+   "title": "출판계에 닥친 AI발 위기…\"산업 기반 무너뜨릴 수도\"",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-11-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-01",
+   "last_shared": "2026-11-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216847",
+   "title": "오픈AI, 청소년 챗GPT 무기 정보 제한...폭력 징후 땐 대화 중단",
+   "outlet": "AI타임스",
+   "published": "2026-10-31",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-01",
+   "last_shared": "2026-11-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216845",
+   "title": "구글, 제미나이 채팅에서 문서·PDF 직접 편집 기능 추가",
+   "outlet": "AI타임스",
+   "published": "2026-10-31",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-01",
+   "last_shared": "2026-11-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216838",
+   "title": "엔비디아, 엔스케일 자금난에 지원 검토…앤트로픽 60조 데이터센터 신용 보증",
+   "outlet": "AI타임스",
+   "published": "2026-10-31",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-01",
+   "last_shared": "2026-11-01",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.techm.kr/news/articleView.html?idxno=156713",
    "title": "삼성전기, AI 서버용 MLCC LTA 확대...8800억원 계약 추가",
@@ -3309,6 +3387,19 @@
    "title": "마인드로직, 월 5900원으로 챗GPT 등 80개 생성형 AI 사용  '베이즈' 출시",
    "outlet": "이데일리",
    "published": "2026-10-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-16",
+   "last_shared": "2026-10-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.data.go.kr/data/15134735/openapi.do",
+   "title": "국토교통부_건축HUB_건축물대장정보 서비스",
+   "outlet": "공공데이터포털",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-16",
