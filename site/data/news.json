@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-30T22:35:16Z",
- "count": 1247,
+ "updated_at": "2026-10-31T06:34:02Z",
+ "count": 1248,
  "articles": [
   {
    "url": "https://www.techm.kr/news/articleView.html?idxno=156713",
@@ -111,6 +111,19 @@
    "title": "앤트로픽, 스페이스X 매출 34.5% 차지…미 정부 넘어 최대 고객",
    "outlet": "AI타임스",
    "published": "2026-10-30",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-31",
+   "last_shared": "2026-10-31",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://share.google/fN67coeUj6kHJHqWT",
+   "title": "AI로 공무원을 대체할 수 있을까? 뉴질랜드와 네덜란드의 실험[딥다이브]",
+   "outlet": "share.google",
+   "published": "2026-10-31",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-31",
