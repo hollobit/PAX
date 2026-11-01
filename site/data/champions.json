@@ -1,5 +1,5 @@
 {
- "total": 251,
+ "total": 256,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -471,6 +471,28 @@
    "category_basis": "affiliation",
    "cases": [
     "4c918008fd4eff60"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:bumanee",
+   "name": "KISED BUM",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "bumanee",
+     "url": "https://gitlab.aigov.go.kr/bumanee"
+    }
+   ],
+   "affiliation": null,
+   "category": "공직(소속 미상)",
+   "category_basis": "cases",
+   "cases": [
+    "bf5cc096276d2e49"
    ],
    "stats": {
     "case_count": 1,
@@ -2850,11 +2872,12 @@
    "category": "기초지자체",
    "category_basis": "affiliation",
    "cases": [
+    "231686eb6471632f",
     "b1650b0206b8342c",
     "0d6d0bf3edf2b438"
    ],
    "stats": {
-    "case_count": 2,
+    "case_count": 3,
     "top_ax": 1,
     "stars": 0
    }
@@ -3870,6 +3893,32 @@
    }
   },
   {
+   "id": "gitlab:soyoung776",
+   "name": "박소영",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "soyoung776",
+     "url": "https://gitlab.aigov.go.kr/soyoung776"
+    }
+   ],
+   "affiliation": {
+    "value": "충청남도",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "광역지자체",
+   "category_basis": "affiliation",
+   "cases": [
+    "d88619666f1113d0"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:soonpyo",
    "name": "박순표",
    "accounts": [
@@ -4732,6 +4781,32 @@
    }
   },
   {
+   "id": "gitlab:ss1864",
+   "name": "오성숙",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "ss1864",
+     "url": "https://gitlab.aigov.go.kr/ss1864"
+    }
+   ],
+   "affiliation": {
+    "value": "인천광역시",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "광역지자체",
+   "category_basis": "affiliation",
+   "cases": [
+    "0136bdfc454c39d5"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:realosh2",
    "name": "오성호",
    "accounts": [
@@ -5067,6 +5142,32 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:gd8766",
+   "name": "이규대",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "gd8766",
+     "url": "https://gitlab.aigov.go.kr/gd8766"
+    }
+   ],
+   "affiliation": {
+    "value": "경상북도",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "광역지자체",
+   "category_basis": "affiliation",
+   "cases": [
+    "a4a260570bff3905"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -5753,6 +5854,7 @@
    "category": "기초지자체",
    "category_basis": "affiliation",
    "cases": [
+    "cea1df717b6d57f2",
     "dc0632528765c694",
     "c5d9b943e082e8b3",
     "6e89aaf95f6ffbd9",
@@ -5760,7 +5862,7 @@
     "856b4951cb5274d1"
    ],
    "stats": {
-    "case_count": 5,
+    "case_count": 6,
     "top_ax": 2,
     "stars": 0
    },
@@ -6137,6 +6239,32 @@
    "category_basis": "affiliation",
    "cases": [
     "d8b2afa5e72012a8"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:bigone-kised",
+   "name": "최원일",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "bigone-kised",
+     "url": "https://gitlab.aigov.go.kr/bigone-kised"
+    }
+   ],
+   "affiliation": {
+    "value": "창업진흥원",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "공공기관",
+   "category_basis": "affiliation",
+   "cases": [
+    "1f4460d5bd89cc14"
    ],
    "stats": {
     "case_count": 1,
@@ -7372,12 +7500,6 @@
    "title": "kordoc 공문서 OCR 벤치 — 공공기관 PDF 38문서 72쪽의 쪽 이미지와 정답 텍스트로 OCR 정확도를 재는 공개 데이터셋",
    "org": "공직 현장(개인 개발)",
    "url": "https://huggingface.co/datasets/Chrisryugj/kordoc-ocr-bench"
-  },
-  {
-   "id": "cea1df717b6d57f2",
-   "title": "공공깃랩 디스커버 — 정부 공공 깃랩 프로젝트를 분야·태그·트렌딩·카드 뽑기로 둘러보게 정리한 소개 페이지",
-   "org": "공직 현장(개인 개발)",
-   "url": "https://aigov-discover.onpremisehuman.org/"
   },
   {
    "id": "eaf3071da29965e9",

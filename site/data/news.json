@@ -1,7 +1,163 @@
 {
- "updated_at": "2026-11-01T14:18:28Z",
- "count": 1260,
+ "updated_at": "2026-11-01T22:47:25Z",
+ "count": 1272,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261101155847",
+   "title": "21일 걸리던 업무, 8일로…HD현대로보틱스·팔란티어 '피지컬AI' 고도화",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-11-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4089208",
+   "title": "대구시, 복지정책 3년 연속 대상…전국 지자체 평가서 우수성 입증",
+   "outlet": "경북일보",
+   "published": "2026-11-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4089203",
+   "title": "MRI로 PET 정보 추정…영남대병원, 생성형 AI로 척추 진단 연구",
+   "outlet": "경북일보",
+   "published": "2026-11-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.etnews.com/20261101000090",
+   "title": "日 APL 찾은 이재용, AI승부처 '첨단 패키징' 챙겼다…소부장 협력 논의",
+   "outlet": "미래를 보는 창 - 전자신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=711628",
+   "title": "오픈AI·구글·MS·앤트로픽, AI 학습 거부 공통 표준 도입",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-11-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=711616",
+   "title": "SKT, AI 중심으로 일하는 방식 바꾼다…'AX 혁신 2.0' 추진",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-11-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216865",
+   "title": "딥시크, 코딩 '슈퍼 에이전트' 공개…6개월 만에 추격 기반 구축",
+   "outlet": "AI타임스",
+   "published": "2026-11-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216846",
+   "title": "앤트로픽, '20배 사용량' 혼선에 요금제 개편…5시간 제한 폐지",
+   "outlet": "AI타임스",
+   "published": "2026-10-31",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.jkn.co.kr/post/1062708",
+   "title": "행안부·개보위 AI 토론회 개최…국민 200명 참여",
+   "outlet": "재경일보",
+   "published": "2026-11-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-02-px-챗지피티-코덱스-한도-통합-소식과-반응",
+   "title": "[공공AX 네트워크] 공유된 12월 챗지피티·코덱스 한도 통합 소식",
+   "outlet": "akwiki.org",
+   "published": "2026-11-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-02-px-민원-시뮬레이터와-웹-월드-제작물-공유",
+   "title": "[공공AX 네트워크] 민원 시뮬레이터 데모와 웹 월드 제작물 공유",
+   "outlet": "akwiki.org",
+   "published": "2026-11-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-02-px-ai-피클-음성-통화와-민원-응대의-벽",
+   "title": "[공공AX 네트워크] 전화 대행 AI 피클의 체험담과 민원 응대의 조건",
+   "outlet": "akwiki.org",
+   "published": "2026-11-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261031160238",
    "title": "삼성 사장단, 올트먼과 'AI 미래전략' 논의",

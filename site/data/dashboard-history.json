@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-01T14:29:58Z",
+ "updated_at": "2026-11-01T22:47:26Z",
  "note": "복원 = 지금 원장으로 되돌아본 값이라 그날 화면의 숫자와 다를 수 있다(나중에 지운 중복·고친 분류가 소급된다). 관측 = 그날 적어 둔 실측값.",
  "days": {
   "2026-08-07": {
@@ -903,9 +903,9 @@
    "mcp_rate": 0.1556,
    "domestic_model_rate": 0.0625,
    "local_model_rate": 0.2734,
-   "gitlab_cases": 307,
+   "gitlab_cases": 308,
    "github_cases": 177,
-   "gitlab_license_none_rate": 0.5896,
+   "gitlab_license_none_rate": 0.5909,
    "source": "관측",
    "members": 2599,
    "total_champions": 250
@@ -916,9 +916,9 @@
    "mcp_rate": 0.1553,
    "domestic_model_rate": 0.062,
    "local_model_rate": 0.2713,
-   "gitlab_cases": 307,
+   "gitlab_cases": 308,
    "github_cases": 177,
-   "gitlab_license_none_rate": 0.5896,
+   "gitlab_license_none_rate": 0.5909,
    "source": "관측",
    "members": 2638,
    "total_champions": 250
@@ -929,9 +929,9 @@
    "mcp_rate": 0.1551,
    "domestic_model_rate": 0.062,
    "local_model_rate": 0.2713,
-   "gitlab_cases": 307,
+   "gitlab_cases": 308,
    "github_cases": 177,
-   "gitlab_license_none_rate": 0.5896,
+   "gitlab_license_none_rate": 0.5909,
    "source": "관측",
    "members": 2644,
    "total_champions": 250
@@ -942,9 +942,9 @@
    "mcp_rate": 0.1546,
    "domestic_model_rate": 0.062,
    "local_model_rate": 0.2713,
-   "gitlab_cases": 307,
+   "gitlab_cases": 308,
    "github_cases": 178,
-   "gitlab_license_none_rate": 0.5896,
+   "gitlab_license_none_rate": 0.5909,
    "source": "관측",
    "members": 2656,
    "total_champions": 250
@@ -955,9 +955,9 @@
    "mcp_rate": 0.1559,
    "domestic_model_rate": 0.062,
    "local_model_rate": 0.2713,
-   "gitlab_cases": 308,
+   "gitlab_cases": 309,
    "github_cases": 178,
-   "gitlab_license_none_rate": 0.5909,
+   "gitlab_license_none_rate": 0.5922,
    "source": "관측",
    "members": 2669,
    "total_champions": 251
@@ -968,9 +968,9 @@
    "mcp_rate": 0.1557,
    "domestic_model_rate": 0.0615,
    "local_model_rate": 0.2692,
-   "gitlab_cases": 308,
+   "gitlab_cases": 309,
    "github_cases": 178,
-   "gitlab_license_none_rate": 0.5909,
+   "gitlab_license_none_rate": 0.5922,
    "source": "관측",
    "members": 2708,
    "total_champions": 251
@@ -981,9 +981,9 @@
    "mcp_rate": 0.1554,
    "domestic_model_rate": 0.0615,
    "local_model_rate": 0.2692,
-   "gitlab_cases": 308,
+   "gitlab_cases": 309,
    "github_cases": 179,
-   "gitlab_license_none_rate": 0.5909,
+   "gitlab_license_none_rate": 0.5922,
    "source": "관측",
    "members": 2731,
    "total_champions": 251
@@ -994,9 +994,9 @@
    "mcp_rate": 0.1552,
    "domestic_model_rate": 0.0615,
    "local_model_rate": 0.2692,
-   "gitlab_cases": 308,
+   "gitlab_cases": 309,
    "github_cases": 180,
-   "gitlab_license_none_rate": 0.5909,
+   "gitlab_license_none_rate": 0.5922,
    "source": "관측",
    "members": 2752,
    "total_champions": 251
@@ -1012,12 +1012,25 @@
    "mcp_rate": 0.1499,
    "domestic_model_rate": 0.0615,
    "local_model_rate": 0.2692,
-   "gitlab_cases": 308,
+   "gitlab_cases": 309,
    "github_cases": 183,
-   "gitlab_license_none_rate": 0.5909,
+   "gitlab_license_none_rate": 0.5922,
    "source": "관측",
    "members": 2756,
    "total_champions": 251
+  },
+  "2026-11-02": {
+   "total_cases": 653,
+   "mcp_cases": 99,
+   "mcp_rate": 0.1516,
+   "domestic_model_rate": 0.0611,
+   "local_model_rate": 0.2672,
+   "gitlab_cases": 315,
+   "github_cases": 183,
+   "gitlab_license_none_rate": 0.5905,
+   "source": "관측",
+   "members": 2755,
+   "total_champions": 256
   }
  }
 }

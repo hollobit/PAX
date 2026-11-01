@@ -1,37 +1,37 @@
 {
- "generated_at": "2026-11-01",
+ "generated_at": "2026-11-02",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 647,
- "total_champions": 251,
+ "total_cases": 653,
+ "total_champions": 256,
  "community": {
-  "members": 2756,
-  "kakao_week": 5017,
-  "kakao_total_observed": 63904,
+  "members": 2755,
+  "kakao_week": 4218,
+  "kakao_total_observed": 63931,
   "threads_observed": 418
  },
  "certified_champions": 5,
- "unattributed_cases": 184,
+ "unattributed_cases": 183,
  "ax_distribution": {
-  "AI-Ready": 414,
-  "AI-Enabled": 199,
+  "AI-Ready": 416,
+  "AI-Enabled": 203,
   "AX 단계 외": 28,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
  "c_axis_mean": 0.94,
  "p_distribution": {
-  "P0": 198,
-  "P1": 429,
-  "P2": 20
+  "P0": 200,
+  "P1": 431,
+  "P2": 22
  },
  "model_dependency": {
   "미확인": 66,
-  "없음(비LLM)": 321,
+  "없음(비LLM)": 323,
   "해외 오픈웨이트(로컬)": 34,
-  "혼합": 17,
+  "혼합": 18,
   "해외 상용 API": 71,
-  "모델 중립(BYO)": 101,
+  "모델 중립(BYO)": 104,
   "국산 독자모델": 7,
   "미상": 29,
   "국산 오픈웨이트": 1
@@ -923,6 +923,13 @@
      "Solar Pro 4",
      "Solar Decide"
     ]
+   },
+   {
+    "id": "a4a260570bff3905",
+    "title": "온나라 공문 파일 정리 보더콜리 — 조회 목록 공문의 첨부를 공문별 폴더로 일괄 저장하고 기한·할 일을 검토 보고서 한 표로 정리하는 엣지 확장",
+    "models": [
+     "공통기반 AI(FabriX·CLOVA for GOV 등, 선택)"
+    ]
    }
   ],
   "dist_detail": {
@@ -931,7 +938,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 321,
+    "n": 323,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -939,16 +946,16 @@
     "specified": 21
    },
    "혼합": {
-    "n": 17,
-    "specified": 15
+    "n": 18,
+    "specified": 16
    },
    "해외 상용 API": {
     "n": 71,
     "specified": 56
    },
    "모델 중립(BYO)": {
-    "n": 101,
-    "specified": 10
+    "n": 104,
+    "specified": 11
    },
    "국산 독자모델": {
     "n": 7,
@@ -1100,7 +1107,7 @@
    },
    {
     "dep": "혼합",
-    "n": 17,
+    "n": 18,
     "families": [
      {
       "name": "Gemini",
@@ -1393,6 +1400,34 @@
       "domestic": false,
       "variants": [
        "Kimi K3"
+      ]
+     },
+     {
+      "name": "로컬 음성인식·화자 구분",
+      "n": 1,
+      "cases": [
+       {
+        "id": "d88619666f1113d0",
+        "title": "회의 받아쓰기 — 의회·회의 중계를 PC 안에서 실시간 녹취하고 발언자를 구분하며 내 사업 언급을 알려 주는 프로그램"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "로컬 음성인식·화자 구분"
+      ]
+     },
+     {
+      "name": "외부 AI 요약(선택)",
+      "n": 1,
+      "cases": [
+       {
+        "id": "d88619666f1113d0",
+        "title": "회의 받아쓰기 — 의회·회의 중계를 PC 안에서 실시간 녹취하고 발언자를 구분하며 내 사업 언급을 알려 주는 프로그램"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "외부 AI 요약(선택)"
       ]
      }
     ]
@@ -2000,18 +2035,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.062,
- "local_model_rate": 0.269,
- "model_known": 130,
- "license_tagged": 468,
- "license_stated_rate": 0.496,
- "gitlab_cases": 308,
+ "domestic_model_rate": 0.061,
+ "local_model_rate": 0.267,
+ "model_known": 131,
+ "license_tagged": 475,
+ "license_stated_rate": 0.495,
+ "gitlab_cases": 315,
  "gitlab_mirror_pairs": 42,
- "gitlab_open_rate": 0.136,
- "mcp_cases": 97,
+ "gitlab_open_rate": 0.133,
+ "mcp_cases": 99,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 565,
+  "미확인": 571,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -2019,28 +2054,28 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.793
+  "feedback": 0.795
  },
  "maintenance_distribution": {
-  "활발": 308,
-  "정체": 118,
-  "방치": 14
+  "활발": 286,
+  "정체": 144,
+  "방치": 17
  },
- "stars_collected": 440,
+ "stars_collected": 447,
  "repo_stats": {
   "gitlab": {
-   "count": 308,
-   "starred": 306,
-   "stars_sum": 684,
+   "count": 315,
+   "starred": 307,
+   "stars_sum": 708,
    "maintenance": {
-    "활발": 220,
-    "정체": 86
+    "활발": 194,
+    "정체": 113
    },
    "top": [
     {
      "id": "8ff758ac1d5e40eb",
      "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
-     "stars": 20,
+     "stars": 24,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "류승인"
@@ -2048,7 +2083,7 @@
     {
      "id": "43dc7f4ab2500260",
      "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
-     "stars": 16,
+     "stars": 17,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "류승인"
@@ -2056,10 +2091,18 @@
     {
      "id": "a8492663acf67b99",
      "title": "나라예산 한눈에 — 중앙관서 세출예산서 8,500건 웹서비스",
-     "stars": 11,
+     "stars": 12,
      "maintenance": "활발",
      "license": "명시 없음",
      "developer": "김기현"
+    },
+    {
+     "id": "de4b2dab339d69b7",
+     "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
+     "stars": 10,
+     "maintenance": "활발",
+     "license": "Other",
+     "developer": "류승인"
     },
     {
      "id": "2798c2e0b79ab291",
@@ -2078,20 +2121,20 @@
      "developer": "정솔현"
     },
     {
-     "id": "de4b2dab339d69b7",
-     "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
-     "stars": 9,
-     "maintenance": "활발",
-     "license": "Other",
-     "developer": "류승인"
-    },
-    {
      "id": "ac09bd2e1c0fbb29",
      "title": "온AI Work — 공무원 보고서 AI 작성 도구",
      "stars": 9,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "정준우"
+    },
+    {
+     "id": "471dabbd273eab34",
+     "title": "한글편집 후처리 도구 — 보고서의 자간·서식·문두기호를 한글 프로그램 자동 조작으로 한 번에 다듬는 데스크톱 앱",
+     "stars": 9,
+     "maintenance": "활발",
+     "license": "명시 없음",
+     "developer": "공혁준"
     },
     {
      "id": "d6c35b2999da8ca0",
@@ -2108,31 +2151,23 @@
      "maintenance": "활발",
      "license": "AGPL-3.0",
      "developer": "우성균"
-    },
-    {
-     "id": "8c5458af8f13435d",
-     "title": "한글 AI 도우미 — 로컬 LLM 웹한글 보고서 확장",
-     "stars": 7,
-     "maintenance": "활발",
-     "license": "명시 없음",
-     "developer": "정재경"
     }
    ]
   },
   "github": {
    "count": 183,
-   "starred": 174,
-   "stars_sum": 785994,
+   "starred": 180,
+   "stars_sum": 835603,
    "maintenance": {
     "정체": 41,
-    "활발": 120,
-    "방치": 14
+    "활발": 123,
+    "방치": 17
    },
    "top": [
     {
      "id": "3f7b3180bf404e54",
      "title": "rea — 에이전트로 앱 동작부터 네이티브 바이너리까지 역공학하는 오픈소스",
-     "stars": 384309,
+     "stars": 418502,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "morluto"
@@ -2140,7 +2175,7 @@
     {
      "id": "c54ee4b5fb3ee4c5",
      "title": "Orca — 병렬 에이전트 플릿을 부리는 에이전트 개발 환경(ADE)",
-     "stars": 105738,
+     "stars": 112432,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "stablyai"
@@ -2148,7 +2183,7 @@
     {
      "id": "4f136eeeea72fe65",
      "title": "Archify — 코드베이스·시스템 설명을 검증 가능한 다이어그램으로 바꾸는 에이전트 스킬",
-     "stars": 89150,
+     "stars": 92373,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "tt-a1i"
@@ -2156,7 +2191,7 @@
     {
      "id": "2085370092f99007",
      "title": "God's Eye View — 항공기·선박·위성·지진·공개 카메라를 한 3D 지구본에 띄우는 오픈소스 공간정보 관제 참고 도구",
-     "stars": 60034,
+     "stars": 62043,
      "maintenance": "활발",
      "license": "Other",
      "developer": "bilawalsidhu"
@@ -2164,7 +2199,7 @@
     {
      "id": "04af7fa6f99a64e4",
      "title": "CL4R1T4S — 주요 AI 서비스의 시스템 프롬프트를 모아 공개한 투명성 저장소",
-     "stars": 51501,
+     "stars": 51682,
      "maintenance": "활발",
      "license": "AGPL-3.0",
      "developer": "elder-plinius"
@@ -2172,7 +2207,7 @@
     {
      "id": "f108979f0d8b2009",
      "title": "book-to-skill — 기술 서적 PDF를 Claude Code 스킬로 바꾸는 도구",
-     "stars": 36073,
+     "stars": 36705,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "virgiliojr94"
@@ -2180,7 +2215,7 @@
     {
      "id": "5cda81d84c79d926",
      "title": "ai-memory — 여러 코딩 에이전트가 하나의 장기 기억을 나눠 쓰고 작업을 넘겨받게 하는 자체 운영 메모리 서버(MIT)",
-     "stars": 13504,
+     "stars": 14819,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "akitaonrails"
@@ -2188,7 +2223,7 @@
     {
      "id": "b64e832490a6c814",
      "title": "MCP Inspector — MCP 서버를 눈으로 검사하는 공식 테스트 도구",
-     "stars": 11149,
+     "stars": 11208,
      "maintenance": "활발",
      "license": "명시 없음",
      "developer": "modelcontextprotocol"
@@ -2196,7 +2231,7 @@
     {
      "id": "2f4ed1e68a6464c5",
      "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
-     "stars": 8118,
+     "stars": 8232,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "NomaDamas"
@@ -2204,7 +2239,7 @@
     {
      "id": "0292062a6328545a",
      "title": "public-apis-4Kr — 한국 공개 API 300+ 커뮤니티 큐레이션 목록",
-     "stars": 3306,
+     "stars": 3313,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "yoobin_mion"
@@ -2213,9 +2248,9 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 236,
-  "MIT": 152,
-  "Apache-2.0": 37,
+  "명시 없음": 240,
+  "MIT": 154,
+  "Apache-2.0": 38,
   "Other": 20,
   "AGPL-3.0": 5,
   "기타(비표준)": 5,
@@ -2232,15 +2267,15 @@
  "license_matrix": {
   "명시 없음": {
    "github": 64,
-   "gitlab": 172
+   "gitlab": 176
   },
   "MIT": {
    "github": 88,
-   "gitlab": 63
+   "gitlab": 65
   },
   "Apache-2.0": {
    "github": 15,
-   "gitlab": 22
+   "gitlab": 23
   },
   "Other": {
    "github": 20,
@@ -2301,17 +2336,17 @@
    "stated": 7
   },
   "gitlab": {
-   "total": 274,
-   "stated": 102
+   "total": 281,
+   "stated": 105
   }
  },
  "mcp_stats": {
-  "total": 97,
+  "total": 99,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
-   "Server": 83,
+   "Server": 85,
    "Client/Host": 7,
    "Unknown/None": 6
   },
@@ -2319,12 +2354,12 @@
    "C0": 69,
    "C2": 10,
    "C3": 1,
-   "C1": 17
+   "C1": 19
   },
   "maintenance": {
-   "정체": 22,
-   "활발": 48,
-   "방치": 13
+   "정체": 21,
+   "활발": 47,
+   "방치": 16
   }
  },
  "mirror_pair_cases": [
