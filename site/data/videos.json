@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-10-29T06:34:45Z",
- "count": 121,
+ "updated_at": "2026-11-01T06:34:18Z",
+ "count": 122,
  "videos": [
+  {
+   "id": "RMD91n01DuA",
+   "title": "Feel the Rhythm of Korea - Seosan",
+   "channel": "VISITKOREA",
+   "url": "https://www.youtube.com/watch?v=RMD91n01DuA",
+   "thumb": "https://i.ytimg.com/vi/RMD91n01DuA/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-01",
+   "last_shared": "2026-11-01",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "yJ2Iz1tFZ-Y",
    "title": "인생을 개인형 온톨로지로 하네스 엔지니어링",

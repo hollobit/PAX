@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-31T22:34:40Z",
- "count": 1256,
+ "updated_at": "2026-11-01T06:34:20Z",
+ "count": 1257,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261031160238",
@@ -72,6 +72,19 @@
    "title": "엔비디아, 엔스케일 자금난에 지원 검토…앤트로픽 60조 데이터센터 신용 보증",
    "outlet": "AI타임스",
    "published": "2026-10-31",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-01",
+   "last_shared": "2026-11-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://tech.jehyunlee.dev/2023/12/25/General-33-ChatGPT_DataAnalysis",
+   "title": "ChatGPT로 한글과 한자가 적힌 카드 만들기",
+   "outlet": "Pega Devlog",
+   "published": "2023-12-25",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-01",
