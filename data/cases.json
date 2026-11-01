@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-30T15:33:51+09:00",
+ "updated_at": "2026-11-01T23:27:26+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -18091,6 +18091,449 @@
    "license": "Apache-2.0",
    "license_source": "github",
    "license_checked": "2026-10-30"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "p5.48xlarge와 g6e 같은 GPU 인스턴스를 5개 리전에서 스팟으로 띄울 수 있는 가능성 점수와 최저 가격을 매시간 모아 보여 준다. 클라우드 제약이 없는 연구·벤치마크 목적으로 GPU를 잠깐씩 빌릴 때 리전과 가용 영역을 고르는 데 쓰라고 오픈톡에 소개됐다.",
+   "tags": [
+    "클라우드",
+    "GPU",
+    "대시보드"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "데이터·통계",
+   "title": "Spot Placement Score 대시보드 — AWS GPU 스팟 인스턴스의 리전별 배치 점수와 최저가를 시간 단위로 보여 주는 페이지",
+   "source": "kakao",
+   "date": "2026-10-16",
+   "org": "로보코(ROBOCO)",
+   "runtime_env": "브라우저만",
+   "link": "https://spot.roboco.io/",
+   "id": "40018d46befd2fc7"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "Claude Code 세션의 주 에이전트, 하위 에이전트, 백그라운드 명령과 도구 호출을 로컬에서 읽기 전용으로 받아 3D 또는 2D 공간에 실시간으로 그리고, 끝난 작업을 재생해 볼 수 있다. 세 가지 테마와 작업 상황에 맞춘 배경 음악을 고를 수 있으며 Apache-2.0으로 공개됐다.",
+   "tags": [
+    "바이브코딩",
+    "시각화",
+    "에이전트",
+    "오픈소스"
+   ],
+   "org_type": "민간(참고)",
+   "case_url": "https://github.com/burn001/agent4d",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "Agent4D — Claude Code 작업 중인 에이전트·하위 에이전트·도구 호출을 3D 가상 오피스로 실시간 보여 주고 다시 재생하는 뷰어",
+   "source": "kakao",
+   "date": "2026-10-26",
+   "org": "민간 개발자(개인)",
+   "runtime_env": "설치 필요",
+   "link": "https://burn001.github.io/agent4d/",
+   "id": "d9542e0672ff08d1",
+   "license": "Apache-2.0",
+   "license_source": "github",
+   "license_checked": "2026-11-01"
+  },
+  {
+   "model_dependency": "모델 중립(BYO)",
+   "collected_at": "2026-11-01",
+   "summary": "AI 코딩 에이전트에 붙여 쓰는 보안 스킬 묶음으로, 인증 우회나 업로드 파일 실행 같은 공격 경로를 찾아 고치고 정상 동작을 다시 확인하는 보안, 늘 쓰던 패키지와 컨테이너를 검증하는 의심, 공격자에게 가짜 정보를 주는 함정으로 나뉜다. 필요한 스킬만 골라 쓸 수 있고 MIT 라이선스로 공개됐다.",
+   "tags": [
+    "보안",
+    "바이브코딩",
+    "스킬",
+    "오픈소스"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "podori — 웹앱 보안 허점을 찾아 고치고 의존성을 의심·검증하는 AI 코딩 에이전트용 보안 스킬 모음",
+   "source": "kakao",
+   "date": "2026-10-27",
+   "org": "민간 개발자(개인)",
+   "runtime_env": "AI 도구 설정",
+   "link": "https://github.com/VerifiedIdiot/podori",
+   "id": "d25f3bc80ee15113",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-11-01"
+  },
+  {
+   "model_dependency": "모델 중립(BYO)",
+   "collected_at": "2026-11-01",
+   "summary": "Claude Code나 Codex 안에서 도는 PPT 생성 스킬로, PDF·DOCX·엑셀·웹 주소나 주제 한 줄을 받아 방향과 디자인을 확인한 뒤 페이지를 SVG로 그려 도형·텍스트·차트가 실제 PowerPoint 개체인 PPTX로 변환한다. 공개 프로젝트를 한국어 보고서 제작에 맞게 고친 것으로 오픈톡에서 보고자료 제작용으로 공유됐다.",
+   "popularity": 301,
+   "tags": [
+    "문서자동화",
+    "PPT",
+    "스킬",
+    "오픈소스"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "문서·기안",
+   "title": "Slide Master — 문서를 넣으면 PowerPoint에서 요소별로 고칠 수 있는 네이티브 PPTX를 만드는 AI 에이전트 워크플로",
+   "source": "kakao",
+   "date": "2026-10-28",
+   "org": "민간 개발자(개인)",
+   "runtime_env": "AI 도구 설정",
+   "link": "https://github.com/byungjunjang/slide-master",
+   "id": "086a3bcb3b948b73",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-11-01"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "회사 이름을 검색하면 국민연금 가입 사업장 공공데이터의 가입자 증감과 같은 지표로 위험 신호를 진단하고 결과를 공유할 수 있게 해 준다. 공공데이터를 가공해 일반인이 바로 쓰는 서비스로 만든 예로 오픈톡에 소개됐다.",
+   "tags": [
+    "공공데이터",
+    "데이터분석",
+    "웹서비스"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "데이터·통계",
+   "title": "좋소판별기 — 국민연금 가입 사업장 공공데이터로 회사의 위험 신호를 진단하는 검색 서비스",
+   "source": "kakao",
+   "date": "2026-10-29",
+   "org": "민간 개발자(제작자 미확인)",
+   "runtime_env": "브라우저만",
+   "link": "https://jotso.net/",
+   "id": "265623a14349eca5"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "브라우저로 들어가 오리 캐릭터가 되어 다른 접속자들과 3D 연못을 헤엄치거나 벤치·뗏목에서 자연의 소리를 들으며 쉬는 공간이다. 바이브 코딩으로 한 번 쓰고 마는 웹앱과 휴식형 메타버스가 잇따라 나오는 흐름 속에서 오픈톡에 공유됐다.",
+   "tags": [
+    "메타버스",
+    "3D",
+    "휴식"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "잠깐오리 — 가입 없이 오리가 되어 다른 접속자와 3D 연못에 떠 있으며 쉬어 가는 웹 공간",
+   "source": "kakao",
+   "date": "2026-10-31",
+   "org": "민간 개발자(제작자 미확인)",
+   "runtime_env": "브라우저만",
+   "link": "https://waitduck.com/",
+   "id": "07f6eaa6c37e6aa9"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "절 마당에 앉아 다른 접속자와 말없이 머무는 온라인 절이다. 휴식형 메타버스 열풍의 출발점으로 꼽히며 오픈톡에서 비슷한 사이트 목록 맨 앞에 소개됐다.",
+   "tags": [
+    "메타버스",
+    "휴식"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "온라인 절 산사 — 말없이 다른 접속자와 함께 앉아 쉬어 가는 웹 산사",
+   "source": "kakao",
+   "date": "2026-11-01",
+   "org": "민간 개발자(제작자 미확인)",
+   "runtime_env": "브라우저만",
+   "link": "https://sansa-online-temple.vercel.app",
+   "id": "0c321cefed2dcd57"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "다른 나라 접속자의 촛불에서 불을 옮겨 붙이고 매시간 미사와 묵주기도에 함께하며 걱정을 비둘기로 날려 보내는 조용한 온라인 성당이다. 휴식형 메타버스 목록의 하나로 오픈톡에 공유됐다.",
+   "tags": [
+    "메타버스",
+    "휴식"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "InPeace — 촛불을 밝히고 매시간 미사에 함께하는 온라인 성당",
+   "source": "kakao",
+   "date": "2026-11-01",
+   "org": "민간 개발자(제작자 미확인)",
+   "runtime_env": "브라우저만",
+   "link": "https://inpeace.eric-6a5.workers.dev",
+   "id": "1ce5938c6e0b7f75"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "새벽 예배당을 웹 공간으로 옮긴 온라인 교회로, 설치 없이 브라우저에서 들어가 머물 수 있다. 온라인 절·성당과 함께 휴식형 메타버스 목록으로 오픈톡에 공유됐다.",
+   "tags": [
+    "메타버스",
+    "휴식"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "새벽 예배당 — 브라우저로 들어가는 온라인 교회 공간",
+   "source": "kakao",
+   "date": "2026-11-01",
+   "org": "민간 개발자(제작자 미확인)",
+   "runtime_env": "브라우저만",
+   "link": "https://saebyeok-church.pages.dev/",
+   "id": "c152dfe0be805d2c"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "아무 생각 없이 다른 접속자와 함께 곡괭이질을 이어 가는 온라인 탄광이다. 반복 동작으로 머리를 비우는 휴식형 메타버스 목록의 하나로 오픈톡에 공유됐다.",
+   "tags": [
+    "메타버스",
+    "휴식"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "온라인 탄광 — 다른 접속자와 말없이 한 삽씩 함께 캐는 웹 공간",
+   "source": "kakao",
+   "date": "2026-11-01",
+   "org": "민간 개발자(제작자 미확인)",
+   "runtime_env": "브라우저만",
+   "link": "https://online-tangwang.vercel.app",
+   "id": "0983eb0e0ed31c05"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "물소리·새소리·풀벌레 소리를 틀어 두고 숲속, 노천탕, 카페 공간에서 다른 접속자와 말없이 쉬어 가는 3D 온라인 사우나다. 휴식형 메타버스 목록의 하나로 오픈톡에 공유됐다.",
+   "tags": [
+    "메타버스",
+    "3D",
+    "휴식"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "사우나 고요 — 숲속·노천탕에서 자연 소리를 들으며 쉬는 3D 온라인 사우나",
+   "source": "kakao",
+   "date": "2026-11-01",
+   "org": "민간 개발자(제작자 미확인)",
+   "runtime_env": "브라우저만",
+   "link": "https://saunagoyo.com/",
+   "id": "9d2c722732fd13c1"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "설치 없이 브라우저로 들어가 다른 접속자와 같은 공간에서 요가와 명상을 하는 온라인 요가원이다. 휴식형 메타버스 목록의 하나로 오픈톡에 공유됐다.",
+   "tags": [
+    "메타버스",
+    "휴식"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "온라인 요가원 — 브라우저에서 함께 수련하며 쉬는 웹 요가원",
+   "source": "kakao",
+   "date": "2026-11-01",
+   "org": "민간 개발자(제작자 미확인)",
+   "runtime_env": "브라우저만",
+   "link": "https://yoga.meditation-kr.workers.dev",
+   "id": "526d16c6daad640c"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "캐릭터를 만들어 들어가 DJ 음악에 맞춰 다른 접속자와 춤추는 온라인 클럽의 할로윈 공간이다. 휴식형 메타버스 목록의 하나로 오픈톡에 공유됐다.",
+   "tags": [
+    "메타버스",
+    "휴식"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "숨 클럽 할로윈 — 나만의 캐릭터로 DJ 음악에 맞춰 함께 춤추는 온라인 클럽",
+   "source": "kakao",
+   "date": "2026-11-01",
+   "org": "민간 개발자(제작자 미확인)",
+   "runtime_env": "브라우저만",
+   "link": "https://soom.khclabs.com/halloween",
+   "id": "c42dd9073b8fcbe4"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "밤 한강 강변에 돗자리를 펴고 지금 접속해 있는 사람들과 함께 앉아 쉬는 공간이다. 휴식형 메타버스 목록의 하나로 오픈톡에 공유됐다.",
+   "tags": [
+    "메타버스",
+    "휴식"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "밤 한강 돗자리 — 지금 접속한 사람들과 강변에 앉아 멍때리는 웹 공간",
+   "source": "kakao",
+   "date": "2026-11-01",
+   "org": "민간 개발자(제작자 미확인)",
+   "runtime_env": "브라우저만",
+   "link": "https://hangang-night.onrender.com/",
+   "id": "0d4aced0cbd1ed50"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "실시간 모닥불 영상을 가운데 두고 둘러앉아 수련회 마지막 밤의 촛불의식을 다시 겪어 보는 온라인 야영장이다. 휴식형 메타버스 목록의 하나로 오픈톡에 공유됐다.",
+   "tags": [
+    "메타버스",
+    "휴식"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "수련회 마지막 밤 — 모닥불에 둘러앉는 온라인 야영장과 촛불의식",
+   "source": "kakao",
+   "date": "2026-11-01",
+   "org": "민간 개발자(제작자 미확인)",
+   "runtime_env": "브라우저만",
+   "link": "https://online-retreat.onlycjyj77.workers.dev/",
+   "id": "f2754e68055096cd"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "수영 서비스가 만든 온라인 수영장으로, 물 위에 떠서 물소리를 들으며 다른 회원과 함께 쉬어 간다. 휴식형 메타버스 목록의 하나로 오픈톡에 공유됐다.",
+   "tags": [
+    "메타버스",
+    "휴식"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "물멍 — 수영장에 떠서 물소리를 들으며 다른 회원과 쉬는 온라인 수영장",
+   "source": "kakao",
+   "date": "2026-11-01",
+   "org": "스윔픽(민간 서비스)",
+   "runtime_env": "브라우저만",
+   "link": "https://swimpick.co.kr/mulmeong",
+   "id": "ef674b5f7644b2ea"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "가상의 행정복지센터에서 3일 동안 민원을 처리하고 동료와 협력해 무사히 퇴근하는 것을 목표로 하는 픽셀 게임이다. 지방직 공무원이 직접 만든 민원 창구 시뮬레이터로, 제작자가 미완성 데모라고 밝혔고 민원 현장 체험이나 신규 직원 공감용으로 볼 수 있다.",
+   "tags": [
+    "민원",
+    "게임",
+    "바이브코딩"
+   ],
+   "org_type": "공직 개인",
+   "case_class": "개인 개발",
+   "task_category": "민원",
+   "title": "오늘도 무사히 퇴근 — 행정복지센터 민원 창구의 3일을 겪는 지방직 공무원 픽셀 게임(데모)",
+   "source": "kakao",
+   "date": "2026-11-01",
+   "org": "공직 현장(개인 개발)",
+   "runtime_env": "브라우저만",
+   "link": "https://minwon-survival.xgfox54.workers.dev/",
+   "id": "7b7cf8e12be3ed29"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "이름을 정하고 들어가 숲속 캠핑장을 걸어 다니며 모닥불을 쬐고 마시멜로를 굽는 3D 웹 공간이다. 클릭 몇 번으로 이런 사이트가 만들어지는 흐름을 보여 주는 예로 오픈톡에 공유됐다.",
+   "tags": [
+    "메타버스",
+    "3D",
+    "휴식"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "불멍 캠핑장 — 숲속 캠핑장을 걸으며 불을 쬐고 마시멜로를 굽는 3D 웹 공간",
+   "source": "kakao",
+   "date": "2026-11-01",
+   "org": "민간 개발자(제작자 미확인)",
+   "runtime_env": "브라우저만",
+   "link": "https://bulmung.bulmung.workers.dev/",
+   "id": "4e491441c1b21cf3"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "온톨로지 팩 마켓에 올라온 무료·유료 팩을 원형 도서관 서가에 책으로 꽂아 두고, 아바타로 걸어 다니며 꺼내 볼 수 있게 만든 웹 공간이다. 입장은 무료이며, 휴식형 메타버스 흐름을 지식 자료 열람에 응용한 예로 제작자가 오픈톡에 공유했다.",
+   "tags": [
+    "메타버스",
+    "온톨로지",
+    "3D"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "오픈크랩 도서관 — 마켓의 온톨로지 팩을 책처럼 꽂아 두고 걸어 다니며 열람하는 원형 도서관 메타버스",
+   "source": "kakao",
+   "date": "2026-11-01",
+   "org": "오픈크랩(OpenCrab)",
+   "runtime_env": "브라우저만",
+   "link": "https://opencrab.sh/library",
+   "id": "5e3e89d557d85cff"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "설치 없이 브라우저에서 아바타로 들어가 돌아다니는 메타버스 사이트들을 한곳에 모아 소개한다. 바이브 코딩으로 휴식형 메타버스가 쏟아지는 흐름을 보여 주는 모음으로 오픈톡에 공유됐다.",
+   "tags": [
+    "메타버스",
+    "모음"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "메타모아 — 브라우저로 바로 들어가는 아바타 메타버스들을 한곳에 모은 목록 사이트",
+   "source": "kakao",
+   "date": "2026-11-01",
+   "org": "민간 개발자(제작자 미확인)",
+   "runtime_env": "브라우저만",
+   "link": "https://metamoa.com",
+   "id": "69c2c646bc69528b"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "돗자리를 펴고 김밥을 먹으며 청군·백군으로 나뉘어 달리기, 박 터트리기, 줄다리기를 하는 3D 온라인 운동회다. 휴식형 메타버스가 행사형으로 넓어진 예로 오픈톡에 공유됐다.",
+   "tags": [
+    "메타버스",
+    "3D",
+    "행사"
+   ],
+   "org_type": "민간(참고)",
+   "case_class": "참고",
+   "task_category": "공통·범용",
+   "title": "김밥운동회 — 돗자리에서 김밥을 먹고 청군·백군 달리기와 줄다리기를 하는 3D 온라인 운동회",
+   "source": "kakao",
+   "date": "2026-11-01",
+   "org": "민간 개발자(제작자 미확인)",
+   "runtime_env": "브라우저만",
+   "link": "https://kimbap-undonghoe.seadr22.workers.dev/",
+   "id": "02010bd90bd1121c"
+  },
+  {
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-01",
+   "summary": "얼음 구멍에 낚싯대를 드리워 북극 물고기를 낚는 브라우저 게임이다. 지자체 실무자가 쉬는 시간에 바이브 코딩으로 만들어 오픈톡에 공유한 것으로, 업무 기능은 없는 취미 제작물이다.",
+   "tags": [
+    "게임",
+    "바이브코딩"
+   ],
+   "org_type": "공직 개인",
+   "case_class": "개인 개발",
+   "task_category": "공통·범용",
+   "title": "북극 낚시 — 지자체 공무원이 심심풀이로 만든 브라우저 얼음낚시 게임",
+   "source": "kakao",
+   "date": "2026-11-01",
+   "org": "공직 현장(개인 개발)",
+   "runtime_env": "브라우저만",
+   "link": "https://gogofish.netlify.app/",
+   "id": "e8bd2bdebe69c149"
   }
  ]
 }
