@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-01T06:34:18Z",
- "count": 122,
+ "updated_at": "2026-11-01T14:18:26Z",
+ "count": 123,
  "videos": [
   {
    "id": "RMD91n01DuA",
@@ -8,6 +8,19 @@
    "channel": "VISITKOREA",
    "url": "https://www.youtube.com/watch?v=RMD91n01DuA",
    "thumb": "https://i.ytimg.com/vi/RMD91n01DuA/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-01",
+   "last_shared": "2026-11-01",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "KgNCJq3XTPo",
+   "title": "[추천 영상] 자정 1분 전: 인류가 일해 온 방식을 24시간 시계로",
+   "channel": "딴짓하는 류주임",
+   "url": "https://www.youtube.com/watch?v=KgNCJq3XTPo",
+   "thumb": "https://i.ytimg.com/vi/KgNCJq3XTPo/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-11-01",
    "last_shared": "2026-11-01",
