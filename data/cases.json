@@ -4507,7 +4507,7 @@
    "case_class": "개인 개발",
    "region": null,
    "task_category": "문서·기안",
-   "link_ok": false,
+   "link_ok": true,
    "health_checked": "2026-11-02",
    "maintenance": "활발",
    "stars": 9,
@@ -11517,7 +11517,7 @@
    "org": "전북특별자치도",
    "summary": "외부 상용 서비스에 기대지 않고 도가 직접 세운 생성형 AI 업무 시스템으로, 민감한 행정정보를 내부에서 처리하면서 보고서 작성과 업무편람 질의응답 등 서른 가지 남짓한 기능을 제공한다. 운영 석 달 만에 누적 이용 십만 건을 넘고 이용자가 삼천 명을 웃돌아 본청은 대부분 직원이 쓰는 단계에 이르렀다. 모바일 접근과 전용 앱을 더해 자리와 시간 제약을 줄였고, 천 명 넘게 교육을 마친 뒤 산하 공공기관까지 적용을 넓히는 중이다.",
    "id": "55f606c2835337ba",
-   "link_ok": false,
+   "link_ok": true,
    "health_checked": "2026-11-02"
   },
   {
@@ -11962,7 +11962,7 @@
    "runtime_env": "브라우저만",
    "region": "충남",
    "id": "a5cfce33ba2fe7ba",
-   "link_ok": false,
+   "link_ok": true,
    "health_checked": "2026-11-02"
   },
   {
@@ -16168,7 +16168,7 @@
    "org_type": "기초지자체",
    "model_dependency": "미상",
    "id": "889a6a09e68b20cd",
-   "link_ok": false,
+   "link_ok": true,
    "health_checked": "2026-11-02"
   },
   {
