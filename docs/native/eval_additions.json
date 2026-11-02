@@ -16322,5 +16322,33 @@
   "rationale": "공시·내규·단체협약·법령 66만여 문서를 색인해 검색·조회·비교 도구 일곱 개를 원격 MCP로 제공하므로 S2·AI-Enabled다. 근거 조문이 붙은 결과를 주고 판단은 이용자가 하므로 C1이며 읽기 전용이라 R1로 둔다. 이용 안내 페이지 응답과 공공 깃랩 문서를 확인했다.",
   "resilience": "서버 소스·DB 비공개(접속 키 신청형), 공공 깃랩에 이용 문서 공개, 11-04~06 점검 예고",
   "service_url": "https://mcp.k-union.kr/alio/"
+ },
+ {
+  "no": 656,
+  "id": "f0ce4971839455c2",
+  "org": "공직 현장(개인 개발)",
+  "title": "광진구청 민원 대소동 — 번호표를 뽑고 구청을 오르며 복지부동 공무원을 깨우는 풍자 브라우저 게임",
+  "ax_prev": "AI-Ready",
+  "ax": "AI-Ready",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "post_url": "",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C0",
+  "c_name": "기능 제공",
+  "status": "Live service",
+  "scope": "External",
+  "risk": "R0 최소",
+  "human": "해당 없음",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "rationale": "브라우저 게임 하나라 S1·C0이며 업무 기능은 없다. 공무원이 AI 코딩으로 민원 현장을 풍자한 제작물로, 같은 흐름의 공직 개인 게임들과 함께 기록한다. 배포 페이지 응답과 화면 구성을 확인했다.",
+  "resilience": "미확인(개인 배포, 소스 비공개)",
+  "service_url": "https://gucheong-quest.vercel.app"
  }
 ]

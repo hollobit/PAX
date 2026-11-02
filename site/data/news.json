@@ -1,12 +1,25 @@
 {
- "updated_at": "2026-11-02T06:34:59Z",
- "count": 1275,
+ "updated_at": "2026-11-02T14:21:44Z",
+ "count": 1278,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261101155847",
    "title": "21일 걸리던 업무, 8일로…HD현대로보틱스·팔란티어 '피지컬AI' 고도화",
    "outlet": "zdnet.co.kr",
    "published": "2026-11-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mopsnmoes.com/articles/what-gets-measured-gets-managed",
+   "title": "What Gets Measured, Gets Managed?",
+   "outlet": "MOPs and MOEs",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-02",
@@ -172,6 +185,19 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-11-02-px-생성형ai-구독료-비목과-감사-대비-걱정",
+   "title": "[공공AX 네트워크] 생성형AI 구독료를 어느 비목에 잡을까",
+   "outlet": "akwiki.org",
+   "published": "2026-11-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-11-02-px-민원-시뮬레이터와-웹-월드-제작물-공유",
    "title": "[공공AX 네트워크] 민원 시뮬레이터 데모와 웹 월드 제작물 공유",
    "outlet": "akwiki.org",
@@ -187,6 +213,19 @@
   {
    "url": "https://akwiki.org/article/2026-11-02-px-ai-피클-음성-통화와-민원-응대의-벽",
    "title": "[공공AX 네트워크] 전화 대행 AI 피클의 체험담과 민원 응대의 조건",
+   "outlet": "akwiki.org",
+   "published": "2026-11-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-02-px-ai-전문관-임용-소식과-구독료-지원-반응",
+   "title": "[공공AX 네트워크] AI 전담 직위 소식에 이어진 축하와 구독료 이야기",
    "outlet": "akwiki.org",
    "published": "2026-11-02",
    "kind": "기사",
