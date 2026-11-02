@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-01T22:47:25Z",
- "count": 1272,
+ "updated_at": "2026-11-02T06:34:59Z",
+ "count": 1275,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261101155847",
@@ -107,9 +107,48 @@
    ]
   },
   {
+   "url": "https://v.daum.net/v/20261102115156146?botref=KN&botevent=e",
+   "title": "[관가in] 예산 심사 앞두고 국회 앞 '한달살이'…숙소예약 전쟁",
+   "outlet": "Daum | 아시아경제",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://news.jkn.co.kr/post/1062708",
    "title": "행안부·개보위 AI 토론회 개최…국민 200명 참여",
    "outlet": "재경일보",
+   "published": "2026-11-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.etnews.com/20260429000398?obj=Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJyZWZlcmVyIjtzOjUxOiJodHRwczovL20uZGNpbnNpZGUuY29tL2JvYXJkL3RoZXNpbmd1bGFyaXR5LzExNTMzNTgiO3M6NzoiZm9yd2FyZCI7czoxMzoid2ViIHRvIG1vYmlsZSI7fQ%3D%3D",
+   "title": "'연봉 상한까지 없앤다'…靑, 'AI 전문가 공무원' 양성한다",
+   "outlet": "미래를 보는 신문 - 전자신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-02",
+   "last_shared": "2026-11-02",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://gitlog.kr/i/cgko0",
+   "title": "RAM에서 전파신호 생성해 폐쇄망 컴퓨터 정보 탈취",
+   "outlet": "gitlog",
    "published": "2026-11-01",
    "kind": "기사",
    "shares": 1,
