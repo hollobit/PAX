@@ -1,7 +1,98 @@
 {
- "updated_at": "2026-11-02T14:21:44Z",
- "count": 1278,
+ "updated_at": "2026-11-02T22:35:32Z",
+ "count": 1285,
  "articles": [
+  {
+   "url": "https://www.thelec.kr/news/articleView.html?idxno=64666",
+   "title": "네이버클라우드, 육군 군수사령부와 AI 기반 군수체계 구축",
+   "outlet": "디일렉(THE ELEC)",
+   "published": "2026-11-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.techm.kr/news/articleView.html?idxno=156767",
+   "title": "삼성SDS, 구미 AI 데이터센터 착공...2028년 준공 목표",
+   "outlet": "테크M",
+   "published": "2026-11-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4089381",
+   "title": "NIA, 전국 중학생 60여 명 대상 ‘AI윤리 ON’ 캠프 개최",
+   "outlet": "경북일보",
+   "published": "2026-11-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202611011201532953",
+   "title": "공무원 업무망서 AI 웹검색…12월부터 보고서 작성도 지원",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-11-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.chungnamilbo.co.kr/news/articleView.html?idxno=918022",
+   "title": "제천시, 충북 도내 최초 생성형 인공지능(AI) 민원 응대 서비스 운영",
+   "outlet": "충남일보",
+   "published": "2026-11-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42538",
+   "title": "영화 각본도 챗GPT가 쓴다…일본, 전편 생성형 AI 장편영화 2027년 공개",
+   "outlet": "인공지능신문",
+   "published": "2026-11-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216924",
+   "title": "에이수스, 에이전틱 AI를 위한 NVIDIA Vera CPU 기반 ‘XA P2N-E2’ 공개",
+   "outlet": "AI타임스",
+   "published": "2026-11-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261101155847",
    "title": "21일 걸리던 업무, 8일로…HD현대로보틱스·팔란티어 '피지컬AI' 고도화",
