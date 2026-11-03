@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-11-02T06:34:58Z",
- "count": 124,
+ "updated_at": "2026-11-03T06:34:36Z",
+ "count": 126,
  "videos": [
+  {
+   "id": "mTmIhPmFNbc",
+   "title": "Researcher Mode | 이제 우리는 모두 연구자가 되어야 합니다",
+   "channel": "까칠한AI",
+   "url": "https://www.youtube.com/watch?v=mTmIhPmFNbc",
+   "thumb": "https://i.ytimg.com/vi/mTmIhPmFNbc/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "EtP4AenSHg8",
+   "title": "The Model That's Been Hacking Everything (I got access)",
+   "channel": "Ras Mic",
+   "url": "https://www.youtube.com/watch?v=EtP4AenSHg8",
+   "thumb": "https://i.ytimg.com/vi/EtP4AenSHg8/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "Vvovfi0zQlI",
    "title": "이순신의 세 해전을 3D로 다시 싸워 보니",

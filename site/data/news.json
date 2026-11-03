@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-11-02T22:35:32Z",
- "count": 1285,
+ "updated_at": "2026-11-03T06:35:41Z",
+ "count": 1287,
  "articles": [
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261102041000063",
+   "title": "대전시 공무원이 생성형 AI로 행정 오류 복구프로그램 개발",
+   "outlet": "연합뉴스",
+   "published": "2026-11-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.thelec.kr/news/articleView.html?idxno=64666",
    "title": "네이버클라우드, 육군 군수사령부와 AI 기반 군수체계 구축",
@@ -85,6 +98,19 @@
    "title": "에이수스, 에이전틱 AI를 위한 NVIDIA Vera CPU 기반 ‘XA P2N-E2’ 공개",
    "outlet": "AI타임스",
    "published": "2026-11-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://v.daum.net/v/20261103061519413",
+   "title": "[단독] 이재명 대통령 여권번호까지…‘1호기 탑승자’ 168명 정보 인터넷에 노출",
+   "outlet": "Daum | KBS",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-03",
