@@ -1,7 +1,163 @@
 {
- "updated_at": "2026-11-03T14:18:00Z",
- "count": 1292,
+ "updated_at": "2026-11-03T22:33:49Z",
+ "count": 1304,
  "articles": [
+  {
+   "url": "https://www.news1.kr/local/moi/6339964",
+   "title": "동대문구, AI·스마트도시 사업 45개 점검…개선방안 논의",
+   "outlet": "뉴스1",
+   "published": "2026-11-02",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=242641",
+   "title": "LGU+, 서울여대와 ‘개인정보보호·AI’ 협력 확대",
+   "outlet": "아이티데일리",
+   "published": "2026-11-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42557",
+   "title": "레드햇, “AI가 취약점 찾아도 신뢰는 사람이 지켜야”…책임 있는 보안 공개 강조",
+   "outlet": "인공지능신문",
+   "published": "2026-11-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42554",
+   "title": "NC AI, 로봇의 ‘눈’ 될 초경량 피지컬 AI 모델 ‘배키 비전 3B’ 개발…글로벌 대형 모델 6종 제쳤다",
+   "outlet": "인공지능신문",
+   "published": "2026-11-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42553",
+   "title": "업스테이지 솔라 프로 4, 범정부 AI 공통기반 정식 탑재…행정망에서 국산 AI 활용 본격화",
+   "outlet": "인공지능신문",
+   "published": "2026-11-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216967",
+   "title": "딥 프린시플, 일부 과학 평가서 GPT-6 아스트라 앞선 '하이드로젠' 공개",
+   "outlet": "AI타임스",
+   "published": "2026-11-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://apnews.com/projects/elections-2026",
+   "title": "2026 Midterm Election Results: Senate, House and Governor Races",
+   "outlet": "AP News",
+   "published": "2026-11-01",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-04-px-악성코드-의심과-키-유출-사고담",
+   "title": "[공공AX 네트워크] AI 도구 악성코드 의심과 키 유출·지시 실수",
+   "outlet": "akwiki.org",
+   "published": "2026-11-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-04-px-보안-사고-뒤-바이브코딩-억제",
+   "title": "[공공AX 네트워크] 보안 이슈 뒤 바이브코딩을 막는 분위기",
+   "outlet": "akwiki.org",
+   "published": "2026-11-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-04-px-로컬-모델-기대와-사무실-pc-사양",
+   "title": "[공공AX 네트워크] 국산 로컬 모델 기대와 사무실 PC 사양",
+   "outlet": "akwiki.org",
+   "published": "2026-11-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-04-cross-ai-활용-평가-소문과-두-방-반응",
+   "title": "[에이전트코리아·공공AX 네트워크] AI 활용 평가 소문과 예산·보안·사람의 몫",
+   "outlet": "akwiki.org",
+   "published": "2026-11-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "http://www.djtimes.co.kr/news/articleView.html?idxno=114062",
+   "title": "당진시청소년재단, 임직원 50명 AI·AX 직무연수",
+   "outlet": "당진시대",
+   "published": "2026-11-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://n.news.naver.com/article/277/0005837360?sid=100",
    "title": "답답한 정부 문서 'HWPX' 전환…李 \"대한민국 국무회의에서 아직도…\"",
