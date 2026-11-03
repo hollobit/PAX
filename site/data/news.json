@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-11-03T06:35:41Z",
- "count": 1287,
+ "updated_at": "2026-11-03T14:18:00Z",
+ "count": 1292,
  "articles": [
+  {
+   "url": "https://n.news.naver.com/article/277/0005837360?sid=100",
+   "title": "답답한 정부 문서 'HWPX' 전환…李 \"대한민국 국무회의에서 아직도…\"",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.yna.co.kr/view/AKR20261102041000063",
    "title": "대전시 공무원이 생성형 AI로 행정 오류 복구프로그램 개발",
@@ -111,6 +124,58 @@
    "title": "[단독] 이재명 대통령 여권번호까지…‘1호기 탑승자’ 168명 정보 인터넷에 노출",
    "outlet": "Daum | KBS",
    "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/mnews/article/009/0005758457?sid=101",
+   "title": "[단독] “당분간 AI는 손 대지 마라”…현대차, 해킹 우려에 핵심부서 사용 금지령",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-03-px-의회-실시간-자막-구축과-운영",
+   "title": "[공공AX 네트워크] 구축은 쉬워졌다는 의회 실시간 자막과 운영의 조건",
+   "outlet": "akwiki.org",
+   "published": "2026-11-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-03-px-온나라-수신처-일괄-지정의-벽",
+   "title": "[공공AX 네트워크] 공문 시스템 온나라에서 수신처를 일일이 찍는 불편",
+   "outlet": "akwiki.org",
+   "published": "2026-11-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-03-px-hwpx-변환과-서면-보고-관행",
+   "title": "[공공AX 네트워크] hwpx 변환 도구보다 보고 방식이 먼저라는 반응",
+   "outlet": "akwiki.org",
+   "published": "2026-11-03",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-03",

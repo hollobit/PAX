@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-03T06:34:36Z",
- "count": 126,
+ "updated_at": "2026-11-03T14:17:57Z",
+ "count": 127,
  "videos": [
   {
    "id": "mTmIhPmFNbc",
@@ -8,6 +8,19 @@
    "channel": "까칠한AI",
    "url": "https://www.youtube.com/watch?v=mTmIhPmFNbc",
    "thumb": "https://i.ytimg.com/vi/mTmIhPmFNbc/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "gXd5TSnX6eE",
+   "title": "[현장영상] 유심 갈아끼우는 영상 '당황' 표정 굳어버린 행안부 장관",
+   "channel": "OBS뉴스",
+   "url": "https://www.youtube.com/watch?v=gXd5TSnX6eE",
+   "thumb": "https://i.ytimg.com/vi/gXd5TSnX6eE/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-11-03",
    "last_shared": "2026-11-03",
