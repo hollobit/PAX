@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-11-03T14:17:57Z",
- "count": 127,
+ "updated_at": "2026-11-04T06:34:01Z",
+ "count": 128,
  "videos": [
+  {
+   "id": "jZc5uUHXXaE",
+   "title": "KAIST CAIO 과정 11기 : 하네스엔지니어링 2회차 실습",
+   "channel": "Robin",
+   "url": "https://www.youtube.com/watch?v=jZc5uUHXXaE",
+   "thumb": "https://i.ytimg.com/vi/jZc5uUHXXaE/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "mTmIhPmFNbc",
    "title": "Researcher Mode | 이제 우리는 모두 연구자가 되어야 합니다",
