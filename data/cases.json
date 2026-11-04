@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-02T23:19:45+09:00",
+ "updated_at": "2026-11-04T23:19:05+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -18796,6 +18796,60 @@
    "task_category": "민원",
    "model_dependency": "없음(비LLM)",
    "id": "f0ce4971839455c2"
+  },
+  {
+   "case_url": "https://github.com/irize87/immediatelylaw",
+   "model_dependency": "없음(비LLM)",
+   "summary": "문서에 적힌 법령명과 조항을 복사하기만 하면 화면 오른쪽 아래에 해당 조문을 띄워 주는 Windows 유틸리티다. 법제처 개방 데이터로 현행 법령·시행령·시행규칙 약 5,600종을 로컬 색인해 오프라인에서도 열람되고, 온라인일 때는 현행 법령과 일치하는지 확인한다. 구청 주무관이 법령정보센터를 매번 검색하던 불편을 덜려고 만들었으며 MIT 라이선스로 깃허브·공공 깃랩에 공개하고 마이크로소프트 스토어에도 올렸다.",
+   "network_req": "로컬 완결",
+   "org_type": "공직 개인",
+   "collected_at": "2026-11-04",
+   "tags": [
+    "법령",
+    "업무자동화",
+    "오픈소스",
+    "데스크톱앱"
+   ],
+   "source": "kakao",
+   "region": "서울",
+   "org": "서울특별시 서초구(개인 개발)",
+   "link": "https://immediatelylaw.kro.kr/",
+   "title": "즉시로 — 법령 인용을 복사하면 화면 구석에 조문이 바로 뜨는 Windows 법령 조회 앱",
+   "task_category": "감사·법무",
+   "runtime_env": "설치 필요",
+   "date": "2026-11-04",
+   "case_class": "개인 개발",
+   "mirror_url": "https://gitlab.aigov.go.kr/irize/immediatelylaw",
+   "id": "391a3cf8516ec1c6",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-11-04"
+  },
+  {
+   "case_url": "https://github.com/krunyx/hwp2x",
+   "model_dependency": "없음(비LLM)",
+   "summary": "한글 HWP·HWPX 문서를 개방형 HWPX와 AI 학습·RAG용 Markdown·HTML, Word, LaTeX로 바꾸는 변환기로 한글 수식도 각 형식의 수식으로 옮긴다. 끌어다 놓는 한국어 데스크톱 앱과 CLI·파이썬 라이브러리를 함께 주고 Java를 내장해 Windows·macOS·Linux에서 설치 없이 돈다. 공직사회에 쌓인 레거시 HWP 문서를 기관 내부에서 데이터로 전환하는 용도를 내세우며 Apache-2.0으로 공개됐다.",
+   "network_req": "로컬 완결",
+   "org_type": "민간(참고)",
+   "collected_at": "2026-11-04",
+   "tags": [
+    "HWP",
+    "HWPX",
+    "문서변환",
+    "오픈소스"
+   ],
+   "source": "kakao",
+   "org": "KRUNYX",
+   "link": "https://krunyx.com/hwp2x/",
+   "title": "hwp2x — 공공기관의 옛 HWP 문서를 HWPX·Markdown·Word·LaTeX로 일괄 변환하는 오픈소스 도구",
+   "task_category": "문서·기안",
+   "runtime_env": "설치 필요",
+   "date": "2026-11-04",
+   "case_class": "참고",
+   "id": "bc8471803a4f84a2",
+   "license": "Apache-2.0",
+   "license_source": "github",
+   "license_checked": "2026-11-04"
   }
  ]
 }

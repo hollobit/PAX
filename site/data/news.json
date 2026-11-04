@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-11-04T06:34:03Z",
- "count": 1307,
+ "updated_at": "2026-11-04T14:19:57Z",
+ "count": 1314,
  "articles": [
+  {
+   "url": "https://www.sankyungilbo.com/news/articleView.html?idxno=536789",
+   "title": "화성특례시 “AI가 찾아오는 화성시를 만든다”···‘화성MCP’ 본격 추진",
+   "outlet": "산경일보",
+   "published": "2026-10-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.news1.kr/local/moi/6339964",
    "title": "동대문구, AI·스마트도시 사업 45개 점검…개선방안 논의",
@@ -33,6 +46,19 @@
    "title": "LGU+, 서울여대와 ‘개인정보보호·AI’ 협력 확대",
    "outlet": "아이티데일리",
    "published": "2026-11-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.beyondpost.co.kr/view.php?ud=2026062619163591874c878f8fa1_30",
+   "title": "정명근 화성시장, 행안부 AI해커톤 전국 4위 쾌거…'대한민국 1등 AI도시'로 부상",
+   "outlet": "비욘드포스트",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-04",
@@ -94,6 +120,19 @@
    ]
   },
   {
+   "url": "https://roboco.io/posts/vibe-coding-readiness",
+   "title": "바이브 코딩, 도구를 지급한 다음 무엇을 바꿔야 할까",
+   "outlet": "ROBOCO",
+   "published": "2026-11-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://lnkd.in/p/gJWF36fv",
    "title": "\"공공 부문 인공지능(AI) 대전환 본격 가속화\"… 공공 AI 챔피언 육성 및 HWPX 데이터 표준화 | 조용탁 (Yongtak Cho)",
    "outlet": "LinkedIn",
@@ -133,6 +172,19 @@
    ]
   },
   {
+   "url": "https://akwiki.org/article/2026-11-04-px-중국-기반-모델-허용-논쟁과-로컬-모델-기대",
+   "title": "[공공AX 네트워크] 공공에서 중국 기반 모델을 쓸 수 있는가",
+   "outlet": "akwiki.org",
+   "published": "2026-11-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.org/article/2026-11-04-px-악성코드-의심과-키-유출-사고담",
    "title": "[공공AX 네트워크] AI 도구 악성코드 의심과 키 유출·지시 실수",
    "outlet": "akwiki.org",
@@ -161,6 +213,45 @@
   {
    "url": "https://akwiki.org/article/2026-11-04-px-로컬-모델-기대와-사무실-pc-사양",
    "title": "[공공AX 네트워크] 국산 로컬 모델 기대와 사무실 PC 사양",
+   "outlet": "akwiki.org",
+   "published": "2026-11-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-04-px-공무원-대체와-행정-공정성-논쟁",
+   "title": "[공공AX 네트워크] AI가 공무원을 대체하면 행정이 공정해지는가",
+   "outlet": "akwiki.org",
+   "published": "2026-11-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-04-px-hwp-파싱-한계와-변환-도구-이야기",
+   "title": "[공공AX 네트워크] 한글 문서 파싱의 어려움과 변환 도구 이야기",
+   "outlet": "akwiki.org",
+   "published": "2026-11-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-04-cross-한도-리셋-소식과-세-방의-체감",
+   "title": "[3개 방 공통] 한도 리셋 소식을 받아든 세 방의 체감",
    "outlet": "akwiki.org",
    "published": "2026-11-04",
    "kind": "기사",

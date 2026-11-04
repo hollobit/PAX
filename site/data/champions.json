@@ -1,5 +1,5 @@
 {
- "total": 256,
+ "total": 257,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -6521,6 +6521,32 @@
    }
   },
   {
+   "id": "github:irize87",
+   "name": "홍성민",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "irize87",
+     "url": "https://github.com/irize87"
+    }
+   ],
+   "affiliation": {
+    "value": "서초구청",
+    "inferred": false,
+    "evidence": "GitHub 공개 프로필 소속란"
+   },
+   "category": "기초지자체",
+   "category_basis": "affiliation",
+   "cases": [
+    "391a3cf8516ec1c6"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:redgon99",
    "name": "홍용기",
    "accounts": [
@@ -7680,6 +7706,12 @@
    "title": "광진구청 민원 대소동 — 번호표를 뽑고 구청을 오르며 복지부동 공무원을 깨우는 풍자 브라우저 게임",
    "org": "공직 현장(개인 개발)",
    "url": "https://gucheong-quest.vercel.app"
+  },
+  {
+   "id": "bc8471803a4f84a2",
+   "title": "hwp2x — 공공기관의 옛 HWP 문서를 HWPX·Markdown·Word·LaTeX로 일괄 변환하는 오픈소스 도구",
+   "org": "KRUNYX",
+   "url": "https://github.com/krunyx/hwp2x"
   }
  ]
 }

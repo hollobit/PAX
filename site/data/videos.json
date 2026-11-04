@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-04T06:34:01Z",
- "count": 128,
+ "updated_at": "2026-11-04T14:19:55Z",
+ "count": 131,
  "videos": [
   {
    "id": "jZc5uUHXXaE",
@@ -8,6 +8,45 @@
    "channel": "Robin",
    "url": "https://www.youtube.com/watch?v=jZc5uUHXXaE",
    "thumb": "https://i.ytimg.com/vi/jZc5uUHXXaE/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "XUL8wYYUwYw",
+   "title": "C2O LITE - 니원해 Official Video",
+   "channel": "충주시",
+   "url": "https://www.youtube.com/watch?v=XUL8wYYUwYw",
+   "thumb": "https://i.ytimg.com/vi/XUL8wYYUwYw/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "WkktoAZCEPE",
+   "title": "AI가 ‘hwp’파일을 읽지 못한다? 이 대통령, \"국무회의에서 이런 기술 논의 어처구니없다\"",
+   "channel": "목포MBC뉴스",
+   "url": "https://www.youtube.com/watch?v=WkktoAZCEPE",
+   "thumb": "https://i.ytimg.com/vi/WkktoAZCEPE/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "5rmQt4ddOKw",
+   "title": "AI 문서 자동화 시연",
+   "channel": "서초구청",
+   "url": "https://www.youtube.com/watch?v=5rmQt4ddOKw",
+   "thumb": "https://i.ytimg.com/vi/5rmQt4ddOKw/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-11-04",
    "last_shared": "2026-11-04",

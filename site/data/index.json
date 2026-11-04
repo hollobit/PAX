@@ -2,18 +2,18 @@
  "generated_at": "2026-11-04",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 654,
- "total_champions": 256,
+ "total_cases": 656,
+ "total_champions": 257,
  "community": {
   "members": 2786,
-  "kakao_week": 4368,
-  "kakao_total_observed": 65851,
-  "threads_observed": 424
+  "kakao_week": 4889,
+  "kakao_total_observed": 66372,
+  "threads_observed": 425
  },
  "certified_champions": 5,
- "unattributed_cases": 184,
+ "unattributed_cases": 185,
  "ax_distribution": {
-  "AI-Ready": 417,
+  "AI-Ready": 419,
   "AI-Enabled": 203,
   "AX 단계 외": 28,
   "AI-First": 5,
@@ -21,13 +21,13 @@
  },
  "c_axis_mean": 0.94,
  "p_distribution": {
-  "P0": 200,
-  "P1": 432,
+  "P0": 201,
+  "P1": 433,
   "P2": 22
  },
  "model_dependency": {
   "미확인": 66,
-  "없음(비LLM)": 324,
+  "없음(비LLM)": 326,
   "해외 오픈웨이트(로컬)": 34,
   "혼합": 18,
   "해외 상용 API": 71,
@@ -938,7 +938,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 324,
+    "n": 326,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -2038,15 +2038,15 @@
  "domestic_model_rate": 0.061,
  "local_model_rate": 0.267,
  "model_known": 131,
- "license_tagged": 475,
- "license_stated_rate": 0.495,
- "gitlab_cases": 315,
- "gitlab_mirror_pairs": 42,
- "gitlab_open_rate": 0.133,
+ "license_tagged": 477,
+ "license_stated_rate": 0.497,
+ "gitlab_cases": 316,
+ "gitlab_mirror_pairs": 43,
+ "gitlab_open_rate": 0.136,
  "mcp_cases": 99,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 572,
+  "미확인": 574,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -2054,7 +2054,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.795
+  "feedback": 0.796
  },
  "maintenance_distribution": {
   "활발": 286,
@@ -2064,7 +2064,7 @@
  "stars_collected": 447,
  "repo_stats": {
   "gitlab": {
-   "count": 315,
+   "count": 316,
    "starred": 307,
    "stars_sum": 708,
    "maintenance": {
@@ -2155,7 +2155,7 @@
    ]
   },
   "github": {
-   "count": 183,
+   "count": 185,
    "starred": 180,
    "stars_sum": 835603,
    "maintenance": {
@@ -2249,8 +2249,8 @@
  },
  "license_distribution": {
   "명시 없음": 240,
-  "MIT": 154,
-  "Apache-2.0": 38,
+  "MIT": 155,
+  "Apache-2.0": 39,
   "Other": 20,
   "AGPL-3.0": 5,
   "기타(비표준)": 5,
@@ -2270,11 +2270,11 @@
    "gitlab": 176
   },
   "MIT": {
-   "github": 88,
+   "github": 89,
    "gitlab": 65
   },
   "Apache-2.0": {
-   "github": 15,
+   "github": 16,
    "gitlab": 23
   },
   "Other": {
@@ -2328,8 +2328,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 169,
-   "stated": 122
+   "total": 171,
+   "stated": 124
   },
   "github-pages": {
    "total": 24,
@@ -2614,6 +2614,12 @@
    "title": "문서나르미 — 엑셀·CSV 행을 누름틀 서식에 채워 HWPX 문서를 일괄 생성하는 윈도우 앱",
    "github": "https://github.com/rfastball/hwpx-filler",
    "gitlab": "https://gitlab.aigov.go.kr/anjm3145/hwpx-filler"
+  },
+  {
+   "id": "391a3cf8516ec1c6",
+   "title": "즉시로 — 법령 인용을 복사하면 화면 구석에 조문이 바로 뜨는 Windows 법령 조회 앱",
+   "github": "https://github.com/irize87/immediatelylaw",
+   "gitlab": "https://gitlab.aigov.go.kr/irize/immediatelylaw"
   }
  ]
 }
