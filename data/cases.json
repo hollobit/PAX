@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-05T07:34:00+09:00",
+ "updated_at": "2026-11-05T08:44:03+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -18869,6 +18869,74 @@
    "org": "민간 개발자(제작자 미확인)",
    "org_type": "민간(참고)",
    "id": "c4ace9b214cb7e93"
+  },
+  {
+   "link": "https://tour.soundbunker.earth/v2/",
+   "case_class": "참고",
+   "org_type": "민간(참고)",
+   "region": "제주",
+   "org": "민간 개발자(사운드 기록 프로젝트)",
+   "tags": [
+    "메타버스",
+    "3D",
+    "사운드스케이프",
+    "휴식"
+   ],
+   "runtime_env": "브라우저만",
+   "date": "2026-11-05",
+   "model_dependency": "없음(비LLM)",
+   "source": "kakao",
+   "collected_at": "2026-11-05",
+   "summary": "제주에서 오랜 기간 녹음한 자연·생활 소리를 3D 공간에 배치해, 버스를 타거나 걸어 다니며 장소별 소리를 듣고 해녀 불턱 같은 곳에 둘러앉아 감상하게 만든 웹 메타버스다. 온라인 절·캠핑장으로 이어진 휴식형 메타버스 흐름에 소리 기록을 더한 참고 사례로 공유됐다.",
+   "title": "사운드투어 — 10년간 녹음한 제주의 소리를 버스·걷기로 돌아다니며 듣는 사운드스케이프 메타버스",
+   "task_category": "공통·범용",
+   "id": "1351e802411f02bc"
+  },
+  {
+   "link": "https://bumpinto.world/",
+   "case_class": "참고",
+   "org_type": "민간(참고)",
+   "org": "민간 개발사",
+   "tags": [
+    "메타버스",
+    "3D",
+    "오픈스트리트맵",
+    "대중교통 데이터",
+    "오픈소스"
+   ],
+   "runtime_env": "브라우저만",
+   "date": "2026-10-27",
+   "model_dependency": "없음(비LLM)",
+   "source": "kakao",
+   "collected_at": "2026-11-05",
+   "summary": "오픈스트리트맵 건물 데이터와 실제 버스 노선·횡단보도 신호를 결합해 성남 분당 정자역 반경 약 900m를 브라우저 3D로 재현하고, 접속자끼리 걸으며 채팅·게시판으로 어울리게 한 멀티플레이 오픈월드다. 소스를 공개해 기여자가 새 동네와 랜드마크를 추가하도록 열어 두었으며 공공데이터를 실감형 공간으로 엮는 참고 사례다.",
+   "title": "Bumpinto World — 실제 지도·대중교통 데이터로 분당 정자역 일대를 걷고 마주치는 3D 오픈월드",
+   "task_category": "공통·범용",
+   "case_url": "https://github.com/dohoon84/bumpinto-world",
+   "id": "0df7253ea0fdfe65",
+   "license": "Other",
+   "license_source": "github",
+   "license_checked": "2026-11-05"
+  },
+  {
+   "link": "https://healing-camp.onrender.com/",
+   "case_class": "참고",
+   "org_type": "민간(참고)",
+   "org": "민간 개발자(제작자 미확인)",
+   "tags": [
+    "메타버스",
+    "3D",
+    "휴식"
+   ],
+   "runtime_env": "브라우저만",
+   "date": "2026-11-05",
+   "model_dependency": "없음(비LLM)",
+   "source": "kakao",
+   "collected_at": "2026-11-05",
+   "summary": "로그인 없이 이름만 정하고 들어가 숲속 모닥불 곁에 앉아 별을 보고, 꼬치를 굽고, 장작을 패고, 소원 풍등을 띄우는 3D 웹 캠프다. 수락한 사람끼리만 대화하고 대화는 저장하지 않는다. 불멍 캠핑장·온라인 절로 이어진 휴식형 메타버스 흐름의 참고 사례다.",
+   "title": "힐링캠프 — 말없이 같은 모닥불 곁에 앉아 별을 보고 고기를 굽는 밤 캠프 메타버스",
+   "task_category": "공통·범용",
+   "id": "5a4582317f1e4566"
   }
  ]
 }
