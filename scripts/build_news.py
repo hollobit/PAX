@@ -49,7 +49,9 @@ SKIP_HOST = re.compile(
     r"|claude\.ai|chatgpt\.com|openai\.com|anthropic\.com|huggingface\.co"
     r"|notion\.|docs\.google|drive\.google|forms\.gle|google\.com"
     r"|wikidocs\.net|kyobobook|arca\.live|status\.|localhost|^\d+\.\d+\.\d+\.\d+"
-    r"|namu\.wiki|wikipedia\.org|fnevent|eventus\.|onoffmix|festa\.io",
+    r"|namu\.wiki|wikipedia\.org|fnevent|eventus\.|onoffmix|festa\.io"
+    # 행사 사전등록 단축 링크 — 제목만 기사처럼 보여 들어왔다(2026-11-05 보안 점검 지적)
+    r"|rusheihq\.",
     re.I,
 )
 
