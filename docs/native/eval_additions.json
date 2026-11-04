@@ -16406,5 +16406,33 @@
   "rationale": "HWP를 여러 형식으로 바꾸는 변환기 하나라 S1이며 LLM을 쓰지 않고 AI 학습·RAG 입력을 준비하는 단계라 AI-Ready로 둔다. 변환 기능만 제공하므로 C0·R0이다. 배포 페이지와 깃허브 README·릴리스(v0.2.2)를 확인했다.",
   "resilience": "Apache-2.0 공개, 3개 OS 릴리스 빌드, 단체 계정 운영(2026-10-29 생성)",
   "service_url": "https://krunyx.com/hwp2x/"
+ },
+ {
+  "no": 659,
+  "id": "c4ace9b214cb7e93",
+  "org": "민간 개발자(제작자 미확인)",
+  "title": "가즈아법당 — 주식·코인 시세가 뜨는 3D 법당에서 상승·하락을 기원하는 패러디 메타버스",
+  "ax_prev": "AI-Ready",
+  "ax": "AI-Ready",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "post_url": "",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C0",
+  "c_name": "기능 제공",
+  "status": "Live service",
+  "scope": "External",
+  "risk": "R0 최소",
+  "human": "해당 없음",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "rationale": "시세를 띄운 3D 패러디 공간 하나라 S1·C0이며 업무 기능은 없다. 온라인 절·성당으로 이어진 휴식형 메타버스 흐름의 변주를 기록하는 참고 사례다. 페이지 응답과 사이트 설명을 확인했다.",
+  "resilience": "미확인(운영 주체·지속 운영 여부 미확인)",
+  "service_url": "https://gazuasansa.vercel.app/"
  }
 ]

@@ -1,7 +1,163 @@
 {
- "updated_at": "2026-11-04T14:19:57Z",
- "count": 1314,
+ "updated_at": "2026-11-04T22:34:42Z",
+ "count": 1328,
  "articles": [
+  {
+   "url": "https://www.thelec.kr/news/articleView.html?idxno=64903",
+   "title": "앤트로픽, AI 출력물의 출처 증명하는 오픈소스 기술 공개",
+   "outlet": "디일렉(THE ELEC)",
+   "published": "2026-11-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newsis.com/view/ALSX20261104_0000008096",
+   "title": "파테오, NVIDIA DRIVE AGX Thor 기반 AI Box에 NVIDIA Nemotron 및 ByteDance Doubao 탑재로 차량 내 AI 고도화",
+   "outlet": "뉴시스",
+   "published": "2026-11-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newdaily.co.kr/site/data/html/2026/11/04/2026110400116.html",
+   "title": "공무원 초과근무 확인 버튼, AI도 누를 수 있다 … 서울시의회서 실효성 비판",
+   "outlet": "뉴데일리",
+   "published": "2026-11-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1308641",
+   "title": "아산시, 공간정보·AI 융합 행정혁신... 전국 경진대회 최우수상 수상",
+   "outlet": "jeonmae.co.kr",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=242683",
+   "title": "‘LLM재킹’ 주의보… “하루 만에 1억 원 요금 폭탄”",
+   "outlet": "아이티데일리",
+   "published": "2026-11-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42561",
+   "title": "앤트로픽, AI 인프라 지출 약정 8954억달러 공개…매출 12배 성장에도 비용 부담 급증",
+   "outlet": "인공지능신문",
+   "published": "2026-11-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217001",
+   "title": "오픈AI, 전 미 육군 장관 영입...미군 AI 도입 확대에 국방 사업 강화",
+   "outlet": "AI타임스",
+   "published": "2026-11-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216996",
+   "title": "오픈AI, 일상 업무 AI 평가 '라이프밸' 공개...개인 비서 성능 1년 새 49%→81%",
+   "outlet": "AI타임스",
+   "published": "2026-11-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=216979",
+   "title": "AMD, 퓨리오사·망고부스트와 공조...내년 봄 이기종 AI 실증 인프라 구축",
+   "outlet": "AI타임스",
+   "published": "2026-11-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-05-px-행정-서식-자동화-사례",
+   "title": "[공공AX 네트워크] 출장 여비 서류를 AI에 맡기는 공공 현장의 시도",
+   "outlet": "akwiki.org",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-05-px-법령-mcp-검색-비교",
+   "title": "[공공AX 네트워크] 법령 검색 MCP를 써 본 사람들의 체감",
+   "outlet": "akwiki.org",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-05-px-반출-금지-데이터와-mcp-통제",
+   "title": "[공공AX 네트워크] 반출 금지 데이터에 MCP를 붙일 때의 한계",
+   "outlet": "akwiki.org",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.sankyungilbo.com/news/articleView.html?idxno=536789",
    "title": "화성특례시 “AI가 찾아오는 화성시를 만든다”···‘화성MCP’ 본격 추진",
@@ -1515,6 +1671,19 @@
    "title": "오픈AI, ‘GPT-6.1 테라’ 출시…자동화 성능 높이고 가격  낮춰",
    "outlet": "AI타임스",
    "published": "2026-10-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-28",
+   "last_shared": "2026-10-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://rusheihq.info/t8g7ttj093",
+   "title": "2026 데이터센터코리아 사전등록",
+   "outlet": "rusheihq.info",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-28",
@@ -5415,6 +5584,19 @@
    "title": "개인정보 반복·대규모 유출시 '매출액 10%' 내 징벌적 과징금",
    "outlet": "정책브리핑",
    "published": "2026-09-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-12",
+   "last_shared": "2026-10-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://it.chosun.com/news/articleViewAmp.html?idxno=2023092160669",
+   "title": "클라우드 개발 플랫폼 ‘버셀’ 해킹 피해…공급망 보안 우려 확산",
+   "outlet": "IT조선",
+   "published": "2026-04-21",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-12",
