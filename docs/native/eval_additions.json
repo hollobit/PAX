@@ -16518,5 +16518,33 @@
   "rationale": "모닥불 캠프 3D 공간 하나라 S1·C0이며 업무 기능은 없다. 불멍 캠핑장·온라인 절로 이어진 휴식형 메타버스 흐름을 기록하는 참고 사례다. 페이지 응답과 화면 문구를 확인했다.",
   "resilience": "미확인(운영 주체·지속 운영 여부 미확인)",
   "service_url": "https://healing-camp.onrender.com/"
+ },
+ {
+  "no": 663,
+  "id": "df7fb4767a75553d",
+  "org": "코드포코리아(시빅해킹 커뮤니티)",
+  "title": "모두의 AI 예산 심의 — 과기정통부 2027년 AI 예산 정부안을 시민이 직접 나눠 짜고 공유하는 시빅해킹 사이트",
+  "ax_prev": "AI-Ready",
+  "ax": "AI-Ready",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "post_url": "",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C0",
+  "c_name": "기능 제공",
+  "status": "Live service",
+  "scope": "External",
+  "risk": "R0 최소",
+  "human": "해당 없음",
+  "evidence": "E3 소스·배포물 확인",
+  "confidence": "중간",
+  "rationale": "예산 항목을 조절·공유하는 단일 웹 도구라 S1·C0이며 LLM을 쓰지 않는다. 시민이 공공 예산 심의에 참여하도록 돕는 커뮤니티 산출물이다. 운영 사이트와 깃허브 저장소(MIT, 2026-10-23 생성)를 확인했다.",
+  "resilience": "MIT 공개, 정적 사이트, 단체 계정 운영(최근 커밋 2026-11-03)",
+  "service_url": "https://budget.codefor.kr/"
  }
 ]

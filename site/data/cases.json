@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-05T08:44:03+09:00",
+ "updated_at": "2026-11-05T21:53:26+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -19585,6 +19585,32 @@
    "task_category": "공통·범용",
    "id": "5a4582317f1e4566",
    "thumb_v": 1793836189
+  },
+  {
+   "task_category": "기획·정책",
+   "runtime_env": "브라우저만",
+   "model_dependency": "없음(비LLM)",
+   "date": "2026-11-05",
+   "org_type": "커뮤니티",
+   "tags": [
+    "예산",
+    "시빅해킹",
+    "시민참여",
+    "오픈소스"
+   ],
+   "case_class": "커뮤니티",
+   "org": "코드포코리아(시빅해킹 커뮤니티)",
+   "title": "모두의 AI 예산 심의 — 과기정통부 2027년 AI 예산 정부안을 시민이 직접 나눠 짜고 공유하는 시빅해킹 사이트",
+   "collected_at": "2026-11-05",
+   "summary": "과학기술정보통신부의 2027년 AI 예산 정부안을 15개 분야로 나눠 보여 주고, 시민이 금액을 조절해 자기 예산안을 만든 뒤 링크로 공유하거나 시민 심의 게시판에 올려 다른 안과 비교하게 한다. 부처 예산에서 따로 보기 어려운 민주주의·공공재 AI 항목도 채워 보도록 했다. 시빅해킹 단체가 국회 심의 기간에 맞춰 MIT 라이선스로 공개한 정적 웹사이트다.",
+   "source": "kakao",
+   "link": "https://budget.codefor.kr/",
+   "case_url": "https://github.com/Code-for-Korea/citizen-budget-remix",
+   "id": "df7fb4767a75553d",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-11-05",
+   "thumb_v": 1793883234
   }
  ]
 }

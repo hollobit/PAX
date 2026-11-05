@@ -1,7 +1,46 @@
 {
- "updated_at": "2026-11-04T14:19:55Z",
- "count": 131,
+ "updated_at": "2026-11-05T12:54:03Z",
+ "count": 134,
  "videos": [
+  {
+   "id": "pSlCGM3tRdU",
+   "title": "AI AGENT OFFICE",
+   "channel": "서초구청",
+   "url": "https://www.youtube.com/watch?v=pSlCGM3tRdU",
+   "thumb": "https://i.ytimg.com/vi/pSlCGM3tRdU/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "KaUKLOH7290",
+   "title": "[AI 시연] Claude에 국가법령정보 MCP 연결하기",
+   "channel": "딴짓하는 류주임",
+   "url": "https://www.youtube.com/watch?v=KaUKLOH7290",
+   "thumb": "https://i.ytimg.com/vi/KaUKLOH7290/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "-qMk-ajW-GQ",
+   "title": "[AI 시연] ChatGPT에 국가법령정보 MCP 연결하기",
+   "channel": "딴짓하는 류주임",
+   "url": "https://www.youtube.com/watch?v=-qMk-ajW-GQ",
+   "thumb": "https://i.ytimg.com/vi/-qMk-ajW-GQ/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "jZc5uUHXXaE",
    "title": "KAIST CAIO 과정 11기 : 하네스엔지니어링 2회차 실습",

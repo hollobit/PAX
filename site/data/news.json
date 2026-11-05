@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-04T22:37:21Z",
- "count": 1327,
+ "updated_at": "2026-11-05T12:54:06Z",
+ "count": 1333,
  "articles": [
   {
    "url": "https://www.thelec.kr/news/articleView.html?idxno=64903",
@@ -68,6 +68,32 @@
    ]
   },
   {
+   "url": "https://www.hani.co.kr/arti/society/labor/1285860.html",
+   "title": "노동부엔 첫 공무원표 ‘노동 AI’ 활약 중…올해 상담만 18만건",
+   "outlet": "한겨레",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202611051823222089",
+   "title": "구멍 뚫린 유럽 보안망… 혈액 냉동고까지 해킹",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.aitimes.kr/news/articleView.html?idxno=42561",
    "title": "앤트로픽, AI 인프라 지출 약정 8954억달러 공개…매출 12배 성장에도 비용 부담 급증",
    "outlet": "인공지능신문",
@@ -111,6 +137,58 @@
    "title": "AMD, 퓨리오사·망고부스트와 공조...내년 봄 이기종 AI 실증 인프라 구축",
    "outlet": "AI타임스",
    "published": "2026-11-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://share.google/4uyvFiYt5ZXYHY0dd",
+   "title": "업스테이지 '솔라 프로 4', 범정부 행정망 도입…공무원 모델 선택권 확대",
+   "outlet": "AI타임스",
+   "published": "2026-11-03",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://naver.me/xSBaYhqA",
+   "title": "‘정부24’ 해킹으로 뚫렸다…주민번호 등 개인정보 유출",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://naver.me/GYDz0QC3",
+   "title": "[단독] '정부 공식 포털'에서 주민번호·암 진단서까지 줄줄 샜다",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://aws.amazon.com/ko/blogs/tech/ai-agent-token-economics-measure-and-reduce-costs-on-amazon-bedrock",
+   "title": "AI 에이전트 시대의 기업 토큰 경제학: 비용 방정식으로 측정하고 Amazon Bedrock에서 줄이기",
+   "outlet": "Amazon Web Services",
+   "published": "2026-10-20",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-05",

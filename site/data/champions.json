@@ -1,5 +1,5 @@
 {
- "total": 257,
+ "total": 258,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -94,6 +94,28 @@
    "category_basis": "affiliation",
    "cases": [
     "3615205d53567c32"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:Code-for-Korea",
+   "name": "Code for Korea",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "Code-for-Korea",
+     "url": "https://github.com/Code-for-Korea"
+    }
+   ],
+   "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
+   "cases": [
+    "df7fb4767a75553d"
    ],
    "stats": {
     "case_count": 1,
