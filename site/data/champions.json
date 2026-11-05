@@ -1039,10 +1039,11 @@
    "category": "공직(소속 미상)",
    "category_basis": "cases",
    "cases": [
+    "ae55a8cbe3ba525d",
     "ccee126dc9e23cf6"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 1,
     "stars": 0
    }

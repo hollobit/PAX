@@ -1,7 +1,163 @@
 {
- "updated_at": "2026-11-05T12:54:06Z",
- "count": 1333,
+ "updated_at": "2026-11-05T22:38:31Z",
+ "count": 1352,
  "articles": [
+  {
+   "url": "https://wemakenews.co.kr/news/view.php?no=26768",
+   "title": "[단독] 이재명 대통령이 주문한 HWP 자동 변환…8급 공무원은 이미 개발했다 - 위메이크",
+   "outlet": "위메이크뉴스",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=501716",
+   "title": "웹케시, 생성형 AI 연동 '경리나라 MCP' 12월 출시…체험단 모집",
+   "outlet": "핀포인트뉴스",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202611050839541759",
+   "title": "[교육소식]부산교육청, 스쿨 AI 리빙랩 부트캠프 등",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42607",
+   "title": "카카오, 3분기 영업이익 2403억원…12월 AI 비서 ‘카나나 스페이스’ 출시로 성장동력 확대",
+   "outlet": "인공지능신문",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42596",
+   "title": "이미지 한 장에 단 6초…오픈AI, 생성 속도 50% 높인 ‘이미지 2.6’ 출시",
+   "outlet": "인공지능신문",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217068",
+   "title": "전남광주 공무원, AI 활용해 시설물 안전관리 플랫폼 직접 개발",
+   "outlet": "AI타임스",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217054",
+   "title": "애플, 직원 AI 사용 예산 최대 3분의 2 삭감 추진...비용 관리 강화",
+   "outlet": "AI타임스",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217045",
+   "title": "메타, AI 코딩 스타트업 컨덕터 인수...병렬 에이전트 조율 기술 확보",
+   "outlet": "AI타임스",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217038",
+   "title": "오픈AI, '이미지스 2.6' 공개…챗GPT서 움직이는 GIF 생성 지원",
+   "outlet": "AI타임스",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-06-px-자체-개발-에이전트-플랫폼-공유",
+   "title": "[공공AX 네트워크] 직접 손본 에이전트 플랫폼의 공개 전 점검 목록",
+   "outlet": "akwiki.org",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-06-px-솔라-프로-4-행정망-도입",
+   "title": "[공공AX 네트워크] 행정망 도입 솔라 프로 4를 두고 오간 문답",
+   "outlet": "akwiki.org",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-06-px-사무용-pc-대신-개인-장비-개발",
+   "title": "[공공AX 네트워크] 설치가 막힌 사무용 PC와 개인 장비 개발 환경",
+   "outlet": "akwiki.org",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.thelec.kr/news/articleView.html?idxno=64903",
    "title": "앤트로픽, AI 출력물의 출처 증명하는 오픈소스 기술 공개",
@@ -84,6 +240,19 @@
    "url": "https://www.fnnews.com/news/202611051823222089",
    "title": "구멍 뚫린 유럽 보안망… 혈액 냉동고까지 해킹",
    "outlet": "파이낸셜뉴스",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-05",
+   "last_shared": "2026-11-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.boannews.com/news/articleView.html?idxno=147035",
+   "title": "행안부, ‘정보공개포털’ 원문 다운로드 긴급 차단... “개인정보 전수점검 착수”",
+   "outlet": "보안뉴스",
    "published": "2026-11-05",
    "kind": "기사",
    "shares": 1,
@@ -12522,6 +12691,19 @@
    ]
   },
   {
+   "url": "https://it.chosun.com/news/articleViewAmp.html?idxno=2023092169376",
+   "title": "[에이전틱 AI 맵 2026] 에이아이웍스, 코드 변경이 업무에 미칠 영향 분석…금융·공공 AI 검증 공략",
+   "outlet": "IT조선",
+   "published": "2026-09-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-09-07",
+   "last_shared": "2026-09-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://brunch.co.kr/@eb9d2127313d4dc/105",
    "title": "일론 머스크 \"세상은 가상현실이다\"",
    "outlet": "브런치",
@@ -16474,6 +16656,19 @@
    ]
   },
   {
+   "url": "https://r1.community.samsung.com/t5/%EA%B0%A4%EB%9F%AD%EC%8B%9C-s/%ED%8C%81-%EC%82%AC%EC%A7%84%EC%9D%98-%EC%8B%9C%EA%B0%84%EA%B3%BC-%EC%9C%84%EC%B9%98-%EB%B3%80%EA%B2%BD/td-p/38649354",
+   "title": "[팁] 사진의 시간과 위치 변경",
+   "outlet": "삼성 멤버스 커뮤니티",
+   "published": "2026-07-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-08-11",
+   "last_shared": "2026-08-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://news.nate.com/view/20260811n23506",
    "title": "금융권 AX 숨통 트인다…'전산망 분리' 한시 해제",
    "outlet": "네이트 뉴스",
@@ -16656,6 +16851,19 @@
    ]
   },
   {
+   "url": "https://www.data.go.kr/data/15061784/openapi.do",
+   "title": "해양수산부_해수욕장 혼잡도 신호등",
+   "outlet": "공공데이터포털",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-08-10",
+   "last_shared": "2026-08-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.chosun.com/economy/tech_it/2026/08/08/2N4WMWBG2FAO3MJVNVUFPBDVJM",
    "title": "챗GPT 스피커 내년 출시 전망... 오픈AI “인간과 소통 가능”",
    "outlet": "조선일보",
@@ -16716,6 +16924,32 @@
    "shares": 1,
    "first_shared": "2026-08-10",
    "last_shared": "2026-08-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.data.go.kr/data/15098552/openapi.do",
+   "title": "국토교통부_(TAGO)_열차정보",
+   "outlet": "공공데이터포털",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-08-09",
+   "last_shared": "2026-08-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.data.go.kr/data/15098522/openapi.do",
+   "title": "국토교통부_(TAGO)_고속버스정보",
+   "outlet": "공공데이터포털",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-08-09",
+   "last_shared": "2026-08-09",
    "sources": [
     "kakao"
    ]
@@ -17166,6 +17400,19 @@
    "url": "https://m.ekn.kr/view.php?key=20260804024469397",
    "title": "KT, 공공 AI 인재 키운다…한국산업인력공단과 협력",
    "outlet": "에너지경제신문",
+   "published": "2026-08-04",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-08-05",
+   "last_shared": "2026-08-05",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://it.chosun.com/news/articleViewAmp.html?idxno=2023092167315",
+   "title": "브라질엔 GPU 클라우드, 칠레엔 공공 AI… 네이버 남미 공략",
+   "outlet": "IT조선",
    "published": "2026-08-04",
    "kind": "기사",
    "shares": 1,

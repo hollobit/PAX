@@ -16546,5 +16546,33 @@
   "rationale": "예산 항목을 조절·공유하는 단일 웹 도구라 S1·C0이며 LLM을 쓰지 않는다. 시민이 공공 예산 심의에 참여하도록 돕는 커뮤니티 산출물이다. 운영 사이트와 깃허브 저장소(MIT, 2026-10-23 생성)를 확인했다.",
   "resilience": "MIT 공개, 정적 사이트, 단체 계정 운영(최근 커밋 2026-11-03)",
   "service_url": "https://budget.codefor.kr/"
+ },
+ {
+  "no": 664,
+  "id": "ae55a8cbe3ba525d",
+  "org": "경북 상주시(개인 개발)",
+  "title": "수의계약 한도 집계기 — 개정 기준(같은 관서·업체 연 5건·2억 원)에 맞춰 시 누리집 공개자료로 관서·업체별 건수·금액을 세어 주는 프로그램",
+  "ax_prev": "AI-Ready",
+  "ax": "AI-Ready",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "status": "In use (team)",
+  "scope": "Internal",
+  "risk": "R1 낮음(공개자료 집계, 계약 판단은 담당자)",
+  "human": "검토 후 사용",
+  "evidence": "E0 자기보고",
+  "confidence": "낮음",
+  "feedback": "부분확인(동료 102명 배포 자기보고)",
+  "rationale": "법령 개정 시행에 맞춰 시 누리집 공개 계약자료를 관서·업체별로 세는 단일 도구라 S1·C1이고, AI는 개발 속도에만 쓰여 실행 경로에는 없어 AI-Ready다. robots.txt 준수·재수집 제한·보안 담당 협의를 먼저 둔 점이 돋보인다. 도구 공개 URL이 없어 산출물 실체는 미확인이다.",
+  "resilience": "미확인(비공개 배포)",
+  "post_url": "https://www.threads.com/@civil__ax/post/DfW0Ab6EwZn",
+  "service_url": null
  }
 ]
