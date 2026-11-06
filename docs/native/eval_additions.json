@@ -16574,5 +16574,33 @@
   "resilience": "미확인(비공개 배포)",
   "post_url": "https://www.threads.com/@civil__ax/post/DfW0Ab6EwZn",
   "service_url": null
+ },
+ {
+  "no": 665,
+  "id": "5ccdaf3fb084eff0",
+  "org": "공직 커뮤니티",
+  "title": "stickerforge — 캐릭터 이미지 한 장으로 인쇄용 투명 스티커 수백 장을 만드는 Codex·Claude Code 스킬",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S2",
+  "s_name": "Tool bundle",
+  "c": "C2",
+  "c_name": "연속 처리",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Published tool",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R0 최소",
+  "human": "H2 Human-in-the-loop",
+  "evidence": "E1 코드·도구 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "의뢰·컨셉·시험 생성·양산·검수·재생성·납품의 연속 처리로 스티커 시트라는 완성 산출물을 AI가 생산하므로 S2·C2, AI-Enabled다. 사람 확인 세 번(그림체·시험·최종)과 크기·투명도·중복 등 여섯 개 검수 게이트를 둔 품질 통제가 돋보인다. 공무 직접 용도보다 기관 캐릭터 굿즈 제작 등 범용 활용 도구다.",
+  "feedback": "미확인",
+  "resilience": "MIT 공개, 개인 계정(2026-11-06 생성, ★12)",
+  "post_url": "",
+  "service_url": "https://github.com/gongnyang/stickerforge"
  }
 ]

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-06T07:36:18+09:00",
+ "updated_at": "2026-11-06T15:34:42+09:00",
  "cases": [
   {
    "id": "a2eaaf9f454da37f",
@@ -4303,6 +4303,12 @@
    "org": "경북 상주시(개인 개발)",
    "org_type": "공직 개인",
    "region": "경북"
+  },
+  {
+   "id": "5ccdaf3fb084eff0",
+   "title": "stickerforge — 캐릭터 이미지 한 장으로 인쇄용 투명 스티커 수백 장을 만드는 Codex·Claude Code 스킬",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티"
   }
  ]
 }

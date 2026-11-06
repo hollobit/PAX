@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-05T22:38:31Z",
- "count": 1352,
+ "updated_at": "2026-11-06T06:35:29Z",
+ "count": 1358,
  "articles": [
   {
    "url": "https://wemakenews.co.kr/news/view.php?no=26768",
@@ -20,6 +20,32 @@
    "title": "웹케시, 생성형 AI 연동 '경리나라 MCP' 12월 출시…체험단 모집",
    "outlet": "핀포인트뉴스",
    "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.joongang.co.kr/article/25476205",
+   "title": "바이낸스 이어 프랑스 은행도…전세계 번지는 해킹 공포",
+   "outlet": "중앙일보",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.joongang.co.kr/article/25475331",
+   "title": "“우리 가족은 반도체만 해”…구글도 줄선 中 전설의 삼남매",
+   "outlet": "중앙일보",
+   "published": "2026-11-03",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-06",
@@ -110,6 +136,58 @@
    "url": "https://www.aitimes.com/news/articleView.html?idxno=217038",
    "title": "오픈AI, '이미지스 2.6' 공개…챗GPT서 움직이는 GIF 생성 지원",
    "outlet": "AI타임스",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://view.asiae.co.kr/article/2026110607380691848",
+   "title": "[단독]국민은행, 해킹 사고에 '망분리 예외' 또 탈락…농협銀, 카카오·토스페이 등 선정",
+   "outlet": "아시아경제",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://naver.me/5B0qKXbQ",
+   "title": "[단독] '정부자료' 줄줄이 노출…과기부 '이용 권장' 사이트였다",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/421/0009261296?type=journalists",
+   "title": "내달 1일 JTBC 서울마라톤 여파 도심권 교통 통제…\"대중교통 이용하세요\"",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.edaily.co.kr/News/Read?newsId=06182806645642768&mediaCodeNo=257",
+   "title": "삼성 엔지니어 사냥 나선 中…파격지원에 업계 '비상'",
+   "outlet": "이데일리",
    "published": "2026-11-05",
    "kind": "기사",
    "shares": 1,

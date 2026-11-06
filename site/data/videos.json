@@ -1,7 +1,46 @@
 {
- "updated_at": "2026-11-05T12:54:03Z",
- "count": 134,
+ "updated_at": "2026-11-06T06:35:25Z",
+ "count": 137,
  "videos": [
+  {
+   "id": "KV3pxxZGz_E",
+   "title": "세계적인 거물들을 '을'로 만드는 남자",
+   "channel": "MuskLab",
+   "url": "https://www.youtube.com/watch?v=KV3pxxZGz_E",
+   "thumb": "https://i.ytimg.com/vi/KV3pxxZGz_E/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "DfhLUqZfGTo",
+   "title": "한국 웹사이트 50만개 무방비 상태. 한국 보안의 충격적 민낯 (고려대 정보보호대학원 김승주 교수)",
+   "channel": "언더스탠딩 : 세상의 모든 지식",
+   "url": "https://www.youtube.com/watch?v=DfhLUqZfGTo",
+   "thumb": "https://i.ytimg.com/vi/DfhLUqZfGTo/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "91hL6OHdbYE",
+   "title": "Qwen이 중국 서버로 업로드 시도 | 오늘의 긱뉴스",
+   "channel": "긱뉴스",
+   "url": "https://www.youtube.com/watch?v=91hL6OHdbYE",
+   "thumb": "https://i.ytimg.com/vi/91hL6OHdbYE/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "pSlCGM3tRdU",
    "title": "AI AGENT OFFICE",

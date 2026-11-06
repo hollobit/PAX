@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-06T07:36:18+09:00",
+ "updated_at": "2026-11-06T15:34:42+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -19632,6 +19632,31 @@
    "date": "2026-11-05",
    "region": "경북",
    "id": "ae55a8cbe3ba525d"
+  },
+  {
+   "tags": [
+    "AI스킬",
+    "이미지생성",
+    "자동검수",
+    "오픈소스"
+   ],
+   "org": "공직 커뮤니티",
+   "link": "https://github.com/gongnyang/stickerforge",
+   "title": "stickerforge — 캐릭터 이미지 한 장으로 인쇄용 투명 스티커 수백 장을 만드는 Codex·Claude Code 스킬",
+   "model_dependency": "해외 상용 API",
+   "summary": "캐릭터 원본 이미지 한 장과 장수를 정하면 컨셉 목록 작성, 시험 생성, 양산, 자동 검수, 불합격분 재생성을 거쳐 인쇄용 투명 PNG 스티커 시트를 납품 폴더로 만들어 주는 에이전트 스킬이다. 사람은 그림체·시험 결과·최종 시트 세 번만 확인하고, 크기·투명도·가짜 투명·여백·외곽선·중복은 검수 스크립트가 전수 판정한다. MIT 라이선스로 공개됐다.",
+   "collected_at": "2026-11-06",
+   "case_class": "커뮤니티",
+   "task_category": "공통·범용",
+   "date": "2026-11-06",
+   "org_type": "커뮤니티",
+   "source": "kakao",
+   "runtime_env": "AI 도구 설정",
+   "id": "5ccdaf3fb084eff0",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-11-06",
+   "thumb_v": 1793946918
   }
  ]
 }

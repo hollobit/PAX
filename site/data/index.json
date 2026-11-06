@@ -2,19 +2,19 @@
  "generated_at": "2026-11-06",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 662,
+ "total_cases": 663,
  "total_champions": 258,
  "community": {
-  "members": 2802,
-  "kakao_week": 4150,
-  "kakao_total_observed": 67042,
-  "threads_observed": 425
+  "members": 2809,
+  "kakao_week": 4508,
+  "kakao_total_observed": 67400,
+  "threads_observed": 429
  },
  "certified_champions": 5,
  "unattributed_cases": 189,
  "ax_distribution": {
   "AI-Ready": 425,
-  "AI-Enabled": 203,
+  "AI-Enabled": 204,
   "AX 단계 외": 28,
   "AI-First": 5,
   "AI-Native 계획": 1
@@ -22,7 +22,7 @@
  "c_axis_mean": 0.93,
  "p_distribution": {
   "P0": 202,
-  "P1": 438,
+  "P1": 439,
   "P2": 22
  },
  "model_dependency": {
@@ -30,7 +30,7 @@
   "없음(비LLM)": 332,
   "해외 오픈웨이트(로컬)": 34,
   "혼합": 18,
-  "해외 상용 API": 71,
+  "해외 상용 API": 72,
   "모델 중립(BYO)": 104,
   "국산 독자모델": 7,
   "미상": 29,
@@ -950,7 +950,7 @@
     "specified": 16
    },
    "해외 상용 API": {
-    "n": 71,
+    "n": 72,
     "specified": 56
    },
    "모델 중립(BYO)": {
@@ -1434,7 +1434,7 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 71,
+    "n": 72,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
@@ -2036,17 +2036,17 @@
   ]
  },
  "domestic_model_rate": 0.061,
- "local_model_rate": 0.267,
- "model_known": 131,
- "license_tagged": 479,
- "license_stated_rate": 0.499,
+ "local_model_rate": 0.265,
+ "model_known": 132,
+ "license_tagged": 480,
+ "license_stated_rate": 0.5,
  "gitlab_cases": 316,
  "gitlab_mirror_pairs": 43,
  "gitlab_open_rate": 0.136,
  "mcp_cases": 99,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 580,
+  "미확인": 581,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -2155,7 +2155,7 @@
    ]
   },
   "github": {
-   "count": 187,
+   "count": 188,
    "starred": 180,
    "stars_sum": 835603,
    "maintenance": {
@@ -2249,7 +2249,7 @@
  },
  "license_distribution": {
   "명시 없음": 240,
-  "MIT": 156,
+  "MIT": 157,
   "Apache-2.0": 39,
   "Other": 21,
   "AGPL-3.0": 5,
@@ -2270,7 +2270,7 @@
    "gitlab": 176
   },
   "MIT": {
-   "github": 90,
+   "github": 91,
    "gitlab": 65
   },
   "Apache-2.0": {
@@ -2328,8 +2328,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 173,
-   "stated": 126
+   "total": 174,
+   "stated": 127
   },
   "github-pages": {
    "total": 24,
