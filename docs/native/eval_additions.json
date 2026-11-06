@@ -16714,5 +16714,33 @@
   "resilience": "미확인(제작자 미확인, PC 접속 차단)",
   "post_url": "",
   "service_url": "https://sangseon.kr/"
+ },
+ {
+  "no": 670,
+  "id": "eb5ee7387c2f1e64",
+  "org": "세종특별자치시 재난안전상황실",
+  "title": "세종SIREN — 재난 유형을 자동 분류하고 전파 부서 추천과 상황전파문·긴급재난문자 초안을 만드는 재난대응 플랫폼",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S2",
+  "s_name": "Workflow",
+  "c": "C2",
+  "c_name": "부분 완결 · 연속 처리",
+  "status": "Pilot",
+  "scope": "Internal",
+  "risk": "R2 보통(재난 전파 초안 — 담당자 검토 전제)",
+  "human": "H2 Human-in-the-loop",
+  "evidence": "E2 언론·기관 공식 확인",
+  "confidence": "중간",
+  "feedback": "부분확인(집중호우 대응 활용·시 경진대회 최우수상 보도)",
+  "rationale": "재난 유형 분류부터 전파 부서 추천, 상황전파문·재난문자 초안까지 이어지는 상황실 업무 흐름을 묶어 S2·C2로 본다. 비개발자 실무자가 용역 없이 두 달 만에 시범 운영에 올린 광역 재난 대응 사례로, 기사 두 곳(경향신문·전자신문)에서 확인했다. 운영 화면과 사용 모델, 분류 정확도 측정 방식은 미확인이다.",
+  "resilience": "미확인(내부 시스템, 서비스형 GPU 사업 선정 보도)",
+  "post_url": "https://www.threads.com/@pm_anyway/post/DfYy_VJFZ1A",
+  "service_url": ""
  }
 ]

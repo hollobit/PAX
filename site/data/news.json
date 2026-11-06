@@ -1,7 +1,176 @@
 {
- "updated_at": "2026-11-06T14:37:14Z",
- "count": 1363,
+ "updated_at": "2026-11-06T22:37:31Z",
+ "count": 1375,
  "articles": [
+  {
+   "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4088932",
+   "title": "상주 공무원이 만든 ‘토목AX’…AI로 설계업무 줄인다",
+   "outlet": "경북일보",
+   "published": "2026-10-29",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-10-31",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newspim.com/news/view/20261106000983",
+   "title": "대전교육청·충남대, AI 미래인재 성장체계 구축 협력",
+   "outlet": "뉴스핌",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-07",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202611060959417366",
+   "title": "호텔 직원도 챗GPT 쓴다…파라다이스, 10개 계열사에 AI 도입",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-07",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217104",
+   "title": "구글, 15초 영상 생성 '제미나이 옴니 1.2' 출시…가격 30% 인하",
+   "outlet": "AI타임스",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-07",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217101",
+   "title": "팔란티어, 신발 제조사 창신과 맞손…AI로 신발 제조 공정 혁신",
+   "outlet": "AI타임스",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-07",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217096",
+   "title": "엔비디아, 미국 노후 전화국 130곳 AI 데이터센터로 전환 추진",
+   "outlet": "AI타임스",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-07",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217088",
+   "title": "오픈AI, 데이터센터 전력 비용 전액 부담 약속…주민 반발 달래기",
+   "outlet": "AI타임스",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-07",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.mtn.co.kr/article/2026110508171743556",
+   "title": "\"대화로 이미지 찾는다\"…클립아트코리아, 챗GPT·클로드 연동 이미지 검색 서비스 출시",
+   "outlet": "MTN NEWS",
+   "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-07",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.ddaily.co.kr/page/view/2026110616030780367",
+   "title": "정부 AI 입법, 기본법&middot;기존법 개정 우선&hellip; 국방&middot;안보는 별도 입법 추진",
+   "outlet": "디지털데일리",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-07",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://biz.heraldcorp.com/article/10928650",
+   "title": "광진구, 주민 정책 아이디어 10건 우수제안 선정…AI 활용 생활불편 개선 눈길",
+   "outlet": "헤럴드경제",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-07",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-07-px-한컴-저작권-발언과-hwp-파서-논쟁",
+   "title": "[공공AX 네트워크] 한컴 저작권 발언을 두고 오간 hwp 파서 논쟁",
+   "outlet": "akwiki.org",
+   "published": "2026-11-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-07",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-07-px-대국민-페이지-배포-전-보안성-검토-부담",
+   "title": "[공공AX 네트워크] 공개 데이터 페이지 배포 앞의 보안성 검토 부담",
+   "outlet": "akwiki.org",
+   "published": "2026-11-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-07",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-07-px-ai-음성-전화와-민원-응대-자동화",
+   "title": "[공공AX 네트워크] AI가 걸고 받는 민원 전화를 둘러싼 기대와 농담",
+   "outlet": "akwiki.org",
+   "published": "2026-11-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-07",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://wemakenews.co.kr/news/view.php?no=26768",
    "title": "[단독] 이재명 대통령이 주문한 HWP 자동 변환…8급 공무원은 이미 개발했다 - 위메이크",
@@ -1410,19 +1579,6 @@
    "url": "https://www.madtimes.co.kr/news/articleView.html?idxno=29488",
    "title": "클립아트코리아, 챗GPT, 클로드 연동 이미지 검색 서비스 출시",
    "outlet": "매드타임스(MADTimes)",
-   "published": "2026-10-29",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-10-31",
-   "last_shared": "2026-10-31",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4088932",
-   "title": "상주 공무원이 만든 ‘토목AX’…AI로 설계업무 줄인다",
-   "outlet": "경북일보",
    "published": "2026-10-29",
    "kind": "기사",
    "shares": 1,

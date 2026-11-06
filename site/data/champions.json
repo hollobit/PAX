@@ -1,5 +1,5 @@
 {
- "total": 258,
+ "total": 259,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -1931,6 +1931,28 @@
    "category_basis": "cases",
    "cases": [
     "f4f1360681627431"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
+    "stars": 0
+   }
+  },
+  {
+   "id": "threads:pm_anyway",
+   "name": "pm_anyway",
+   "accounts": [
+    {
+     "platform": "threads",
+     "id": "pm_anyway",
+     "url": "https://www.threads.com/@pm_anyway"
+    }
+   ],
+   "affiliation": null,
+   "category": "광역지자체",
+   "category_basis": "cases",
+   "cases": [
+    "eb5ee7387c2f1e64"
    ],
    "stats": {
     "case_count": 1,
