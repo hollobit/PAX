@@ -2,18 +2,18 @@
  "generated_at": "2026-11-06",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 663,
+ "total_cases": 667,
  "total_champions": 258,
  "community": {
-  "members": 2809,
-  "kakao_week": 4508,
-  "kakao_total_observed": 67400,
+  "members": 2808,
+  "kakao_week": 5405,
+  "kakao_total_observed": 68297,
   "threads_observed": 429
  },
  "certified_champions": 5,
- "unattributed_cases": 189,
+ "unattributed_cases": 192,
  "ax_distribution": {
-  "AI-Ready": 425,
+  "AI-Ready": 429,
   "AI-Enabled": 204,
   "AX 단계 외": 28,
   "AI-First": 5,
@@ -21,13 +21,13 @@
  },
  "c_axis_mean": 0.93,
  "p_distribution": {
-  "P0": 202,
-  "P1": 439,
+  "P0": 203,
+  "P1": 442,
   "P2": 22
  },
  "model_dependency": {
   "미확인": 66,
-  "없음(비LLM)": 332,
+  "없음(비LLM)": 336,
   "해외 오픈웨이트(로컬)": 34,
   "혼합": 18,
   "해외 상용 API": 72,
@@ -938,7 +938,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 332,
+    "n": 336,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -2038,15 +2038,15 @@
  "domestic_model_rate": 0.061,
  "local_model_rate": 0.265,
  "model_known": 132,
- "license_tagged": 480,
- "license_stated_rate": 0.5,
+ "license_tagged": 481,
+ "license_stated_rate": 0.499,
  "gitlab_cases": 316,
  "gitlab_mirror_pairs": 43,
  "gitlab_open_rate": 0.136,
  "mcp_cases": 99,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 581,
+  "미확인": 585,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -2054,7 +2054,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.796
+  "feedback": 0.795
  },
  "maintenance_distribution": {
   "활발": 286,
@@ -2248,7 +2248,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 240,
+  "명시 없음": 241,
   "MIT": 157,
   "Apache-2.0": 39,
   "Other": 21,
@@ -2266,7 +2266,7 @@
  },
  "license_matrix": {
   "명시 없음": {
-   "github": 64,
+   "github": 65,
    "gitlab": 176
   },
   "MIT": {
@@ -2332,7 +2332,7 @@
    "stated": 127
   },
   "github-pages": {
-   "total": 24,
+   "total": 25,
    "stated": 7
   },
   "gitlab": {

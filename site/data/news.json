@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-06T06:35:29Z",
- "count": 1358,
+ "updated_at": "2026-11-06T14:37:14Z",
+ "count": 1363,
  "articles": [
   {
    "url": "https://wemakenews.co.kr/news/view.php?no=26768",
@@ -9,6 +9,32 @@
    "published": "2026-11-05",
    "kind": "기사",
    "shares": 2,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://naver.me/xfbl92gK",
+   "title": "[단독] '정부자료' 줄줄이 노출…과기부 '이용 권장' 사이트였다",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.solnews.co.kr/news/articleView.html?idxno=85140",
+   "title": "캔바, 직원 22% 감축…AI 비용 부담에 조직 재편",
+   "outlet": "솔루션뉴스",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
    "first_shared": "2026-11-06",
    "last_shared": "2026-11-06",
    "sources": [
@@ -159,9 +185,9 @@
    ]
   },
   {
-   "url": "https://naver.me/5B0qKXbQ",
-   "title": "[단독] '정부자료' 줄줄이 노출…과기부 '이용 권장' 사이트였다",
-   "outlet": "네이버 뉴스",
+   "url": "https://v.daum.net/v/20261105094317776",
+   "title": "전남광주시, AI 활용 '시설물 안전관리 플랫폼' 자체 개발",
+   "outlet": "Daum | 더팩트",
    "published": "",
    "kind": "기사",
    "shares": 1,
@@ -189,6 +215,19 @@
    "title": "삼성 엔지니어 사냥 나선 中…파격지원에 업계 '비상'",
    "outlet": "이데일리",
    "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-06-px-자체-제작-프로그램과-llm-서버-보안성-검토",
+   "title": "[공공AX 네트워크] 자체 제작 프로그램의 보안성 검토를 둘러싼 문답",
+   "outlet": "akwiki.org",
+   "published": "2026-11-06",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-06",
@@ -226,6 +265,32 @@
   {
    "url": "https://akwiki.org/article/2026-11-06-px-사무용-pc-대신-개인-장비-개발",
    "title": "[공공AX 네트워크] 설치가 막힌 사무용 PC와 개인 장비 개발 환경",
+   "outlet": "akwiki.org",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-06-px-ax-인재-병목-보고서와-재직자-교육",
+   "title": "[공공AX 네트워크] AX의 병목을 인재로 짚은 보고서와 재직자 교육",
+   "outlet": "akwiki.org",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-06",
+   "last_shared": "2026-11-06",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-06-cross-미국-ai-규제-소식을-받은-두-방의-반응",
+   "title": "[에이전트코리아·공공AX 네트워크] 미국의 AI 규제 소식을 받은 두 방의 반응",
    "outlet": "akwiki.org",
    "published": "2026-11-06",
    "kind": "기사",

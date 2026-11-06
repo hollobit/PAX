@@ -2133,10 +2133,11 @@
    "category": "기초지자체",
    "category_basis": "cases",
    "cases": [
+    "2ace1440972c76d0",
     "01880c27e51b8deb"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 1,
     "stars": 0
    }
@@ -7760,6 +7761,24 @@
    "title": "힐링캠프 — 말없이 같은 모닥불 곁에 앉아 별을 보고 고기를 굽는 밤 캠프 메타버스",
    "org": "민간 개발자(제작자 미확인)",
    "url": "https://healing-camp.onrender.com/"
+  },
+  {
+   "id": "3365ad1c388fbfb5",
+   "title": "시설물 안전관리 실무 플랫폼 — 종합건설본부 주무관이 AI로 직접 개발한 교량·터널·옹벽 점검 일정·손상 이력·용역 설계내역서 관리 도구",
+   "org": "전남광주통합특별시 종합건설본부",
+   "url": "https://v.daum.net/v/20261105094317776"
+  },
+  {
+   "id": "1f75b5f6ee493094",
+   "title": "북항 상어 국민 선호도 조사 — 동구청 70주년 캐릭터 공모 후보작 9점 중 3점을 고르는 투표 사이트를 구청 AI 동아리가 직접 제작",
+   "org": "부산광역시 동구",
+   "url": "https://vote.bukhang-shark.workers.dev/"
+  },
+  {
+   "id": "ca7d56107e909a73",
+   "title": "상선: 무역의 바다 — 여러 나라 선원이 만나 항구와 항구를 잇는 모바일 전용 가상 무역 항해 세계",
+   "org": "민간 개발자(제작자 미확인)",
+   "url": "https://sangseon.kr/"
   }
  ]
 }
