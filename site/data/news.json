@@ -1,7 +1,163 @@
 {
- "updated_at": "2026-11-07T14:35:34Z",
- "count": 1377,
+ "updated_at": "2026-11-07T22:36:14Z",
+ "count": 1389,
  "articles": [
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261106113900009",
+   "title": "日손보사 \"가짜 車흠집 잡는다\"…'생성형AI' 보험사기 대응 강화",
+   "outlet": "연합뉴스",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.tokenpost.kr/news/ai/434301",
+   "title": "클로드 기억 정리 예제 공개…드리밍은 연구 프리뷰",
+   "outlet": "토큰포스트",
+   "published": "2026-11-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.the-tech.co.kr/news/article.html?no=42133",
+   "title": "[더테크 (THE TECH)] 헤이데이미디어, 공공기관 공모전 성공 개최 이끈다…AI·빅데이터 기반 맞춤형 홍보",
+   "outlet": "the-tech.co.kr",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newstap.co.kr/news/articleView.html?idxno=337266",
+   "title": "슈퍼마이크로·IBM·엔비디아 뭉쳤다…AI 추론 첫 응답 시간 최대 56배 단축",
+   "outlet": "뉴스탭",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202611060902085605",
+   "title": "SK바이오팜, AI 신약개발 모델 구축…714만건 데이터 활용",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.etoday.co.kr/news/view/2645134",
+   "title": "서울연구원, 서울시 AI 행정 제도·인프라·데이터 시급⋯공공 GPU 확보 우선",
+   "outlet": "이투데이",
+   "published": "2026-11-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.edpl.co.kr/news/articleView.html?idxno=22004",
+   "title": "[AI교육 1번지 대전] ①대전교육청, AI교육 새판 짠다…4대 전략·16개 과제 제시",
+   "outlet": "교육플러스",
+   "published": "2026-11-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217131",
+   "title": "바이두, 딥시크 앞선 '어니 5.5' 베이스 모델 공개…한국·유럽 사용 제한",
+   "outlet": "AI타임스",
+   "published": "2026-11-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217080",
+   "title": "앤트로픽, AI 자기개선 가속 징후…개발 속도 2배·미공개 모델 3개 확인",
+   "outlet": "AI타임스",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-08-px-클로드와-gpt-역할-구분과-토큰-소모",
+   "title": "[공공AX 네트워크] 클로드 오푸스와 지피티 사이 역할 나누기 문답",
+   "outlet": "akwiki.org",
+   "published": "2026-11-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-08-px-도입-방식-논쟁과-순환-보직의-지속성-한계",
+   "title": "[공공AX 네트워크] 수요 조사와 탑다운 사이, 순환 보직이 끊는 지속성",
+   "outlet": "akwiki.org",
+   "published": "2026-11-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.org/article/2026-11-08-px-건물-길찾기-안내-페이지와-이중-입력-문제",
+   "title": "[공공AX 네트워크] 원형 건물 길찾기 페이지와 이중 입력의 부담",
+   "outlet": "akwiki.org",
+   "published": "2026-11-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4088932",
    "title": "상주 공무원이 만든 ‘토목AX’…AI로 설계업무 줄인다",
