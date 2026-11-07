@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-07T06:34:41Z",
- "count": 1376,
+ "updated_at": "2026-11-07T14:35:34Z",
+ "count": 1377,
  "articles": [
   {
    "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4088932",
@@ -10,6 +10,19 @@
    "kind": "기사",
    "shares": 2,
    "first_shared": "2026-10-31",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newstomato.com/readnews.aspx?no=1319591",
+   "title": "한국형 핵잠 ‘장보고 N’ 내년 경쟁입찰…2030년대 중반 진수 목표",
+   "outlet": "NewsTomato",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-07",
    "last_shared": "2026-11-07",
    "sources": [
     "kakao"
