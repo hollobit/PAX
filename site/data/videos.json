@@ -1,7 +1,46 @@
 {
- "updated_at": "2026-11-06T06:35:25Z",
- "count": 137,
+ "updated_at": "2026-11-07T06:34:40Z",
+ "count": 140,
  "videos": [
+  {
+   "id": "IvVTSzxd2nw",
+   "title": "챗GPT·클로드 아직도 돈 내고 쓰세요? 전 공짜로 씁니다.",
+   "channel": "정가거부",
+   "url": "https://www.youtube.com/watch?v=IvVTSzxd2nw",
+   "thumb": "https://i.ytimg.com/vi/IvVTSzxd2nw/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-07",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "DITyugq6lh4",
+   "title": "국가인공지능전략위원회 제3차회의",
+   "channel": "국가인공지능전략위원회",
+   "url": "https://www.youtube.com/watch?v=DITyugq6lh4",
+   "thumb": "https://i.ytimg.com/vi/DITyugq6lh4/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-07",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "BFz4lW6vRS8",
+   "title": "초보개발자 vs 고수개발자 #shorts",
+   "channel": "코딩독학 Codok",
+   "url": "https://www.youtube.com/watch?v=BFz4lW6vRS8",
+   "thumb": "https://i.ytimg.com/vi/BFz4lW6vRS8/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-07",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "KV3pxxZGz_E",
    "title": "세계적인 거물들을 '을'로 만드는 남자",

@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-06T22:37:31Z",
- "count": 1375,
+ "updated_at": "2026-11-07T06:34:41Z",
+ "count": 1376,
  "articles": [
   {
    "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4088932",
@@ -98,6 +98,19 @@
    "title": "\"대화로 이미지 찾는다\"…클립아트코리아, 챗GPT·클로드 연동 이미지 검색 서비스 출시",
    "outlet": "MTN NEWS",
    "published": "2026-11-05",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-07",
+   "last_shared": "2026-11-07",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.sedaily.com/article/20110882",
+   "title": "“AI해킹 AI로 막아야”…금융위, 망분리 전면 해제 추진",
+   "outlet": "서울경제",
+   "published": "2026-11-06",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-07",
