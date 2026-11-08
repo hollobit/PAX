@@ -1,5 +1,5 @@
 {
- "total": 259,
+ "total": 260,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -514,10 +514,11 @@
    "category": "공직(소속 미상)",
    "category_basis": "cases",
    "cases": [
+    "bf7b33db31a0e425",
     "bf5cc096276d2e49"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 2,
     "stars": 0
    }
@@ -4020,6 +4021,32 @@
    }
   },
   {
+   "id": "gitlab:bonsens",
+   "name": "박영란",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "bonsens",
+     "url": "https://gitlab.aigov.go.kr/bonsens"
+    }
+   ],
+   "affiliation": {
+    "value": "산림청",
+    "inferred": false,
+    "evidence": "공공 GitLab 공개 프로필 표시명"
+   },
+   "category": "중앙행정기관",
+   "category_basis": "affiliation",
+   "cases": [
+    "72a5390fef032799"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
    "id": "gitlab:inchangpark",
    "name": "박인창",
    "accounts": [
@@ -6311,10 +6338,12 @@
    "category": "공공기관",
    "category_basis": "affiliation",
    "cases": [
+    "53c30605325838f8",
+    "cb5e7f2b3e02b2a7",
     "1f4460d5bd89cc14"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 3,
     "top_ax": 2,
     "stars": 0
    }

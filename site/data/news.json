@@ -1,7 +1,163 @@
 {
- "updated_at": "2026-11-08T14:34:23Z",
- "count": 1393,
+ "updated_at": "2026-11-08T22:45:51Z",
+ "count": 1405,
  "articles": [
+  {
+   "url": "https://www.mk.co.kr/news/it/12201680",
+   "title": "일정 알려주고 KTX 예매까지...한국판 뮤즈 ‘피클’ 써보니",
+   "outlet": "매일경제",
+   "published": "2026-11-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kmib.co.kr/article/20261108501401",
+   "title": "AI 반도체 올인한 개미들 ‘비명’⋯ 빚투 반대매매는 일단 숨통",
+   "outlet": "국민일보",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=242738",
+   "title": "오픈AI, 보안 특화 ‘GPT-6 사이버’ 공개…취약점 검증 평가 성공률 48.5%",
+   "outlet": "아이티데일리",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.imaeil.com/page/view/2026110611065839266",
+   "title": "창녕군, '일선 행정 서비스 첨병, 이장님들 AI교육 받으세요'",
+   "outlet": "매일신문",
+   "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202611081759575925",
+   "title": "S&amp;P500·반도체·전력 나눠 담아도 결국 AI 쏠림… 퇴직연금 분산 착시",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-11-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217146",
+   "title": "앤트그룹, '링 3.2 플래시' 공개…시각 이해 평가서 클로드 오퍼스 5 앞서",
+   "outlet": "AI타임스",
+   "published": "2026-11-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217140",
+   "title": "오픈AI, '이미지 2.6' 프롬프트 가이드 공개…\"바꿀 것·유지할 것 구분\"",
+   "outlet": "AI타임스",
+   "published": "2026-11-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217138",
+   "title": "오픈AI 도청 혐의 사우디 엔지니어, 법정서 무죄 주장",
+   "outlet": "AI타임스",
+   "published": "2026-11-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.mtn.co.kr/article/2026110610081539992",
+   "title": "노근창 대표 \"AI 서버 병목...내년에도 반도체·소부장 공급 부족 이어질 것\" [경제일타강사]",
+   "outlet": "MTN NEWS",
+   "published": "2026-11-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-09-px-ai로-아낀-시간-업무량과-주4일제-논쟁",
+   "title": "[공공AX 네트워크] AI로 아낀 시간을 둘러싼 업무량과 주4일제 논쟁",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-09-px-ai-성과지표-인원감축-압박과-fde-논쟁",
+   "title": "[공공AX 네트워크] AI 도입 성과를 절감액 목표로 요구받는 현장",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-09-cross-로컬-모델-쓰임새와-한계를-두-방이-다르게-말했다",
+   "title": "[에이전트코리아·공공AX 네트워크] 로컬 모델의 쓸모를 두 방이 다르게 재다",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.yna.co.kr/view/AKR20261106113900009",
    "title": "日손보사 \"가짜 車흠집 잡는다\"…'생성형AI' 보험사기 대응 강화",

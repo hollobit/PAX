@@ -29,7 +29,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -65,7 +65,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -101,7 +101,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -137,7 +137,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -173,7 +173,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -209,7 +209,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -245,7 +245,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -281,7 +281,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -317,7 +317,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -353,7 +353,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -389,7 +389,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -425,7 +425,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -461,7 +461,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -497,7 +497,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -533,7 +533,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -569,7 +569,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -605,7 +605,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -641,7 +641,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -677,7 +677,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -713,7 +713,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -749,7 +749,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -785,7 +785,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -821,7 +821,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -857,7 +857,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -893,7 +893,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -929,7 +929,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -965,7 +965,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1001,7 +1001,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1037,7 +1037,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1073,7 +1073,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1109,7 +1109,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1145,7 +1145,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1181,7 +1181,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1217,7 +1217,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1253,7 +1253,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1289,7 +1289,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1325,7 +1325,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1361,7 +1361,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1397,7 +1397,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1433,7 +1433,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1469,7 +1469,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1505,7 +1505,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1541,7 +1541,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1577,7 +1577,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1616,7 +1616,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1652,7 +1652,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1688,7 +1688,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1724,7 +1724,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1760,7 +1760,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1796,7 +1796,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1832,7 +1832,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1868,7 +1868,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1904,7 +1904,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1940,7 +1940,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -1959,8 +1959,8 @@
      "note": "하드코딩 자격증명 패턴 없음"
     },
     "supply_chain": {
-     "verdict": "주의",
-     "note": "High 이상 CVE 14건"
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
     },
     "hygiene": {
      "verdict": "통과",
@@ -1976,7 +1976,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -2012,7 +2012,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -2048,7 +2048,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -2084,7 +2084,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -2120,7 +2120,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -2156,7 +2156,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -2192,7 +2192,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -2228,7 +2228,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -2264,7 +2264,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -2300,7 +2300,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -2336,7 +2336,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -2372,7 +2372,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -2408,7 +2408,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -2444,7 +2444,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -2487,7 +2487,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -2523,7 +2523,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -2538,7 +2538,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -2573,7 +2573,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -2609,7 +2609,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -2645,7 +2645,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -2681,7 +2681,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -2717,7 +2717,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -2733,7 +2733,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -2760,7 +2760,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -2770,16 +2770,16 @@
    "case_id": "7f8dfb1eb051abe9",
    "axes": {
     "permission_surface": {
-     "verdict": "주의",
-     "note": "셸 실행 패턴 4건 — 도구 목적 대비 필요성 검토 권장"
+     "verdict": "미검증",
+     "note": "미검증(저장소 접근 불가)"
     },
     "secrets": {
-     "verdict": "통과",
-     "note": "하드코딩 자격증명 패턴 없음"
+     "verdict": "미검증",
+     "note": "미검증(저장소 접근 불가)"
     },
     "supply_chain": {
-     "verdict": "해당 없음",
-     "note": "npm·python 의존성 선언 없음"
+     "verdict": "미검증",
+     "note": "미검증(저장소 접근 불가)"
     },
     "hygiene": {
      "verdict": "통과",
@@ -2787,7 +2787,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -2822,7 +2822,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -2857,7 +2857,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -2893,7 +2893,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -2928,7 +2928,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -2964,7 +2964,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -3000,7 +3000,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -3036,7 +3036,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -3052,7 +3052,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -3079,7 +3079,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -3114,7 +3114,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -3150,7 +3150,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -3186,7 +3186,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -3222,7 +3222,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -3250,7 +3250,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -3285,7 +3285,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -3300,7 +3300,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -3335,7 +3335,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -3370,7 +3370,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0",
@@ -3406,7 +3406,7 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
@@ -3441,7 +3441,42 @@
     }
    },
    "disclosure": null,
-   "checked_at": "2026-11-02",
+   "checked_at": "2026-11-09",
+   "tools": {
+    "npm": "11.20.0",
+    "pip_audit": "2.9.0"
+   }
+  },
+  {
+   "case_id": "bf7b33db31a0e425",
+   "axes": {
+    "permission_surface": {
+     "verdict": "통과",
+     "note": "셸·파일 쓰기 패턴 없음(네트워크 조회 중심)"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "셸 호출·eval 없음, 엑셀 파일명은 금지 문자 치환 후 60자로 제한하고 원격 모드는 파일 시스템에 쓰지 않음 (근거: src/ai_budget_mcp/server.py:93, :312-313, :348)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "외부 전송은 운영자가 환경변수로 연결한 선택형 Redis 단축 링크 저장소뿐이며 이미 암호화된 토큰만 1시간 보관, README·모듈 주석에 명시 (근거: src/ai_budget_mcp/linkstore.py:1-8, :30-34)"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-11-09",
    "tools": {
     "npm": "11.20.0",
     "pip_audit": "2.9.0"

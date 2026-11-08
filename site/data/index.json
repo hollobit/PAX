@@ -1,37 +1,37 @@
 {
- "generated_at": "2026-11-08",
+ "generated_at": "2026-11-09",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 670,
- "total_champions": 259,
+ "total_cases": 674,
+ "total_champions": 260,
  "community": {
-  "members": 2852,
-  "kakao_week": 6447,
-  "kakao_total_observed": 70355,
-  "threads_observed": 440
+  "members": 2854,
+  "kakao_week": 5987,
+  "kakao_total_observed": 70378,
+  "threads_observed": 441
  },
  "certified_champions": 5,
  "unattributed_cases": 194,
  "ax_distribution": {
-  "AI-Ready": 431,
-  "AI-Enabled": 205,
+  "AI-Ready": 433,
+  "AI-Enabled": 207,
   "AX 단계 외": 28,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
  "c_axis_mean": 0.93,
  "p_distribution": {
-  "P0": 203,
-  "P1": 445,
+  "P0": 204,
+  "P1": 448,
   "P2": 22
  },
  "model_dependency": {
   "미확인": 67,
-  "없음(비LLM)": 338,
+  "없음(비LLM)": 340,
   "해외 오픈웨이트(로컬)": 34,
   "혼합": 18,
-  "해외 상용 API": 72,
-  "모델 중립(BYO)": 104,
+  "해외 상용 API": 73,
+  "모델 중립(BYO)": 105,
   "국산 독자모델": 7,
   "미상": 29,
   "국산 오픈웨이트": 1
@@ -40,7 +40,7 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 37,
+    "n": 38,
     "variants": [
      "Claude",
      "Claude Code",
@@ -60,6 +60,7 @@
      "Claude(대조·근거 작성)",
      "Claude(선택 기능)",
      "Claude(스킬)",
+     "Codex",
      "Codex CLI/Claude CLI(BYO 구독)",
      "Codex 이미지 생성(BYO 구독)",
      "상용 API 모드(Claude 등)",
@@ -213,6 +214,10 @@
      {
       "id": "7ec0b61bbdad48ba",
       "title": "Claw Office — 여러 컴퓨터의 AI 코딩 에이전트 세션을 3D 사무실 직원으로 보여 주고 지휘하는 오픈소스 플러그인"
+     },
+     {
+      "id": "53c30605325838f8",
+      "title": "데브마루 — 공공 실험실 같은 소규모 조직이 서버 한 대에 회원별 AI 개발환경과 공개·DB·문서 변환을 한 번에 까는 설치 도구"
      }
     ],
     "domestic": false
@@ -938,7 +943,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 338,
+    "n": 340,
     "specified": 1
    },
    "해외 오픈웨이트(로컬)": {
@@ -950,11 +955,11 @@
     "specified": 16
    },
    "해외 상용 API": {
-    "n": 72,
-    "specified": 56
+    "n": 73,
+    "specified": 57
    },
    "모델 중립(BYO)": {
-    "n": 104,
+    "n": 105,
     "specified": 11
    },
    "국산 독자모델": {
@@ -1434,11 +1439,11 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 72,
+    "n": 73,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
-      "n": 26,
+      "n": 27,
       "cases": [
        {
         "id": "7acf5f25369c1401",
@@ -1543,6 +1548,10 @@
        {
         "id": "31d885ce7241ceae",
         "title": "잘하나 행감팩 — 지방의회 회의록을 AI로 사안별로 엮어 행정사무감사 질문·자료를 지역별로 정리한 서비스"
+       },
+       {
+        "id": "53c30605325838f8",
+        "title": "데브마루 — 공공 실험실 같은 소규모 조직이 서버 한 대에 회원별 AI 개발환경과 공개·DB·문서 변환을 한 번에 까는 설치 도구"
        }
       ],
       "domestic": false,
@@ -1555,6 +1564,7 @@
        "Claude Code/Codex(플러그인)",
        "Claude(선택 기능)",
        "Claude(스킬)",
+       "Codex",
        "Codex 이미지 생성(BYO 구독)"
       ]
      },
@@ -2035,18 +2045,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.061,
- "local_model_rate": 0.265,
- "model_known": 132,
- "license_tagged": 481,
+ "domestic_model_rate": 0.06,
+ "local_model_rate": 0.263,
+ "model_known": 133,
+ "license_tagged": 485,
  "license_stated_rate": 0.499,
- "gitlab_cases": 316,
+ "gitlab_cases": 320,
  "gitlab_mirror_pairs": 43,
- "gitlab_open_rate": 0.136,
- "mcp_cases": 99,
+ "gitlab_open_rate": 0.134,
+ "mcp_cases": 100,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 588,
+  "미확인": 592,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -2054,28 +2064,28 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.793
+  "feedback": 0.794
  },
  "maintenance_distribution": {
-  "활발": 286,
-  "정체": 144,
+  "활발": 284,
+  "정체": 158,
   "방치": 17
  },
- "stars_collected": 447,
+ "stars_collected": 459,
  "repo_stats": {
   "gitlab": {
-   "count": 316,
-   "starred": 307,
-   "stars_sum": 708,
+   "count": 320,
+   "starred": 315,
+   "stars_sum": 745,
    "maintenance": {
-    "활발": 194,
-    "정체": 113
+    "활발": 190,
+    "정체": 125
    },
    "top": [
     {
      "id": "8ff758ac1d5e40eb",
      "title": "한국 문서 파싱 오픈소스 Kordoc, 문서 생산까지 확장",
-     "stars": 24,
+     "stars": 26,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "류승인"
@@ -2083,34 +2093,50 @@
     {
      "id": "43dc7f4ab2500260",
      "title": "국가법령정보 MCP — 법령·판례·조례 검색과 인용 검증",
-     "stars": 17,
+     "stars": 19,
      "maintenance": "활발",
      "license": "MIT",
+     "developer": "류승인"
+    },
+    {
+     "id": "de4b2dab339d69b7",
+     "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
+     "stars": 13,
+     "maintenance": "활발",
+     "license": "Other",
      "developer": "류승인"
     },
     {
      "id": "a8492663acf67b99",
      "title": "나라예산 한눈에 — 중앙관서 세출예산서 8,500건 웹서비스",
      "stars": 12,
-     "maintenance": "활발",
+     "maintenance": "정체",
      "license": "명시 없음",
      "developer": "김기현"
     },
     {
-     "id": "de4b2dab339d69b7",
-     "title": "Anything(Docufinder) — 본문으로 찾는 오프라인 문서 검색기",
-     "stars": 10,
+     "id": "471dabbd273eab34",
+     "title": "한글편집 후처리 도구 — 보고서의 자간·서식·문두기호를 한글 프로그램 자동 조작으로 한 번에 다듬는 데스크톱 앱",
+     "stars": 12,
      "maintenance": "활발",
-     "license": "Other",
-     "developer": "류승인"
+     "license": "명시 없음",
+     "developer": "공혁준"
     },
     {
      "id": "2798c2e0b79ab291",
      "title": "KODA — 폐쇄망용 보안취약점 점검 도구",
-     "stars": 10,
+     "stars": 11,
      "maintenance": "활발",
      "license": "Apache-2.0",
      "developer": "김지현"
+    },
+    {
+     "id": "ac09bd2e1c0fbb29",
+     "title": "온AI Work — 공무원 보고서 AI 작성 도구",
+     "stars": 10,
+     "maintenance": "활발",
+     "license": "MIT",
+     "developer": "정준우"
     },
     {
      "id": "17ed2d7a88c03119",
@@ -2121,53 +2147,37 @@
      "developer": "정솔현"
     },
     {
-     "id": "ac09bd2e1c0fbb29",
-     "title": "온AI Work — 공무원 보고서 AI 작성 도구",
-     "stars": 9,
-     "maintenance": "활발",
-     "license": "MIT",
-     "developer": "정준우"
-    },
-    {
-     "id": "471dabbd273eab34",
-     "title": "한글편집 후처리 도구 — 보고서의 자간·서식·문두기호를 한글 프로그램 자동 조작으로 한 번에 다듬는 데스크톱 앱",
+     "id": "0dd22d6d0375bc39",
+     "title": "온나라 AI 문서 분배기 — 접수대기 문서를 범정부 AI 공통기반으로 분석해 담당 배분",
      "stars": 9,
      "maintenance": "활발",
      "license": "명시 없음",
-     "developer": "공혁준"
+     "developer": "최필선"
     },
     {
-     "id": "d6c35b2999da8ca0",
-     "title": "모두의 일기장 — 공무원 감정 기록·AI 답장 웹앱",
+     "id": "8c5458af8f13435d",
+     "title": "한글 AI 도우미 — 로컬 LLM 웹한글 보고서 확장",
      "stars": 8,
      "maintenance": "활발",
      "license": "명시 없음",
-     "developer": "한종훈"
-    },
-    {
-     "id": "d08bc7e9a69190af",
-     "title": "내부망용 빠른 메모·구조화 앱",
-     "stars": 7,
-     "maintenance": "활발",
-     "license": "AGPL-3.0",
-     "developer": "우성균"
+     "developer": "정재경"
     }
    ]
   },
   "github": {
    "count": 188,
-   "starred": 180,
-   "stars_sum": 835603,
+   "starred": 185,
+   "stars_sum": 873543,
    "maintenance": {
-    "정체": 41,
-    "활발": 123,
+    "정체": 44,
+    "활발": 125,
     "방치": 17
    },
    "top": [
     {
      "id": "3f7b3180bf404e54",
      "title": "rea — 에이전트로 앱 동작부터 네이티브 바이너리까지 역공학하는 오픈소스",
-     "stars": 418502,
+     "stars": 443586,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "morluto"
@@ -2175,7 +2185,7 @@
     {
      "id": "c54ee4b5fb3ee4c5",
      "title": "Orca — 병렬 에이전트 플릿을 부리는 에이전트 개발 환경(ADE)",
-     "stars": 112432,
+     "stars": 119241,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "stablyai"
@@ -2183,7 +2193,7 @@
     {
      "id": "4f136eeeea72fe65",
      "title": "Archify — 코드베이스·시스템 설명을 검증 가능한 다이어그램으로 바꾸는 에이전트 스킬",
-     "stars": 92373,
+     "stars": 94717,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "tt-a1i"
@@ -2191,7 +2201,7 @@
     {
      "id": "2085370092f99007",
      "title": "God's Eye View — 항공기·선박·위성·지진·공개 카메라를 한 3D 지구본에 띄우는 오픈소스 공간정보 관제 참고 도구",
-     "stars": 62043,
+     "stars": 63586,
      "maintenance": "활발",
      "license": "Other",
      "developer": "bilawalsidhu"
@@ -2199,7 +2209,7 @@
     {
      "id": "04af7fa6f99a64e4",
      "title": "CL4R1T4S — 주요 AI 서비스의 시스템 프롬프트를 모아 공개한 투명성 저장소",
-     "stars": 51682,
+     "stars": 51839,
      "maintenance": "활발",
      "license": "AGPL-3.0",
      "developer": "elder-plinius"
@@ -2207,7 +2217,7 @@
     {
      "id": "f108979f0d8b2009",
      "title": "book-to-skill — 기술 서적 PDF를 Claude Code 스킬로 바꾸는 도구",
-     "stars": 36705,
+     "stars": 37344,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "virgiliojr94"
@@ -2215,7 +2225,7 @@
     {
      "id": "5cda81d84c79d926",
      "title": "ai-memory — 여러 코딩 에이전트가 하나의 장기 기억을 나눠 쓰고 작업을 넘겨받게 하는 자체 운영 메모리 서버(MIT)",
-     "stars": 14819,
+     "stars": 15405,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "akitaonrails"
@@ -2223,7 +2233,7 @@
     {
      "id": "b64e832490a6c814",
      "title": "MCP Inspector — MCP 서버를 눈으로 검사하는 공식 테스트 도구",
-     "stars": 11208,
+     "stars": 11255,
      "maintenance": "활발",
      "license": "명시 없음",
      "developer": "modelcontextprotocol"
@@ -2231,7 +2241,7 @@
     {
      "id": "2f4ed1e68a6464c5",
      "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
-     "stars": 8232,
+     "stars": 8305,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "NomaDamas"
@@ -2239,7 +2249,7 @@
     {
      "id": "0292062a6328545a",
      "title": "public-apis-4Kr — 한국 공개 API 300+ 커뮤니티 큐레이션 목록",
-     "stars": 3313,
+     "stars": 3478,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "yoobin_mion"
@@ -2248,8 +2258,8 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 241,
-  "MIT": 157,
+  "명시 없음": 243,
+  "MIT": 159,
   "Apache-2.0": 39,
   "Other": 21,
   "AGPL-3.0": 5,
@@ -2267,11 +2277,11 @@
  "license_matrix": {
   "명시 없음": {
    "github": 65,
-   "gitlab": 176
+   "gitlab": 178
   },
   "MIT": {
    "github": 91,
-   "gitlab": 65
+   "gitlab": 67
   },
   "Apache-2.0": {
    "github": 16,
@@ -2336,17 +2346,17 @@
    "stated": 7
   },
   "gitlab": {
-   "total": 281,
-   "stated": 105
+   "total": 285,
+   "stated": 107
   }
  },
  "mcp_stats": {
-  "total": 99,
+  "total": 100,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
-   "Server": 85,
+   "Server": 86,
    "Client/Host": 7,
    "Unknown/None": 6
   },
@@ -2354,12 +2364,12 @@
    "C0": 69,
    "C2": 10,
    "C3": 1,
-   "C1": 19
+   "C1": 20
   },
   "maintenance": {
-   "정체": 21,
-   "활발": 47,
-   "방치": 16
+   "정체": 25,
+   "활발": 46,
+   "방치": 15
   }
  },
  "mirror_pair_cases": [
