@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-11-07T14:35:33Z",
- "count": 142,
+ "updated_at": "2026-11-08T06:35:33Z",
+ "count": 144,
  "videos": [
+  {
+   "id": "uOw4nSocP4s",
+   "title": "[공익광고협의회] 생각의 힘 키우기-AI생활",
+   "channel": "코바코 TV (한국방송광고진흥공사)",
+   "url": "https://www.youtube.com/watch?v=uOw4nSocP4s",
+   "thumb": "https://i.ytimg.com/vi/uOw4nSocP4s/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "4JwrDG4nVyQ",
+   "title": "가성비 AI GPT-6.1 Terra high, 실제 건축 설계(Revit) 시켰더니 벌어진 일 | 평면도 한 장으로 끝낸 BIM과 최종 출력본",
+   "channel": "CNV AI",
+   "url": "https://www.youtube.com/watch?v=4JwrDG4nVyQ",
+   "thumb": "https://i.ytimg.com/vi/4JwrDG4nVyQ/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "tnAhMPEpXiU",
    "title": "공대생 전체 F학점 받은 이유",

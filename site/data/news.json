@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-07T22:36:14Z",
- "count": 1389,
+ "updated_at": "2026-11-08T06:35:34Z",
+ "count": 1392,
  "articles": [
   {
    "url": "https://www.yna.co.kr/view/AKR20261106113900009",
@@ -55,6 +55,19 @@
    ]
   },
   {
+   "url": "https://www.gukjenews.com/news/articleView.html?idxno=3745248",
+   "title": "[속보] 교황, AI로 인한 '인간성 말살' 경고",
+   "outlet": "국제뉴스",
+   "published": "2026-11-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.fnnews.com/news/202611060902085605",
    "title": "SK바이오팜, AI 신약개발 모델 구축…714만건 데이터 활용",
    "outlet": "파이낸셜뉴스",
@@ -94,6 +107,19 @@
    ]
   },
   {
+   "url": "https://www.bloomberg.com/news/articles/2026-11-04/apple-cuts-internal-ai-usage-budgets-in-move-to-reduce-spending",
+   "title": "Apple Cuts Internal AI Usage Budgets in Move to Reduce Spending",
+   "outlet": "Bloomberg.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.aitimes.com/news/articleView.html?idxno=217131",
    "title": "바이두, 딥시크 앞선 '어니 5.5' 베이스 모델 공개…한국·유럽 사용 제한",
    "outlet": "AI타임스",
@@ -111,6 +137,19 @@
    "title": "앤트로픽, AI 자기개선 가속 징후…개발 속도 2배·미공개 모델 3개 확인",
    "outlet": "AI타임스",
    "published": "2026-11-06",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://naver.me/5VxiOYXX",
+   "title": "\"AI 전문가도 5년 안에 사라진다\" 정재승 교수가 던진 화두",
+   "outlet": "네이버 뉴스",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-08",
