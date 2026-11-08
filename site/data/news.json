@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-08T06:35:34Z",
- "count": 1392,
+ "updated_at": "2026-11-08T14:34:23Z",
+ "count": 1393,
  "articles": [
   {
    "url": "https://www.yna.co.kr/view/AKR20261106113900009",
@@ -98,6 +98,19 @@
    "title": "[AI교육 1번지 대전] ①대전교육청, AI교육 새판 짠다…4대 전략·16개 과제 제시",
    "outlet": "교육플러스",
    "published": "2026-11-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-08",
+   "last_shared": "2026-11-08",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.donga.com/news/Society/article/all/20261106/134972905/2",
+   "title": "“AI가 일을 대신하는 시대”…직장인들은 왜 다시 MBA로 향하나",
+   "outlet": "동아일보",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-08",
