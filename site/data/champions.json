@@ -7848,6 +7848,18 @@
    "title": "서초 AI전트 — 구정·정책사업·예약신청·민원서류·공공시설을 안내하고 본인인증으로 예약까지 조회·취소하는 서초구 AI 지식비서",
    "org": "서울특별시 서초구",
    "url": "https://chat.seocho.go.kr/chatbot/chat"
+  },
+  {
+   "id": "26674b8e3aa8edbf",
+   "title": "페달의 달인 — 서울경찰청 착한운전 캠페인을 알리는 현장 교통안전 교육용 체험 게임",
+   "org": "서울경찰청 실무자(개인 개발)",
+   "url": "https://pedal-test-pearl.vercel.app"
+  },
+  {
+   "id": "b770faa82c2fee98",
+   "title": "코레일 영수증 정리 — 여러 장의 기차표 영수증 PDF를 올리면 환불된 표를 빼고 날짜·시간순으로 묶어 주는 정산 도구",
+   "org": "공직 현장(개인 개발)",
+   "url": "https://korail.parklab.work/"
   }
  ]
 }

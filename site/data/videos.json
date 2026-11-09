@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-11-08T06:35:33Z",
- "count": 144,
+ "updated_at": "2026-11-09T14:37:25Z",
+ "count": 145,
  "videos": [
+  {
+   "id": "bChUKH9PdTE",
+   "title": "28시간 동안 AI한테 코딩시키기 (LG AI 프롬프톤 챌린지)",
+   "channel": "LG그룹",
+   "url": "https://www.youtube.com/watch?v=bChUKH9PdTE",
+   "thumb": "https://i.ytimg.com/vi/bChUKH9PdTE/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "uOw4nSocP4s",
    "title": "[공익광고협의회] 생각의 힘 키우기-AI생활",

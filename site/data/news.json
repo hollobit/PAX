@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-11-09T06:36:43Z",
- "count": 1407,
+ "updated_at": "2026-11-09T14:37:28Z",
+ "count": 1412,
  "articles": [
+  {
+   "url": "https://www.newstomato.com/ReadNews.aspx?no=1319732",
+   "title": "LG AI연구원, 독파모 ‘K-엑사원 2.5’ API 무료 개방",
+   "outlet": "NewsTomato",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.mk.co.kr/news/it/12201680",
    "title": "일정 알려주고 KTX 예매까지...한국판 뮤즈 ‘피클’ 써보니",
@@ -68,6 +81,19 @@
    ]
   },
   {
+   "url": "https://www.donga.com/news/Opinion/article/all/20261108/134988378/2",
+   "title": "건보공단에 전화 건 ‘비서 AI’[횡설수설/김창덕]",
+   "outlet": "동아일보",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.aitimes.com/news/articleView.html?idxno=217146",
    "title": "앤트그룹, '링 3.2 플래시' 공개…시각 이해 평가서 클로드 오퍼스 5 앞서",
    "outlet": "AI타임스",
@@ -98,6 +124,19 @@
    "title": "오픈AI 도청 혐의 사우디 엔지니어, 법정서 무죄 주장",
    "outlet": "AI타임스",
    "published": "2026-11-08",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://v.daum.net/v/20261109163729861",
+   "title": "[단독] 李 거듭 질타한 ‘AI가 못 읽는 HWP’… 정부, 연내 공공문서 HWPX 전면 전환 검토",
+   "outlet": "Daum | 조선비즈",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-09",
@@ -161,6 +200,32 @@
   {
    "url": "https://akwiki.agentofu.com/article/2026-11-09-px-ai-성과지표-인원감축-압박과-fde-논쟁",
    "title": "[공공AX 네트워크] AI 도입 성과를 절감액 목표로 요구받는 현장",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-09-px-ai-서버-도입의-서버실-조건과-견적-급등",
+   "title": "[공공AX 네트워크] AI 서버 도입을 가로막는 서버실 조건과 견적 급등",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-09-cross-추론강도와-한국어-토큰값",
+   "title": "[에이전트코리아·공공AX 네트워크] 두 방에서 따로 나온 토큰값 체감",
    "outlet": "akwiki.agentofu.com",
    "published": "2026-11-09",
    "kind": "기사",
