@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-08T22:45:51Z",
- "count": 1405,
+ "updated_at": "2026-11-09T06:36:43Z",
+ "count": 1407,
  "articles": [
   {
    "url": "https://www.mk.co.kr/news/it/12201680",
@@ -111,6 +111,32 @@
    "title": "노근창 대표 \"AI 서버 병목...내년에도 반도체·소부장 공급 부족 이어질 것\" [경제일타강사]",
    "outlet": "MTN NEWS",
    "published": "2026-11-07",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://naver.me/FuNby0ig",
+   "title": "젠슨황, 中스파이 의심 여성과 불륜 인정…이사회 독립조사 착수(종합)",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-09",
+   "last_shared": "2026-11-09",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/031/0001073386?sid=105",
+   "title": "[단독] 앤트로픽서 국내 기업 계정 100여 건 유출...\"개보위에 정보 유출 신고\"",
+   "outlet": "네이버 뉴스",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-09",

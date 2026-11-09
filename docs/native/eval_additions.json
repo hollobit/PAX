@@ -16910,5 +16910,33 @@
   "rationale": "회원별 코딩 에이전트 개발환경·공개·DB·문서 변환·자동화를 서버 한 대에 설치하는 셀프호스팅 기반이라 S3·AI-Enabled다. 업무 결과물을 직접 만들기보다 개발 기반을 제공하므로 C1이고, 회원 앱을 외부에 공개하는 구조라 R2로 둔다. README·설치 단계·릴리스를 확인했다.",
   "resilience": "공공 깃랩에 설치 스크립트 공개(MIT), 서드파티 구성 요소 목록 명시",
   "service_url": ""
+ },
+ {
+  "no": 677,
+  "id": "e2de86c1a4b36a0f",
+  "org": "서울특별시 서초구",
+  "title": "서초 AI전트 — 구정·정책사업·예약신청·민원서류·공공시설을 안내하고 본인인증으로 예약까지 조회·취소하는 서초구 AI 지식비서",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "post_url": "",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S2",
+  "s_name": "Workflow",
+  "c": "C2",
+  "c_name": "부분 완결",
+  "status": "Live service",
+  "scope": "External",
+  "risk": "R1 낮음",
+  "human": "답변 범위를 행정·구정으로 제한, 예약은 본인인증 후 처리",
+  "evidence": "E2 화면·서비스 확인",
+  "confidence": "중간",
+  "rationale": "구민 대상 운영 중인 기관 공식 챗봇이라 Live service·External이다. 홈페이지 수집 기반 답변 데이터 정제 파이프라인과 본인인증 연동 예약 조회·취소가 이어져 S2·C2로 둔다. 화면 메뉴(구정정보·예약신청·민원안내 등)를 직접 확인했다.",
+  "resilience": "미확인(개발사 구축·운영)",
+  "service_url": "https://chat.seocho.go.kr/chatbot/chat"
  }
 ]

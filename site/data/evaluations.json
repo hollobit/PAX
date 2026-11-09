@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-11-09",
- "total": 674,
+ "total": 675,
  "cases": [
   {
    "no": 1,
@@ -22241,6 +22241,39 @@
    "tool_type": "도구·기타",
    "audience": "G2E 공직 내부",
    "p": "P1 산출물 생성(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 677,
+   "id": "e2de86c1a4b36a0f",
+   "org": "서울특별시 서초구",
+   "title": "서초 AI전트 — 구정·정책사업·예약신청·민원서류·공공시설을 안내하고 본인인증으로 예약까지 조회·취소하는 서초구 AI 지식비서",
+   "ax_prev": "AI-Enabled",
+   "ax": "AI-Enabled",
+   "s": "S2",
+   "s_name": "Workflow",
+   "c": "C2",
+   "c_name": "부분 완결",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Live service",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R1 낮음",
+   "human": "답변 범위를 행정·구정으로 제한, 예약은 본인인증 후 처리",
+   "evidence": "E2 화면·서비스 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "구민 대상 운영 중인 기관 공식 챗봇이라 Live service·External이다. 홈페이지 수집 기반 답변 데이터 정제 파이프라인과 본인인증 연동 예약 조회·취소가 이어져 S2·C2로 둔다. 화면 메뉴(구정정보·예약신청·민원안내 등)를 직접 확인했다.",
+   "feedback": "미확인",
+   "resilience": "미확인(개발사 구축·운영)",
+   "post_url": "",
+   "service_url": "https://chat.seocho.go.kr/chatbot/chat",
+   "tool_type": "웹 서비스",
+   "audience": "G2C 대국민",
+   "p": "P0 읽기 전용(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }
