@@ -1,7 +1,137 @@
 {
- "updated_at": "2026-11-09T14:37:28Z",
- "count": 1412,
+ "updated_at": "2026-11-09T22:34:43Z",
+ "count": 1422,
  "articles": [
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261109105900062",
+   "title": "정선군, 민원 담당자 찾아주는 AI 안내 서비스 개발 추진",
+   "outlet": "연합뉴스",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.thelec.kr/news/articleView.html?idxno=65134",
+   "title": "리벨리온, 엔비디아와 한국 소버린 AI 인프라 만든다",
+   "outlet": "디일렉(THE ELEC)",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.inven.co.kr/board/party/6568/235",
+   "title": "11월 1주차 주간 AI 뉴스 - 챗GPT 이미지 2.6 출시 등",
+   "outlet": "inven.co.kr",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202611091812339597",
+   "title": "\"AI로 답 찾는 교실 NO\" 경기교육청, 활용 기준 논의",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202611091810428899",
+   "title": "행안부, 지자체 행정시스템 개편에 2857억 투입",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217180",
+   "title": "LGU+, 서울대·KAIST·연세대와 '말투·맥락 이해하는 음성 AI' 개발",
+   "outlet": "AI타임스",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217178",
+   "title": "아마존, '아스트로' 실패 딛고 가정용 로봇 재도전…피지컬 AI 발전에 기대",
+   "outlet": "AI타임스",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://startuprecipe.co.kr/archives/tech/5840552",
+   "title": "클로드, 개인 자산관리 기능 추가했다",
+   "outlet": "startuprecipe.co.kr",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-10-px-피클-ai-통화-실험과-소비자-안전-가이드",
+   "title": "[공공AX 네트워크] AI임을 먼저 밝힌 통화에 열린 수신자들",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-10-px-엑사원-2-5-무료-개방-첫날-가입-장벽과-json-오류",
+   "title": "[공공AX 네트워크] 엑사원 2.5 무료 개방 첫날의 가입 지연과 JSON 오류",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.newstomato.com/ReadNews.aspx?no=1319732",
    "title": "LG AI연구원, 독파모 ‘K-엑사원 2.5’ API 무료 개방",
