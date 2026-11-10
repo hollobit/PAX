@@ -3740,6 +3740,7 @@
    "category": "기초지자체",
    "category_basis": "affiliation",
    "cases": [
+    "cbb14690306beed9",
     "dcd1547e5f7b4c96",
     "ada7cb6b9fabac8f",
     "fa5ac519aca439f4",
@@ -3759,7 +3760,7 @@
     "d40cc4a9cf6e29b6"
    ],
    "stats": {
-    "case_count": 17,
+    "case_count": 18,
     "top_ax": 3,
     "stars": 6800
    },

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-09T23:36:17+09:00",
+ "updated_at": "2026-11-10T15:35:16+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -19415,6 +19415,35 @@
    "summary": "출장 등으로 쌓인 코레일 승차권 영수증 PDF를 한꺼번에 올리면 환불된 표는 걸러 내고 실제 이용한 승차권만 날짜·출발 시각순으로 한 페이지에 최대 네 장씩 모은 PDF로 만들어 준다. 파일은 서버로 보내지 않고 AI 없이 브라우저 안에서만 변환한다. 여비 정산 증빙을 모으는 반복 작업을 줄여 준다.",
    "id": "b770faa82c2fee98",
    "model_dependency": "없음(비LLM)"
+  },
+  {
+   "org": "공직 현장(개인 개발)",
+   "date": "2026-10-24",
+   "model_dependency": "없음(비LLM)",
+   "case_url": "https://chris.gomdori.app/wizard",
+   "org_type": "공직 개인",
+   "source": "kakao",
+   "title": "FDE Wizard — 증명사진 한 장으로 공무원 마법사 캐릭터를 모델링·리깅·애니메이션·영상까지 스크립트로 만드는 3D 킷",
+   "summary": "구청 실무자가 Claude Code로 블렌더 파이썬 스크립트를 짜 증명사진 한 장에서 치비 마법사 공무원 캐릭터를 만들고 뼈대·포즈·애니메이션·자막 영상까지 화면 없이 생성하도록 공개한 킷이다. 수치 파일만 바꾸면 다른 사람의 캐릭터로 바뀌고, 웹용 3D 파일로 내보내 브라우저 공방에서 동작을 돌려 볼 수 있다. 기관 홍보 캐릭터나 교육 영상 제작에 응용할 수 있다.",
+   "task_category": "공통·범용",
+   "link": "https://github.com/chrisryugj/fde-wizard",
+   "collected_at": "2026-11-10",
+   "runtime_env": "설치 필요",
+   "models_used": [
+    "Claude Code"
+   ],
+   "region": "서울",
+   "tags": [
+    "3D",
+    "캐릭터",
+    "홍보",
+    "블렌더"
+   ],
+   "case_class": "개인 개발",
+   "id": "cbb14690306beed9",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-11-10"
   }
  ]
 }

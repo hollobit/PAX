@@ -2,18 +2,18 @@
  "generated_at": "2026-11-10",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 677,
+ "total_cases": 678,
  "total_champions": 260,
  "community": {
-  "members": 2879,
-  "kakao_week": 6025,
-  "kakao_total_observed": 71295,
-  "threads_observed": 445
+  "members": 2887,
+  "kakao_week": 6552,
+  "kakao_total_observed": 71822,
+  "threads_observed": 447
  },
  "certified_champions": 5,
  "unattributed_cases": 197,
  "ax_distribution": {
-  "AI-Ready": 435,
+  "AI-Ready": 436,
   "AI-Enabled": 208,
   "AX 단계 외": 28,
   "AI-First": 5,
@@ -22,12 +22,12 @@
  "c_axis_mean": 0.94,
  "p_distribution": {
   "P0": 205,
-  "P1": 450,
+  "P1": 451,
   "P2": 22
  },
  "model_dependency": {
   "미확인": 68,
-  "없음(비LLM)": 342,
+  "없음(비LLM)": 343,
   "해외 오픈웨이트(로컬)": 34,
   "혼합": 18,
   "해외 상용 API": 73,
@@ -40,7 +40,7 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 38,
+    "n": 39,
     "variants": [
      "Claude",
      "Claude Code",
@@ -218,6 +218,10 @@
      {
       "id": "53c30605325838f8",
       "title": "데브마루 — 공공 실험실 같은 소규모 조직이 서버 한 대에 회원별 AI 개발환경과 공개·DB·문서 변환을 한 번에 까는 설치 도구"
+     },
+     {
+      "id": "cbb14690306beed9",
+      "title": "FDE Wizard — 증명사진 한 장으로 공무원 마법사 캐릭터를 모델링·리깅·애니메이션·영상까지 스크립트로 만드는 3D 킷"
      }
     ],
     "domestic": false
@@ -943,8 +947,8 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 342,
-    "specified": 1
+    "n": 343,
+    "specified": 2
    },
    "해외 오픈웨이트(로컬)": {
     "n": 34,
@@ -2048,15 +2052,15 @@
  "domestic_model_rate": 0.06,
  "local_model_rate": 0.263,
  "model_known": 133,
- "license_tagged": 485,
- "license_stated_rate": 0.499,
+ "license_tagged": 486,
+ "license_stated_rate": 0.5,
  "gitlab_cases": 320,
  "gitlab_mirror_pairs": 43,
  "gitlab_open_rate": 0.134,
  "mcp_cases": 100,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 595,
+  "미확인": 596,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -2165,7 +2169,7 @@
    ]
   },
   "github": {
-   "count": 188,
+   "count": 189,
    "starred": 185,
    "stars_sum": 873543,
    "maintenance": {
@@ -2259,7 +2263,7 @@
  },
  "license_distribution": {
   "명시 없음": 243,
-  "MIT": 159,
+  "MIT": 160,
   "Apache-2.0": 39,
   "Other": 21,
   "AGPL-3.0": 5,
@@ -2280,7 +2284,7 @@
    "gitlab": 178
   },
   "MIT": {
-   "github": 91,
+   "github": 92,
    "gitlab": 67
   },
   "Apache-2.0": {
@@ -2338,8 +2342,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 174,
-   "stated": 127
+   "total": 175,
+   "stated": 128
   },
   "github-pages": {
    "total": 25,

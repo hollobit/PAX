@@ -16994,5 +16994,33 @@
   "rationale": "브라우저에서 PDF를 읽고 합치는 단일 도구로 LLM 호출이 없어 AI-Ready·S1이다. 영수증 수합부터 날짜순 정리 PDF까지 끝내 정산 증빙 준비의 한 구간을 완결하므로 C2로 둔다. 승차권 개인 정보가 담기지만 브라우저 안에서만 처리해 R1이다. 배포 화면과 스크립트 구성을 확인했다.",
   "resilience": "미확인(개인 배포)",
   "service_url": "https://korail.parklab.work/"
+ },
+ {
+  "no": 680,
+  "id": "cbb14690306beed9",
+  "org": "공직 현장(개인 개발)",
+  "title": "FDE Wizard — 증명사진 한 장으로 공무원 마법사 캐릭터를 모델링·리깅·애니메이션·영상까지 스크립트로 만드는 3D 킷",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "post_url": "",
+  "ax_prev": "AI-Ready",
+  "ax": "AI-Ready",
+  "s": "S2",
+  "s_name": "Workflow",
+  "c": "C2",
+  "c_name": "연속 처리",
+  "status": "Prototype",
+  "scope": "External",
+  "risk": "R1 낮음",
+  "human": "캐릭터 수치·문구는 사람이 조정",
+  "evidence": "E1 코드·도구 확인",
+  "confidence": "중간",
+  "rationale": "Claude Code가 작성한 블렌더 스크립트를 모델링·리깅·포즈·렌더·영상 합성 순서로 잇는 파이프라인이라 S2·C2다. 실행 시 LLM을 호출하지 않아 AI-Ready로 두고, 증명사진을 다루므로 R1이다. README·스크립트 구성과 웹 공방 배포를 확인했다.",
+  "resilience": "GitHub 공개(MIT), 문제·함정 정리 문서 포함",
+  "service_url": "https://chris.gomdori.app/wizard"
  }
 ]

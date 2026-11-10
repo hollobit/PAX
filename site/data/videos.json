@@ -1,7 +1,59 @@
 {
- "updated_at": "2026-11-09T14:37:25Z",
- "count": 145,
+ "updated_at": "2026-11-10T06:35:56Z",
+ "count": 148,
  "videos": [
+  {
+   "id": "9OHew1xxIiA",
+   "title": "천재 파인만이 AI에 질문한다면? | 새로운 관점으로 이끄는 힘 | #지식채널e",
+   "channel": "EBS 지식채널e",
+   "url": "https://www.youtube.com/watch?v=9OHew1xxIiA",
+   "thumb": "https://i.ytimg.com/vi/9OHew1xxIiA/mqdefault.jpg",
+   "shares": 2,
+   "first_shared": "2026-08-15",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "vdYynH177h0",
+   "title": "Claude Fable 5.2 designs a working voice-assistant hub",
+   "channel": "Claude",
+   "url": "https://www.youtube.com/watch?v=vdYynH177h0",
+   "thumb": "https://i.ytimg.com/vi/vdYynH177h0/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "ovY4pCUmgZ0",
+   "title": "\"원하는 스타일 자동 완성\" 550원 초가성비 'AI 이발기' / KNN",
+   "channel": "KNN NEWS",
+   "url": "https://www.youtube.com/watch?v=ovY4pCUmgZ0",
+   "thumb": "https://i.ytimg.com/vi/ovY4pCUmgZ0/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "4-tKlVDTik0",
+   "title": "에어비앤비는 어떻게 AI 에이전트로 '신뢰'를 만드는가 | 한국어 더빙 (원본: LangChain · Interrupt 2026 NYC)",
+   "channel": "에이전트 홍",
+   "url": "https://www.youtube.com/watch?v=4-tKlVDTik0",
+   "thumb": "https://i.ytimg.com/vi/4-tKlVDTik0/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "bChUKH9PdTE",
    "title": "28시간 동안 AI한테 코딩시키기 (LG AI 프롬프톤 챌린지)",
@@ -1659,19 +1711,6 @@
    "channel": "연구원 최C",
    "url": "https://www.youtube.com/watch?v=vM2ADaSZcMc",
    "thumb": "https://i.ytimg.com/vi/vM2ADaSZcMc/mqdefault.jpg",
-   "shares": 1,
-   "first_shared": "2026-08-15",
-   "last_shared": "2026-08-15",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "id": "9OHew1xxIiA",
-   "title": "천재 파인만이 AI에 질문한다면? | 새로운 관점으로 이끄는 힘 | #지식채널e",
-   "channel": "EBS 지식채널e",
-   "url": "https://www.youtube.com/watch?v=9OHew1xxIiA",
-   "thumb": "https://i.ytimg.com/vi/9OHew1xxIiA/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-08-15",
    "last_shared": "2026-08-15",
