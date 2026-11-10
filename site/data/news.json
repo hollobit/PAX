@@ -1,7 +1,150 @@
 {
- "updated_at": "2026-11-10T14:35:10Z",
- "count": 1433,
+ "updated_at": "2026-11-10T22:34:07Z",
+ "count": 1444,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261110221532",
+   "title": "파수 AI, '랩소디 에코'에 미국암호모듈  CMVP  적용",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-11-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.tokenpost.kr/news/ai/436080",
+   "title": "앤트로픽, 클로드에 시트·화이트보드 협업 기능 추가",
+   "outlet": "토큰포스트",
+   "published": "2026-11-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.thelec.kr/news/articleView.html?idxno=65180",
+   "title": "크라우드웍스, 산업부 '제조 암묵지 기반 AI 모델 개발' 사업 참여",
+   "outlet": "디일렉(THE ELEC)",
+   "published": "2026-11-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.techm.kr/news/articleView.html?idxno=157158",
+   "title": "앤트로픽, 5.1보다 최대 30% 빠른 '페이블·미토스 5.2' 공개",
+   "outlet": "테크M",
+   "published": "2026-11-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.headlinejeju.co.kr/news/articleView.html?idxno=601897",
+   "title": "제주시, 골목형 상점가 상인 대상 'AI 마케팅 교육’ 운영",
+   "outlet": "헤드라인제주",
+   "published": "2026-11-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.greened.kr/news/articleView.html?idxno=354263",
+   "title": "딥엑스, 삼성 2나노 기반 생성형 AI 반도체로 CES 혁신상…내년 말 양산 돌입",
+   "outlet": "녹색경제신문",
+   "published": "2026-11-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202611101028518880",
+   "title": "가스공사, NIA 'AI 윤리 준수기관 확인마크' 획득",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-11-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42672",
+   "title": "\"정부 AI 활용, 아직 81%가 실험 단계\"…OECD, 알고리즘 시대 정부 소통체계 전면 개혁 촉구",
+   "outlet": "인공지능신문",
+   "published": "2026-11-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4444055",
+   "title": "앤트로픽 '클로드 오피스' 전격 공개…마이크로소프트 장중 3% 급락",
+   "outlet": "연합인포맥스",
+   "published": "2026-11-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-11-px-망-분리-완화-반발과-폐쇄망-회귀",
+   "title": "[공공AX 네트워크] 망 분리 완화론에 맞선 폐쇄망 회귀 목소리",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-11-cross-엑사원-2-5-첫-체험-응답-속도와-반복-전제",
+   "title": "[에이전트코리아·공공AX 네트워크] 엑사원 첫 체험에서 나온 응답 지연과 반복 전제",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.yna.co.kr/view/AKR20261109105900062",
    "title": "정선군, 민원 담당자 찾아주는 AI 안내 서비스 개발 추진",
