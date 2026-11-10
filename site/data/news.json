@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-10T06:36:02Z",
- "count": 1426,
+ "updated_at": "2026-11-10T14:35:10Z",
+ "count": 1433,
  "articles": [
   {
    "url": "https://www.yna.co.kr/view/AKR20261109105900062",
@@ -94,6 +94,19 @@
    ]
   },
   {
+   "url": "https://www.dailysecu.com/news/articleView.html?idxno=209438",
+   "title": "[단독] 금융보안원 상시평가시스템 해킹 정황...금융사 내부정보 유출 기업에 통보 중인 것으로 확인",
+   "outlet": "데일리시큐",
+   "published": "2026-11-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.aitimes.com/news/articleView.html?idxno=217180",
    "title": "LGU+, 서울대·KAIST·연세대와 '말투·맥락 이해하는 음성 AI' 개발",
    "outlet": "AI타임스",
@@ -124,6 +137,45 @@
    "title": "클로드, 개인 자산관리 기능 추가했다",
    "outlet": "startuprecipe.co.kr",
    "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/656/0000191974?type=breakingnews&cds=news_edit",
+   "title": "AI 개발 과정서 사진 유출… 조달청 평가위원 189명 파악",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/020/0003761407?sid=101",
+   "title": "[단독]국내 AI 시스템 8030개 외부 인터넷 노출…해킹 먹잇감 우려",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/015/0005352488?sid=101",
+   "title": "문지기도 뚫렸다…금융보안원, 해킹으로 정보유출",
+   "outlet": "네이버 뉴스",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-10",
@@ -174,6 +226,45 @@
   {
    "url": "https://akwiki.agentofu.com/article/2026-11-10-px-엑사원-2-5-무료-개방-첫날-가입-장벽과-json-오류",
    "title": "[공공AX 네트워크] 엑사원 2.5 무료 개방 첫날의 가입 지연과 JSON 오류",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-10-px-법령mcp-비용-구조와-코덱스-브라우저-오류",
+   "title": "[공공AX 네트워크] 법령 MCP 비용이 누구 몫인지 갈린 문답",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-10-px-바이브코딩-검수-피로와-1년-새-체감",
+   "title": "[공공AX 네트워크] 바이브코딩 검수 피로와 1년 새 달라진 체감",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-10",
+   "last_shared": "2026-11-10",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-10-cross-페이블-5-2-세-방-반응",
+   "title": "[3개 방 공통] 클로드 페이블 5.2를 세 방이 읽은 점수·가격·사용량",
    "outlet": "akwiki.agentofu.com",
    "published": "2026-11-10",
    "kind": "기사",
