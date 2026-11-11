@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-11T06:37:03Z",
- "count": 1445,
+ "updated_at": "2026-11-11T14:34:51Z",
+ "count": 1447,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261110221532",
@@ -135,6 +135,32 @@
   {
    "url": "https://akwiki.agentofu.com/article/2026-11-11-px-망-분리-완화-반발과-폐쇄망-회귀",
    "title": "[공공AX 네트워크] 망 분리 완화론에 맞선 폐쇄망 회귀 목소리",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-11-px-ai-구독료-지출-근거-문답",
+   "title": "[공공AX 네트워크] 공공기관 AI 구독료 지출 근거를 둘러싼 문답",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-11-cross-페이블-5-2-사용량-캐시-한도",
+   "title": "[에이전트코리아·공공AX 네트워크] 클로드 페이블 5.2 사용량을 두고 캐시와 한도를 묻는 두 방",
    "outlet": "akwiki.agentofu.com",
    "published": "2026-11-11",
    "kind": "기사",
