@@ -2,19 +2,19 @@
  "generated_at": "2026-11-11",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 678,
+ "total_cases": 680,
  "total_champions": 260,
  "community": {
-  "members": 2885,
-  "kakao_week": 5602,
-  "kakao_total_observed": 72064,
+  "members": 2894,
+  "kakao_week": 5869,
+  "kakao_total_observed": 72331,
   "threads_observed": 450
  },
  "certified_champions": 5,
  "unattributed_cases": 197,
  "ax_distribution": {
-  "AI-Ready": 436,
-  "AI-Enabled": 208,
+  "AI-Ready": 437,
+  "AI-Enabled": 209,
   "AX 단계 외": 28,
   "AI-First": 5,
   "AI-Native 계획": 1
@@ -22,14 +22,14 @@
  "c_axis_mean": 0.94,
  "p_distribution": {
   "P0": 205,
-  "P1": 451,
-  "P2": 22
+  "P1": 452,
+  "P2": 23
  },
  "model_dependency": {
   "미확인": 68,
-  "없음(비LLM)": 343,
+  "없음(비LLM)": 344,
   "해외 오픈웨이트(로컬)": 34,
-  "혼합": 18,
+  "혼합": 19,
   "해외 상용 API": 73,
   "모델 중립(BYO)": 105,
   "국산 독자모델": 7,
@@ -40,7 +40,7 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 39,
+    "n": 40,
     "variants": [
      "Claude",
      "Claude Code",
@@ -222,24 +222,30 @@
      {
       "id": "cbb14690306beed9",
       "title": "FDE Wizard — 증명사진 한 장으로 공무원 마법사 캐릭터를 모델링·리깅·애니메이션·영상까지 스크립트로 만드는 3D 킷"
+     },
+     {
+      "id": "d1edbb124878c572",
+      "title": "Herdr Session Keeper — PC가 꺼져도 Claude Code·Codex 대화를 골라 이어 여는 Windows 세션 복구 도구"
      }
     ],
     "domestic": false
    },
    {
     "name": "GPT(OpenAI)",
-    "n": 19,
+    "n": 20,
     "variants": [
      "ChatGPT GPTs",
      "ChatGPT(웹)",
      "ChatGPT(팀계정)",
      "ChatGPT/Claude/Codex(승인 문서 MCP 조회)",
      "GPT(OpenAI API)",
+     "GPT-5.4",
      "GPT-5.6 Luna",
      "GPT-5.6 Luna(OpenRouter, 동의 시)",
      "GPT-5.6 Terra",
      "GPT-6 Astra",
      "GPT-6.1 Sol",
+     "GPT-6.1 Terra",
      "OpenAI Codex",
      "OpenAI GPT 계열(예시 설정)",
      "OpenAI GPT-5(Responses API)",
@@ -327,6 +333,10 @@
      {
       "id": "f09b6852266e39b7",
       "title": "KRDS UI·UX 개선 스킬 — 정부 디자인 가이드 기준으로 웹·앱 화면을 진단·개선·검증하는 Codex 스킬"
+     },
+     {
+      "id": "ed993e5f5a4bba55",
+      "title": "더주택 — 주택공급 정책을 정책·사업·인허가·착공·입주 단계로 추적하는 디지털 상황판과 3개 AI 에이전트"
      }
     ],
     "domestic": false
@@ -710,6 +720,24 @@
     "domestic": false
    },
    {
+    "name": "Solar Pro 4",
+    "n": 2,
+    "variants": [
+     "Solar Pro 4"
+    ],
+    "cases": [
+     {
+      "id": "8cb6daa7f1249b65",
+      "title": "Solar Planets — 업스테이지 Solar Pro 4로 만든 공공·세무 AI 도구를 행성으로 둘러보는 소개 공간"
+     },
+     {
+      "id": "ed993e5f5a4bba55",
+      "title": "더주택 — 주택공급 정책을 정책·사업·인허가·착공·입주 단계로 추적하는 디지털 상황판과 3개 AI 에이전트"
+     }
+    ],
+    "domestic": true
+   },
+   {
     "name": "상용 API(세부 미상)",
     "n": 1,
     "variants": [
@@ -820,20 +848,6 @@
      }
     ],
     "domestic": false
-   },
-   {
-    "name": "Kanana 2.1B(Q4 로컬)",
-    "n": 1,
-    "variants": [
-     "Kanana 2.1B(Q4 로컬)"
-    ],
-    "cases": [
-     {
-      "id": "95635604261b7867",
-      "title": "국산 경량 오픈모델 3종 조례 심사 실측 — 전패, 그리고 답이 흔들린다"
-     }
-    ],
-    "domestic": true
    }
   ],
   "domestic_cases": [
@@ -939,6 +953,16 @@
     "models": [
      "공통기반 AI(FabriX·CLOVA for GOV 등, 선택)"
     ]
+   },
+   {
+    "id": "ed993e5f5a4bba55",
+    "title": "더주택 — 주택공급 정책을 정책·사업·인허가·착공·입주 단계로 추적하는 디지털 상황판과 3개 AI 에이전트",
+    "models": [
+     "Solar Pro 4",
+     "GPT-5.4",
+     "GPT-6.1 Terra",
+     "Nemotron 3.5 Super VL"
+    ]
    }
   ],
   "dist_detail": {
@@ -947,16 +971,16 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 343,
-    "specified": 2
+    "n": 344,
+    "specified": 3
    },
    "해외 오픈웨이트(로컬)": {
     "n": 34,
     "specified": 21
    },
    "혼합": {
-    "n": 18,
-    "specified": 16
+    "n": 19,
+    "specified": 17
    },
    "해외 상용 API": {
     "n": 73,
@@ -1116,7 +1140,7 @@
    },
    {
     "dep": "혼합",
-    "n": 18,
+    "n": 19,
     "families": [
      {
       "name": "Gemini",
@@ -1223,6 +1247,33 @@
       ]
      },
      {
+      "name": "GPT(OpenAI)",
+      "n": 3,
+      "cases": [
+       {
+        "id": "ea2bce110972762e",
+        "title": "공공기관 규정 MCP 생성기"
+       },
+       {
+        "id": "7c3c1b02b4a981ec",
+        "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교"
+       },
+       {
+        "id": "ed993e5f5a4bba55",
+        "title": "더주택 — 주택공급 정책을 정책·사업·인허가·착공·입주 단계로 추적하는 디지털 상황판과 3개 AI 에이전트"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "ChatGPT/Claude/Codex(승인 문서 MCP 조회)",
+       "GPT-5.4",
+       "GPT-6 Astra",
+       "GPT-6.1 Sol",
+       "GPT-6.1 Terra",
+       "gpt-4.1-mini(조항 AI 검수)"
+      ]
+     },
+     {
       "name": "Gemma",
       "n": 3,
       "cases": [
@@ -1244,27 +1295,6 @@
        "Gemma 4",
        "Gemma 4(Ollama)",
        "LLM42-Gemma4(멀티모달 전환)"
-      ]
-     },
-     {
-      "name": "GPT(OpenAI)",
-      "n": 2,
-      "cases": [
-       {
-        "id": "ea2bce110972762e",
-        "title": "공공기관 규정 MCP 생성기"
-       },
-       {
-        "id": "7c3c1b02b4a981ec",
-        "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교"
-       }
-      ],
-      "domestic": false,
-      "variants": [
-       "ChatGPT/Claude/Codex(승인 문서 MCP 조회)",
-       "GPT-6 Astra",
-       "GPT-6.1 Sol",
-       "gpt-4.1-mini(조항 AI 검수)"
       ]
      },
      {
@@ -1437,6 +1467,34 @@
       "domestic": false,
       "variants": [
        "외부 AI 요약(선택)"
+      ]
+     },
+     {
+      "name": "Solar Pro 4",
+      "n": 1,
+      "cases": [
+       {
+        "id": "ed993e5f5a4bba55",
+        "title": "더주택 — 주택공급 정책을 정책·사업·인허가·착공·입주 단계로 추적하는 디지털 상황판과 3개 AI 에이전트"
+       }
+      ],
+      "domestic": true,
+      "variants": [
+       "Solar Pro 4"
+      ]
+     },
+     {
+      "name": "Nemotron 3.5 Super VL",
+      "n": 1,
+      "cases": [
+       {
+        "id": "ed993e5f5a4bba55",
+        "title": "더주택 — 주택공급 정책을 정책·사업·인허가·착공·입주 단계로 추적하는 디지털 상황판과 3개 AI 에이전트"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Nemotron 3.5 Super VL"
       ]
      }
     ]
@@ -2050,17 +2108,17 @@
   ]
  },
  "domestic_model_rate": 0.06,
- "local_model_rate": 0.263,
- "model_known": 133,
- "license_tagged": 486,
+ "local_model_rate": 0.261,
+ "model_known": 134,
+ "license_tagged": 488,
  "license_stated_rate": 0.5,
- "gitlab_cases": 320,
+ "gitlab_cases": 321,
  "gitlab_mirror_pairs": 43,
  "gitlab_open_rate": 0.134,
  "mcp_cases": 100,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 596,
+  "미확인": 598,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -2068,7 +2126,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.795
+  "feedback": 0.796
  },
  "maintenance_distribution": {
   "활발": 284,
@@ -2078,7 +2136,7 @@
  "stars_collected": 459,
  "repo_stats": {
   "gitlab": {
-   "count": 320,
+   "count": 321,
    "starred": 315,
    "stars_sum": 745,
    "maintenance": {
@@ -2169,7 +2227,7 @@
    ]
   },
   "github": {
-   "count": 189,
+   "count": 190,
    "starred": 185,
    "stars_sum": 873543,
    "maintenance": {
@@ -2262,9 +2320,9 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 243,
+  "명시 없음": 244,
   "MIT": 160,
-  "Apache-2.0": 39,
+  "Apache-2.0": 40,
   "Other": 21,
   "AGPL-3.0": 5,
   "기타(비표준)": 5,
@@ -2281,14 +2339,14 @@
  "license_matrix": {
   "명시 없음": {
    "github": 65,
-   "gitlab": 178
+   "gitlab": 179
   },
   "MIT": {
    "github": 92,
    "gitlab": 67
   },
   "Apache-2.0": {
-   "github": 16,
+   "github": 17,
    "gitlab": 23
   },
   "Other": {
@@ -2342,15 +2400,15 @@
  },
  "license_by_source": {
   "github": {
-   "total": 175,
-   "stated": 128
+   "total": 176,
+   "stated": 129
   },
   "github-pages": {
    "total": 25,
    "stated": 7
   },
   "gitlab": {
-   "total": 285,
+   "total": 286,
    "stated": 107
   }
  },

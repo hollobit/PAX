@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-10T15:35:16+09:00",
+ "updated_at": "2026-11-11T15:35:57+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -20109,6 +20109,70 @@
    "license_source": "github",
    "license_checked": "2026-11-10",
    "thumb_v": 1794292614
+  },
+  {
+   "link": "https://gitlab.aigov.go.kr/acesharp/HOME",
+   "org": "행정안전부",
+   "source": "kakao",
+   "case_url": "https://www.minslab.kr/poc/home/",
+   "task_category": "기획·정책",
+   "case_class": "기관 공식",
+   "title": "더주택 — 주택공급 정책을 정책·사업·인허가·착공·입주 단계로 추적하는 디지털 상황판과 3개 AI 에이전트",
+   "org_type": "중앙행정기관",
+   "tags": [
+    "주택공급",
+    "대시보드",
+    "AI에이전트",
+    "데이터수집"
+   ],
+   "summary": "흩어진 수도권 주택공급 정보를 모아 9·7 공급 확대방안의 정책·프로그램·사업별 목표와 단계별 실적, 지연 사업을 지도와 시계열로 보여 주는 상황판이다. 알고리즘·수집·업무담당자 세 AI 에이전트가 추출 규칙 개선, 공식 자료 수집, 사업 등록 판단을 나눠 맡고 애매한 건은 근거와 함께 사람 검토로 넘긴다. 정책담당자·업무담당자·일반사용자 화면을 따로 두고 보고서 파일도 만든다.",
+   "network_req": "인터넷 필수",
+   "runtime_env": "서버 구축",
+   "date": "2026-11-11",
+   "models_used": [
+    "Solar Pro 4",
+    "GPT-5.4",
+    "GPT-6.1 Terra",
+    "Nemotron 3.5 Super VL"
+   ],
+   "model_dependency": "혼합",
+   "mirror_url": "https://the-housing.vercel.app/",
+   "collected_at": "2026-11-11",
+   "id": "ed993e5f5a4bba55",
+   "license": "명시 없음",
+   "license_source": "gitlab",
+   "license_checked": "2026-11-11",
+   "thumb_v": 1794379010
+  },
+  {
+   "link": "https://github.com/sodam-ai/Herdr_Session-Keeper",
+   "org": "개발 커뮤니티",
+   "source": "kakao",
+   "task_category": "공통·범용",
+   "case_class": "커뮤니티",
+   "title": "Herdr Session Keeper — PC가 꺼져도 Claude Code·Codex 대화를 골라 이어 여는 Windows 세션 복구 도구",
+   "org_type": "커뮤니티",
+   "tags": [
+    "Claude Code",
+    "Codex",
+    "세션복구",
+    "Windows"
+   ],
+   "summary": "여러 터미널을 한 화면에 모아 쓰는 Herdr에서 1분마다 창별 AI 대화 번호를 기록해 두었다가, 재부팅이나 비정상 종료 뒤 같은 창에 이어 열기 명령을 넣어 대화를 되살리는 Windows용 도구다. 단축키로 여는 목록 창에서 복구할 대화를 직접 고를 수 있고, 앱을 켜 둔 채로도 업데이트를 안전하게 적용하며 실패하면 되돌린다. 인터넷 통신 없이 로컬에서만 동작한다.",
+   "network_req": "로컬 완결",
+   "runtime_env": "설치 필요",
+   "date": "2026-11-11",
+   "models_used": [
+    "Claude Code",
+    "Codex"
+   ],
+   "model_dependency": "없음(비LLM)",
+   "collected_at": "2026-11-11",
+   "id": "d1edbb124878c572",
+   "license": "Apache-2.0",
+   "license_source": "github",
+   "license_checked": "2026-11-11",
+   "thumb_v": 1794379013
   }
  ]
 }

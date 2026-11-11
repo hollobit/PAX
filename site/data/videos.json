@@ -1,7 +1,46 @@
 {
- "updated_at": "2026-11-10T06:35:56Z",
- "count": 148,
+ "updated_at": "2026-11-11T06:37:01Z",
+ "count": 151,
  "videos": [
+  {
+   "id": "nbtailhLsHc",
+   "title": "불법이 가득한 다크웹 사이트 탐방",
+   "channel": "철멍뭉",
+   "url": "https://www.youtube.com/watch?v=nbtailhLsHc",
+   "thumb": "https://i.ytimg.com/vi/nbtailhLsHc/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "jLnaHMfjFss",
+   "title": "금융보안원마저‥\"개인정보 650여 건 유출\" (2026.11.11/12MBC뉴스)",
+   "channel": "MBCNEWS",
+   "url": "https://www.youtube.com/watch?v=jLnaHMfjFss",
+   "thumb": "https://i.ytimg.com/vi/jLnaHMfjFss/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "dNQ6gIpFR3M",
+   "title": "2027년 AI 트렌드 총정리 | 온톨로지, 에이전틱 AI, 웻웨어가 바꿀 미래",
+   "channel": "달핀챗 TV",
+   "url": "https://www.youtube.com/watch?v=dNQ6gIpFR3M",
+   "thumb": "https://i.ytimg.com/vi/dNQ6gIpFR3M/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "9OHew1xxIiA",
    "title": "천재 파인만이 AI에 질문한다면? | 새로운 관점으로 이끄는 힘 | #지식채널e",

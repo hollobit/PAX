@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-10T15:35:16+09:00",
+ "updated_at": "2026-11-11T15:35:57+09:00",
  "cases": [
   {
    "id": "a2eaaf9f454da37f",
@@ -4408,6 +4408,18 @@
    "org": "공직 현장(개인 개발)",
    "org_type": "공직 개인",
    "region": "서울"
+  },
+  {
+   "id": "ed993e5f5a4bba55",
+   "title": "더주택 — 주택공급 정책을 정책·사업·인허가·착공·입주 단계로 추적하는 디지털 상황판과 3개 AI 에이전트",
+   "org": "행정안전부",
+   "org_type": "중앙행정기관"
+  },
+  {
+   "id": "d1edbb124878c572",
+   "title": "Herdr Session Keeper — PC가 꺼져도 Claude Code·Codex 대화를 골라 이어 여는 Windows 세션 복구 도구",
+   "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
   }
  ]
 }

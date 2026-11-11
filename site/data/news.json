@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-10T22:34:07Z",
- "count": 1444,
+ "updated_at": "2026-11-11T06:37:03Z",
+ "count": 1445,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261110221532",
@@ -111,6 +111,19 @@
    "title": "앤트로픽 '클로드 오피스' 전격 공개…마이크로소프트 장중 3% 급락",
    "outlet": "연합인포맥스",
    "published": "2026-11-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-11",
+   "last_shared": "2026-11-11",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/092/0002444809",
+   "title": "흩어진 주택공급 정보 한눈에…공직자 4명이 만든 '더 주택'",
+   "outlet": "네이버 뉴스",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-11",

@@ -766,13 +766,14 @@
    "category": "민간·커뮤니티",
    "category_basis": "affiliation",
    "cases": [
+    "d1edbb124878c572",
     "48a2fe695d62b13f",
     "4ce9fa1c75ec36b5",
     "c483c6ad4ccff0ab",
     "f5f24469d5ca281f"
    ],
    "stats": {
-    "case_count": 4,
+    "case_count": 5,
     "top_ax": 2,
     "stars": 0
    }
@@ -3108,10 +3109,11 @@
    "category": "중앙행정기관",
    "category_basis": "affiliation",
    "cases": [
+    "ed993e5f5a4bba55",
     "aea43d543a0244e1"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 2,
     "stars": 0
    }
