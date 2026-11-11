@@ -1,7 +1,163 @@
 {
- "updated_at": "2026-11-11T14:34:51Z",
- "count": 1447,
+ "updated_at": "2026-11-11T22:34:19Z",
+ "count": 1459,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261111181003",
+   "title": "딥엘, 사람 목소리에 가장 가까운 음성 번역 AI '오러(Aure)' 공개",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-11-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.etnews.com/20261111000307",
+   "title": "정부, 2030년 AI 유니콘 20곳·데카콘 1곳 육성…목표 달성 기업 '자동 지원' 체계 구축",
+   "outlet": "미래를 보는 창 - 전자신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.dt.co.kr/article/12094570",
+   "title": "오픈AI, 기업이 회사·상품 정보 제공하는 ‘비즈니스 인 챗GPT’ 출시",
+   "outlet": "디지털타임스",
+   "published": "2026-11-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.dt.co.kr/article/12094474",
+   "title": "구글, ‘제미나이 4 카본’ 제공 확대… ‘제미나이 로보틱스 2.5’도 공개",
+   "outlet": "디지털타임스",
+   "published": "2026-11-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=713993",
+   "title": "엔비디아, 韓 정부·기업과 전방위 AI 협력...반도체부터 로봇·스타트업까지",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217278",
+   "title": "메타, AI 에이전트 '뮤즈' 애플워치·웨어OS로 확대",
+   "outlet": "AI타임스",
+   "published": "2026-11-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217267",
+   "title": "\"편의점서 AI 아바타가 상품 추천\"...이스트소프트, 세븐일레븐과 기술 검증",
+   "outlet": "AI타임스",
+   "published": "2026-11-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217252",
+   "title": "KT, KAIST에 AI 메일 보안 서비스 제공",
+   "outlet": "AI타임스",
+   "published": "2026-11-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217231",
+   "title": "클로드, 밤새 로봇 팔로 수채화 완성…물감도 직접 섞었다",
+   "outlet": "AI타임스",
+   "published": "2026-11-10",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.dlive.kr/news/articleView.html?idxno=28781",
+   "title": "광진구, 중장년 위한 '인공지능 취업 교육' 실시",
+   "outlet": "딜라이브뉴스",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-12-px-웍스AI-이용기록-열람-범위와-모니터링-놀람",
+   "title": "[공공AX 네트워크] 웍스AI 이용 기록, 어디까지 보이나",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-12-cross-설계도면-ai-코드로-처리와-검토",
+   "title": "[에이전트코리아·공공AX 네트워크] 설계 도면 일에서 화면을 건너뛰는 AI의 두 갈래",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261110221532",
    "title": "파수 AI, '랩소디 에코'에 미국암호모듈  CMVP  적용",
