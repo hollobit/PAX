@@ -1,12 +1,38 @@
 {
- "updated_at": "2026-11-11T22:34:19Z",
- "count": 1459,
+ "updated_at": "2026-11-12T06:34:55Z",
+ "count": 1462,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261111181003",
    "title": "딥엘, 사람 목소리에 가장 가까운 음성 번역 AI '오러(Aure)' 공개",
    "outlet": "zdnet.co.kr",
    "published": "2026-11-11",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.tfmedia.co.kr/mobile/article.html?no=208809",
+   "title": "[조세금융신문] [합격수기] \"하루 8시간 집중, 2년 만에 수석\"…한원석 씨의 세무사시험 도전기",
+   "outlet": "tfmedia.co.kr",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.financialjuice.com/News/9848031/Alice-Huang-suspected-Chinese-spy-in-Nvidia-scandal-returns-to-home-country.aspx?xy=rss",
+   "title": "Alice Huang, suspected Chinese spy in Nvidia scandal, returns to home country",
+   "outlet": "Financial Juice",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-12",
@@ -59,6 +85,19 @@
    "title": "엔비디아, 韓 정부·기업과 전방위 AI 협력...반도체부터 로봇·스타트업까지",
    "outlet": "디지털투데이 (DigitalToday)",
    "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.boannews.com/news/articleView.html?idxno=147168",
+   "title": "조달청, 평가위원 189명 얼굴 사진 유출... AI 프로그램 개발 중 챗GPT에 전송",
+   "outlet": "보안뉴스",
+   "published": "2026-11-11",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-12",
