@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-11-11T06:37:01Z",
- "count": 151,
+ "updated_at": "2026-11-12T14:34:58Z",
+ "count": 152,
  "videos": [
+  {
+   "id": "Sh7yIzVGCUM",
+   "title": "클로드 페이블 5.2로 집 한 채 설계했더니 | 법규 확인·3D 모델·도면 19장 (프리캐드FreeCAD)",
+   "channel": "Alex AI",
+   "url": "https://www.youtube.com/watch?v=Sh7yIzVGCUM",
+   "thumb": "https://i.ytimg.com/vi/Sh7yIzVGCUM/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "nbtailhLsHc",
    "title": "불법이 가득한 다크웹 사이트 탐방",

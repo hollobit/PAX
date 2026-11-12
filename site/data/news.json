@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-12T06:34:55Z",
- "count": 1462,
+ "updated_at": "2026-11-12T14:35:01Z",
+ "count": 1466,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261111181003",
@@ -107,6 +107,19 @@
    ]
   },
   {
+   "url": "https://www.bbc.com/news/live/c6zjry11v8w1t",
+   "title": "Nvidia CEO Jensen Huang resigns after tech giant rocked by second affair allegation - follow live",
+   "outlet": "BBC News",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.aitimes.com/news/articleView.html?idxno=217278",
    "title": "메타, AI 에이전트 '뮤즈' 애플워치·웨어OS로 확대",
    "outlet": "AI타임스",
@@ -172,8 +185,47 @@
    ]
   },
   {
+   "url": "https://akwiki.agentofu.com/article/2026-11-12-px-정보공개포털-개인정보-노출-책임-소재",
+   "title": "[공공AX 네트워크] 정보공개포털 개인정보 노출, 책임 소재 갈린 대화",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://akwiki.agentofu.com/article/2026-11-12-px-웍스AI-이용기록-열람-범위와-모니터링-놀람",
    "title": "[공공AX 네트워크] 웍스AI 이용 기록, 어디까지 보이나",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-12-px-신입의-ai-답변-맞서기와-공문-복붙",
+   "title": "[공공AX 네트워크] AI 답을 근거로 맞서는 신입과 공문 복붙 논쟁",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-12",
+   "last_shared": "2026-11-12",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-12-cross-페이블-5-2-건축-3d-모델링-사례",
+   "title": "[에이전트코리아·공공AX 네트워크] 클로드 페이블 5.2에 맡긴 건축 3D 설계 사례",
    "outlet": "akwiki.agentofu.com",
    "published": "2026-11-12",
    "kind": "기사",
