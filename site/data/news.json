@@ -1,7 +1,150 @@
 {
- "updated_at": "2026-11-12T14:35:01Z",
- "count": 1466,
+ "updated_at": "2026-11-12T22:36:28Z",
+ "count": 1477,
  "articles": [
+  {
+   "url": "https://www.womentimes.co.kr/news/articleView.html?idxno=107861",
+   "title": "GC녹십자, 생성형 AI 기반 약물감시 소프트웨어 자체 개발",
+   "outlet": "우먼타임스",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kookje.co.kr/news2011/asp/newsbody.asp?key=20261112.99099003898",
+   "title": "부산대, 과기부 선도연구센터(MRC) 「한의학 기반 선도융합 신경조절 연구센터」 개소",
+   "outlet": "국제신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=242903",
+   "title": "삼성전자, 제미나이 탑재 AI 안경 30종 공개…국내 65만 원부터",
+   "outlet": "아이티데일리",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202611120904246972",
+   "title": "인천시, 2027~2029년 지능정보화 기본계획 심의…AI 행정혁신 본격화",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.docdocdoc.co.kr/news/articleView.html?idxno=3044493",
+   "title": "강원 공공병원에 ‘의료 AI 고속도로’ 첫 개통",
+   "outlet": "청년의사",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42704",
+   "title": "AI, \"1000개 질문을 0.25초 안에 판단한다!\"...구글 ‘제미나이 디시전 1’ 공개, 에이전트 의사결정 속도·비용 혁신",
+   "outlet": "인공지능신문",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217328",
+   "title": "한컴, AI 매출 전체 30% 돌파…노마디안 등 미국 시장 공략 가속",
+   "outlet": "AI타임스",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217303",
+   "title": "네이버, AI 팩토리 2조원 첫 수주 확보…”10곳 이상과 추가 협상 중\"",
+   "outlet": "AI타임스",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-13-px-사진-한-장으로-대형폐기물-크기-재기",
+   "title": "[공공AX 네트워크] 사진 한 장으로 대형폐기물 크기를 재는 자동화",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-13-px-사무실-ai-창작물-확산과-교육의-한계",
+   "title": "[공공AX 네트워크] 한 사무실에 번지는 AI 창작물과 교육의 한계",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-13-cross-엔비디아-사임-속보-두-방-반응",
+   "title": "[에이전트코리아·공공AX 네트워크] 엔비디아 CEO 사임 속보에 갈린 두 방의 반응",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261111181003",
    "title": "딥엘, 사람 목소리에 가장 가까운 음성 번역 AI '오러(Aure)' 공개",

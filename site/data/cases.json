@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-11T15:35:57+09:00",
+ "updated_at": "2026-11-13T07:34:04+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -20173,6 +20173,36 @@
    "license_source": "github",
    "license_checked": "2026-11-11",
    "thumb_v": 1794379013
+  },
+  {
+   "models_used": [
+    "schift-ko-pii-v5(34M NER, 로컬 CPU)"
+   ],
+   "task_category": "공통·범용",
+   "network_req": "로컬 완결",
+   "case_url": null,
+   "summary": "켜 두면 프롬프트 속 이름·주소·전화번호·주민번호·계좌·API 키 등을 국산 경량 탐지 모델과 정규식으로 찾아 표시어로 바꾼 뒤 Claude에 보낸다. 검사는 로컬 서버에서 돌고 원래 값은 저장하지 않으며, 탐지 실패 시 전송을 막는 차단 모드와 미리보기·예외 단어 명령을 제공한다.",
+   "date": "2026-11-13",
+   "link": "https://github.com/jkf87/pii-guard",
+   "title": "pii-guard — Claude Code에 보내는 글의 개인정보를 내 컴퓨터에서 먼저 가리는 플러그인",
+   "case_class": "커뮤니티",
+   "source": "kakao",
+   "tags": [
+    "개인정보",
+    "마스킹",
+    "Claude플러그인",
+    "로컬모델"
+   ],
+   "model_dependency": "국산 독자모델",
+   "runtime_env": "AI 도구 설정",
+   "org": "공직 커뮤니티",
+   "collected_at": "2026-11-13",
+   "org_type": "커뮤니티",
+   "id": "352a18c235275ede",
+   "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-11-13",
+   "thumb_v": 1794523006
   }
  ]
 }

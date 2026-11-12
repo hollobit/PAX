@@ -1,20 +1,20 @@
 {
- "generated_at": "2026-11-12",
+ "generated_at": "2026-11-13",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 680,
+ "total_cases": 681,
  "total_champions": 260,
  "community": {
-  "members": 2920,
-  "kakao_week": 6543,
-  "kakao_total_observed": 73549,
-  "threads_observed": 456
+  "members": 2919,
+  "kakao_week": 5277,
+  "kakao_total_observed": 73595,
+  "threads_observed": 457
  },
  "certified_champions": 5,
  "unattributed_cases": 197,
  "ax_distribution": {
   "AI-Ready": 437,
-  "AI-Enabled": 209,
+  "AI-Enabled": 210,
   "AX 단계 외": 28,
   "AI-First": 5,
   "AI-Native 계획": 1
@@ -23,7 +23,7 @@
  "p_distribution": {
   "P0": 205,
   "P1": 452,
-  "P2": 23
+  "P2": 24
  },
  "model_dependency": {
   "미확인": 68,
@@ -32,7 +32,7 @@
   "혼합": 19,
   "해외 상용 API": 73,
   "모델 중립(BYO)": 105,
-  "국산 독자모델": 7,
+  "국산 독자모델": 8,
   "미상": 29,
   "국산 오픈웨이트": 1
  },
@@ -586,6 +586,35 @@
     "domestic": false
    },
    {
+    "name": "schift(자체 학습)",
+    "n": 4,
+    "variants": [
+     "schift-ko-pii(자체 학습)",
+     "schift-ko-pii-v5(34M NER, 로컬 CPU)",
+     "schift-ko-pii-v6(자체 학습)",
+     "schift-ko-pii-v7(40M NER, 로컬)"
+    ],
+    "cases": [
+     {
+      "id": "8f7e23fec614657c",
+      "title": "한국어 개인정보 탐지 모델 schift-ko-pii 오픈소스 공개"
+     },
+     {
+      "id": "dcba0f654467bdc9",
+      "title": "schift-ko-pii-v6 — 한국어 개인정보 검출·마스킹 경량 모델"
+     },
+     {
+      "id": "afef30356a841dac",
+      "title": "개인정보 마스킹 웹앱 — 국산 탐지 모델에 규칙·사용자 단어를 얹고 법원식 표기까지 고르는 로컬 도구"
+     },
+     {
+      "id": "352a18c235275ede",
+      "title": "pii-guard — Claude Code에 보내는 글의 개인정보를 내 컴퓨터에서 먼저 가리는 플러그인"
+     }
+    ],
+    "domestic": true
+   },
+   {
     "name": "bge-m3",
     "n": 4,
     "variants": [
@@ -654,30 +683,6 @@
      {
       "id": "95635604261b7867",
       "title": "국산 경량 오픈모델 3종 조례 심사 실측 — 전패, 그리고 답이 흔들린다"
-     }
-    ],
-    "domestic": true
-   },
-   {
-    "name": "schift(자체 학습)",
-    "n": 3,
-    "variants": [
-     "schift-ko-pii(자체 학습)",
-     "schift-ko-pii-v6(자체 학습)",
-     "schift-ko-pii-v7(40M NER, 로컬)"
-    ],
-    "cases": [
-     {
-      "id": "8f7e23fec614657c",
-      "title": "한국어 개인정보 탐지 모델 schift-ko-pii 오픈소스 공개"
-     },
-     {
-      "id": "dcba0f654467bdc9",
-      "title": "schift-ko-pii-v6 — 한국어 개인정보 검출·마스킹 경량 모델"
-     },
-     {
-      "id": "afef30356a841dac",
-      "title": "개인정보 마스킹 웹앱 — 국산 탐지 모델에 규칙·사용자 단어를 얹고 법원식 표기까지 고르는 로컬 도구"
      }
     ],
     "domestic": true
@@ -963,6 +968,13 @@
      "GPT-6.1 Terra",
      "Nemotron 3.5 Super VL"
     ]
+   },
+   {
+    "id": "352a18c235275ede",
+    "title": "pii-guard — Claude Code에 보내는 글의 개인정보를 내 컴퓨터에서 먼저 가리는 플러그인",
+    "models": [
+     "schift-ko-pii-v5(34M NER, 로컬 CPU)"
+    ]
    }
   ],
   "dist_detail": {
@@ -991,8 +1003,8 @@
     "specified": 11
    },
    "국산 독자모델": {
-    "n": 7,
-    "specified": 6
+    "n": 8,
+    "specified": 7
    },
    "미상": {
     "n": 29,
@@ -1006,11 +1018,11 @@
   "models_by_dep": [
    {
     "dep": "국산 독자모델",
-    "n": 7,
+    "n": 8,
     "families": [
      {
       "name": "schift(자체 학습)",
-      "n": 3,
+      "n": 4,
       "cases": [
        {
         "id": "8f7e23fec614657c",
@@ -1023,11 +1035,16 @@
        {
         "id": "afef30356a841dac",
         "title": "개인정보 마스킹 웹앱 — 국산 탐지 모델에 규칙·사용자 단어를 얹고 법원식 표기까지 고르는 로컬 도구"
+       },
+       {
+        "id": "352a18c235275ede",
+        "title": "pii-guard — Claude Code에 보내는 글의 개인정보를 내 컴퓨터에서 먼저 가리는 플러그인"
        }
       ],
       "domestic": true,
       "variants": [
        "schift-ko-pii(자체 학습)",
+       "schift-ko-pii-v5(34M NER, 로컬 CPU)",
        "schift-ko-pii-v6(자체 학습)",
        "schift-ko-pii-v7(40M NER, 로컬)"
       ]
@@ -2107,18 +2124,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.06,
- "local_model_rate": 0.261,
- "model_known": 134,
- "license_tagged": 488,
- "license_stated_rate": 0.5,
+ "domestic_model_rate": 0.067,
+ "local_model_rate": 0.259,
+ "model_known": 135,
+ "license_tagged": 489,
+ "license_stated_rate": 0.499,
  "gitlab_cases": 321,
  "gitlab_mirror_pairs": 43,
  "gitlab_open_rate": 0.134,
  "mcp_cases": 100,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 598,
+  "미확인": 599,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -2227,7 +2244,7 @@
    ]
   },
   "github": {
-   "count": 190,
+   "count": 191,
    "starred": 185,
    "stars_sum": 873543,
    "maintenance": {
@@ -2320,7 +2337,7 @@
   }
  },
  "license_distribution": {
-  "명시 없음": 244,
+  "명시 없음": 245,
   "MIT": 160,
   "Apache-2.0": 40,
   "Other": 21,
@@ -2338,7 +2355,7 @@
  },
  "license_matrix": {
   "명시 없음": {
-   "github": 65,
+   "github": 66,
    "gitlab": 179
   },
   "MIT": {
@@ -2400,7 +2417,7 @@
  },
  "license_by_source": {
   "github": {
-   "total": 176,
+   "total": 177,
    "stated": 129
   },
   "github-pages": {

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-11T15:35:57+09:00",
+ "updated_at": "2026-11-13T07:34:04+09:00",
  "cases": [
   {
    "id": "a2eaaf9f454da37f",
@@ -4419,6 +4419,12 @@
    "id": "d1edbb124878c572",
    "title": "Herdr Session Keeper — PC가 꺼져도 Claude Code·Codex 대화를 골라 이어 여는 Windows 세션 복구 도구",
    "org": "개발 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "352a18c235275ede",
+   "title": "pii-guard — Claude Code에 보내는 글의 개인정보를 내 컴퓨터에서 먼저 가리는 플러그인",
+   "org": "공직 커뮤니티",
    "org_type": "커뮤니티"
   }
  ]

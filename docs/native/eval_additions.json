@@ -17078,5 +17078,33 @@
   "rationale": "AI 코딩 도구의 세션 번호를 기록·복구하는 단일 보조 도구라 S1이다. 자동 기록과 복구 명령 입력까지 처리하지만 대화 내용 복원은 하지 않아 C2다. 자체 LLM 호출·인터넷 통신이 없어 AI-Ready·R0이며, README와 PowerShell 구성을 확인했다.",
   "resilience": "GitHub 공개(Apache-2.0), 제거·되돌리기 문서 포함",
   "service_url": ""
+ },
+ {
+  "no": 683,
+  "id": "352a18c235275ede",
+  "org": "공직 커뮤니티",
+  "title": "pii-guard — Claude Code에 보내는 글의 개인정보를 내 컴퓨터에서 먼저 가리는 플러그인",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "post_url": "",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C2",
+  "c_name": "부분 완결",
+  "status": "Published tool",
+  "scope": "Hybrid",
+  "risk": "R1 낮음",
+  "human": "켜고 끄기·예외 단어·차단 모드를 사람이 정하고, 중요한 글은 미리보기로 확인",
+  "evidence": "E1 코드·도구 확인",
+  "confidence": "중간",
+  "rationale": "AI 코딩 도구의 입력 단계에 붙는 단일 보조 도구라 S1이다. 탐지·치환·차단까지 자동 처리하지만 F1 0.82로 누락·오탐을 사람이 확인해야 해 C2다. 국산 경량 NER 모델을 로컬에서 호출하므로 AI-Enabled, 외부 전송 전 개인정보를 줄이는 방향이라 R1이며 README와 명령 구성을 확인했다.",
+  "resilience": "GitHub 공개(MIT, 모델은 별도 라이선스), 모델 커밋 고정",
+  "service_url": ""
  }
 ]
