@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-13T06:37:10Z",
- "count": 1478,
+ "updated_at": "2026-11-13T14:35:02Z",
+ "count": 1483,
  "articles": [
   {
    "url": "https://www.womentimes.co.kr/news/articleView.html?idxno=107861",
@@ -107,10 +107,49 @@
    ]
   },
   {
+   "url": "https://share.google/wd534WGNRB4cDayZ8",
+   "title": "\"투명성 높인다\" 부산 해운대구 행사 홍보물에 예산표기 조례",
+   "outlet": "연합뉴스",
+   "published": "2025-09-18",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://m.go.seoul.co.kr/news/publicnews/2026/11/12/20261112500125",
    "title": "강진군, 전국 최초 공무원‘AI 역량’근평 반영",
    "outlet": "서울Pn",
    "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://biz.chosun.com/international/international_economy/2026/11/13/WJ5POQMZZ5G3FALHFLA2VX5VMU",
+   "title": "젠슨 황 불륜女 앨리스 황, 배후는 中 정보수장?...국가안전부 ‘칩 팀’ 요원",
+   "outlet": "조선비즈",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-13-px-업무pc-브라우저-제어-에이전트-보안-논쟁",
+   "title": "[공공AX 네트워크] 업무 PC의 브라우저 제어 에이전트를 둘러싼 보안 논쟁",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-13",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-13",
@@ -135,6 +174,32 @@
   {
    "url": "https://akwiki.agentofu.com/article/2026-11-13-px-사무실-ai-창작물-확산과-교육의-한계",
    "title": "[공공AX 네트워크] 한 사무실에 번지는 AI 창작물과 교육의 한계",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-13-px-ai-과제물-교육평가-오픈북-면접",
+   "title": "[공공AX 네트워크] AI 과제물 급증 속 교육 평가, 오픈북과 면접 쪽으로",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-13-cross-제미나이-하이드로젠-두-방-반응",
+   "title": "[에이전트코리아·공공AX 네트워크] 제미나이 하이드로젠을 두고 두 방에서 오간 반응",
    "outlet": "akwiki.agentofu.com",
    "published": "2026-11-13",
    "kind": "기사",
