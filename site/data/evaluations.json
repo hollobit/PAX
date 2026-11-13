@@ -1,6 +1,6 @@
 {
  "evaluated_at": "2026-11-13",
- "total": 681,
+ "total": 682,
  "cases": [
   {
    "no": 1,
@@ -22472,6 +22472,39 @@
    "tool_type": "AI 스킬·에이전트",
    "audience": "G2E·G2C 혼합",
    "p": "P2 시스템 쓰기(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 684,
+   "id": "3a4d40fc2696b908",
+   "org": "공직 커뮤니티",
+   "title": "deck-factory — 한 문장 요청으로 발표용 HTML 슬라이드를 만드는 Claude Code 스킬",
+   "ax_prev": "AI-Enabled",
+   "ax": "AI-Enabled",
+   "s": "S1",
+   "s_name": "Single tool",
+   "c": "C2",
+   "c_name": "부분 완결",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Published tool",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R0 최소",
+   "human": "발표 의도와 스타일을 사람이 정하고 결과 슬라이드를 검토",
+   "evidence": "E1 코드·도구 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "코딩 에이전트에 붙는 발표 자료 생성 스킬 하나라 S1이다. 디자인 체계·렌더·PDF 내보내기까지 처리하지만 README가 전 과정 자동화는 개발 중이라고 밝혀 C2다. 발표용 공개 자료를 만드는 도구라 R0이며 README와 스킬 구성을 확인했다.",
+   "feedback": "미확인",
+   "resilience": "GitHub 공개(MIT), 플러그인 마켓 설치",
+   "post_url": "",
+   "service_url": "",
+   "tool_type": "AI 스킬·에이전트",
+   "audience": "G2C 공개",
+   "p": "P1 산출물 생성(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }

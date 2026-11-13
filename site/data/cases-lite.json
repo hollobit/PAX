@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-13T07:34:04+09:00",
+ "updated_at": "2026-11-13T15:33:58+09:00",
  "cases": [
   {
    "id": "a2eaaf9f454da37f",
@@ -4424,6 +4424,12 @@
   {
    "id": "352a18c235275ede",
    "title": "pii-guard — Claude Code에 보내는 글의 개인정보를 내 컴퓨터에서 먼저 가리는 플러그인",
+   "org": "공직 커뮤니티",
+   "org_type": "커뮤니티"
+  },
+  {
+   "id": "3a4d40fc2696b908",
+   "title": "deck-factory — 한 문장 요청으로 발표용 HTML 슬라이드를 만드는 Claude Code 스킬",
    "org": "공직 커뮤니티",
    "org_type": "커뮤니티"
   }

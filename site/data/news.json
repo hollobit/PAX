@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-12T22:36:28Z",
- "count": 1477,
+ "updated_at": "2026-11-13T06:37:10Z",
+ "count": 1478,
  "articles": [
   {
    "url": "https://www.womentimes.co.kr/news/articleView.html?idxno=107861",
@@ -97,6 +97,19 @@
    "url": "https://www.aitimes.com/news/articleView.html?idxno=217303",
    "title": "네이버, AI 팩토리 2조원 첫 수주 확보…”10곳 이상과 추가 협상 중\"",
    "outlet": "AI타임스",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-13",
+   "last_shared": "2026-11-13",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.go.seoul.co.kr/news/publicnews/2026/11/12/20261112500125",
+   "title": "강진군, 전국 최초 공무원‘AI 역량’근평 반영",
+   "outlet": "서울Pn",
    "published": "2026-11-12",
    "kind": "기사",
    "shares": 1,

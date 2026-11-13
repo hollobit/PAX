@@ -2,27 +2,27 @@
  "generated_at": "2026-11-13",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 681,
+ "total_cases": 682,
  "total_champions": 260,
  "community": {
-  "members": 2919,
-  "kakao_week": 5277,
-  "kakao_total_observed": 73595,
-  "threads_observed": 457
+  "members": 2917,
+  "kakao_week": 5526,
+  "kakao_total_observed": 73844,
+  "threads_observed": 458
  },
  "certified_champions": 5,
  "unattributed_cases": 197,
  "ax_distribution": {
   "AI-Ready": 437,
-  "AI-Enabled": 210,
+  "AI-Enabled": 211,
   "AX 단계 외": 28,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
- "c_axis_mean": 0.94,
+ "c_axis_mean": 0.95,
  "p_distribution": {
   "P0": 205,
-  "P1": 452,
+  "P1": 453,
   "P2": 24
  },
  "model_dependency": {
@@ -30,7 +30,7 @@
   "없음(비LLM)": 344,
   "해외 오픈웨이트(로컬)": 34,
   "혼합": 19,
-  "해외 상용 API": 73,
+  "해외 상용 API": 74,
   "모델 중립(BYO)": 105,
   "국산 독자모델": 8,
   "미상": 29,
@@ -40,10 +40,11 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 40,
+    "n": 41,
     "variants": [
      "Claude",
      "Claude Code",
+     "Claude Code 스킬(BYO 구독)",
      "Claude Code 스킬(선택)",
      "Claude Code(BYO 구독)",
      "Claude Code(플러그인)",
@@ -226,6 +227,10 @@
      {
       "id": "d1edbb124878c572",
       "title": "Herdr Session Keeper — PC가 꺼져도 Claude Code·Codex 대화를 골라 이어 여는 Windows 세션 복구 도구"
+     },
+     {
+      "id": "3a4d40fc2696b908",
+      "title": "deck-factory — 한 문장 요청으로 발표용 HTML 슬라이드를 만드는 Claude Code 스킬"
      }
     ],
     "domestic": false
@@ -995,8 +1000,8 @@
     "specified": 17
    },
    "해외 상용 API": {
-    "n": 73,
-    "specified": 57
+    "n": 74,
+    "specified": 58
    },
    "모델 중립(BYO)": {
     "n": 105,
@@ -1518,11 +1523,11 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 73,
+    "n": 74,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
-      "n": 27,
+      "n": 28,
       "cases": [
        {
         "id": "7acf5f25369c1401",
@@ -1631,12 +1636,17 @@
        {
         "id": "53c30605325838f8",
         "title": "데브마루 — 공공 실험실 같은 소규모 조직이 서버 한 대에 회원별 AI 개발환경과 공개·DB·문서 변환을 한 번에 까는 설치 도구"
+       },
+       {
+        "id": "3a4d40fc2696b908",
+        "title": "deck-factory — 한 문장 요청으로 발표용 HTML 슬라이드를 만드는 Claude Code 스킬"
        }
       ],
       "domestic": false,
       "variants": [
        "Claude",
        "Claude Code",
+       "Claude Code 스킬(BYO 구독)",
        "Claude Code(BYO 구독)",
        "Claude Code(플러그인)",
        "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
@@ -2124,18 +2134,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.067,
- "local_model_rate": 0.259,
- "model_known": 135,
- "license_tagged": 489,
- "license_stated_rate": 0.499,
+ "domestic_model_rate": 0.066,
+ "local_model_rate": 0.257,
+ "model_known": 136,
+ "license_tagged": 490,
+ "license_stated_rate": 0.5,
  "gitlab_cases": 321,
  "gitlab_mirror_pairs": 43,
  "gitlab_open_rate": 0.134,
  "mcp_cases": 100,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 599,
+  "미확인": 600,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -2244,7 +2254,7 @@
    ]
   },
   "github": {
-   "count": 191,
+   "count": 192,
    "starred": 185,
    "stars_sum": 873543,
    "maintenance": {
@@ -2338,7 +2348,7 @@
  },
  "license_distribution": {
   "명시 없음": 245,
-  "MIT": 160,
+  "MIT": 161,
   "Apache-2.0": 40,
   "Other": 21,
   "AGPL-3.0": 5,
@@ -2359,7 +2369,7 @@
    "gitlab": 179
   },
   "MIT": {
-   "github": 92,
+   "github": 93,
    "gitlab": 67
   },
   "Apache-2.0": {
@@ -2417,8 +2427,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 177,
-   "stated": 129
+   "total": 178,
+   "stated": 130
   },
   "github-pages": {
    "total": 25,

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-13T07:34:04+09:00",
+ "updated_at": "2026-11-13T15:33:58+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -19533,6 +19533,34 @@
    "org_type": "커뮤니티",
    "id": "352a18c235275ede",
    "license": "명시 없음",
+   "license_source": "github",
+   "license_checked": "2026-11-13"
+  },
+  {
+   "title": "deck-factory — 한 문장 요청으로 발표용 HTML 슬라이드를 만드는 Claude Code 스킬",
+   "date": "2026-11-13",
+   "runtime_env": "AI 도구 설정",
+   "collected_at": "2026-11-13",
+   "source": "kakao",
+   "case_class": "커뮤니티",
+   "summary": "발표 의도를 한 문장으로 주면 큰 숫자·여백 중심의 편집형 디자인 체계에 맞춰 HTML 슬라이드를 만들고 실제 브라우저로 렌더해 PDF로 내보낸다. 보고서형 요청은 밝은 종이 테마로 바뀌고 KRDS 등 8개 스타일 묶음과 한글 줄바꿈 규칙, 47개 항목 품질 관문을 둔다. 현안 발표 자료 제작 방법을 묻는 공직자 질문에 참고 사례로 공유됐다.",
+   "model_dependency": "해외 상용 API",
+   "link": "https://github.com/gongnyang/deck-factory",
+   "task_category": "문서·기안",
+   "models_used": [
+    "Claude Code 스킬(BYO 구독)"
+   ],
+   "org_type": "커뮤니티",
+   "case_url": null,
+   "tags": [
+    "발표자료",
+    "에이전트 스킬",
+    "문서자동화",
+    "디자인"
+   ],
+   "org": "공직 커뮤니티",
+   "id": "3a4d40fc2696b908",
+   "license": "MIT",
    "license_source": "github",
    "license_checked": "2026-11-13"
   }

@@ -17106,5 +17106,33 @@
   "rationale": "AI 코딩 도구의 입력 단계에 붙는 단일 보조 도구라 S1이다. 탐지·치환·차단까지 자동 처리하지만 F1 0.82로 누락·오탐을 사람이 확인해야 해 C2다. 국산 경량 NER 모델을 로컬에서 호출하므로 AI-Enabled, 외부 전송 전 개인정보를 줄이는 방향이라 R1이며 README와 명령 구성을 확인했다.",
   "resilience": "GitHub 공개(MIT, 모델은 별도 라이선스), 모델 커밋 고정",
   "service_url": ""
+ },
+ {
+  "no": 684,
+  "id": "3a4d40fc2696b908",
+  "org": "공직 커뮤니티",
+  "title": "deck-factory — 한 문장 요청으로 발표용 HTML 슬라이드를 만드는 Claude Code 스킬",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "post_url": "",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C2",
+  "c_name": "부분 완결",
+  "status": "Published tool",
+  "scope": "External",
+  "risk": "R0 최소",
+  "human": "발표 의도와 스타일을 사람이 정하고 결과 슬라이드를 검토",
+  "evidence": "E1 코드·도구 확인",
+  "confidence": "중간",
+  "rationale": "코딩 에이전트에 붙는 발표 자료 생성 스킬 하나라 S1이다. 디자인 체계·렌더·PDF 내보내기까지 처리하지만 README가 전 과정 자동화는 개발 중이라고 밝혀 C2다. 발표용 공개 자료를 만드는 도구라 R0이며 README와 스킬 구성을 확인했다.",
+  "resilience": "GitHub 공개(MIT), 플러그인 마켓 설치",
+  "service_url": ""
  }
 ]

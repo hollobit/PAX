@@ -1748,6 +1748,7 @@
    "category": "민간·커뮤니티",
    "category_basis": "cases",
    "cases": [
+    "3a4d40fc2696b908",
     "5ccdaf3fb084eff0",
     "3241bc9ff9f0fa16",
     "3c88a43775f80a67",
@@ -1755,7 +1756,7 @@
     "65e1983235232514"
    ],
    "stats": {
-    "case_count": 5,
+    "case_count": 6,
     "top_ax": 2,
     "stars": 771
    }
