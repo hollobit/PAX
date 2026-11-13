@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-13T15:33:58+09:00",
+ "updated_at": "2026-11-14T07:34:35+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -19563,6 +19563,26 @@
    "license": "MIT",
    "license_source": "github",
    "license_checked": "2026-11-13"
+  },
+  {
+   "tags": [
+    "시험문항",
+    "문서변환",
+    "교육행정",
+    "LLM"
+   ],
+   "summary": "전남광주통합특별시교육청의 요청으로 개발된 도구로, 시험 문항을 넣으면 문제·지문·보기·정답을 구조에 맞게 나눠 정리해 준다. 그림·도표 처리는 비용 부담으로 이번 범위에서 뺐고, 다음 단계로 공문 서식 변환을 계획하고 있다.",
+   "source": "threads",
+   "title": "시험문제 자동 변환기 — 교육청 요청으로 만든 문항 지문·보기·정답 정리 도구",
+   "org": "전남광주통합특별시교육청",
+   "model_dependency": "미상",
+   "link": "https://www.threads.com/@nursing0705/post/DfooOhrE_P2",
+   "collected_at": "2026-11-14",
+   "org_type": "교육기관",
+   "task_category": "문서·기안",
+   "case_class": "기관 공식",
+   "date": "2026-11-13",
+   "id": "264023a1635ac774"
   }
  ]
 }

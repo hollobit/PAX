@@ -1,5 +1,5 @@
 {
- "total": 260,
+ "total": 261,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -1846,6 +1846,28 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "threads:nursing0705",
+   "name": "nursing0705",
+   "accounts": [
+    {
+     "platform": "threads",
+     "id": "nursing0705",
+     "url": "https://www.threads.com/@nursing0705"
+    }
+   ],
+   "affiliation": null,
+   "category": "교육기관",
+   "category_basis": "cases",
+   "cases": [
+    "264023a1635ac774"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },

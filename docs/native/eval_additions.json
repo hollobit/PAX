@@ -17134,5 +17134,33 @@
   "rationale": "코딩 에이전트에 붙는 발표 자료 생성 스킬 하나라 S1이다. 디자인 체계·렌더·PDF 내보내기까지 처리하지만 README가 전 과정 자동화는 개발 중이라고 밝혀 C2다. 발표용 공개 자료를 만드는 도구라 R0이며 README와 스킬 구성을 확인했다.",
   "resilience": "GitHub 공개(MIT), 플러그인 마켓 설치",
   "service_url": ""
+ },
+ {
+  "no": 685,
+  "id": "264023a1635ac774",
+  "org": "전남광주통합특별시교육청",
+  "title": "시험문제 자동 변환기 — 교육청 요청으로 만든 문항 지문·보기·정답 정리 도구",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "mcp_role": "Unknown/None",
+  "gate": "상위 관문 미충족/해당 없음",
+  "feedback": "미확인",
+  "post_url": "https://www.threads.com/@nursing0705/post/DfooOhrE_P2",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S1",
+  "s_name": "Single tool",
+  "c": "C2",
+  "c_name": "부분 완결",
+  "status": "Prototype",
+  "scope": "Internal",
+  "risk": "R1 낮음",
+  "human": "변환 결과를 담당자가 확인·보정(그림·도표는 수작업)",
+  "evidence": "E0 게시글 주장",
+  "confidence": "낮음",
+  "rationale": "시험 문항을 구조화하는 단일 변환 도구라 S1이다. 문제·지문·보기·정답 정리는 자동이지만 그림·도표는 범위 밖이라 C2다. 토큰 비용 언급으로 LLM 활용으로 보아 AI-Enabled로 두었고, 게시글 설명만 있어 근거는 E0이다.",
+  "resilience": "공개 저장소·서비스 주소 미확인 — 배포 주소가 확인되면 E2로 상향",
+  "service_url": ""
  }
 ]

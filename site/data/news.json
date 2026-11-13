@@ -1,7 +1,111 @@
 {
- "updated_at": "2026-11-13T14:35:02Z",
- "count": 1483,
+ "updated_at": "2026-11-13T22:36:54Z",
+ "count": 1492,
  "articles": [
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=242915",
+   "title": "인텔코리아, 메사쿠어컴퍼니-NH농협은행과 AI 비대면 인증 사례 ‘공개’",
+   "outlet": "아이티데일리",
+   "published": "2026-11-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202611131939306306",
+   "title": "한국항공대 모인 AI 석학·CEO \"엔비디아 독주 깰 열쇠는 저전력 칩과 월드 모델\"",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-11-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.edaily.co.kr/News/Read?newsId=03998326645645064",
+   "title": "민원서 2장이 20장으로…英 공공기관 덮친 'AI 민원 폭탄'",
+   "outlet": "이데일리",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.domin.co.kr/news/articleView.html?idxno=1575357",
+   "title": "전북특별자치도청소년활동진흥센터, 2026 전북 청소년 피지컬AI 캠프 운영",
+   "outlet": "전북도민일보",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.asiatoday.co.kr/kn/view.php?key=20261113010005218",
+   "title": "젠슨 황 퇴진에 현대차도 촉각…AI·자율주행·로보틱스 협력 향방은",
+   "outlet": "아시아투데이",
+   "published": "2026-11-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217372",
+   "title": "미 비영리단체 4곳, 오픈AI 등 5개사에 '최첨단 AI 개발 중단' 소송",
+   "outlet": "AI타임스",
+   "published": "2026-11-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217361",
+   "title": "앤트로픽, 제조업용 '클로드' 출시…오픈AI와 산업별 AI 시장 경쟁 확대",
+   "outlet": "AI타임스",
+   "published": "2026-11-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.tf.co.kr/read/releasecopy/2388685.htm",
+   "title": "세종시교육청, AI시대 미래 인재상 찾는다… AI교육 정책 포럼 개최 - 보도자료 | 기사",
+   "outlet": "더팩트",
+   "published": "2026-11-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.womentimes.co.kr/news/articleView.html?idxno=107861",
    "title": "GC녹십자, 생성형 AI 기반 약물감시 소프트웨어 자체 개발",
@@ -15776,6 +15880,19 @@
    "title": "\"AI 개발은 개발자가?\"…현장 PM이 직접 코딩, '안전·원가' 잡는다",
    "outlet": "머니투데이",
    "published": "2026-08-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-08-27",
+   "last_shared": "2026-08-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.msit.go.kr/bbs/view.do?sCode=user&mId=307&mPid=208&bbsSeqNo=94&nttSeqNo=3187709",
+   "title": "(보도참고) ｢독자 AI 파운데이션 모델｣ 프로젝트 2차 단계평가 결과를 상세히 공개합니다.",
+   "outlet": "과학기술정보통신부",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-08-27",
