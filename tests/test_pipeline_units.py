@@ -126,3 +126,18 @@ def test_http_status_uses_short_budget_and_falls_back_to_get(monkeypatch):
     assert ch.http_status("https://a.example/") == 200
     assert len(calls) == 2  # HEAD가 405면 GET으로 다시
     assert all(kw == {"timeout": ch.LINK_TIMEOUT_S, "retries": ch.LINK_RETRIES} for _, kw in calls)
+
+
+def test_http_status_retries_get_when_head_is_refused(monkeypatch):
+    # HEAD에는 404, GET에는 200을 주는 서버가 있다(2026-11-23 주간 점검 오탐) — HEAD가 성공이 아니면 GET으로 다시
+    monkeypatch.setattr(ch, "curl", lambda url, *extra, **kw:
+                        type("P", (), {"stdout": "404" if "-I" in extra else "200"})())
+    assert ch.http_status("https://a.example/") == 200
+
+
+def test_http_status_counts_not_acceptable_as_alive(monkeypatch):
+    # MCP 엔드포인트는 SSE Accept 없는 GET에 406 — 서버가 살아 있다는 뜻
+    monkeypatch.setattr(ch, "curl", lambda url, *extra, **kw:
+                        type("P", (), {"stdout": "405" if "-I" in extra else "406"})())
+    assert ch.alive(ch.http_status("https://a.example/mcp"))
+    assert not ch.alive(404) and not ch.alive(0) and ch.alive(301)

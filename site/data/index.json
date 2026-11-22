@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-11-22",
+ "generated_at": "2026-11-23",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
  "total_cases": 704,
  "total_champions": 262,
  "community": {
-  "members": 2972,
-  "kakao_week": 2260,
-  "kakao_total_observed": 77560,
-  "threads_observed": 463
+  "members": 2973,
+  "kakao_week": 1107,
+  "kakao_total_observed": 77605,
+  "threads_observed": 465
  },
  "certified_champions": 5,
  "unattributed_cases": 212,
@@ -2213,18 +2213,18 @@
  },
  "maintenance_distribution": {
   "활발": 284,
-  "정체": 158,
-  "방치": 17
+  "정체": 168,
+  "방치": 19
  },
- "stars_collected": 459,
+ "stars_collected": 471,
  "repo_stats": {
   "gitlab": {
    "count": 322,
    "starred": 315,
    "stars_sum": 745,
    "maintenance": {
-    "활발": 190,
-    "정체": 125
+    "활발": 188,
+    "정체": 127
    },
    "top": [
     {
@@ -2311,18 +2311,18 @@
   },
   "github": {
    "count": 200,
-   "starred": 185,
-   "stars_sum": 873543,
+   "starred": 197,
+   "stars_sum": 936950,
    "maintenance": {
-    "정체": 44,
+    "정체": 54,
     "활발": 125,
-    "방치": 17
+    "방치": 19
    },
    "top": [
     {
      "id": "3f7b3180bf404e54",
      "title": "rea — 에이전트로 앱 동작부터 네이티브 바이너리까지 역공학하는 오픈소스",
-     "stars": 443586,
+     "stars": 474013,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "morluto"
@@ -2330,7 +2330,7 @@
     {
      "id": "c54ee4b5fb3ee4c5",
      "title": "Orca — 병렬 에이전트 플릿을 부리는 에이전트 개발 환경(ADE)",
-     "stars": 119241,
+     "stars": 132919,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "stablyai"
@@ -2338,7 +2338,7 @@
     {
      "id": "4f136eeeea72fe65",
      "title": "Archify — 코드베이스·시스템 설명을 검증 가능한 다이어그램으로 바꾸는 에이전트 스킬",
-     "stars": 94717,
+     "stars": 98786,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "tt-a1i"
@@ -2346,7 +2346,7 @@
     {
      "id": "2085370092f99007",
      "title": "God's Eye View — 항공기·선박·위성·지진·공개 카메라를 한 3D 지구본에 띄우는 오픈소스 공간정보 관제 참고 도구",
-     "stars": 63586,
+     "stars": 66370,
      "maintenance": "활발",
      "license": "Other",
      "developer": "bilawalsidhu"
@@ -2354,7 +2354,7 @@
     {
      "id": "04af7fa6f99a64e4",
      "title": "CL4R1T4S — 주요 AI 서비스의 시스템 프롬프트를 모아 공개한 투명성 저장소",
-     "stars": 51839,
+     "stars": 53749,
      "maintenance": "활발",
      "license": "AGPL-3.0",
      "developer": "elder-plinius"
@@ -2362,7 +2362,7 @@
     {
      "id": "f108979f0d8b2009",
      "title": "book-to-skill — 기술 서적 PDF를 Claude Code 스킬로 바꾸는 도구",
-     "stars": 37344,
+     "stars": 38756,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "virgiliojr94"
@@ -2370,7 +2370,7 @@
     {
      "id": "5cda81d84c79d926",
      "title": "ai-memory — 여러 코딩 에이전트가 하나의 장기 기억을 나눠 쓰고 작업을 넘겨받게 하는 자체 운영 메모리 서버(MIT)",
-     "stars": 15405,
+     "stars": 16262,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "akitaonrails"
@@ -2378,7 +2378,7 @@
     {
      "id": "b64e832490a6c814",
      "title": "MCP Inspector — MCP 서버를 눈으로 검사하는 공식 테스트 도구",
-     "stars": 11255,
+     "stars": 11345,
      "maintenance": "활발",
      "license": "명시 없음",
      "developer": "modelcontextprotocol"
@@ -2386,18 +2386,18 @@
     {
      "id": "2f4ed1e68a6464c5",
      "title": "K-Skill — 한국인을 위한 AI 스킬 모음집",
-     "stars": 8305,
+     "stars": 8490,
      "maintenance": "활발",
      "license": "MIT",
      "developer": "NomaDamas"
     },
     {
-     "id": "0292062a6328545a",
-     "title": "public-apis-4Kr — 한국 공개 API 300+ 커뮤니티 큐레이션 목록",
-     "stars": 3478,
+     "id": "0d782070be25183f",
+     "title": "im-not-ai(Humanize KR) — AI가 쓴 한글에서 번역투·AI 관용구를 찾아 사실은 그대로 두고 문체만 고치는 윤문 스킬",
+     "stars": 6717,
      "maintenance": "활발",
      "license": "MIT",
-     "developer": "yoobin_mion"
+     "developer": "epoko77-ai"
     }
    ]
   }
@@ -2517,9 +2517,9 @@
    "C1": 22
   },
   "maintenance": {
-   "정체": 25,
-   "활발": 46,
-   "방치": 15
+   "정체": 29,
+   "활발": 41,
+   "방치": 17
   }
  },
  "mirror_pair_cases": [

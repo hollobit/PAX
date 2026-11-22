@@ -1,7 +1,124 @@
 {
- "updated_at": "2026-11-22T12:38:20Z",
- "count": 1574,
+ "updated_at": "2026-11-22T22:43:19Z",
+ "count": 1583,
  "articles": [
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261122015100053",
+   "title": "경북도, 2차 공공기관 이전 앞두고 유치 총력전",
+   "outlet": "연합뉴스",
+   "published": "2026-11-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-23",
+   "last_shared": "2026-11-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.techm.kr/news/articleView.html?idxno=157680",
+   "title": "최태원 SK 회장 \"한일 AI 인재 공동 육성 모색\"",
+   "outlet": "테크M",
+   "published": "2026-11-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-23",
+   "last_shared": "2026-11-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.seoul.co.kr/news/publicnews/local_govern/news_local/2026/11/23/20261123019006",
+   "title": "‘AI 안경 꼼짝마’… 지방공무원 시험도 경계령",
+   "outlet": "서울Pn",
+   "published": "2026-11-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-23",
+   "last_shared": "2026-11-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.seoul.co.kr/news/life/publication-literature/2026/11/23/20261123018003",
+   "title": "생성형 AI 활용 여부 적시…사실과 다를 땐 당선 제외",
+   "outlet": "서울신문",
+   "published": "2026-11-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-23",
+   "last_shared": "2026-11-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217659",
+   "title": "오픈AI, 챗GPT 플러스 구독자에 '닷츠' 확대...비즈니스 스탠더드도 지원",
+   "outlet": "AI타임스",
+   "published": "2026-11-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-23",
+   "last_shared": "2026-11-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217655",
+   "title": "오픈AI, 음성 모델 'GPT-라이브-1.1' 출시…대기 요금 60% 인하",
+   "outlet": "AI타임스",
+   "published": "2026-11-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-23",
+   "last_shared": "2026-11-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217651",
+   "title": "LGU+ 조직개편...\"AI 사업 성과 창출 가속\"",
+   "outlet": "AI타임스",
+   "published": "2026-11-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-23",
+   "last_shared": "2026-11-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/025/0003566419",
+   "title": "‘리트 만점자’ 이진우, 천호동 모텔서 숨진 채 발견…진상조사단 출범할까",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-23",
+   "last_shared": "2026-11-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "http://www.jjn.co.kr/news/articleView.html?idxno=1057857",
+   "title": "장수군, 피지컬 AI 기반 미래 축산업 발전 방안 모색",
+   "outlet": "전북중앙",
+   "published": "2026-11-22",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-23",
+   "last_shared": "2026-11-23",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261121121023",
    "title": "화웨이, 싱가포르 핀테크 페스티벌 2026에서 금융 AI 확장 역량 공개",

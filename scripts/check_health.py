@@ -27,17 +27,26 @@ ACTIVE_DAYS, STALE_DAYS = 60, 180
 LINK_TIMEOUT_S, LINK_RETRIES = 10, 1
 
 
+# 406(Not Acceptable)은 서버가 응답했다는 뜻 — MCP 엔드포인트는 SSE Accept 없는 요청에 406을 준다.
+ALIVE_EXTRA = {406}
+
+
+def alive(code: int) -> bool:
+    return 200 <= code < 400 or code in ALIVE_EXTRA
+
+
 def http_status(url: str) -> int:
-    for method in (["-I"], []):  # HEAD 먼저, 405 등이면 GET
+    code = 0
+    for method in (["-I"], []):  # HEAD 먼저, 성공이 아니면 GET — HEAD에만 404를 주는 서버가 있다(2026-11-23)
         r = curl(url, "-o", "/dev/null", "-w", "%{http_code}", *method,
                  timeout=LINK_TIMEOUT_S, retries=LINK_RETRIES)
         try:
             code = int(r.stdout or 0) if r else 0
         except ValueError:
             code = 0
-        if code and code != 405:
+        if alive(code):
             return code
-    return 0
+    return code
 
 
 def repo_activity(url: str):
@@ -63,7 +72,7 @@ def check_case(c):
     if not target:
         return c["id"], None, None, {}
     code = http_status(target)
-    link_ok = 200 <= code < 400
+    link_ok = alive(code)
     maint = None
     stars = {}  # 플랫폼별 스타 — 미러 사례는 양쪽이 다르다
     for u in (c.get("link"), c.get("case_url"), c.get("mirror_url")):
