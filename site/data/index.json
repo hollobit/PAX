@@ -2,45 +2,45 @@
  "generated_at": "2026-11-22",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 699,
+ "total_cases": 704,
  "total_champions": 262,
  "community": {
-  "members": 2946,
-  "kakao_week": 2221,
-  "kakao_total_observed": 77521,
+  "members": 2969,
+  "kakao_week": 2226,
+  "kakao_total_observed": 77526,
   "threads_observed": 463
  },
  "certified_champions": 5,
- "unattributed_cases": 207,
+ "unattributed_cases": 212,
  "ax_distribution": {
-  "AI-Ready": 443,
-  "AI-Enabled": 219,
+  "AI-Ready": 446,
+  "AI-Enabled": 221,
   "AX 단계 외": 31,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
  "c_axis_mean": 0.96,
  "p_distribution": {
-  "P0": 209,
-  "P1": 461,
+  "P0": 212,
+  "P1": 463,
   "P2": 29
  },
  "model_dependency": {
   "미확인": 68,
   "없음(비LLM)": 349,
   "해외 오픈웨이트(로컬)": 34,
-  "혼합": 19,
-  "해외 상용 API": 74,
-  "모델 중립(BYO)": 107,
+  "혼합": 21,
+  "해외 상용 API": 75,
+  "모델 중립(BYO)": 108,
   "국산 독자모델": 8,
-  "미상": 39,
+  "미상": 40,
   "국산 오픈웨이트": 1
  },
  "model_stats": {
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 41,
+    "n": 42,
     "variants": [
      "Claude",
      "Claude Code",
@@ -231,18 +231,23 @@
      {
       "id": "3a4d40fc2696b908",
       "title": "deck-factory — 한 문장 요청으로 발표용 HTML 슬라이드를 만드는 Claude Code 스킬"
+     },
+     {
+      "id": "a62df7c94b28d078",
+      "title": "같은 질문, 다른 답 — 27개 언어모델이 한국의 역사·영토·문화 질문 50개에 어떻게 답하는지 3만여 건으로 잰 보고서"
      }
     ],
     "domestic": false
    },
    {
     "name": "GPT(OpenAI)",
-    "n": 20,
+    "n": 21,
     "variants": [
      "ChatGPT GPTs",
      "ChatGPT(웹)",
      "ChatGPT(팀계정)",
      "ChatGPT/Claude/Codex(승인 문서 MCP 조회)",
+     "GPT",
      "GPT(OpenAI API)",
      "GPT-5.4",
      "GPT-5.6 Luna",
@@ -342,6 +347,10 @@
      {
       "id": "ed993e5f5a4bba55",
       "title": "더주택 — 주택공급 정책을 정책·사업·인허가·착공·입주 단계로 추적하는 디지털 상황판과 3개 AI 에이전트"
+     },
+     {
+      "id": "a62df7c94b28d078",
+      "title": "같은 질문, 다른 답 — 27개 언어모델이 한국의 역사·영토·문화 질문 50개에 어떻게 답하는지 3만여 건으로 잰 보고서"
      }
     ],
     "domestic": false
@@ -694,10 +703,11 @@
    },
    {
     "name": "Qwen",
-    "n": 2,
+    "n": 3,
     "variants": [
      "Qwen2.5-Coder-1.5B-Instruct(GGUF, llama.cpp)",
-     "Qwen3.5 2B(로컬 CPU)"
+     "Qwen3.5 2B(로컬 CPU)",
+     "Qwen3.8 27B"
     ],
     "cases": [
      {
@@ -707,9 +717,35 @@
      {
       "id": "9719b550772ed1b2",
       "title": "CODERX — 폐쇄망 기관 PC 안에서 한국어 요구사항만으로 코드 생성·개선·보안점검을 하는 온프레미스 AI 코딩 도구"
+     },
+     {
+      "id": "a62df7c94b28d078",
+      "title": "같은 질문, 다른 답 — 27개 언어모델이 한국의 역사·영토·문화 질문 50개에 어떻게 답하는지 3만여 건으로 잰 보고서"
      }
     ],
     "domestic": false
+   },
+   {
+    "name": "Solar Pro 4",
+    "n": 3,
+    "variants": [
+     "Solar Pro 4"
+    ],
+    "cases": [
+     {
+      "id": "8cb6daa7f1249b65",
+      "title": "Solar Planets — 업스테이지 Solar Pro 4로 만든 공공·세무 AI 도구를 행성으로 둘러보는 소개 공간"
+     },
+     {
+      "id": "ed993e5f5a4bba55",
+      "title": "더주택 — 주택공급 정책을 정책·사업·인허가·착공·입주 단계로 추적하는 디지털 상황판과 3개 AI 에이전트"
+     },
+     {
+      "id": "a62df7c94b28d078",
+      "title": "같은 질문, 다른 답 — 27개 언어모델이 한국의 역사·영토·문화 질문 50개에 어떻게 답하는지 3만여 건으로 잰 보고서"
+     }
+    ],
+    "domestic": true
    },
    {
     "name": "Jev(TypeSafe AI 판정 모델)",
@@ -728,24 +764,6 @@
      }
     ],
     "domestic": false
-   },
-   {
-    "name": "Solar Pro 4",
-    "n": 2,
-    "variants": [
-     "Solar Pro 4"
-    ],
-    "cases": [
-     {
-      "id": "8cb6daa7f1249b65",
-      "title": "Solar Planets — 업스테이지 Solar Pro 4로 만든 공공·세무 AI 도구를 행성으로 둘러보는 소개 공간"
-     },
-     {
-      "id": "ed993e5f5a4bba55",
-      "title": "더주택 — 주택공급 정책을 정책·사업·인허가·착공·입주 단계로 추적하는 디지털 상황판과 3개 AI 에이전트"
-     }
-    ],
-    "domestic": true
    },
    {
     "name": "상용 API(세부 미상)",
@@ -980,6 +998,16 @@
     "models": [
      "schift-ko-pii-v5(34M NER, 로컬 CPU)"
     ]
+   },
+   {
+    "id": "a62df7c94b28d078",
+    "title": "같은 질문, 다른 답 — 27개 언어모델이 한국의 역사·영토·문화 질문 50개에 어떻게 답하는지 3만여 건으로 잰 보고서",
+    "models": [
+     "Solar Pro 4",
+     "Claude",
+     "GPT",
+     "Qwen3.8 27B"
+    ]
    }
   ],
   "dist_detail": {
@@ -996,15 +1024,15 @@
     "specified": 21
    },
    "혼합": {
-    "n": 19,
-    "specified": 17
+    "n": 21,
+    "specified": 18
    },
    "해외 상용 API": {
-    "n": 74,
+    "n": 75,
     "specified": 58
    },
    "모델 중립(BYO)": {
-    "n": 107,
+    "n": 108,
     "specified": 11
    },
    "국산 독자모델": {
@@ -1012,7 +1040,7 @@
     "specified": 7
    },
    "미상": {
-    "n": 39,
+    "n": 40,
     "specified": 1
    },
    "국산 오픈웨이트": {
@@ -1162,8 +1190,49 @@
    },
    {
     "dep": "혼합",
-    "n": 19,
+    "n": 21,
     "families": [
+     {
+      "name": "Claude/Codex(상용 에이전트)",
+      "n": 6,
+      "cases": [
+       {
+        "id": "acd684108227b9c2",
+        "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
+       },
+       {
+        "id": "9d19e64aa30f5332",
+        "title": "MiroFish-Ko 개인 수정판 — 로컬 LLM·Codex CLI로 돌리는 정책 여론 시뮬레이터"
+       },
+       {
+        "id": "8a47740d405286c4",
+        "title": "자치법규 정합성 실측 — 서울시 조례 942건의 법률 인용 2,996개를 현행 조문과 전수 대조"
+       },
+       {
+        "id": "133d7e9c594456be",
+        "title": "서울 자치구 조례 정합성 지도 — 본청과 25개 구 조례의 법률 인용을 현행 조문과 대조해 지도로"
+       },
+       {
+        "id": "7c3c1b02b4a981ec",
+        "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교"
+       },
+       {
+        "id": "a62df7c94b28d078",
+        "title": "같은 질문, 다른 답 — 27개 언어모델이 한국의 역사·영토·문화 질문 50개에 어떻게 답하는지 3만여 건으로 잰 보고서"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Claude",
+       "Claude Fable 5.1",
+       "Claude Haiku 5.5",
+       "Claude Opus 5.5",
+       "Claude Sonnet 5.5",
+       "Claude(대조·근거 작성)",
+       "Codex CLI/Claude CLI(BYO 구독)",
+       "상용 API 모드(Claude 등)"
+      ]
+     },
      {
       "name": "Gemini",
       "n": 5,
@@ -1233,44 +1302,8 @@
       ]
      },
      {
-      "name": "Claude/Codex(상용 에이전트)",
-      "n": 5,
-      "cases": [
-       {
-        "id": "acd684108227b9c2",
-        "title": "DevEval Agents — ODA 사업평가 멀티 에이전트 프레임워크"
-       },
-       {
-        "id": "9d19e64aa30f5332",
-        "title": "MiroFish-Ko 개인 수정판 — 로컬 LLM·Codex CLI로 돌리는 정책 여론 시뮬레이터"
-       },
-       {
-        "id": "8a47740d405286c4",
-        "title": "자치법규 정합성 실측 — 서울시 조례 942건의 법률 인용 2,996개를 현행 조문과 전수 대조"
-       },
-       {
-        "id": "133d7e9c594456be",
-        "title": "서울 자치구 조례 정합성 지도 — 본청과 25개 구 조례의 법률 인용을 현행 조문과 대조해 지도로"
-       },
-       {
-        "id": "7c3c1b02b4a981ec",
-        "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교"
-       }
-      ],
-      "domestic": false,
-      "variants": [
-       "Claude Fable 5.1",
-       "Claude Haiku 5.5",
-       "Claude Opus 5.5",
-       "Claude Sonnet 5.5",
-       "Claude(대조·근거 작성)",
-       "Codex CLI/Claude CLI(BYO 구독)",
-       "상용 API 모드(Claude 등)"
-      ]
-     },
-     {
       "name": "GPT(OpenAI)",
-      "n": 3,
+      "n": 4,
       "cases": [
        {
         "id": "ea2bce110972762e",
@@ -1283,11 +1316,16 @@
        {
         "id": "ed993e5f5a4bba55",
         "title": "더주택 — 주택공급 정책을 정책·사업·인허가·착공·입주 단계로 추적하는 디지털 상황판과 3개 AI 에이전트"
+       },
+       {
+        "id": "a62df7c94b28d078",
+        "title": "같은 질문, 다른 답 — 27개 언어모델이 한국의 역사·영토·문화 질문 50개에 어떻게 답하는지 3만여 건으로 잰 보고서"
        }
       ],
       "domestic": false,
       "variants": [
        "ChatGPT/Claude/Codex(승인 문서 MCP 조회)",
+       "GPT",
        "GPT-5.4",
        "GPT-6 Astra",
        "GPT-6.1 Sol",
@@ -1335,6 +1373,24 @@
       "domestic": false,
       "variants": [
        "Jev(TypeSafe AI 판정 모델)"
+      ]
+     },
+     {
+      "name": "Solar Pro 4",
+      "n": 2,
+      "cases": [
+       {
+        "id": "ed993e5f5a4bba55",
+        "title": "더주택 — 주택공급 정책을 정책·사업·인허가·착공·입주 단계로 추적하는 디지털 상황판과 3개 AI 에이전트"
+       },
+       {
+        "id": "a62df7c94b28d078",
+        "title": "같은 질문, 다른 답 — 27개 언어모델이 한국의 역사·영토·문화 질문 50개에 어떻게 답하는지 3만여 건으로 잰 보고서"
+       }
+      ],
+      "domestic": true,
+      "variants": [
+       "Solar Pro 4"
       ]
      },
      {
@@ -1492,20 +1548,6 @@
       ]
      },
      {
-      "name": "Solar Pro 4",
-      "n": 1,
-      "cases": [
-       {
-        "id": "ed993e5f5a4bba55",
-        "title": "더주택 — 주택공급 정책을 정책·사업·인허가·착공·입주 단계로 추적하는 디지털 상황판과 3개 AI 에이전트"
-       }
-      ],
-      "domestic": true,
-      "variants": [
-       "Solar Pro 4"
-      ]
-     },
-     {
       "name": "Nemotron 3.5 Super VL",
       "n": 1,
       "cases": [
@@ -1518,12 +1560,26 @@
       "variants": [
        "Nemotron 3.5 Super VL"
       ]
+     },
+     {
+      "name": "Qwen",
+      "n": 1,
+      "cases": [
+       {
+        "id": "a62df7c94b28d078",
+        "title": "같은 질문, 다른 답 — 27개 언어모델이 한국의 역사·영토·문화 질문 50개에 어떻게 답하는지 3만여 건으로 잰 보고서"
+       }
+      ],
+      "domestic": false,
+      "variants": [
+       "Qwen3.8 27B"
+      ]
      }
     ]
    },
    {
     "dep": "해외 상용 API",
-    "n": 74,
+    "n": 75,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
@@ -2134,18 +2190,18 @@
    }
   ]
  },
- "domestic_model_rate": 0.066,
- "local_model_rate": 0.257,
- "model_known": 136,
- "license_tagged": 496,
- "license_stated_rate": 0.504,
+ "domestic_model_rate": 0.065,
+ "local_model_rate": 0.252,
+ "model_known": 139,
+ "license_tagged": 498,
+ "license_stated_rate": 0.506,
  "gitlab_cases": 322,
  "gitlab_mirror_pairs": 43,
  "gitlab_open_rate": 0.134,
- "mcp_cases": 101,
+ "mcp_cases": 102,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 617,
+  "미확인": 622,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -2153,7 +2209,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.801
+  "feedback": 0.803
  },
  "maintenance_distribution": {
   "활발": 284,
@@ -2254,7 +2310,7 @@
    ]
   },
   "github": {
-   "count": 198,
+   "count": 200,
    "starred": 185,
    "stars_sum": 873543,
    "maintenance": {
@@ -2348,7 +2404,7 @@
  },
  "license_distribution": {
   "명시 없음": 246,
-  "MIT": 163,
+  "MIT": 164,
   "Apache-2.0": 42,
   "Other": 22,
   "AGPL-3.0": 5,
@@ -2361,7 +2417,8 @@
   "CC0-1.0": 1,
   "Unlicense": 1,
   "CC-BY-NC-SA-4.0": 1,
-  "X11-DISTRIBUTE-MODIFICATIONS-VARIANT": 1
+  "X11-DISTRIBUTE-MODIFICATIONS-VARIANT": 1,
+  "CC-BY-4.0": 1
  },
  "license_matrix": {
   "명시 없음": {
@@ -2369,7 +2426,7 @@
    "gitlab": 179
   },
   "MIT": {
-   "github": 95,
+   "github": 96,
    "gitlab": 67
   },
   "Apache-2.0": {
@@ -2423,12 +2480,16 @@
   "X11-DISTRIBUTE-MODIFICATIONS-VARIANT": {
    "github": 0,
    "gitlab": 1
+  },
+  "CC-BY-4.0": {
+   "github": 1,
+   "gitlab": 0
   }
  },
  "license_by_source": {
   "github": {
-   "total": 184,
-   "stated": 135
+   "total": 186,
+   "stated": 137
   },
   "github-pages": {
    "total": 25,
@@ -2440,12 +2501,12 @@
   }
  },
  "mcp_stats": {
-  "total": 101,
+  "total": 102,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
-   "Server": 87,
+   "Server": 88,
    "Client/Host": 7,
    "Unknown/None": 6
   },
@@ -2453,7 +2514,7 @@
    "C0": 69,
    "C2": 10,
    "C3": 1,
-   "C1": 21
+   "C1": 22
   },
   "maintenance": {
    "정체": 25,

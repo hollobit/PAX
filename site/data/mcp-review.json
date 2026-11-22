@@ -1,9 +1,9 @@
 {
  "generated_at": "2026-11-22",
  "summary": {
-  "total": 101,
+  "total": 102,
   "counts": {
-   "주의": 81,
+   "주의": 82,
    "양호": 15,
    "부분 검증": 4,
    "미검증": 1
@@ -2736,6 +2736,40 @@
     "data_flow": {
      "verdict": "통과",
      "note": "실행 중 통신은 정보공개포털·지자체 go.kr 원천과 환경변수로 켜는 보조 서버(OCR 중계·KV 보관·서울 원문 중계)뿐이며 모두 README에 공개, 텔레메트리·LLM API 호출 없음. 공개 원격 서버를 쓰면 질의가 운영자 서버를 거침 (근거: official-fetch.js:5, source-archive.js:6, README:61-63·176-178)"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "316b53b8bc6c21fb",
+   "title": "공공데이터 전략 도우미 — 공공데이터포털 데이터 7만여 건을 실측해 하려는 일에 맞는 데이터와 잇는 키·코드를 답하는 AI 검색",
+   "stars": null,
+   "checked_at": "2026-11-22",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "data_flow": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
     }
    },
    "dynamic": null,

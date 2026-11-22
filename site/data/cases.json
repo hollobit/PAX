@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T21:31:21+09:00",
+ "updated_at": "2026-11-22T22:02:03+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -20640,6 +20640,131 @@
    "id": "44ba7455a7cf34f0",
    "mirror_url": "https://11st.solodev.co.kr/sites/16",
    "thumb_v": 1795351175
+  },
+  {
+   "case_class": "참고",
+   "title": "im-not-ai(Humanize KR) — AI가 쓴 한글에서 번역투·AI 관용구를 찾아 사실은 그대로 두고 문체만 고치는 윤문 스킬",
+   "link": "https://github.com/epoko77-ai/im-not-ai",
+   "popularity": 6712,
+   "source": "kakao",
+   "model_dependency": "모델 중립(BYO)",
+   "case_url": "https://imnotai.kr/",
+   "org_type": "민간(참고)",
+   "tags": [
+    "윤문",
+    "AI티제거",
+    "Claude스킬",
+    "한국어"
+   ],
+   "summary": "ChatGPT·Claude·Gemini가 쓴 한글 글에서 번역투, 기계적 병렬, 상투적 결론 표현, 피동태 남용 같은 AI 티를 10대 범주 85개 세부 패턴과 번역투 낱말 115개 기준으로 찾아, 사실·주장·수치는 바꾸지 않고 문체와 리듬만 고친다. Claude Code·Codex·Gemini·Copilot CLI에 설치해 쓰며, 보고서를 공문 말투로 다듬는 용도로 공직 커뮤니티에서 공유됐다.",
+   "collected_at": "2026-11-22",
+   "org": "개인 개발자(전 디지털플랫폼정부위원회 근무)",
+   "task_category": "문서·기안",
+   "runtime_env": "AI 도구 설정",
+   "date": "2026-04-24",
+   "id": "0d782070be25183f",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-11-22",
+   "thumb_v": 1795352602
+  },
+  {
+   "case_class": "참고",
+   "title": "글쓰기 비교 — 같은 원고와 지시로 9개 언어모델이 쓴 설명문 18편을 이름을 가리고 읽어 보는 비교 페이지",
+   "link": "https://writing-bench.vercel.app/",
+   "source": "kakao",
+   "model_dependency": "혼합",
+   "org_type": "민간(참고)",
+   "tags": [
+    "글쓰기",
+    "모델비교",
+    "벤치마크"
+   ],
+   "summary": "프롬프트 캐싱을 다룬 약 4만 4천 자 원고와 같은 지시문을 9개 모델에 주고 추론 강도 두 단계로 한 편씩 쓰게 한 결과 18편을 모델 이름을 가린 채 읽은 뒤 공개하도록 구성했다. 조건마다 표본이 한 편이라 실력 차이로 읽지 말라고 밝히며, 보고서 문체의 AI 티를 줄이려는 논의에서 모델 선택 참고 자료로 공유됐다.",
+   "collected_at": "2026-11-22",
+   "org": "개인 제작(미상)",
+   "task_category": "공통·범용",
+   "runtime_env": "브라우저만",
+   "date": "2026-11-16",
+   "id": "389dc91337134255",
+   "thumb_v": 1795352605
+  },
+  {
+   "case_class": "참고",
+   "title": "LLM Monitor — Amazon Bedrock 경유 언어모델을 주기적으로 호출해 응답 시간·처리 속도·토큰을 추적하는 상태 대시보드",
+   "link": "https://llm-monitor.whchoi.net/",
+   "source": "kakao",
+   "model_dependency": "해외 상용 API",
+   "org_type": "민간(참고)",
+   "tags": [
+    "모니터링",
+    "LLM",
+    "응답시간",
+    "Bedrock"
+   ],
+   "summary": "Amazon Bedrock과 AWS 경유 Anthropic 채널의 언어모델들을 주기적으로 호출해 첫 토큰 응답 시간, 전체 응답 시간, 초당 토큰 수, 입출력 토큰을 기록하고 비용 단가와 모델 목록을 함께 보여 준다. 서비스 장애나 지연을 판단할 때 참고하는 용도로 공유됐다.",
+   "collected_at": "2026-11-22",
+   "org": "개인 제작(미상)",
+   "task_category": "공통·범용",
+   "runtime_env": "브라우저만",
+   "date": "2026-10-24",
+   "id": "0abb12bfef010f42",
+   "thumb_v": 1795352609
+  },
+  {
+   "case_class": "참고",
+   "title": "같은 질문, 다른 답 — 27개 언어모델이 한국의 역사·영토·문화 질문 50개에 어떻게 답하는지 3만여 건으로 잰 보고서",
+   "link": "https://kloud80.github.io/korea-history-llm-eval/",
+   "source": "kakao",
+   "model_dependency": "혼합",
+   "case_url": "https://github.com/kloud80/korea-history-llm-eval",
+   "org_type": "민간(참고)",
+   "tags": [
+    "모델평가",
+    "역사",
+    "영토",
+    "데이터셋"
+   ],
+   "summary": "한국 정부 공식 입장과 학계 통설을 기준으로 영토·역사·문화 질문 50개를 12개 개발사 27개 모델에 한국어·영어(일부 중국어·일본어)로 10회씩 보내 답변 3만 3천여 건을 다섯 범주로 판정했다. 모델별 기준 일치율이 58.9%~81.1%로 갈렸고, 공공 업무에 쓸 모델을 고를 때 역사·영토 답변 편향을 따져 볼 근거로 공유됐다. 데이터는 CC BY 4.0이다.",
+   "collected_at": "2026-11-22",
+   "org": "개인 연구(소속 미상)",
+   "models_used": [
+    "Solar Pro 4",
+    "Claude",
+    "GPT",
+    "Qwen3.8 27B"
+   ],
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "date": "2026-11-05",
+   "id": "a62df7c94b28d078",
+   "license": "CC-BY-4.0",
+   "license_source": "github",
+   "license_checked": "2026-11-22",
+   "thumb_v": 1795352611
+  },
+  {
+   "case_class": "참고",
+   "title": "공공데이터 전략 도우미 — 공공데이터포털 데이터 7만여 건을 실측해 하려는 일에 맞는 데이터와 잇는 키·코드를 답하는 AI 검색",
+   "link": "https://labs.ai.bigvalue.co.kr/",
+   "source": "kakao",
+   "model_dependency": "미상",
+   "org_type": "민간(참고)",
+   "tags": [
+    "공공데이터",
+    "데이터검색",
+    "MCP",
+    "데이터조인"
+   ],
+   "summary": "공공데이터포털과 연계 사이트의 데이터 74,609건을 실제 호출해 필드 99만여 개와 데이터 간 연결 2만 9천여 개를 정리한 뒤, 하려는 일을 말하면 어떤 데이터를 왜 고르고 어떤 키로 이을지와 실행 코드까지 답한다. Claude·ChatGPT에는 MCP로 연결할 수 있다.",
+   "collected_at": "2026-11-22",
+   "org": "빅밸류(BigValue)",
+   "network_req": "인터넷 필수",
+   "task_category": "데이터·통계",
+   "runtime_env": "브라우저만",
+   "date": "2026-11-03",
+   "id": "316b53b8bc6c21fb",
+   "thumb_v": 1795352614
   }
  ]
 }
