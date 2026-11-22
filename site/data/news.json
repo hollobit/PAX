@@ -1,7 +1,969 @@
 {
- "updated_at": "2026-11-13T22:36:54Z",
- "count": 1492,
+ "updated_at": "2026-11-22T12:38:20Z",
+ "count": 1574,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261121121023",
+   "title": "화웨이, 싱가포르 핀테크 페스티벌 2026에서 금융 AI 확장 역량 공개",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-11-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-22",
+   "last_shared": "2026-11-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/MYH20261121010000038",
+   "title": "'53개 손가락' 연주는…로봇 151대가 \"뱅뱅뱅\"",
+   "outlet": "연합뉴스",
+   "published": "2026-11-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-22",
+   "last_shared": "2026-11-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.theleader.co.kr/news/articleView.html?idxno=11961",
+   "title": "영광군, AI 활용 농특산물 가공제품 성과공유회 개최",
+   "outlet": "더리더스",
+   "published": "2026-11-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-22",
+   "last_shared": "2026-11-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=717223",
+   "title": "커서, 중국 AI 모델 사용 중단 검토...”지정학적 위험\"",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-11-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-22",
+   "last_shared": "2026-11-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42823",
+   "title": "정부, AI 데이터센터 전력 규제 완화…비수도권 50MW 이하 영향평가 면제",
+   "outlet": "인공지능신문",
+   "published": "2026-11-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-22",
+   "last_shared": "2026-11-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217648",
+   "title": "구글, 제미나이 앱에 GIF 생성 기능 출시…오픈AI 이어 도입",
+   "outlet": "AI타임스",
+   "published": "2026-11-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-22",
+   "last_shared": "2026-11-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217634",
+   "title": "미 상무부, 중국군 연계 기업에 AI 칩 수출 허가...하원 자료 공개로 파장",
+   "outlet": "AI타임스",
+   "published": "2026-11-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-22",
+   "last_shared": "2026-11-22",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://zdnet.co.kr/view?no=20261120132358",
+   "title": "이재명 \"韓 전자정부 1위론 부족…국민 체감 ‘AI 민주정부’ 구축”",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-11-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-21",
+   "last_shared": "2026-11-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.tokenpost.kr/news/breaking/441469",
+   "title": "크루, 클로드 코드·코덱스용 ‘크루 스킬’ 출시",
+   "outlet": "토큰포스트",
+   "published": "2026-11-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-21",
+   "last_shared": "2026-11-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.thelec.kr/news/articleView.html?idxno=65702",
+   "title": "앤트로픽,  거래 첫날 장중 시총 2조달러 돌파",
+   "outlet": "디일렉(THE ELEC)",
+   "published": "2026-11-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-21",
+   "last_shared": "2026-11-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.techm.kr/news/articleView.html?idxno=157661",
+   "title": "유락, 오만서 AI 포렌식 설루션 공개...중동 시장 공략 확대",
+   "outlet": "테크M",
+   "published": "2026-11-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-21",
+   "last_shared": "2026-11-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.siminilbo.co.kr/news/newsview.php?ncode=1160286559494207",
+   "title": "광진구, ‘광진 인공지능(AI) 창업기업 투자·협력의 장’ 설명회 개최",
+   "outlet": "siminilbo.co.kr",
+   "published": "2026-11-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-21",
+   "last_shared": "2026-11-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math",
+   "title": "Anthropic mathematician proves Riemann hypothesis, most famous problem in all of math",
+   "outlet": "Scientific American",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-21",
+   "last_shared": "2026-11-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202611201001006343",
+   "title": "내년부터 민간앱으로 지방세 환급 신청…행안부, 세정 혁신 논의",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-11-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-21",
+   "last_shared": "2026-11-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217611",
+   "title": "엔비디아, dLLM 개발사 인셉션 6700억 이상에 인수 협상",
+   "outlet": "AI타임스",
+   "published": "2026-11-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-21",
+   "last_shared": "2026-11-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/001/0016455466?sid=104",
+   "title": "\"AI 클로드, 수학 최대 난제 리만가설 증명\" 주장 나와",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-21",
+   "last_shared": "2026-11-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2",
+   "title": "Safely scaling multi-agent teams with Claude Fable 5.2 /",
+   "outlet": "claude.dev Blog",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-21",
+   "last_shared": "2026-11-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://brunch.co.kr/@jihun7150/15",
+   "title": "AI 에이전트와 블록체인의 UX의 역설",
+   "outlet": "브런치",
+   "published": "2026-11-21",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-21",
+   "last_shared": "2026-11-21",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.ejanews.co.kr/news/articleView.html?idxno=336609",
+   "title": "[전문가 기고]병원의 얼굴, 콜센터에서 시작되는 환자 중심 의료서비스",
+   "outlet": "중앙뉴스",
+   "published": "2026-11-19",
+   "kind": "기사",
+   "shares": 3,
+   "first_shared": "2026-11-20",
+   "last_shared": "2026-11-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://zdnet.co.kr/view?no=20261120003022",
+   "title": "앤트로픽, 프론티어 AI 개발사 첫 나스닥 입성…\"안전 최우선\"",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-11-20",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-20",
+   "last_shared": "2026-11-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://zdnet.co.kr/view?no=20261119221024",
+   "title": "FP 마켓츠, 앤트로픽 주식 CFD 상품 추가",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-11-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-20",
+   "last_shared": "2026-11-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261119048500062",
+   "title": "원주시, 공무원 AI 아이디어 5건 선정…행정현장 적용",
+   "outlet": "연합뉴스",
+   "published": "2026-11-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-20",
+   "last_shared": "2026-11-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.thelec.kr/news/articleView.html?idxno=65647",
+   "title": "앤트로픽, 공모가 83달러 확정…일반 공모 조달만 108조원",
+   "outlet": "디일렉(THE ELEC)",
+   "published": "2026-11-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-20",
+   "last_shared": "2026-11-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=94798",
+   "title": "전남광주 서구, 직원 주도 AI 혁신…행정서비스 15종 개발",
+   "outlet": "더페어",
+   "published": "2026-11-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-20",
+   "last_shared": "2026-11-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mpm.go.kr/mpm/comm/newsPress/newsPressRelease?boardId=bbs_0000000000000029&mode=view&cntId=4364&category=&pageIdx=",
+   "title": "< 언론 < 새소식< 인사혁신처",
+   "outlet": "mpm.go.kr",
+   "published": "",
+   "kind": "보도자료",
+   "shares": 1,
+   "first_shared": "2026-11-20",
+   "last_shared": "2026-11-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42801",
+   "title": "씽크포비엘, “AI 무기 성능보다 전장 환경 반영한 신뢰성 검증이 중요”",
+   "outlet": "인공지능신문",
+   "published": "2026-11-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-20",
+   "last_shared": "2026-11-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217565",
+   "title": "앤트로픽, 클로드 코드에 '코드 모드' 추가...여러 도구 호출 한 번에 처리",
+   "outlet": "AI타임스",
+   "published": "2026-11-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-20",
+   "last_shared": "2026-11-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://dealsite.co.kr/articles/173149",
+   "title": "더존비즈온, 공공기관 대상 'Private AI' 전략 공개",
+   "outlet": "딜사이트",
+   "published": "2026-11-19",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-20",
+   "last_shared": "2026-11-20",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.topcelev.co.kr/news/articleView.html?idxno=4178",
+   "title": "현대백화점 더현대 하이, 챗GPT 쇼핑 서비스 출시…추석 AI 유입 4배 증가",
+   "outlet": "톱셀럽뉴스",
+   "published": "2026-11-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-17",
+   "last_shared": "2026-11-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newstap.co.kr/news/articleView.html?idxno=337737",
+   "title": "구글, ‘제미나이 4 하이드로젠’ 전격 공개…속도 2.5배 향상에 AI 에이전트까지 강화",
+   "outlet": "뉴스탭",
+   "published": "2026-11-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-17",
+   "last_shared": "2026-11-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mt.co.kr/economy/2026/11/16/2026111615515370327",
+   "title": "안경 벗기고 전파 탐지까지…'AI 커닝'에 공공기관 채용 비상",
+   "outlet": "머니투데이",
+   "published": "2026-11-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-17",
+   "last_shared": "2026-11-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4091051",
+   "title": "정부, 수능장 공공 와이파이 차단 검토…AI 부정행위 막는다",
+   "outlet": "경북일보",
+   "published": "2026-11-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-17",
+   "last_shared": "2026-11-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.khan.co.kr/article/202611161800011",
+   "title": "거래소 공채시험서도 ‘AI 안경’ 적발됐다…5년간 응시 제한",
+   "outlet": "경향신문",
+   "published": "2026-11-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-17",
+   "last_shared": "2026-11-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=715879",
+   "title": "미국·한국 등 10개국, AI 공급망 보호 '샌프란시스코 선언' 서명",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-11-17",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-17",
+   "last_shared": "2026-11-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42744",
+   "title": "애플, 최대 20만 명 대상 건강 AI 연구 착수…아이폰 건강 데이터와 의료 AI 결합",
+   "outlet": "인공지능신문",
+   "published": "2026-11-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-17",
+   "last_shared": "2026-11-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217458",
+   "title": "\"챗GPT에 SNS 데이터 연동\"...뉴엔AI, 소셜 분석 MCP 출시",
+   "outlet": "AI타임스",
+   "published": "2026-11-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-17",
+   "last_shared": "2026-11-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217457",
+   "title": "노타, 두베에 금융권 특화 AI 코딩 에이전트 기술 제공",
+   "outlet": "AI타임스",
+   "published": "2026-11-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-17",
+   "last_shared": "2026-11-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://economist.co.kr/article/view/ecn202611130040",
+   "title": "비큐AI, 공공솔루션마켓서 &lsquo;AISURFER Brief&rsquo; 소개&hellip;공공기관 홍보 업무 자동화 지원",
+   "outlet": "이코노미스트",
+   "published": "2026-11-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-17",
+   "last_shared": "2026-11-17",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://mnw.yna.co.kr/cid/AKR20261018027100002",
+   "title": "339조 굴리는 국부펀드, 사내AI 핵심은 중국산…\"보안의식 허술\"",
+   "outlet": "연합뉴스",
+   "published": "2026-10-19",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-10-19",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261115042400001",
+   "title": "국회 교육위, 수능 사흘 앞 'AI안경 부정행위 대책' 현안보고",
+   "outlet": "연합뉴스",
+   "published": "2026-11-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4090848",
+   "title": "국가 연구망 KOREN 31년…NIA, AI 네트워크 협력·인재 육성 모색",
+   "outlet": "경북일보",
+   "published": "2026-11-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.joongang.co.kr/article/25478989",
+   "title": "정부, 수능 스마트기기 반납·공공 와이파이 차단 추진",
+   "outlet": "중앙일보",
+   "published": "2026-11-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.ddaily.co.kr/m/page/view/2026111419304217443",
+   "title": "과기부, MS 장애 비상대응 가동&hellip;AI수석 &ldquo;디지털 영역 안전지킴 만전&rdquo;",
+   "outlet": "디지털데일리",
+   "published": "2026-11-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.clien.net/service/board/use/19133515",
+   "title": "[pharm.hub] 아직 꺼지지 않은 많은 얘기들... 알약 계수기..",
+   "outlet": "클리앙",
+   "published": "2026-01-28",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.boannews.com/news/articleView.html?idxno=147304",
+   "title": "행안부 이메일 시스템 SSO 털렸다... 300개 계정 비정상 접근",
+   "outlet": "보안뉴스",
+   "published": "2026-11-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42737",
+   "title": "아마존, AI가 집 안을 날고 사업장을 순찰하는 자율 보안로봇 공개…고정형 CCTV 넘어 이동형 보안 시대 연다",
+   "outlet": "인공지능신문",
+   "published": "2026-11-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42733",
+   "title": "최태원 SK 회장, “AI 반도체 넘어 서비스·토큰 이코노미까지”…‘AI 플라이휠’ 성장 전략 제시",
+   "outlet": "인공지능신문",
+   "published": "2026-11-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217408",
+   "title": "LGU+, 내년 B2B 토큰 사업 진출…\"업무당 AI 총비용 낮춘다\"",
+   "outlet": "AI타임스",
+   "published": "2026-11-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://v.daum.net/v/20261116100639860",
+   "title": "최교진 교육장관 “시험장용 전파탐지기, 내년 수능 때 도입 검토”",
+   "outlet": "Daum | 한겨레",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://tnnews.co.kr/archives/299435",
+   "title": "현대백화점그룹 AI 쇼핑 확대, 챗GPT에 더현대 하이 연동·100% AI 방송 도입",
+   "outlet": "테넌트뉴스",
+   "published": "2026-11-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/mnews/article/421/0009292172",
+   "title": "회계사 시험엔 AI가 왜 안 통했나…\"시험 16시간, 서술형 위주\"",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/081/0003699923?type=breakingnews&cds=news_edit",
+   "title": "교육부, 수능 시험장 전파 차단 검토 철회 “법적·기술적 한계”",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/052/0002433428?type=breakingnews&cds=news_edit",
+   "title": "[속보] 행정기관 업무용 이메일 해킹...300여 개 계정 피해",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/008/0005441610",
+   "title": "\"수능 연기 없다\" 못 박은 교육부...검사장비 도입도 '불가능'",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/005/0001884884?sid=102",
+   "title": "‘AI 비서’가 민원 전화까지?…공무원들 “답해야 하나”",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.ohmynews.com/NWS_Web/Mobile/at_pg.aspx?CNTN_CD=A0003285469",
+   "title": "\"통신 차단 추진\" 발언 잠시 뒤 \"불가능\"... 좌충우돌 교육부",
+   "outlet": "오마이뉴스",
+   "published": "2026-11-16",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.blog.naver.com/dayoung_1001/224057959482",
+   "title": "노래 나오는 캔디 CU 편의점 신상 사탕 가격 및 내돈내산 솔직후기",
+   "outlet": "네이버 블로그 | ෆevery dayෆ",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://api.supercapsule.me/p/9710d3f8-fa67-4a1c-b5ab-41beb7ed7536",
+   "title": "Qwen4-Max 출시: MoE 구조, 토큰 효율과 Work360 벤치마크 결과",
+   "outlet": "Supercapsule",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/MYH20261114009500038",
+   "title": "[지구촌톡톡] '남극 마라톤' 도전한 로봇…360m 굴뚝서 발사",
+   "outlet": "연합뉴스",
+   "published": "2026-11-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-15",
+   "last_shared": "2026-11-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/MYH20261114004600038",
+   "title": "범죄 도구 악용되는 생성형 AI…막을 방법은 아직",
+   "outlet": "연합뉴스",
+   "published": "2026-11-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-15",
+   "last_shared": "2026-11-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261114033800017?section=society%2Faccident",
+   "title": "\"한국 IP 대역 유망\"…북한 라자루스, 국내 서버 30곳 노렸다",
+   "outlet": "연합뉴스",
+   "published": "2026-11-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-15",
+   "last_shared": "2026-11-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.wikitree.co.kr/articles/1174521",
+   "title": "공무원연금공단, ‘AI 활용 업무혁신 우수사례’ 경진대회 성료",
+   "outlet": "위키트리",
+   "published": "2026-11-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-15",
+   "last_shared": "2026-11-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.nocutnews.co.kr/news/6606897",
+   "title": "외부 용역 없이 AI 시스템 개발…경기도 행정혁신 실험",
+   "outlet": "노컷뉴스",
+   "published": "2026-11-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-15",
+   "last_shared": "2026-11-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newstap.co.kr/news/articleView.html?idxno=337796",
+   "title": "ST, STM32용 AI 개발 환경 전면 개편…모델 탐색부터 성능 검증까지 통합",
+   "outlet": "뉴스탭",
+   "published": "2026-11-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-15",
+   "last_shared": "2026-11-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mt.co.kr/tech/2026/11/13/2026111317361648526",
+   "title": "국회 과방위, 내년도 과기부 예산안 의결…R&D·AI 등 1.3조 증액",
+   "outlet": "머니투데이",
+   "published": "2026-11-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-15",
+   "last_shared": "2026-11-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=715495",
+   "title": "오픈AI, 보안 서비스 2종 공개...취약점 찾고 패치까지 자동화",
+   "outlet": "디지털투데이 (DigitalToday)",
+   "published": "2026-11-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-15",
+   "last_shared": "2026-11-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.boannews.com/news/articleView.html?idxno=147198",
+   "title": "알리바바 클라우드에 띄운 AI 해킹 도구... ‘안티폭스’로 AWS 운영 비밀 정보 빼냈다",
+   "outlet": "보안뉴스",
+   "published": "2026-11-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-15",
+   "last_shared": "2026-11-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217400",
+   "title": "오픈AI, AI 에이전트가 대신 결제하는 '챗GPT 월렛' 출시",
+   "outlet": "AI타임스",
+   "published": "2026-11-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-15",
+   "last_shared": "2026-11-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://v.daum.net/v/20261115144908239",
+   "title": "청와대, \"세무사 시험 AI 부정행위 매우 엄중히 봐… 오늘 대책 회의\"",
+   "outlet": "Daum | 미디어오늘",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-15",
+   "last_shared": "2026-11-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/015/0005353894",
+   "title": "세무사 수석 충격 자백…\"초소형 카메라로 찍어 AI로 전송\"",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-15",
+   "last_shared": "2026-11-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://mobile.newsis.com/view_amp.html?ar_id=NISX20261115_0003868392",
+   "title": "세무사 수석 합격자, 부정행위 인정·자수…\"AI 이용\"",
+   "outlet": "뉴시스",
+   "published": "2026-11-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-15",
+   "last_shared": "2026-11-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-15-px-통신기록-전수조사-청원과-영장주의",
+   "title": "[공공AX 네트워크] 통신기록 전수조사 청원과 영장주의 공방",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-15",
+   "last_shared": "2026-11-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-15-cross-세무사-시험-ai-부정-자수-세-방-반응",
+   "title": "[3개 방 공통] 세무사 시험 AI 부정행위 자수 뒤 세 방의 반응",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-15",
+   "last_shared": "2026-11-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.edaily.co.kr/News/Read?newsId=03998326645645064&mediaCodeNo=257",
+   "title": "민원서 2장이 20장으로…英 공공기관 덮친 'AI 민원 폭탄'",
+   "outlet": "이데일리",
+   "published": "2026-11-12",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.itdaily.kr/news/articleView.html?idxno=242915",
    "title": "인텔코리아, 메사쿠어컴퍼니-NH농협은행과 AI 비대면 인증 사례 ‘공개’",
@@ -29,10 +991,10 @@
    ]
   },
   {
-   "url": "https://www.edaily.co.kr/News/Read?newsId=03998326645645064",
-   "title": "민원서 2장이 20장으로…英 공공기관 덮친 'AI 민원 폭탄'",
-   "outlet": "이데일리",
-   "published": "2026-11-12",
+   "url": "https://www.donga.com/news/It/article/all/20260316/133539575/1",
+   "title": "“내 뇌에 AI를 심는다”…인간-AI ‘링크’ 시대 열리나",
+   "outlet": "동아일보",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-14",
@@ -94,10 +1056,75 @@
    ]
   },
   {
+   "url": "https://share.google/YehapEwErXEkRvfsi",
+   "title": "32만 지방공무원 쓰는 ‘새올’ 등 전면 개편…2857억 투입",
+   "outlet": "시정일보",
+   "published": "2026-11-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://news.tf.co.kr/read/releasecopy/2388685.htm",
    "title": "세종시교육청, AI시대 미래 인재상 찾는다… AI교육 정책 포럼 개최 - 보도자료 | 기사",
    "outlet": "더팩트",
    "published": "2026-11-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://claude.dev/blog/which-claude-model-should-you-build-with",
+   "title": "Which Claude model should you build with? Fable, Opus, Sonnet, or Haiku /",
+   "outlet": "claude.dev Blog",
+   "published": "2026-11-09",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-14-px-보안성-검토-면죄부-현장-논쟁",
+   "title": "[공공AX 네트워크] 보안성 검토는 최소한의 면죄부라는 한 참가자의 말",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-14-px-ai안경-시험-부정-우려와-공정성-논쟁",
+   "title": "[공공AX 네트워크] AI 안경 부정 우려가 시험 공정성 논쟁으로",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-14",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://akwiki.agentofu.com/article/2026-11-14-cross-클로드-접속-오류-두-방-반응",
+   "title": "[에이전트코리아·공공AX 네트워크] 같은 저녁 클로드 접속 오류를 마주한 두 방",
+   "outlet": "akwiki.agentofu.com",
+   "published": "2026-11-14",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-14",
@@ -2278,6 +3305,19 @@
    ]
   },
   {
+   "url": "https://www.bloomberg.com/graphics/2026-us-election-results?leadSource=uverify+wall",
+   "title": "Live Results and Map: 2026 US Midterm Elections | Key Races to Watch",
+   "outlet": "Bloomberg.com",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-04",
+   "last_shared": "2026-11-04",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.beyondpost.co.kr/view.php?ud=2026062619163591874c878f8fa1_30",
    "title": "정명근 화성시장, 행안부 AI해커톤 전국 4위 쾌거…'대한민국 1등 AI도시'로 부상",
    "outlet": "비욘드포스트",
@@ -2517,6 +3557,19 @@
    "outlet": "네이버 뉴스",
    "published": "",
    "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-11-03",
+   "last_shared": "2026-11-03",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://aisub.ggc.go.kr/transcribe/seoul/live?channel=smc-haengja",
+   "title": "AI 실시간 자막 서비스",
+   "outlet": "aisub.ggc.go.kr",
+   "published": "",
+   "kind": "공고·안내",
    "shares": 2,
    "first_shared": "2026-11-03",
    "last_shared": "2026-11-03",
@@ -4657,6 +5710,19 @@
    ]
   },
   {
+   "url": "https://maily.so/gongnyangai/posts/l1zq1pmer5x",
+   "title": "AX 현장에서 지금 붙잡고 있는 질문들",
+   "outlet": "공냥이 뉴스레터",
+   "published": "2026-10-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-10-24",
+   "last_shared": "2026-10-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://factory.roboco.io/",
    "title": "The Software Factory",
    "outlet": "factory.roboco.io",
@@ -5779,19 +6845,6 @@
    "title": "경북도, AI 직인관리시스템 개발…7000만원 절감",
    "outlet": "n.news.naver.com",
    "published": "",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-10-19",
-   "last_shared": "2026-10-19",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://mnw.yna.co.kr/cid/AKR20261018027100002",
-   "title": "339조 굴리는 국부펀드, 사내AI 핵심은 중국산…\"보안의식 허술\"",
-   "outlet": "연합뉴스",
-   "published": "2026-10-19",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-10-19",
@@ -17726,6 +18779,19 @@
    "title": "오픈AI, 맥용 챗GPT '컴퓨터 히스토리' 출시...앱·웹 활동 기억한다",
    "outlet": "AI타임스",
    "published": "2026-08-15",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-08-16",
+   "last_shared": "2026-08-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://ai.google.dev/gemma/docs/core?hl=ko",
+   "title": "Gemma 4 model overview",
+   "outlet": "Gemma Docs",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-08-16",

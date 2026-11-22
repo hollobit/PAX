@@ -1,5 +1,5 @@
 {
- "total": 261,
+ "total": 262,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -766,6 +766,8 @@
    "category": "민간·커뮤니티",
    "category_basis": "affiliation",
    "cases": [
+    "f8ddabc49d7320d0",
+    "51b26ea409d04d2c",
     "d1edbb124878c572",
     "48a2fe695d62b13f",
     "4ce9fa1c75ec36b5",
@@ -773,7 +775,7 @@
     "f5f24469d5ca281f"
    ],
    "stats": {
-    "case_count": 5,
+    "case_count": 7,
     "top_ax": 2,
     "stars": 0
    }
@@ -1016,14 +1018,15 @@
     }
    ],
    "affiliation": null,
-   "category": "공직(소속 미상)",
+   "category": "기초지자체",
    "category_basis": "cases",
    "cases": [
+    "e5c35aebede5b1b4",
     "2241166da237fc71"
    ],
    "stats": {
-    "case_count": 1,
-    "top_ax": 1,
+    "case_count": 2,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -1041,11 +1044,10 @@
    "category": "공직(소속 미상)",
    "category_basis": "cases",
    "cases": [
-    "ae55a8cbe3ba525d",
     "ccee126dc9e23cf6"
    ],
    "stats": {
-    "case_count": 2,
+    "case_count": 1,
     "top_ax": 1,
     "stars": 0
    }
@@ -1346,6 +1348,28 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "gitlab:geowonkx",
+   "name": "geowonkx",
+   "accounts": [
+    {
+     "platform": "gitlab",
+     "id": "geowonkx",
+     "url": "https://gitlab.aigov.go.kr/geowonkx"
+    }
+   ],
+   "affiliation": null,
+   "category": "공공기관",
+   "category_basis": "cases",
+   "cases": [
+    "4aa809b2807b6117"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },
@@ -3766,6 +3790,8 @@
    "category": "기초지자체",
    "category_basis": "affiliation",
    "cases": [
+    "b6abab16527182b7",
+    "d11bc330a0c230d2",
     "cbb14690306beed9",
     "dcd1547e5f7b4c96",
     "ada7cb6b9fabac8f",
@@ -3786,7 +3812,7 @@
     "d40cc4a9cf6e29b6"
    ],
    "stats": {
-    "case_count": 18,
+    "case_count": 20,
     "top_ax": 3,
     "stars": 6800
    },
@@ -6470,10 +6496,11 @@
    "category": "공직(소속 미상)",
    "category_basis": "cases",
    "cases": [
+    "ae55a8cbe3ba525d",
     "d0ab0506a35ee03a"
    ],
    "stats": {
-    "case_count": 1,
+    "case_count": 2,
     "top_ax": 1,
     "stars": 0
    }
@@ -7887,6 +7914,66 @@
    "title": "코레일 영수증 정리 — 여러 장의 기차표 영수증 PDF를 올리면 환불된 표를 빼고 날짜·시간순으로 묶어 주는 정산 도구",
    "org": "공직 현장(개인 개발)",
    "url": "https://korail.parklab.work/"
+  },
+  {
+   "id": "0276d0b677fdcd44",
+   "title": "11ST(우리 모두 11번째 수상자) — 공공 실무자가 만든 도구를 등록하고 추천·질문을 주고받는 전시 게시판",
+   "org": "공직 커뮤니티",
+   "url": "https://11st.solodev.co.kr/"
+  },
+  {
+   "id": "4dcc5badbe6b702b",
+   "title": "초등학교 과학실 업무 프로그램 — 실험 준비 현황·일정 달력·태블릿 서명 실습일지·안전점검 서류를 한곳에 모은 도구",
+   "org": "초등학교 과학실 현장(개인 개발)",
+   "url": null
+  },
+  {
+   "id": "dfa5885b8d62ba5e",
+   "title": "E-수첩 — 공무원 업무 자료를 태블릿에서 열람·공유하는 기관용 전자수첩",
+   "org": "경기도",
+   "url": "https://enote.solodev.co.kr/"
+  },
+  {
+   "id": "c05a4d4021071174",
+   "title": "SEA:GNAL — 해양 기상특보 실시간 알림과 AI 해상 기상 요약, 해양법령 챗봇을 묶은 해양 기상 앱",
+   "org": "해양경찰청",
+   "url": "https://seagnal-server.fly.dev/"
+  },
+  {
+   "id": "7a7be8056a74e19f",
+   "title": "온나라 기안(메모보고) 도우미 — 온나라 웹기안기에 붙여 쓰는 Edge 확장 기안 보조 도구",
+   "org": "경기도",
+   "url": "https://microsoftedge.microsoft.com/addons/detail/dkikbdcbohaphgdhjcgfgajahiibjhlb"
+  },
+  {
+   "id": "e9eb0b205bad8a8d",
+   "title": "규정 제개정 에이전트 — 법령 변경에 맞춰 기관 규정 개정안·신구대비표·제출 문서를 만드는 에이전트",
+   "org": "경기신용보증재단",
+   "url": "https://11st.solodev.co.kr/sites/6"
+  },
+  {
+   "id": "613cec9c37fce726",
+   "title": "규정 새로:고침(RuleF5) — 법령 비교·조문 정정·신구대비표·개정문까지 공공기관 규정 제·개정을 묶은 AI 에이전트",
+   "org": "창업진흥원",
+   "url": "https://rulef5.k-union.kr/"
+  },
+  {
+   "id": "b8db2a4d184bdfac",
+   "title": "두유노하우 — 전임자 자료와 녹음으로 출처가 달린 인수인계서 초안을 만드는 브라우저 도구",
+   "org": "제주특별자치도개발공사",
+   "url": "https://doyouknowhow.netlify.app/"
+  },
+  {
+   "id": "78b3ebe5da279fd3",
+   "title": "사고 당시 기상상황 조회 — 산재 조사용으로 과거 특정 장소·날짜의 관측값과 특보 이력을 찾는 도구",
+   "org": "근로복지공단",
+   "url": "https://weather-accident-app.netlify.app/"
+  },
+  {
+   "id": "44ba7455a7cf34f0",
+   "title": "AI 기반 직업교육 통합관리체계 — 과정 관리·선발 면접·예산·수료생 관리를 한 시스템에서 처리",
+   "org": "경기도일자리재단",
+   "url": "https://gjf-edu.pages.dev/"
   }
  ]
 }

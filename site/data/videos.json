@@ -1,7 +1,85 @@
 {
- "updated_at": "2026-11-12T14:34:58Z",
- "count": 152,
+ "updated_at": "2026-11-22T12:36:54Z",
+ "count": 158,
  "videos": [
+  {
+   "id": "ZKKP6jbdNbg",
+   "title": "AI뉴스 - AI 부정행위 못 잡는다, 전문직 종말, Fable 5.2, MS365, GPT-6.2 Astra, 젠슨 황 사임, Gemini 4 Carbon & Hydrogen 등",
+   "channel": "조코딩 JoCoding",
+   "url": "https://www.youtube.com/watch?v=ZKKP6jbdNbg",
+   "thumb": "https://i.ytimg.com/vi/ZKKP6jbdNbg/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "JhPimHFHX9E",
+   "title": "AI 앱 연결해 5초면 '뚝딱'..'학생 세트' 뭐길래 / SBS 8뉴스",
+   "channel": "SBS 뉴스",
+   "url": "https://www.youtube.com/watch?v=JhPimHFHX9E",
+   "thumb": "https://i.ytimg.com/vi/JhPimHFHX9E/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-16",
+   "last_shared": "2026-11-16",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "G8c48YnCpro",
+   "title": "세무사시험 수석 논란 당사자, AI 부정행위 자수했습니다.",
+   "channel": "이돈호 변호사",
+   "url": "https://www.youtube.com/watch?v=G8c48YnCpro",
+   "thumb": "https://i.ytimg.com/vi/G8c48YnCpro/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-15",
+   "last_shared": "2026-11-15",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "v44Q4jbA-oI",
+   "title": "'LEET' 사상 첫 만점자, AI 안경 의혹 적극 대응…\"19일 수능 생중계로 푼다\"｜지금 이 뉴스",
+   "channel": "JTBC News",
+   "url": "https://www.youtube.com/watch?v=v44Q4jbA-oI",
+   "thumb": "https://i.ytimg.com/vi/v44Q4jbA-oI/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "qXl7EeUa1T4",
+   "title": "직장인들이 싫어할 소식 #shorts / YTN",
+   "channel": "YTN",
+   "url": "https://www.youtube.com/watch?v=qXl7EeUa1T4",
+   "thumb": "https://i.ytimg.com/vi/qXl7EeUa1T4/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "VNPfPrqMWpM",
+   "title": "무료로 초보자도 3DGS 활용하는 법 | 영상 하나로 서울 골목을 3D 공간으로, 가우시안 스플래팅 따라하기",
+   "channel": "Alex AI",
+   "url": "https://www.youtube.com/watch?v=VNPfPrqMWpM",
+   "thumb": "https://i.ytimg.com/vi/VNPfPrqMWpM/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-14",
+   "last_shared": "2026-11-14",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "Sh7yIzVGCUM",
    "title": "클로드 페이블 5.2로 집 한 채 설계했더니 | 법규 확인·3D 모델·도면 19장 (프리캐드FreeCAD)",

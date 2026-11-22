@@ -173,6 +173,8 @@ PYTHONPATH=scripts python3 -m pax.run post-collect   # 순서만 보려면 --dry
   `.claude/skills/pax-register/SKILL.md` §1 절차대로 README 실체 확인 →
   분류 → incoming·merge → 평가 항목 → 썸네일 → changelog까지 같은 회차에 수행하고, 등재 내역을 log에 남긴다.
   포함 기준(§4)에 미달하는 저장소(실체 없는 테스트·포크 등)만 제외 사유와 함께 log에 기록한다.
+  API가 JSON 대신 HTML(공공 GitLab 점검 안내)을 돌려주면 점검 기간이다(2026-11-12 시작, 재개 미정) — 조사를 건너뛰고
+  log에 "깃랩 점검 중"만 적는다. 이때 헬스 점검의 깃랩 링크는 점검 페이지가 200이라 link_ok가 참으로 남고, 스타·유지보수는 이전 값이 유지된다.
 
 ## 6. 커밋·푸시
 ```bash

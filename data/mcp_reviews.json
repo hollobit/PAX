@@ -3481,6 +3481,41 @@
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
    }
+  },
+  {
+   "case_id": "e5c35aebede5b1b4",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 31건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "통과",
+     "note": "알려진 High 이상 CVE 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "주의",
+     "note": "셸은 인자 배열 호출만, URL은 go.kr·gov.kr HTTPS와 사설 IP 차단, SQL은 바인딩으로 검증이 엄격하나 공공문서 발췌문을 정제 없이 응답에 넣어 프롬프트 인젝션 표면이 남음 (근거: official-fetch.js:5-16, budget-sqlite.js:22-29, mcp.js:19)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "실행 중 통신은 정보공개포털·지자체 go.kr 원천과 환경변수로 켜는 보조 서버(OCR 중계·KV 보관·서울 원문 중계)뿐이며 모두 README에 공개, 텔레메트리·LLM API 호출 없음. 공개 원격 서버를 쓰면 질의가 운영자 서버를 거침 (근거: official-fetch.js:5, source-archive.js:6, README:61-63·176-178)"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-11-22",
+   "tools": {
+    "npm": "11.20.0",
+    "pip_audit": "2.9.0"
+   }
   }
  ]
 }
