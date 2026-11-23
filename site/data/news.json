@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-11-22T22:43:19Z",
- "count": 1583,
+ "updated_at": "2026-11-23T06:34:06Z",
+ "count": 1584,
  "articles": [
+  {
+   "url": "https://roboco.io/KSAT-AI-Benchmark/research/metacognitive-abstention.html",
+   "title": "고난도 다학제 시험에서 LLM은 \"자신이 모르는 것\"을 아는가?",
+   "outlet": "roboco.io",
+   "published": "2026-11-22",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-11-23",
+   "last_shared": "2026-11-23",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.yna.co.kr/view/AKR20261122015100053",
    "title": "경북도, 2차 공공기관 이전 앞두고 유치 총력전",

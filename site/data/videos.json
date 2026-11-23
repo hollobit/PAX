@@ -1,7 +1,33 @@
 {
- "updated_at": "2026-11-22T12:36:54Z",
- "count": 158,
+ "updated_at": "2026-11-23T06:34:04Z",
+ "count": 160,
  "videos": [
+  {
+   "id": "8hODdpGkepE",
+   "title": "Syntitan 화면 투어 | 우리 데이터를 AI 업무에 맞게 준비하고 확인하기 (한국어)",
+   "channel": "CUBIG Corp",
+   "url": "https://www.youtube.com/watch?v=8hODdpGkepE",
+   "thumb": "https://i.ytimg.com/vi/8hODdpGkepE/mqdefault.jpg",
+   "shares": 2,
+   "first_shared": "2026-11-23",
+   "last_shared": "2026-11-23",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "8QRpY8Kdsj4",
+   "title": "[속보]AI발 주가 폭락, 리만가설 어떻게 풀었나?",
+   "channel": "코난쌤 conanssam",
+   "url": "https://www.youtube.com/watch?v=8QRpY8Kdsj4",
+   "thumb": "https://i.ytimg.com/vi/8QRpY8Kdsj4/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-23",
+   "last_shared": "2026-11-23",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "ZKKP6jbdNbg",
    "title": "AI뉴스 - AI 부정행위 못 잡는다, 전문직 종말, Fable 5.2, MS365, GPT-6.2 Astra, 젠슨 황 사임, Gemini 4 Carbon & Hydrogen 등",
