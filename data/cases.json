@@ -1628,7 +1628,7 @@
    "model_dependency": "없음(비LLM)",
    "mirror_url": "https://gitlab.aigov.go.kr/chrisryugj/gjdong",
    "stars_gitlab": 3,
-   "case_url": "https://gjdong.vercel.app"
+   "case_url": "https://juso.pubax.org"
   },
   {
    "summary": "선택한 Windows 폴더의 새 저장본을 다른 물리 디스크에 자동 보관해 파일 유실을 막는 로컬 트레이 앱이 공개됐다. 문서 사고가 잦은 공공 업무 환경을 위한 로컬 도구 시리즈의 일곱 번째 결과물이다.",
@@ -5916,7 +5916,7 @@
    "org": "Schift(민간 개발팀)",
    "task_category": "공통·범용",
    "org_type": "민간(참고)",
-   "summary": "한국어 개인정보(PII)를 검출·마스킹하는 경량 오픈 모델이 Hugging Face에 공개됐다. 개발팀은 대형 상용 모델 대비 40배 작으면서 성능이 앞선다고 소개하며, 마스킹 원복·일괄 재마스킹을 지원해 공공 문서의 AI 전처리 단계에 붙이는 활용이 커뮤니티에서 곧바로 논의됐다. 공공기관 개인정보 전처리 병목을 겨냥할 수 있는 민간 참고 사례다. 2026-09-05 후속 버전 v7이 공개돼 성능을 보존하며 경량화가 이어지고 있다.",
+   "summary": "한국어 개인정보(PII)를 검출·마스킹하는 경량 오픈 모델이 Hugging Face에 공개됐다. 개발팀은 대형 상용 모델 대비 40배 작으면서 성능이 앞선다고 소개하며, 마스킹 원복·일괄 재마스킹을 지원해 공공 문서의 AI 전처리 단계에 붙이는 활용이 커뮤니티에서 곧바로 논의됐다. 공공기관 개인정보 전처리 병목을 겨냥할 수 있는 민간 참고 사례다. 이후 v7(9월)에 이어 SKT A.X 인코더 기반 ax-v1(11월)이 나와 81MB로 줄어 브라우저에서도 돌아간다.",
    "tags": [
     "개인정보",
     "PII",
@@ -5930,9 +5930,11 @@
    "health_checked": "2026-11-23",
    "model_dependency": "국산 독자모델",
    "models_used": [
-    "schift-ko-pii-v6(자체 학습)"
+    "schift-ko-pii-v6(자체 학습)",
+    "schift-ko-pii-ax-v1(A.X-Encoder-base 기반)"
    ],
-   "case_url": "https://huggingface.co/schift-io/schift-ko-pii-v7"
+   "case_url": "https://huggingface.co/schift-io/schift-ko-pii-v7",
+   "mirror_url": "https://huggingface.co/schift-io/schift-ko-pii-ax-v1"
   },
   {
    "collected_at": "2026-08-24",

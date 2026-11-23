@@ -5,10 +5,10 @@
  "total_cases": 704,
  "total_champions": 262,
  "community": {
-  "members": 2972,
-  "kakao_week": 1285,
-  "kakao_total_observed": 77783,
-  "threads_observed": 466
+  "members": 2974,
+  "kakao_week": 1391,
+  "kakao_total_observed": 77889,
+  "threads_observed": 467
  },
  "certified_champions": 5,
  "unattributed_cases": 212,
@@ -604,6 +604,7 @@
     "n": 4,
     "variants": [
      "schift-ko-pii(자체 학습)",
+     "schift-ko-pii-ax-v1(A.X-Encoder-base 기반)",
      "schift-ko-pii-v5(34M NER, 로컬 CPU)",
      "schift-ko-pii-v6(자체 학습)",
      "schift-ko-pii-v7(40M NER, 로컬)"
@@ -914,7 +915,8 @@
     "id": "dcba0f654467bdc9",
     "title": "schift-ko-pii-v6 — 한국어 개인정보 검출·마스킹 경량 모델",
     "models": [
-     "schift-ko-pii-v6(자체 학습)"
+     "schift-ko-pii-v6(자체 학습)",
+     "schift-ko-pii-ax-v1(A.X-Encoder-base 기반)"
     ]
    },
    {
@@ -1077,6 +1079,7 @@
       "domestic": true,
       "variants": [
        "schift-ko-pii(자체 학습)",
+       "schift-ko-pii-ax-v1(A.X-Encoder-base 기반)",
        "schift-ko-pii-v5(34M NER, 로컬 CPU)",
        "schift-ko-pii-v6(자체 학습)",
        "schift-ko-pii-v7(40M NER, 로컬)"
