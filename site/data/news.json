@@ -1,7 +1,111 @@
 {
- "updated_at": "2026-11-23T06:34:06Z",
- "count": 1584,
+ "updated_at": "2026-11-23T22:34:39Z",
+ "count": 1592,
  "articles": [
+  {
+   "url": "https://www.newstap.co.kr/news/articleView.html?idxno=338315",
+   "title": "뷰노, 중남미 최대 의료시장 브라질 진출…안저 판독 AI로 남미 공략 본격화",
+   "outlet": "뉴스탭",
+   "published": "2026-11-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-24",
+   "last_shared": "2026-11-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kgnews.co.kr/news/article.html?no=920824",
+   "title": "수원시, 야간·휴일 민원 전화 AI가 받는다…23일부터 시범 운영",
+   "outlet": "kgnews.co.kr",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-24",
+   "last_shared": "2026-11-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202611231739094502",
+   "title": "경남교육청, 인공지능(AI) 중점학교 우수 사례 공유",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-11-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-24",
+   "last_shared": "2026-11-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.fnnews.com/news/202611231411496054",
+   "title": "공무원이 직접 만든 AI 도구 1035개…45대 1 뚫고 23개 팀 결선",
+   "outlet": "파이낸셜뉴스",
+   "published": "2026-11-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-24",
+   "last_shared": "2026-11-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.etnews.com/20261123000395",
+   "title": "오픈AI “GPT가 건설 현장 통역사”…음성 AI로 다국어 소통 지원",
+   "outlet": "미래를 보는 창 - 전자신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-24",
+   "last_shared": "2026-11-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42848",
+   "title": "LG전자, 싱가포르에 AI홈 체험공간 개설…동남아 7억 시장 공략 확대",
+   "outlet": "인공지능신문",
+   "published": "2026-11-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-24",
+   "last_shared": "2026-11-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217690",
+   "title": "KT, 한국수자원공사와 물관리 분야 피지컬AI 협력",
+   "outlet": "AI타임스",
+   "published": "2026-11-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-24",
+   "last_shared": "2026-11-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://naver.me/xsZaZ8PR",
+   "title": "[속보]젠슨 황 돌아온다…엔비디아 주가 30% 폭등",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-24",
+   "last_shared": "2026-11-24",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://roboco.io/KSAT-AI-Benchmark/research/metacognitive-abstention.html",
    "title": "고난도 다학제 시험에서 LLM은 \"자신이 모르는 것\"을 아는가?",
