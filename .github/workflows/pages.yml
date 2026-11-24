@@ -14,11 +14,11 @@ concurrency:
   group: pages
   cancel-in-progress: true
 jobs:
-  deploy:
+  # 업로드와 배포를 한 job에 두면 deploy-pages가 방금 올린 산출물을 아직 못 보고
+  # "No artifacts named github-pages"로 실패하는 일이 잦다(2026-11-22~24 다섯 차례).
+  # GitHub 공식 템플릿처럼 build·deploy를 나누면 job 경계에서 업로드가 확정된 뒤 배포한다.
+  build:
     if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,5 +28,12 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - id: deployment
         uses: actions/deploy-pages@v4
