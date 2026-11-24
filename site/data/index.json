@@ -2,18 +2,18 @@
  "generated_at": "2026-11-24",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 704,
+ "total_cases": 705,
  "total_champions": 262,
  "community": {
   "members": 2974,
-  "kakao_week": 1337,
-  "kakao_total_observed": 77918,
+  "kakao_week": 1421,
+  "kakao_total_observed": 78002,
   "threads_observed": 471
  },
  "certified_champions": 5,
- "unattributed_cases": 212,
+ "unattributed_cases": 213,
  "ax_distribution": {
-  "AI-Ready": 446,
+  "AI-Ready": 447,
   "AI-Enabled": 221,
   "AX 단계 외": 31,
   "AI-First": 5,
@@ -22,7 +22,7 @@
  "c_axis_mean": 0.96,
  "p_distribution": {
   "P0": 212,
-  "P1": 463,
+  "P1": 464,
   "P2": 29
  },
  "model_dependency": {
@@ -30,7 +30,7 @@
   "없음(비LLM)": 349,
   "해외 오픈웨이트(로컬)": 34,
   "혼합": 21,
-  "해외 상용 API": 75,
+  "해외 상용 API": 76,
   "모델 중립(BYO)": 108,
   "국산 독자모델": 8,
   "미상": 40,
@@ -40,7 +40,7 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 42,
+    "n": 43,
     "variants": [
      "Claude",
      "Claude Code",
@@ -59,6 +59,7 @@
      "Claude Opus 5.5",
      "Claude Sonnet 5.5",
      "Claude(대조·근거 작성)",
+     "Claude(발언 제목 요약)",
      "Claude(선택 기능)",
      "Claude(스킬)",
      "Codex",
@@ -235,6 +236,10 @@
      {
       "id": "a62df7c94b28d078",
       "title": "같은 질문, 다른 답 — 27개 언어모델이 한국의 역사·영토·문화 질문 50개에 어떻게 답하는지 3만여 건으로 잰 보고서"
+     },
+     {
+      "id": "12682640496a9756",
+      "title": "서울 구의회 의정 모니터링 — 25개 자치구의회 의원의 발의·구정질문·5분발언을 공식 기록으로 모아 원문과 잇는 시민 감시 사이트"
      }
     ],
     "domestic": false
@@ -1030,8 +1035,8 @@
     "specified": 18
    },
    "해외 상용 API": {
-    "n": 75,
-    "specified": 58
+    "n": 76,
+    "specified": 59
    },
    "모델 중립(BYO)": {
     "n": 108,
@@ -1582,11 +1587,11 @@
    },
    {
     "dep": "해외 상용 API",
-    "n": 75,
+    "n": 76,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
-      "n": 28,
+      "n": 29,
       "cases": [
        {
         "id": "7acf5f25369c1401",
@@ -1699,6 +1704,10 @@
        {
         "id": "3a4d40fc2696b908",
         "title": "deck-factory — 한 문장 요청으로 발표용 HTML 슬라이드를 만드는 Claude Code 스킬"
+       },
+       {
+        "id": "12682640496a9756",
+        "title": "서울 구의회 의정 모니터링 — 25개 자치구의회 의원의 발의·구정질문·5분발언을 공식 기록으로 모아 원문과 잇는 시민 감시 사이트"
        }
       ],
       "domestic": false,
@@ -1710,6 +1719,7 @@
        "Claude Code(플러그인)",
        "Claude Code/Codex 등 상용 코딩 에이전트(BYO 구독)",
        "Claude Code/Codex(플러그인)",
+       "Claude(발언 제목 요약)",
        "Claude(선택 기능)",
        "Claude(스킬)",
        "Codex",
@@ -2193,9 +2203,9 @@
    }
   ]
  },
- "domestic_model_rate": 0.065,
- "local_model_rate": 0.252,
- "model_known": 139,
+ "domestic_model_rate": 0.064,
+ "local_model_rate": 0.25,
+ "model_known": 140,
  "license_tagged": 498,
  "license_stated_rate": 0.506,
  "gitlab_cases": 322,
@@ -2204,7 +2214,7 @@
  "mcp_cases": 102,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 622,
+  "미확인": 623,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,

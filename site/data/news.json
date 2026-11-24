@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-23T22:34:39Z",
- "count": 1592,
+ "updated_at": "2026-11-24T04:17:28Z",
+ "count": 1593,
  "articles": [
   {
    "url": "https://www.newstap.co.kr/news/articleView.html?idxno=338315",
@@ -59,6 +59,19 @@
    "title": "오픈AI “GPT가 건설 현장 통역사”…음성 AI로 다국어 소통 지원",
    "outlet": "미래를 보는 창 - 전자신문",
    "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-24",
+   "last_shared": "2026-11-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.chosun.com/international/international_general/2026/11/24/LOUZMRFGRZFP3P4Y4H6CZLB254",
+   "title": "젠슨 황 복귀시킨 트럼프, 엔비디아 주식으로 하루 200억 벌었다",
+   "outlet": "조선일보",
+   "published": "2026-11-23",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-24",

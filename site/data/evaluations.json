@@ -1,6 +1,6 @@
 {
- "evaluated_at": "2026-11-22",
- "total": 704,
+ "evaluated_at": "2026-11-24",
+ "total": 705,
  "cases": [
   {
    "no": 1,
@@ -23231,6 +23231,39 @@
    "tool_type": "MCP 서버·도구",
    "audience": "G2C 공개",
    "p": "P0 읽기 전용(잠정)",
+   "approval_gate": "미확인",
+   "audit_log": "미확인"
+  },
+  {
+   "no": 707,
+   "id": "12682640496a9756",
+   "org": "시민민주주의연구소",
+   "title": "서울 구의회 의정 모니터링 — 25개 자치구의회 의원의 발의·구정질문·5분발언을 공식 기록으로 모아 원문과 잇는 시민 감시 사이트",
+   "ax_prev": "AI-Ready",
+   "ax": "AI-Ready",
+   "s": "S2",
+   "s_name": "Workflow",
+   "c": "C1",
+   "c_name": "결과 제공",
+   "m": "해당 없음",
+   "m_name": "비-MCP 사례",
+   "native_scope": "해당 없음",
+   "status": "Pilot",
+   "scope": "External",
+   "mcp_role": "Unknown/None",
+   "risk": "R1 낮음(공개 의정 기록 기반, 의원 실명 노출이지만 공식 공개 자료)",
+   "human": "H2 Human-in-the-loop",
+   "evidence": "E2 화면·서비스 확인",
+   "confidence": "중간",
+   "gate": "상위 관문 미충족/해당 없음",
+   "rationale": "25개 구의회 홈페이지·회의록·영상과 선관위·행안부·지방재정365 자료를 주기적으로 수집해 의안·발언 약 110만 건을 의원·주제·동 단위로 엮는 수집-정규화-검색 흐름이라 S2·C1이며, 운영 화면의 이용 방법·기준과 출처·업데이트(v0.9.34) 탭에서 집계 규칙을 직접 확인해 E2다. LLM은 공개 제목이 없는 발언에 한해 Claude로 제목을 요약하고 AI 요약 표시를 달며 집계에는 쓰지 않는 보조 역할이라 AI-Ready로 둔다. 순위·합산 점수를 숨기고 모든 건에 원문 링크를 붙인 설계가 공공 기록 재가공 사례로서 값어치다.",
+   "feedback": "미확인",
+   "resilience": "미확인(민간 연구소 운영 지속성, 구의회별 공개 범위 차이로 누락 가능, 시범 운영)",
+   "post_url": "",
+   "service_url": "https://songpacdi.kr/council/",
+   "tool_type": "웹 서비스",
+   "audience": "G2C 대국민",
+   "p": "P1 산출물 생성(잠정)",
    "approval_gate": "미확인",
    "audit_log": "미확인"
   }
