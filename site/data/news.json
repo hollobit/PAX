@@ -1,7 +1,124 @@
 {
- "updated_at": "2026-11-24T14:35:40Z",
- "count": 1598,
+ "updated_at": "2026-11-24T22:34:24Z",
+ "count": 1607,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261124175420",
+   "title": "노타, 엔비디아 자율주행 AI 15배 가속…주행 경로 계산 0.076초",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-11-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-25",
+   "last_shared": "2026-11-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.yna.co.kr/view/AKR20261124138300017",
+   "title": "과기부 \"내년 AI 정부 예산 16조원…풀스택 수출 본격화 목표\"",
+   "outlet": "연합뉴스",
+   "published": "2026-11-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-25",
+   "last_shared": "2026-11-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mk.co.kr/news/it/12216306",
+   "title": "\"AI로 지역문제 해결\" KT·행안부 맞손",
+   "outlet": "매일경제",
+   "published": "2026-11-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-25",
+   "last_shared": "2026-11-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.inven.co.kr/board/party/6568/350",
+   "title": "11월 3주차 주간 AI 뉴스 - GPT-6.2 출시 등",
+   "outlet": "inven.co.kr",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-25",
+   "last_shared": "2026-11-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.etnews.com/20261124000365",
+   "title": "AI 전문기술 비용 따로 산정…KOSA, 사업대가 로드맵 발표",
+   "outlet": "미래를 보는 창 - 전자신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-25",
+   "last_shared": "2026-11-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42872",
+   "title": "ABB, 세계 최초 AI 탑재 저전압 모터 공개…센싱·엣지 컴퓨팅으로 산업 AI 확산 가속화",
+   "outlet": "인공지능신문",
+   "published": "2026-11-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-25",
+   "last_shared": "2026-11-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217739",
+   "title": "AI 탐지기 'GPT제로 5' 출시…\"사람 글 오판 5만건당 1건\"",
+   "outlet": "AI타임스",
+   "published": "2026-11-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-25",
+   "last_shared": "2026-11-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217729",
+   "title": "앤트로픽, ‘클로드 십’ 출시…코드 검토부터 수정·승인까지 자동화",
+   "outlet": "AI타임스",
+   "published": "2026-11-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-25",
+   "last_shared": "2026-11-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.tf.co.kr/read/life/2392725.htm",
+   "title": "'AI 민원 안내 쉽게'…행안부, 공공 AI 서비스 가이드라인 마련 - 사회 | 기사",
+   "outlet": "더팩트",
+   "published": "2026-11-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-25",
+   "last_shared": "2026-11-25",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://n.news.naver.com/article/003/0014342919?cds=news_my",
    "title": "2035년 신규 택시 100% 전기차로…정부, 전환지원금 155억 투입",
