@@ -5,10 +5,10 @@
  "total_cases": 705,
  "total_champions": 262,
  "community": {
-  "members": 2977,
-  "kakao_week": 1494,
-  "kakao_total_observed": 78075,
-  "threads_observed": 471
+  "members": 2978,
+  "kakao_week": 1694,
+  "kakao_total_observed": 78275,
+  "threads_observed": 473
  },
  "certified_champions": 5,
  "unattributed_cases": 213,
@@ -179,7 +179,7 @@
      },
      {
       "id": "7c3c1b02b4a981ec",
-      "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교"
+      "title": "KSAT AI Benchmark — 수능 문항으로 AI 모델의 점수·기권률·시간·비용 비교(2027학년도 전 과목 507문항·21개 모델)"
      },
      {
       "id": "0a767bb6906996f4",
@@ -339,7 +339,7 @@
      },
      {
       "id": "7c3c1b02b4a981ec",
-      "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교"
+      "title": "KSAT AI Benchmark — 수능 문항으로 AI 모델의 점수·기권률·시간·비용 비교(2027학년도 전 과목 507문항·21개 모델)"
      },
      {
       "id": "90017f701b103627",
@@ -1222,7 +1222,7 @@
        },
        {
         "id": "7c3c1b02b4a981ec",
-        "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교"
+        "title": "KSAT AI Benchmark — 수능 문항으로 AI 모델의 점수·기권률·시간·비용 비교(2027학년도 전 과목 507문항·21개 모델)"
        },
        {
         "id": "a62df7c94b28d078",
@@ -1319,7 +1319,7 @@
        },
        {
         "id": "7c3c1b02b4a981ec",
-        "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교"
+        "title": "KSAT AI Benchmark — 수능 문항으로 AI 모델의 점수·기권률·시간·비용 비교(2027학년도 전 과목 507문항·21개 모델)"
        },
        {
         "id": "ed993e5f5a4bba55",
@@ -1519,7 +1519,7 @@
       "cases": [
        {
         "id": "7c3c1b02b4a981ec",
-        "title": "KSAT AI Benchmark — 2026학년도 수능 147문항으로 AI 모델 11종의 정답률·기권률·시간·비용 비교"
+        "title": "KSAT AI Benchmark — 수능 문항으로 AI 모델의 점수·기권률·시간·비용 비교(2027학년도 전 과목 507문항·21개 모델)"
        }
       ],
       "domestic": false,

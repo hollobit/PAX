@@ -1,13 +1,52 @@
 {
- "updated_at": "2026-11-24T06:35:00Z",
- "count": 1594,
+ "updated_at": "2026-11-24T14:35:40Z",
+ "count": 1598,
  "articles": [
+  {
+   "url": "https://n.news.naver.com/article/003/0014342919?cds=news_my",
+   "title": "2035년 신규 택시 100% 전기차로…정부, 전환지원금 155억 투입",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-11-24",
+   "last_shared": "2026-11-24",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.newstap.co.kr/news/articleView.html?idxno=338315",
    "title": "뷰노, 중남미 최대 의료시장 브라질 진출…안저 판독 AI로 남미 공략 본격화",
    "outlet": "뉴스탭",
    "published": "2026-11-23",
    "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-24",
+   "last_shared": "2026-11-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.news1.kr/local/moi/6364814",
+   "title": "[속보] 정부, 중앙행정기관 31곳·5460명 세종 이전 확정…2031년까지",
+   "outlet": "뉴스1",
+   "published": "2026-11-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-24",
+   "last_shared": "2026-11-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=131199",
+   "title": "행안부, ‘공공 AI 서비스 UI/UX 가이드라인’ 마련… AI 안내·선택 기준 제시",
+   "outlet": "행정안전부",
+   "published": "",
+   "kind": "보도자료",
    "shares": 1,
    "first_shared": "2026-11-24",
    "last_shared": "2026-11-24",
@@ -98,6 +137,19 @@
    "title": "KT, 한국수자원공사와 물관리 분야 피지컬AI 협력",
    "outlet": "AI타임스",
    "published": "2026-11-23",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-24",
+   "last_shared": "2026-11-24",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://v.daum.net/v/20261124092025462",
+   "title": "서울시 \"내일 지하철 파업해도 출근시간 100% 정상 운행\"",
+   "outlet": "Daum | 뉴시스",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-24",
