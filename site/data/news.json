@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-11-24T22:34:24Z",
- "count": 1607,
+ "updated_at": "2026-11-25T06:34:11Z",
+ "count": 1609,
  "articles": [
+  {
+   "url": "https://v.daum.net/v/20261125060015658",
+   "title": "[단독] '하이닉스 인수설' 손정의, 극비리 대구 방문…\"내년 공식 방문 예고\"",
+   "outlet": "Daum | 매일신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-11-25",
+   "last_shared": "2026-11-25",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261124175420",
    "title": "노타, 엔비디아 자율주행 AI 15배 가속…주행 경로 계산 0.076초",
@@ -111,6 +124,19 @@
    "title": "'AI 민원 안내 쉽게'…행안부, 공공 AI 서비스 가이드라인 마련 - 사회 | 기사",
    "outlet": "더팩트",
    "published": "2026-11-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-25",
+   "last_shared": "2026-11-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.ddaily.co.kr/page/view/2026111315374839633",
+   "title": "1527억 차세대 지방행정시스템 발주 '임박'&hellip;16개 시도 클라우드로 통합",
+   "outlet": "디지털데일리",
+   "published": "2026-11-13",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-25",
