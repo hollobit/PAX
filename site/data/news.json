@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-25T06:34:11Z",
- "count": 1609,
+ "updated_at": "2026-11-25T14:34:49Z",
+ "count": 1612,
  "articles": [
   {
    "url": "https://v.daum.net/v/20261125060015658",
@@ -33,6 +33,32 @@
    "title": "과기부 \"내년 AI 정부 예산 16조원…풀스택 수출 본격화 목표\"",
    "outlet": "연합뉴스",
    "published": "2026-11-24",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-25",
+   "last_shared": "2026-11-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.news1.kr/local/busan-gyeongnam/6366157",
+   "title": "\"9급 시험 고졸 수준\" 정영란 부산시 인재개발원장 명퇴 신청(종합)",
+   "outlet": "뉴스1",
+   "published": "2026-11-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-25",
+   "last_shared": "2026-11-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.newdaily.co.kr/site/data/html/2026/10/14/2026101400145.html",
+   "title": "[단독] 서울시 자체 AI의 굴욕 … 공무원 80%가 외면",
+   "outlet": "뉴데일리",
+   "published": "2026-10-16",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-25",
@@ -137,6 +163,19 @@
    "title": "1527억 차세대 지방행정시스템 발주 '임박'&hellip;16개 시도 클라우드로 통합",
    "outlet": "디지털데일리",
    "published": "2026-11-13",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-25",
+   "last_shared": "2026-11-25",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.blog.naver.com/abrahamckhp/224475592299",
+   "title": "박계홍 서울시의원, “20억 들인 서울시 자체 AI, 공무원 80%는 안 쓴다... 제2의 메타버스 사태 우려”",
+   "outlet": "m.blog.naver.com",
+   "published": "",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-25",
