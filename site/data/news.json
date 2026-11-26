@@ -1,7 +1,150 @@
 {
- "updated_at": "2026-11-26T14:35:45Z",
- "count": 1627,
+ "updated_at": "2026-11-26T22:34:31Z",
+ "count": 1638,
  "articles": [
+  {
+   "url": "https://www.techm.kr/news/articleView.html?idxno=157845",
+   "title": "공정위, 애플 'AI 기만광고' 심의 착수...애플 \"동의 안 해\"",
+   "outlet": "테크M",
+   "published": "2026-11-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-27",
+   "last_shared": "2026-11-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.techm.kr/news/articleView.html?idxno=157843",
+   "title": "[글로벌] AI 인프라 경쟁, 이제는 우주로...스페이스X, 위성 100만기 배치 승인",
+   "outlet": "테크M",
+   "published": "2026-11-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-27",
+   "last_shared": "2026-11-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.siminilbo.co.kr/news/newsview.php?ncode=1160289326380644",
+   "title": "광진구, AI 기본계획 수립·정책협의체 출범",
+   "outlet": "siminilbo.co.kr",
+   "published": "2026-11-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-27",
+   "last_shared": "2026-11-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mk.co.kr/news/it/12218032",
+   "title": "AI가 공무원 대신 보고서 쓰네...삼성SDS, 공공 AX 기술 시연",
+   "outlet": "매일경제",
+   "published": "2026-11-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-27",
+   "last_shared": "2026-11-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.kpinews.kr/newsView/1065601014545886",
+   "title": "구청 현장 여성 공무원 개발 AI플랫폼 '위-원'…화성시 위생행정 표준된다",
+   "outlet": "kpinews.kr",
+   "published": "2026-11-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-27",
+   "last_shared": "2026-11-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42896",
+   "title": "KT클라우드, 안산에 110MW 규모 AI 데이터센터 캠퍼스 조성…수도권 거점 확대",
+   "outlet": "인공지능신문",
+   "published": "2026-11-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-27",
+   "last_shared": "2026-11-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217786",
+   "title": "앤트로픽, 클로드로 누구나 PC 앱 제작·배포하도록 지원",
+   "outlet": "AI타임스",
+   "published": "2026-11-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-27",
+   "last_shared": "2026-11-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://startuprecipe.co.kr/archives/tech/5842590",
+   "title": "앤트로픽, 클로드 아티팩트를 맥·윈도 앱으로 바꾸는 기능 공개",
+   "outlet": "startuprecipe.co.kr",
+   "published": "2026-11-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-27",
+   "last_shared": "2026-11-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/023/0004011168",
+   "title": "[단독] 통신3사·네이버, AI 에이전트 전화 응대 거부키로",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-27",
+   "last_shared": "2026-11-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://m.etnews.com/20261126000558?obj=Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJyZWZlcmVyIjtzOjIzOiJodHRwczovL3d3dy5nb29nbGUuY29tLyI7czo3OiJmb3J3YXJkIjtzOjEzOiJ3ZWIgdG8gbW9iaWxlIjt9",
+   "title": "올리브영, 업무시스템 해킹 피해…보안 조치 및 신고 완료",
+   "outlet": "미래를 보는 신문 - 전자신문",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-27",
+   "last_shared": "2026-11-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://aimatters.co.kr/news-report/62554",
+   "title": "오터리AI, 챗GPT용 GEO 플러그인 출시…네이버 AI 추적 예정",
+   "outlet": "AI 매터스 - AI 전문 정보 플랫폼",
+   "published": "2026-11-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-27",
+   "last_shared": "2026-11-27",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261126102309",
    "title": "누구나 무료로 AI 배운다...EBS ‘AI이솦’ 개설",

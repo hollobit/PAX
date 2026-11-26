@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-11-26T14:35:43Z",
- "count": 164,
+ "updated_at": "2026-11-26T22:34:28Z",
+ "count": 165,
  "videos": [
+  {
+   "id": "jnWk9eyp4bk",
+   "title": "AI 시대, 빠르고 안전한 앱 프로토타입 - 섀도우 IT를 양지로 올리는 법",
+   "channel": "한국전자통신연구원 ETRI",
+   "url": "https://www.youtube.com/watch?v=jnWk9eyp4bk",
+   "thumb": "https://i.ytimg.com/vi/jnWk9eyp4bk/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-27",
+   "last_shared": "2026-11-27",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "SucveHciVU0",
    "title": "누구나 쓸 수 있는 2조원짜리 보안기술",
