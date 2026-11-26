@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-11-26T06:34:29Z",
- "count": 1626,
+ "updated_at": "2026-11-26T14:35:45Z",
+ "count": 1627,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261126102309",
+   "title": "누구나 무료로 AI 배운다...EBS ‘AI이솦’ 개설",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-11-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-26",
+   "last_shared": "2026-11-26",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://zdnet.co.kr/view?no=20261125162827",
    "title": "윤호중 행안부 장관 \"AI 활용해 정부 일하는 방식 혁신하겠다\"",

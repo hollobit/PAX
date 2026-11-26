@@ -2,19 +2,19 @@
  "generated_at": "2026-11-26",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 705,
+ "total_cases": 706,
  "total_champions": 262,
  "community": {
-  "members": 3003,
-  "kakao_week": 3413,
-  "kakao_total_observed": 79994,
-  "threads_observed": 478
+  "members": 3010,
+  "kakao_week": 3559,
+  "kakao_total_observed": 80140,
+  "threads_observed": 481
  },
  "certified_champions": 5,
- "unattributed_cases": 213,
+ "unattributed_cases": 214,
  "ax_distribution": {
   "AI-Ready": 447,
-  "AI-Enabled": 221,
+  "AI-Enabled": 222,
   "AX 단계 외": 31,
   "AI-First": 5,
   "AI-Native 계획": 1
@@ -22,14 +22,14 @@
  "c_axis_mean": 0.96,
  "p_distribution": {
   "P0": 212,
-  "P1": 464,
+  "P1": 465,
   "P2": 29
  },
  "model_dependency": {
   "미확인": 68,
   "없음(비LLM)": 349,
   "해외 오픈웨이트(로컬)": 34,
-  "혼합": 21,
+  "혼합": 22,
   "해외 상용 API": 76,
   "모델 중립(BYO)": 108,
   "국산 독자모델": 8,
@@ -40,7 +40,7 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 43,
+    "n": 44,
     "variants": [
      "Claude",
      "Claude Code",
@@ -240,14 +240,19 @@
      {
       "id": "12682640496a9756",
       "title": "서울 구의회 의정 모니터링 — 25개 자치구의회 의원의 발의·구정질문·5분발언을 공식 기록으로 모아 원문과 잇는 시민 감시 사이트"
+     },
+     {
+      "id": "e05c017b44b33a26",
+      "title": "EBS AI이솦 — 생성형 AI 5종을 무료로 실습하고 대상별 AI 강좌·역량 진단·학습 챗봇을 제공하는 전 국민 AI 학습 플랫폼"
      }
     ],
     "domestic": false
    },
    {
     "name": "GPT(OpenAI)",
-    "n": 21,
+    "n": 22,
     "variants": [
+     "ChatGPT",
      "ChatGPT GPTs",
      "ChatGPT(웹)",
      "ChatGPT(팀계정)",
@@ -356,13 +361,17 @@
      {
       "id": "a62df7c94b28d078",
       "title": "같은 질문, 다른 답 — 27개 언어모델이 한국의 역사·영토·문화 질문 50개에 어떻게 답하는지 3만여 건으로 잰 보고서"
+     },
+     {
+      "id": "e05c017b44b33a26",
+      "title": "EBS AI이솦 — 생성형 AI 5종을 무료로 실습하고 대상별 AI 강좌·역량 진단·학습 챗봇을 제공하는 전 국민 AI 학습 플랫폼"
      }
     ],
     "domestic": false
    },
    {
     "name": "Gemini",
-    "n": 18,
+    "n": 19,
     "variants": [
      "Chrome 내장 AI(Gemini Nano)",
      "Claude Code/Codex/Gemini(스킬 팩)",
@@ -453,6 +462,10 @@
      {
       "id": "94b5f173ebc5880e",
       "title": "AX-SOS — 공공AX 오픈채팅의 기존 질의응답을 정리하고 새 질문을 받는 커뮤니티 지식인 PoC"
+     },
+     {
+      "id": "e05c017b44b33a26",
+      "title": "EBS AI이솦 — 생성형 AI 5종을 무료로 실습하고 대상별 AI 강좌·역량 진단·학습 챗봇을 제공하는 전 국민 AI 학습 플랫폼"
      }
     ],
     "domestic": false
@@ -754,6 +767,24 @@
     "domestic": true
    },
    {
+    "name": "Upstage Solar",
+    "n": 2,
+    "variants": [
+     "Upstage Solar"
+    ],
+    "cases": [
+     {
+      "id": "42ac1d043a40db1b",
+      "title": "교사 개발자 연수 플랫폼 시안 — 수합·양식·사례집을 한 흐름으로"
+     },
+     {
+      "id": "e05c017b44b33a26",
+      "title": "EBS AI이솦 — 생성형 AI 5종을 무료로 실습하고 대상별 AI 강좌·역량 진단·학습 챗봇을 제공하는 전 국민 AI 학습 플랫폼"
+     }
+    ],
+    "domestic": true
+   },
+   {
     "name": "Jev(TypeSafe AI 판정 모델)",
     "n": 2,
     "variants": [
@@ -860,20 +891,6 @@
     "n": 1,
     "variants": [
      "로컬 분석(기본)"
-    ],
-    "cases": [
-     {
-      "id": "c7e0862df664bbe5",
-      "title": "AI Survey Insight — 설문 주관식 수백 건을 주제·감정별로 정리하는 분석 도구"
-     }
-    ],
-    "domestic": false
-   },
-   {
-    "name": "외부 AI(선택 연결)",
-    "n": 1,
-    "variants": [
-     "외부 AI(선택 연결)"
     ],
     "cases": [
      {
@@ -1015,6 +1032,17 @@
      "GPT",
      "Qwen3.8 27B"
     ]
+   },
+   {
+    "id": "e05c017b44b33a26",
+    "title": "EBS AI이솦 — 생성형 AI 5종을 무료로 실습하고 대상별 AI 강좌·역량 진단·학습 챗봇을 제공하는 전 국민 AI 학습 플랫폼",
+    "models": [
+     "ChatGPT",
+     "Gemini",
+     "Claude",
+     "LG EXAONE",
+     "Upstage Solar"
+    ]
    }
   ],
   "dist_detail": {
@@ -1031,8 +1059,8 @@
     "specified": 21
    },
    "혼합": {
-    "n": 21,
-    "specified": 18
+    "n": 22,
+    "specified": 19
    },
    "해외 상용 API": {
     "n": 76,
@@ -1198,11 +1226,11 @@
    },
    {
     "dep": "혼합",
-    "n": 21,
+    "n": 22,
     "families": [
      {
       "name": "Claude/Codex(상용 에이전트)",
-      "n": 6,
+      "n": 7,
       "cases": [
        {
         "id": "acd684108227b9c2",
@@ -1227,6 +1255,10 @@
        {
         "id": "a62df7c94b28d078",
         "title": "같은 질문, 다른 답 — 27개 언어모델이 한국의 역사·영토·문화 질문 50개에 어떻게 답하는지 3만여 건으로 잰 보고서"
+       },
+       {
+        "id": "e05c017b44b33a26",
+        "title": "EBS AI이솦 — 생성형 AI 5종을 무료로 실습하고 대상별 AI 강좌·역량 진단·학습 챗봇을 제공하는 전 국민 AI 학습 플랫폼"
        }
       ],
       "domestic": false,
@@ -1243,7 +1275,7 @@
      },
      {
       "name": "Gemini",
-      "n": 5,
+      "n": 6,
       "cases": [
        {
         "id": "de4b2dab339d69b7",
@@ -1264,11 +1296,16 @@
        {
         "id": "a75a254a0e86d0f7",
         "title": "전자문서 AI 요약 — 공문 열람 화면에서 본문·첨부를 추출해 종류·조치 여부·기한을 정리하는 엣지 확장"
+       },
+       {
+        "id": "e05c017b44b33a26",
+        "title": "EBS AI이솦 — 생성형 AI 5종을 무료로 실습하고 대상별 AI 강좌·역량 진단·학습 챗봇을 제공하는 전 국민 AI 학습 플랫폼"
        }
       ],
       "domestic": false,
       "variants": [
        "Chrome 내장 AI(Gemini Nano)",
+       "Gemini",
        "Gemini API",
        "Gemini(옵션 전환)",
        "Gemini(옵션)",
@@ -1311,7 +1348,7 @@
      },
      {
       "name": "GPT(OpenAI)",
-      "n": 4,
+      "n": 5,
       "cases": [
        {
         "id": "ea2bce110972762e",
@@ -1328,10 +1365,15 @@
        {
         "id": "a62df7c94b28d078",
         "title": "같은 질문, 다른 답 — 27개 언어모델이 한국의 역사·영토·문화 질문 50개에 어떻게 답하는지 3만여 건으로 잰 보고서"
+       },
+       {
+        "id": "e05c017b44b33a26",
+        "title": "EBS AI이솦 — 생성형 AI 5종을 무료로 실습하고 대상별 AI 강좌·역량 진단·학습 챗봇을 제공하는 전 국민 AI 학습 플랫폼"
        }
       ],
       "domestic": false,
       "variants": [
+       "ChatGPT",
        "ChatGPT/Claude/Codex(승인 문서 MCP 조회)",
        "GPT",
        "GPT-5.4",
@@ -1581,6 +1623,34 @@
       "domestic": false,
       "variants": [
        "Qwen3.8 27B"
+      ]
+     },
+     {
+      "name": "LG EXAONE",
+      "n": 1,
+      "cases": [
+       {
+        "id": "e05c017b44b33a26",
+        "title": "EBS AI이솦 — 생성형 AI 5종을 무료로 실습하고 대상별 AI 강좌·역량 진단·학습 챗봇을 제공하는 전 국민 AI 학습 플랫폼"
+       }
+      ],
+      "domestic": true,
+      "variants": [
+       "LG EXAONE"
+      ]
+     },
+     {
+      "name": "Upstage Solar",
+      "n": 1,
+      "cases": [
+       {
+        "id": "e05c017b44b33a26",
+        "title": "EBS AI이솦 — 생성형 AI 5종을 무료로 실습하고 대상별 AI 강좌·역량 진단·학습 챗봇을 제공하는 전 국민 AI 학습 플랫폼"
+       }
+      ],
+      "domestic": true,
+      "variants": [
+       "Upstage Solar"
       ]
      }
     ]
@@ -2204,8 +2274,8 @@
   ]
  },
  "domestic_model_rate": 0.064,
- "local_model_rate": 0.25,
- "model_known": 140,
+ "local_model_rate": 0.248,
+ "model_known": 141,
  "license_tagged": 498,
  "license_stated_rate": 0.506,
  "gitlab_cases": 322,
@@ -2214,7 +2284,7 @@
  "mcp_cases": 102,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 623,
+  "미확인": 624,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,

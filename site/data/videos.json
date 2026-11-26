@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-11-25T06:34:10Z",
- "count": 163,
+ "updated_at": "2026-11-26T14:35:43Z",
+ "count": 164,
  "videos": [
+  {
+   "id": "SucveHciVU0",
+   "title": "누구나 쓸 수 있는 2조원짜리 보안기술",
+   "channel": "코딩애플",
+   "url": "https://www.youtube.com/watch?v=SucveHciVU0",
+   "thumb": "https://i.ytimg.com/vi/SucveHciVU0/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-26",
+   "last_shared": "2026-11-26",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "-qMk-ajW-GQ",
    "title": "[AI 시연] ChatGPT에 국가법령정보 MCP 연결하기",

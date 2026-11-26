@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T13:16:35+09:00",
+ "updated_at": "2026-11-26T23:34:37+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -20176,7 +20176,7 @@
    "thumb_v": 1794379010
   },
   {
-   "link": "https://github.com/sodam-ai/Herdr_Session-Keeper",
+   "link": "https://github.com/sodam-ai/SoDam-Herdr-Session-Keeper",
    "org": "개발 커뮤니티",
    "source": "kakao",
    "task_category": "공통·범용",
@@ -20208,7 +20208,7 @@
    "link_ok": true,
    "health_checked": "2026-11-23",
    "maintenance": "활발",
-   "thumb_v": 1794379013
+   "thumb_v": 1795703732
   },
   {
    "models_used": [
@@ -20898,6 +20898,37 @@
    "case_class": "참고",
    "id": "12682640496a9756",
    "thumb_v": 1795493839
+  },
+  {
+   "link": "https://www.ebsai.co.kr/",
+   "case_class": "기관 공식",
+   "title": "EBS AI이솦 — 생성형 AI 5종을 무료로 실습하고 대상별 AI 강좌·역량 진단·학습 챗봇을 제공하는 전 국민 AI 학습 플랫폼",
+   "deployment_env": "인터넷망",
+   "collected_at": "2026-11-26",
+   "task_category": "공통·범용",
+   "tags": [
+    "AI교육",
+    "디지털역량",
+    "생성형AI",
+    "챗봇"
+   ],
+   "date": "2026-11-26",
+   "source": "kakao",
+   "runtime_env": "브라우저만",
+   "org_type": "공공기관",
+   "network_req": "인터넷 필수",
+   "org": "한국교육방송공사(EBS)",
+   "model_dependency": "혼합",
+   "models_used": [
+    "ChatGPT",
+    "Gemini",
+    "Claude",
+    "LG EXAONE",
+    "Upstage Solar"
+   ],
+   "summary": "EBS가 2018년부터 운영하던 소프트웨어 교육 플랫폼을 AI 교육 중심으로 개편해 정식 개설했다. 실습 환경에 해외 상용 모델과 국산 모델 5종을 연동해 하루 일정량까지 무료로 써 보게 하고, 유아부터 시니어까지 6개 대상군별 단계형 강좌와 AI 역량 진단, 학습 자료를 찾아 답하는 챗봇을 함께 제공한다. 과기정통부 예산으로 구축했다.",
+   "id": "e05c017b44b33a26",
+   "thumb_v": 1795703735
   }
  ]
 }
