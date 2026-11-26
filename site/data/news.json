@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-25T22:34:20Z",
- "count": 1622,
+ "updated_at": "2026-11-26T06:34:29Z",
+ "count": 1626,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261125162827",
@@ -16,10 +16,36 @@
    ]
   },
   {
+   "url": "https://www.yna.co.kr/view/AKR20261124148751017",
+   "title": "AI에도 자동차처럼 번호판을…에이전트 시대 책임보험제 제안(종합)",
+   "outlet": "연합뉴스",
+   "published": "2026-11-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-26",
+   "last_shared": "2026-11-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
    "url": "https://www.tokenpost.kr/news/ai/443835",
    "title": "클로드 아티팩트 앱 설치 베타, 맥·윈도 별도 창 지원",
    "outlet": "토큰포스트",
    "published": "2026-11-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-26",
+   "last_shared": "2026-11-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.sisain.co.kr/news/articleView.html?idxno=58824",
+   "title": "현장에서 질문을 찾고, AI로 해결법을 만든 공무원 [사람IN]",
+   "outlet": "시사IN",
+   "published": "2026-11-26",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-26",
@@ -46,6 +72,32 @@
    "title": "예산군, 캐릭터 '예돌이' AI 영상... 지자체홍보대상 대상 영예",
    "outlet": "뉴스워커",
    "published": "2026-11-25",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-26",
+   "last_shared": "2026-11-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.mohw.go.kr/board.es?mid=a10503010100&bid=0027&act=view&list_no=1492668&tag=&nPage=1",
+   "title": "AI 시대, 의료데이터 더 안전하고 쉽게 활용 「보건의료데이터 활용 가이드라인」 전부개정 < 전체 <  < 알림 : 힘이 되는 평생 친구, 보건복지부",
+   "outlet": "mohw.go.kr",
+   "published": "",
+   "kind": "보도자료",
+   "shares": 1,
+   "first_shared": "2026-11-26",
+   "last_shared": "2026-11-26",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.hitech.co.kr/news/articleView.html?idxno=63300",
+   "title": "피클 가입 안 했는데 내 연락처가 美서버에…대화 기록 AI 학습도",
+   "outlet": "하이테크정보",
+   "published": "2026-11-26",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-11-26",
