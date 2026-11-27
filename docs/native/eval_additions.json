@@ -17806,5 +17806,33 @@
   "resilience": "미확인(무료 토큰 한도·외부 모델 계약 지속 여부, 강좌 400편 연말까지 순차 탑재 중)",
   "post_url": "",
   "service_url": "https://www.ebsai.co.kr/"
+ },
+ {
+  "no": 709,
+  "id": "ba01fdc0b6f1e304",
+  "org": "공직 커뮤니티",
+  "title": "ReelForge — 브리프 한 줄로 내레이션·자막이 붙은 모션그래픽 소개 영상을 만드는 에이전트 영상 제작 시스템",
+  "ax_prev": "AI-Enabled",
+  "ax": "AI-Enabled",
+  "s": "S2",
+  "s_name": "Tool bundle",
+  "c": "C1",
+  "c_name": "결과 제공",
+  "m": "해당 없음",
+  "m_name": "비-MCP 사례",
+  "native_scope": "해당 없음",
+  "status": "Published tool",
+  "scope": "External",
+  "mcp_role": "Unknown/None",
+  "risk": "R0 최소",
+  "human": "H2 Human-in-the-loop",
+  "evidence": "E1 코드·도구 확인",
+  "confidence": "중간",
+  "gate": "상위 관문 미충족/해당 없음",
+  "rationale": "컨셉·아크·라우팅·카피·동결의 연출 단계와 장면 워커, 파일럿 게이트, 결정론 렌더, 스트립 QC를 한 저장소와 Claude Code 스킬로 묶은 영상 제작 도구라 S2·C1이다. README·스킬 문서·린트 스크립트로 파이프라인 구조를 확인해 E1이며, 장면 기획 검토와 육안 심사가 사람 몫이라 H2다. 공공 홍보·보고 영상 현장 적용 여부는 미확인.",
+  "feedback": "미확인",
+  "resilience": "미확인(1인 개발 저장소, 마지막 푸시 2026-07)",
+  "post_url": "",
+  "service_url": ""
  }
 ]

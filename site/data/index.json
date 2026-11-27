@@ -2,19 +2,19 @@
  "generated_at": "2026-11-27",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 706,
+ "total_cases": 707,
  "total_champions": 262,
  "community": {
-  "members": 3012,
-  "kakao_week": 3044,
-  "kakao_total_observed": 80176,
-  "threads_observed": 483
+  "members": 3018,
+  "kakao_week": 3235,
+  "kakao_total_observed": 80367,
+  "threads_observed": 484
  },
  "certified_champions": 5,
  "unattributed_cases": 214,
  "ax_distribution": {
   "AI-Ready": 447,
-  "AI-Enabled": 222,
+  "AI-Enabled": 223,
   "AX 단계 외": 31,
   "AI-First": 5,
   "AI-Native 계획": 1
@@ -22,7 +22,7 @@
  "c_axis_mean": 0.96,
  "p_distribution": {
   "P0": 212,
-  "P1": 465,
+  "P1": 466,
   "P2": 29
  },
  "model_dependency": {
@@ -31,7 +31,7 @@
   "해외 오픈웨이트(로컬)": 34,
   "혼합": 22,
   "해외 상용 API": 76,
-  "모델 중립(BYO)": 108,
+  "모델 중립(BYO)": 109,
   "국산 독자모델": 8,
   "미상": 40,
   "국산 오픈웨이트": 1
@@ -40,7 +40,7 @@
   "models_top": [
    {
     "name": "Claude/Codex(상용 에이전트)",
-    "n": 44,
+    "n": 45,
     "variants": [
      "Claude",
      "Claude Code",
@@ -244,6 +244,10 @@
      {
       "id": "e05c017b44b33a26",
       "title": "EBS AI이솦 — 생성형 AI 5종을 무료로 실습하고 대상별 AI 강좌·역량 진단·학습 챗봇을 제공하는 전 국민 AI 학습 플랫폼"
+     },
+     {
+      "id": "ba01fdc0b6f1e304",
+      "title": "ReelForge — 브리프 한 줄로 내레이션·자막이 붙은 모션그래픽 소개 영상을 만드는 에이전트 영상 제작 시스템"
      }
     ],
     "domestic": false
@@ -1067,8 +1071,8 @@
     "specified": 59
    },
    "모델 중립(BYO)": {
-    "n": 108,
-    "specified": 11
+    "n": 109,
+    "specified": 12
    },
    "국산 독자모델": {
     "n": 8,
@@ -2276,15 +2280,15 @@
  "domestic_model_rate": 0.064,
  "local_model_rate": 0.248,
  "model_known": 141,
- "license_tagged": 498,
- "license_stated_rate": 0.506,
+ "license_tagged": 499,
+ "license_stated_rate": 0.507,
  "gitlab_cases": 322,
  "gitlab_mirror_pairs": 43,
  "gitlab_open_rate": 0.134,
  "mcp_cases": 102,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 624,
+  "미확인": 625,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -2393,7 +2397,7 @@
    ]
   },
   "github": {
-   "count": 200,
+   "count": 201,
    "starred": 197,
    "stars_sum": 936950,
    "maintenance": {
@@ -2488,7 +2492,7 @@
  "license_distribution": {
   "명시 없음": 246,
   "MIT": 164,
-  "Apache-2.0": 42,
+  "Apache-2.0": 43,
   "Other": 22,
   "AGPL-3.0": 5,
   "기타(비표준)": 5,
@@ -2513,7 +2517,7 @@
    "gitlab": 67
   },
   "Apache-2.0": {
-   "github": 19,
+   "github": 20,
    "gitlab": 23
   },
   "Other": {
@@ -2571,8 +2575,8 @@
  },
  "license_by_source": {
   "github": {
-   "total": 186,
-   "stated": 137
+   "total": 187,
+   "stated": 138
   },
   "github-pages": {
    "total": 25,

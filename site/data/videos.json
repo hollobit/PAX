@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-26T22:34:28Z",
- "count": 165,
+ "updated_at": "2026-11-27T06:35:38Z",
+ "count": 166,
  "videos": [
   {
    "id": "jnWk9eyp4bk",
@@ -8,6 +8,19 @@
    "channel": "한국전자통신연구원 ETRI",
    "url": "https://www.youtube.com/watch?v=jnWk9eyp4bk",
    "thumb": "https://i.ytimg.com/vi/jnWk9eyp4bk/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-27",
+   "last_shared": "2026-11-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "id": "_ImjMdQpVPY",
+   "title": "🔵“AI 도입하면 회사의 민낯이 드러나요” AI로 인해 사내 권력과 역할이 바뀌는 이유 | 글로벌 컨설팅펌 AX 컨설턴트 육민호",
+   "channel": "커리어데이",
+   "url": "https://www.youtube.com/watch?v=_ImjMdQpVPY",
+   "thumb": "https://i.ytimg.com/vi/_ImjMdQpVPY/mqdefault.jpg",
    "shares": 1,
    "first_shared": "2026-11-27",
    "last_shared": "2026-11-27",
