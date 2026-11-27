@@ -1,5 +1,5 @@
 {
- "total": 262,
+ "total": 263,
  "champions": [
   {
    "id": "github:Yeachan-Heo",
@@ -2490,6 +2490,28 @@
    "stats": {
     "case_count": 1,
     "top_ax": 1,
+    "stars": 0
+   }
+  },
+  {
+   "id": "github:truth0530",
+   "name": "truth0530",
+   "accounts": [
+    {
+     "platform": "github",
+     "id": "truth0530",
+     "url": "https://github.com/truth0530"
+    }
+   ],
+   "affiliation": null,
+   "category": "민간·커뮤니티",
+   "category_basis": "cases",
+   "cases": [
+    "d4b5ed871fb33911"
+   ],
+   "stats": {
+    "case_count": 1,
+    "top_ax": 2,
     "stars": 0
    }
   },

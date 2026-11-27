@@ -3559,6 +3559,41 @@
     "npm": "11.20.0",
     "pip_audit": "2.9.0"
    }
+  },
+  {
+   "case_id": "d4b5ed871fb33911",
+   "axes": {
+    "permission_surface": {
+     "verdict": "주의",
+     "note": "셸 실행 패턴 2건 — 도구 목적 대비 필요성 검토 권장"
+    },
+    "secrets": {
+     "verdict": "통과",
+     "note": "하드코딩 자격증명 패턴 없음"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "npm·python 의존성 선언 없음"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "통과",
+     "note": "herdr CLI를 셸 없이 인자 배열로 호출하고, 대상은 standup 목록의 pane id와 대조해 고르며, 지시문은 제어 문자를 지운 뒤 보낸다. 에이전트 화면·제목은 신뢰할 수 없는 글로 표시해 넘긴다 (근거: server/server.mjs:83, 150-153, 242, 224)"
+    },
+    "data_flow": {
+     "verdict": "통과",
+     "note": "서버는 127.0.0.1에만 열리고 외부 접근은 사용자가 설정한 Tailscale Funnel과 64자 토큰 경로(상수 시간 비교)로 제한된다. 도구 코드에 제3자 네트워크 호출·텔레메트리가 없고, 지시 보내기는 기본 꺼짐이다 (근거: server/server.mjs:343, 265-268, 43, 240)"
+    }
+   },
+   "disclosure": null,
+   "checked_at": "2026-11-27",
+   "tools": {
+    "npm": "11.20.0",
+    "pip_audit": "2.9.0"
+   }
   }
  ]
 }

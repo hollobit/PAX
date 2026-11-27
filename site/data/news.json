@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-11-26T22:34:31Z",
- "count": 1638,
+ "updated_at": "2026-11-27T14:36:02Z",
+ "count": 1639,
  "articles": [
+  {
+   "url": "https://news.seoul.go.kr/gov/archives/573211",
+   "title": "AI와 RPA 결합 `지능형 행정`…서울시, 매달 2000시간 자동 처리",
+   "outlet": "서울시 뉴스",
+   "published": "2025-11-13",
+   "kind": "기사",
+   "shares": 2,
+   "first_shared": "2026-08-06",
+   "last_shared": "2026-11-27",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://www.techm.kr/news/articleView.html?idxno=157845",
    "title": "공정위, 애플 'AI 기만광고' 심의 착수...애플 \"동의 안 해\"",
@@ -109,6 +122,19 @@
   {
    "url": "https://n.news.naver.com/article/023/0004011168",
    "title": "[단독] 통신3사·네이버, AI 에이전트 전화 응대 거부키로",
+   "outlet": "네이버 뉴스",
+   "published": "",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-27",
+   "last_shared": "2026-11-27",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://n.news.naver.com/article/015/0005358436",
+   "title": "에이전트코리아, 공공AX네트워크와 'AI 시대, 우리는 무엇을 바꿨는가' 토크콘서트 개최",
    "outlet": "네이버 뉴스",
    "published": "",
    "kind": "기사",
@@ -20950,19 +20976,6 @@
    "title": "다나와, 국내 최초 AI 가격비교 MCP 출시&hellip;클로드 실시간 연동",
    "outlet": "디지털데일리",
    "published": "2026-08-05",
-   "kind": "기사",
-   "shares": 1,
-   "first_shared": "2026-08-06",
-   "last_shared": "2026-08-06",
-   "sources": [
-    "kakao"
-   ]
-  },
-  {
-   "url": "https://news.seoul.go.kr/gov/archives/573211",
-   "title": "AI와 RPA 결합 `지능형 행정`…서울시, 매달 2000시간 자동 처리",
-   "outlet": "서울시 뉴스",
-   "published": "2025-11-13",
    "kind": "기사",
    "shares": 1,
    "first_shared": "2026-08-06",

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-27T15:34:11+09:00",
+ "updated_at": "2026-11-27T23:34:32+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -20957,6 +20957,35 @@
    "license_source": "github",
    "license_checked": "2026-11-27",
    "thumb_v": 1795761330
+  },
+  {
+   "collected_at": "2026-11-27",
+   "network_req": "인터넷 필요",
+   "org": "개발 커뮤니티",
+   "date": "2026-11-27",
+   "runtime_env": "설치 필요",
+   "source": "kakao",
+   "link": "https://github.com/truth0530/voice-to-herdr",
+   "model_dependency": "모델 중립(BYO)",
+   "title": "voice-to-herdr — 휴대폰 Claude 음성 통화로 PC의 코딩 에이전트 상태를 듣고 지시하는 스킬·MCP 서버",
+   "task_category": "공통·범용",
+   "tags": [
+    "MCP",
+    "Claude Code",
+    "음성",
+    "에이전트 관제"
+   ],
+   "case_class": "커뮤니티",
+   "org_type": "커뮤니티",
+   "models_used": [
+    "Claude 앱 음성(커넥터)"
+   ],
+   "summary": "herdr 터미널 안에서 돌아가는 Claude Code·Codex 같은 코딩 에이전트를 Claude 앱 음성 통화로 확인하고 지시하게 해 주는 Claude 스킬과 작은 MCP 서버다. 전체 에이전트 상태 요약, 특정 에이전트 화면 읽기, 지시 보내기(기본 꺼짐) 세 기능을 Tailscale Funnel과 토큰 경로로만 열며, 셸 실행·승인 응답은 일부러 넣지 않았다. 휴대폰 음성으로 PC 에이전트에 일을 시키는 방법을 묻는 질문에 스킬로 만들어 공유됐다.",
+   "id": "d4b5ed871fb33911",
+   "license": "MIT",
+   "license_source": "github",
+   "license_checked": "2026-11-27",
+   "thumb_v": 1795790153
   }
  ]
 }
