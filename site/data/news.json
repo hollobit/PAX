@@ -1,7 +1,111 @@
 {
- "updated_at": "2026-11-27T14:36:02Z",
- "count": 1639,
+ "updated_at": "2026-11-27T22:34:40Z",
+ "count": 1647,
  "articles": [
+  {
+   "url": "https://zdnet.co.kr/view?no=20261127175932",
+   "title": "AI 격차가 삶의 격차로 이어질 수도…NIA, 법제도 개선 논의",
+   "outlet": "zdnet.co.kr",
+   "published": "2026-11-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-28",
+   "last_shared": "2026-11-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.specialtimes.co.kr/news/articleView.html?idxno=491053",
+   "title": "강원 철원·에이아이에스피·케이팜, 와사비 AI 모델·스마트 로봇 실증 시작",
+   "outlet": "스페셜타임스",
+   "published": "2026-11-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-28",
+   "last_shared": "2026-11-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.itdaily.kr/news/articleView.html?idxno=243279",
+   "title": "AI 접목한 전문 디지털 트윈 주목…반도체 공장 5분 만에 가상공간에 구현",
+   "outlet": "아이티데일리",
+   "published": "2026-11-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-28",
+   "last_shared": "2026-11-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.kr/news/articleView.html?idxno=42910",
+   "title": "딥엘, 음성 번역 지연시간 절반으로 줄인 AI 모델 ‘오러 V2’ 공개…음성에서 음성으로 직접 번역",
+   "outlet": "인공지능신문",
+   "published": "2026-11-26",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-28",
+   "last_shared": "2026-11-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217847",
+   "title": "앤트로픽, MCP 서버에 '스킬' 도입…에이전트에 업무 노하우 전달",
+   "outlet": "AI타임스",
+   "published": "2026-11-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-28",
+   "last_shared": "2026-11-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.aitimes.com/news/articleView.html?idxno=217837",
+   "title": "엔비디아, 동남아 4개국 AI 서버 출하 중단…중국 우회 접근 차단",
+   "outlet": "AI타임스",
+   "published": "2026-11-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-28",
+   "last_shared": "2026-11-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.4th.kr/news/articleView.html?idxno=2122895",
+   "title": "제주도, 인공지능전략위원회 출범…글로벌 AI 허브 유치 추진",
+   "outlet": "포쓰저널",
+   "published": "2026-11-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-28",
+   "last_shared": "2026-11-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://news.tf.co.kr/read/life/2394477.htm",
+   "title": "행안부, AI·현장 대응력 갖춘 지방공무원 389명 배출 - 사회 | 기사",
+   "outlet": "더팩트",
+   "published": "2026-11-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-28",
+   "last_shared": "2026-11-28",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "url": "https://news.seoul.go.kr/gov/archives/573211",
    "title": "AI와 RPA 결합 `지능형 행정`…서울시, 매달 2000시간 자동 처리",

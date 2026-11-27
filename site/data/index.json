@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-11-27",
+ "generated_at": "2026-11-28",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
  "total_cases": 708,
  "total_champions": 263,
  "community": {
-  "members": 3010,
-  "kakao_week": 3745,
-  "kakao_total_observed": 80877,
-  "threads_observed": 485
+  "members": 3011,
+  "kakao_week": 3545,
+  "kakao_total_observed": 80893,
+  "threads_observed": 490
  },
  "certified_champions": 5,
  "unattributed_cases": 214,
