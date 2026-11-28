@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-27T22:34:40Z",
- "count": 1647,
+ "updated_at": "2026-11-28T06:45:55Z",
+ "count": 1648,
  "articles": [
   {
    "url": "https://zdnet.co.kr/view?no=20261127175932",
@@ -19,6 +19,19 @@
    "url": "https://www.specialtimes.co.kr/news/articleView.html?idxno=491053",
    "title": "강원 철원·에이아이에스피·케이팜, 와사비 AI 모델·스마트 로봇 실증 시작",
    "outlet": "스페셜타임스",
+   "published": "2026-11-27",
+   "kind": "기사",
+   "shares": 1,
+   "first_shared": "2026-11-28",
+   "last_shared": "2026-11-28",
+   "sources": [
+    "kakao"
+   ]
+  },
+  {
+   "url": "https://www.ohmynews.com/NWS_Web/Series/series_premium_pg.aspx?CNTN_CD=A0003288624&SRS_CD=0000017434",
+   "title": "중국 다녀온 장관의 아찔한 발언... 그 시간 서울 한복판서 벌어진 일",
+   "outlet": "ohmynews",
    "published": "2026-11-27",
    "kind": "기사",
    "shares": 1,
