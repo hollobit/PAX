@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-27",
+ "generated_at": "2026-11-28",
  "summary": {
-  "total": 103,
+  "total": 104,
   "counts": {
-   "주의": 82,
+   "주의": 83,
    "양호": 14,
    "부분 검증": 6,
    "미검증": 1
@@ -2778,6 +2778,40 @@
     "data_flow": {
      "verdict": "통과",
      "note": "서버는 127.0.0.1에만 열리고 외부 접근은 사용자가 설정한 Tailscale Funnel과 64자 토큰 경로(상수 시간 비교)로 제한된다. 도구 코드에 제3자 네트워크 호출·텔레메트리가 없고, 지시 보내기는 기본 꺼짐이다 (근거: server/server.mjs:343, 265-268, 43, 240)"
+    }
+   },
+   "dynamic": null,
+   "overall": "주의"
+  },
+  {
+   "case_id": "bb062289686909f2",
+   "title": "OPEN LAW MCP — ChatGPT·Claude·제미나이에서 현행 법령을 조문 원문과 출처로 찾아 답하게 하는 법제처 공식 MCP 서버",
+   "stars": null,
+   "checked_at": "2026-11-28",
+   "axes": {
+    "permission_surface": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "secrets": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "supply_chain": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "hygiene": {
+     "verdict": "주의",
+     "note": "라이선스 명시 없음"
+    },
+    "injection": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
+    },
+    "data_flow": {
+     "verdict": "해당 없음",
+     "note": "해당 없음(코드 비공개 — 원격 서비스)"
     }
    },
    "dynamic": null,

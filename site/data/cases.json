@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-27T23:34:32+09:00",
+ "updated_at": "2026-11-28T23:36:47+09:00",
  "cases": [
   {
    "date": "2026-08-03",
@@ -20960,7 +20960,7 @@
   },
   {
    "collected_at": "2026-11-27",
-   "network_req": "인터넷 필요",
+   "network_req": "인터넷 필수",
    "org": "개발 커뮤니티",
    "date": "2026-11-27",
    "runtime_env": "설치 필요",
@@ -20986,6 +20986,59 @@
    "license_source": "github",
    "license_checked": "2026-11-27",
    "thumb_v": 1795790153
+  },
+  {
+   "org_type": "중앙행정기관",
+   "source": "kakao",
+   "runtime_env": "MCP·CLI 설정",
+   "tags": [
+    "MCP",
+    "법령",
+    "국가법령정보",
+    "인용 검증",
+    "조례"
+   ],
+   "title": "OPEN LAW MCP — ChatGPT·Claude·제미나이에서 현행 법령을 조문 원문과 출처로 찾아 답하게 하는 법제처 공식 MCP 서버",
+   "task_category": "감사·법무",
+   "model_dependency": "모델 중립(BYO)",
+   "models_used": [
+    "ChatGPT·Claude·제미나이(사용자 선택)"
+   ],
+   "network_req": "인터넷 필수",
+   "org": "법제처",
+   "case_class": "기관 공식",
+   "date": "2026-11-26",
+   "link": "https://open.law.go.kr/LSO/mcp/mcpConnectGuide.do",
+   "collected_at": "2026-11-28",
+   "summary": "법제처가 국가법령정보 공동활용 누리집에서 공개한 공식 원격 MCP 서버로, 커넥터 주소 하나로 별도 로그인·인증키 없이 연결한다. 상황 설명으로 관련 조문 찾기, 조문을 항·호·목까지 원문과 출처 링크로 가져오기, 별표·서식과 벌칙·과태료 조회, 기준일 시행 조문, 신구법 비교, 조례 위임·정비 점검, AI 답변의 인용 조문 검증 등 읽기 전용 도구 24개를 제공한다. 오픈톡에서는 시험 사용 후 토큰 소모와 없는 법령 질의 처리에 대한 개선 의견도 나왔다.",
+   "id": "bb062289686909f2",
+   "thumb_v": 1795876700
+  },
+  {
+   "summary": "한글·워드·엑셀·PDF 문서를 폴더째 넣으면 ChatGPT·Claude에 넘기기 좋은 Markdown·JSON으로 한꺼번에 바꾸고, hwp·hwpx·docx·PDF 형식 변환, 스캔 글자 인식, 개인정보 가리기, 공문서 표기 검수, AI 초안의 기안문 서식 한글 파일 만들기까지 한다. 인터넷 없이 PC 안에서만 동작해 폐쇄망에서도 쓴다. 공공기관 프로젝트 중 만든 무료 도구로 국회사무처·한국도로공사 등에서 쓰인다고 공개됐다.",
+   "case_url": "https://doc.inlevel9.com/",
+   "case_class": "참고",
+   "tags": [
+    "HWP",
+    "문서변환",
+    "폐쇄망",
+    "개인정보 가리기",
+    "Markdown"
+   ],
+   "task_category": "문서·기안",
+   "title": "AI 문서 변환기 — 한글·워드·PDF 문서를 폴더째 AI가 읽는 자료로 바꾸고 공문서 서식 한글 파일까지 만드는 오프라인 프로그램",
+   "org": "인레벨나인(INLEVEL9)",
+   "org_type": "민간(참고)",
+   "date": "2026-11-17",
+   "source": "threads",
+   "models_used": [],
+   "link": "https://www.threads.com/@oswarld.oz/post/Df1zMnsoPmX",
+   "runtime_env": "설치 필요",
+   "network_req": "폐쇄망 가능",
+   "collected_at": "2026-11-28",
+   "model_dependency": "없음(비LLM)",
+   "id": "31e90bcf2b044132",
+   "thumb_v": 1795876658
   }
  ]
 }

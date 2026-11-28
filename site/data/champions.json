@@ -8039,6 +8039,18 @@
    "title": "EBS AI이솦 — 생성형 AI 5종을 무료로 실습하고 대상별 AI 강좌·역량 진단·학습 챗봇을 제공하는 전 국민 AI 학습 플랫폼",
    "org": "한국교육방송공사(EBS)",
    "url": "https://www.ebsai.co.kr/"
+  },
+  {
+   "id": "bb062289686909f2",
+   "title": "OPEN LAW MCP — ChatGPT·Claude·제미나이에서 현행 법령을 조문 원문과 출처로 찾아 답하게 하는 법제처 공식 MCP 서버",
+   "org": "법제처",
+   "url": "https://open.law.go.kr/LSO/mcp/mcpConnectGuide.do"
+  },
+  {
+   "id": "31e90bcf2b044132",
+   "title": "AI 문서 변환기 — 한글·워드·PDF 문서를 폴더째 AI가 읽는 자료로 바꾸고 공문서 서식 한글 파일까지 만드는 오프라인 프로그램",
+   "org": "인레벨나인(INLEVEL9)",
+   "url": "https://doc.inlevel9.com/"
   }
  ]
 }

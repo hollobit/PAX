@@ -2,36 +2,36 @@
  "generated_at": "2026-11-28",
  "quarter": "2026Q4",
  "sample_note": "오픈채팅·Threads 자기선택 표본 — 전국 공공부문을 대표하지 않음",
- "total_cases": 708,
+ "total_cases": 710,
  "total_champions": 263,
  "community": {
-  "members": 3012,
-  "kakao_week": 3599,
-  "kakao_total_observed": 80947,
-  "threads_observed": 493
+  "members": 3010,
+  "kakao_week": 3856,
+  "kakao_total_observed": 81204,
+  "threads_observed": 499
  },
  "certified_champions": 5,
- "unattributed_cases": 214,
+ "unattributed_cases": 216,
  "ax_distribution": {
-  "AI-Ready": 447,
-  "AI-Enabled": 224,
+  "AI-Ready": 448,
+  "AI-Enabled": 225,
   "AX 단계 외": 31,
   "AI-First": 5,
   "AI-Native 계획": 1
  },
  "c_axis_mean": 0.96,
  "p_distribution": {
-  "P0": 212,
-  "P1": 467,
+  "P0": 213,
+  "P1": 468,
   "P2": 29
  },
  "model_dependency": {
   "미확인": 68,
-  "없음(비LLM)": 349,
+  "없음(비LLM)": 350,
   "해외 오픈웨이트(로컬)": 34,
   "혼합": 22,
   "해외 상용 API": 76,
-  "모델 중립(BYO)": 110,
+  "모델 중립(BYO)": 111,
   "국산 독자모델": 8,
   "미상": 40,
   "국산 오픈웨이트": 1
@@ -380,8 +380,9 @@
    },
    {
     "name": "Gemini",
-    "n": 19,
+    "n": 20,
     "variants": [
+     "ChatGPT·Claude·제미나이(사용자 선택)",
      "Chrome 내장 AI(Gemini Nano)",
      "Claude Code/Codex/Gemini(스킬 팩)",
      "Claude/Codex/Gemini(어댑터)",
@@ -475,6 +476,10 @@
      {
       "id": "e05c017b44b33a26",
       "title": "EBS AI이솦 — 생성형 AI 5종을 무료로 실습하고 대상별 AI 강좌·역량 진단·학습 챗봇을 제공하는 전 국민 AI 학습 플랫폼"
+     },
+     {
+      "id": "bb062289686909f2",
+      "title": "OPEN LAW MCP — ChatGPT·Claude·제미나이에서 현행 법령을 조문 원문과 출처로 찾아 답하게 하는 법제처 공식 MCP 서버"
      }
     ],
     "domestic": false
@@ -1060,7 +1065,7 @@
     "specified": 0
    },
    "없음(비LLM)": {
-    "n": 349,
+    "n": 350,
     "specified": 3
    },
    "해외 오픈웨이트(로컬)": {
@@ -1076,8 +1081,8 @@
     "specified": 59
    },
    "모델 중립(BYO)": {
-    "n": 110,
-    "specified": 13
+    "n": 111,
+    "specified": 14
    },
    "국산 독자모델": {
     "n": 8,
@@ -2290,10 +2295,10 @@
  "gitlab_cases": 322,
  "gitlab_mirror_pairs": 43,
  "gitlab_open_rate": 0.134,
- "mcp_cases": 103,
+ "mcp_cases": 104,
  "transition_funnel": {
   "기관 공식": 34,
-  "미확인": 626,
+  "미확인": 628,
   "부서 공유": 8,
   "타 기관 재사용": 2,
   "범정부 탑재": 1,
@@ -2301,7 +2306,7 @@
  },
  "unknown_rates": {
   "approval_gate": 1.0,
-  "feedback": 0.804
+  "feedback": 0.803
  },
  "maintenance_distribution": {
   "활발": 284,
@@ -2593,12 +2598,12 @@
   }
  },
  "mcp_stats": {
-  "total": 103,
+  "total": 104,
   "official": 4,
   "unofficial": 56,
   "roles": {
    "Planned": 1,
-   "Server": 89,
+   "Server": 90,
    "Client/Host": 7,
    "Unknown/None": 6
   },
@@ -2606,7 +2611,7 @@
    "C0": 69,
    "C2": 11,
    "C3": 1,
-   "C1": 22
+   "C1": 23
   },
   "maintenance": {
    "정체": 29,

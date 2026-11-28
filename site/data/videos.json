@@ -1,7 +1,20 @@
 {
- "updated_at": "2026-11-27T06:35:38Z",
- "count": 166,
+ "updated_at": "2026-11-28T14:37:46Z",
+ "count": 167,
  "videos": [
+  {
+   "id": "Nh9r3ikeBZs",
+   "title": "60대 구청장도 하니까 여러분도 해보세요👍 카톡프로필, 포스터, 흑백사진 컬러화 [류경기도 하는 AI]",
+   "channel": "류경기TV",
+   "url": "https://www.youtube.com/watch?v=Nh9r3ikeBZs",
+   "thumb": "https://i.ytimg.com/vi/Nh9r3ikeBZs/mqdefault.jpg",
+   "shares": 1,
+   "first_shared": "2026-11-28",
+   "last_shared": "2026-11-28",
+   "sources": [
+    "kakao"
+   ]
+  },
   {
    "id": "jnWk9eyp4bk",
    "title": "AI 시대, 빠르고 안전한 앱 프로토타입 - 섀도우 IT를 양지로 올리는 법",
